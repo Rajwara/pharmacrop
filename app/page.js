@@ -103,9 +103,9 @@ export default function Page() {
               <h3 class="cs_fs_24 cs_bold cs_white_color mb-0">GMP</h3>
               <p class="cs_fs_20 cs_white_color cs_opacity_7_5 cs_mb_16">Certified Manufacturing</p>
               <div class="cs_circle_group">
-                <span></span>
-                <span></span>
-                <span></span>
+                <img src="/assets/img/GMP_1.webp" alt="GMP Quality Certification">
+                <img src="/assets/img/gmp_3.webp" alt="GMP Certified">
+                <img src="/assets/img/GMP_2.webp" alt="ISO 9001:2015 Certified">
               </div>
             </div>
           </div>

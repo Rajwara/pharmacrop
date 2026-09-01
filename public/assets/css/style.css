@@ -4739,18 +4739,23 @@ hr {
   display: flex;
   padding-left: 10px;
 }
-.cs_circle_group span {
+.cs_circle_group span,
+.cs_circle_group img {
   height: 40px;
   width: 40px;
   border-radius: 50%;
   border: 1px solid var(--white-color);
   margin-left: -10px;
+  object-fit: cover;
+  background-color: var(--white-color);
 }
-.cs_circle_group span:first-child {
+.cs_circle_group span:first-child,
+.cs_circle_group img:first-child {
   -webkit-transition: all 0.65s ease;
   transition: all 0.65s ease;
 }
-.cs_circle_group span:last-child {
+.cs_circle_group span:last-child,
+.cs_circle_group img:last-child {
   -webkit-transition: all 0.45s ease;
   transition: all 0.45s ease;
 }
@@ -4820,11 +4825,13 @@ hr {
     display: none;
   }
 }
-.cs_hero.cs_style_1 .cs_hero_funfact_wrap:hover .cs_circle_group span:first-child {
+.cs_hero.cs_style_1 .cs_hero_funfact_wrap:hover .cs_circle_group span:first-child,
+.cs_hero.cs_style_1 .cs_hero_funfact_wrap:hover .cs_circle_group img:first-child {
   -webkit-transform: translateX(60px);
           transform: translateX(60px);
 }
-.cs_hero.cs_style_1 .cs_hero_funfact_wrap:hover .cs_circle_group span:last-child {
+.cs_hero.cs_style_1 .cs_hero_funfact_wrap:hover .cs_circle_group span:last-child,
+.cs_hero.cs_style_1 .cs_hero_funfact_wrap:hover .cs_circle_group img:last-child {
   -webkit-transform: translateX(-60px);
           transform: translateX(-60px);
 }
