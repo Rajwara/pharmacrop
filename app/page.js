@@ -156,34 +156,12 @@ export default function Page() {
       </div>
     </section>
     <!-- End Hero Section -->
-    <!-- Start Values Section -->
-    <div class="cs_height_100 cs_height_lg_70"></div>
-    <div class="container">
-      <div class="cs_values_card cs_style_1">
-        <div class="cs_values_card_left">
-          <h3 class="cs_brackets_title cs_normal cs_fs_16 mb-0">VALUES</h3>
-        </div>
-        <div class="cs_values_card_left">
-          <ul class="cs_values cs_mp_0 cs_heading_color cs_fs_20">
-            <li>
-              <span>Cultivation</span>
-              <span class="cs_bold">01</span>
-            </li>
-            <li>
-              <span>GMP Manufacturing</span>
-              <span class="cs_bold">02</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <!-- End Values Section -->
     <!-- Start Feature Section -->
     <section>
       <div class="cs_height_100 cs_height_lg_70"></div>
       <div class="container">
         <div class="cs_section_heading cs_style_1">
-          <h2 class="cs_section_title cs_fs_80 mb-0 wow fadeInDown">FROM GENETICS TO <span>GMP MANUFACTURING</span></h2>
+          <h2 class="cs_section_title cs_fs_80 mb-0 wow fadeInDown">FROM GENETICS TO <span class="cs_nowrap_span">GMP MANUFACTURING</span></h2>
           <div class="cs_section_right">
             <a href="/contact" class="cs_btn cs_style_1 cs_bold cs_heading_bg cs_white_color w-100 wow fadeInRight">Contact us</a>
           </div>
@@ -231,56 +209,14 @@ export default function Page() {
       <div class="cs_height_100 cs_height_lg_70"></div>
     </section>
     <!-- End Feature Section -->
-    <!-- Start Working Process -->
-    <section class="cs_heading_bg">
-      <div class="cs_height_100 cs_height_lg_70"></div>
-      <div class="container">
-        <div class="cs_section_heading cs_style_2">
-          <h2 class="cs_section_title cs_white_color cs_fs_80 mb-0 wow fadeInUp">A GROWING <span>PORTFOLIO</span> OF AUSTRALIAN-GROWN PRODUCTS</h2>
-          <div class="cs_section_right">
-            <h3 class="cs_brackets_title cs_normal cs_fs_16 mb-0 cs_white_color">PORTFOLIO</h3>
-          </div>
-        </div>
-        <div class="cs_height_64 cs_height_lg_50"></div>
-        <div class="cs_card_3_wrap">
-          <div class="cs_card cs_style_3">
-            <div class="cs_card_in">
-              <h3 class="cs_fs_24 cs_bold cs_white_color cs_mb_12">01  |  Cultivation expertise</h3>
-              <p class="mb-0 cs_white_color cs_opacity_5 cs_fs_20">PharmaCrop continues to expand its portfolio of Australian-grown products, combining cultivation expertise with GMP-certified manufacturing.</p>
-            </div>
-          </div>
-          <div class="cs_card cs_style_3">
-            <div class="cs_card_in">
-              <h3 class="cs_fs_24 cs_bold cs_white_color cs_mb_12">02  |  Managed production</h3>
-              <p class="mb-0 cs_white_color cs_opacity_5 cs_fs_20">Carefully managed production processes support quality and consistency across our growing portfolio.</p>
-            </div>
-          </div>
-          <div class="cs_card cs_style_3">
-            <div class="cs_card_in">
-              <h3 class="cs_fs_24 cs_bold cs_white_color cs_mb_12">03  |  Hand-packed medicines</h3>
-              <p class="mb-0 cs_white_color cs_opacity_5 cs_fs_20">Supported by hand-packed medicines and pharmaceutical discipline throughout every stage of production.</p>
-            </div>
-          </div>
-          <div class="cs_card cs_style_3">
-            <div class="cs_card_in">
-              <h3 class="cs_fs_24 cs_bold cs_white_color cs_mb_12">04  |  Supply confidence</h3>
-              <p class="mb-0 cs_white_color cs_opacity_5 cs_fs_20">Our focus is on delivering quality, consistency and supply confidence for every partner we work with.</p>
-            </div>
-          </div>
-          <div class="cs_section_logo"><img src="/assets/img/logo-light.png" alt="" class="cs_logo_img"></div>
-        </div>
-      </div>
-      <div class="cs_height_100 cs_height_lg_70"></div>
-    </section>
-    <!-- End Working Process -->
     <!-- Start Services Section -->
     <section>
       <div class="cs_height_100 cs_height_lg_70"></div>
       <div class="container">
-        <div class="cs_section_heading cs_style_3">
-          <h3 class="cs_brackets_title cs_normal cs_fs_16 mb-0 wow fadeInUp">INDUSTRY</h3>
+        <div class="cs_section_heading cs_style_1">
+          <h2 class="cs_section_title cs_fs_80 mb-0 wow fadeInDown">SUPPORTING OUR <span>INDUSTRY PARTNERS</span></h2>
           <div class="cs_section_right">
-            <a href="/industry" class="cs_btn cs_style_2 cs_bold cs_heading_color">See More</a>
+            <a href="/industry" class="cs_btn cs_style_2 cs_bold cs_heading_color wow fadeInRight">See More</a>
           </div>
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
@@ -352,7 +288,7 @@ export default function Page() {
       <div class="cs_height_100 cs_height_lg_70"></div>
       <div class="container">
         <div class="text-center">
-          <h3 class="cs_brackets_title cs_normal cs_fs_16 mb-0 wow fadeInDown">TESTIMONIAL</h3>
+          <h2 class="cs_section_title cs_fs_80 mb-0 wow fadeInDown">TRUSTED BY OUR <span>INDUSTRY PARTNERS</span></h2>
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
         <div class="row">
@@ -414,9 +350,6 @@ export default function Page() {
       <div class="container">
         <div class="cs_section_heading cs_style_2 cs_color_1">
           <h2 class="cs_section_title cs_fs_80 mb-0 wow fadeInDown">THERAPEUTIC GOODS <br>ADMINISTRATION <span>(TGA) GUIDANCE</span></h2>
-          <div class="cs_section_right">
-            <h3 class="cs_brackets_title cs_normal cs_fs_16 mb-0">COMPLIANCE</h3>
-          </div>
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
         <div class="cs_full_width_slider_section">
@@ -425,7 +358,7 @@ export default function Page() {
               <div class="cs_slider_wrapper">
                 <div class="cs_slide">
                   <div class="cs_card cs_style_4">
-                    <div class="cs_card_thumb cs_bg_filed cs_mb_40" data-src="/assets/img/project_thumb_9.jpg"></div>
+                    <div class="cs_card_thumb cs_bg_filed cs_mb_40" data-src="/assets/img/patients-card.webp"></div>
                     <div class="cs_card_info">
                       <ul class="cs_card_info_list cs_mp_0">
                         <li>
@@ -443,7 +376,7 @@ export default function Page() {
                 </div>
                 <div class="cs_slide">
                   <div class="cs_card cs_style_4">
-                    <div class="cs_card_thumb cs_bg_filed cs_mb_40" data-src="/assets/img/project_thumb_9.jpg"></div>
+                    <div class="cs_card_thumb cs_bg_filed cs_mb_40" data-src="/assets/img/health-professionals-card.webp"></div>
                     <div class="cs_card_info">
                       <ul class="cs_card_info_list cs_mp_0">
                         <li>
@@ -473,7 +406,7 @@ export default function Page() {
     </section>
     <!-- End Works Section -->
     <!-- Start CTA Section -->
-    <section class="cs_cta cs_style_1 cs_heading_bg cs_bg_filed" data-src="/assets/img/cta_bg.jpg">
+    <section class="cs_cta cs_style_1 cs_heading_bg cs_bg_filed" data-src="/assets/img/ready-to-partner-with-pharmacrop.jpg">
       <div class="cs_height_100 cs_height_lg_70"></div>
       <div class="container">
         <div class="cs_cta_in">
