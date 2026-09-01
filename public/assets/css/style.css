@@ -3730,6 +3730,11 @@ hr {
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
+.cs_logo_img {
+  width: 250px;
+  max-width: 100%;
+  height: auto;
+}
 .cs_site_branding + .cs_nav {
   margin-left: 80px;
 }

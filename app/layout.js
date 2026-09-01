@@ -2,8 +2,8 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata = {
-  title: "LeafLife - Garden Landscape Design Service Website",
-  description: "LeafLife - Garden Landscape Design Service Website",
+  title: "PharmaCrop - Bring Balance To Your Life",
+  description: "PharmaCrop - Bring Balance To Your Life",
   icons: {
     icon: "/assets/img/favicon.png",
   },
