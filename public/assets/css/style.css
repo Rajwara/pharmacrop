@@ -1730,6 +1730,15 @@ label {
   }
 }
 
+.cs_nowrap_span {
+  white-space: nowrap;
+}
+@media (max-width: 575px) {
+  .cs_nowrap_span {
+    white-space: normal;
+  }
+}
+
 .cs_fs_100 {
   font-size: 100px;
   line-height: 1.08em;
@@ -4952,6 +4961,21 @@ hr {
 .cs_cta.cs_style_1.cs_type_1 .cs_cta_in {
   max-width: 710px;
   margin-left: auto;
+}
+.cs_cta.cs_style_1 {
+  position: relative;
+}
+.cs_cta.cs_style_1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(180deg, rgba(2, 34, 34, 0.8) 0%, rgba(2, 66, 66, 0.65) 50%, rgba(2, 34, 34, 0.85) 100%);
+  pointer-events: none;
+}
+.cs_cta.cs_style_1 > .container {
+  position: relative;
+  z-index: 1;
 }
 
 .cs_cta.cs_style_2 {
