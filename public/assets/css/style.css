@@ -2684,8 +2684,8 @@ hr {
   border: none;
   outline: none;
   padding: 13px 20px;
-  border-radius: 10px;
-  background-color: var(--gray-color);
+  border-radius: 20px;
+  background-color: var(--white-color);
 }
 
 .cs_contact_info {

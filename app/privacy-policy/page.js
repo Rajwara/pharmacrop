@@ -91,107 +91,83 @@ export default function Page() {
       <div class="container">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
-          <li class="breadcrumb-item active">Careers</li>
+          <li class="breadcrumb-item active">Privacy Policy</li>
         </ol>
-        <h1 class="cs_page_title mb-0 cs_fs_80 wow fadeInUp">CAREERS</h1>
-        <div class="cs_height_24"></div>
-        <a href="#cs_expression_of_interest" class="cs_btn cs_style_1 cs_bold cs_heading_color cs_white_bg">Apply Now</a>
+        <h1 class="cs_page_title mb-0 cs_fs_80 wow fadeInUp">PRIVACY POLICY</h1>
       </div>
     </section>
     <!-- End Page Heading Sectoin -->
-    <!-- Start Ready to Join Us Section -->
+    <!-- Start Privacy Policy Section -->
     <section>
       <div class="cs_height_100 cs_height_lg_70"></div>
       <div class="container">
-        <div class="cs_section_heading cs_style_1">
-          <h2 class="cs_section_title cs_fs_80 mb-0 wow fadeInUp">READY TO <span>JOIN US?</span></h2>
-        </div>
-        <div class="cs_height_64 cs_height_lg_50"></div>
-        <div class="row cs_gap_y_50">
-          <div class="col-sm-6 col-lg-3">
-            <div class="cs_iconbox cs_style_1">
-              <div class="cs_iconbox_icon cs_center cs_mb_24">
-                <i class="fa-regular fa-heart"></i>
-              </div>
-              <h3 class="cs_fs_24 cs_mb_12">Making a Lasting Impact</h3>
-              <p class="mb-0 cs_fs_20">Join our dedicated team of experienced professionals who are passionate about making a difference.</p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <div class="cs_iconbox cs_style_1">
-              <div class="cs_iconbox_icon cs_center cs_mb_24">
-                <i class="fa-solid fa-link"></i>
-              </div>
-              <h3 class="cs_fs_24 cs_mb_12">Embracing Diversity and Individuality</h3>
-              <p class="mb-0 cs_fs_20">We foster an inclusive work environment that values diverse perspectives, skills, and abilities.</p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <div class="cs_iconbox cs_style_1">
-              <div class="cs_iconbox_icon cs_center cs_mb_24">
-                <i class="fa-brands fa-buffer"></i>
-              </div>
-              <h3 class="cs_fs_24 cs_mb_12">Cultivating Innovation</h3>
-              <p class="mb-0 cs_fs_20">We recognize the evolving needs of the industry and embrace those with a research-driven mindset.</p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <div class="cs_iconbox cs_style_1">
-              <div class="cs_iconbox_icon cs_center cs_mb_24">
-                <i class="fa-brands fa-ubuntu"></i>
-              </div>
-              <h3 class="cs_fs_24 cs_mb_12">A Path to Growth</h3>
-              <p class="mb-0 cs_fs_20">We offer comprehensive training, opportunities for career advancement, and foster a culture of personal and professional development.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="cs_height_100 cs_height_lg_70"></div>
-    </section>
-    <!-- End Ready to Join Us Section -->
-    <!-- Start Expression of Interest Section -->
-    <section class="cs_gray_bg" id="cs_expression_of_interest">
-      <div class="cs_height_100 cs_height_lg_70"></div>
-      <div class="container">
         <div class="row">
-          <div class="col-lg-8 offset-lg-2">
-            <div class="cs_section_heading cs_style_4 cs_mb_25 text-center">
-              <h2 class="cs_section_title cs_fs_32 cs_bold mb-0">EXPRESSION OF <span>INTEREST</span></h2>
-            </div>
-            <p class="text-center cs_fs_20">Please fill out the form below.</p>
+          <div class="col-lg-9">
+            <p class="cs_fs_20"><em>Last updated: 1 September 2026</em></p>
+            <p class="cs_fs_20">Our Privacy Policy outlines our commitment to maintaining the confidentiality of your data, providing transparency about the information we collect, how we use it, and the measures we have in place to safeguard your privacy.</p>
+
             <div class="cs_height_40 cs_height_lg_30"></div>
-            <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" class="row cs_gap_y_24" id="cs_career_form">
-              <input type="hidden" name="access_key" value="cd98b256-0db3-478c-ab28-1ec94f80447c">
-              <input type="hidden" name="subject" value="New Expression of Interest - PharmaCrop Careers">
-              <div class="col-sm-6">
-                <input type="text" name="first_name" class="cs_form_field" placeholder="First Name *" required="">
-              </div>
-              <div class="col-sm-6">
-                <input type="text" name="last_name" class="cs_form_field" placeholder="Last Name *" required="">
-              </div>
-              <div class="col-sm-6">
-                <input type="email" name="email" class="cs_form_field" placeholder="Email Address *" required="">
-              </div>
-              <div class="col-sm-6">
-                <input type="tel" name="phone" class="cs_form_field" placeholder="Phone">
-              </div>
-              <div class="col-lg-12">
-                <input type="file" name="resume" class="cs_form_field" accept=".doc,.docx,.pdf">
-                <p class="cs_fs_16 mt-2 mb-0">Allowed resume file types: .doc, .docx, .pdf</p>
-              </div>
-              <div class="col-lg-12">
-                <button class="cs_btn cs_style_1 cs_type_1 cs_bold cs_heading_bg cs_white_color w-100" type="submit">Submit Expression of Interest</button>
-                <div id="cs_career_result" class="cs_heading_color"></div>
-              </div>
-            </form>
+            <h2 class="cs_fs_32 cs_bold cs_mb_16">1. Who we are</h2>
+            <p>PharmaCrop ("PharmaCrop", "we", "us", "our") cultivates and manufactures Australian-grown, GMP-certified products from our operations in the Noosa Hinterland, Queensland. This policy explains how we collect, use, disclose and protect personal information handled through pharmacrop.com.au, in line with the Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs).</p>
+
             <div class="cs_height_40 cs_height_lg_30"></div>
-            <p class="text-center mb-0"><a href="https://www.linkedin.com/company/pharmacrop/jobs/" target="_blank" rel="noopener" class="cs_btn cs_style_2 cs_bold cs_heading_color">LinkedIn Job Listings</a></p>
+            <h2 class="cs_fs_32 cs_bold cs_mb_16">2. Information we collect</h2>
+            <p>We collect personal information you provide directly to us, including:</p>
+            <ul class="cs_mb_20">
+              <li>Name, email address and phone number submitted through our Contact form.</li>
+              <li>Name, email address, phone number and resume/CV submitted through our Careers Expression of Interest form.</li>
+              <li>Email address if you subscribe to our newsletter.</li>
+              <li>Any other information you choose to include in a message to us, which may in some cases include health-related or other sensitive information (for example, if you contact us as a patient or health professional). We only collect sensitive information where you provide it voluntarily and where reasonably necessary to respond to your enquiry.</li>
+            </ul>
+            <p>We may also collect limited technical information automatically when you browse our site (such as browser type, pages visited and general location derived from IP address) to help us understand site usage and maintain security.</p>
+
+            <div class="cs_height_40 cs_height_lg_30"></div>
+            <h2 class="cs_fs_32 cs_bold cs_mb_16">3. How we use your information</h2>
+            <p>We use the information we collect to:</p>
+            <ul class="cs_mb_20">
+              <li>Respond to enquiries submitted through our Contact page.</li>
+              <li>Assess Expressions of Interest submitted through our Careers page.</li>
+              <li>Send newsletter updates to subscribers who opt in, and allow you to unsubscribe at any time.</li>
+              <li>Maintain, secure and improve our website.</li>
+              <li>Comply with our legal and regulatory obligations, including those arising under Therapeutic Goods Administration (TGA) guidance where relevant.</li>
+            </ul>
+            <p>We do not sell your personal information.</p>
+
+            <div class="cs_height_40 cs_height_lg_30"></div>
+            <h2 class="cs_fs_32 cs_bold cs_mb_16">4. How we share your information</h2>
+            <p>Our Contact and Careers forms are processed using a third-party form-delivery service, which transmits your submission to us by email. We do not share your personal information with other third parties except where required by law, to protect our legal rights, or with your consent.</p>
+
+            <div class="cs_height_40 cs_height_lg_30"></div>
+            <h2 class="cs_fs_32 cs_bold cs_mb_16">5. Data security</h2>
+            <p>We take reasonable technical and organisational steps to protect the personal information we hold from misuse, interference, loss, and unauthorised access, modification or disclosure. No method of transmission over the internet is completely secure, so we cannot guarantee absolute security.</p>
+
+            <div class="cs_height_40 cs_height_lg_30"></div>
+            <h2 class="cs_fs_32 cs_bold cs_mb_16">6. Cookies</h2>
+            <p>Our website may use cookies and similar technologies to support core site functionality and to understand how visitors use our site. You can control or disable cookies through your browser settings; doing so may affect some site functionality.</p>
+
+            <div class="cs_height_40 cs_height_lg_30"></div>
+            <h2 class="cs_fs_32 cs_bold cs_mb_16">7. Access and correction</h2>
+            <p>You may request access to, or correction of, the personal information we hold about you, or ask us to delete it, subject to any legal or regulatory obligation we may have to retain it. To make a request, contact us using the details below.</p>
+
+            <div class="cs_height_40 cs_height_lg_30"></div>
+            <h2 class="cs_fs_32 cs_bold cs_mb_16">8. Changes to this policy</h2>
+            <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal obligations. The updated version will be posted on this page with a revised "Last updated" date.</p>
+
+            <div class="cs_height_40 cs_height_lg_30"></div>
+            <h2 class="cs_fs_32 cs_bold cs_mb_16">9. Contact us</h2>
+            <p>If you have questions about this Privacy Policy or how we handle your personal information, or wish to make a privacy complaint, please contact us:</p>
+            <ul class="cs_mp_0">
+              <li>Phone: <a href="tel:1300053533">1300 053 533</a></li>
+              <li>Email: <a href="mailto:enquiries@pharmacrop.com.au">enquiries@pharmacrop.com.au</a></li>
+              <li>LinkedIn: <a href="https://www.linkedin.com/company/pharmacrop" target="_blank" rel="noopener">@pharmacrop</a></li>
+            </ul>
+            <p>If you are not satisfied with our response, you may contact the Office of the Australian Information Commissioner (OAIC) at oaic.gov.au.</p>
           </div>
         </div>
       </div>
       <div class="cs_height_100 cs_height_lg_70"></div>
     </section>
-    <!-- End Expression of Interest Section -->
+    <!-- End Privacy Policy Section -->
     <!-- Start Footer Section -->
     <footer class="cs_footer cs_style_1 cs_color_1">
       <div class="container">
