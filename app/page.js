@@ -131,7 +131,7 @@ export default function Page() {
           <div class="cs_slider_container" data-autoplay="0" data-loop="1" data-speed="800" data-center="0" data-variable-width="0" data-slides-per-view="1">
             <div class="cs_slider_wrapper">
               <div class="cs_slide">
-                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/hero_bg.jpg"></div>
+                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/pharmacrop-banner1.webp"></div>
               </div>
               <div class="cs_slide">
                 <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/hero_bg_4.jpg"></div>
