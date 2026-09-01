@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "LeafLife - Garden Landscape Design Service Website",
+  title: "PharmaCrop - Bring Balance To Your Life",
 };
 
 export default function Page() {
@@ -23,7 +23,7 @@ export default function Page() {
           <div class="cs_main_header_in">
             <div class="cs_main_header_left">
               <a class="cs_site_branding" href="/">
-                <img src="/assets/img/logo-light.png" alt="Logo">
+                <img src="/assets/img/logo-light.png" alt="Logo" class="cs_logo_img">
               </a>
             </div>
             <div class="cs_main_header_center">
@@ -228,7 +228,7 @@ export default function Page() {
           <div class="cs_footer_col">
             <div class="cs_footer_widget">
               <div class="cs_text_widget">
-                <img src="/assets/img/logo-light.png" alt="">
+                <img src="/assets/img/logo-light.png" alt="" class="cs_logo_img">
                 <p>Stay updated with our latest <br>
                   projects and gardening tips.</p>
               </div>
