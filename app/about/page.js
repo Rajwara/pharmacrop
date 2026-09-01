@@ -464,7 +464,7 @@ export default function Page() {
                 <a href="/privacy-policy">PRIVACY POLICY</a>
               </li>
               <li>
-                <a href="#">TERMS &amp; CONDITION</a>
+                <a href="/terms-and-conditions">TERMS &amp; CONDITION</a>
               </li>
             </ul>
           </div>
