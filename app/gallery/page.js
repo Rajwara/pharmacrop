@@ -287,7 +287,7 @@ export default function Page() {
           <div class="cs_bottom_footer_right">
             <ul class="cs_footer_links cs_mp_0">
               <li>
-                <a href="#">PRIVACY POLICY</a>
+                <a href="/privacy-policy">PRIVACY POLICY</a>
               </li>
               <li>
                 <a href="#">TERMS &amp; CONDITION</a>
