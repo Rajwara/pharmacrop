@@ -4874,6 +4874,17 @@ hr {
   left: 0;
   top: 0;
 }
+.cs_hero.cs_style_1 .cs_hero_bg::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(2, 34, 34, 0.75) 0%, rgba(2, 66, 66, 0.55) 45%, rgba(2, 34, 34, 0.82) 100%);
+  pointer-events: none;
+}
 .cs_hero.cs_style_1 .cs_hero_bg .cs_slider,
 .cs_hero.cs_style_1 .cs_hero_bg .cs_slider_container,
 .cs_hero.cs_style_1 .cs_hero_bg .cs_slider_wrapper,
