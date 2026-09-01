@@ -91,81 +91,71 @@ export default function Page() {
       <div class="container">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
-          <li class="breadcrumb-item active">Industry</li>
+          <li class="breadcrumb-item active">Terms &amp; Condition</li>
         </ol>
-        <h1 class="cs_page_title mb-0 cs_fs_80 wow fadeInUp">INDUSTRY</h1>
+        <h1 class="cs_page_title mb-0 cs_fs_80 wow fadeInUp">TERMS &amp; CONDITIONS</h1>
       </div>
     </section>
     <!-- End Page Heading Sectoin -->
-    <!-- Start Industry Section -->
+    <!-- Start Terms & Conditions Section -->
     <section>
       <div class="cs_height_100 cs_height_lg_70"></div>
       <div class="container">
-        <div class="cs_section_heading cs_style_1">
-          <h2 class="cs_section_title cs_fs_80 mb-0 wow fadeInUp">BUILT FOR OUR <span>INDUSTRY</span> PARTNERS</h2>
-        </div>
-        <div class="cs_height_64 cs_height_lg_50"></div>
-        <div class="row cs_gap_y_50">
-          <div class="col-lg-4">
-            <div class="cs_iconbox cs_style_1">
-              <div class="cs_iconbox_icon cs_center cs_mb_24">
-                <i class="fa-solid fa-mortar-pestle"></i>
-              </div>
-              <h3 class="cs_fs_24 cs_mb_12">Pharmacists</h3>
-              <p class="cs_fs_20 cs_mb_20">Reliable supply. Simplified access.</p>
-              <p class="mb-0">PharmaCrop's Australian-grown products are supported by GMP-certified manufacturing and carefully managed production processes, helping deliver consistency and supply confidence across our growing portfolio. A dedicated online ordering portal is currently in development to further support pharmacy partners.</p>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="cs_iconbox cs_style_1">
-              <div class="cs_iconbox_icon cs_center cs_mb_24">
-                <i class="fa-solid fa-user-doctor"></i>
-              </div>
-              <h3 class="cs_fs_24 cs_mb_12">Prescribers</h3>
-              <p class="cs_fs_20 cs_mb_20">Where cultivation expertise meets pharmaceutical discipline.</p>
-              <p class="mb-0">By combining international cultivation knowledge with Australian production and GMP-certified manufacturing, PharmaCrop supports quality, consistency and product integrity across every product we produce.</p>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="cs_iconbox cs_style_1">
-              <div class="cs_iconbox_icon cs_center cs_mb_24">
-                <i class="fa-solid fa-truck-fast"></i>
-              </div>
-              <h3 class="cs_fs_24 cs_mb_12">Distributors</h3>
-              <p class="cs_fs_20 cs_mb_20">A reliable partner from production to supply.</p>
-              <p class="mb-0">By combining cultivation, GMP-manufacturing and supply within a single integrated operation, PharmaCrop supports distribution partners with consistent products, reliable supply and a growing Australian-grown portfolio.</p>
-            </div>
+        <div class="row">
+          <div class="col-lg-9">
+            <p class="cs_fs_20"><em>Last updated: 1 September 2026</em></p>
+            <p class="cs_fs_20">These Terms &amp; Conditions govern your use of pharmacrop.com.au. By accessing or using this website, you agree to be bound by these terms. If you do not agree, please do not use this website.</p>
+
+            <div class="cs_height_40 cs_height_lg_30"></div>
+            <h2 class="cs_fs_32 cs_bold cs_mb_16">1. Who we are</h2>
+            <p>This website is operated by PharmaCrop ("PharmaCrop", "we", "us", "our"), a cultivator and GMP-certified manufacturer of Australian-grown products based in the Noosa Hinterland, Queensland.</p>
+
+            <div class="cs_height_40 cs_height_lg_30"></div>
+            <h2 class="cs_fs_32 cs_bold cs_mb_16">2. Use of this website</h2>
+            <p>You agree to use this website only for lawful purposes and in a way that does not infringe the rights of, or restrict or inhibit the use and enjoyment of, this website by any third party. You must not attempt to gain unauthorised access to this website, the server on which it is hosted, or any server, computer or database connected to it.</p>
+
+            <div class="cs_height_40 cs_height_lg_30"></div>
+            <h2 class="cs_fs_32 cs_bold cs_mb_16">3. No medical or professional advice</h2>
+            <p>Content on this website is provided for general informational purposes only and does not constitute medical, clinical, legal or professional advice. Nothing on this website should be relied upon as a substitute for advice from a qualified health professional. Access to and supply of PharmaCrop products is subject to applicable Australian laws and Therapeutic Goods Administration (TGA) requirements, including any relevant prescribing and access pathways.</p>
+
+            <div class="cs_height_40 cs_height_lg_30"></div>
+            <h2 class="cs_fs_32 cs_bold cs_mb_16">4. Intellectual property</h2>
+            <p>Unless otherwise indicated, all content on this website, including text, graphics, logos, images and the PharmaCrop name and branding, is owned by or licensed to PharmaCrop and is protected by applicable intellectual property laws. You may not reproduce, distribute or otherwise use any content from this website without our prior written consent, except as necessary for personal, non-commercial viewing.</p>
+
+            <div class="cs_height_40 cs_height_lg_30"></div>
+            <h2 class="cs_fs_32 cs_bold cs_mb_16">5. Forms and submissions</h2>
+            <p>When you submit information through our Contact or Careers forms, you confirm that the information you provide is accurate and that you have the right to provide it. Submitting an Expression of Interest through our Careers page does not guarantee an interview, offer of employment, or any other outcome. See our <a href="/privacy-policy">Privacy Policy</a> for how we handle information you submit.</p>
+
+            <div class="cs_height_40 cs_height_lg_30"></div>
+            <h2 class="cs_fs_32 cs_bold cs_mb_16">6. Third-party links</h2>
+            <p>This website may contain links to third-party websites, including the Therapeutic Goods Administration and LinkedIn. We do not control and are not responsible for the content, accuracy or practices of any third-party website, and inclusion of a link does not imply endorsement.</p>
+
+            <div class="cs_height_40 cs_height_lg_30"></div>
+            <h2 class="cs_fs_32 cs_bold cs_mb_16">7. Limitation of liability</h2>
+            <p>To the maximum extent permitted by law, PharmaCrop makes no warranties about the accuracy, completeness or currency of the content on this website and excludes all liability for any loss or damage arising from your use of, or inability to use, this website. Nothing in these terms excludes, restricts or modifies any consumer guarantee, right or remedy under the Australian Consumer Law that cannot lawfully be excluded.</p>
+
+            <div class="cs_height_40 cs_height_lg_30"></div>
+            <h2 class="cs_fs_32 cs_bold cs_mb_16">8. Governing law</h2>
+            <p>These Terms &amp; Conditions are governed by the laws of Queensland, Australia, and you submit to the non-exclusive jurisdiction of the courts of Queensland in relation to any dispute arising from your use of this website.</p>
+
+            <div class="cs_height_40 cs_height_lg_30"></div>
+            <h2 class="cs_fs_32 cs_bold cs_mb_16">9. Changes to these terms</h2>
+            <p>We may update these Terms &amp; Conditions from time to time. The updated version will be posted on this page with a revised "Last updated" date, and continued use of this website after changes are posted constitutes acceptance of the updated terms.</p>
+
+            <div class="cs_height_40 cs_height_lg_30"></div>
+            <h2 class="cs_fs_32 cs_bold cs_mb_16">10. Contact us</h2>
+            <p>If you have questions about these Terms &amp; Conditions, please contact us:</p>
+            <ul class="cs_mp_0">
+              <li>Phone: <a href="tel:1300053533">1300 053 533</a></li>
+              <li>Email: <a href="mailto:enquiries@pharmacrop.com.au">enquiries@pharmacrop.com.au</a></li>
+              <li>LinkedIn: <a href="https://www.linkedin.com/company/pharmacrop" target="_blank" rel="noopener">@pharmacrop</a></li>
+            </ul>
           </div>
         </div>
       </div>
       <div class="cs_height_100 cs_height_lg_70"></div>
     </section>
-    <!-- End Industry Section -->
-    <!-- Start Card Section -->
-    <section class="cs_half_bg">
-      <div class="container">
-        <div class="cs_card cs_style_1 cs_heading_bg cs_bg_filed" data-src="/assets/img/card_bg.jpg">
-          <div class="cs_card_top">
-            <div class="cs_card_tags">
-              <a href="/" class="cs_card_tag">Home</a>
-              <a href="/industry" class="cs_card_tag">Industry</a>
-              <a href="#" class="cs_card_tag">GMP-Certified</a>
-              <a href="#" class="cs_card_tag">Australian-Grown</a>
-            </div>
-          </div>
-          <div class="cs_card_bottom">
-            <h2 class="cs_card_title cs_gradient_color_1 cs_fs_80 mb-0 wow fadeInUp">CONNECT WITH <br>PHARMACROP</h2>
-            <p class="cs_white_color cs_fs_20 cs_mb_0">For pharmacists, prescribers, distributors and industry partners interested in learning more about PharmaCrop's Australian-grown portfolio and partnership opportunities.</p>
-          </div>
-          <a href="/contact" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </section>
-    <!-- End Card Section -->
+    <!-- End Terms & Conditions Section -->
     <!-- Start Footer Section -->
     <footer class="cs_footer cs_style_1 cs_color_1">
       <div class="container">

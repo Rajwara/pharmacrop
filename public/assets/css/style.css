@@ -4739,18 +4739,23 @@ hr {
   display: flex;
   padding-left: 10px;
 }
-.cs_circle_group span {
+.cs_circle_group span,
+.cs_circle_group img {
   height: 40px;
   width: 40px;
   border-radius: 50%;
   border: 1px solid var(--white-color);
   margin-left: -10px;
+  object-fit: cover;
+  background-color: var(--white-color);
 }
-.cs_circle_group span:first-child {
+.cs_circle_group span:first-child,
+.cs_circle_group img:first-child {
   -webkit-transition: all 0.65s ease;
   transition: all 0.65s ease;
 }
-.cs_circle_group span:last-child {
+.cs_circle_group span:last-child,
+.cs_circle_group img:last-child {
   -webkit-transition: all 0.45s ease;
   transition: all 0.45s ease;
 }
@@ -4820,11 +4825,13 @@ hr {
     display: none;
   }
 }
-.cs_hero.cs_style_1 .cs_hero_funfact_wrap:hover .cs_circle_group span:first-child {
+.cs_hero.cs_style_1 .cs_hero_funfact_wrap:hover .cs_circle_group span:first-child,
+.cs_hero.cs_style_1 .cs_hero_funfact_wrap:hover .cs_circle_group img:first-child {
   -webkit-transform: translateX(60px);
           transform: translateX(60px);
 }
-.cs_hero.cs_style_1 .cs_hero_funfact_wrap:hover .cs_circle_group span:last-child {
+.cs_hero.cs_style_1 .cs_hero_funfact_wrap:hover .cs_circle_group span:last-child,
+.cs_hero.cs_style_1 .cs_hero_funfact_wrap:hover .cs_circle_group img:last-child {
   -webkit-transform: translateX(-60px);
           transform: translateX(-60px);
 }
@@ -5732,4 +5739,165 @@ hr {
   .cs_card.cs_style_6 .cs_card_right {
     max-width: 800px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*--------------------------------------------------------------
+16. Floating Buttons
+----------------------------------------------------------------*/
+.cs_scroll_top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--heading-color);
+  color: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+.cs_scroll_top.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.cs_scroll_top:hover {
+  background-color: var(--accent-mint);
+  color: var(--heading-color);
+}
+
+.cs_whatsapp_float {
+  position: fixed;
+  right: 30px;
+  bottom: 92px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #25d366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+.cs_whatsapp_float:hover {
+  background-color: #1ebd5a;
+  color: #fff;
+}
+@media (max-width: 575px) {
+  .cs_scroll_top,
+  .cs_whatsapp_float {
+    right: 16px;
+    width: 44px;
+    height: 44px;
+  }
+  .cs_scroll_top {
+    bottom: 16px;
+  }
+  .cs_whatsapp_float {
+    bottom: 70px;
+    font-size: 22px;
+  }
+}
+
+.cs_quote_tab {
+  position: fixed;
+  left: 0;
+  top: 45%;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  background-color: var(--heading-color);
+  color: var(--white-color);
+  border: none;
+  padding: 20px 12px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  z-index: 998;
+  transition: all 0.3s ease;
+}
+.cs_quote_tab:hover {
+  background-color: var(--accent-gold);
+  color: var(--heading-color);
+  padding-left: 18px;
+}
+
+.cs_modal_overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  padding: 20px;
+}
+.cs_modal_overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.cs_modal_box {
+  background-color: var(--white-color);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+.cs_modal_overlay.active .cs_modal_box {
+  transform: translateY(0);
+}
+.cs_modal_box_sm {
+  max-width: 420px;
+}
+.cs_modal_close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--gray-color);
+  color: var(--heading-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+.cs_modal_close:hover {
+  background-color: var(--accent-mint);
+}
+@media (max-width: 575px) {
+  .cs_quote_tab {
+    display: none;
+  }
+  .cs_modal_box {
+    padding: 28px 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
