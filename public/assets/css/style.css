@@ -5160,6 +5160,32 @@ hr {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
+.cs_card_1_group .cs_card.cs_style_1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  background: rgba(60, 60, 60, 0.55);
+  -webkit-backdrop-filter: grayscale(100%);
+  backdrop-filter: grayscale(100%);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+.cs_card_1_group .cs_card.cs_style_1.active::before {
+  background: rgba(2, 66, 66, 0.4);
+  -webkit-backdrop-filter: grayscale(0%);
+  backdrop-filter: grayscale(0%);
+}
+.cs_card_1_group .cs_card.cs_style_1 .cs_card_top,
+.cs_card_1_group .cs_card.cs_style_1 .cs_card_bottom {
+  position: relative;
+  z-index: 1;
+}
+.cs_card_1_group .cs_card.cs_style_1 .cs_arrow_btn {
+  z-index: 2;
+}
 @media (max-width: 991px) {
   .cs_card_1_group .cs_card.cs_style_1 {
     padding: 30px 20px;
