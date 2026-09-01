@@ -59,7 +59,7 @@ export default function Page() {
                     <rect width="20" height="20" fill="currentColor"></rect>
                     </clipPath>
                     </defs>
-                  </svg>                    
+                  </svg>
                 </button>
               </div>
             </div>
@@ -81,7 +81,7 @@ export default function Page() {
             <rect width="20" height="20" fill="currentColor"></rect>
             </clipPath>
             </defs>
-          </svg>                    
+          </svg>
         </button>
       </form>
     </div>
@@ -91,90 +91,107 @@ export default function Page() {
       <div class="container">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
-          <li class="breadcrumb-item active">Contact</li>
+          <li class="breadcrumb-item active">Careers</li>
         </ol>
-        <h1 class="cs_page_title mb-0 cs_fs_80 wow fadeInUp">CONTACT US</h1>
+        <h1 class="cs_page_title mb-0 cs_fs_80 wow fadeInUp">CAREERS</h1>
+        <div class="cs_height_24"></div>
+        <a href="#cs_expression_of_interest" class="cs_btn cs_style_1 cs_bold cs_heading_color cs_white_bg">Apply Now</a>
       </div>
     </section>
     <!-- End Page Heading Sectoin -->
-    <!-- Start Contact Section -->
-    <div class="cs_height_100 cs_height_lg_70"></div>
-    <div class="container">
-      <div class="row cs_gap_y_40">
-        <div class="col-lg-5">
-          <div class="cs_map">
-            <iframe id="map" src="https://www.google.com/maps?q=Noosa+Hinterland,+Queensland,+Australia&output=embed" allowfullscreen=""></iframe>
+    <!-- Start Ready to Join Us Section -->
+    <section>
+      <div class="cs_height_100 cs_height_lg_70"></div>
+      <div class="container">
+        <div class="cs_section_heading cs_style_1">
+          <h2 class="cs_section_title cs_fs_80 mb-0 wow fadeInUp">READY TO <span>JOIN US?</span></h2>
+        </div>
+        <div class="cs_height_64 cs_height_lg_50"></div>
+        <div class="row cs_gap_y_50">
+          <div class="col-sm-6 col-lg-3">
+            <div class="cs_iconbox cs_style_1">
+              <div class="cs_iconbox_icon cs_center cs_mb_24">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <h3 class="cs_fs_24 cs_mb_12">Making a Lasting Impact</h3>
+              <p class="mb-0 cs_fs_20">Join our dedicated team of experienced professionals who are passionate about making a difference.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="cs_iconbox cs_style_1">
+              <div class="cs_iconbox_icon cs_center cs_mb_24">
+                <i class="fa-solid fa-link"></i>
+              </div>
+              <h3 class="cs_fs_24 cs_mb_12">Embracing Diversity and Individuality</h3>
+              <p class="mb-0 cs_fs_20">We foster an inclusive work environment that values diverse perspectives, skills, and abilities.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="cs_iconbox cs_style_1">
+              <div class="cs_iconbox_icon cs_center cs_mb_24">
+                <i class="fa-brands fa-buffer"></i>
+              </div>
+              <h3 class="cs_fs_24 cs_mb_12">Cultivating Innovation</h3>
+              <p class="mb-0 cs_fs_20">We recognize the evolving needs of the industry and embrace those with a research-driven mindset.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="cs_iconbox cs_style_1">
+              <div class="cs_iconbox_icon cs_center cs_mb_24">
+                <i class="fa-brands fa-ubuntu"></i>
+              </div>
+              <h3 class="cs_fs_24 cs_mb_12">A Path to Growth</h3>
+              <p class="mb-0 cs_fs_20">We offer comprehensive training, opportunities for career advancement, and foster a culture of personal and professional development.</p>
+            </div>
           </div>
         </div>
-        <div class="col-lg-7">
-          <div class="cs_pl_40">
-            <div class="cs_section_heading cs_style_4 cs_mb_25">
-              <h2 class="cs_section_title cs_fs_32 cs_bold mb-0">SEND US A <span>MESSAGE</span></h2>
+      </div>
+      <div class="cs_height_100 cs_height_lg_70"></div>
+    </section>
+    <!-- End Ready to Join Us Section -->
+    <!-- Start Expression of Interest Section -->
+    <section class="cs_gray_bg" id="cs_expression_of_interest">
+      <div class="cs_height_100 cs_height_lg_70"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 offset-lg-2">
+            <div class="cs_section_heading cs_style_4 cs_mb_25 text-center">
+              <h2 class="cs_section_title cs_fs_32 cs_bold mb-0">EXPRESSION OF <span>INTEREST</span></h2>
             </div>
-            <form action="https://api.web3forms.com/submit" method="POST" class="row cs_gap_y_24" id="cs_form">
+            <p class="text-center cs_fs_20">Please fill out the form below.</p>
+            <div class="cs_height_40 cs_height_lg_30"></div>
+            <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" class="row cs_gap_y_24" id="cs_career_form">
               <input type="hidden" name="access_key" value="cd98b256-0db3-478c-ab28-1ec94f80447c">
+              <input type="hidden" name="subject" value="New Expression of Interest - PharmaCrop Careers">
               <div class="col-sm-6">
-                <input type="text" name="name" class="cs_form_field" placeholder="Name" required="">
+                <input type="text" name="first_name" class="cs_form_field" placeholder="First Name *" required="">
               </div>
               <div class="col-sm-6">
-                <input type="email" name="email" class="cs_form_field" placeholder="Email" required="">
+                <input type="text" name="last_name" class="cs_form_field" placeholder="Last Name *" required="">
+              </div>
+              <div class="col-sm-6">
+                <input type="email" name="email" class="cs_form_field" placeholder="Email Address *" required="">
+              </div>
+              <div class="col-sm-6">
+                <input type="tel" name="phone" class="cs_form_field" placeholder="Phone">
               </div>
               <div class="col-lg-12">
-                <textarea class="cs_form_field" name="message" placeholder="Message" rows="5" required=""></textarea>
+                <input type="file" name="resume" class="cs_form_field" accept=".doc,.docx,.pdf">
+                <p class="cs_fs_16 mt-2 mb-0">Allowed resume file types: .doc, .docx, .pdf</p>
               </div>
               <div class="col-lg-12">
-                <button class="cs_btn cs_style_1 cs_type_1 cs_bold cs_heading_bg cs_white_color w-100" type="submit">Send Message</button>
-                <div id="cs_result" class="cs_heading_color"></div>
+                <button class="cs_btn cs_style_1 cs_type_1 cs_bold cs_heading_bg cs_white_color w-100" type="submit">Submit Expression of Interest</button>
+                <div id="cs_career_result" class="cs_heading_color"></div>
               </div>
             </form>
-            <div class="cs_height_60 cs_height_lg_40"></div>
-            <div class="cs_section_heading cs_style_4 cs_mb_25">
-              <h2 class="cs_section_title cs_fs_32 cs_bold mb-0">GET IN <span>TOUCH</span></h2>
-            </div>
-            <ul class="cs_contact_info cs_mp_0">
-              <li>
-                <p class="mb-0">EMAIL</p>
-                <h4 class="mb-0 cs_fs_20 cs_bold">enquiries@pharmacrop.com.au</h4>
-              </li>
-              <li>
-                <p class="mb-0">PHONE</p>
-                <h4 class="mb-0 cs_fs_20 cs_bold">1300 053 533</h4>
-              </li>
-              <li>
-                <p class="mb-0">LINKEDIN</p>
-                <h4 class="mb-0 cs_fs_20 cs_bold">@pharmacrop</h4>
-              </li>
-            </ul>
+            <div class="cs_height_40 cs_height_lg_30"></div>
+            <p class="text-center mb-0"><a href="https://www.linkedin.com/company/pharmacrop/jobs/" target="_blank" rel="noopener" class="cs_btn cs_style_2 cs_bold cs_heading_color">LinkedIn Job Listings</a></p>
           </div>
         </div>
       </div>
-    </div>
-    <div class="cs_height_100 cs_height_lg_70"></div>
-    <!-- Start Contact Section -->
-    <!-- Start Card Section -->
-    <section class="cs_half_bg">
-      <div class="container">
-        <div class="cs_card cs_style_1 cs_heading_bg cs_bg_filed" data-src="/assets/img/card_bg.jpg">
-          <div class="cs_card_top">
-            <div class="cs_card_tags">
-              <a href="/" class="cs_card_tag">Home</a>
-              <a href="/industry" class="cs_card_tag">Industry</a>
-              <a href="#" class="cs_card_tag">GMP-Certified</a>
-              <a href="#" class="cs_card_tag">Australian-Grown</a>
-            </div>
-          </div>
-          <div class="cs_card_bottom">
-            <h2 class="cs_card_title cs_gradient_color_1 cs_fs_80 mb-0">LET'S START A <br>CONVERSATION</h2>
-          </div>
-          <a href="/contact" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
-            </svg>
-          </a>
-        </div>
-      </div>
+      <div class="cs_height_100 cs_height_lg_70"></div>
     </section>
-    <!-- End Card Section -->
+    <!-- End Expression of Interest Section -->
     <!-- Start Footer Section -->
     <footer class="cs_footer cs_style_1 cs_color_1">
       <div class="container">
@@ -198,7 +215,7 @@ export default function Page() {
                 <button type="submit" class="cs_newsletter_btn cs_arrow_btn cs_white_bg cs_heading_color">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
-                  </svg>                    
+                  </svg>
                 </button>
               </form>
             </div>
@@ -255,15 +272,6 @@ export default function Page() {
       </div>
     </footer>
     <!-- End Footer Section -->
-    <!-- Script -->
-    
-    
-    
-    
-    
-    
-  
-
 `,
       }}
     />

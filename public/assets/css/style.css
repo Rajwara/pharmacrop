@@ -4302,6 +4302,9 @@ hr {
 .cs_footer_widget_menu li:not(:last-child) {
   margin-bottom: 12px;
 }
+.cs_footer_contact_list {
+  margin-top: 16px;
+}
 
 .cs_footer_widget_title {
   font-size: 16px;

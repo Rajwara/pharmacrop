@@ -36,6 +36,8 @@ export default function Page() {
                     <li class="menu-item-has-children">
                       <a href="/contact">MORE</a>
                       <ul>
+                        <li><a href="/industry">INDUSTRY</a></li>
+                        <li><a href="/careers">CAREERS</a></li>
                         <li><a href="/gallery">GALLERY</a></li>
                         <li><a href="/blog">BLOG</a></li>
                         <li><a href="/contact">CONTACT</a></li>
@@ -47,11 +49,6 @@ export default function Page() {
             </div>
             <div class="cs_main_header_right">
               <div class="cs_header_icon_btns">
-                <a href="#" class="cs_header_icon_btn cs_center">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.0711 12.9289C15.9819 11.8398 14.6855 11.0335 13.2711 10.5454C14.786 9.50199 15.7812 7.75578 15.7812 5.78125C15.7812 2.59348 13.1878 0 10 0C6.81223 0 4.21875 2.59348 4.21875 5.78125C4.21875 7.75578 5.21402 9.50199 6.72898 10.5454C5.31453 11.0335 4.01813 11.8398 2.92895 12.9289C1.0402 14.8177 0 17.3289 0 20H1.5625C1.5625 15.3475 5.34754 11.5625 10 11.5625C14.6525 11.5625 18.4375 15.3475 18.4375 20H20C20 17.3289 18.9598 14.8177 17.0711 12.9289ZM10 10C7.67379 10 5.78125 8.1075 5.78125 5.78125C5.78125 3.455 7.67379 1.5625 10 1.5625C12.3262 1.5625 14.2188 3.455 14.2188 5.78125C14.2188 8.1075 12.3262 10 10 10Z" fill="currentColor"></path>
-                  </svg>                    
-                </a>
                 <button type="button" class="cs_header_icon_btn cs_search_tobble_btn cs_center">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g>
@@ -457,7 +454,12 @@ export default function Page() {
               <div class="cs_text_widget">
                 <img src="/assets/img/logo-light.png" alt="" class="cs_logo_img">
                 <p>Stay updated with our latest <br>
-                  projects and gardening tips.</p>
+                  news and product updates.</p>
+                <ul class="cs_footer_widget_menu cs_mp_0 cs_footer_contact_list">
+                  <li><a href="tel:1300053533">Phone: 1300 053 533</a></li>
+                  <li><a href="mailto:enquiries@pharmacrop.com.au">Email: enquiries@pharmacrop.com.au</a></li>
+                  <li><a href="https://www.linkedin.com/company/pharmacrop" target="_blank" rel="noopener">LinkedIn: @pharmacrop</a></li>
+                </ul>
               </div>
             </div>
             <div class="cs_footer_widget">
@@ -476,9 +478,9 @@ export default function Page() {
               <h4 class="cs_footer_widget_title">SUPPORT</h4>
               <ul class="cs_footer_widget_menu cs_mp_0">
                 <li><a href="/faq">FAQ</a></li>
-                <li><a href="">USER GUIDE</a></li>
-                <li><a href="">TESTIMONIAL</a></li>
-                <li><a href="">CUSTOMER</a></li>
+                <li><a href="/industry">INDUSTRY</a></li>
+                <li><a href="/careers">CAREERS</a></li>
+                <li><a href="/contact">CONTACT</a></li>
               </ul>
             </div>
           </div>
@@ -507,7 +509,7 @@ export default function Page() {
         </div>
         <div class="cs_bottom_footer">
           <div class="cs_bottom_footer_left">
-            <div class="cs_copyright">COURTESY © 2025. ALL RIGHTS RESERVED.</div>
+            <div class="cs_copyright">© 2026 PHARMACROP. ALL RIGHTS RESERVED. WEBSITE MAINTAINED BY PHARMACROP.</div>
           </div>
           <div class="cs_bottom_footer_right">
             <ul class="cs_footer_links cs_mp_0">
