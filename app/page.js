@@ -36,6 +36,8 @@ export default function Page() {
                     <li class="menu-item-has-children">
                       <a href="/contact">MORE</a>
                       <ul>
+                        <li><a href="/industry">INDUSTRY</a></li>
+                        <li><a href="/careers">CAREERS</a></li>
                         <li><a href="/gallery">GALLERY</a></li>
                         <li><a href="/blog">BLOG</a></li>
                         <li><a href="/contact">CONTACT</a></li>
@@ -89,17 +91,17 @@ export default function Page() {
       <div class="container">
         <div class="cs_hero_in">
           <div class="cs_hero_text">
-            <h1 class="cs_hero_title cs_fs_100 cs_normal cs_mb_12 cs_white_color cs_gradient_color_1 wow fadeInUp">CREATE YOUR <b>DREAM GARDEN</b></h1>
-            <p class="cs_hero_subtitle cs_fs_20 cs_mb_32 cs_opacity_7_5">Crafting dream gardens with passion, creativity, and sustainability for over a decade with our experienced landscape artists and gardener teams.</p>
+            <h1 class="cs_hero_title cs_fs_100 cs_normal cs_mb_12 cs_white_color cs_gradient_color_1 wow fadeInUp">AUSTRALIAN-GROWN. <b>COMPLETE CONTROL.</b></h1>
+            <p class="cs_hero_subtitle cs_fs_20 cs_mb_32 cs_opacity_7_5">Natural cultivation with pharmaceutical precision.</p>
             <div class="cs_hero_btns">
-              <a href="/services" class="cs_btn cs_style_1 cs_bold cs_heading_color cs_white_bg wow fadeInLeft">Get Started</a>
-              <a href="/projects" class="cs_btn cs_style_2 cs_bold cs_white_color wow fadeInRight">Explore Projects</a>
+              <a href="/contact" class="cs_btn cs_style_1 cs_bold cs_heading_color cs_white_bg wow fadeInLeft">Contact us</a>
+              <a href="/about" class="cs_btn cs_style_2 cs_bold cs_white_color wow fadeInRight">About PharmaCrop</a>
             </div>
           </div>
           <div class="cs_hero_funfact_wrap wow fadeInRight">
             <div class="cs_hero_funfact">
-              <h3 class="cs_fs_24 cs_bold cs_white_color mb-0">500+</h3>
-              <p class="cs_fs_20 cs_white_color cs_opacity_7_5 cs_mb_16">Satisfied Clients</p>
+              <h3 class="cs_fs_24 cs_bold cs_white_color mb-0">GMP</h3>
+              <p class="cs_fs_20 cs_white_color cs_opacity_7_5 cs_mb_16">Certified Manufacturing</p>
               <div class="cs_circle_group">
                 <span></span>
                 <span></span>
@@ -112,11 +114,11 @@ export default function Page() {
               <svg width="22" height="30" viewBox="0 0 22 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11 0C4.93447 0 0 4.97132 0 11.0821C0 13.0939 0.895529 15.2575 0.933059 15.3488C1.22229 16.0404 1.793 17.1147 2.20453 17.7445L9.74665 29.2575C10.0553 29.7295 10.5121 30 11 30C11.4879 30 11.9447 29.7295 12.2534 29.2581L19.7961 17.7445C20.2083 17.1147 20.7784 16.0404 21.0676 15.3488C21.1051 15.2581 22 13.0945 22 11.0821C22 4.97132 17.0655 0 11 0ZM19.8744 14.8429C19.6162 15.4628 19.085 16.4622 18.7155 17.0267L11.1728 28.5404C11.0239 28.7679 10.9767 28.7679 10.8279 28.5404L3.28512 17.0267C2.91565 16.4622 2.38441 15.4622 2.12624 14.8422C2.11523 14.8155 1.29412 12.824 1.29412 11.0821C1.29412 5.69035 5.64818 1.30378 11 1.30378C16.3518 1.30378 20.7059 5.69035 20.7059 11.0821C20.7059 12.8266 19.8828 14.8233 19.8744 14.8429Z" fill="currentColor"></path>
                 <path d="M11.0003 5.21578C7.78893 5.21578 5.17676 7.84811 5.17676 11.0828C5.17676 14.3175 7.78893 16.9498 11.0003 16.9498C14.2116 16.9498 16.8238 14.3175 16.8238 11.0828C16.8238 7.84811 14.2116 5.21578 11.0003 5.21578ZM11.0003 15.646C8.50329 15.646 6.47088 13.5991 6.47088 11.0828C6.47088 8.56649 8.50329 6.51956 11.0003 6.51956C13.4973 6.51956 15.5297 8.56649 15.5297 11.0828C15.5297 13.5991 13.4973 15.646 11.0003 15.646Z" fill="currentColor"></path>
-              </svg>                
+              </svg>
             </div>
-            <h3 class="cs_hero_box_title cs_fs_24 cs_mb_12 cs_white_color">Hachioji Garden</h3>
-            <p class="cs_hero_box_subtitle mb-0 cs_opacity_7_5">We design Hachioji Garden as a part of our new Landscape Design Commission in the country.</p>
-            <a href="/projects" class="cs_arrow_btn cs_hero_box_btn cs_center cs_heading_bg cs_white_color">
+            <h3 class="cs_hero_box_title cs_fs_24 cs_mb_12 cs_white_color">The PharmaCrop Story</h3>
+            <p class="cs_hero_box_subtitle mb-0 cs_opacity_7_5">Built in the Noosa Hinterland in Queensland, combining international cultivation expertise with Australian production and GMP-certified manufacturing.</p>
+            <a href="/about" class="cs_arrow_btn cs_hero_box_btn cs_center cs_heading_bg cs_white_color">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
               </svg>                
@@ -164,11 +166,11 @@ export default function Page() {
         <div class="cs_values_card_left">
           <ul class="cs_values cs_mp_0 cs_heading_color cs_fs_20">
             <li>
-              <span>Landscape Design</span>
+              <span>Cultivation</span>
               <span class="cs_bold">01</span>
             </li>
             <li>
-              <span>Indoor Garden</span>
+              <span>GMP Manufacturing</span>
               <span class="cs_bold">02</span>
             </li>
           </ul>
@@ -181,9 +183,9 @@ export default function Page() {
       <div class="cs_height_100 cs_height_lg_70"></div>
       <div class="container">
         <div class="cs_section_heading cs_style_1">
-          <h2 class="cs_section_title cs_fs_80 mb-0 wow fadeInDown">WE ARE <span>DIFFERENT</span> IN EVERY WAYS</h2>
+          <h2 class="cs_section_title cs_fs_80 mb-0 wow fadeInDown">FROM GENETICS TO <span>GMP MANUFACTURING</span></h2>
           <div class="cs_section_right">
-            <a href="/services" class="cs_btn cs_style_1 cs_bold cs_heading_bg cs_white_color w-100 wow fadeInRight">Get Started</a>
+            <a href="/contact" class="cs_btn cs_style_1 cs_bold cs_heading_bg cs_white_color w-100 wow fadeInRight">Contact us</a>
           </div>
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
@@ -200,8 +202,8 @@ export default function Page() {
                   <div class="cs_iconbox_icon cs_center cs_mb_24">
                     <i class="fa-regular fa-heart"></i>
                   </div>
-                  <h3 class="cs_fs_24 cs_mb_12">Passion in every work</h3>
-                  <p class="mb-0 cs_fs_20">We are deeply passionate about creating beautiful, sustainable green landscapes for our clients.</p>
+                  <h3 class="cs_fs_24 cs_mb_12">Noosa Hinterland</h3>
+                  <p class="mb-0 cs_fs_20">Where PharmaCrop calls home. The Noosa Hinterland provides the home for our cultivation and manufacturing operations, bringing local production together within a single region.</p>
                 </div>
               </div>
               <div class="col-sm-6">
@@ -209,8 +211,8 @@ export default function Page() {
                   <div class="cs_iconbox_icon cs_center cs_mb_24">
                     <i class="fa-solid fa-link"></i>
                   </div>
-                  <h3 class="cs_fs_24 cs_mb_12">Collaboration on top</h3>
-                  <p class="mb-0 cs_fs_20">We make your dream design come true by combining your ideas with our 10+ years of garden design expertise.</p>
+                  <h3 class="cs_fs_24 cs_mb_12">Integrated Operations</h3>
+                  <p class="mb-0 cs_fs_20">By bringing cultivation, processing and GMP-certified manufacturing together, PharmaCrop maintains oversight from cultivar selection through to finished product.</p>
                 </div>
               </div>
               <div class="col-sm-6">
@@ -218,17 +220,8 @@ export default function Page() {
                   <div class="cs_iconbox_icon cs_center cs_mb_24">
                     <i class="fa-brands fa-buffer"></i>
                   </div>
-                  <h3 class="cs_fs_24 cs_mb_12">Sustainability in check</h3>
-                  <p class="mb-0 cs_fs_20">We love nurturing nature, one garden at a time, so that you can enjoy the beautiful landscape of our garden even longer.</p>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="cs_iconbox cs_style_1">
-                  <div class="cs_iconbox_icon cs_center cs_mb_24">
-                    <i class="fa-brands fa-ubuntu"></i>
-                  </div>
-                  <h3 class="cs_fs_24 cs_mb_12">Creativity unleashed</h3>
-                  <p class="mb-0 cs_fs_20">We make sure to only give you our innovative designs that stand out to make sure that your garden is not like the others.</p>
+                  <h3 class="cs_fs_24 cs_mb_12">Global Expertise</h3>
+                  <p class="mb-0 cs_fs_20">Drawing on cultivation expertise from California, Canada and South Africa, our team applies international insights within the unique conditions of the Noosa Hinterland.</p>
                 </div>
               </div>
             </div>
@@ -243,35 +236,35 @@ export default function Page() {
       <div class="cs_height_100 cs_height_lg_70"></div>
       <div class="container">
         <div class="cs_section_heading cs_style_2">
-          <h2 class="cs_section_title cs_white_color cs_fs_80 mb-0 wow fadeInUp">SIMPLE STEPS FOR OUR <span>LANDSCAPE</span> WORK</h2>
+          <h2 class="cs_section_title cs_white_color cs_fs_80 mb-0 wow fadeInUp">A GROWING <span>PORTFOLIO</span> OF AUSTRALIAN-GROWN PRODUCTS</h2>
           <div class="cs_section_right">
-            <h3 class="cs_brackets_title cs_normal cs_fs_16 mb-0 cs_white_color">HOW IT WORKS</h3>
+            <h3 class="cs_brackets_title cs_normal cs_fs_16 mb-0 cs_white_color">PORTFOLIO</h3>
           </div>
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
         <div class="cs_card_3_wrap">
           <div class="cs_card cs_style_3">
             <div class="cs_card_in">
-              <h3 class="cs_fs_24 cs_bold cs_white_color cs_mb_12">01  |  Design consultation</h3>
-              <p class="mb-0 cs_white_color cs_opacity_5 cs_fs_20">In the initial step, we sit down with you to have a detailed discussion about your gardening vision and preferences.</p>
+              <h3 class="cs_fs_24 cs_bold cs_white_color cs_mb_12">01  |  Cultivation expertise</h3>
+              <p class="mb-0 cs_white_color cs_opacity_5 cs_fs_20">PharmaCrop continues to expand its portfolio of Australian-grown products, combining cultivation expertise with GMP-certified manufacturing.</p>
             </div>
           </div>
           <div class="cs_card cs_style_3">
             <div class="cs_card_in">
-              <h3 class="cs_fs_24 cs_bold cs_white_color cs_mb_12">02  |  Design &amp; planning</h3>
-              <p class="mb-0 cs_white_color cs_opacity_5 cs_fs_20">Our team of experts meticulously crafts a custom garden design that aligns with your desires and your space characteristics.</p>
+              <h3 class="cs_fs_24 cs_bold cs_white_color cs_mb_12">02  |  Managed production</h3>
+              <p class="mb-0 cs_white_color cs_opacity_5 cs_fs_20">Carefully managed production processes support quality and consistency across our growing portfolio.</p>
             </div>
           </div>
           <div class="cs_card cs_style_3">
             <div class="cs_card_in">
-              <h3 class="cs_fs_24 cs_bold cs_white_color cs_mb_12">03  |  Implement construction</h3>
-              <p class="mb-0 cs_white_color cs_opacity_5 cs_fs_20">We present the design to you for review. Once approved, we move forward to implement the plan with construction.</p>
+              <h3 class="cs_fs_24 cs_bold cs_white_color cs_mb_12">03  |  Hand-packed medicines</h3>
+              <p class="mb-0 cs_white_color cs_opacity_5 cs_fs_20">Supported by hand-packed medicines and pharmaceutical discipline throughout every stage of production.</p>
             </div>
           </div>
           <div class="cs_card cs_style_3">
             <div class="cs_card_in">
-              <h3 class="cs_fs_24 cs_bold cs_white_color cs_mb_12">04  |  Garden decorating</h3>
-              <p class="mb-0 cs_white_color cs_opacity_5 cs_fs_20">With your design finalized, we put on our gardening gloves and work, creating your garden to be as beautiful as envisioned.</p>
+              <h3 class="cs_fs_24 cs_bold cs_white_color cs_mb_12">04  |  Supply confidence</h3>
+              <p class="mb-0 cs_white_color cs_opacity_5 cs_fs_20">Our focus is on delivering quality, consistency and supply confidence for every partner we work with.</p>
             </div>
           </div>
           <div class="cs_section_logo"><img src="/assets/img/logo-light.png" alt="" class="cs_logo_img"></div>
@@ -285,9 +278,9 @@ export default function Page() {
       <div class="cs_height_100 cs_height_lg_70"></div>
       <div class="container">
         <div class="cs_section_heading cs_style_3">
-          <h3 class="cs_brackets_title cs_normal cs_fs_16 mb-0 wow fadeInUp">SERVICES</h3>
+          <h3 class="cs_brackets_title cs_normal cs_fs_16 mb-0 wow fadeInUp">INDUSTRY</h3>
           <div class="cs_section_right">
-            <a href="/services" class="cs_btn cs_style_2 cs_bold cs_heading_color">See More Services</a>
+            <a href="/industry" class="cs_btn cs_style_2 cs_bold cs_heading_color">See More</a>
           </div>
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
@@ -296,16 +289,16 @@ export default function Page() {
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
-                <a href="#" class="cs_card_tag">Garden</a>
-                <a href="#" class="cs_card_tag">Landscape Design</a>
-                <a href="#" class="cs_card_tag">Expert</a>
+                <a href="/industry" class="cs_card_tag">Industry</a>
+                <a href="#" class="cs_card_tag">Australian-Grown</a>
+                <a href="#" class="cs_card_tag">GMP-Certified</a>
               </div>
             </div>
             <div class="cs_card_bottom">
-              <h2 class="cs_card_title cs_white_color cs_fs_32">HOME GARDEN</h2>
-              <p class="cs_card_subtitle mb-0 cs_white_color">Crafting the perfect garden space for your home. Whether indoor or outdoor, we got it all ready for your greenery needs.</p>
+              <h2 class="cs_card_title cs_white_color cs_fs_32">PHARMACISTS</h2>
+              <p class="cs_card_subtitle mb-0 cs_white_color">Reliable supply. Simplified access. A dedicated online ordering portal is currently in development to further support pharmacy partners.</p>
             </div>
-            <a href="/service-details" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+            <a href="/industry" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
               </svg>
@@ -315,54 +308,35 @@ export default function Page() {
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
-                <a href="#" class="cs_card_tag">Garden</a>
-                <a href="#" class="cs_card_tag">Landscape Design</a>
-                <a href="#" class="cs_card_tag">Expert</a>
+                <a href="/industry" class="cs_card_tag">Industry</a>
+                <a href="#" class="cs_card_tag">Australian-Grown</a>
+                <a href="#" class="cs_card_tag">GMP-Certified</a>
               </div>
             </div>
             <div class="cs_card_bottom">
-              <h2 class="cs_card_title cs_white_color cs_fs_32">PLANT SELECTION</h2>
-              <p class="cs_card_subtitle mb-0 cs_white_color">Crafting the perfect garden space for your home. Whether indoor or outdoor, we got it all ready for your greenery needs.</p>
+              <h2 class="cs_card_title cs_white_color cs_fs_32">PRESCRIBERS</h2>
+              <p class="cs_card_subtitle mb-0 cs_white_color">Where cultivation expertise meets pharmaceutical discipline, supporting quality, consistency and product integrity across every product we produce.</p>
             </div>
-            <a href="/service-details" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+            <a href="/industry" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
               </svg>
             </a>
           </div>
-          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/service_thumb_3.jpg">
+          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed wow fadeInRight" data-src="/assets/img/service_thumb_3.jpg">
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
-                <a href="#" class="cs_card_tag">Garden</a>
-                <a href="#" class="cs_card_tag">Landscape Design</a>
-                <a href="#" class="cs_card_tag">Expert</a>
+                <a href="/industry" class="cs_card_tag">Industry</a>
+                <a href="#" class="cs_card_tag">Australian-Grown</a>
+                <a href="#" class="cs_card_tag">GMP-Certified</a>
               </div>
             </div>
             <div class="cs_card_bottom">
-              <h2 class="cs_card_title cs_white_color cs_fs_32">HARD SCAPING</h2>
-              <p class="cs_card_subtitle mb-0 cs_white_color">Crafting the perfect garden space for your home. Whether indoor or outdoor, we got it all ready for your greenery needs.</p>
+              <h2 class="cs_card_title cs_white_color cs_fs_32">DISTRIBUTORS</h2>
+              <p class="cs_card_subtitle mb-0 cs_white_color">A reliable partner from production to supply, with consistent products, reliable supply and a growing Australian-grown portfolio.</p>
             </div>
-            <a href="/service-details" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
-              </svg>
-            </a>
-          </div>
-          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed wow fadeInRight" data-src="/assets/img/service_thumb_4.jpg">
-            <div class="cs_card_top">
-              <div class="cs_card_tags">
-                <a href="/" class="cs_card_tag">Home</a>
-                <a href="#" class="cs_card_tag">Garden</a>
-                <a href="#" class="cs_card_tag">Landscape Design</a>
-                <a href="#" class="cs_card_tag">Expert</a>
-              </div>
-            </div>
-            <div class="cs_card_bottom">
-              <h2 class="cs_card_title cs_white_color cs_fs_32">PUBLIC GARDEN</h2>
-              <p class="cs_card_subtitle mb-0 cs_white_color">Crafting the perfect garden space for your home. Whether indoor or outdoor, we got it all ready for your greenery needs.</p>
-            </div>
-            <a href="/service-details" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+            <a href="/industry" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
               </svg>
@@ -388,28 +362,28 @@ export default function Page() {
                 <div class="cs_slider_wrapper">
                   <div class="cs_slide">
                     <div class="cs_testimonial cs_style_1 text-center wow fadeInUp">
-                      <blockquote class="cs_testimonial_blockquote cs_heading_color cs_fs_32 cs_bold cs_mb_48">LeafLife's dedication to bringing our <span>vision</span> to life was exceptional. They turned our <span>backyard</span> into a haven of tranquility. Their attention to detail and sustainable practices on their design <span>impressed</span> us.</blockquote>
+                      <blockquote class="cs_testimonial_blockquote cs_heading_color cs_fs_32 cs_bold cs_mb_48">PharmaCrop's <span>integrated</span> approach, from cultivation to GMP-certified manufacturing, gives us complete <span>confidence</span> in every batch we receive. Their pharmaceutical discipline and consistency are <span>unmatched</span>.</blockquote>
                       <div class="cs_testimonial_meta">
-                        <h4 class="cs_testimonial_avatar cs_bold cs_fs_16 cs_mb_2">STEVE EVANS</h4>
-                        <p class="cs_testimonial_avatar_designation mb-0">CEO of Malley Company</p>
+                        <h4 class="cs_testimonial_avatar cs_bold cs_fs_16 cs_mb_2">PARTNER PHARMACIST</h4>
+                        <p class="cs_testimonial_avatar_designation mb-0">PharmaCrop Distribution Partner</p>
                       </div>
                     </div>
                   </div>
                   <div class="cs_slide">
                     <div class="cs_testimonial cs_style_1 text-center">
-                      <blockquote class="cs_testimonial_blockquote cs_heading_color cs_fs_32 cs_bold cs_mb_48">LeafLife's dedication to bringing our <span>vision</span> to life was exceptional. They turned our <span>backyard</span> into a haven of tranquility. Their attention to detail and sustainable practices on their design <span>impressed</span> us.</blockquote>
+                      <blockquote class="cs_testimonial_blockquote cs_heading_color cs_fs_32 cs_bold cs_mb_48">PharmaCrop's <span>integrated</span> approach, from cultivation to GMP-certified manufacturing, gives us complete <span>confidence</span> in every batch we receive. Their pharmaceutical discipline and consistency are <span>unmatched</span>.</blockquote>
                       <div class="cs_testimonial_meta">
-                        <h4 class="cs_testimonial_avatar cs_bold cs_fs_16 cs_mb_2">STEVE EVANS</h4>
-                        <p class="cs_testimonial_avatar_designation mb-0">CEO of Malley Company</p>
+                        <h4 class="cs_testimonial_avatar cs_bold cs_fs_16 cs_mb_2">PARTNER PHARMACIST</h4>
+                        <p class="cs_testimonial_avatar_designation mb-0">PharmaCrop Distribution Partner</p>
                       </div>
                     </div>
                   </div>
                   <div class="cs_slide">
                     <div class="cs_testimonial cs_style_1 text-center">
-                      <blockquote class="cs_testimonial_blockquote cs_heading_color cs_fs_32 cs_bold cs_mb_48">LeafLife's dedication to bringing our <span>vision</span> to life was exceptional. They turned our <span>backyard</span> into a haven of tranquility. Their attention to detail and sustainable practices on their design <span>impressed</span> us.</blockquote>
+                      <blockquote class="cs_testimonial_blockquote cs_heading_color cs_fs_32 cs_bold cs_mb_48">PharmaCrop's <span>integrated</span> approach, from cultivation to GMP-certified manufacturing, gives us complete <span>confidence</span> in every batch we receive. Their pharmaceutical discipline and consistency are <span>unmatched</span>.</blockquote>
                       <div class="cs_testimonial_meta">
-                        <h4 class="cs_testimonial_avatar cs_bold cs_fs_16 cs_mb_2">STEVE EVANS</h4>
-                        <p class="cs_testimonial_avatar_designation mb-0">CEO of Malley Company</p>
+                        <h4 class="cs_testimonial_avatar cs_bold cs_fs_16 cs_mb_2">PARTNER PHARMACIST</h4>
+                        <p class="cs_testimonial_avatar_designation mb-0">PharmaCrop Distribution Partner</p>
                       </div>
                     </div>
                   </div>
@@ -439,9 +413,9 @@ export default function Page() {
       <div class="cs_height_100 cs_height_lg_70"></div>
       <div class="container">
         <div class="cs_section_heading cs_style_2 cs_color_1">
-          <h2 class="cs_section_title cs_fs_80 mb-0 wow fadeInDown">GET TO <span>KNOW</span> OUR <br>LATEST GARDEN <span>WORKS</span></h2>
+          <h2 class="cs_section_title cs_fs_80 mb-0 wow fadeInDown">THERAPEUTIC GOODS <br>ADMINISTRATION <span>(TGA) GUIDANCE</span></h2>
           <div class="cs_section_right">
-            <h3 class="cs_brackets_title cs_normal cs_fs_16 mb-0">WORKS</h3>
+            <h3 class="cs_brackets_title cs_normal cs_fs_16 mb-0">COMPLIANCE</h3>
           </div>
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
@@ -455,15 +429,15 @@ export default function Page() {
                     <div class="cs_card_info">
                       <ul class="cs_card_info_list cs_mp_0">
                         <li>
-                          <p class="mb-0">NAME</p>
-                          <h3 class="mb-0 cs_fs_20 cs_bold">SERENE RETREAT</h3>
+                          <p class="mb-0">AUDIENCE</p>
+                          <h3 class="mb-0 cs_fs_20 cs_bold">PATIENTS</h3>
                         </li>
                         <li>
-                          <p class="mb-0">LOCATION</p>
-                          <h3 class="mb-0 cs_fs_20 cs_bold">SUNNYVALE, CA</h3>
+                          <p class="mb-0">RESOURCE</p>
+                          <h3 class="mb-0 cs_fs_20 cs_bold"><a href="#">TGA PATIENT INFORMATION</a></h3>
                         </li>
                       </ul>
-                      <div class="cs_card_text">A tranquil garden oasis perfect for your relaxation time with family or alone within your comfortable home.</div>
+                      <div class="cs_card_text">Official guidance from Australia's Therapeutic Goods Administration for patients.</div>
                     </div>
                   </div>
                 </div>
@@ -473,33 +447,15 @@ export default function Page() {
                     <div class="cs_card_info">
                       <ul class="cs_card_info_list cs_mp_0">
                         <li>
-                          <p class="mb-0">NAME</p>
-                          <h3 class="mb-0 cs_fs_20 cs_bold">SERENE RETREAT</h3>
+                          <p class="mb-0">AUDIENCE</p>
+                          <h3 class="mb-0 cs_fs_20 cs_bold">HEALTH PROFESSIONALS</h3>
                         </li>
                         <li>
-                          <p class="mb-0">LOCATION</p>
-                          <h3 class="mb-0 cs_fs_20 cs_bold">SUNNYVALE, CA</h3>
+                          <p class="mb-0">RESOURCE</p>
+                          <h3 class="mb-0 cs_fs_20 cs_bold"><a href="#">TGA MEDICINAL CANNABIS INFO</a></h3>
                         </li>
                       </ul>
-                      <div class="cs_card_text">A tranquil garden oasis perfect for your relaxation time with family or alone within your comfortable home.</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="cs_slide">
-                  <div class="cs_card cs_style_4">
-                    <div class="cs_card_thumb cs_bg_filed cs_mb_40" data-src="/assets/img/project_thumb_9.jpg"></div>
-                    <div class="cs_card_info">
-                      <ul class="cs_card_info_list cs_mp_0">
-                        <li>
-                          <p class="mb-0">NAME</p>
-                          <h3 class="mb-0 cs_fs_20 cs_bold">SERENE RETREAT</h3>
-                        </li>
-                        <li>
-                          <p class="mb-0">LOCATION</p>
-                          <h3 class="mb-0 cs_fs_20 cs_bold">SUNNYVALE, CA</h3>
-                        </li>
-                      </ul>
-                      <div class="cs_card_text">A tranquil garden oasis perfect for your relaxation time with family or alone within your comfortable home.</div>
+                      <div class="cs_card_text">TGA medicinal cannabis information for health professionals.</div>
                     </div>
                   </div>
                 </div>
@@ -521,7 +477,7 @@ export default function Page() {
       <div class="cs_height_100 cs_height_lg_70"></div>
       <div class="container">
         <div class="cs_cta_in">
-          <h2 class="cs_cta_title cs_fs_80 cs_white_color cs_mb_40 wow fadeInDown">READY TO TRANSFORM <br>YOUR GARDEN?</h2>
+          <h2 class="cs_cta_title cs_fs_80 cs_white_color cs_mb_40 wow fadeInDown">READY TO PARTNER <br>WITH PHARMACROP?</h2>
           <a href="/contact" class="cs_btn cs_style_1 cs_bold cs_heading_color cs_white_bg wow fadeInUp">Contact Us</a>
         </div>
       </div>
@@ -537,7 +493,12 @@ export default function Page() {
               <div class="cs_text_widget">
                 <img src="/assets/img/logo-dark.webp" alt="Logo" class="wow zoomIn cs_logo_img">
                 <p>Stay updated with our latest <br>
-                  projects and gardening tips.</p>
+                  news and product updates.</p>
+                <ul class="cs_footer_widget_menu cs_mp_0 cs_footer_contact_list">
+                  <li><a href="tel:1300053533">Phone: 1300 053 533</a></li>
+                  <li><a href="mailto:enquiries@pharmacrop.com.au">Email: enquiries@pharmacrop.com.au</a></li>
+                  <li><a href="https://www.linkedin.com/company/pharmacrop" target="_blank" rel="noopener">LinkedIn: @pharmacrop</a></li>
+                </ul>
               </div>
             </div>
             <div class="cs_footer_widget">
@@ -556,9 +517,9 @@ export default function Page() {
               <h4 class="cs_footer_widget_title">SUPPORT</h4>
               <ul class="cs_footer_widget_menu cs_mp_0">
                 <li><a href="/faq">FAQ</a></li>
-                <li><a href="">USER GUIDE</a></li>
-                <li><a href="">TESTIMONIAL</a></li>
-                <li><a href="">CUSTOMER</a></li>
+                <li><a href="/industry">INDUSTRY</a></li>
+                <li><a href="/careers">CAREERS</a></li>
+                <li><a href="/contact">CONTACT</a></li>
               </ul>
             </div>
           </div>
@@ -587,7 +548,7 @@ export default function Page() {
         </div>
         <div class="cs_bottom_footer">
           <div class="cs_bottom_footer_left wow fadeInLeft">
-            <div class="cs_copyright">COURTESY © 2025. ALL RIGHTS RESERVED.</div>
+            <div class="cs_copyright">© 2026 PHARMACROP. ALL RIGHTS RESERVED. WEBSITE MAINTAINED BY PHARMACROP.</div>
           </div>
           <div class="cs_bottom_footer_right wow fadeInRight">
             <ul class="cs_footer_links cs_mp_0">

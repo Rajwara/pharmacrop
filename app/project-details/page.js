@@ -36,6 +36,8 @@ export default function Page() {
                     <li class="menu-item-has-children">
                       <a href="/contact">MORE</a>
                       <ul>
+                        <li><a href="/industry">INDUSTRY</a></li>
+                        <li><a href="/careers">CAREERS</a></li>
                         <li><a href="/gallery">GALLERY</a></li>
                         <li><a href="/blog">BLOG</a></li>
                         <li><a href="/contact">CONTACT</a></li>
@@ -345,7 +347,12 @@ export default function Page() {
               <div class="cs_text_widget">
                 <img src="/assets/img/logo-light.png" alt="" class="cs_logo_img">
                 <p>Stay updated with our latest <br>
-                  projects and gardening tips.</p>
+                  news and product updates.</p>
+                <ul class="cs_footer_widget_menu cs_mp_0 cs_footer_contact_list">
+                  <li><a href="tel:1300053533">Phone: 1300 053 533</a></li>
+                  <li><a href="mailto:enquiries@pharmacrop.com.au">Email: enquiries@pharmacrop.com.au</a></li>
+                  <li><a href="https://www.linkedin.com/company/pharmacrop" target="_blank" rel="noopener">LinkedIn: @pharmacrop</a></li>
+                </ul>
               </div>
             </div>
             <div class="cs_footer_widget">
@@ -364,9 +371,9 @@ export default function Page() {
               <h4 class="cs_footer_widget_title">SUPPORT</h4>
               <ul class="cs_footer_widget_menu cs_mp_0">
                 <li><a href="/faq">FAQ</a></li>
-                <li><a href="">USER GUIDE</a></li>
-                <li><a href="">TESTIMONIAL</a></li>
-                <li><a href="">CUSTOMER</a></li>
+                <li><a href="/industry">INDUSTRY</a></li>
+                <li><a href="/careers">CAREERS</a></li>
+                <li><a href="/contact">CONTACT</a></li>
               </ul>
             </div>
           </div>
@@ -395,7 +402,7 @@ export default function Page() {
         </div>
         <div class="cs_bottom_footer">
           <div class="cs_bottom_footer_left">
-            <div class="cs_copyright">COURTESY © 2025. ALL RIGHTS RESERVED.</div>
+            <div class="cs_copyright">© 2026 PHARMACROP. ALL RIGHTS RESERVED. WEBSITE MAINTAINED BY PHARMACROP.</div>
           </div>
           <div class="cs_bottom_footer_right">
             <ul class="cs_footer_links cs_mp_0">
