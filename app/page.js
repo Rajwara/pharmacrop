@@ -23,7 +23,7 @@ export default function Page() {
           <div class="cs_main_header_in">
             <div class="cs_main_header_left">
               <a class="cs_site_branding" href="/">
-                <img src="/assets/img/logo.svg" alt="Logo">
+                <img src="/assets/img/logo-light.png" alt="Logo">
               </a>
             </div>
             <div class="cs_main_header_center">
@@ -279,7 +279,7 @@ export default function Page() {
               <p class="mb-0 cs_white_color cs_opacity_5 cs_fs_20">With your design finalized, we put on our gardening gloves and work, creating your garden to be as beautiful as envisioned.</p>
             </div>
           </div>
-          <div class="cs_section_logo"><img src="/assets/img/logo.svg" alt=""></div>
+          <div class="cs_section_logo"><img src="/assets/img/logo-light.png" alt=""></div>
         </div>
       </div>
       <div class="cs_height_100 cs_height_lg_70"></div>
@@ -540,7 +540,7 @@ export default function Page() {
           <div class="cs_footer_col">
             <div class="cs_footer_widget">
               <div class="cs_text_widget">
-                <img src="/assets/img/footer_logo.svg" alt="Logo" class="wow zoomIn">
+                <img src="/assets/img/logo-dark.webp" alt="Logo" class="wow zoomIn">
                 <p>Stay updated with our latest <br>
                   projects and gardening tips.</p>
               </div>

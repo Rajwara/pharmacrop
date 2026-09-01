@@ -23,7 +23,7 @@ export default function Page() {
           <div class="cs_main_header_in">
             <div class="cs_main_header_left">
               <a class="cs_site_branding" href="/">
-                <img src="/assets/img/logo.svg" alt="Logo">
+                <img src="/assets/img/logo-light.png" alt="Logo">
               </a>
             </div>
             <div class="cs_main_header_center">
@@ -185,7 +185,7 @@ export default function Page() {
           <div class="cs_footer_col">
             <div class="cs_footer_widget">
               <div class="cs_text_widget">
-                <img src="/assets/img/footer_logo_2.svg" alt="">
+                <img src="/assets/img/logo-light.png" alt="">
                 <p>Stay updated with our latest <br>
                   projects and gardening tips.</p>
               </div>
