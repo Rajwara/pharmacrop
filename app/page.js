@@ -134,13 +134,13 @@ export default function Page() {
                 <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/pharmacrop-banner1.webp"></div>
               </div>
               <div class="cs_slide">
-                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/hero_bg_4.jpg"></div>
+                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/pharmacrop-banner2.webp"></div>
               </div>
               <div class="cs_slide">
                 <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/hero_bg_2.jpg"></div>
               </div>
               <div class="cs_slide">
-                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/hero_bg_4.jpg"></div>
+                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/pharmacrop-banner4.webp"></div>
               </div>
             </div>
           </div>
