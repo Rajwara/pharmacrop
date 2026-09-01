@@ -36,11 +36,13 @@
 ** All Variable
 ----------------------------------------------------------------*/
 :root {
-  --white-color: #f9fbf3;
-  --heading-color: #374836;
-  --body-color: rgb(55 72 54 / 50%);
+  --white-color: #eee9e3;
+  --heading-color: #024242;
+  --body-color: rgb(2 66 66 / 50%);
   --gray-color: #e1ece3;
   --border-color: #d9d9d9;
+  --accent-gold: #d99f59;
+  --accent-mint: #78dca6;
   --heading-font: "Plus Jakarta Sans", sans-serif;
   --body-font: "DM Sans", sans-serif;
 }
@@ -2177,7 +2179,7 @@ hr {
   margin-bottom: 16px;
 }
 .cs_page_heading.cs_style_2 .cs_page_title span {
-  background: linear-gradient(268deg, rgba(55, 72, 54, 0.8) 0.37%, #a0a6a1 49.66%);
+  background: linear-gradient(268deg, rgba(2, 66, 66, 0.8) 0.37%, #666666 49.66%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2288,6 +2290,9 @@ hr {
           justify-content: space-between;
   gap: 0 15px;
 }
+.cs_values_card.cs_style_1 .cs_values li span.cs_bold {
+  color: var(--accent-gold);
+}
 .cs_values_card.cs_style_1 .cs_values li:last-child {
   margin-bottom: 0;
 }
@@ -2329,7 +2334,7 @@ hr {
   }
 }
 .cs_section_heading.cs_style_1 .cs_section_title span {
-  background: linear-gradient(268deg, rgba(55, 72, 54, 0.8) 0.37%, #a0a6a1 49.66%);
+  background: linear-gradient(268deg, rgba(2, 66, 66, 0.8) 0.37%, #666666 49.66%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2373,7 +2378,7 @@ hr {
   }
 }
 .cs_section_heading.cs_style_2 .cs_section_title span {
-  background: linear-gradient(-15deg, rgba(55, 72, 54, 0.8) 0.37%, #a0a6a1 49.66%);
+  background: linear-gradient(-15deg, rgba(2, 66, 66, 0.8) 0.37%, #666666 49.66%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2397,7 +2402,7 @@ hr {
           align-items: flex-end;
 }
 .cs_section_heading.cs_style_2.cs_color_1 .cs_section_title span {
-  background: linear-gradient(223deg, rgba(55, 72, 54, 0.8) 0.37%, #a0a6a1 49.66%);
+  background: linear-gradient(223deg, rgba(2, 66, 66, 0.8) 0.37%, #666666 49.66%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2416,14 +2421,14 @@ hr {
 }
 
 .cs_section_heading.cs_style_4 .cs_section_title span {
-  background: linear-gradient(223deg, rgba(55, 72, 54, 0.8) 0.37%, #a0a6a1 49.66%);
+  background: linear-gradient(223deg, rgba(2, 66, 66, 0.8) 0.37%, #666666 49.66%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .cs_section_heading.cs_style_5 .cs_section_title span {
-  background: linear-gradient(223deg, rgba(55, 72, 54, 0.8) 0.37%, #a0a6a1 49.66%);
+  background: linear-gradient(223deg, rgba(2, 66, 66, 0.8) 0.37%, #666666 49.66%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -3689,8 +3694,8 @@ hr {
 }
 .cs_site_header.cs_style_1.cs_color_1.cs_sticky_active {
   background-color: var(--white-color);
-  -webkit-box-shadow: 0 10px 10px -10px rgba(55, 72, 54, 0.06);
-          box-shadow: 0 10px 10px -10px rgba(55, 72, 54, 0.06);
+  -webkit-box-shadow: 0 10px 10px -10px rgba(2, 66, 66, 0.06);
+          box-shadow: 0 10px 10px -10px rgba(2, 66, 66, 0.06);
 }
 
 @media screen and (max-width: 1199px) {
@@ -4583,7 +4588,7 @@ hr {
 .tag-cloud-link {
   font-size: 14px;
   line-height: 1.6em;
-  border: 1px solid rgba(55, 72, 54, 0.2);
+  border: 1px solid rgba(2, 66, 66, 0.2);
   padding: 5px 15px;
   display: inline-block;
   margin: 5px;
@@ -4888,7 +4893,7 @@ hr {
   width: 100%;
   left: 0;
   top: 0;
-  background-color: #e1ece2;
+  background-color: var(--accent-mint);
 }
 .cs_iconbox.cs_style_1 .cs_iconbox_icon i {
   position: relative;
@@ -5257,8 +5262,8 @@ hr {
 .cs_card.cs_style_2 .cs_card_thumb::before {
   content: "";
   border-radius: 20px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(55, 72, 54, 0.75)), to(rgba(55, 72, 54, 0.75)));
-  background: linear-gradient(0deg, rgba(55, 72, 54, 0.75) 0%, rgba(55, 72, 54, 0.75) 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(2, 66, 66, 0.75)), to(rgba(2, 66, 66, 0.75)));
+  background: linear-gradient(0deg, rgba(2, 66, 66, 0.75) 0%, rgba(2, 66, 66, 0.75) 100%);
   position: absolute;
   height: 100%;
   width: 100%;
