@@ -1,0 +1,4 @@
+/* Intentionally minimal — all styling comes from the LeafLife template's
+   own stylesheets loaded in app/layout.js (bootstrap, fontawesome, slick,
+   animate, lightgallery, style.css). Next.js's default reset was removed
+   here so it doesn't fight with the template's own CSS resets. */
