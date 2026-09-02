@@ -215,9 +215,6 @@ export default function Page() {
       <div class="container">
         <div class="cs_section_heading cs_style_1">
           <h2 class="cs_section_title cs_fs_80 mb-0 wow fadeInDown">SUPPORTING OUR <span>INDUSTRY PARTNERS</span></h2>
-          <div class="cs_section_right">
-            <a href="#" class="cs_btn cs_style_2 cs_bold cs_heading_color wow fadeInRight">See More</a>
-          </div>
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
         <div class="cs_card_1_group">
@@ -410,7 +407,7 @@ export default function Page() {
       <div class="cs_height_100 cs_height_lg_70"></div>
       <div class="container">
         <div class="cs_cta_in">
-          <h2 class="cs_cta_title cs_fs_80 cs_white_color cs_mb_40 wow fadeInDown">READY TO PARTNER <br>WITH PHARMACROP?</h2>
+          <h2 class="cs_cta_title cs_fs_80 cs_white_color cs_mb_40 wow fadeInDown">READY TO PARTNER <br><span class="cs_nowrap_span">WITH PHARMACROP?</span></h2>
           <a href="#" class="cs_btn cs_style_1 cs_bold cs_heading_color cs_white_bg wow fadeInUp">Contact Us</a>
         </div>
       </div>
