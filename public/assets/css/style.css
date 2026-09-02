@@ -1726,7 +1726,12 @@ label {
 }
 @media (max-width: 575px) {
   .cs_fs_80 {
-    font-size: 48px;
+    font-size: 40px;
+  }
+}
+@media (max-width: 400px) {
+  .cs_fs_80 {
+    font-size: 32px;
   }
 }
 
@@ -1755,7 +1760,17 @@ label {
 }
 @media (max-width: 767px) {
   .cs_fs_100 {
-    font-size: 64px;
+    font-size: 54px;
+  }
+}
+@media (max-width: 575px) {
+  .cs_fs_100 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 375px) {
+  .cs_fs_100 {
+    font-size: 34px;
   }
 }
 
