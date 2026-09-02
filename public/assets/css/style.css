@@ -1719,6 +1719,11 @@ label {
     font-size: 60px;
   }
 }
+@media (max-width: 991px) {
+  .cs_fs_80 {
+    font-size: 52px;
+  }
+}
 @media (max-width: 767px) {
   .cs_fs_80 {
     font-size: 50px;
@@ -1726,22 +1731,17 @@ label {
 }
 @media (max-width: 575px) {
   .cs_fs_80 {
-    font-size: 40px;
+    font-size: 32px;
   }
 }
 @media (max-width: 400px) {
   .cs_fs_80 {
-    font-size: 32px;
+    font-size: 26px;
   }
 }
 
 .cs_nowrap_span {
   white-space: nowrap;
-}
-@media (max-width: 575px) {
-  .cs_nowrap_span {
-    white-space: normal;
-  }
 }
 
 .cs_fs_100 {
@@ -1758,6 +1758,11 @@ label {
     font-size: 78px;
   }
 }
+@media (max-width: 991px) {
+  .cs_fs_100 {
+    font-size: 62px;
+  }
+}
 @media (max-width: 767px) {
   .cs_fs_100 {
     font-size: 54px;
@@ -1765,12 +1770,12 @@ label {
 }
 @media (max-width: 575px) {
   .cs_fs_100 {
-    font-size: 40px;
+    font-size: 32px;
   }
 }
 @media (max-width: 375px) {
   .cs_fs_100 {
-    font-size: 34px;
+    font-size: 27px;
   }
 }
 
