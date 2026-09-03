@@ -35,6 +35,7 @@ export const headerHtml = `
                         <li><a href="/projects">PROJECTS</a></li>
                         <li><a href="/gallery">GALLERY</a></li>
                         <li><a href="/test">TEST</a></li>
+                        <li><a href="/leafline">LEAFLINE</a></li>
                       </ul>
                     </li>
                   </ul>
