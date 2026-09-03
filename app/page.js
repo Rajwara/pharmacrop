@@ -611,6 +611,7 @@ export default function Page() {
         .cs_contact_card_title { font-size: 30px; }
         .cs_contact_form_bar { flex-direction: column; align-items: stretch; }
         .cs_contact_form_btn { width: 100%; }
+        .cs_contact_card_section { padding-bottom: 40px !important; }
       }
     </style>
     <section class="cs_contact_card_section">
@@ -677,6 +678,9 @@ export default function Page() {
       @media (max-width: 575px) {
         .cs_footer_row { grid-template-columns: 1fr !important; }
         .cs_footer_row .cs_footer_col::after { display: none; }
+      }
+      @media (max-width: 767px) {
+        .cs_footer_row { padding-top: 40px !important; }
       }
     </style>
     <footer class="cs_footer cs_style_1">
