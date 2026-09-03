@@ -140,6 +140,9 @@ export default function Page() {
           <div class="cs_slider_container" data-autoplay="7000" data-loop="1" data-speed="800" data-center="0" data-variable-width="0" data-slides-per-view="1">
             <div class="cs_slider_wrapper">
               <div class="cs_slide">
+                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/pharma-banner.jpeg"></div>
+              </div>
+              <div class="cs_slide">
                 <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/pharmacrop-banner1.webp"></div>
               </div>
               <div class="cs_slide">
@@ -390,12 +393,116 @@ export default function Page() {
       </div>
     </section>
     <!-- End Leafline Testimonials -->
+    <!-- Start Homepage FAQ Section -->
+    <section>
+      <div class="cs_height_100 cs_height_lg_70"></div>
+      <div class="container">
+        <div class="cs_section_heading cs_style_2 cs_color_1">
+          <h2 class="cs_section_title mb-0" style="font-size: 44px;">FREQUENTLY <br><span>ASKED QUESTIONS</span></h2>
+          <div class="cs_section_right">
+            <span class="cs_fs_20 cs_bold cs_heading_color">[ F.A.Q ]</span>
+          </div>
+        </div>
+        <div class="cs_height_64 cs_height_lg_50"></div>
+        <div class="row cs_gap_y_30">
+          <div class="col-xxl-4 col-xl-5">
+            <div class="cs_img_box cs_style_2">
+              <img src="/assets/img/pharmacrop-banner3.webp" alt="" class="cs_radius_20 w-100">
+            </div>
+          </div>
+          <div class="col-xxl-8 col-xl-7">
+            <div class="cs_accordians cs_style_1">
+              <div class="cs_accordian active">
+                <div class="cs_accordian_head">
+                  <p class="cs_accordian_title cs_fs_20 cs_bold cs_heading_color">What does PharmaCrop do?</p>
+                  <span class="cs_accordian_toggle cs_heading_color">
+                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.0001 11.2501C9.77627 11.2501 9.55227 11.1645 9.38143 10.9937L0.63143 2.24368C0.289523 1.90177 0.289523 1.34812 0.63143 1.00643C0.973336 0.664742 1.52699 0.664523 1.86868 1.00643L10.0001 9.1378L18.1314 1.00643C18.4733 0.664523 19.027 0.664523 19.3687 1.00643C19.7104 1.34834 19.7106 1.90199 19.3687 2.24368L10.6187 10.9937C10.4478 11.1645 10.2238 11.2501 10.0001 11.2501Z" fill="currentColor"></path>
+                    </svg>
+                  </span>
+                </div>
+                <div class="cs_accordian_body cs_heading_color cs_opacity_7_5">
+                  <p>PharmaCrop is an Australian-grown, GMP-certified cultivation and manufacturing company based in the Noosa Hinterland, Queensland. We combine international cultivation expertise with pharmaceutical-grade manufacturing standards to support a growing portfolio of Australian-grown products.</p>
+                </div>
+              </div><!-- .cs_accordian -->
+              <div class="cs_accordian">
+                <div class="cs_accordian_head">
+                  <p class="cs_accordian_title cs_fs_20 cs_bold cs_heading_color">Is PharmaCrop's manufacturing GMP-certified?</p>
+                  <span class="cs_accordian_toggle cs_heading_color">
+                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.0001 11.2501C9.77627 11.2501 9.55227 11.1645 9.38143 10.9937L0.63143 2.24368C0.289523 1.90177 0.289523 1.34812 0.63143 1.00643C0.973336 0.664742 1.52699 0.664523 1.86868 1.00643L10.0001 9.1378L18.1314 1.00643C18.4733 0.664523 19.027 0.664523 19.3687 1.00643C19.7104 1.34834 19.7106 1.90199 19.3687 2.24368L10.6187 10.9937C10.4478 11.1645 10.2238 11.2501 10.0001 11.2501Z" fill="currentColor"></path>
+                    </svg>
+                  </span>
+                </div>
+                <div class="cs_accordian_body cs_heading_color cs_opacity_7_5">
+                  <p>Yes. Our manufacturing operations run under GMP-certified standards, backed by ISO-aligned quality systems, so every batch meets consistent, pharmaceutical-grade requirements from cultivation through to finished product.</p>
+                </div>
+              </div><!-- .cs_accordian -->
+              <div class="cs_accordian">
+                <div class="cs_accordian_head">
+                  <p class="cs_accordian_title cs_fs_20 cs_bold cs_heading_color">Who does PharmaCrop supply?</p>
+                  <span class="cs_accordian_toggle cs_heading_color">
+                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.0001 11.2501C9.77627 11.2501 9.55227 11.1645 9.38143 10.9937L0.63143 2.24368C0.289523 1.90177 0.289523 1.34812 0.63143 1.00643C0.973336 0.664742 1.52699 0.664523 1.86868 1.00643L10.0001 9.1378L18.1314 1.00643C18.4733 0.664523 19.027 0.664523 19.3687 1.00643C19.7104 1.34834 19.7106 1.90199 19.3687 2.24368L10.6187 10.9937C10.4478 11.1645 10.2238 11.2501 10.0001 11.2501Z" fill="currentColor"></path>
+                    </svg>
+                  </span>
+                </div>
+                <div class="cs_accordian_body cs_heading_color cs_opacity_7_5">
+                  <p>We work with pharmacists, prescribers and distribution partners across Australia's regulated supply chain, supporting quality, consistency and reliable supply. Visit our Industry page to learn more about partnering with us.</p>
+                </div>
+              </div><!-- .cs_accordian -->
+              <div class="cs_accordian">
+                <div class="cs_accordian_head">
+                  <p class="cs_accordian_title cs_fs_20 cs_bold cs_heading_color">Where is PharmaCrop based?</p>
+                  <span class="cs_accordian_toggle cs_heading_color">
+                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.0001 11.2501C9.77627 11.2501 9.55227 11.1645 9.38143 10.9937L0.63143 2.24368C0.289523 1.90177 0.289523 1.34812 0.63143 1.00643C0.973336 0.664742 1.52699 0.664523 1.86868 1.00643L10.0001 9.1378L18.1314 1.00643C18.4733 0.664523 19.027 0.664523 19.3687 1.00643C19.7104 1.34834 19.7106 1.90199 19.3687 2.24368L10.6187 10.9937C10.4478 11.1645 10.2238 11.2501 10.0001 11.2501Z" fill="currentColor"></path>
+                    </svg>
+                  </span>
+                </div>
+                <div class="cs_accordian_body cs_heading_color cs_opacity_7_5">
+                  <p>Our cultivation and manufacturing operations are based in the Noosa Hinterland, Queensland, bringing local production together within a single, integrated site.</p>
+                </div>
+              </div><!-- .cs_accordian -->
+              <div class="cs_accordian">
+                <div class="cs_accordian_head">
+                  <p class="cs_accordian_title cs_fs_20 cs_bold cs_heading_color">How can my pharmacy or business partner with PharmaCrop?</p>
+                  <span class="cs_accordian_toggle cs_heading_color">
+                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.0001 11.2501C9.77627 11.2501 9.55227 11.1645 9.38143 10.9937L0.63143 2.24368C0.289523 1.90177 0.289523 1.34812 0.63143 1.00643C0.973336 0.664742 1.52699 0.664523 1.86868 1.00643L10.0001 9.1378L18.1314 1.00643C18.4733 0.664523 19.027 0.664523 19.3687 1.00643C19.7104 1.34834 19.7106 1.90199 19.3687 2.24368L10.6187 10.9937C10.4478 11.1645 10.2238 11.2501 10.0001 11.2501Z" fill="currentColor"></path>
+                    </svg>
+                  </span>
+                </div>
+                <div class="cs_accordian_body cs_heading_color cs_opacity_7_5">
+                  <p>Reach out through our Contact page or request a quote, and our team will be in touch to discuss partnership and supply options.</p>
+                </div>
+              </div><!-- .cs_accordian -->
+              <div class="cs_accordian">
+                <div class="cs_accordian_head">
+                  <p class="cs_accordian_title cs_fs_20 cs_bold cs_heading_color">Where can I find official regulatory guidance?</p>
+                  <span class="cs_accordian_toggle cs_heading_color">
+                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.0001 11.2501C9.77627 11.2501 9.55227 11.1645 9.38143 10.9937L0.63143 2.24368C0.289523 1.90177 0.289523 1.34812 0.63143 1.00643C0.973336 0.664742 1.52699 0.664523 1.86868 1.00643L10.0001 9.1378L18.1314 1.00643C18.4733 0.664523 19.027 0.664523 19.3687 1.00643C19.7104 1.34834 19.7106 1.90199 19.3687 2.24368L10.6187 10.9937C10.4478 11.1645 10.2238 11.2501 10.0001 11.2501Z" fill="currentColor"></path>
+                    </svg>
+                  </span>
+                </div>
+                <div class="cs_accordian_body cs_heading_color cs_opacity_7_5">
+                  <p>Official guidance for patients and health professionals is published directly by Australia's Therapeutic Goods Administration (TGA). Visit our Contact page and our team can point you to the right resources.</p>
+                </div>
+              </div><!-- .cs_accordian -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cs_height_100 cs_height_lg_70"></div>
+    </section>
+    <!-- End Homepage FAQ Section -->
     <!-- Start Works Section -->
     <section>
       <div class="cs_height_100 cs_height_lg_70"></div>
       <div class="container">
         <div class="cs_section_heading cs_style_2 cs_color_1">
-          <h2 class="cs_section_title mb-0 wow fadeInDown" style="font-size: 44px;">THERAPEUTIC GOODS <br>ADMINISTRATION <span>(TGA) GUIDANCE</span></h2>
+          <h2 class="cs_section_title mb-0 wow fadeInDown" style="font-size: 44px;">FROM THE <br>PHARMACROP <span>JOURNAL</span></h2>
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
         <div class="cs_full_width_slider_section">
@@ -404,37 +511,55 @@ export default function Page() {
               <div class="cs_slider_wrapper">
                 <div class="cs_slide">
                   <div class="cs_card cs_style_4">
-                    <div class="cs_card_thumb cs_bg_filed cs_mb_40" data-src="/assets/img/patients-card.webp"></div>
+                    <div class="cs_card_thumb cs_bg_filed cs_mb_40" data-src="/assets/img/hero_bg.jpg"></div>
                     <div class="cs_card_info">
                       <ul class="cs_card_info_list cs_mp_0">
                         <li>
-                          <p class="mb-0">AUDIENCE</p>
-                          <h3 class="mb-0 cs_fs_20 cs_bold">PATIENTS</h3>
+                          <p class="mb-0">CATEGORY</p>
+                          <h3 class="mb-0 cs_fs_20 cs_bold">CULTIVATION</h3>
                         </li>
                         <li>
-                          <p class="mb-0">RESOURCE</p>
-                          <h3 class="mb-0 cs_fs_20 cs_bold"><a href="#">TGA PATIENT INFORMATION</a></h3>
+                          <p class="mb-0">READ MORE</p>
+                          <h3 class="mb-0 cs_fs_20 cs_bold"><a href="/blog/noosa-hinterland-home-of-pharmacrop">THE NOOSA HINTERLAND: HOME OF PHARMACROP</a></h3>
                         </li>
                       </ul>
-                      <div class="cs_card_text">Official guidance from Australia's Therapeutic Goods Administration for patients.</div>
+                      <div class="cs_card_text">The Noosa Hinterland provides the home for our cultivation and manufacturing operations, bringing local production together within a single region.</div>
                     </div>
                   </div>
                 </div>
                 <div class="cs_slide">
                   <div class="cs_card cs_style_4">
-                    <div class="cs_card_thumb cs_bg_filed cs_mb_40" data-src="/assets/img/health-professionals-card.webp"></div>
+                    <div class="cs_card_thumb cs_bg_filed cs_mb_40" data-src="/assets/img/video_block_bg.jpg"></div>
                     <div class="cs_card_info">
                       <ul class="cs_card_info_list cs_mp_0">
                         <li>
-                          <p class="mb-0">AUDIENCE</p>
-                          <h3 class="mb-0 cs_fs_20 cs_bold">HEALTH PROFESSIONALS</h3>
+                          <p class="mb-0">CATEGORY</p>
+                          <h3 class="mb-0 cs_fs_20 cs_bold">MANUFACTURING</h3>
                         </li>
                         <li>
-                          <p class="mb-0">RESOURCE</p>
-                          <h3 class="mb-0 cs_fs_20 cs_bold"><a href="#">TGA MEDICINAL CANNABIS INFO</a></h3>
+                          <p class="mb-0">READ MORE</p>
+                          <h3 class="mb-0 cs_fs_20 cs_bold"><a href="/blog/from-genetics-to-gmp-certified-manufacturing">FROM GENETICS TO GMP-CERTIFIED MANUFACTURING</a></h3>
                         </li>
                       </ul>
-                      <div class="cs_card_text">TGA medicinal cannabis information for health professionals.</div>
+                      <div class="cs_card_text">By bringing cultivation, processing and GMP-certified manufacturing together, PharmaCrop maintains oversight from cultivar selection through to finished product.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cs_slide">
+                  <div class="cs_card cs_style_4">
+                    <div class="cs_card_thumb cs_bg_filed cs_mb_40" data-src="/assets/img/post_1.jpg"></div>
+                    <div class="cs_card_info">
+                      <ul class="cs_card_info_list cs_mp_0">
+                        <li>
+                          <p class="mb-0">CATEGORY</p>
+                          <h3 class="mb-0 cs_fs_20 cs_bold">CULTIVATION</h3>
+                        </li>
+                        <li>
+                          <p class="mb-0">READ MORE</p>
+                          <h3 class="mb-0 cs_fs_20 cs_bold"><a href="/blog/global-cultivation-expertise-hinterland-honed">GLOBAL CULTIVATION EXPERTISE, HINTERLAND-HONED</a></h3>
+                        </li>
+                      </ul>
+                      <div class="cs_card_text">Drawing on cultivation expertise from California, Canada and South Africa, our team applies international insights within the unique conditions of the Noosa Hinterland.</div>
                     </div>
                   </div>
                 </div>
