@@ -27,7 +27,6 @@ export const headerHtml = `
                     <li><a href="/careers">CAREERS</a></li>
                     <li><a href="/blog">BLOG</a></li>
                     <li><a href="/contact">CONTACT</a></li>
-                    <li><a href="#">SEE OUR DOCTORS</a></li>
                     <li class="menu-item-has-children">
                       <a href="#">MORE</a>
                       <ul>

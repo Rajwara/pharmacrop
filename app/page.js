@@ -38,7 +38,6 @@ export default function Page() {
                     <li><a href="/careers">CAREERS</a></li>
                     <li><a href="/blog">BLOG</a></li>
                     <li><a href="/contact">CONTACT</a></li>
-                    <li><a href="#">SEE OUR DOCTORS</a></li>
                     <li class="menu-item-has-children">
                       <a href="#">MORE</a>
                       <ul>
@@ -198,7 +197,6 @@ export default function Page() {
             <span class="cs_sticky_eyebrow">What We Do</span>
             <h2 class="cs_sticky_title wow fadeInDown">FROM GENETICS TO GMP MANUFACTURING</h2>
             <p class="cs_sticky_text">Where international cultivation expertise meets Australian, GMP-certified manufacturing discipline &mdash; from cultivar selection through to finished product.</p>
-            <a href="/services" class="cs_sticky_btn">VIEW ALL SERVICES</a>
           </div>
           <div class="cs_sticky_services_right">
             <div class="cs_sticky_card">
