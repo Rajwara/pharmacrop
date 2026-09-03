@@ -44,6 +44,7 @@ export default function Page() {
                         <li><a href="/gallery">GALLERY</a></li>
                         <li><a href="/test">TEST</a></li>
                         <li><a href="/leafline">LEAFLINE</a></li>
+                        <li><a href="/home-v2">HOME V2</a></li>
                       </ul>
                     </li>
                   </ul>
