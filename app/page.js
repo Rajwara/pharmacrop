@@ -229,7 +229,7 @@ export default function Page() {
         <div class="cs_sticky_services_grid">
           <div class="cs_sticky_services_left">
             <span class="cs_sticky_eyebrow">What We Do</span>
-            <h2 class="cs_sticky_title cs_two_tone wow fadeInDown">FROM GENETICS TO <br>GMP <span>MANUFACTURING</span></h2>
+            <h2 class="cs_sticky_title cs_two_tone wow fadeInDown">FROM GENETICS<br>TO GMP<br><span>MANUFACTURING</span></h2>
             <p class="cs_sticky_text">Where international cultivation expertise meets Australian, GMP-certified manufacturing discipline &mdash; from cultivar selection through to finished product.</p>
           </div>
           <div class="cs_sticky_services_right">
