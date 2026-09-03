@@ -141,28 +141,6 @@ export default function Page() {
     <!-- End About Section -->
     <!-- Start Features Section -->
     <div class="cs_heading_bg cs_white_color">
-      <!-- Start Values Section -->
-      <div class="cs_height_100 cs_height_lg_70"></div>
-      <div class="container">
-        <div class="cs_values_card cs_style_1">
-          <div class="cs_values_card_left">
-            <h3 class="cs_brackets_title cs_normal cs_fs_16 mb-0 wow fadeInDown">VALUES</h3>
-          </div>
-          <div class="cs_values_card_left">
-            <ul class="cs_values cs_mp_0 cs_heading_color cs_fs_20">
-              <li>
-                <span>Cultivation</span>
-                <span class="cs_bold">01</span>
-              </li>
-              <li>
-                <span>GMP Manufacturing</span>
-                <span class="cs_bold">02</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <!-- End Values Section -->
       <!-- Start Feature Section -->
       <section>
         <div class="cs_height_100 cs_height_lg_70"></div>

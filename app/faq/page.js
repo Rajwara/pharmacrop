@@ -106,137 +106,93 @@ export default function Page() {
       <div class="cs_height_100 cs_height_lg_70"></div>
       <div class="container">
         <div class="cs_section_heading cs_style_2 cs_color_1">
-          <h2 class="cs_section_title cs_fs_80 mb-0">GARDEN <span>DESIGN</span></h2>
+          <h2 class="cs_section_title cs_fs_80 mb-0">FREQUENTLY <span>ASKED QUESTIONS</span></h2>
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
         <div class="row cs_gap_y_30">
           <div class="col-xxl-4 col-xl-5">
             <div class="cs_img_box cs_style_2">
-              <img src="/assets/img/faq_img.jpg" alt="" class="cs_radius_20 w-100">
+              <img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt="" class="cs_radius_20 w-100">
             </div>
           </div>
           <div class="col-xxl-8 col-xl-7">
             <div class="cs_accordians cs_style_1">
               <div class="cs_accordian active">
                 <div class="cs_accordian_head">
-                  <p class="cs_accordian_title cs_fs_20 cs_bold cs_heading_color">What is the process for getting a garden design?</p>
+                  <p class="cs_accordian_title cs_fs_20 cs_bold cs_heading_color">What does PharmaCrop do?</p>
                   <span class="cs_accordian_toggle cs_heading_color">
                     <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M10.0001 11.2501C9.77627 11.2501 9.55227 11.1645 9.38143 10.9937L0.63143 2.24368C0.289523 1.90177 0.289523 1.34812 0.63143 1.00643C0.973336 0.664742 1.52699 0.664523 1.86868 1.00643L10.0001 9.1378L18.1314 1.00643C18.4733 0.664523 19.027 0.664523 19.3687 1.00643C19.7104 1.34834 19.7106 1.90199 19.3687 2.24368L10.6187 10.9937C10.4478 11.1645 10.2238 11.2501 10.0001 11.2501Z" fill="currentColor"></path>
-                    </svg>                      
+                    </svg>
                   </span>
                 </div>
                 <div class="cs_accordian_body cs_heading_color cs_opacity_7_5">
-                  <p>The timeline varies based on the project's complexity and size. Small projects may take a few weeks, while larger ones could take a few months. During the consultation, we will provide a more accurate estimate. We will design garden based on your own needs, budget, and time constraints.</p>
+                  <p>PharmaCrop is an Australian-grown, GMP-certified cultivation and manufacturing company based in the Noosa Hinterland, Queensland. We combine international cultivation expertise with pharmaceutical-grade manufacturing standards to support a growing portfolio of Australian-grown products.</p>
                 </div>
               </div><!-- .cs_accordian -->
               <div class="cs_accordian">
                 <div class="cs_accordian_head">
-                  <p class="cs_accordian_title cs_fs_20 cs_bold cs_heading_color">How long does it take to complete a garden design project?</p>
+                  <p class="cs_accordian_title cs_fs_20 cs_bold cs_heading_color">Is PharmaCrop's manufacturing GMP-certified?</p>
                   <span class="cs_accordian_toggle cs_heading_color">
                     <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M10.0001 11.2501C9.77627 11.2501 9.55227 11.1645 9.38143 10.9937L0.63143 2.24368C0.289523 1.90177 0.289523 1.34812 0.63143 1.00643C0.973336 0.664742 1.52699 0.664523 1.86868 1.00643L10.0001 9.1378L18.1314 1.00643C18.4733 0.664523 19.027 0.664523 19.3687 1.00643C19.7104 1.34834 19.7106 1.90199 19.3687 2.24368L10.6187 10.9937C10.4478 11.1645 10.2238 11.2501 10.0001 11.2501Z" fill="currentColor"></path>
-                    </svg>                      
+                    </svg>
                   </span>
                 </div>
                 <div class="cs_accordian_body cs_heading_color cs_opacity_7_5">
-                  <p>The timeline varies based on the project's complexity and size. Small projects may take a few weeks, while larger ones could take a few months. During the consultation, we will provide a more accurate estimate. We will design garden based on your own needs, budget, and time constraints.</p>
+                  <p>Yes. Our manufacturing operations run under GMP-certified standards, backed by ISO-aligned quality systems, so every batch meets consistent, pharmaceutical-grade requirements from cultivation through to finished product.</p>
                 </div>
               </div><!-- .cs_accordian -->
               <div class="cs_accordian">
                 <div class="cs_accordian_head">
-                  <p class="cs_accordian_title cs_fs_20 cs_bold cs_heading_color">Do you offer maintenance services after the garden is installed?</p>
+                  <p class="cs_accordian_title cs_fs_20 cs_bold cs_heading_color">Who does PharmaCrop supply?</p>
                   <span class="cs_accordian_toggle cs_heading_color">
                     <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M10.0001 11.2501C9.77627 11.2501 9.55227 11.1645 9.38143 10.9937L0.63143 2.24368C0.289523 1.90177 0.289523 1.34812 0.63143 1.00643C0.973336 0.664742 1.52699 0.664523 1.86868 1.00643L10.0001 9.1378L18.1314 1.00643C18.4733 0.664523 19.027 0.664523 19.3687 1.00643C19.7104 1.34834 19.7106 1.90199 19.3687 2.24368L10.6187 10.9937C10.4478 11.1645 10.2238 11.2501 10.0001 11.2501Z" fill="currentColor"></path>
-                    </svg>                      
+                    </svg>
                   </span>
                 </div>
                 <div class="cs_accordian_body cs_heading_color cs_opacity_7_5">
-                  <p>The timeline varies based on the project's complexity and size. Small projects may take a few weeks, while larger ones could take a few months. During the consultation, we will provide a more accurate estimate. We will design garden based on your own needs, budget, and time constraints.</p>
+                  <p>We work with pharmacists, prescribers and distribution partners across Australia's regulated supply chain, supporting quality, consistency and reliable supply. Visit our Industry page to learn more about partnering with us.</p>
                 </div>
               </div><!-- .cs_accordian -->
               <div class="cs_accordian">
                 <div class="cs_accordian_head">
-                  <p class="cs_accordian_title cs_fs_20 cs_bold cs_heading_color">Can I incorporate sustainability values into my garden design?</p>
+                  <p class="cs_accordian_title cs_fs_20 cs_bold cs_heading_color">Where is PharmaCrop based?</p>
                   <span class="cs_accordian_toggle cs_heading_color">
                     <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M10.0001 11.2501C9.77627 11.2501 9.55227 11.1645 9.38143 10.9937L0.63143 2.24368C0.289523 1.90177 0.289523 1.34812 0.63143 1.00643C0.973336 0.664742 1.52699 0.664523 1.86868 1.00643L10.0001 9.1378L18.1314 1.00643C18.4733 0.664523 19.027 0.664523 19.3687 1.00643C19.7104 1.34834 19.7106 1.90199 19.3687 2.24368L10.6187 10.9937C10.4478 11.1645 10.2238 11.2501 10.0001 11.2501Z" fill="currentColor"></path>
-                    </svg>                      
+                    </svg>
                   </span>
                 </div>
                 <div class="cs_accordian_body cs_heading_color cs_opacity_7_5">
-                  <p>The timeline varies based on the project's complexity and size. Small projects may take a few weeks, while larger ones could take a few months. During the consultation, we will provide a more accurate estimate. We will design garden based on your own needs, budget, and time constraints.</p>
-                </div>
-              </div><!-- .cs_accordian -->
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="cs_height_100 cs_height_lg_70"></div>
-      <div class="container">
-        <div class="cs_section_heading cs_style_2 cs_color_1">
-          <h2 class="cs_section_title cs_fs_80 mb-0">LANDSCAPE <span>DESIGN</span></h2>
-        </div>
-        <div class="cs_height_64 cs_height_lg_50"></div>
-        <div class="row cs_gap_y_30">
-          <div class="col-xxl-4 col-xl-5">
-            <div class="cs_img_box cs_style_2">
-              <img src="/assets/img/faq_img_2.jpg" alt="" class="cs_radius_20 w-100">
-            </div>
-          </div>
-          <div class="col-xxl-8 col-xl-7">
-            <div class="cs_accordians cs_style_1">
-              <div class="cs_accordian active">
-                <div class="cs_accordian_head">
-                  <p class="cs_accordian_title cs_fs_20 cs_bold cs_heading_color">What is the process for getting a garden design?</p>
-                  <span class="cs_accordian_toggle cs_heading_color">
-                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10.0001 11.2501C9.77627 11.2501 9.55227 11.1645 9.38143 10.9937L0.63143 2.24368C0.289523 1.90177 0.289523 1.34812 0.63143 1.00643C0.973336 0.664742 1.52699 0.664523 1.86868 1.00643L10.0001 9.1378L18.1314 1.00643C18.4733 0.664523 19.027 0.664523 19.3687 1.00643C19.7104 1.34834 19.7106 1.90199 19.3687 2.24368L10.6187 10.9937C10.4478 11.1645 10.2238 11.2501 10.0001 11.2501Z" fill="currentColor"></path>
-                    </svg>                      
-                  </span>
-                </div>
-                <div class="cs_accordian_body cs_heading_color cs_opacity_7_5">
-                  <p>The timeline varies based on the project's complexity and size. Small projects may take a few weeks, while larger ones could take a few months. During the consultation, we will provide a more accurate estimate. We will design garden based on your own needs, budget, and time constraints.</p>
+                  <p>Our cultivation and manufacturing operations are based in the Noosa Hinterland, Queensland, bringing local production together within a single, integrated site.</p>
                 </div>
               </div><!-- .cs_accordian -->
               <div class="cs_accordian">
                 <div class="cs_accordian_head">
-                  <p class="cs_accordian_title cs_fs_20 cs_bold cs_heading_color">How long does it take to complete a garden design project?</p>
+                  <p class="cs_accordian_title cs_fs_20 cs_bold cs_heading_color">How can my pharmacy or business partner with PharmaCrop?</p>
                   <span class="cs_accordian_toggle cs_heading_color">
                     <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M10.0001 11.2501C9.77627 11.2501 9.55227 11.1645 9.38143 10.9937L0.63143 2.24368C0.289523 1.90177 0.289523 1.34812 0.63143 1.00643C0.973336 0.664742 1.52699 0.664523 1.86868 1.00643L10.0001 9.1378L18.1314 1.00643C18.4733 0.664523 19.027 0.664523 19.3687 1.00643C19.7104 1.34834 19.7106 1.90199 19.3687 2.24368L10.6187 10.9937C10.4478 11.1645 10.2238 11.2501 10.0001 11.2501Z" fill="currentColor"></path>
-                    </svg>                      
+                    </svg>
                   </span>
                 </div>
                 <div class="cs_accordian_body cs_heading_color cs_opacity_7_5">
-                  <p>The timeline varies based on the project's complexity and size. Small projects may take a few weeks, while larger ones could take a few months. During the consultation, we will provide a more accurate estimate. We will design garden based on your own needs, budget, and time constraints.</p>
+                  <p>Reach out through our Contact page or request a quote, and our team will be in touch to discuss partnership and supply options.</p>
                 </div>
               </div><!-- .cs_accordian -->
               <div class="cs_accordian">
                 <div class="cs_accordian_head">
-                  <p class="cs_accordian_title cs_fs_20 cs_bold cs_heading_color">Do you offer maintenance services after the garden is installed?</p>
+                  <p class="cs_accordian_title cs_fs_20 cs_bold cs_heading_color">Where can I find official regulatory guidance?</p>
                   <span class="cs_accordian_toggle cs_heading_color">
                     <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M10.0001 11.2501C9.77627 11.2501 9.55227 11.1645 9.38143 10.9937L0.63143 2.24368C0.289523 1.90177 0.289523 1.34812 0.63143 1.00643C0.973336 0.664742 1.52699 0.664523 1.86868 1.00643L10.0001 9.1378L18.1314 1.00643C18.4733 0.664523 19.027 0.664523 19.3687 1.00643C19.7104 1.34834 19.7106 1.90199 19.3687 2.24368L10.6187 10.9937C10.4478 11.1645 10.2238 11.2501 10.0001 11.2501Z" fill="currentColor"></path>
-                    </svg>                      
+                    </svg>
                   </span>
                 </div>
                 <div class="cs_accordian_body cs_heading_color cs_opacity_7_5">
-                  <p>The timeline varies based on the project's complexity and size. Small projects may take a few weeks, while larger ones could take a few months. During the consultation, we will provide a more accurate estimate. We will design garden based on your own needs, budget, and time constraints.</p>
-                </div>
-              </div><!-- .cs_accordian -->
-              <div class="cs_accordian">
-                <div class="cs_accordian_head">
-                  <p class="cs_accordian_title cs_fs_20 cs_bold cs_heading_color">Can I incorporate sustainability values into my garden design?</p>
-                  <span class="cs_accordian_toggle cs_heading_color">
-                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10.0001 11.2501C9.77627 11.2501 9.55227 11.1645 9.38143 10.9937L0.63143 2.24368C0.289523 1.90177 0.289523 1.34812 0.63143 1.00643C0.973336 0.664742 1.52699 0.664523 1.86868 1.00643L10.0001 9.1378L18.1314 1.00643C18.4733 0.664523 19.027 0.664523 19.3687 1.00643C19.7104 1.34834 19.7106 1.90199 19.3687 2.24368L10.6187 10.9937C10.4478 11.1645 10.2238 11.2501 10.0001 11.2501Z" fill="currentColor"></path>
-                    </svg>                      
-                  </span>
-                </div>
-                <div class="cs_accordian_body cs_heading_color cs_opacity_7_5">
-                  <p>The timeline varies based on the project's complexity and size. Small projects may take a few weeks, while larger ones could take a few months. During the consultation, we will provide a more accurate estimate. We will design garden based on your own needs, budget, and time constraints.</p>
+                  <p>Official guidance for patients and health professionals is published directly by Australia's Therapeutic Goods Administration (TGA). See the TGA Guidance section on our homepage for links to the relevant resources.</p>
                 </div>
               </div><!-- .cs_accordian -->
             </div>
