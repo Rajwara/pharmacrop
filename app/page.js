@@ -438,9 +438,9 @@ export default function Page() {
       <div class="cs_height_100 cs_height_lg_70"></div>
       <div class="container">
         <div class="cs_section_heading cs_style_2 cs_color_1">
-          <h2 class="cs_section_title cs_fs_80 mb-0">FREQUENTLY <br><span>ASKED</span> QUESTIONS</h2>
-          <div class="cs_section_right">
+          <div>
             <span class="cs_sticky_eyebrow">F.A.Q</span>
+            <h2 class="cs_section_title cs_fs_80 mb-0">FREQUENTLY <br><span>ASKED</span> QUESTIONS</h2>
           </div>
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
