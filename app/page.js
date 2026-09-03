@@ -394,6 +394,15 @@ export default function Page() {
     </section>
     <!-- End Leafline Testimonials -->
     <!-- Start Homepage FAQ Section -->
+    <style>
+      .cs_home_faq_row { align-items: stretch; }
+      .cs_home_faq_row .cs_img_box { height: 100%; }
+      .cs_home_faq_row .cs_img_box img { height: 100%; object-fit: cover; }
+      @media (max-width: 1199px) {
+        .cs_home_faq_row .cs_img_box { height: auto; }
+        .cs_home_faq_row .cs_img_box img { height: auto; }
+      }
+    </style>
     <section class="cs_gray_bg">
       <div class="cs_height_100 cs_height_lg_70"></div>
       <div class="container">
@@ -404,7 +413,7 @@ export default function Page() {
           </div>
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
-        <div class="row cs_gap_y_30">
+        <div class="row cs_gap_y_30 cs_home_faq_row">
           <div class="col-xxl-4 col-xl-5">
             <div class="cs_img_box cs_style_2">
               <img src="/assets/img/pharmacrop-banner3.webp" alt="" class="cs_radius_20 w-100">
@@ -462,32 +471,6 @@ export default function Page() {
                 </div>
                 <div class="cs_accordian_body cs_heading_color cs_opacity_7_5">
                   <p>Our cultivation and manufacturing operations are based in the Noosa Hinterland, Queensland, bringing local production together within a single, integrated site.</p>
-                </div>
-              </div><!-- .cs_accordian -->
-              <div class="cs_accordian">
-                <div class="cs_accordian_head">
-                  <p class="cs_accordian_title cs_fs_20 cs_bold cs_heading_color">How can my pharmacy or business partner with PharmaCrop?</p>
-                  <span class="cs_accordian_toggle cs_heading_color">
-                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10.0001 11.2501C9.77627 11.2501 9.55227 11.1645 9.38143 10.9937L0.63143 2.24368C0.289523 1.90177 0.289523 1.34812 0.63143 1.00643C0.973336 0.664742 1.52699 0.664523 1.86868 1.00643L10.0001 9.1378L18.1314 1.00643C18.4733 0.664523 19.027 0.664523 19.3687 1.00643C19.7104 1.34834 19.7106 1.90199 19.3687 2.24368L10.6187 10.9937C10.4478 11.1645 10.2238 11.2501 10.0001 11.2501Z" fill="currentColor"></path>
-                    </svg>
-                  </span>
-                </div>
-                <div class="cs_accordian_body cs_heading_color cs_opacity_7_5">
-                  <p>Reach out through our Contact page or request a quote, and our team will be in touch to discuss partnership and supply options.</p>
-                </div>
-              </div><!-- .cs_accordian -->
-              <div class="cs_accordian">
-                <div class="cs_accordian_head">
-                  <p class="cs_accordian_title cs_fs_20 cs_bold cs_heading_color">Where can I find official regulatory guidance?</p>
-                  <span class="cs_accordian_toggle cs_heading_color">
-                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10.0001 11.2501C9.77627 11.2501 9.55227 11.1645 9.38143 10.9937L0.63143 2.24368C0.289523 1.90177 0.289523 1.34812 0.63143 1.00643C0.973336 0.664742 1.52699 0.664523 1.86868 1.00643L10.0001 9.1378L18.1314 1.00643C18.4733 0.664523 19.027 0.664523 19.3687 1.00643C19.7104 1.34834 19.7106 1.90199 19.3687 2.24368L10.6187 10.9937C10.4478 11.1645 10.2238 11.2501 10.0001 11.2501Z" fill="currentColor"></path>
-                    </svg>
-                  </span>
-                </div>
-                <div class="cs_accordian_body cs_heading_color cs_opacity_7_5">
-                  <p>Official guidance for patients and health professionals is published directly by Australia's Therapeutic Goods Administration (TGA). Visit our Contact page and our team can point you to the right resources.</p>
                 </div>
               </div><!-- .cs_accordian -->
             </div>
