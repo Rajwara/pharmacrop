@@ -401,6 +401,221 @@ export default function Page() {
       </div>
     </section>
     <!-- End Testimonial Slider Section -->
+    <!-- Start Contact Card Section -->
+    <style>
+      .cs_contact_card_section { padding: 100px 0; }
+      .cs_contact_card { position: relative; border-radius: 24px; overflow: hidden; min-height: 700px; display: flex; flex-direction: column; justify-content: space-between; padding: 40px; }
+      .cs_contact_card_bg { position: absolute; inset: 0; z-index: 0; }
+      .cs_contact_card_bg img { width: 100%; height: 100%; object-fit: cover; }
+      .cs_contact_card_bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(2, 34, 34, 0.55) 0%, rgba(2, 34, 34, 0.25) 40%, rgba(2, 20, 20, 0.85) 100%); }
+      .cs_contact_card_top { position: relative; z-index: 2; }
+      .cs_contact_info_label { color: #fff; font-weight: 700; font-size: 16px; margin: 0 0 16px; }
+      .cs_contact_pill { display: inline-flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(6px); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 30px; padding: 10px 20px 10px 10px; color: #fff; text-decoration: none; font-size: 14px; margin-right: 12px; margin-bottom: 12px; }
+      .cs_contact_pill_icon { width: 30px; height: 30px; border-radius: 50%; background: #78dca6; color: #024242; display: flex; align-items: center; justify-content: center; font-size: 13px; flex: none; }
+      .cs_contact_card_bottom { position: relative; z-index: 2; }
+      .cs_contact_eyebrow_row { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+      .cs_contact_eyebrow_icon { width: 32px; height: 32px; border-radius: 50%; background: #fff; color: #024242; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+      .cs_contact_eyebrow_text { color: #fff; font-weight: 700; font-size: 13px; letter-spacing: 1px; }
+      .cs_contact_card_title { color: #fff; font-size: 44px; font-weight: 800; margin: 0 0 12px; line-height: 1.2; }
+      .cs_contact_card_sub { color: rgba(255, 255, 255, 0.8); font-size: 16px; margin: 0 0 28px; max-width: 520px; }
+      .cs_contact_form_bar { background: #fff; border-radius: 16px; padding: 20px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+      .cs_contact_form_bar input, .cs_contact_form_bar select { flex: 1; min-width: 180px; border: none; border-bottom: 1px solid #e5e5e5; padding: 12px 4px; font-size: 14px; color: #1f2419; outline: none; }
+      .cs_contact_form_btn { background: #024242; color: #fff; font-weight: 700; padding: 16px 32px; border-radius: 8px; border: none; cursor: pointer; font-size: 13px; letter-spacing: 0.5px; white-space: nowrap; }
+      @media (max-width: 767px) {
+        .cs_contact_card_title { font-size: 30px; }
+        .cs_contact_form_bar { flex-direction: column; align-items: stretch; }
+        .cs_contact_form_btn { width: 100%; }
+      }
+    </style>
+    <section class="cs_contact_card_section">
+      <div class="container">
+        <div class="cs_contact_card">
+          <div class="cs_contact_card_bg"><img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt=""></div>
+          <div class="cs_contact_card_top">
+            <p class="cs_contact_info_label">Get More Information:</p>
+            <a href="mailto:enquiries@pharmacrop.com.au" class="cs_contact_pill"><span class="cs_contact_pill_icon"><i class="fa-solid fa-envelope"></i></span>enquiries@pharmacrop.com.au</a>
+            <a href="tel:1300053533" class="cs_contact_pill"><span class="cs_contact_pill_icon"><i class="fa-solid fa-phone"></i></span>1300 053 533</a>
+          </div>
+          <div class="cs_contact_card_bottom">
+            <div class="cs_contact_eyebrow_row">
+              <span class="cs_contact_eyebrow_icon"><i class="fa-solid fa-seedling"></i></span>
+              <span class="cs_contact_eyebrow_text">CONTACT US</span>
+            </div>
+            <h2 class="cs_contact_card_title">Cultivated With Purpose, Delivered With Trust</h2>
+            <p class="cs_contact_card_sub">Australian-grown, GMP-certified cultivation and manufacturing &mdash; get in touch to discuss supply, partnership and product options.</p>
+            <form action="https://api.web3forms.com/submit" method="POST" class="cs_contact_form_bar">
+              <input type="hidden" name="access_key" value="cd98b256-0db3-478c-ab28-1ec94f80447c">
+              <input type="hidden" name="subject" value="New Enquiry - PharmaCrop Test Page">
+              <input type="text" name="name" placeholder="Type Your Name ..." required>
+              <input type="email" name="email" placeholder="Type Your Mail ..." required>
+              <select name="interest" defaultValue="">
+                <option value="" disabled selected>Select Your Interest</option>
+                <option value="Pharmacist">Pharmacist</option>
+                <option value="Prescriber">Prescriber</option>
+                <option value="Distributor">Distributor</option>
+                <option value="Other">Other</option>
+              </select>
+              <button type="submit" class="cs_contact_form_btn">Get a Quote</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Contact Card Section -->
+    <!-- Start Form Info Split Section -->
+    <style>
+      .cs_form_info_split { display: flex; min-height: 700px; }
+      .cs_form_info_left, .cs_form_info_right { flex: 0 0 50%; padding: 100px 60px; display: flex; align-items: center; }
+      .cs_form_info_left { background: #eaf5ee; justify-content: flex-end; }
+      .cs_form_info_right { background: #023030; justify-content: flex-start; }
+      .cs_split_form { background: #024242; border-radius: 20px; padding: 40px; width: 100%; max-width: 480px; }
+      .cs_split_form_label { color: #fff; font-weight: 700; font-size: 14px; margin: 0 0 8px; display: block; }
+      .cs_split_form_group { margin-bottom: 20px; }
+      .cs_split_form_row { display: flex; gap: 16px; }
+      .cs_split_form_row .cs_split_form_group { flex: 1; }
+      .cs_split_form input, .cs_split_form textarea { width: 100%; border: none; border-radius: 8px; padding: 14px 16px; font-size: 14px; color: #1f2419; outline: none; box-sizing: border-box; }
+      .cs_split_form textarea { resize: vertical; min-height: 110px; font-family: inherit; }
+      .cs_split_form_btn { background: #1a1a1a; color: #fff; font-weight: 700; padding: 16px; border-radius: 8px; border: none; width: 100%; cursor: pointer; font-size: 14px; }
+      .cs_info_panel { width: 100%; max-width: 480px; }
+      .cs_info_eyebrow { color: #78dca6; font-weight: 700; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; margin: 0 0 16px; }
+      .cs_info_title { color: #fff; font-size: 40px; font-weight: 800; line-height: 1.25; margin: 0 0 16px; }
+      .cs_info_desc { color: rgba(255, 255, 255, 0.7); font-size: 16px; line-height: 1.7; margin: 0 0 40px; }
+      .cs_info_list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 22px; }
+      .cs_info_item { display: flex; align-items: center; gap: 16px; }
+      .cs_info_icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(120, 220, 166, 0.12); border: 1px solid rgba(120, 220, 166, 0.3); color: #78dca6; display: flex; align-items: center; justify-content: center; font-size: 18px; flex: none; }
+      .cs_info_label { color: rgba(255, 255, 255, 0.55); font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; margin: 0 0 2px; }
+      .cs_info_value { color: #fff; font-size: 16px; font-weight: 600; margin: 0; text-decoration: none; }
+      .cs_info_value a { color: #fff; text-decoration: none; }
+      .cs_info_social_row { display: flex; gap: 10px; }
+      .cs_info_social_row a { width: 40px; height: 40px; border-radius: 50%; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); color: #fff; display: flex; align-items: center; justify-content: center; text-decoration: none; }
+      @media (max-width: 991px) {
+        .cs_form_info_split { flex-direction: column; }
+        .cs_form_info_left, .cs_form_info_right { flex: none; width: 100%; padding: 70px 24px; justify-content: center; }
+        .cs_info_title { font-size: 30px; }
+      }
+    </style>
+    <section class="cs_form_info_split">
+      <div class="cs_form_info_left">
+        <form action="https://api.web3forms.com/submit" method="POST" class="cs_split_form">
+          <input type="hidden" name="access_key" value="cd98b256-0db3-478c-ab28-1ec94f80447c">
+          <input type="hidden" name="subject" value="New Enquiry - PharmaCrop Test Page">
+          <div class="cs_split_form_group">
+            <label class="cs_split_form_label">Name</label>
+            <input type="text" name="name" placeholder="Your full name here" required>
+          </div>
+          <div class="cs_split_form_row">
+            <div class="cs_split_form_group">
+              <label class="cs_split_form_label">Email</label>
+              <input type="email" name="email" placeholder="Your email here" required>
+            </div>
+            <div class="cs_split_form_group">
+              <label class="cs_split_form_label">Number</label>
+              <input type="tel" name="phone" placeholder="Your phone number here">
+            </div>
+          </div>
+          <div class="cs_split_form_group">
+            <label class="cs_split_form_label">Subject</label>
+            <input type="text" name="topic" placeholder="Your subject here">
+          </div>
+          <div class="cs_split_form_group">
+            <label class="cs_split_form_label">Message</label>
+            <textarea name="message" placeholder="Your message"></textarea>
+          </div>
+          <button type="submit" class="cs_split_form_btn">Send Message</button>
+        </form>
+      </div>
+      <div class="cs_form_info_right">
+        <div class="cs_info_panel">
+          <span class="cs_info_eyebrow">GET IN TOUCH</span>
+          <h2 class="cs_info_title">Let's Start a Conversation</h2>
+          <p class="cs_info_desc">Reach out to our team to discuss cultivation, GMP-certified manufacturing, or a potential partnership &mdash; we're ready to help.</p>
+          <ul class="cs_info_list">
+            <li class="cs_info_item">
+              <span class="cs_info_icon"><i class="fa-solid fa-envelope"></i></span>
+              <div>
+                <p class="cs_info_label">Email</p>
+                <p class="cs_info_value"><a href="mailto:enquiries@pharmacrop.com.au">enquiries@pharmacrop.com.au</a></p>
+              </div>
+            </li>
+            <li class="cs_info_item">
+              <span class="cs_info_icon"><i class="fa-solid fa-phone"></i></span>
+              <div>
+                <p class="cs_info_label">Phone</p>
+                <p class="cs_info_value"><a href="tel:1300053533">1300 053 533</a></p>
+              </div>
+            </li>
+            <li class="cs_info_item">
+              <span class="cs_info_icon"><i class="fa-solid fa-location-dot"></i></span>
+              <div>
+                <p class="cs_info_label">Location</p>
+                <p class="cs_info_value">Noosa Hinterland, Queensland, Australia</p>
+              </div>
+            </li>
+            <li class="cs_info_item">
+              <span class="cs_info_icon"><i class="fa-solid fa-share-nodes"></i></span>
+              <div>
+                <p class="cs_info_label">Social</p>
+                <div class="cs_info_social_row">
+                  <a href="https://www.linkedin.com/company/pharmacrop" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="https://wa.me/611300053533" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- End Form Info Split Section -->
+    <!-- Start Guide Overlap Section -->
+    <style>
+      .cs_guide_section { position: relative; }
+      .cs_guide_bg { position: relative; min-height: 820px; }
+      .cs_guide_bg img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+      .cs_guide_card { position: absolute; top: 50%; right: 5%; transform: translateY(-50%); background: #eee9e3; border-radius: 8px; padding: 56px 48px; max-width: 640px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18); }
+      .cs_guide_title { font-size: 40px; font-weight: 800; color: #024242; line-height: 1.3; margin: 0 0 20px; }
+      .cs_guide_desc { color: #4b5142; font-size: 16px; line-height: 1.7; margin: 0 0 28px; padding-bottom: 28px; border-bottom: 1px solid rgba(2, 66, 66, 0.15); }
+      .cs_guide_item { display: flex; gap: 20px; align-items: flex-start; padding: 22px 0; border-bottom: 1px solid rgba(2, 66, 66, 0.15); }
+      .cs_guide_item:last-child { border-bottom: none; padding-bottom: 0; }
+      .cs_guide_icon { width: 56px; height: 56px; border-radius: 50%; background: rgba(120, 220, 166, 0.25); color: #024242; display: flex; align-items: center; justify-content: center; font-size: 20px; flex: none; }
+      .cs_guide_item_title { font-size: 18px; font-weight: 700; color: #024242; margin: 0 0 6px; }
+      .cs_guide_item_text { color: #4b5142; font-size: 14px; line-height: 1.6; margin: 0; }
+      @media (max-width: 991px) {
+        .cs_guide_card { position: static; transform: none; margin: -60px 20px 0; max-width: none; padding: 32px 24px; }
+        .cs_guide_bg { min-height: 320px; }
+        .cs_guide_title { font-size: 28px; }
+      }
+    </style>
+    <section class="cs_guide_section">
+      <div class="cs_guide_bg">
+        <img src="/assets/img/pharmacrop-banner2.webp" alt="">
+        <div class="cs_guide_card">
+          <h2 class="cs_guide_title">What Guides Our Cultivation And Manufacturing Team</h2>
+          <p class="cs_guide_desc">Every batch we produce is shaped by pharmaceutical discipline, consistent quality systems and a commitment to clear, reliable communication with our partners.</p>
+          <div class="cs_guide_item">
+            <span class="cs_guide_icon"><i class="fa-solid fa-vial"></i></span>
+            <div>
+              <h3 class="cs_guide_item_title">Pharmaceutical Discipline</h3>
+              <p class="cs_guide_item_text">GMP-certified processes and rigorous quality systems guide every stage of production.</p>
+            </div>
+          </div>
+          <div class="cs_guide_item">
+            <span class="cs_guide_icon"><i class="fa-solid fa-shield-halved"></i></span>
+            <div>
+              <h3 class="cs_guide_item_title">Consistent Quality</h3>
+              <p class="cs_guide_item_text">Every batch is produced to the same exacting standard, batch after batch.</p>
+            </div>
+          </div>
+          <div class="cs_guide_item">
+            <span class="cs_guide_icon"><i class="fa-solid fa-comments"></i></span>
+            <div>
+              <h3 class="cs_guide_item_title">Clear Communication</h3>
+              <p class="cs_guide_item_text">Transparent updates and reliable support for every partner we work with.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Guide Overlap Section -->
     <!-- Start Footer Section -->
     <footer class="cs_footer cs_style_1 cs_color_1">
       <div class="container">
