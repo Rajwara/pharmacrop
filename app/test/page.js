@@ -1,9 +1,12 @@
+import Script from "next/script";
+
 export const metadata = {
   title: "Test - PharmaCrop",
 };
 
 export default function Page() {
   return (
+    <>
     <div
       dangerouslySetInnerHTML={{
         __html: `
@@ -102,6 +105,41 @@ export default function Page() {
       </div>
     </section>
     <!-- End Page Heading Sectoin -->
+    <!-- Start Rotating Hero Banner -->
+    <style>
+      .cs_rotate_hero { position: relative; padding: 140px 0 100px; overflow: hidden; text-align: center; }
+      .cs_rotate_hero_bg { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+      .cs_rotate_hero_bg img { width: 100%; height: 100%; object-fit: cover; transform: scale(1); animation: cs_rotate_zoom 10s ease-in-out infinite alternate; }
+      @keyframes cs_rotate_zoom { from { transform: scale(1); } to { transform: scale(1.18); } }
+      .cs_rotate_hero::before { content: ""; position: absolute; inset: 0; background: rgba(247, 247, 245, 0.78); z-index: 1; }
+      .cs_rotate_hero_content { position: relative; z-index: 2; max-width: 900px; margin: 0 auto; }
+      .cs_rotate_hero_title { font-size: 56px; font-weight: 800; color: #1f2419; line-height: 1.35; margin: 0 0 24px; }
+      .cs_rotate_highlight { background: #fff; color: #024242; padding: 4px 18px; border-radius: 8px; display: inline-block; transition: opacity 0.4s ease; box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1); }
+      .cs_rotate_hero_sub { font-size: 18px; color: #4b5142; margin: 0 0 36px; }
+      .cs_rotate_hero_btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+      .cs_rotate_btn_primary { background: #78dca6; color: #024242; font-weight: 700; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-size: 13px; letter-spacing: 0.5px; }
+      .cs_rotate_btn_dark { background: #024242; color: #fff; font-weight: 700; padding: 16px 32px; border-radius: 8px; text-decoration: none; font-size: 13px; letter-spacing: 0.5px; }
+      @media (max-width: 767px) {
+        .cs_rotate_hero_title { font-size: 32px; }
+        .cs_rotate_hero { padding: 100px 0 70px; }
+      }
+    </style>
+    <section class="cs_rotate_hero">
+      <div class="cs_rotate_hero_bg">
+        <img src="/assets/img/pharmacrop-banner1.webp" alt="">
+      </div>
+      <div class="container">
+        <div class="cs_rotate_hero_content">
+          <h2 class="cs_rotate_hero_title">Grow Your <span class="cs_rotate_highlight" id="cs_rotate_word">Cultivation Business</span> with PharmaCrop</h2>
+          <p class="cs_rotate_hero_sub">Australian-Grown, GMP-Certified Cultivation &amp; Manufacturing.</p>
+          <div class="cs_rotate_hero_btns">
+            <a href="/contact" class="cs_rotate_btn_primary">GET A QUOTE</a>
+            <a href="/industry" class="cs_rotate_btn_dark">VISIT INDUSTRIES</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Rotating Hero Banner -->
     <!-- Start What We Offer Section -->
     <style>
       .cs_offer_section { padding: 100px 0; background: #f7f7f5; }
@@ -354,5 +392,24 @@ export default function Page() {
 `,
       }}
     />
+    <Script id="cs_rotate_word_script" strategy="afterInteractive">
+      {`
+        (function () {
+          var words = ["Cultivation Business", "GMP Manufacturing", "Industry Partnership", "Product Portfolio"];
+          var i = 0;
+          var el = document.getElementById('cs_rotate_word');
+          if (!el) return;
+          setInterval(function () {
+            i = (i + 1) % words.length;
+            el.style.opacity = 0;
+            setTimeout(function () {
+              el.textContent = words[i];
+              el.style.opacity = 1;
+            }, 400);
+          }, 2500);
+        })();
+      `}
+    </Script>
+    </>
   );
 }
