@@ -308,6 +308,99 @@ export default function Page() {
       </div>
     </section>
     <!-- End Sticky Services Section -->
+    <!-- Start Testimonial Slider Section -->
+    <style>
+      .cs_testi_section { display: flex; min-height: 720px; }
+      .cs_testi_left { flex: 0 0 50%; background: #f4f4f2; padding: 100px 60px; display: flex; flex-direction: column; justify-content: center; }
+      .cs_testi_eyebrow { display: inline-flex; align-items: center; gap: 8px; border: 1px solid #d1d5c9; border-radius: 30px; padding: 6px 16px; font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #4b5142; margin-bottom: 24px; width: fit-content; }
+      .cs_testi_eyebrow::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #024242; }
+      .cs_testi_title { font-size: 44px; font-weight: 800; color: #1f2419; line-height: 1.2; margin: 0 0 20px; }
+      .cs_testi_desc { color: #6b7280; font-size: 16px; line-height: 1.7; margin: 0 0 32px; max-width: 480px; }
+      .cs_testi_btn { display: inline-block; background: #024242; color: #fff; font-weight: 700; padding: 16px 32px; border-radius: 50px; text-decoration: none; font-size: 14px; width: fit-content; margin-bottom: 40px; }
+      .cs_testi_card_wrap { position: relative; max-width: 480px; min-height: 320px; }
+      .cs_testi_card { position: absolute; inset: 0; background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.07); opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; pointer-events: none; }
+      .cs_testi_card.active { opacity: 1; transform: translateY(0); pointer-events: auto; }
+      .cs_testi_card_head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+      .cs_testi_avatar { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
+      .cs_testi_name { font-weight: 700; color: #1f2419; margin: 0; font-size: 16px; }
+      .cs_testi_role { color: #8a9086; font-size: 14px; margin: 0; }
+      .cs_testi_quote_mark { position: absolute; top: 24px; right: 24px; width: 44px; height: 44px; background: #024242; color: #78dca6; border-radius: 12px 12px 12px 0; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700; }
+      .cs_testi_stars { color: #d99f59; margin-bottom: 14px; font-size: 14px; letter-spacing: 2px; }
+      .cs_testi_text { color: #4b5142; font-size: 15px; line-height: 1.7; margin: 0; }
+      .cs_testi_dots { display: flex; gap: 8px; margin-top: 24px; }
+      .cs_testi_dot { width: 8px; height: 8px; border-radius: 50%; background: #d1d5c9; cursor: pointer; border: none; padding: 0; transition: all 0.3s ease; }
+      .cs_testi_dot.active { background: #024242; width: 24px; border-radius: 4px; }
+      .cs_testi_right { flex: 0 0 50%; position: relative; overflow: hidden; }
+      .cs_testi_right_img { position: absolute; inset: 0; opacity: 0; transition: opacity 1s ease, transform 6s ease; transform: scale(1.08); }
+      .cs_testi_right_img.active { opacity: 1; transform: scale(1); }
+      .cs_testi_right_img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .cs_testi_play_btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 68px; height: 68px; background: #78dca6; color: #024242; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; z-index: 3; box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25); }
+      @media (max-width: 991px) {
+        .cs_testi_section { flex-direction: column; }
+        .cs_testi_left, .cs_testi_right { flex: none; width: 100%; }
+        .cs_testi_left { padding: 70px 24px; }
+        .cs_testi_right { min-height: 420px; }
+        .cs_testi_title { font-size: 32px; }
+      }
+    </style>
+    <section class="cs_testi_section">
+      <div class="cs_testi_left">
+        <span class="cs_testi_eyebrow">OUR TESTIMONIALS</span>
+        <h2 class="cs_testi_title">Real Stories From Our Industry Partners</h2>
+        <p class="cs_testi_desc">Hear from pharmacists, prescribers and distributors who've partnered with PharmaCrop &mdash; building reliable supply, consistent quality and long-term relationships through our GMP-certified operations.</p>
+        <a href="/industry" class="cs_testi_btn">View All Partners</a>
+        <div class="cs_testi_card_wrap" id="cs_testi_cards">
+          <div class="cs_testi_card active" data-index="0">
+            <span class="cs_testi_quote_mark">&rdquo;</span>
+            <div class="cs_testi_card_head">
+              <img src="/assets/img/avatar.jpg" class="cs_testi_avatar" alt="">
+              <div>
+                <p class="cs_testi_name">David Chen</p>
+                <p class="cs_testi_role">Pharmacy Owner</p>
+              </div>
+            </div>
+            <div class="cs_testi_stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="cs_testi_text">"PharmaCrop's integrated approach, from cultivation to GMP-certified manufacturing, gives us complete confidence in every batch we receive."</p>
+          </div>
+          <div class="cs_testi_card" data-index="1">
+            <span class="cs_testi_quote_mark">&rdquo;</span>
+            <div class="cs_testi_card_head">
+              <img src="/assets/img/avatar.jpg" class="cs_testi_avatar" alt="">
+              <div>
+                <p class="cs_testi_name">Sarah Mitchell</p>
+                <p class="cs_testi_role">Distribution Partner</p>
+              </div>
+            </div>
+            <div class="cs_testi_stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="cs_testi_text">"Reliable supply and consistent quality every time. PharmaCrop's integrated operation makes forecasting and logistics genuinely straightforward."</p>
+          </div>
+          <div class="cs_testi_card" data-index="2">
+            <span class="cs_testi_quote_mark">&rdquo;</span>
+            <div class="cs_testi_card_head">
+              <img src="/assets/img/avatar.jpg" class="cs_testi_avatar" alt="">
+              <div>
+                <p class="cs_testi_name">Dr. James Whitfield</p>
+                <p class="cs_testi_role">Prescriber</p>
+              </div>
+            </div>
+            <div class="cs_testi_stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+            <p class="cs_testi_text">"Their pharmaceutical discipline and batch-to-batch consistency give me confidence when discussing options with patients."</p>
+          </div>
+        </div>
+        <div class="cs_testi_dots" id="cs_testi_dots">
+          <button class="cs_testi_dot active" data-goto="0" aria-label="Testimonial 1"></button>
+          <button class="cs_testi_dot" data-goto="1" aria-label="Testimonial 2"></button>
+          <button class="cs_testi_dot" data-goto="2" aria-label="Testimonial 3"></button>
+        </div>
+      </div>
+      <div class="cs_testi_right">
+        <div class="cs_testi_right_img active" data-index="0"><img src="/assets/img/pharmacists.webp" alt=""></div>
+        <div class="cs_testi_right_img" data-index="1"><img src="/assets/img/distributors.webp" alt=""></div>
+        <div class="cs_testi_right_img" data-index="2"><img src="/assets/img/prescribers.webp" alt=""></div>
+        <span class="cs_testi_play_btn"><i class="fa-solid fa-play"></i></span>
+      </div>
+    </section>
+    <!-- End Testimonial Slider Section -->
     <!-- Start Footer Section -->
     <footer class="cs_footer cs_style_1 cs_color_1">
       <div class="container">
@@ -407,6 +500,38 @@ export default function Page() {
               el.style.opacity = 1;
             }, 400);
           }, 2500);
+        })();
+      `}
+    </Script>
+    <Script id="cs_testi_slider_script" strategy="afterInteractive">
+      {`
+        (function () {
+          var cards = document.querySelectorAll('#cs_testi_cards .cs_testi_card');
+          var imgs = document.querySelectorAll('.cs_testi_right_img');
+          var dots = document.querySelectorAll('#cs_testi_dots .cs_testi_dot');
+          if (!cards.length) return;
+          var idx = 0;
+          var timer;
+          function show(i) {
+            cards.forEach(function (c, ci) { c.classList.toggle('active', ci === i); });
+            imgs.forEach(function (im, ii) { im.classList.toggle('active', ii === i); });
+            dots.forEach(function (d, di) { d.classList.toggle('active', di === i); });
+            idx = i;
+          }
+          function next() {
+            show((idx + 1) % cards.length);
+          }
+          function restart() {
+            clearInterval(timer);
+            timer = setInterval(next, 5000);
+          }
+          dots.forEach(function (d) {
+            d.addEventListener('click', function () {
+              show(parseInt(d.getAttribute('data-goto'), 10));
+              restart();
+            });
+          });
+          restart();
         })();
       `}
     </Script>
