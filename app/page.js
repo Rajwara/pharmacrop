@@ -334,6 +334,9 @@ export default function Page() {
       .cs_testi_right_img { position: absolute; inset: 0; opacity: 0; transition: opacity 1s ease, transform 6s ease; transform: scale(1.08); }
       .cs_testi_right_img.active { opacity: 1; transform: scale(1); }
       .cs_testi_right_img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      @media (min-width: 992px) { .cs_testi_left { padding-left: calc((100vw - 960px) / 2 + 12px); } }
+      @media (min-width: 1200px) { .cs_testi_left { padding-left: calc((100vw - 1140px) / 2 + 12px); } }
+      @media (min-width: 1400px) { .cs_testi_left { padding-left: calc((100vw - 1320px) / 2 + 12px); } }
       @media (max-width: 991px) {
         .cs_testi_section { flex-direction: column; }
         .cs_testi_left, .cs_testi_right { flex: none; width: 100%; }
@@ -404,7 +407,7 @@ export default function Page() {
       <div class="cs_height_100 cs_height_lg_70"></div>
       <div class="container">
         <div class="cs_section_heading cs_style_2 cs_color_1">
-          <h2 class="cs_section_title cs_fs_80 mb-0 wow fadeInDown">THERAPEUTIC GOODS <br>ADMINISTRATION <span>(TGA) GUIDANCE</span></h2>
+          <h2 class="cs_section_title mb-0 wow fadeInDown" style="font-size: 44px;">THERAPEUTIC GOODS <br>ADMINISTRATION <span>(TGA) GUIDANCE</span></h2>
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
         <div class="cs_full_width_slider_section">
@@ -462,9 +465,9 @@ export default function Page() {
     <!-- End Works Section -->
     <!-- Start CTA Section -->
     <style>
-      .cs_contact_card_section { padding: 100px 0; }
-      .cs_contact_card { position: relative; border-radius: 24px; overflow: hidden; min-height: 700px; display: flex; flex-direction: column; justify-content: space-between; padding: 40px; }
-      .cs_contact_card_bg { position: absolute; inset: 0; z-index: 0; }
+      .cs_contact_card_section { padding: 100px 0; overflow: hidden; }
+      .cs_contact_card { position: relative; min-height: 700px; display: flex; flex-direction: column; justify-content: space-between; padding: 40px; }
+      .cs_contact_card_bg { position: absolute; top: 0; bottom: 0; left: 50%; width: 100vw; margin-left: -50vw; z-index: 0; }
       .cs_contact_card_bg img { width: 100%; height: 100%; object-fit: cover; }
       .cs_contact_card_bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(2, 34, 34, 0.55) 0%, rgba(2, 34, 34, 0.25) 40%, rgba(2, 20, 20, 0.85) 100%); }
       .cs_contact_card_top { position: relative; z-index: 2; }
