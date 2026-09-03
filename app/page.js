@@ -101,8 +101,8 @@ export default function Page() {
             <h1 class="cs_hero_title cs_fs_100 cs_normal cs_mb_12 cs_white_color cs_gradient_color_1 wow fadeInUp">AUSTRALIAN-GROWN. <b>COMPLETE CONTROL.</b></h1>
             <p class="cs_hero_subtitle cs_fs_20 cs_mb_32 cs_opacity_7_5">Natural cultivation with pharmaceutical precision.</p>
             <div class="cs_hero_btns">
-              <a href="/about" class="cs_btn cs_style_1 cs_bold cs_heading_color cs_white_bg wow fadeInLeft">About PharmaCrop</a>
-              <a href="/industry" class="cs_btn cs_style_2 cs_bold cs_white_color wow fadeInRight">Visit Industries</a>
+              <a href="https://aleafiate.com.au/" target="_blank" rel="noopener noreferrer" class="cs_btn cs_style_1 cs_bold cs_heading_color cs_white_bg wow fadeInLeft">SEE OUR DOCTORS</a>
+              <a href="/about" class="cs_btn cs_style_2 cs_bold cs_white_color wow fadeInRight">ABOUT PHARMACROP</a>
             </div>
           </div>
           <div class="cs_hero_funfact_wrap wow fadeInRight">
