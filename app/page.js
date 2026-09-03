@@ -232,11 +232,17 @@ export default function Page() {
     </section>
     <!-- End Feature Section -->
     <!-- Start Services Section -->
+    <style>
+      .cs_partners_heading { max-width: 720px; }
+      .cs_partners_heading .cs_sticky_text { max-width: 100%; margin-bottom: 0; }
+    </style>
     <section>
       <div class="cs_height_100 cs_height_lg_70"></div>
       <div class="container">
-        <div class="cs_section_heading cs_style_1">
-          <h2 class="cs_section_title cs_fs_80 mb-0 wow fadeInDown">SUPPORTING OUR <span>INDUSTRY PARTNERS</span></h2>
+        <div class="cs_partners_heading">
+          <span class="cs_sticky_eyebrow">WHO WE SUPPORT</span>
+          <h2 class="cs_sticky_title wow fadeInDown">SUPPORTING OUR INDUSTRY PARTNERS</h2>
+          <p class="cs_sticky_text">From pharmacists to prescribers and distributors, PharmaCrop supports every partner across the supply chain with reliable, Australian-grown, GMP-certified product.</p>
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
         <div class="cs_card_1_group">
