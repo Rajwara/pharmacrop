@@ -229,7 +229,7 @@ export default function Page() {
         <div class="cs_sticky_services_grid">
           <div class="cs_sticky_services_left">
             <span class="cs_sticky_eyebrow">What We Do</span>
-            <h2 class="cs_sticky_title wow fadeInDown">FROM GENETICS TO GMP MANUFACTURING</h2>
+            <h2 class="cs_sticky_title cs_two_tone wow fadeInDown">FROM GENETICS TO <br>GMP <span>MANUFACTURING</span></h2>
             <p class="cs_sticky_text">Where international cultivation expertise meets Australian, GMP-certified manufacturing discipline &mdash; from cultivar selection through to finished product.</p>
           </div>
           <div class="cs_sticky_services_right">
@@ -269,13 +269,15 @@ export default function Page() {
     <style>
       .cs_partners_heading { max-width: 720px; }
       .cs_partners_heading .cs_sticky_text { max-width: 100%; margin-bottom: 0; }
+      .cs_two_tone span { background: linear-gradient(223deg, rgba(2, 66, 66, 0.8) 0.37%, #666666 49.66%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
     <section>
       <div class="cs_height_100 cs_height_lg_70"></div>
       <div class="container">
         <div class="cs_partners_heading">
           <span class="cs_sticky_eyebrow">WHO WE SUPPORT</span>
-          <h2 class="cs_sticky_title wow fadeInDown">SUPPORTING OUR INDUSTRY PARTNERS</h2>
+          <h2 class="cs_section_title cs_fs_80 cs_two_tone mb-0 wow fadeInDown">SUPPORTING OUR <br>INDUSTRY <span>PARTNERS</span></h2>
+          <div class="cs_height_24"></div>
           <p class="cs_sticky_text">From pharmacists to prescribers and distributors, PharmaCrop supports every partner across the supply chain with reliable, Australian-grown, GMP-certified product.</p>
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
@@ -351,8 +353,7 @@ export default function Page() {
       .cs_leaf_testi_img.active { opacity: 1; transform: scale(1); }
       .cs_leaf_testi_img img { width: 100%; height: 100%; object-fit: cover; }
       .cs_leaf_testi_content { flex: 1; }
-      .cs_leaf_testi_content span.cs_section_subtitle { color: #78dca6; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; font-size: 14px; margin-bottom: 14px; display: block; }
-      .cs_leaf_testi_content h2 { color: #024242; font-size: 34px; margin-bottom: 30px; }
+      .cs_leaf_testi_content h2 { color: #024242; margin-bottom: 30px; }
       .cs_leaf_testi_cards { position: relative; min-height: 200px; }
       .cs_leaf_testi_card { position: absolute; inset: 0; opacity: 0; visibility: hidden; transform: translateY(12px); transition: opacity 0.5s ease, transform 0.5s ease; }
       .cs_leaf_testi_card.active { opacity: 1; visibility: visible; transform: translateY(0); position: relative; }
@@ -377,8 +378,8 @@ export default function Page() {
             <div class="cs_leaf_testi_img"><img src="/assets/Leafline/10032.jpg" alt=""></div>
           </div>
           <div class="cs_leaf_testi_content wow fadeInUp" data-wow-delay="0.1s">
-            <span class="cs_section_subtitle">Trusted Across the Supply Chain</span>
-            <h2>What Our Partners Say</h2>
+            <span class="cs_sticky_eyebrow">TRUSTED ACROSS THE SUPPLY CHAIN</span>
+            <h2 class="cs_fs_80 cs_two_tone">WHAT OUR <br><span>PARTNERS SAY</span></h2>
             <div class="cs_leaf_testi_cards" id="cs_leaf_testi_cards">
               <div class="cs_leaf_testi_card active">
                 <div class="cs_leaf_testi_stars">★★★★★</div>
@@ -671,7 +672,7 @@ export default function Page() {
         top: 0;
         right: -20px;
         width: 2px;
-        height: 90px;
+        height: 40px;
         background: #024242;
       }
       .cs_footer_brand .cs_newsletter_input { padding: 10px 48px 10px 20px !important; font-size: 14px !important; }
