@@ -96,6 +96,9 @@ export default function Page() {
       </form>
     </div>
     <!-- End Header Section -->
+    <style>
+      .cs_site_header.cs_style_1:not(.cs_sticky_active) { background-color: #024242; transition: background-color 0.3s ease; }
+    </style>
     <!-- Start Rotating Hero Banner -->
     <style>
       .cs_rotate_hero { position: relative; min-height: 92vh; display: flex; align-items: center; padding: 200px 0 140px; overflow: hidden; text-align: center; }
