@@ -663,6 +663,15 @@ export default function Page() {
       .cs_footer_social_label { text-transform: uppercase; }
       .cs_footer_social_icon { width: 30px; height: 30px; border-radius: 50%; background: rgba(2, 66, 66, 0.08); color: #024242; display: inline-flex; align-items: center; justify-content: center; transition: background-color 0.3s ease, color 0.3s ease; }
       .cs_footer_social_icon:hover { background: #024242; color: #fff; }
+      .cs_footer_row { display: grid !important; grid-template-columns: repeat(4, 1fr) !important; gap: 40px !important; }
+      .cs_footer_row .cs_footer_col { max-width: none !important; flex: none !important; width: 100% !important; padding-right: 32px !important; border-right: 2px solid #024242; }
+      @media (max-width: 991px) {
+        .cs_footer_row { grid-template-columns: repeat(2, 1fr) !important; }
+      }
+      @media (max-width: 575px) {
+        .cs_footer_row { grid-template-columns: 1fr !important; }
+        .cs_footer_row .cs_footer_col { border-right: none; padding-right: 0 !important; }
+      }
     </style>
     <footer class="cs_footer cs_style_1">
       <div class="container">
@@ -693,12 +702,6 @@ export default function Page() {
                 <li><a href="/services">SERVICES</a></li>
                 <li><a href="/contact">CONTACT</a></li>
                 <li><a href="#">SEE OUR DOCTORS</a></li>
-                <li><a href="tel:1300053533">Phone: 1300 053 533</a></li>
-                <li><a href="mailto:enquiries@pharmacrop.com.au">Email: enquiries@pharmacrop.com.au</a></li>
-                <li class="cs_footer_social_item">
-                  <span class="cs_footer_social_label">Social:</span>
-                  <a href="https://www.linkedin.com/company/pharmacrop" target="_blank" rel="noopener" class="cs_footer_social_icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                </li>
               </ul>
             </div>
           </div>
@@ -709,6 +712,19 @@ export default function Page() {
                 <li><a href="/about">ABOUT US</a></li>
                 <li><a href="/projects">PROJECTS</a></li>
                 <li><a href="/blog">BLOG</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="cs_footer_col">
+            <div class="cs_footer_widget">
+              <h4 class="cs_footer_widget_title">GET IN TOUCH</h4>
+              <ul class="cs_footer_widget_menu cs_mp_0">
+                <li><a href="tel:1300053533">Phone: 1300 053 533</a></li>
+                <li><a href="mailto:enquiries@pharmacrop.com.au">Email: enquiries@pharmacrop.com.au</a></li>
+                <li class="cs_footer_social_item">
+                  <span class="cs_footer_social_label">Social:</span>
+                  <a href="https://www.linkedin.com/company/pharmacrop" target="_blank" rel="noopener" class="cs_footer_social_icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </li>
               </ul>
             </div>
           </div>
