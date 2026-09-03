@@ -35,7 +35,6 @@ export default function Page() {
                     <li><a href="/careers">CAREERS</a></li>
                     <li><a href="/blog">BLOG</a></li>
                     <li><a href="/contact">CONTACT</a></li>
-                    <li><a href="#">SEE OUR DOCTORS</a></li>
                     <li class="menu-item-has-children">
                       <a href="#">MORE</a>
                       <ul>
@@ -43,6 +42,8 @@ export default function Page() {
                         <li><a href="/projects">PROJECTS</a></li>
                         <li><a href="/gallery">GALLERY</a></li>
                         <li><a href="/test">TEST</a></li>
+                        <li><a href="/leafline">LEAFLINE</a></li>
+                        <li><a href="/home-v2">HOME V2</a></li>
                       </ul>
                     </li>
                   </ul>
@@ -102,6 +103,110 @@ export default function Page() {
       </div>
     </section>
     <!-- End Page Heading Sectoin -->
+    <!-- Start Form Info Split Section -->
+    <style>
+      .cs_form_info_split { display: flex; min-height: 700px; }
+      .cs_form_info_left, .cs_form_info_right { flex: 0 0 50%; padding: 100px 60px; display: flex; align-items: center; }
+      .cs_form_info_left { background: #eaf5ee; justify-content: flex-end; }
+      .cs_form_info_right { background: #023030; justify-content: flex-start; }
+      .cs_split_form { background: #024242; border-radius: 20px; padding: 40px; width: 100%; max-width: 480px; }
+      .cs_split_form_label { color: #fff; font-weight: 700; font-size: 14px; margin: 0 0 8px; display: block; }
+      .cs_split_form_group { margin-bottom: 20px; }
+      .cs_split_form_row { display: flex; gap: 16px; }
+      .cs_split_form_row .cs_split_form_group { flex: 1; }
+      .cs_split_form input, .cs_split_form textarea { width: 100%; border: none; border-radius: 8px; padding: 14px 16px; font-size: 14px; color: #1f2419; outline: none; box-sizing: border-box; }
+      .cs_split_form textarea { resize: vertical; min-height: 110px; font-family: inherit; }
+      .cs_split_form_btn { background: #1a1a1a; color: #fff; font-weight: 700; padding: 16px; border-radius: 8px; border: none; width: 100%; cursor: pointer; font-size: 14px; }
+      .cs_info_panel { width: 100%; max-width: 480px; }
+      .cs_info_eyebrow { color: #78dca6; font-weight: 700; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; margin: 0 0 16px; }
+      .cs_info_title { color: #fff; font-size: 40px; font-weight: 800; line-height: 1.25; margin: 0 0 16px; }
+      .cs_info_desc { color: rgba(255, 255, 255, 0.7); font-size: 16px; line-height: 1.7; margin: 0 0 40px; }
+      .cs_info_list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 22px; }
+      .cs_info_item { display: flex; align-items: center; gap: 16px; }
+      .cs_info_icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(120, 220, 166, 0.12); border: 1px solid rgba(120, 220, 166, 0.3); color: #78dca6; display: flex; align-items: center; justify-content: center; font-size: 18px; flex: none; }
+      .cs_info_label { color: rgba(255, 255, 255, 0.55); font-size: 12px; letter-spacing: 0.5px; text-transform: uppercase; margin: 0 0 2px; }
+      .cs_info_value { color: #fff; font-size: 16px; font-weight: 600; margin: 0; text-decoration: none; }
+      .cs_info_value a { color: #fff; text-decoration: none; }
+      .cs_info_social_row { display: flex; gap: 10px; }
+      .cs_info_social_row a { width: 40px; height: 40px; border-radius: 50%; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); color: #fff; display: flex; align-items: center; justify-content: center; text-decoration: none; }
+      @media (max-width: 991px) {
+        .cs_form_info_split { flex-direction: column; }
+        .cs_form_info_left, .cs_form_info_right { flex: none; width: 100%; padding: 70px 24px; justify-content: center; }
+        .cs_info_title { font-size: 30px; }
+      }
+    </style>
+    <section class="cs_form_info_split">
+      <div class="cs_form_info_left">
+        <form action="https://api.web3forms.com/submit" method="POST" class="cs_split_form">
+          <input type="hidden" name="access_key" value="cd98b256-0db3-478c-ab28-1ec94f80447c">
+          <input type="hidden" name="subject" value="New Enquiry - PharmaCrop Contact Page">
+          <div class="cs_split_form_group">
+            <label class="cs_split_form_label">Name</label>
+            <input type="text" name="name" placeholder="Your full name here" required>
+          </div>
+          <div class="cs_split_form_row">
+            <div class="cs_split_form_group">
+              <label class="cs_split_form_label">Email</label>
+              <input type="email" name="email" placeholder="Your email here" required>
+            </div>
+            <div class="cs_split_form_group">
+              <label class="cs_split_form_label">Number</label>
+              <input type="tel" name="phone" placeholder="Your phone number here">
+            </div>
+          </div>
+          <div class="cs_split_form_group">
+            <label class="cs_split_form_label">Subject</label>
+            <input type="text" name="topic" placeholder="Your subject here">
+          </div>
+          <div class="cs_split_form_group">
+            <label class="cs_split_form_label">Message</label>
+            <textarea name="message" placeholder="Your message"></textarea>
+          </div>
+          <button type="submit" class="cs_split_form_btn">Send Message</button>
+        </form>
+      </div>
+      <div class="cs_form_info_right">
+        <div class="cs_info_panel">
+          <span class="cs_info_eyebrow">GET IN TOUCH</span>
+          <h2 class="cs_info_title">Let's Start a Conversation</h2>
+          <p class="cs_info_desc">Reach out to our team to discuss cultivation, GMP-certified manufacturing, or a potential partnership &mdash; we're ready to help.</p>
+          <ul class="cs_info_list">
+            <li class="cs_info_item">
+              <span class="cs_info_icon"><i class="fa-solid fa-envelope"></i></span>
+              <div>
+                <p class="cs_info_label">Email</p>
+                <p class="cs_info_value"><a href="mailto:enquiries@pharmacrop.com.au">enquiries@pharmacrop.com.au</a></p>
+              </div>
+            </li>
+            <li class="cs_info_item">
+              <span class="cs_info_icon"><i class="fa-solid fa-phone"></i></span>
+              <div>
+                <p class="cs_info_label">Phone</p>
+                <p class="cs_info_value"><a href="tel:1300053533">1300 053 533</a></p>
+              </div>
+            </li>
+            <li class="cs_info_item">
+              <span class="cs_info_icon"><i class="fa-solid fa-location-dot"></i></span>
+              <div>
+                <p class="cs_info_label">Location</p>
+                <p class="cs_info_value">Noosa Hinterland, Queensland, Australia</p>
+              </div>
+            </li>
+            <li class="cs_info_item">
+              <span class="cs_info_icon"><i class="fa-solid fa-share-nodes"></i></span>
+              <div>
+                <p class="cs_info_label">Social</p>
+                <div class="cs_info_social_row">
+                  <a href="https://www.linkedin.com/company/pharmacrop" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="https://wa.me/611300053533" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- End Form Info Split Section -->
     <!-- Start Contact Section -->
     <div class="cs_height_100 cs_height_lg_70"></div>
     <div class="container">
@@ -225,20 +330,8 @@ export default function Page() {
               <h4 class="cs_footer_widget_title">LINKS</h4>
               <ul class="cs_footer_widget_menu cs_mp_0">
                 <li><a href="/about">ABOUT US</a></li>
-                <li><a href="/gallery">GALLERY</a></li>
                 <li><a href="/projects">PROJECTS</a></li>
                 <li><a href="/blog">BLOG</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="cs_footer_col">
-            <div class="cs_footer_widget">
-              <h4 class="cs_footer_widget_title">SERVICES</h4>
-              <ul class="cs_footer_widget_menu cs_mp_0">
-                <li><a href="/service-details">HOME GARDEN</a></li>
-                <li><a href="/service-details">PLANT SELECTION</a></li>
-                <li><a href="/service-details">HARDSCAPING</a></li>
-                <li><a href="/service-details">PUBLIC GARDEN</a></li>
               </ul>
             </div>
           </div>

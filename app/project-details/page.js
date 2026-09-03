@@ -35,7 +35,6 @@ export default function Page() {
                     <li><a href="/careers">CAREERS</a></li>
                     <li><a href="/blog">BLOG</a></li>
                     <li><a href="/contact">CONTACT</a></li>
-                    <li><a href="#">SEE OUR DOCTORS</a></li>
                     <li class="menu-item-has-children">
                       <a href="#">MORE</a>
                       <ul>
@@ -43,6 +42,8 @@ export default function Page() {
                         <li><a href="/projects">PROJECTS</a></li>
                         <li><a href="/gallery">GALLERY</a></li>
                         <li><a href="/test">TEST</a></li>
+                        <li><a href="/leafline">LEAFLINE</a></li>
+                        <li><a href="/home-v2">HOME V2</a></li>
                       </ul>
                     </li>
                   </ul>
@@ -388,20 +389,8 @@ export default function Page() {
               <h4 class="cs_footer_widget_title">LINKS</h4>
               <ul class="cs_footer_widget_menu cs_mp_0">
                 <li><a href="/about">ABOUT US</a></li>
-                <li><a href="/gallery">GALLERY</a></li>
                 <li><a href="/projects">PROJECTS</a></li>
                 <li><a href="/blog">BLOG</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="cs_footer_col">
-            <div class="cs_footer_widget">
-              <h4 class="cs_footer_widget_title">SERVICES</h4>
-              <ul class="cs_footer_widget_menu cs_mp_0">
-                <li><a href="/service-details">HOME GARDEN</a></li>
-                <li><a href="/service-details">PLANT SELECTION</a></li>
-                <li><a href="/service-details">HARDSCAPING</a></li>
-                <li><a href="/service-details">PUBLIC GARDEN</a></li>
               </ul>
             </div>
           </div>
