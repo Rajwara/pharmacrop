@@ -164,56 +164,70 @@ export default function Page() {
     </section>
     <!-- End Hero Section -->
     <!-- Start Feature Section -->
-    <section>
-      <div class="cs_height_100 cs_height_lg_70"></div>
+    <style>
+      .cs_offer_section { padding: 100px 0; background: #f7f7f5; }
+      .cs_offer_eyebrow { color: #78dca6; font-weight: 600; font-size: 14px; letter-spacing: 0.5px; display: block; margin-bottom: 12px; text-transform: uppercase; }
+      .cs_offer_heading_row { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; flex-wrap: wrap; margin-bottom: 48px; }
+      .cs_offer_title { font-size: 44px; font-weight: 800; color: #024242; line-height: 1.2; margin: 0; max-width: 620px; }
+      .cs_offer_desc { color: #6b7280; font-size: 16px; line-height: 1.7; max-width: 380px; margin: 0; }
+      .cs_offer_grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 300px); gap: 24px; }
+      .cs_offer_img { border-radius: 16px; overflow: hidden; }
+      .cs_offer_img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .cs_offer_card { background: #e5f3ea; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; }
+      .cs_offer_card_num { color: #78dca6; font-size: 20px; font-weight: 700; margin-bottom: 12px; display: block; }
+      .cs_offer_card_title { font-size: 24px; font-weight: 700; color: #024242; margin: 0 0 16px; line-height: 1.3; }
+      .cs_offer_card_text { color: #4b5563; font-size: 15px; line-height: 1.6; margin: 0 0 20px; }
+      .cs_offer_card_link { color: #024242; font-weight: 600; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+      @media (max-width: 991px) {
+        .cs_offer_grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+        .cs_offer_title { font-size: 32px; }
+      }
+    </style>
+    <section class="cs_offer_section">
       <div class="container">
-        <div class="cs_section_heading cs_style_1">
-          <h2 class="cs_section_title cs_fs_80 mb-0 wow fadeInDown">FROM GENETICS TO <span class="cs_nowrap_span">GMP MANUFACTURING</span></h2>
-          <div class="cs_section_right">
-            <a href="/contact" class="cs_btn cs_style_1 cs_bold cs_heading_bg cs_white_color w-100 wow fadeInRight">Contact us</a>
+        <div class="cs_offer_heading_row">
+          <div>
+            <span class="cs_offer_eyebrow">What We Do</span>
+            <h2 class="cs_offer_title wow fadeInDown">FROM GENETICS TO GMP MANUFACTURING</h2>
           </div>
+          <p class="cs_offer_desc">Where international cultivation expertise meets Australian, GMP-certified manufacturing discipline &mdash; from cultivar selection through to finished product.</p>
         </div>
-        <div class="cs_height_64 cs_height_lg_50"></div>
-        <div class="row align-items-end cs_gap_y_50">
-          <div class="col-lg-4">
-            <div class="cs_img_box cs_style_1 wow fadeInLeft">
-              <img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt="">
-            </div>
+        <div class="cs_offer_grid">
+          <div class="cs_offer_img wow fadeInLeft">
+            <img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt="Genetics to GMP manufacturing">
           </div>
-          <div class="col-lg-8">
-            <div class="row cs_gap_y_64">
-              <div class="col-sm-6">
-                <div class="cs_iconbox cs_style_1">
-                  <div class="cs_iconbox_icon cs_center cs_mb_24">
-                    <i class="fa-regular fa-heart"></i>
-                  </div>
-                  <h3 class="cs_fs_24 cs_mb_12">Noosa Hinterland</h3>
-                  <p class="mb-0 cs_fs_20">Where PharmaCrop calls home. The Noosa Hinterland provides the home for our cultivation and manufacturing operations, bringing local production together within a single region.</p>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="cs_iconbox cs_style_1">
-                  <div class="cs_iconbox_icon cs_center cs_mb_24">
-                    <i class="fa-solid fa-link"></i>
-                  </div>
-                  <h3 class="cs_fs_24 cs_mb_12">Integrated Operations</h3>
-                  <p class="mb-0 cs_fs_20">By bringing cultivation, processing and GMP-certified manufacturing together, PharmaCrop maintains oversight from cultivar selection through to finished product.</p>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="cs_iconbox cs_style_1">
-                  <div class="cs_iconbox_icon cs_center cs_mb_24">
-                    <i class="fa-brands fa-buffer"></i>
-                  </div>
-                  <h3 class="cs_fs_24 cs_mb_12">Global Expertise</h3>
-                  <p class="mb-0 cs_fs_20">Drawing on cultivation expertise from California, Canada and South Africa, our team applies international insights within the unique conditions of the Noosa Hinterland.</p>
-                </div>
-              </div>
+          <div class="cs_offer_card">
+            <div>
+              <span class="cs_offer_card_num">01</span>
+              <h3 class="cs_offer_card_title">Noosa Hinterland</h3>
+              <p class="cs_offer_card_text">Where PharmaCrop calls home. The Noosa Hinterland provides the home for our cultivation and manufacturing operations, bringing local production together within a single region.</p>
             </div>
+            <a href="/about" class="cs_offer_card_link">Learn More &rarr;</a>
+          </div>
+          <div class="cs_offer_img">
+            <img src="/assets/img/pharmacrop-banner3.webp" alt="PharmaCrop cultivation facility">
+          </div>
+          <div class="cs_offer_card">
+            <div>
+              <span class="cs_offer_card_num">02</span>
+              <h3 class="cs_offer_card_title">Integrated Operations</h3>
+              <p class="cs_offer_card_text">By bringing cultivation, processing and GMP-certified manufacturing together, PharmaCrop maintains oversight from cultivar selection through to finished product.</p>
+            </div>
+            <a href="/industry" class="cs_offer_card_link">Learn More &rarr;</a>
+          </div>
+          <div class="cs_offer_img wow fadeInRight">
+            <img src="/assets/img/pharmacrop-banner4.webp" alt="PharmaCrop GMP-certified manufacturing">
+          </div>
+          <div class="cs_offer_card">
+            <div>
+              <span class="cs_offer_card_num">03</span>
+              <h3 class="cs_offer_card_title">Global Expertise</h3>
+              <p class="cs_offer_card_text">Drawing on cultivation expertise from California, Canada and South Africa, our team applies international insights within the unique conditions of the Noosa Hinterland.</p>
+            </div>
+            <a href="/about" class="cs_offer_card_link">Learn More &rarr;</a>
           </div>
         </div>
       </div>
-      <div class="cs_height_100 cs_height_lg_70"></div>
     </section>
     <!-- End Feature Section -->
     <!-- Start Services Section -->
