@@ -38,6 +38,17 @@ export default function Page() {
                     <li><a href="/careers">CAREERS</a></li>
                     <li><a href="/blog">BLOG</a></li>
                     <li><a href="/contact">CONTACT</a></li>
+                    <li class="menu-item-has-children">
+                      <a href="#">MORE</a>
+                      <ul>
+                        <li><a href="/services">SERVICES</a></li>
+                        <li><a href="/projects">PROJECTS</a></li>
+                        <li><a href="/gallery">GALLERY</a></li>
+                        <li><a href="/test">TEST</a></li>
+                        <li><a href="/leafline">LEAFLINE</a></li>
+                        <li><a href="/home-v2">HOME V2</a></li>
+                      </ul>
+                    </li>
                   </ul>
                 </nav>
               </div>
@@ -56,6 +67,9 @@ export default function Page() {
                     </defs>
                   </svg>                    
                 </button>
+                <a href="#" class="cs_header_icon_btn cs_center" aria-label="Login">
+                  <i class="fa-solid fa-user"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -110,14 +124,6 @@ export default function Page() {
       .cs_contact_form_btn:hover {
         background: #78dca6 !important;
         color: #024242 !important;
-      }
-      @media (max-width: 767px) {
-        .cs_hero.cs_style_1 .cs_hero_in { min-height: 560px !important; padding: 90px 0 !important; }
-        .cs_hero.cs_style_1 .cs_hero_btns { flex-wrap: nowrap; gap: 10px; }
-        .cs_hero.cs_style_1 .cs_hero_btns a { flex: 1 1 0; text-align: center; white-space: nowrap; font-size: 10px !important; padding: 14px 10px !important; }
-      }
-      @media (max-width: 480px) {
-        .cs_hero.cs_style_1 .cs_hero_in { min-height: 480px !important; padding: 70px 0 !important; }
       }
     </style>
     <!-- Start Hero Section -->
@@ -285,8 +291,8 @@ export default function Page() {
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
                 <a href="/industry" class="cs_card_tag">Industry</a>
-                <span class="cs_card_tag">Australian-Grown</span>
-                <span class="cs_card_tag">GMP-Certified</span>
+                <a href="#" class="cs_card_tag">Australian-Grown</a>
+                <a href="#" class="cs_card_tag">GMP-Certified</a>
               </div>
             </div>
             <div class="cs_card_bottom">
@@ -304,8 +310,8 @@ export default function Page() {
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
                 <a href="/industry" class="cs_card_tag">Industry</a>
-                <span class="cs_card_tag">Australian-Grown</span>
-                <span class="cs_card_tag">GMP-Certified</span>
+                <a href="#" class="cs_card_tag">Australian-Grown</a>
+                <a href="#" class="cs_card_tag">GMP-Certified</a>
               </div>
             </div>
             <div class="cs_card_bottom">
@@ -323,8 +329,8 @@ export default function Page() {
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
                 <a href="/industry" class="cs_card_tag">Industry</a>
-                <span class="cs_card_tag">Australian-Grown</span>
-                <span class="cs_card_tag">GMP-Certified</span>
+                <a href="#" class="cs_card_tag">Australian-Grown</a>
+                <a href="#" class="cs_card_tag">GMP-Certified</a>
               </div>
             </div>
             <div class="cs_card_bottom">
@@ -517,7 +523,7 @@ export default function Page() {
         <div class="cs_section_heading cs_style_2 cs_color_1">
           <div>
             <span class="cs_sticky_eyebrow">BLOGS</span>
-            <h2 class="cs_section_title cs_home_heading_sz mb-0 wow fadeInDown">FROM THE <br>PHARMACROP <span>JOURNAL</span></h2>
+            <h2 class="cs_section_title mb-0 wow fadeInDown" style="font-size: 44px;">FROM THE <br>PHARMACROP <span>JOURNAL</span></h2>
           </div>
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
@@ -711,7 +717,7 @@ export default function Page() {
                 <li><a href="/industry">INDUSTRY</a></li>
                 <li><a href="/services">SERVICES</a></li>
                 <li><a href="/contact">CONTACT</a></li>
-                <li><a href="https://aleafiate.com.au/" target="_blank" rel="noopener noreferrer">SEE OUR DOCTORS</a></li>
+                <li><a href="#">SEE OUR DOCTORS</a></li>
               </ul>
             </div>
           </div>
