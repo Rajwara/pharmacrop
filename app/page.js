@@ -206,6 +206,10 @@ export default function Page() {
       .cs_sticky_services_left { flex: 0 0 400px; position: sticky; top: 140px; }
       .cs_sticky_eyebrow { display: inline-block; border: 1px solid #d1d5c9; border-radius: 30px; padding: 6px 16px; font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #4b5142; margin-bottom: 24px; text-transform: uppercase; }
       .cs_sticky_title { font-size: 44px; font-weight: 800; color: #024242; line-height: 1.2; margin: 0 0 24px; }
+      .cs_home_heading_sz { font-size: 44px !important; line-height: 1.2 !important; }
+      @media (max-width: 767px) {
+        .cs_home_heading_sz { font-size: 32px !important; }
+      }
       .cs_sticky_text { color: #6b7280; font-size: 16px; line-height: 1.7; margin: 0 0 32px; max-width: 380px; }
       .cs_sticky_btn { display: inline-block; background: #024242; color: #fff; font-weight: 700; font-size: 13px; letter-spacing: 0.5px; padding: 16px 28px; border-radius: 6px; text-decoration: none; }
       .cs_sticky_services_right { flex: 1; display: flex; flex-direction: column; gap: 32px; }
@@ -229,7 +233,7 @@ export default function Page() {
         <div class="cs_sticky_services_grid">
           <div class="cs_sticky_services_left">
             <span class="cs_sticky_eyebrow">What We Do</span>
-            <h2 class="cs_sticky_title cs_two_tone wow fadeInDown">FROM GENETICS<br>TO GMP<br><span>MANUFACTURING</span></h2>
+            <h2 class="cs_sticky_title cs_two_tone cs_home_heading_sz wow fadeInDown">FROM GENETICS<br>TO GMP<br><span>MANUFACTURING</span></h2>
             <p class="cs_sticky_text">Where international cultivation expertise meets Australian, GMP-certified manufacturing discipline &mdash; from cultivar selection through to finished product.</p>
           </div>
           <div class="cs_sticky_services_right">
@@ -276,7 +280,7 @@ export default function Page() {
       <div class="container">
         <div class="cs_partners_heading">
           <span class="cs_sticky_eyebrow">WHO WE SUPPORT</span>
-          <h2 class="cs_section_title cs_fs_80 cs_two_tone mb-0 wow fadeInDown">SUPPORTING OUR <br>INDUSTRY <span>PARTNERS</span></h2>
+          <h2 class="cs_section_title cs_two_tone cs_home_heading_sz mb-0 wow fadeInDown">SUPPORTING OUR <br>INDUSTRY <span>PARTNERS</span></h2>
           <div class="cs_height_24"></div>
           <p class="cs_sticky_text">From pharmacists to prescribers and distributors, PharmaCrop supports every partner across the supply chain with reliable, Australian-grown, GMP-certified product.</p>
         </div>
@@ -379,7 +383,7 @@ export default function Page() {
           </div>
           <div class="cs_leaf_testi_content wow fadeInUp" data-wow-delay="0.1s">
             <span class="cs_sticky_eyebrow">TRUSTED ACROSS THE SUPPLY CHAIN</span>
-            <h2 class="cs_fs_80 cs_two_tone">WHAT OUR <br><span>PARTNERS SAY</span></h2>
+            <h2 class="cs_two_tone cs_home_heading_sz">WHAT OUR <br><span>PARTNERS SAY</span></h2>
             <div class="cs_leaf_testi_cards" id="cs_leaf_testi_cards">
               <div class="cs_leaf_testi_card active">
                 <div class="cs_leaf_testi_stars">★★★★★</div>
@@ -441,7 +445,7 @@ export default function Page() {
         <div class="cs_section_heading cs_style_2 cs_color_1">
           <div>
             <span class="cs_sticky_eyebrow">F.A.Q</span>
-            <h2 class="cs_section_title cs_fs_80 mb-0">FREQUENTLY <br><span>ASKED</span> QUESTIONS</h2>
+            <h2 class="cs_section_title cs_home_heading_sz mb-0">FREQUENTLY <br><span>ASKED</span> QUESTIONS</h2>
           </div>
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
