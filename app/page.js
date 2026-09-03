@@ -22,7 +22,7 @@ export default function Page() {
         <div class="container">
           <div class="cs_main_header_in">
             <div class="cs_main_header_left">
-              <a class="cs_site_branding" href="/">
+              <a class="cs_site_branding" href="#">
                 <img src="/assets/img/logo-light.png" alt="Logo" class="cs_logo_img">
               </a>
             </div>
@@ -30,17 +30,17 @@ export default function Page() {
               <div class="cs_nav cs_heading_color">
                 <nav class="cs_nav_list_wrap text-uppercase">
                   <ul class="cs_nav_list">
-                    <li><a href="/about">ABOUT</a></li>
-                    <li><a href="/services">SERVICES</a></li>
-                    <li><a href="/projects">PROJECTS</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">PROJECTS</a></li>
                     <li class="menu-item-has-children">
-                      <a href="/contact">MORE</a>
+                      <a href="#">MORE</a>
                       <ul>
-                        <li><a href="/industry">INDUSTRY</a></li>
-                        <li><a href="/careers">CAREERS</a></li>
-                        <li><a href="/gallery">GALLERY</a></li>
-                        <li><a href="/blog">BLOG</a></li>
-                        <li><a href="/contact">CONTACT</a></li>
+                        <li><a href="#">INDUSTRY</a></li>
+                        <li><a href="#">CAREERS</a></li>
+                        <li><a href="#">GALLERY</a></li>
+                        <li><a href="#">BLOG</a></li>
+                        <li><a href="#">CONTACT</a></li>
                       </ul>
                     </li>
                   </ul>
@@ -94,8 +94,8 @@ export default function Page() {
             <h1 class="cs_hero_title cs_fs_100 cs_normal cs_mb_12 cs_white_color cs_gradient_color_1 wow fadeInUp">AUSTRALIAN-GROWN. <b>COMPLETE CONTROL.</b></h1>
             <p class="cs_hero_subtitle cs_fs_20 cs_mb_32 cs_opacity_7_5">Natural cultivation with pharmaceutical precision.</p>
             <div class="cs_hero_btns">
-              <a href="/about" class="cs_btn cs_style_1 cs_bold cs_heading_color cs_white_bg wow fadeInLeft">About PharmaCrop</a>
-              <a href="/industry" class="cs_btn cs_style_2 cs_bold cs_white_color wow fadeInRight">Visit Industries</a>
+              <a href="#" class="cs_btn cs_style_1 cs_bold cs_heading_color cs_white_bg wow fadeInLeft">About PharmaCrop</a>
+              <a href="#" class="cs_btn cs_style_2 cs_bold cs_white_color wow fadeInRight">Visit Industries</a>
             </div>
           </div>
           <div class="cs_hero_funfact_wrap wow fadeInRight">
@@ -118,7 +118,7 @@ export default function Page() {
             </div>
             <h3 class="cs_hero_box_title cs_fs_24 cs_mb_12 cs_white_color">The PharmaCrop Story</h3>
             <p class="cs_hero_box_subtitle mb-0 cs_opacity_7_5">Built in the Noosa Hinterland in Queensland, combining international cultivation expertise with Australian production and GMP-certified manufacturing.</p>
-            <a href="/about" class="cs_arrow_btn cs_hero_box_btn cs_center cs_heading_bg cs_white_color">
+            <a href="#" class="cs_arrow_btn cs_hero_box_btn cs_center cs_heading_bg cs_white_color">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
               </svg>                
@@ -163,7 +163,7 @@ export default function Page() {
         <div class="cs_section_heading cs_style_1">
           <h2 class="cs_section_title cs_fs_80 mb-0 wow fadeInDown">FROM GENETICS TO <span class="cs_nowrap_span">GMP MANUFACTURING</span></h2>
           <div class="cs_section_right">
-            <a href="/contact" class="cs_btn cs_style_1 cs_bold cs_heading_bg cs_white_color w-100 wow fadeInRight">Contact us</a>
+            <a href="#" class="cs_btn cs_style_1 cs_bold cs_heading_bg cs_white_color w-100 wow fadeInRight">Contact us</a>
           </div>
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
@@ -221,8 +221,8 @@ export default function Page() {
           <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed active wow fadeInLeft" data-src="/assets/img/pharmacists.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
-                <a href="/" class="cs_card_tag">Home</a>
-                <a href="/industry" class="cs_card_tag">Industry</a>
+                <a href="#" class="cs_card_tag">Home</a>
+                <a href="#" class="cs_card_tag">Industry</a>
                 <a href="#" class="cs_card_tag">Australian-Grown</a>
                 <a href="#" class="cs_card_tag">GMP-Certified</a>
               </div>
@@ -231,7 +231,7 @@ export default function Page() {
               <h2 class="cs_card_title cs_white_color cs_fs_32">PHARMACISTS</h2>
               <p class="cs_card_subtitle mb-0 cs_white_color">Reliable supply. Simplified access. A dedicated online ordering portal is currently in development to further support pharmacy partners.</p>
             </div>
-            <a href="/industry" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+            <a href="#" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
               </svg>
@@ -240,8 +240,8 @@ export default function Page() {
           <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/prescribers.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
-                <a href="/" class="cs_card_tag">Home</a>
-                <a href="/industry" class="cs_card_tag">Industry</a>
+                <a href="#" class="cs_card_tag">Home</a>
+                <a href="#" class="cs_card_tag">Industry</a>
                 <a href="#" class="cs_card_tag">Australian-Grown</a>
                 <a href="#" class="cs_card_tag">GMP-Certified</a>
               </div>
@@ -250,7 +250,7 @@ export default function Page() {
               <h2 class="cs_card_title cs_white_color cs_fs_32">PRESCRIBERS</h2>
               <p class="cs_card_subtitle mb-0 cs_white_color">Where cultivation expertise meets pharmaceutical discipline, supporting quality, consistency and product integrity across every product we produce.</p>
             </div>
-            <a href="/industry" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+            <a href="#" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
               </svg>
@@ -259,8 +259,8 @@ export default function Page() {
           <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed wow fadeInRight" data-src="/assets/img/distributors.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
-                <a href="/" class="cs_card_tag">Home</a>
-                <a href="/industry" class="cs_card_tag">Industry</a>
+                <a href="#" class="cs_card_tag">Home</a>
+                <a href="#" class="cs_card_tag">Industry</a>
                 <a href="#" class="cs_card_tag">Australian-Grown</a>
                 <a href="#" class="cs_card_tag">GMP-Certified</a>
               </div>
@@ -269,7 +269,7 @@ export default function Page() {
               <h2 class="cs_card_title cs_white_color cs_fs_32">DISTRIBUTORS</h2>
               <p class="cs_card_subtitle mb-0 cs_white_color">A reliable partner from production to supply, with consistent products, reliable supply and a growing Australian-grown portfolio.</p>
             </div>
-            <a href="/industry" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+            <a href="#" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
               </svg>
@@ -408,7 +408,7 @@ export default function Page() {
       <div class="container">
         <div class="cs_cta_in">
           <h2 class="cs_cta_title cs_fs_80 cs_white_color cs_mb_40 wow fadeInDown">READY TO PARTNER <br><span class="cs_nowrap_span">WITH PHARMACROP?</span></h2>
-          <a href="/contact" class="cs_btn cs_style_1 cs_bold cs_heading_color cs_white_bg wow fadeInUp">Contact Us</a>
+          <a href="#" class="cs_btn cs_style_1 cs_bold cs_heading_color cs_white_bg wow fadeInUp">Contact Us</a>
         </div>
       </div>
       <div class="cs_height_100 cs_height_lg_70"></div>
@@ -446,10 +446,10 @@ export default function Page() {
             <div class="cs_footer_widget">
               <h4 class="cs_footer_widget_title">SUPPORT</h4>
               <ul class="cs_footer_widget_menu cs_mp_0">
-                <li><a href="/faq">FAQ</a></li>
-                <li><a href="/industry">INDUSTRY</a></li>
-                <li><a href="/careers">CAREERS</a></li>
-                <li><a href="/contact">CONTACT</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">INDUSTRY</a></li>
+                <li><a href="#">CAREERS</a></li>
+                <li><a href="#">CONTACT</a></li>
               </ul>
             </div>
           </div>
@@ -457,10 +457,10 @@ export default function Page() {
             <div class="cs_footer_widget">
               <h4 class="cs_footer_widget_title">LINKS</h4>
               <ul class="cs_footer_widget_menu cs_mp_0">
-                <li><a href="/about">ABOUT US</a></li>
-                <li><a href="/gallery">GALLERY</a></li>
-                <li><a href="/projects">PROJECTS</a></li>
-                <li><a href="/blog">BLOG</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">GALLERY</a></li>
+                <li><a href="#">PROJECTS</a></li>
+                <li><a href="#">BLOG</a></li>
               </ul>
             </div>
           </div>
@@ -468,10 +468,10 @@ export default function Page() {
             <div class="cs_footer_widget">
               <h4 class="cs_footer_widget_title">SERVICES</h4>
               <ul class="cs_footer_widget_menu cs_mp_0">
-                <li><a href="/service-details">HOME GARDEN</a></li>
-                <li><a href="/service-details">PLANT SELECTION</a></li>
-                <li><a href="/service-details">HARDSCAPING</a></li>
-                <li><a href="/service-details">PUBLIC GARDEN</a></li>
+                <li><a href="#">HOME GARDEN</a></li>
+                <li><a href="#">PLANT SELECTION</a></li>
+                <li><a href="#">HARDSCAPING</a></li>
+                <li><a href="#">PUBLIC GARDEN</a></li>
               </ul>
             </div>
           </div>
@@ -483,10 +483,10 @@ export default function Page() {
           <div class="cs_bottom_footer_right wow fadeInRight">
             <ul class="cs_footer_links cs_mp_0">
               <li>
-                <a href="/privacy-policy">PRIVACY POLICY</a>
+                <a href="#">PRIVACY POLICY</a>
               </li>
               <li>
-                <a href="/terms-and-conditions">TERMS &amp; CONDITION</a>
+                <a href="#">TERMS &amp; CONDITION</a>
               </li>
             </ul>
           </div>
