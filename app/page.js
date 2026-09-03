@@ -1,9 +1,12 @@
+import Script from "next/script";
+
 export const metadata = {
   title: "PharmaCrop - Bring Balance To Your Life",
 };
 
 export default function Page() {
   return (
+    <>
     <div
       dangerouslySetInnerHTML={{
         __html: `
@@ -302,64 +305,94 @@ export default function Page() {
     </section>
     <!-- End Services Section -->
     <!-- Start Testimonial Section -->
-    <section class="cs_gray_bg">
-      <div class="cs_height_100 cs_height_lg_70"></div>
-      <div class="container">
-        <div class="text-center">
-          <h2 class="cs_section_title cs_fs_80 mb-0 wow fadeInDown">TRUSTED BY OUR <span>INDUSTRY PARTNERS</span></h2>
-        </div>
-        <div class="cs_height_64 cs_height_lg_50"></div>
-        <div class="row">
-          <div class="col-lg-10 offset-lg-1">
-            <div class="cs_slider cs_style_1">
-              <div class="cs_slider_container" data-autoplay="0" data-loop="1" data-speed="800" data-center="0" data-variable-width="0" data-slides-per-view="1">
-                <div class="cs_slider_wrapper">
-                  <div class="cs_slide">
-                    <div class="cs_testimonial cs_style_1 text-center wow fadeInUp">
-                      <blockquote class="cs_testimonial_blockquote cs_heading_color cs_fs_32 cs_bold cs_mb_48">PharmaCrop's <span>integrated</span> approach, from cultivation to GMP-certified manufacturing, gives us complete <span>confidence</span> in every batch we receive. Their pharmaceutical discipline and consistency are <span>unmatched</span>.</blockquote>
-                      <div class="cs_testimonial_meta">
-                        <h4 class="cs_testimonial_avatar cs_bold cs_fs_16 cs_mb_2">PARTNER PHARMACIST</h4>
-                        <p class="cs_testimonial_avatar_designation mb-0">PharmaCrop Distribution Partner</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cs_slide">
-                    <div class="cs_testimonial cs_style_1 text-center">
-                      <blockquote class="cs_testimonial_blockquote cs_heading_color cs_fs_32 cs_bold cs_mb_48">PharmaCrop's <span>integrated</span> approach, from cultivation to GMP-certified manufacturing, gives us complete <span>confidence</span> in every batch we receive. Their pharmaceutical discipline and consistency are <span>unmatched</span>.</blockquote>
-                      <div class="cs_testimonial_meta">
-                        <h4 class="cs_testimonial_avatar cs_bold cs_fs_16 cs_mb_2">PARTNER PHARMACIST</h4>
-                        <p class="cs_testimonial_avatar_designation mb-0">PharmaCrop Distribution Partner</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="cs_slide">
-                    <div class="cs_testimonial cs_style_1 text-center">
-                      <blockquote class="cs_testimonial_blockquote cs_heading_color cs_fs_32 cs_bold cs_mb_48">PharmaCrop's <span>integrated</span> approach, from cultivation to GMP-certified manufacturing, gives us complete <span>confidence</span> in every batch we receive. Their pharmaceutical discipline and consistency are <span>unmatched</span>.</blockquote>
-                      <div class="cs_testimonial_meta">
-                        <h4 class="cs_testimonial_avatar cs_bold cs_fs_16 cs_mb_2">PARTNER PHARMACIST</h4>
-                        <p class="cs_testimonial_avatar_designation mb-0">PharmaCrop Distribution Partner</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="cs_slider_arrows cs_style_2">
-                <div class="cs_left_arrow cs_heading_color">
-                  <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.499953 9.00005C0.499953 8.80823 0.573265 8.61623 0.719703 8.4698L8.2197 0.969797C8.51277 0.676734 8.98733 0.676734 9.2802 0.969797C9.57308 1.26286 9.57327 1.73742 9.2802 2.0303L2.31045 9.00005L9.2802 15.9698C9.57327 16.2629 9.57327 16.7374 9.2802 17.0303C8.98714 17.3232 8.51258 17.3234 8.2197 17.0303L0.719703 9.5303C0.573265 9.38386 0.499953 9.19186 0.499953 9.00005Z" fill="currentColor"></path>
-                  </svg>                                   
-                </div>
-                <div class="cs_right_arrow cs_heading_color">
-                  <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.50005 8.99995C9.50005 9.19177 9.42673 9.38377 9.2803 9.5302L1.7803 17.0302C1.48723 17.3233 1.01267 17.3233 0.719797 17.0302C0.426922 16.7371 0.426734 16.2626 0.719797 15.9697L7.68955 8.99995L0.719797 2.0302C0.426734 1.73714 0.426734 1.26258 0.719797 0.969702C1.01286 0.676826 1.48742 0.67664 1.7803 0.969702L9.2803 8.4697C9.42673 8.61614 9.50005 8.80814 9.50005 8.99995Z" fill="currentColor"></path>
-                  </svg>                    
-                </div>
+    <style>
+      .cs_testi_section { display: flex; min-height: 720px; }
+      .cs_testi_left { flex: 0 0 50%; background: #f4f4f2; padding: 100px 60px; display: flex; flex-direction: column; justify-content: center; }
+      .cs_testi_eyebrow { display: inline-flex; align-items: center; gap: 8px; border: 1px solid #d1d5c9; border-radius: 30px; padding: 6px 16px; font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #4b5142; margin-bottom: 24px; width: fit-content; }
+      .cs_testi_eyebrow::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #024242; }
+      .cs_testi_title { font-size: 44px; font-weight: 800; color: #024242; line-height: 1.2; margin: 0 0 20px; }
+      .cs_testi_desc { color: #6b7280; font-size: 16px; line-height: 1.7; margin: 0 0 32px; max-width: 480px; }
+      .cs_testi_btn { display: inline-block; background: #024242; color: #fff; font-weight: 700; padding: 16px 32px; border-radius: 50px; text-decoration: none; font-size: 14px; width: fit-content; margin-bottom: 40px; }
+      .cs_testi_card_wrap { position: relative; max-width: 480px; min-height: 320px; }
+      .cs_testi_card { position: absolute; inset: 0; background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.07); opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; pointer-events: none; }
+      .cs_testi_card.active { opacity: 1; transform: translateY(0); pointer-events: auto; }
+      .cs_testi_card_head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+      .cs_testi_avatar { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
+      .cs_testi_name { font-weight: 700; color: #024242; margin: 0; font-size: 16px; }
+      .cs_testi_role { color: #8a9086; font-size: 14px; margin: 0; }
+      .cs_testi_quote_mark { position: absolute; top: 24px; right: 24px; width: 44px; height: 44px; background: #024242; color: #78dca6; border-radius: 12px 12px 12px 0; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700; }
+      .cs_testi_stars { color: #d99f59; margin-bottom: 14px; font-size: 14px; letter-spacing: 2px; }
+      .cs_testi_text { color: #4b5142; font-size: 15px; line-height: 1.7; margin: 0; }
+      .cs_testi_dots { display: flex; gap: 8px; margin-top: 24px; }
+      .cs_testi_dot { width: 8px; height: 8px; border-radius: 50%; background: #d1d5c9; cursor: pointer; border: none; padding: 0; transition: all 0.3s ease; }
+      .cs_testi_dot.active { background: #024242; width: 24px; border-radius: 4px; }
+      .cs_testi_right { flex: 0 0 50%; position: relative; overflow: hidden; }
+      .cs_testi_right_img { position: absolute; inset: 0; opacity: 0; transition: opacity 1s ease, transform 6s ease; transform: scale(1.08); }
+      .cs_testi_right_img.active { opacity: 1; transform: scale(1); }
+      .cs_testi_right_img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      @media (max-width: 991px) {
+        .cs_testi_section { flex-direction: column; }
+        .cs_testi_left, .cs_testi_right { flex: none; width: 100%; }
+        .cs_testi_left { padding: 70px 24px; }
+        .cs_testi_right { min-height: 420px; }
+        .cs_testi_title { font-size: 32px; }
+      }
+    </style>
+    <section class="cs_testi_section">
+      <div class="cs_testi_left">
+        <span class="cs_testi_eyebrow">OUR TESTIMONIALS</span>
+        <h2 class="cs_testi_title">Trusted by Our Industry Partners</h2>
+        <p class="cs_testi_desc">Hear from pharmacists, prescribers and distributors who've partnered with PharmaCrop &mdash; building reliable supply, consistent quality and long-term relationships through our GMP-certified operations.</p>
+        <a href="/industry" class="cs_testi_btn">View All Partners</a>
+        <div class="cs_testi_card_wrap" id="cs_testi_cards">
+          <div class="cs_testi_card active" data-index="0">
+            <span class="cs_testi_quote_mark">&rdquo;</span>
+            <div class="cs_testi_card_head">
+              <img src="/assets/Leafline/10004.jpg" class="cs_testi_avatar" alt="">
+              <div>
+                <p class="cs_testi_name">Amanda Reyes</p>
+                <p class="cs_testi_role">Pharmacy Owner</p>
               </div>
             </div>
+            <div class="cs_testi_stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="cs_testi_text">"PharmaCrop's integrated approach, from cultivation to GMP-certified manufacturing, gives us complete confidence in every batch we dispense."</p>
+          </div>
+          <div class="cs_testi_card" data-index="1">
+            <span class="cs_testi_quote_mark">&rdquo;</span>
+            <div class="cs_testi_card_head">
+              <img src="/assets/Leafline/10007.jpg" class="cs_testi_avatar" alt="">
+              <div>
+                <p class="cs_testi_name">Marcus Webb</p>
+                <p class="cs_testi_role">Distribution Partner</p>
+              </div>
+            </div>
+            <div class="cs_testi_stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="cs_testi_text">"Reliable supply and consistent quality every time. PharmaCrop's integrated operation makes forecasting and logistics genuinely straightforward."</p>
+          </div>
+          <div class="cs_testi_card" data-index="2">
+            <span class="cs_testi_quote_mark">&rdquo;</span>
+            <div class="cs_testi_card_head">
+              <img src="/assets/Leafline/10006.jpg" class="cs_testi_avatar" alt="">
+              <div>
+                <p class="cs_testi_name">Dr. Priya Nathan</p>
+                <p class="cs_testi_role">Prescribing Clinician</p>
+              </div>
+            </div>
+            <div class="cs_testi_stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="cs_testi_text">"Full traceability from cultivar to finished product gives me real confidence when discussing options with patients."</p>
           </div>
         </div>
+        <div class="cs_testi_dots" id="cs_testi_dots">
+          <button class="cs_testi_dot active" data-goto="0" aria-label="Testimonial 1"></button>
+          <button class="cs_testi_dot" data-goto="1" aria-label="Testimonial 2"></button>
+          <button class="cs_testi_dot" data-goto="2" aria-label="Testimonial 3"></button>
+        </div>
       </div>
-      <div class="cs_height_100 cs_height_lg_70"></div>
+      <div class="cs_testi_right">
+        <div class="cs_testi_right_img active" data-index="0"><img src="/assets/img/pharmacists.webp" alt=""></div>
+        <div class="cs_testi_right_img" data-index="1"><img src="/assets/img/distributors.webp" alt=""></div>
+        <div class="cs_testi_right_img" data-index="2"><img src="/assets/img/prescribers.webp" alt=""></div>
+      </div>
     </section>
     <!-- End Testimonial Section -->
     <!-- Start Works Section -->
@@ -425,37 +458,60 @@ export default function Page() {
     <!-- End Works Section -->
     <!-- Start CTA Section -->
     <style>
-      .cs_cta_split { position: relative; padding: 100px 0; background-image: url('/assets/img/pharmacrop-banner1.webp'); background-size: cover; background-position: center; }
-      .cs_cta_split::before { content: ""; position: absolute; inset: 0; background: rgba(2, 20, 20, 0.55); }
-      .cs_cta_split .container { position: relative; z-index: 1; }
-      .cs_cta_split_grid { display: grid; grid-template-columns: 1fr 1.6fr 1fr; gap: 24px; align-items: stretch; }
-      .cs_cta_split_img { border-radius: 16px; overflow: hidden; min-height: 380px; }
-      .cs_cta_split_img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-      .cs_cta_split_panel { background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 16px; padding: 48px 32px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-      .cs_cta_split_eyebrow { color: #78dca6; font-weight: 700; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px; }
-      .cs_cta_split_title { color: #fff; font-size: 36px; font-weight: 700; line-height: 1.3; margin: 0 0 20px; }
-      .cs_cta_split_text { color: rgba(255, 255, 255, 0.8); font-size: 16px; line-height: 1.6; margin: 0 0 28px; max-width: 420px; }
-      .cs_cta_split_btn { background: #78dca6; color: #024242; font-weight: 700; padding: 14px 28px; border-radius: 50px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
-      @media (max-width: 991px) {
-        .cs_cta_split_grid { grid-template-columns: 1fr; }
-        .cs_cta_split_img { min-height: 220px; }
-        .cs_cta_split_title { font-size: 28px; }
+      .cs_contact_card_section { padding: 100px 0; }
+      .cs_contact_card { position: relative; border-radius: 24px; overflow: hidden; min-height: 700px; display: flex; flex-direction: column; justify-content: space-between; padding: 40px; }
+      .cs_contact_card_bg { position: absolute; inset: 0; z-index: 0; }
+      .cs_contact_card_bg img { width: 100%; height: 100%; object-fit: cover; }
+      .cs_contact_card_bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(2, 34, 34, 0.55) 0%, rgba(2, 34, 34, 0.25) 40%, rgba(2, 20, 20, 0.85) 100%); }
+      .cs_contact_card_top { position: relative; z-index: 2; }
+      .cs_contact_info_label { color: #fff; font-weight: 700; font-size: 16px; margin: 0 0 16px; }
+      .cs_contact_pill { display: inline-flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(6px); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 30px; padding: 10px 20px 10px 10px; color: #fff; text-decoration: none; font-size: 14px; margin-right: 12px; margin-bottom: 12px; }
+      .cs_contact_pill_icon { width: 30px; height: 30px; border-radius: 50%; background: #78dca6; color: #024242; display: flex; align-items: center; justify-content: center; font-size: 13px; flex: none; }
+      .cs_contact_card_bottom { position: relative; z-index: 2; }
+      .cs_contact_eyebrow_row { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+      .cs_contact_eyebrow_icon { width: 32px; height: 32px; border-radius: 50%; background: #fff; color: #024242; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+      .cs_contact_eyebrow_text { color: #fff; font-weight: 700; font-size: 13px; letter-spacing: 1px; }
+      .cs_contact_card_title { color: #fff; font-size: 44px; font-weight: 800; margin: 0 0 12px; line-height: 1.2; }
+      .cs_contact_card_sub { color: rgba(255, 255, 255, 0.8); font-size: 16px; margin: 0 0 28px; max-width: 520px; }
+      .cs_contact_form_bar { background: #fff; border-radius: 16px; padding: 20px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+      .cs_contact_form_bar input, .cs_contact_form_bar select { flex: 1; min-width: 180px; border: none; border-bottom: 1px solid #e5e5e5; padding: 12px 4px; font-size: 14px; color: #1f2419; outline: none; }
+      .cs_contact_form_btn { background: #024242; color: #fff; font-weight: 700; padding: 16px 32px; border-radius: 8px; border: none; cursor: pointer; font-size: 13px; letter-spacing: 0.5px; white-space: nowrap; }
+      @media (max-width: 767px) {
+        .cs_contact_card_title { font-size: 30px; }
+        .cs_contact_form_bar { flex-direction: column; align-items: stretch; }
+        .cs_contact_form_btn { width: 100%; }
       }
     </style>
-    <section class="cs_cta_split">
+    <section class="cs_contact_card_section">
       <div class="container">
-        <div class="cs_cta_split_grid">
-          <div class="cs_cta_split_img">
-            <img src="/assets/img/prescribers.webp" alt="">
+        <div class="cs_contact_card">
+          <div class="cs_contact_card_bg"><img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt=""></div>
+          <div class="cs_contact_card_top">
+            <p class="cs_contact_info_label">Get More Information:</p>
+            <a href="mailto:enquiries@pharmacrop.com.au" class="cs_contact_pill"><span class="cs_contact_pill_icon"><i class="fa-solid fa-envelope"></i></span>enquiries@pharmacrop.com.au</a>
+            <a href="tel:1300053533" class="cs_contact_pill"><span class="cs_contact_pill_icon"><i class="fa-solid fa-phone"></i></span>1300 053 533</a>
           </div>
-          <div class="cs_cta_split_panel">
-            <span class="cs_cta_split_eyebrow">Get Started</span>
-            <h2 class="cs_cta_split_title">Start Your Partnership Journey with PharmaCrop Today</h2>
-            <p class="cs_cta_split_text">From cultivation to GMP-certified manufacturing, we're ready to support pharmacists, prescribers and distributors with reliable, Australian-grown supply.</p>
-            <a href="/contact" class="cs_cta_split_btn">Contact Us &rarr;</a>
-          </div>
-          <div class="cs_cta_split_img">
-            <img src="/assets/img/distributors.webp" alt="">
+          <div class="cs_contact_card_bottom">
+            <div class="cs_contact_eyebrow_row">
+              <span class="cs_contact_eyebrow_icon"><i class="fa-solid fa-seedling"></i></span>
+              <span class="cs_contact_eyebrow_text">CONTACT US</span>
+            </div>
+            <h2 class="cs_contact_card_title">Cultivated With Purpose, Delivered With Trust</h2>
+            <p class="cs_contact_card_sub">Australian-grown, GMP-certified cultivation and manufacturing &mdash; get in touch to discuss supply, partnership and product options.</p>
+            <form action="https://api.web3forms.com/submit" method="POST" class="cs_contact_form_bar">
+              <input type="hidden" name="access_key" value="cd98b256-0db3-478c-ab28-1ec94f80447c">
+              <input type="hidden" name="subject" value="New Enquiry - PharmaCrop Website">
+              <input type="text" name="name" placeholder="Type Your Name ..." required>
+              <input type="email" name="email" placeholder="Type Your Mail ..." required>
+              <select name="interest" defaultValue="">
+                <option value="" disabled selected>Select Your Interest</option>
+                <option value="Pharmacist">Pharmacist</option>
+                <option value="Prescriber">Prescriber</option>
+                <option value="Distributor">Distributor</option>
+                <option value="Other">Other</option>
+              </select>
+              <button type="submit" class="cs_contact_form_btn">Get a Quote</button>
+            </form>
           </div>
         </div>
       </div>
@@ -554,5 +610,38 @@ export default function Page() {
 `,
       }}
     />
+    <Script id="cs_home_testi_slider_script" strategy="afterInteractive">
+      {`
+        (function () {
+          var cards = document.querySelectorAll('#cs_testi_cards .cs_testi_card');
+          var imgs = document.querySelectorAll('.cs_testi_right_img');
+          var dots = document.querySelectorAll('#cs_testi_dots .cs_testi_dot');
+          if (!cards.length) return;
+          var idx = 0;
+          var timer;
+          function show(i) {
+            cards.forEach(function (c, ci) { c.classList.toggle('active', ci === i); });
+            imgs.forEach(function (im, ii) { im.classList.toggle('active', ii === i); });
+            dots.forEach(function (d, di) { d.classList.toggle('active', di === i); });
+            idx = i;
+          }
+          function next() {
+            show((idx + 1) % cards.length);
+          }
+          function restart() {
+            clearInterval(timer);
+            timer = setInterval(next, 5000);
+          }
+          dots.forEach(function (d) {
+            d.addEventListener('click', function () {
+              show(parseInt(d.getAttribute('data-goto'), 10));
+              restart();
+            });
+          });
+          restart();
+        })();
+      `}
+    </Script>
+    </>
   );
 }

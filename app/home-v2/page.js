@@ -395,15 +395,41 @@ export default function Page() {
     </section>
     <!-- End Works Section -->
     <!-- Start CTA Section -->
-    <section class="cs_cta cs_style_1 cs_heading_bg cs_bg_filed" data-src="/assets/img/ready-to-partner-with-pharmacrop.jpg">
-      <div class="cs_height_100 cs_height_lg_70"></div>
+    <style>
+      .cs_cta_split { position: relative; padding: 100px 0; background-image: url('/assets/img/pharmacrop-banner1.webp'); background-size: cover; background-position: center; }
+      .cs_cta_split::before { content: ""; position: absolute; inset: 0; background: rgba(2, 20, 20, 0.55); }
+      .cs_cta_split .container { position: relative; z-index: 1; }
+      .cs_cta_split_grid { display: grid; grid-template-columns: 1fr 1.6fr 1fr; gap: 24px; align-items: stretch; }
+      .cs_cta_split_img { border-radius: 16px; overflow: hidden; min-height: 380px; }
+      .cs_cta_split_img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .cs_cta_split_panel { background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 16px; padding: 48px 32px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+      .cs_cta_split_eyebrow { color: #78dca6; font-weight: 700; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px; }
+      .cs_cta_split_title { color: #fff; font-size: 36px; font-weight: 700; line-height: 1.3; margin: 0 0 20px; }
+      .cs_cta_split_text { color: rgba(255, 255, 255, 0.8); font-size: 16px; line-height: 1.6; margin: 0 0 28px; max-width: 420px; }
+      .cs_cta_split_btn { background: #78dca6; color: #024242; font-weight: 700; padding: 14px 28px; border-radius: 50px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
+      @media (max-width: 991px) {
+        .cs_cta_split_grid { grid-template-columns: 1fr; }
+        .cs_cta_split_img { min-height: 220px; }
+        .cs_cta_split_title { font-size: 28px; }
+      }
+    </style>
+    <section class="cs_cta_split">
       <div class="container">
-        <div class="cs_cta_in">
-          <h2 class="cs_cta_title cs_fs_80 cs_white_color cs_mb_40 wow fadeInDown">READY TO PARTNER <br><span class="cs_nowrap_span">WITH PHARMACROP?</span></h2>
-          <a href="/contact" class="cs_btn cs_style_1 cs_bold cs_heading_color cs_white_bg wow fadeInUp">Contact Us</a>
+        <div class="cs_cta_split_grid">
+          <div class="cs_cta_split_img">
+            <img src="/assets/img/prescribers.webp" alt="">
+          </div>
+          <div class="cs_cta_split_panel">
+            <span class="cs_cta_split_eyebrow">Get Started</span>
+            <h2 class="cs_cta_split_title">Start Your Partnership Journey with PharmaCrop Today</h2>
+            <p class="cs_cta_split_text">From cultivation to GMP-certified manufacturing, we're ready to support pharmacists, prescribers and distributors with reliable, Australian-grown supply.</p>
+            <a href="/contact" class="cs_cta_split_btn">Contact Us &rarr;</a>
+          </div>
+          <div class="cs_cta_split_img">
+            <img src="/assets/img/distributors.webp" alt="">
+          </div>
         </div>
       </div>
-      <div class="cs_height_100 cs_height_lg_70"></div>
     </section>
     <!-- End CTA Section -->
     <!-- Start Footer Section -->
