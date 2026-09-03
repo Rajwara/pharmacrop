@@ -302,88 +302,100 @@ export default function Page() {
     </section>
     <!-- End Leafline Facilities -->
 
-    <!-- Start Leafline Testimonials -->
+    <!-- Start Testimonial Section -->
     <style>
-      .cs_leaf_testi { padding: 110px 0; background: #f7faf8; }
-      .cs_leaf_testi_row { display: flex; align-items: center; gap: 60px; }
-      .cs_leaf_testi_imgs { flex: 0 0 340px; position: relative; height: 380px; }
-      .cs_leaf_testi_img { position: absolute; inset: 0; border-radius: 12px; overflow: hidden; opacity: 0; transform: scale(0.96); transition: opacity 0.6s ease, transform 0.6s ease; }
-      .cs_leaf_testi_img.active { opacity: 1; transform: scale(1); }
-      .cs_leaf_testi_img img { width: 100%; height: 100%; object-fit: cover; }
-      .cs_leaf_testi_content { flex: 1; }
-      .cs_leaf_testi_content span.cs_section_subtitle { color: #78dca6; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; font-size: 14px; margin-bottom: 14px; display: block; }
-      .cs_leaf_testi_content h2 { color: #024242; font-size: 34px; margin-bottom: 30px; }
-      .cs_leaf_testi_cards { position: relative; min-height: 200px; }
-      .cs_leaf_testi_card { position: absolute; inset: 0; opacity: 0; visibility: hidden; transform: translateY(12px); transition: opacity 0.5s ease, transform 0.5s ease; }
-      .cs_leaf_testi_card.active { opacity: 1; visibility: visible; transform: translateY(0); position: relative; }
-      .cs_leaf_testi_stars { color: #d99f59; margin-bottom: 16px; font-size: 14px; }
-      .cs_leaf_testi_card p { font-size: 19px; line-height: 1.7; color: #333; margin-bottom: 22px; font-style: italic; }
-      .cs_leaf_testi_author strong { display: block; color: #024242; font-size: 16px; }
-      .cs_leaf_testi_author span { color: #888; font-size: 14px; }
-      .cs_leaf_testi_dots { display: flex; gap: 10px; margin-top: 30px; }
-      .cs_leaf_testi_dot { width: 10px; height: 10px; border-radius: 50%; background: #d7e8dd; cursor: pointer; transition: 0.3s; border: none; padding: 0; }
-      .cs_leaf_testi_dot.active { background: #78dca6; width: 26px; border-radius: 6px; }
-      @media (max-width: 991px) { .cs_leaf_testi_row { flex-direction: column; } .cs_leaf_testi_imgs { flex: 0 0 auto; width: 100%; } }
+      .cs_testi_section { display: flex; min-height: 720px; }
+      .cs_testi_left { flex: 0 0 50%; background: #f4f4f2; padding: 100px 60px; display: flex; flex-direction: column; justify-content: center; }
+      .cs_testi_eyebrow { display: inline-flex; align-items: center; gap: 8px; border: 1px solid #d1d5c9; border-radius: 30px; padding: 6px 16px; font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #4b5142; margin-bottom: 24px; width: fit-content; }
+      .cs_testi_eyebrow::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #024242; }
+      .cs_testi_title { font-size: 44px; font-weight: 800; color: #024242; line-height: 1.2; margin: 0 0 20px; }
+      .cs_testi_desc { color: #6b7280; font-size: 16px; line-height: 1.7; margin: 0 0 32px; max-width: 480px; }
+      .cs_testi_btn { display: inline-block; background: #024242; color: #fff; font-weight: 700; padding: 16px 32px; border-radius: 50px; text-decoration: none; font-size: 14px; width: fit-content; margin-bottom: 40px; }
+      .cs_testi_card_wrap { position: relative; max-width: 480px; min-height: 320px; }
+      .cs_testi_card { position: absolute; inset: 0; background: #fff; border-radius: 16px; padding: 32px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.07); opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; pointer-events: none; }
+      .cs_testi_card.active { opacity: 1; transform: translateY(0); pointer-events: auto; }
+      .cs_testi_card_head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+      .cs_testi_avatar { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
+      .cs_testi_name { font-weight: 700; color: #024242; margin: 0; font-size: 16px; }
+      .cs_testi_role { color: #8a9086; font-size: 14px; margin: 0; }
+      .cs_testi_quote_mark { position: absolute; top: 24px; right: 24px; width: 44px; height: 44px; background: #024242; color: #78dca6; border-radius: 12px 12px 12px 0; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700; }
+      .cs_testi_stars { color: #d99f59; margin-bottom: 14px; font-size: 14px; letter-spacing: 2px; }
+      .cs_testi_text { color: #4b5142; font-size: 15px; line-height: 1.7; margin: 0; }
+      .cs_testi_dots { display: flex; gap: 8px; margin-top: 24px; }
+      .cs_testi_dot { width: 8px; height: 8px; border-radius: 50%; background: #d1d5c9; cursor: pointer; border: none; padding: 0; transition: all 0.3s ease; }
+      .cs_testi_dot.active { background: #024242; width: 24px; border-radius: 4px; }
+      .cs_testi_right { flex: 0 0 50%; position: relative; overflow: hidden; }
+      .cs_testi_right_img { position: absolute; inset: 0; opacity: 0; transition: opacity 1s ease, transform 6s ease; transform: scale(1.08); }
+      .cs_testi_right_img.active { opacity: 1; transform: scale(1); }
+      .cs_testi_right_img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      @media (min-width: 992px) { .cs_testi_left { padding-left: calc((100vw - 960px) / 2 + 12px); } }
+      @media (min-width: 1200px) { .cs_testi_left { padding-left: calc((100vw - 1140px) / 2 + 12px); } }
+      @media (min-width: 1400px) { .cs_testi_left { padding-left: calc((100vw - 1320px) / 2 + 12px); } }
+      @media (max-width: 991px) {
+        .cs_testi_section { flex-direction: column; }
+        .cs_testi_left, .cs_testi_right { flex: none; width: 100%; }
+        .cs_testi_left { padding: 70px 24px; }
+        .cs_testi_right { min-height: 420px; }
+        .cs_testi_title { font-size: 32px; }
+      }
     </style>
-    <section class="cs_leaf_testi">
-      <div class="container">
-        <div class="cs_leaf_testi_row">
-          <div class="cs_leaf_testi_imgs wow fadeInUp">
-            <div class="cs_leaf_testi_img active"><img src="/assets/Leafline/10004.jpg" alt=""></div>
-            <div class="cs_leaf_testi_img"><img src="/assets/Leafline/10005.jpg" alt=""></div>
-            <div class="cs_leaf_testi_img"><img src="/assets/Leafline/10006.jpg" alt=""></div>
-            <div class="cs_leaf_testi_img"><img src="/assets/Leafline/10007.jpg" alt=""></div>
-            <div class="cs_leaf_testi_img"><img src="/assets/Leafline/10031.jpg" alt=""></div>
-            <div class="cs_leaf_testi_img"><img src="/assets/Leafline/10032.jpg" alt=""></div>
+    <section class="cs_testi_section">
+      <div class="cs_testi_left">
+        <span class="cs_testi_eyebrow">OUR TESTIMONIALS</span>
+        <h2 class="cs_testi_title">Trusted by Our Industry Partners</h2>
+        <p class="cs_testi_desc">Hear from pharmacists, prescribers and distributors who've partnered with PharmaCrop &mdash; building reliable supply, consistent quality and long-term relationships through our GMP-certified operations.</p>
+        <a href="/industry" class="cs_testi_btn">View All Partners</a>
+        <div class="cs_testi_card_wrap" id="cs_testi_cards">
+          <div class="cs_testi_card active" data-index="0">
+            <span class="cs_testi_quote_mark">&rdquo;</span>
+            <div class="cs_testi_card_head">
+              <img src="/assets/Leafline/10004.jpg" class="cs_testi_avatar" alt="">
+              <div>
+                <p class="cs_testi_name">Amanda Reyes</p>
+                <p class="cs_testi_role">Pharmacy Owner</p>
+              </div>
+            </div>
+            <div class="cs_testi_stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="cs_testi_text">"PharmaCrop's integrated approach, from cultivation to GMP-certified manufacturing, gives us complete confidence in every batch we dispense."</p>
           </div>
-          <div class="cs_leaf_testi_content wow fadeInUp" data-wow-delay="0.1s">
-            <span class="cs_section_subtitle">Trusted Across the Supply Chain</span>
-            <h2>What Our Partners Say</h2>
-            <div class="cs_leaf_testi_cards" id="cs_leaf_testi_cards">
-              <div class="cs_leaf_testi_card active">
-                <div class="cs_leaf_testi_stars">★★★★★</div>
-                <p>"PharmaCrop's consistency batch to batch makes compounding straightforward. We always know what we're getting."</p>
-                <div class="cs_leaf_testi_author"><strong>Compounding Pharmacist</strong><span>Community Pharmacy Partner</span></div>
-              </div>
-              <div class="cs_leaf_testi_card">
-                <div class="cs_leaf_testi_stars">★★★★★</div>
-                <p>"Supply confidence is everything in this industry. PharmaCrop has never let a delivery window slip on us."</p>
-                <div class="cs_leaf_testi_author"><strong>Distribution Partner</strong><span>National Wholesale Distributor</span></div>
-              </div>
-              <div class="cs_leaf_testi_card">
-                <div class="cs_leaf_testi_stars">★★★★★</div>
-                <p>"The traceability from cultivar to finished product gives me real confidence when discussing options with patients."</p>
-                <div class="cs_leaf_testi_author"><strong>Prescribing Clinician</strong><span>Telehealth Provider</span></div>
-              </div>
-              <div class="cs_leaf_testi_card">
-                <div class="cs_leaf_testi_stars">★★★★★</div>
-                <p>"You can tell cultivation and manufacturing sit under one roof. The quality is genuinely consistent, order after order."</p>
-                <div class="cs_leaf_testi_author"><strong>Pharmacy Owner</strong><span>Independent Pharmacy Group</span></div>
-              </div>
-              <div class="cs_leaf_testi_card">
-                <div class="cs_leaf_testi_stars">★★★★★</div>
-                <p>"Working with an Australian-grown, GMP-certified supplier has simplified our entire procurement process."</p>
-                <div class="cs_leaf_testi_author"><strong>Industry Partner</strong><span>Healthcare Procurement Lead</span></div>
-              </div>
-              <div class="cs_leaf_testi_card">
-                <div class="cs_leaf_testi_stars">★★★★★</div>
-                <p>"Their hand-packing process and quality systems are the most disciplined I've seen from an integrated grower."</p>
-                <div class="cs_leaf_testi_author"><strong>Operations Lead</strong><span>Contract Manufacturing Partner</span></div>
+          <div class="cs_testi_card" data-index="1">
+            <span class="cs_testi_quote_mark">&rdquo;</span>
+            <div class="cs_testi_card_head">
+              <img src="/assets/Leafline/10007.jpg" class="cs_testi_avatar" alt="">
+              <div>
+                <p class="cs_testi_name">Marcus Webb</p>
+                <p class="cs_testi_role">Distribution Partner</p>
               </div>
             </div>
-            <div class="cs_leaf_testi_dots" id="cs_leaf_testi_dots">
-              <button class="cs_leaf_testi_dot active" data-goto="0" aria-label="Testimonial 1"></button>
-              <button class="cs_leaf_testi_dot" data-goto="1" aria-label="Testimonial 2"></button>
-              <button class="cs_leaf_testi_dot" data-goto="2" aria-label="Testimonial 3"></button>
-              <button class="cs_leaf_testi_dot" data-goto="3" aria-label="Testimonial 4"></button>
-              <button class="cs_leaf_testi_dot" data-goto="4" aria-label="Testimonial 5"></button>
-              <button class="cs_leaf_testi_dot" data-goto="5" aria-label="Testimonial 6"></button>
+            <div class="cs_testi_stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="cs_testi_text">"Reliable supply and consistent quality every time. PharmaCrop's integrated operation makes forecasting and logistics genuinely straightforward."</p>
+          </div>
+          <div class="cs_testi_card" data-index="2">
+            <span class="cs_testi_quote_mark">&rdquo;</span>
+            <div class="cs_testi_card_head">
+              <img src="/assets/Leafline/10006.jpg" class="cs_testi_avatar" alt="">
+              <div>
+                <p class="cs_testi_name">Dr. Priya Nathan</p>
+                <p class="cs_testi_role">Prescribing Clinician</p>
+              </div>
             </div>
+            <div class="cs_testi_stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="cs_testi_text">"Full traceability from cultivar to finished product gives me real confidence when discussing options with patients."</p>
           </div>
         </div>
+        <div class="cs_testi_dots" id="cs_testi_dots">
+          <button class="cs_testi_dot active" data-goto="0" aria-label="Testimonial 1"></button>
+          <button class="cs_testi_dot" data-goto="1" aria-label="Testimonial 2"></button>
+          <button class="cs_testi_dot" data-goto="2" aria-label="Testimonial 3"></button>
+        </div>
+      </div>
+      <div class="cs_testi_right">
+        <div class="cs_testi_right_img active" data-index="0"><img src="/assets/img/pharmacists.webp" alt=""></div>
+        <div class="cs_testi_right_img" data-index="1"><img src="/assets/img/distributors.webp" alt=""></div>
+        <div class="cs_testi_right_img" data-index="2"><img src="/assets/img/prescribers.webp" alt=""></div>
       </div>
     </section>
-    <!-- End Leafline Testimonials -->
+    <!-- End Testimonial Section -->
 
     <!-- Start Leafline CTA -->
     <style>
@@ -544,12 +556,12 @@ export default function Page() {
 `,
       }}
     />
-    <Script id="cs_leaf_testi_slider_script" strategy="afterInteractive">
+    <Script id="cs_home_testi_slider_script" strategy="afterInteractive">
       {`
         (function () {
-          var cards = document.querySelectorAll('#cs_leaf_testi_cards .cs_leaf_testi_card');
-          var imgs = document.querySelectorAll('.cs_leaf_testi_img');
-          var dots = document.querySelectorAll('#cs_leaf_testi_dots .cs_leaf_testi_dot');
+          var cards = document.querySelectorAll('#cs_testi_cards .cs_testi_card');
+          var imgs = document.querySelectorAll('.cs_testi_right_img');
+          var dots = document.querySelectorAll('#cs_testi_dots .cs_testi_dot');
           if (!cards.length) return;
           var idx = 0;
           var timer;
