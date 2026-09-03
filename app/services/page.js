@@ -31,16 +31,16 @@ export default function Page() {
                 <nav class="cs_nav_list_wrap text-uppercase">
                   <ul class="cs_nav_list">
                     <li><a href="/about">ABOUT</a></li>
-                    <li><a href="/services">SERVICES</a></li>
-                    <li><a href="/projects">PROJECTS</a></li>
+                    <li><a href="/industry">INDUSTRY</a></li>
+                    <li><a href="/careers">CAREERS</a></li>
+                    <li><a href="/blog">BLOG</a></li>
+                    <li><a href="/contact">CONTACT</a></li>
                     <li class="menu-item-has-children">
-                      <a href="/contact">MORE</a>
+                      <a href="#">MORE</a>
                       <ul>
-                        <li><a href="/industry">INDUSTRY</a></li>
-                        <li><a href="/careers">CAREERS</a></li>
+                        <li><a href="/services">SERVICES</a></li>
+                        <li><a href="/projects">PROJECTS</a></li>
                         <li><a href="/gallery">GALLERY</a></li>
-                        <li><a href="/blog">BLOG</a></li>
-                        <li><a href="/contact">CONTACT</a></li>
                       </ul>
                     </li>
                   </ul>
