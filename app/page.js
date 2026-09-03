@@ -394,13 +394,13 @@ export default function Page() {
     </section>
     <!-- End Leafline Testimonials -->
     <!-- Start Homepage FAQ Section -->
-    <section>
+    <section class="cs_gray_bg">
       <div class="cs_height_100 cs_height_lg_70"></div>
       <div class="container">
         <div class="cs_section_heading cs_style_2 cs_color_1">
-          <h2 class="cs_section_title mb-0" style="font-size: 44px;">FREQUENTLY <br><span>ASKED QUESTIONS</span></h2>
+          <h2 class="cs_section_title cs_fs_80 mb-0">FREQUENTLY <br><span>ASKED</span> QUESTIONS</h2>
           <div class="cs_section_right">
-            <span class="cs_fs_20 cs_bold cs_heading_color">[ F.A.Q ]</span>
+            <h3 class="cs_brackets_title cs_normal cs_fs_16 mb-0">F.A.Q</h3>
           </div>
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
