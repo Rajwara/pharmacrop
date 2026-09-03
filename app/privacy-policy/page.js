@@ -35,6 +35,7 @@ export default function Page() {
                     <li><a href="/careers">CAREERS</a></li>
                     <li><a href="/blog">BLOG</a></li>
                     <li><a href="/contact">CONTACT</a></li>
+                    <li><a href="#">SEE OUR DOCTORS</a></li>
                     <li class="menu-item-has-children">
                       <a href="#">MORE</a>
                       <ul>
@@ -61,6 +62,9 @@ export default function Page() {
                     </defs>
                   </svg>
                 </button>
+                <a href="#" class="cs_header_icon_btn cs_center" aria-label="Login">
+                  <i class="fa-solid fa-user"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -204,6 +208,7 @@ export default function Page() {
                 <li><a href="/industry">INDUSTRY</a></li>
                 <li><a href="/careers">CAREERS</a></li>
                 <li><a href="/contact">CONTACT</a></li>
+                <li><a href="#">SEE OUR DOCTORS</a></li>
               </ul>
             </div>
           </div>
