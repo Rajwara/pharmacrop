@@ -56,9 +56,6 @@ export default function Page() {
                     </defs>
                   </svg>                    
                 </button>
-                <a href="#" class="cs_header_icon_btn cs_center" aria-label="Login">
-                  <i class="fa-solid fa-user"></i>
-                </a>
               </div>
             </div>
           </div>
@@ -288,8 +285,8 @@ export default function Page() {
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
                 <a href="/industry" class="cs_card_tag">Industry</a>
-                <a href="#" class="cs_card_tag">Australian-Grown</a>
-                <a href="#" class="cs_card_tag">GMP-Certified</a>
+                <span class="cs_card_tag">Australian-Grown</span>
+                <span class="cs_card_tag">GMP-Certified</span>
               </div>
             </div>
             <div class="cs_card_bottom">
@@ -307,8 +304,8 @@ export default function Page() {
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
                 <a href="/industry" class="cs_card_tag">Industry</a>
-                <a href="#" class="cs_card_tag">Australian-Grown</a>
-                <a href="#" class="cs_card_tag">GMP-Certified</a>
+                <span class="cs_card_tag">Australian-Grown</span>
+                <span class="cs_card_tag">GMP-Certified</span>
               </div>
             </div>
             <div class="cs_card_bottom">
@@ -326,8 +323,8 @@ export default function Page() {
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
                 <a href="/industry" class="cs_card_tag">Industry</a>
-                <a href="#" class="cs_card_tag">Australian-Grown</a>
-                <a href="#" class="cs_card_tag">GMP-Certified</a>
+                <span class="cs_card_tag">Australian-Grown</span>
+                <span class="cs_card_tag">GMP-Certified</span>
               </div>
             </div>
             <div class="cs_card_bottom">
@@ -714,7 +711,7 @@ export default function Page() {
                 <li><a href="/industry">INDUSTRY</a></li>
                 <li><a href="/services">SERVICES</a></li>
                 <li><a href="/contact">CONTACT</a></li>
-                <li><a href="#">SEE OUR DOCTORS</a></li>
+                <li><a href="https://aleafiate.com.au/" target="_blank" rel="noopener noreferrer">SEE OUR DOCTORS</a></li>
               </ul>
             </div>
           </div>
