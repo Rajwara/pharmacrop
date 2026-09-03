@@ -95,6 +95,31 @@ export default function Page() {
       </form>
     </div>
     <!-- End Header Section -->
+    <style>
+      .cs_btn.cs_style_1, .cs_btn.cs_style_2, .cs_contact_form_btn {
+        border-radius: 20px !important;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease !important;
+      }
+      .cs_btn.cs_style_1:hover, .cs_contact_form_btn:hover {
+        transform: translateY(-4px) !important;
+        box-shadow: 0 12px 24px rgba(2, 66, 66, 0.25);
+      }
+      .cs_btn.cs_style_2 {
+        border-radius: 20px !important;
+        border: 2px solid currentColor;
+        padding: 10px 40px;
+        background: transparent;
+      }
+      .cs_btn.cs_style_2::after {
+        display: none;
+      }
+      .cs_btn.cs_style_2:hover {
+        transform: translateY(-4px) !important;
+        background: #fff;
+        color: #024242 !important;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      }
+    </style>
     <!-- Start Hero Section -->
     <section class="cs_hero cs_style_1 cs_heading_bg cs_white_color">
       <div class="container">
@@ -665,20 +690,8 @@ export default function Page() {
               <h4 class="cs_footer_widget_title">LINKS</h4>
               <ul class="cs_footer_widget_menu cs_mp_0">
                 <li><a href="/about">ABOUT US</a></li>
-                <li><a href="/gallery">GALLERY</a></li>
                 <li><a href="/projects">PROJECTS</a></li>
                 <li><a href="/blog">BLOG</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="cs_footer_col">
-            <div class="cs_footer_widget">
-              <h4 class="cs_footer_widget_title">SERVICES</h4>
-              <ul class="cs_footer_widget_menu cs_mp_0">
-                <li><a href="/service-details">HOME GARDEN</a></li>
-                <li><a href="/service-details">PLANT SELECTION</a></li>
-                <li><a href="/service-details">HARDSCAPING</a></li>
-                <li><a href="/service-details">PUBLIC GARDEN</a></li>
               </ul>
             </div>
           </div>

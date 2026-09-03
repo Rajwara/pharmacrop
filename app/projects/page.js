@@ -496,20 +496,8 @@ export default function Page() {
               <h4 class="cs_footer_widget_title">LINKS</h4>
               <ul class="cs_footer_widget_menu cs_mp_0">
                 <li><a href="/about">ABOUT US</a></li>
-                <li><a href="/gallery">GALLERY</a></li>
                 <li><a href="/projects">PROJECTS</a></li>
                 <li><a href="/blog">BLOG</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="cs_footer_col">
-            <div class="cs_footer_widget">
-              <h4 class="cs_footer_widget_title">SERVICES</h4>
-              <ul class="cs_footer_widget_menu cs_mp_0">
-                <li><a href="/service-details">HOME GARDEN</a></li>
-                <li><a href="/service-details">PLANT SELECTION</a></li>
-                <li><a href="/service-details">HARDSCAPING</a></li>
-                <li><a href="/service-details">PUBLIC GARDEN</a></li>
               </ul>
             </div>
           </div>
