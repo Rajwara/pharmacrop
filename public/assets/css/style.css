@@ -3819,7 +3819,7 @@ hr {
     height: inherit;
   }
   .cs_nav .cs_nav_list > li {
-    margin-right: 48px;
+    margin-right: 24px;
     height: inherit;
   }
   .cs_nav .cs_nav_list > li:last-child {
@@ -4791,6 +4791,7 @@ hr {
 
 .cs_hero.cs_style_1 {
   position: relative;
+  overflow: hidden;
 }
 .cs_hero.cs_style_1 .cs_hero_in {
   min-height: 780px;
@@ -4921,6 +4922,34 @@ hr {
 .cs_hero.cs_style_1 .cs_hero_bg .slick-track,
 .cs_hero.cs_style_1 .cs_hero_bg .slick-track * {
   height: 100%;
+}
+.cs_hero.cs_style_1 .cs_hero_bg .cs_hero_bg_in {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.cs_hero.cs_style_1 .cs_hero_bg .slick-slide.slick-active .cs_hero_bg_in {
+  -webkit-animation: cs_hero_ken_burns 8s ease-out forwards;
+          animation: cs_hero_ken_burns 8s ease-out forwards;
+}
+@-webkit-keyframes cs_hero_ken_burns {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+}
+@keyframes cs_hero_ken_burns {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
 }
 
 /*--------------------------------------------------------------
