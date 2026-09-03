@@ -207,6 +207,69 @@ export default function Page() {
       </div>
     </section>
     <!-- End CTA Split Section -->
+    <!-- Start Sticky Services Section -->
+    <style>
+      .cs_sticky_services { padding: 100px 0; background: #f7f7f5; }
+      .cs_sticky_services_grid { display: flex; gap: 48px; align-items: flex-start; }
+      .cs_sticky_services_left { flex: 0 0 400px; position: sticky; top: 140px; }
+      .cs_sticky_eyebrow { display: inline-block; border: 1px solid #d1d5c9; border-radius: 30px; padding: 6px 16px; font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #4b5142; margin-bottom: 24px; }
+      .cs_sticky_title { font-size: 44px; font-weight: 800; color: #1f2419; line-height: 1.2; margin: 0 0 24px; }
+      .cs_sticky_text { color: #6b7280; font-size: 16px; line-height: 1.7; margin: 0 0 32px; max-width: 380px; }
+      .cs_sticky_btn { display: inline-block; background: #024242; color: #fff; font-weight: 700; font-size: 13px; letter-spacing: 0.5px; padding: 16px 28px; border-radius: 6px; text-decoration: none; }
+      .cs_sticky_services_right { flex: 1; display: flex; flex-direction: column; gap: 32px; }
+      .cs_sticky_card { position: relative; border-radius: 20px; overflow: hidden; min-height: 560px; display: flex; align-items: flex-end; }
+      .cs_sticky_card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+      .cs_sticky_card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(2,34,34,0) 45%, rgba(2,20,20,0.85) 100%); z-index: 1; }
+      .cs_sticky_card_icon { position: absolute; top: 28px; left: 28px; z-index: 2; width: 44px; height: 44px; border: 1px solid rgba(255,255,255,0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 18px; }
+      .cs_sticky_card_body { position: relative; z-index: 2; padding: 32px; }
+      .cs_sticky_card_title { color: #fff; font-size: 30px; font-weight: 700; margin: 0 0 12px; }
+      .cs_sticky_card_link { color: #78dca6; font-weight: 700; font-size: 13px; letter-spacing: 0.5px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+      .cs_sticky_card_link span { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; background: #78dca6; color: #024242; border-radius: 5px; }
+      @media (max-width: 991px) {
+        .cs_sticky_services_grid { flex-direction: column; }
+        .cs_sticky_services_left { position: static; flex: none; }
+        .cs_sticky_card { min-height: 380px; }
+      }
+    </style>
+    <section class="cs_sticky_services">
+      <div class="container">
+        <div class="cs_sticky_services_grid">
+          <div class="cs_sticky_services_left">
+            <span class="cs_sticky_eyebrow">SERVICES &amp; SOLUTIONS</span>
+            <h2 class="cs_sticky_title">Built for Every Stage of Production</h2>
+            <p class="cs_sticky_text">From genetics and cultivation through to GMP-certified manufacturing and packaging, discover how PharmaCrop supports quality and consistency at every stage.</p>
+            <a href="/services" class="cs_sticky_btn">VIEW ALL SERVICES</a>
+          </div>
+          <div class="cs_sticky_services_right">
+            <div class="cs_sticky_card">
+              <img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt="Cultivation and Genetics">
+              <span class="cs_sticky_card_icon"><i class="fa-solid fa-seedling"></i></span>
+              <div class="cs_sticky_card_body">
+                <h3 class="cs_sticky_card_title">Cultivation &amp; Genetics</h3>
+                <a href="/industry" class="cs_sticky_card_link">READ MORE <span>&rarr;</span></a>
+              </div>
+            </div>
+            <div class="cs_sticky_card">
+              <img src="/assets/img/pharmacrop-banner2.webp" alt="GMP Manufacturing">
+              <span class="cs_sticky_card_icon"><i class="fa-solid fa-industry"></i></span>
+              <div class="cs_sticky_card_body">
+                <h3 class="cs_sticky_card_title">GMP-Certified Manufacturing</h3>
+                <a href="/industry" class="cs_sticky_card_link">READ MORE <span>&rarr;</span></a>
+              </div>
+            </div>
+            <div class="cs_sticky_card">
+              <img src="/assets/img/pharmacrop-banner4.webp" alt="Quality and Packaging">
+              <span class="cs_sticky_card_icon"><i class="fa-solid fa-boxes-stacked"></i></span>
+              <div class="cs_sticky_card_body">
+                <h3 class="cs_sticky_card_title">Quality &amp; Packaging</h3>
+                <a href="/industry" class="cs_sticky_card_link">READ MORE <span>&rarr;</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Sticky Services Section -->
     <!-- Start Footer Section -->
     <footer class="cs_footer cs_style_1 cs_color_1">
       <div class="container">
