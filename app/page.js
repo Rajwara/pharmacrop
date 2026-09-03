@@ -42,6 +42,7 @@ export default function Page() {
                         <li><a href="/services">SERVICES</a></li>
                         <li><a href="/projects">PROJECTS</a></li>
                         <li><a href="/gallery">GALLERY</a></li>
+                        <li><a href="/test">TEST</a></li>
                       </ul>
                     </li>
                   </ul>
