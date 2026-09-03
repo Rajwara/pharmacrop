@@ -136,66 +136,66 @@ export default function Page() {
     <!-- End Rotating Hero Banner -->
     <!-- Start Feature Section -->
     <style>
-      .cs_sticky_services { padding: 100px 0; background: #f7f7f5; }
-      .cs_sticky_services_grid { display: flex; gap: 48px; align-items: flex-start; }
-      .cs_sticky_services_left { flex: 0 0 400px; position: sticky; top: 140px; }
-      .cs_sticky_eyebrow { display: inline-block; border: 1px solid #d1d5c9; border-radius: 30px; padding: 6px 16px; font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #4b5142; margin-bottom: 24px; text-transform: uppercase; }
-      .cs_sticky_title { font-size: 44px; font-weight: 800; color: #024242; line-height: 1.2; margin: 0 0 24px; }
-      .cs_sticky_text { color: #6b7280; font-size: 16px; line-height: 1.7; margin: 0 0 32px; max-width: 380px; }
-      .cs_sticky_btn { display: inline-block; background: #024242; color: #fff; font-weight: 700; font-size: 13px; letter-spacing: 0.5px; padding: 16px 28px; border-radius: 6px; text-decoration: none; }
-      .cs_sticky_services_right { flex: 1; display: flex; flex-direction: column; gap: 32px; }
-      .cs_sticky_card { position: relative; border-radius: 20px; overflow: hidden; min-height: 560px; display: flex; align-items: flex-end; }
-      .cs_sticky_card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
-      .cs_sticky_card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(2,34,34,0) 45%, rgba(2,20,20,0.85) 100%); z-index: 1; }
-      .cs_sticky_card_icon { position: absolute; top: 28px; left: 28px; z-index: 2; width: 44px; height: 44px; border: 1px solid rgba(255,255,255,0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 18px; }
-      .cs_sticky_card_body { position: relative; z-index: 2; padding: 32px; }
-      .cs_sticky_card_title { color: #fff; font-size: 30px; font-weight: 700; margin: 0 0 12px; }
-      .cs_sticky_card_text { color: rgba(255,255,255,0.8); font-size: 15px; line-height: 1.6; margin: 0 0 16px; max-width: 480px; }
-      .cs_sticky_card_link { color: #78dca6; font-weight: 700; font-size: 13px; letter-spacing: 0.5px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
-      .cs_sticky_card_link span { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; background: #78dca6; color: #024242; border-radius: 5px; }
+      .cs_offer_section { padding: 100px 0; background: #f7f7f5; }
+      .cs_offer_eyebrow { color: #78dca6; font-weight: 600; font-size: 14px; letter-spacing: 0.5px; display: block; margin-bottom: 12px; text-transform: uppercase; }
+      .cs_offer_heading_row { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; flex-wrap: wrap; margin-bottom: 48px; }
+      .cs_offer_title { font-size: 44px; font-weight: 800; color: #024242; line-height: 1.2; margin: 0; max-width: 620px; }
+      .cs_offer_desc { color: #6b7280; font-size: 16px; line-height: 1.7; max-width: 380px; margin: 0; }
+      .cs_offer_grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 300px); gap: 24px; }
+      .cs_offer_img { border-radius: 16px; overflow: hidden; }
+      .cs_offer_img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .cs_offer_card { background: #e5f3ea; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; }
+      .cs_offer_card_num { color: #78dca6; font-size: 20px; font-weight: 700; margin-bottom: 12px; display: block; }
+      .cs_offer_card_title { font-size: 24px; font-weight: 700; color: #024242; margin: 0 0 16px; line-height: 1.3; }
+      .cs_offer_card_text { color: #4b5563; font-size: 15px; line-height: 1.6; margin: 0 0 20px; }
+      .cs_offer_card_link { color: #024242; font-weight: 600; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
       @media (max-width: 991px) {
-        .cs_sticky_services_grid { flex-direction: column; }
-        .cs_sticky_services_left { position: static; flex: none; }
-        .cs_sticky_card { min-height: 380px; }
+        .cs_offer_grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+        .cs_offer_title { font-size: 32px; }
       }
     </style>
-    <section class="cs_sticky_services">
+    <section class="cs_offer_section">
       <div class="container">
-        <div class="cs_sticky_services_grid">
-          <div class="cs_sticky_services_left">
-            <span class="cs_sticky_eyebrow">What We Do</span>
-            <h2 class="cs_sticky_title wow fadeInDown">FROM GENETICS TO GMP MANUFACTURING</h2>
-            <p class="cs_sticky_text">Where international cultivation expertise meets Australian, GMP-certified manufacturing discipline &mdash; from cultivar selection through to finished product.</p>
-            <a href="/services" class="cs_sticky_btn">VIEW ALL SERVICES</a>
+        <div class="cs_offer_heading_row">
+          <div>
+            <span class="cs_offer_eyebrow">What We Do</span>
+            <h2 class="cs_offer_title wow fadeInDown">FROM GENETICS TO GMP MANUFACTURING</h2>
           </div>
-          <div class="cs_sticky_services_right">
-            <div class="cs_sticky_card">
-              <img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt="Noosa Hinterland">
-              <span class="cs_sticky_card_icon"><i class="fa-solid fa-house"></i></span>
-              <div class="cs_sticky_card_body">
-                <h3 class="cs_sticky_card_title">Noosa Hinterland</h3>
-                <p class="cs_sticky_card_text">Where PharmaCrop calls home. The Noosa Hinterland provides the home for our cultivation and manufacturing operations, bringing local production together within a single region.</p>
-                <a href="/about" class="cs_sticky_card_link">READ MORE <span>&rarr;</span></a>
-              </div>
+          <p class="cs_offer_desc">Where international cultivation expertise meets Australian, GMP-certified manufacturing discipline &mdash; from cultivar selection through to finished product.</p>
+        </div>
+        <div class="cs_offer_grid">
+          <div class="cs_offer_img wow fadeInLeft">
+            <img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt="Genetics to GMP manufacturing">
+          </div>
+          <div class="cs_offer_card">
+            <div>
+              <span class="cs_offer_card_num">01</span>
+              <h3 class="cs_offer_card_title">Noosa Hinterland</h3>
+              <p class="cs_offer_card_text">Where PharmaCrop calls home. The Noosa Hinterland provides the home for our cultivation and manufacturing operations, bringing local production together within a single region.</p>
             </div>
-            <div class="cs_sticky_card">
-              <img src="/assets/img/pharmacrop-banner3.webp" alt="Integrated Operations">
-              <span class="cs_sticky_card_icon"><i class="fa-solid fa-link"></i></span>
-              <div class="cs_sticky_card_body">
-                <h3 class="cs_sticky_card_title">Integrated Operations</h3>
-                <p class="cs_sticky_card_text">By bringing cultivation, processing and GMP-certified manufacturing together, PharmaCrop maintains oversight from cultivar selection through to finished product.</p>
-                <a href="/industry" class="cs_sticky_card_link">READ MORE <span>&rarr;</span></a>
-              </div>
+            <a href="/about" class="cs_offer_card_link">Learn More &rarr;</a>
+          </div>
+          <div class="cs_offer_img">
+            <img src="/assets/img/pharmacrop-banner3.webp" alt="PharmaCrop cultivation facility">
+          </div>
+          <div class="cs_offer_card">
+            <div>
+              <span class="cs_offer_card_num">02</span>
+              <h3 class="cs_offer_card_title">Integrated Operations</h3>
+              <p class="cs_offer_card_text">By bringing cultivation, processing and GMP-certified manufacturing together, PharmaCrop maintains oversight from cultivar selection through to finished product.</p>
             </div>
-            <div class="cs_sticky_card">
-              <img src="/assets/img/pharmacrop-banner4.webp" alt="Global Expertise">
-              <span class="cs_sticky_card_icon"><i class="fa-solid fa-earth-americas"></i></span>
-              <div class="cs_sticky_card_body">
-                <h3 class="cs_sticky_card_title">Global Expertise</h3>
-                <p class="cs_sticky_card_text">Drawing on cultivation expertise from California, Canada and South Africa, our team applies international insights within the unique conditions of the Noosa Hinterland.</p>
-                <a href="/about" class="cs_sticky_card_link">READ MORE <span>&rarr;</span></a>
-              </div>
+            <a href="/industry" class="cs_offer_card_link">Learn More &rarr;</a>
+          </div>
+          <div class="cs_offer_img wow fadeInRight">
+            <img src="/assets/img/pharmacrop-banner4.webp" alt="PharmaCrop GMP-certified manufacturing">
+          </div>
+          <div class="cs_offer_card">
+            <div>
+              <span class="cs_offer_card_num">03</span>
+              <h3 class="cs_offer_card_title">Global Expertise</h3>
+              <p class="cs_offer_card_text">Drawing on cultivation expertise from California, Canada and South Africa, our team applies international insights within the unique conditions of the Noosa Hinterland.</p>
             </div>
+            <a href="/about" class="cs_offer_card_link">Learn More &rarr;</a>
           </div>
         </div>
       </div>
