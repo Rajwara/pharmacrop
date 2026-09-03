@@ -440,7 +440,7 @@ export default function Page() {
         <div class="cs_section_heading cs_style_2 cs_color_1">
           <h2 class="cs_section_title cs_fs_80 mb-0">FREQUENTLY <br><span>ASKED</span> QUESTIONS</h2>
           <div class="cs_section_right">
-            <h3 class="cs_brackets_title cs_normal cs_fs_16 mb-0">F.A.Q</h3>
+            <span class="cs_sticky_eyebrow">F.A.Q</span>
           </div>
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
@@ -516,7 +516,10 @@ export default function Page() {
       <div class="cs_height_100 cs_height_lg_70"></div>
       <div class="container">
         <div class="cs_section_heading cs_style_2 cs_color_1">
-          <h2 class="cs_section_title mb-0 wow fadeInDown" style="font-size: 44px;">FROM THE <br>PHARMACROP <span>JOURNAL</span></h2>
+          <div>
+            <span class="cs_sticky_eyebrow">BLOGS</span>
+            <h2 class="cs_section_title mb-0 wow fadeInDown" style="font-size: 44px;">FROM THE <br>PHARMACROP <span>JOURNAL</span></h2>
+          </div>
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
         <div class="cs_full_width_slider_section">
@@ -644,7 +647,7 @@ export default function Page() {
                 <option value="Distributor">Distributor</option>
                 <option value="Other">Other</option>
               </select>
-              <button type="submit" class="cs_contact_form_btn">Get a Quote</button>
+              <button type="submit" class="cs_contact_form_btn">Let's Connect</button>
             </form>
           </div>
         </div>
@@ -652,19 +655,30 @@ export default function Page() {
     </section>
     <!-- End CTA Section -->
     <!-- Start Footer Section -->
+    <style>
+      .cs_footer_brand { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+      .cs_footer_tagline { margin: 0; }
+      .cs_footer_social_item { display: flex; align-items: center; gap: 10px; }
+      .cs_footer_social_label { text-transform: uppercase; }
+      .cs_footer_social_icon { width: 30px; height: 30px; border-radius: 50%; background: rgba(2, 66, 66, 0.08); color: #024242; display: inline-flex; align-items: center; justify-content: center; transition: background-color 0.3s ease, color 0.3s ease; }
+      .cs_footer_social_icon:hover { background: #024242; color: #fff; }
+    </style>
     <footer class="cs_footer cs_style_1">
       <div class="container">
         <div class="cs_footer_row">
           <div class="cs_footer_col">
             <div class="cs_footer_widget">
-              <div class="cs_text_widget">
+              <div class="cs_footer_brand">
                 <img src="/assets/img/logo-dark.webp" alt="Logo" class="wow zoomIn cs_logo_img">
-                <p>Stay updated with our latest <br>
+                <p class="cs_footer_tagline">Stay updated with our latest <br>
                   news and product updates.</p>
                 <ul class="cs_footer_widget_menu cs_mp_0 cs_footer_contact_list">
                   <li><a href="tel:1300053533">Phone: 1300 053 533</a></li>
                   <li><a href="mailto:enquiries@pharmacrop.com.au">Email: enquiries@pharmacrop.com.au</a></li>
-                  <li><a href="https://www.linkedin.com/company/pharmacrop" target="_blank" rel="noopener">LinkedIn: @pharmacrop</a></li>
+                  <li class="cs_footer_social_item">
+                    <span class="cs_footer_social_label">Social:</span>
+                    <a href="https://www.linkedin.com/company/pharmacrop" target="_blank" rel="noopener" class="cs_footer_social_icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -674,7 +688,7 @@ export default function Page() {
                 <button type="submit" class="cs_newsletter_btn cs_arrow_btn cs_white_bg cs_heading_color">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
-                  </svg>                    
+                  </svg>
                 </button>
               </form>
             </div>
@@ -685,9 +699,15 @@ export default function Page() {
               <ul class="cs_footer_widget_menu cs_mp_0">
                 <li><a href="/faq">FAQ</a></li>
                 <li><a href="/industry">INDUSTRY</a></li>
-                <li><a href="/careers">CAREERS</a></li>
+                <li><a href="/services">SERVICES</a></li>
                 <li><a href="/contact">CONTACT</a></li>
                 <li><a href="#">SEE OUR DOCTORS</a></li>
+                <li><a href="tel:1300053533">Phone: 1300 053 533</a></li>
+                <li><a href="mailto:enquiries@pharmacrop.com.au">Email: enquiries@pharmacrop.com.au</a></li>
+                <li class="cs_footer_social_item">
+                  <span class="cs_footer_social_label">Social:</span>
+                  <a href="https://www.linkedin.com/company/pharmacrop" target="_blank" rel="noopener" class="cs_footer_social_icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </li>
               </ul>
             </div>
           </div>
