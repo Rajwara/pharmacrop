@@ -663,8 +663,10 @@ export default function Page() {
       .cs_footer_social_label { text-transform: uppercase; }
       .cs_footer_social_icon { width: 30px; height: 30px; border-radius: 50%; background: rgba(2, 66, 66, 0.08); color: #024242; display: inline-flex; align-items: center; justify-content: center; transition: background-color 0.3s ease, color 0.3s ease; }
       .cs_footer_social_icon:hover { background: #024242; color: #fff; }
-      .cs_footer_row { display: grid !important; grid-template-columns: repeat(4, 1fr) !important; gap: 40px !important; }
+      .cs_footer_row { display: grid !important; grid-template-columns: 1.5fr 1fr 1fr 1.3fr !important; gap: 40px !important; }
       .cs_footer_row .cs_footer_col { max-width: none !important; flex: none !important; width: 100% !important; padding-right: 32px !important; border-right: 2px solid #024242; }
+      .cs_footer_brand .cs_newsletter_input { padding: 10px 48px 10px 20px !important; font-size: 14px !important; }
+      .cs_footer_touch_list li a { font-size: 14px; white-space: nowrap; }
       @media (max-width: 991px) {
         .cs_footer_row { grid-template-columns: repeat(2, 1fr) !important; }
       }
@@ -718,7 +720,7 @@ export default function Page() {
           <div class="cs_footer_col">
             <div class="cs_footer_widget">
               <h4 class="cs_footer_widget_title">GET IN TOUCH</h4>
-              <ul class="cs_footer_widget_menu cs_mp_0">
+              <ul class="cs_footer_widget_menu cs_mp_0 cs_footer_touch_list">
                 <li><a href="tel:1300053533">Phone: 1300 053 533</a></li>
                 <li><a href="mailto:enquiries@pharmacrop.com.au">Email: enquiries@pharmacrop.com.au</a></li>
                 <li class="cs_footer_social_item">
