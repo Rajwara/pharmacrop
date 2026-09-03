@@ -38,17 +38,6 @@ export default function Page() {
                     <li><a href="/careers">CAREERS</a></li>
                     <li><a href="/blog">BLOG</a></li>
                     <li><a href="/contact">CONTACT</a></li>
-                    <li class="menu-item-has-children">
-                      <a href="#">MORE</a>
-                      <ul>
-                        <li><a href="/services">SERVICES</a></li>
-                        <li><a href="/projects">PROJECTS</a></li>
-                        <li><a href="/gallery">GALLERY</a></li>
-                        <li><a href="/test">TEST</a></li>
-                        <li><a href="/leafline">LEAFLINE</a></li>
-                        <li><a href="/home-v2">HOME V2</a></li>
-                      </ul>
-                    </li>
                   </ul>
                 </nav>
               </div>
