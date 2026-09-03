@@ -125,6 +125,14 @@ export default function Page() {
         background: #78dca6 !important;
         color: #024242 !important;
       }
+      @media (max-width: 767px) {
+        .cs_hero.cs_style_1 .cs_hero_in { min-height: 560px !important; padding: 90px 0 !important; }
+        .cs_hero.cs_style_1 .cs_hero_btns { flex-wrap: nowrap; gap: 10px; }
+        .cs_hero.cs_style_1 .cs_hero_btns a { flex: 1 1 0; text-align: center; white-space: nowrap; font-size: 10px !important; padding: 14px 10px !important; }
+      }
+      @media (max-width: 480px) {
+        .cs_hero.cs_style_1 .cs_hero_in { min-height: 480px !important; padding: 70px 0 !important; }
+      }
     </style>
     <!-- Start Hero Section -->
     <section class="cs_hero cs_style_1 cs_heading_bg cs_white_color">
@@ -523,7 +531,7 @@ export default function Page() {
         <div class="cs_section_heading cs_style_2 cs_color_1">
           <div>
             <span class="cs_sticky_eyebrow">BLOGS</span>
-            <h2 class="cs_section_title mb-0 wow fadeInDown" style="font-size: 44px;">FROM THE <br>PHARMACROP <span>JOURNAL</span></h2>
+            <h2 class="cs_section_title cs_home_heading_sz mb-0 wow fadeInDown">FROM THE <br>PHARMACROP <span>JOURNAL</span></h2>
           </div>
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
