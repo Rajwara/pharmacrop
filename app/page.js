@@ -97,27 +97,33 @@ export default function Page() {
     <!-- End Header Section -->
     <style>
       .cs_btn.cs_style_1, .cs_btn.cs_style_2, .cs_contact_form_btn {
-        border-radius: 20px !important;
-        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease !important;
+        font-weight: 700 !important;
+        padding: 16px 32px !important;
+        border-radius: 8px !important;
+        text-decoration: none !important;
+        font-size: 13px !important;
+        letter-spacing: 0.5px !important;
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
       }
-      .cs_btn.cs_style_1:hover, .cs_contact_form_btn:hover {
-        transform: translateY(-4px) !important;
-        box-shadow: 0 12px 24px rgba(2, 66, 66, 0.25);
+      .cs_btn.cs_style_1:hover {
+        background: #024242 !important;
+        color: #fff !important;
       }
       .cs_btn.cs_style_2 {
-        border-radius: 20px !important;
         border: 2px solid currentColor;
-        padding: 10px 40px;
         background: transparent;
       }
       .cs_btn.cs_style_2::after {
         display: none;
       }
       .cs_btn.cs_style_2:hover {
-        transform: translateY(-4px) !important;
-        background: #fff;
+        background: #78dca6 !important;
+        border-color: #78dca6 !important;
         color: #024242 !important;
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      }
+      .cs_contact_form_btn:hover {
+        background: #78dca6 !important;
+        color: #024242 !important;
       }
     </style>
     <!-- Start Hero Section -->
