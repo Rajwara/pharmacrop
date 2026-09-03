@@ -657,6 +657,7 @@ export default function Page() {
     <!-- Start Footer Section -->
     <style>
       .cs_footer_brand { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+      .cs_footer_brand .cs_newsletter { width: 100%; }
       .cs_footer_tagline { margin: 0; }
       .cs_footer_social_item { display: flex; align-items: center; gap: 10px; }
       .cs_footer_social_label { text-transform: uppercase; }
@@ -672,25 +673,15 @@ export default function Page() {
                 <img src="/assets/img/logo-dark.webp" alt="Logo" class="wow zoomIn cs_logo_img">
                 <p class="cs_footer_tagline">Stay updated with our latest <br>
                   news and product updates.</p>
-                <ul class="cs_footer_widget_menu cs_mp_0 cs_footer_contact_list">
-                  <li><a href="tel:1300053533">Phone: 1300 053 533</a></li>
-                  <li><a href="mailto:enquiries@pharmacrop.com.au">Email: enquiries@pharmacrop.com.au</a></li>
-                  <li class="cs_footer_social_item">
-                    <span class="cs_footer_social_label">Social:</span>
-                    <a href="https://www.linkedin.com/company/pharmacrop" target="_blank" rel="noopener" class="cs_footer_social_icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                  </li>
-                </ul>
+                <form action="#" class="cs_newsletter cs_style_1">
+                  <input type="email" placeholder="Enter your email address ..." class="cs_newsletter_input">
+                  <button type="submit" class="cs_newsletter_btn cs_arrow_btn cs_white_bg cs_heading_color">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
+                    </svg>
+                  </button>
+                </form>
               </div>
-            </div>
-            <div class="cs_footer_widget">
-              <form action="#" class="cs_newsletter cs_style_1">
-                <input type="email" placeholder="Enter your email address ..." class="cs_newsletter_input">
-                <button type="submit" class="cs_newsletter_btn cs_arrow_btn cs_white_bg cs_heading_color">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
-                  </svg>
-                </button>
-              </form>
             </div>
           </div>
           <div class="cs_footer_col">
