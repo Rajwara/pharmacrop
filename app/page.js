@@ -25,7 +25,7 @@ export default function Page() {
         <div class="container">
           <div class="cs_main_header_in">
             <div class="cs_main_header_left">
-              <a class="cs_site_branding" href="/">
+              <a class="cs_site_branding">
                 <img src="/assets/img/logo-light.png" alt="Logo" class="cs_logo_img">
               </a>
             </div>
@@ -33,22 +33,11 @@ export default function Page() {
               <div class="cs_nav cs_heading_color">
                 <nav class="cs_nav_list_wrap text-uppercase">
                   <ul class="cs_nav_list">
-                    <li><a href="/about">ABOUT</a></li>
-                    <li><a href="/industry">INDUSTRY</a></li>
-                    <li><a href="/careers">CAREERS</a></li>
-                    <li><a href="/blog">BLOG</a></li>
-                    <li><a href="/contact">CONTACT</a></li>
-                    <li class="menu-item-has-children">
-                      <a href="#">MORE</a>
-                      <ul>
-                        <li><a href="/services">SERVICES</a></li>
-                        <li><a href="/projects">PROJECTS</a></li>
-                        <li><a href="/gallery">GALLERY</a></li>
-                        <li><a href="/test">TEST</a></li>
-                        <li><a href="/leafline">LEAFLINE</a></li>
-                        <li><a href="/home-v2">HOME V2</a></li>
-                      </ul>
-                    </li>
+                    <li><a>ABOUT</a></li>
+                    <li><a>INDUSTRY</a></li>
+                    <li><a>CAREERS</a></li>
+                    <li><a>BLOG</a></li>
+                    <li><a>CONTACT</a></li>
                   </ul>
                 </nav>
               </div>
@@ -67,7 +56,7 @@ export default function Page() {
                     </defs>
                   </svg>                    
                 </button>
-                <a href="#" class="cs_header_icon_btn cs_center" aria-label="Login">
+                <a class="cs_header_icon_btn cs_center" aria-label="Login">
                   <i class="fa-solid fa-user"></i>
                 </a>
               </div>
@@ -134,8 +123,8 @@ export default function Page() {
             <h1 class="cs_hero_title cs_fs_80 cs_normal cs_mb_12 cs_white_color cs_gradient_color_1 wow fadeInUp">AUSTRALIAN-GROWN. <b>COMPLETE CONTROL.</b></h1>
             <p class="cs_hero_subtitle cs_fs_20 cs_mb_32 cs_opacity_7_5">Natural cultivation with pharmaceutical precision.</p>
             <div class="cs_hero_btns">
-              <a href="https://aleafiate.com.au/" target="_blank" rel="noopener noreferrer" class="cs_btn cs_style_1 cs_bold cs_heading_color cs_white_bg wow fadeInLeft">SEE OUR DOCTORS</a>
-              <a href="/about" class="cs_btn cs_style_2 cs_bold cs_white_color wow fadeInRight">ABOUT PHARMACROP</a>
+              <a target="_blank" rel="noopener noreferrer" class="cs_btn cs_style_1 cs_bold cs_heading_color cs_white_bg wow fadeInLeft">SEE OUR DOCTORS</a>
+              <a class="cs_btn cs_style_2 cs_bold cs_white_color wow fadeInRight">ABOUT PHARMACROP</a>
             </div>
           </div>
           <div class="cs_hero_funfact_wrap wow fadeInRight">
@@ -158,7 +147,7 @@ export default function Page() {
             </div>
             <h3 class="cs_hero_box_title cs_fs_24 cs_mb_12 cs_white_color">The PharmaCrop Story</h3>
             <p class="cs_hero_box_subtitle mb-0 cs_opacity_7_5">Built in the Noosa Hinterland in Queensland, combining international cultivation expertise with Australian production and GMP-certified manufacturing.</p>
-            <a href="/contact" class="cs_arrow_btn cs_hero_box_btn cs_center cs_heading_bg cs_white_color">
+            <a class="cs_arrow_btn cs_hero_box_btn cs_center cs_heading_bg cs_white_color">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
               </svg>                
@@ -243,7 +232,7 @@ export default function Page() {
               <div class="cs_sticky_card_body">
                 <h3 class="cs_sticky_card_title">Noosa Hinterland</h3>
                 <p class="cs_sticky_card_text">Where PharmaCrop calls home. The Noosa Hinterland provides the home for our cultivation and manufacturing operations, bringing local production together within a single region.</p>
-                <a href="/about" class="cs_sticky_card_link">READ MORE <span>&rarr;</span></a>
+                <a class="cs_sticky_card_link">READ MORE <span>&rarr;</span></a>
               </div>
             </div>
             <div class="cs_sticky_card">
@@ -252,7 +241,7 @@ export default function Page() {
               <div class="cs_sticky_card_body">
                 <h3 class="cs_sticky_card_title">Integrated Operations</h3>
                 <p class="cs_sticky_card_text">By bringing cultivation, processing and GMP-certified manufacturing together, PharmaCrop maintains oversight from cultivar selection through to finished product.</p>
-                <a href="/industry" class="cs_sticky_card_link">READ MORE <span>&rarr;</span></a>
+                <a class="cs_sticky_card_link">READ MORE <span>&rarr;</span></a>
               </div>
             </div>
             <div class="cs_sticky_card">
@@ -261,7 +250,7 @@ export default function Page() {
               <div class="cs_sticky_card_body">
                 <h3 class="cs_sticky_card_title">Global Expertise</h3>
                 <p class="cs_sticky_card_text">Drawing on cultivation expertise from California, Canada and South Africa, our team applies international insights within the unique conditions of the Noosa Hinterland.</p>
-                <a href="/about" class="cs_sticky_card_link">READ MORE <span>&rarr;</span></a>
+                <a class="cs_sticky_card_link">READ MORE <span>&rarr;</span></a>
               </div>
             </div>
           </div>
@@ -289,17 +278,17 @@ export default function Page() {
           <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed active wow fadeInLeft" data-src="/assets/img/pharmacists.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
-                <a href="/" class="cs_card_tag">Home</a>
-                <a href="/industry" class="cs_card_tag">Industry</a>
-                <a href="#" class="cs_card_tag">Australian-Grown</a>
-                <a href="#" class="cs_card_tag">GMP-Certified</a>
+                <a class="cs_card_tag">Home</a>
+                <a class="cs_card_tag">Industry</a>
+                <a class="cs_card_tag">Australian-Grown</a>
+                <a class="cs_card_tag">GMP-Certified</a>
               </div>
             </div>
             <div class="cs_card_bottom">
               <h2 class="cs_card_title cs_white_color cs_fs_32">PHARMACISTS</h2>
               <p class="cs_card_subtitle mb-0 cs_white_color">Reliable supply. Simplified access. A dedicated online ordering portal is currently in development to further support pharmacy partners.</p>
             </div>
-            <a href="/industry" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+            <a class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
               </svg>
@@ -308,17 +297,17 @@ export default function Page() {
           <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/prescribers.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
-                <a href="/" class="cs_card_tag">Home</a>
-                <a href="/industry" class="cs_card_tag">Industry</a>
-                <a href="#" class="cs_card_tag">Australian-Grown</a>
-                <a href="#" class="cs_card_tag">GMP-Certified</a>
+                <a class="cs_card_tag">Home</a>
+                <a class="cs_card_tag">Industry</a>
+                <a class="cs_card_tag">Australian-Grown</a>
+                <a class="cs_card_tag">GMP-Certified</a>
               </div>
             </div>
             <div class="cs_card_bottom">
               <h2 class="cs_card_title cs_white_color cs_fs_32">PRESCRIBERS</h2>
               <p class="cs_card_subtitle mb-0 cs_white_color">Where cultivation expertise meets pharmaceutical discipline, supporting quality, consistency and product integrity across every product we produce.</p>
             </div>
-            <a href="/industry" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+            <a class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
               </svg>
@@ -327,17 +316,17 @@ export default function Page() {
           <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed wow fadeInRight" data-src="/assets/img/distributors.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
-                <a href="/" class="cs_card_tag">Home</a>
-                <a href="/industry" class="cs_card_tag">Industry</a>
-                <a href="#" class="cs_card_tag">Australian-Grown</a>
-                <a href="#" class="cs_card_tag">GMP-Certified</a>
+                <a class="cs_card_tag">Home</a>
+                <a class="cs_card_tag">Industry</a>
+                <a class="cs_card_tag">Australian-Grown</a>
+                <a class="cs_card_tag">GMP-Certified</a>
               </div>
             </div>
             <div class="cs_card_bottom">
               <h2 class="cs_card_title cs_white_color cs_fs_32">DISTRIBUTORS</h2>
               <p class="cs_card_subtitle mb-0 cs_white_color">A reliable partner from production to supply, with consistent products, reliable supply and a growing Australian-grown portfolio.</p>
             </div>
-            <a href="/industry" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+            <a class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
               </svg>
@@ -542,7 +531,7 @@ export default function Page() {
                         </li>
                         <li>
                           <p class="mb-0">READ MORE</p>
-                          <h3 class="mb-0 cs_fs_20 cs_bold"><a href="/blog/noosa-hinterland-home-of-pharmacrop">THE NOOSA HINTERLAND: HOME OF PHARMACROP</a></h3>
+                          <h3 class="mb-0 cs_fs_20 cs_bold"><a>THE NOOSA HINTERLAND: HOME OF PHARMACROP</a></h3>
                         </li>
                       </ul>
                       <div class="cs_card_text">The Noosa Hinterland provides the home for our cultivation and manufacturing operations, bringing local production together within a single region.</div>
@@ -560,7 +549,7 @@ export default function Page() {
                         </li>
                         <li>
                           <p class="mb-0">READ MORE</p>
-                          <h3 class="mb-0 cs_fs_20 cs_bold"><a href="/blog/from-genetics-to-gmp-certified-manufacturing">FROM GENETICS TO GMP-CERTIFIED MANUFACTURING</a></h3>
+                          <h3 class="mb-0 cs_fs_20 cs_bold"><a>FROM GENETICS TO GMP-CERTIFIED MANUFACTURING</a></h3>
                         </li>
                       </ul>
                       <div class="cs_card_text">By bringing cultivation, processing and GMP-certified manufacturing together, PharmaCrop maintains oversight from cultivar selection through to finished product.</div>
@@ -578,7 +567,7 @@ export default function Page() {
                         </li>
                         <li>
                           <p class="mb-0">READ MORE</p>
-                          <h3 class="mb-0 cs_fs_20 cs_bold"><a href="/blog/global-cultivation-expertise-hinterland-honed">GLOBAL CULTIVATION EXPERTISE, HINTERLAND-HONED</a></h3>
+                          <h3 class="mb-0 cs_fs_20 cs_bold"><a>GLOBAL CULTIVATION EXPERTISE, HINTERLAND-HONED</a></h3>
                         </li>
                       </ul>
                       <div class="cs_card_text">Drawing on cultivation expertise from California, Canada and South Africa, our team applies international insights within the unique conditions of the Noosa Hinterland.</div>
@@ -630,8 +619,8 @@ export default function Page() {
           <div class="cs_contact_card_bg"><img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt=""></div>
           <div class="cs_contact_card_top">
             <p class="cs_contact_info_label">Get More Information:</p>
-            <a href="mailto:enquiries@pharmacrop.com.au" class="cs_contact_pill"><span class="cs_contact_pill_icon"><i class="fa-solid fa-envelope"></i></span>enquiries@pharmacrop.com.au</a>
-            <a href="tel:1300053533" class="cs_contact_pill"><span class="cs_contact_pill_icon"><i class="fa-solid fa-phone"></i></span>1300 053 533</a>
+            <a class="cs_contact_pill"><span class="cs_contact_pill_icon"><i class="fa-solid fa-envelope"></i></span>enquiries@pharmacrop.com.au</a>
+            <a class="cs_contact_pill"><span class="cs_contact_pill_icon"><i class="fa-solid fa-phone"></i></span>1300 053 533</a>
           </div>
           <div class="cs_contact_card_bottom">
             <div class="cs_contact_eyebrow_row">
@@ -713,11 +702,11 @@ export default function Page() {
             <div class="cs_footer_widget">
               <h4 class="cs_footer_widget_title">SUPPORT</h4>
               <ul class="cs_footer_widget_menu cs_mp_0">
-                <li><a href="/faq">FAQ</a></li>
-                <li><a href="/industry">INDUSTRY</a></li>
-                <li><a href="/services">SERVICES</a></li>
-                <li><a href="/contact">CONTACT</a></li>
-                <li><a href="#">SEE OUR DOCTORS</a></li>
+                <li><a>FAQ</a></li>
+                <li><a>INDUSTRY</a></li>
+                <li><a>SERVICES</a></li>
+                <li><a>CONTACT</a></li>
+                <li><a>SEE OUR DOCTORS</a></li>
               </ul>
             </div>
           </div>
@@ -725,9 +714,9 @@ export default function Page() {
             <div class="cs_footer_widget">
               <h4 class="cs_footer_widget_title">LINKS</h4>
               <ul class="cs_footer_widget_menu cs_mp_0">
-                <li><a href="/about">ABOUT US</a></li>
-                <li><a href="/projects">PROJECTS</a></li>
-                <li><a href="/blog">BLOG</a></li>
+                <li><a>ABOUT US</a></li>
+                <li><a>PROJECTS</a></li>
+                <li><a>BLOG</a></li>
               </ul>
             </div>
           </div>
@@ -735,11 +724,11 @@ export default function Page() {
             <div class="cs_footer_widget">
               <h4 class="cs_footer_widget_title">GET IN TOUCH</h4>
               <ul class="cs_footer_widget_menu cs_mp_0 cs_footer_touch_list">
-                <li><a href="tel:1300053533">Phone: 1300 053 533</a></li>
-                <li><a href="mailto:enquiries@pharmacrop.com.au">Email: enquiries@pharmacrop.com.au</a></li>
+                <li><a>Phone: 1300 053 533</a></li>
+                <li><a>Email: enquiries@pharmacrop.com.au</a></li>
                 <li class="cs_footer_social_item">
                   <span class="cs_footer_social_label">Social:</span>
-                  <a href="https://www.linkedin.com/company/pharmacrop" target="_blank" rel="noopener" class="cs_footer_social_icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a target="_blank" rel="noopener" class="cs_footer_social_icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                 </li>
               </ul>
             </div>
@@ -752,10 +741,10 @@ export default function Page() {
           <div class="cs_bottom_footer_right wow fadeInRight">
             <ul class="cs_footer_links cs_mp_0">
               <li>
-                <a href="/privacy-policy">PRIVACY POLICY</a>
+                <a>PRIVACY POLICY</a>
               </li>
               <li>
-                <a href="/terms-and-conditions">TERMS &amp; CONDITION</a>
+                <a>TERMS &amp; CONDITION</a>
               </li>
             </ul>
           </div>
