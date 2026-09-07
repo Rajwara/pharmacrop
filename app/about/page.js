@@ -300,6 +300,174 @@ export default function Page() {
       </div>
     </section>
     <!-- End Team Expertise Section -->
+    <!-- Start Facility Timeline Section -->
+    <style>
+      .cs_facility_desc { color: rgba(255,255,255,0.7); font-size: 16px; line-height: 1.7; max-width: 620px; margin: 20px 0 12px; }
+      .cs_facility_location { color: #78dca6; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin: 0; }
+      .cs_facility_highlight { font-size: 30px; font-weight: 800; color: #78dca6; margin: 0 0 12px; }
+    </style>
+    <section class="cs_heading_bg">
+      <div class="cs_height_100 cs_height_lg_70"></div>
+      <div class="container">
+        <div class="cs_section_heading cs_style_2">
+          <div>
+            <h3 class="cs_brackets_title cs_normal cs_fs_16 mb-0 cs_white_color">OUR FACILITY</h3>
+            <h2 class="cs_section_title cs_white_color cs_fs_80 mb-0">BUILT IN AUSTRALIA.<br>READY TO <span>SCALE.</span></h2>
+            <p class="cs_facility_desc">Located in the Noosa Hinterland, Queensland, PharmaCrop operates from a purpose-built site designed for integrated cultivation, pharmaceutical manufacturing and future expansion.</p>
+            <p class="cs_facility_location">Noosa Hinterland, Queensland &mdash; approximately 2 hours from Brisbane.</p>
+          </div>
+          <div class="cs_section_right">
+            <a href="/contact" class="cs_btn cs_style_1 cs_bold cs_heading_bg cs_white_color w-100 wow fadeInRight">CONTACT US &rarr;</a>
+          </div>
+        </div>
+        <div class="cs_height_64 cs_height_lg_50"></div>
+        <div class="cs_card_3_wrap">
+          <div class="cs_card cs_style_3">
+            <div class="cs_card_in">
+              <h3 class="cs_fs_24 cs_bold cs_white_color cs_mb_12">01  |  Established</h3>
+              <p class="cs_facility_highlight">2023</p>
+              <p class="mb-0 cs_white_color cs_opacity_5 cs_fs_20">PharmaCrop was established with an integrated seed-to-supply model built around Australian cultivation and pharmaceutical standards.</p>
+            </div>
+          </div>
+          <div class="cs_card cs_style_3">
+            <div class="cs_card_in">
+              <h3 class="cs_fs_24 cs_bold cs_white_color cs_mb_12">02  |  Purpose-Built Site</h3>
+              <p class="cs_facility_highlight">4 Acres</p>
+              <p class="mb-0 cs_white_color cs_opacity_5 cs_fs_20">A dedicated cultivation and manufacturing site located in the Noosa Hinterland, Queensland.</p>
+            </div>
+          </div>
+          <div class="cs_card cs_style_3">
+            <div class="cs_card_in">
+              <h3 class="cs_fs_24 cs_bold cs_white_color cs_mb_12">03  |  Cultivation Capacity</h3>
+              <p class="cs_facility_highlight">~2.7 Tonnes / Year</p>
+              <p class="mb-0 cs_white_color cs_opacity_5 cs_fs_20">Current annual cultivation capacity supporting consistent and scalable Australian-grown supply.</p>
+            </div>
+          </div>
+          <div class="cs_card cs_style_3">
+            <div class="cs_card_in">
+              <h3 class="cs_fs_24 cs_bold cs_white_color cs_mb_12">04  |  Expansion Ready</h3>
+              <p class="cs_facility_highlight">Built for Growth</p>
+              <p class="mb-0 cs_white_color cs_opacity_5 cs_fs_20">The site has capacity for additional infrastructure as PharmaCrop&rsquo;s manufacturing and cultivation operations expand.</p>
+            </div>
+          </div>
+          <div class="cs_section_logo"><img src="/assets/img/logo-light.png" alt="" class="cs_logo_img"></div>
+        </div>
+      </div>
+      <div class="cs_height_100 cs_height_lg_70"></div>
+    </section>
+    <!-- End Facility Timeline Section -->
+    <!-- Start Services Section -->
+    <style>
+      .cs_partners_heading { max-width: 720px; }
+      .cs_partners_heading .cs_sticky_text { max-width: 100%; margin-bottom: 0; }
+      .cs_two_tone span { background: linear-gradient(223deg, rgba(2, 66, 66, 0.8) 0.37%, #666666 49.66%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+      .cs_card_icon { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 8px; color: #fff; font-size: 18px; margin-bottom: 16px; }
+      .cs_card_1_group .cs_card_title.cs_fs_32 { font-size: 24px !important; }
+      @media (max-width: 1400px) {
+        .cs_card_1_group .cs_card_title.cs_fs_32 { font-size: 22px !important; }
+      }
+      @media (max-width: 1199px) {
+        .cs_card_1_group .cs_card_title.cs_fs_32 { font-size: 20px !important; }
+      }
+      .cs_card_1_group .cs_card.cs_style_1.active .cs_card_title { font-size: 56px !important; }
+      @media (max-width: 1400px) {
+        .cs_card_1_group .cs_card.cs_style_1.active .cs_card_title { font-size: 48px !important; }
+      }
+      @media (max-width: 1199px) {
+        .cs_card_1_group .cs_card.cs_style_1.active .cs_card_title { font-size: 42px !important; }
+      }
+      @media (max-width: 991px) {
+        .cs_card_1_group .cs_card.cs_style_1.active .cs_card_title { font-size: 22px !important; }
+      }
+    </style>
+    <section>
+      <div class="cs_height_100 cs_height_lg_70"></div>
+      <div class="container">
+        <div class="cs_partners_heading">
+          <span class="cs_sticky_eyebrow">COMMERCIAL PARTNERSHIPS</span>
+          <h2 class="cs_section_title cs_two_tone cs_home_heading_sz mb-0 wow fadeInDown">ONE PARTNER.<br>MULTIPLE <span>COMMERCIAL PATHWAYS.</span></h2>
+          <div class="cs_height_24"></div>
+          <p class="cs_sticky_text">One Australian GMP-certified manufacturing platform offering four flexible commercial partnership models to suit your needs.</p>
+        </div>
+        <div class="cs_height_64 cs_height_lg_50"></div>
+        <div class="cs_card_1_group">
+          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed active wow fadeInLeft" data-src="/assets/img/pharmacrop-banner4.webp">
+            <div class="cs_card_top">
+              <div class="cs_card_tags">
+                <a href="/" class="cs_card_tag">Home</a>
+                <a href="/commercial-partnerships" class="cs_card_tag">Commercial</a>
+              </div>
+            </div>
+            <div class="cs_card_bottom">
+              <span class="cs_card_icon"><i class="fa-solid fa-prescription-bottle"></i></span>
+              <h2 class="cs_card_title cs_white_color cs_fs_32">RETAIL</h2>
+              <p class="cs_card_subtitle mb-0 cs_white_color">PharmaCrop branded, ready-to-market medicines.</p>
+            </div>
+            <a href="/commercial-partnerships" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
+              </svg>
+            </a>
+          </div>
+          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/pharmacrop-banner2.webp">
+            <div class="cs_card_top">
+              <div class="cs_card_tags">
+                <a href="/" class="cs_card_tag">Home</a>
+                <a href="/commercial-partnerships" class="cs_card_tag">Commercial</a>
+              </div>
+            </div>
+            <div class="cs_card_bottom">
+              <span class="cs_card_icon"><i class="fa-solid fa-tag"></i></span>
+              <h2 class="cs_card_title cs_white_color cs_fs_32">GREEN LABEL</h2>
+              <p class="cs_card_subtitle mb-0 cs_white_color">PharmaCrop products, exclusively branded for your business.</p>
+            </div>
+            <a href="/commercial-partnerships" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
+              </svg>
+            </a>
+          </div>
+          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/health-professionals-card.webp">
+            <div class="cs_card_top">
+              <div class="cs_card_tags">
+                <a href="/" class="cs_card_tag">Home</a>
+                <a href="/commercial-partnerships" class="cs_card_tag">Commercial</a>
+              </div>
+            </div>
+            <div class="cs_card_bottom">
+              <span class="cs_card_icon"><i class="fa-solid fa-box"></i></span>
+              <h2 class="cs_card_title cs_white_color cs_fs_32">WHITE LABEL</h2>
+              <p class="cs_card_subtitle mb-0 cs_white_color">Your brand, supported by PharmaCrop cultivation and GMP packaging.</p>
+            </div>
+            <a href="/commercial-partnerships" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
+              </svg>
+            </a>
+          </div>
+          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed wow fadeInRight" data-src="/assets/img/pharma-banner.jpeg">
+            <div class="cs_card_top">
+              <div class="cs_card_tags">
+                <a href="/" class="cs_card_tag">Home</a>
+                <a href="/commercial-partnerships" class="cs_card_tag">Commercial</a>
+              </div>
+            </div>
+            <div class="cs_card_bottom">
+              <span class="cs_card_icon"><i class="fa-solid fa-cannabis"></i></span>
+              <h2 class="cs_card_title cs_white_color cs_fs_32">BULK FLOWER</h2>
+              <p class="cs_card_subtitle mb-0 cs_white_color">Australian-grown, GMP-certified flower supplied in bulk.</p>
+            </div>
+            <a href="/commercial-partnerships" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="cs_height_100 cs_height_lg_70"></div>
+    </section>
+    <!-- End Services Section -->
     <!-- Start CTA Section -->
     <style>
       .cs_contact_card_section { padding: 100px 0; overflow: hidden; }
