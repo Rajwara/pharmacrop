@@ -101,10 +101,8 @@ export default function Page() {
       .cs_pships_hero_content h1 span { color: #78dca6; }
       .cs_pships_hero_content p { color: rgba(255, 255, 255, 0.8); font-size: 18px; line-height: 1.7; margin: 0 auto 36px; max-width: 640px; }
       .cs_pships_hero_btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-      .cs_pships_btn_primary { background: #78dca6; color: #023232; padding: 15px 34px; border-radius: 6px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 14px; display: inline-block; transition: 0.3s; }
-      .cs_pships_btn_primary:hover { background: #d99f59; color: #fff; }
-      .cs_pships_btn_outline { border: 1px solid rgba(255, 255, 255, 0.4); color: #fff; padding: 15px 34px; border-radius: 6px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 14px; display: inline-block; transition: 0.3s; }
-      .cs_pships_btn_outline:hover { background: #fff; color: #023232; }
+      .cs_pships_solid_btn { display: inline-flex; align-items: center; justify-content: center; background: #024242; color: #fff; font-weight: 700; padding: 15px 32px; border-radius: 8px; font-size: 14px; letter-spacing: 0.3px; text-decoration: none; border: none; cursor: pointer; transition: background-color 0.3s ease, transform 0.2s ease; }
+      .cs_pships_solid_btn:hover { background: #78dca6; color: #024242; transform: translateY(-2px); }
       @media (max-width: 767px) {
         .cs_pships_hero { padding: 150px 0 100px; }
       }
@@ -116,8 +114,8 @@ export default function Page() {
         <h1 class="cs_fs_80 cs_bold wow fadeInUp" data-wow-delay="0.1s">ONE PARTNER.<br><span>MULTIPLE COMMERCIAL PATHWAYS.</span></h1>
         <p class="wow fadeInUp" data-wow-delay="0.2s">Partner with PharmaCrop through four flexible commercial models backed by Australian-grown supply, GMP-certified manufacturing and integrated pharmaceutical capability.</p>
         <div class="cs_pships_hero_btns wow fadeInUp" data-wow-delay="0.3s">
-          <a href="#partnership-models" class="cs_pships_btn_primary">EXPLORE PARTNERSHIP MODELS</a>
-          <a href="/contact" class="cs_pships_btn_outline">CONTACT OUR TEAM</a>
+          <a href="#partnership-models" class="cs_pships_solid_btn">EXPLORE PARTNERSHIP MODELS</a>
+          <a href="/contact" class="cs_pships_solid_btn">CONTACT OUR TEAM</a>
         </div>
       </div>
     </section>
@@ -243,7 +241,7 @@ export default function Page() {
       .cs_pmodel_img { flex: 0 0 46%; border-radius: 16px; overflow: hidden; }
       .cs_pmodel_img img { width: 100%; height: 440px; object-fit: cover; display: block; }
       .cs_pmodel_content { flex: 1; }
-      .cs_pmodel_label { color: #024242; font-size: 14px; font-weight: 700; letter-spacing: 1px; margin-bottom: 20px; }
+      .cs_pmodel_label { display: inline-flex; align-items: center; padding: 8px 22px; border: 1px solid rgba(2, 66, 66, 0.18); border-radius: 30px; background: #fff; color: #024242; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 22px; }
       .cs_pmodel_content h2 { color: #024242; font-size: 38px; font-weight: 800; line-height: 1.2; margin: 0 0 18px; }
       .cs_pmodel_content > p.cs_pmodel_desc { color: #555; font-size: 16px; line-height: 1.75; margin: 0 0 32px; }
       .cs_pmodel_points { list-style: none; margin: 0 0 36px; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px 24px; }
@@ -267,7 +265,7 @@ export default function Page() {
             <img src="/assets/img/pharmacrop-banner4.webp" alt="PharmaCrop established medicines">
           </div>
           <div class="cs_pmodel_content wow fadeInRight">
-            <span class="cs_brackets_title cs_normal cs_fs_16 cs_pmodel_label">01 / RETAIL</span>
+            <span class="cs_pmodel_label">01 / RETAIL</span>
             <h2>ESTABLISHED PHARMACROP MEDICINES</h2>
             <p class="cs_pmodel_desc">Access ready-to-market finished medicines from PharmaCrop&rsquo;s established Australian portfolio, supported by Australian-grown production and GMP-certified manufacturing.</p>
             <ul class="cs_pmodel_points">
@@ -276,7 +274,7 @@ export default function Page() {
               <li class="cs_pmodel_point"><i class="fa-solid fa-circle-check"></i><span><strong>GMP Certified</strong><span>Manufactured within PharmaCrop&rsquo;s GMP-certified platform.</span></span></li>
               <li class="cs_pmodel_point"><i class="fa-solid fa-circle-check"></i><span><strong>Ready to Market</strong><span>Supplied under the established PharmaCrop brand.</span></span></li>
             </ul>
-            <a href="/products" class="cs_btn cs_style_2 cs_bold cs_heading_color">VIEW PHARMACROP PRODUCTS &rarr;</a>
+            <a href="/products" class="cs_pships_solid_btn">VIEW PHARMACROP PRODUCTS &rarr;</a>
           </div>
         </div>
       </div>
@@ -289,7 +287,7 @@ export default function Page() {
             <img src="/assets/img/pharmacrop-banner2.webp" alt="Green Label branded partnership">
           </div>
           <div class="cs_pmodel_content wow fadeInLeft">
-            <span class="cs_brackets_title cs_normal cs_fs_16 cs_pmodel_label">02 / GREEN LABEL</span>
+            <span class="cs_pmodel_label">02 / GREEN LABEL</span>
             <h2>ESTABLISHED MEDICINES. YOUR EXCLUSIVE BRAND.</h2>
             <p class="cs_pmodel_desc">Build your own market presence using established PharmaCrop medicines, with your branding, product identity and agreed market exclusivity.</p>
             <ul class="cs_pmodel_points">
@@ -298,7 +296,7 @@ export default function Page() {
               <li class="cs_pmodel_point"><i class="fa-solid fa-circle-check"></i><span><strong>Market Exclusivity</strong><span>Exclusive rights within an agreed market.</span></span></li>
               <li class="cs_pmodel_point"><i class="fa-solid fa-circle-check"></i><span><strong>GMP Manufactured</strong><span>Pharmaceutical-grade manufacturing by PharmaCrop.</span></span></li>
             </ul>
-            <a href="/contact" class="cs_btn cs_style_2 cs_bold cs_heading_color">DISCUSS GREEN LABEL &rarr;</a>
+            <a href="/contact" class="cs_pships_solid_btn">DISCUSS GREEN LABEL &rarr;</a>
           </div>
         </div>
       </div>
@@ -311,7 +309,7 @@ export default function Page() {
             <img src="/assets/img/health-professionals-card.webp" alt="White Label branded partnership">
           </div>
           <div class="cs_pmodel_content wow fadeInRight">
-            <span class="cs_brackets_title cs_normal cs_fs_16 cs_pmodel_label">03 / WHITE LABEL</span>
+            <span class="cs_pmodel_label">03 / WHITE LABEL</span>
             <h2>YOUR BRAND. OUR CULTIVATION &amp; PACKAGING.</h2>
             <p class="cs_pmodel_desc">Bring Australian-grown medicinal cannabis to market under your own brand, supported by PharmaCrop cultivation, exclusive cultivars and GMP finished-product capability.</p>
             <ul class="cs_pmodel_points">
@@ -320,7 +318,7 @@ export default function Page() {
               <li class="cs_pmodel_point"><i class="fa-solid fa-circle-check"></i><span><strong>GMP Finished Goods</strong><span>Packaging and finished-product supply by PharmaCrop.</span></span></li>
               <li class="cs_pmodel_point"><i class="fa-solid fa-circle-check"></i><span><strong>Your Brand</strong><span>Your own branding and product identity.</span></span></li>
             </ul>
-            <a href="/contact" class="cs_btn cs_style_2 cs_bold cs_heading_color">DISCUSS WHITE LABEL &rarr;</a>
+            <a href="/contact" class="cs_pships_solid_btn">DISCUSS WHITE LABEL &rarr;</a>
           </div>
         </div>
       </div>
@@ -333,7 +331,7 @@ export default function Page() {
             <img src="/assets/img/pharma-banner.jpeg" alt="Australian-grown bulk flower cultivation">
           </div>
           <div class="cs_pmodel_content wow fadeInLeft">
-            <span class="cs_brackets_title cs_normal cs_fs_16 cs_pmodel_label">04 / BULK FLOWER</span>
+            <span class="cs_pmodel_label">04 / BULK FLOWER</span>
             <h2>AUSTRALIAN-GROWN. SUPPLIED IN BULK.</h2>
             <p class="cs_pmodel_desc">Access Australian-grown flower through PharmaCrop&rsquo;s integrated platform for downstream processing and flexible commercial supply requirements.</p>
             <ul class="cs_pmodel_points">
@@ -342,7 +340,7 @@ export default function Page() {
               <li class="cs_pmodel_point"><i class="fa-solid fa-circle-check"></i><span><strong>GMP-Certified Supply</strong><span>Supported by PharmaCrop&rsquo;s pharmaceutical platform.</span></span></li>
               <li class="cs_pmodel_point"><i class="fa-solid fa-circle-check"></i><span><strong>Flexible Supply</strong><span>Designed for partners requiring bulk flower for processing.</span></span></li>
             </ul>
-            <a href="/contact" class="cs_btn cs_style_2 cs_bold cs_heading_color">DISCUSS BULK SUPPLY &rarr;</a>
+            <a href="/contact" class="cs_pships_solid_btn">DISCUSS BULK SUPPLY &rarr;</a>
           </div>
         </div>
       </div>
