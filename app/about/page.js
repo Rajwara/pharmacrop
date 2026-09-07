@@ -8,12 +8,8 @@ export default function Page() {
       dangerouslySetInnerHTML={{
         __html: `
     <!-- Start Preloader -->
-    <div class="cs_preloader">
-      <div class="cs_preloader_in">
-        <span></span>
-        <span></span>
-      </div>
-      <div class="cs_preloader_text">Loading...</div>
+    <div class="cs_preloader" style="background-color:#000;">
+      <img src="/assets/img/pharma_Crop_logo_loader.gif" alt="Loading" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(70vw,480px);height:auto;">
     </div>
     <!-- End Preloader -->
     <!-- Start Header Section -->
@@ -123,13 +119,7 @@ export default function Page() {
         <div class="cs_height_56 cs_height_lg_35"></div>
         <div class="row cs_gap_y_30">
           <div class="col-lg-4 wow fadeInLeft">
-            <a href="https://www.youtube.com/embed/rRid6GCJtgc" class="cs_video_block cs_style_1 cs_bg_filed cs_video_open cs_center cs_radius_20" data-src="/assets/img/genetics-to-gmp-manufacturing.webp">
-              <span class="cs_player_btn cs_heading_color">
-                <svg width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M18.5 11L0.5 21.3923V0.607696L18.5 11Z" fill="currentColor"></path>
-                </svg>
-              </span>
-            </a>
+            <a href="https://www.youtube.com/embed/rRid6GCJtgc" class="cs_video_block cs_style_1 cs_bg_filed cs_video_open cs_center cs_radius_20" data-src="/assets/img/genetics-to-gmp-manufacturing.webp"></a>
           </div>
           <div class="col-lg-8 wow fadeInRight">
             <div class="cs_cta cs_style_2 cs_bg_filed cs_radius_20" data-src="/assets/img/pharmacrop-banner2.webp">
