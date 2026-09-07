@@ -184,7 +184,7 @@ export default function Page() {
     <style>
       .cs_dflower_section { padding: 100px 0; background: #f7faf8; }
       .cs_dflower_head { max-width: 760px; margin: 0 auto 56px; text-align: center; }
-      .cs_dflower_label { color: #024242; font-size: 14px; font-weight: 700; letter-spacing: 1px; margin-bottom: 18px; display: inline-flex; }
+      .cs_dflower_label { display: inline-flex; align-items: center; padding: 8px 22px; border: 1px solid rgba(2, 66, 66, 0.18); border-radius: 30px; background: #fff; color: #024242; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 18px; }
       .cs_dflower_head h2 { color: #024242; font-size: 38px; font-weight: 800; line-height: 1.25; margin: 0 0 16px; }
       .cs_dflower_head p { color: #666; font-size: 16px; line-height: 1.7; margin: 0; }
       .cs_dflower_images { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 48px; }
@@ -209,7 +209,7 @@ export default function Page() {
     <section class="cs_dflower_section" id="dried-flower" style="scroll-margin-top: 100px;">
       <div class="container">
         <div class="cs_dflower_head wow fadeInUp">
-          <span class="cs_brackets_title cs_normal cs_fs_16 cs_dflower_label">01 / DRIED FLOWER</span>
+          <span class="cs_dflower_label">DRIED FLOWER</span>
           <h2>AUSTRALIAN-GROWN DRIED FLOWER</h2>
           <p>Explore PharmaCrop&rsquo;s dried flower portfolio across the Noosa Selects and PharmaCrop Premium ranges.</p>
         </div>
@@ -269,7 +269,7 @@ export default function Page() {
       .cs_pline_img { flex: 0 0 46%; border-radius: 16px; overflow: hidden; }
       .cs_pline_img img { width: 100%; height: 440px; object-fit: cover; display: block; }
       .cs_pline_content { flex: 1; }
-      .cs_pline_label { color: #024242; font-size: 14px; font-weight: 700; letter-spacing: 1px; margin-bottom: 20px; }
+      .cs_pline_label { display: inline-flex; align-items: center; padding: 8px 22px; border: 1px solid rgba(2, 66, 66, 0.18); border-radius: 30px; background: #fff; color: #024242; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 20px; }
       .cs_pline_content h2 { color: #024242; font-size: 36px; font-weight: 800; line-height: 1.2; margin: 0 0 18px; }
       .cs_pline_content > p.cs_pline_desc { color: #555; font-size: 16px; line-height: 1.75; margin: 0 0 24px; }
       .cs_pline_range_title { color: #024242; font-size: 17px; font-weight: 800; margin: 0 0 4px; }
@@ -293,7 +293,7 @@ export default function Page() {
             <img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt="PharmaCrop oral liquid range">
           </div>
           <div class="cs_pline_content wow fadeInLeft">
-            <span class="cs_brackets_title cs_normal cs_fs_16 cs_pline_label">02 / ORAL LIQUID</span>
+            <span class="cs_pline_label">ORAL LIQUID</span>
             <h2>PHARMACROP ORAL LIQUID RANGE</h2>
             <p class="cs_pline_desc">PharmaCrop&rsquo;s oral liquid portfolio forms part of its established Australian finished-product range, supported by integrated pharmaceutical manufacturing and quality systems. The range currently includes three finished oral liquid products.</p>
             <p class="cs_pline_range_title">Oral Liquid Range</p>
@@ -319,7 +319,7 @@ export default function Page() {
             <img src="/assets/img/pharmacrop-banner4.webp" alt="PharmaCrop 20:20:20 Night Pastilles">
           </div>
           <div class="cs_pline_content wow fadeInRight">
-            <span class="cs_brackets_title cs_normal cs_fs_16 cs_pline_label">03 / PASTILLES</span>
+            <span class="cs_pline_label">PASTILLES</span>
             <h2>PHARMACROP PASTILLES</h2>
             <p class="cs_pline_desc">The PharmaCrop portfolio includes a finished pastille formulation developed as part of its broader multi-dosage-form product range.</p>
             <p class="cs_pline_range_title">Pastilles Range</p>
@@ -343,7 +343,7 @@ export default function Page() {
             <img src="/assets/img/health-professionals-card.webp" alt="PharmaCrop inhaled liquid range">
           </div>
           <div class="cs_pline_content wow fadeInLeft">
-            <span class="cs_brackets_title cs_normal cs_fs_16 cs_pline_label">04 / INHALED LIQUID</span>
+            <span class="cs_pline_label">INHALED LIQUID</span>
             <h2>PHARMACROP INHALED LIQUID RANGE</h2>
             <p class="cs_pline_desc">PharmaCrop&rsquo;s inhaled liquid portfolio expands the product range across an additional dosage form, with two finished products currently included in the portfolio.</p>
             <p class="cs_pline_range_title">Inhaled Liquid Range</p>
