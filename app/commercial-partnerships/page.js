@@ -98,8 +98,13 @@ export default function Page() {
       .cs_pships_hero_content { position: relative; z-index: 2; max-width: 820px; margin: 0 auto; }
       .cs_pships_hero_pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 22px; border-radius: 30px; background: rgba(120, 220, 166, 0.15); border: 1px solid rgba(120, 220, 166, 0.35); color: #78dca6; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 26px; }
       .cs_pships_hero_content h1 { color: #fff; margin: 0 0 22px; line-height: 1.15; }
+      .cs_pships_hero_content h1 span { color: #78dca6; }
       .cs_pships_hero_content p { color: rgba(255, 255, 255, 0.8); font-size: 18px; line-height: 1.7; margin: 0 auto 36px; max-width: 640px; }
       .cs_pships_hero_btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+      .cs_pships_btn_primary { background: #78dca6; color: #023232; padding: 15px 34px; border-radius: 6px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 14px; display: inline-block; transition: 0.3s; }
+      .cs_pships_btn_primary:hover { background: #d99f59; color: #fff; }
+      .cs_pships_btn_outline { border: 1px solid rgba(255, 255, 255, 0.4); color: #fff; padding: 15px 34px; border-radius: 6px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 14px; display: inline-block; transition: 0.3s; }
+      .cs_pships_btn_outline:hover { background: #fff; color: #023232; }
       @media (max-width: 767px) {
         .cs_pships_hero { padding: 150px 0 100px; }
       }
@@ -108,11 +113,11 @@ export default function Page() {
       <div class="cs_pships_hero_bg"><img src="/assets/img/pharmacrop-banner1.webp" alt="PharmaCrop cultivation facility"></div>
       <div class="container cs_pships_hero_content">
         <span class="cs_pships_hero_pill wow fadeInUp">Commercial Partnerships &mdash; Flexible Pathways</span>
-        <h1 class="cs_fs_80 cs_bold wow fadeInUp" data-wow-delay="0.1s">ONE PARTNER.<br>MULTIPLE COMMERCIAL<br>PATHWAYS.</h1>
+        <h1 class="cs_fs_80 cs_bold wow fadeInUp" data-wow-delay="0.1s">ONE PARTNER.<br><span>MULTIPLE COMMERCIAL PATHWAYS.</span></h1>
         <p class="wow fadeInUp" data-wow-delay="0.2s">Partner with PharmaCrop through four flexible commercial models backed by Australian-grown supply, GMP-certified manufacturing and integrated pharmaceutical capability.</p>
         <div class="cs_pships_hero_btns wow fadeInUp" data-wow-delay="0.3s">
-          <a href="#partnership-models" class="cs_btn cs_style_1 cs_bold cs_heading_color cs_white_bg">EXPLORE PARTNERSHIP MODELS</a>
-          <a href="/contact" class="cs_btn cs_style_2 cs_bold cs_white_color">CONTACT OUR TEAM</a>
+          <a href="#partnership-models" class="cs_pships_btn_primary">EXPLORE PARTNERSHIP MODELS</a>
+          <a href="/contact" class="cs_pships_btn_outline">CONTACT OUR TEAM</a>
         </div>
       </div>
     </section>
