@@ -483,28 +483,30 @@ export default function Page() {
         <div class="cs_contact_card">
           <div class="cs_contact_card_bg"><img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt=""></div>
           <div class="cs_contact_card_top">
-            <p class="cs_contact_info_label">Get More Information:</p>
+            <p class="cs_contact_info_label">Speak With Our Team:</p>
             <a href="mailto:enquiries@pharmacrop.com.au" class="cs_contact_pill"><span class="cs_contact_pill_icon"><i class="fa-solid fa-envelope"></i></span>enquiries@pharmacrop.com.au</a>
             <a href="tel:1300053533" class="cs_contact_pill"><span class="cs_contact_pill_icon"><i class="fa-solid fa-phone"></i></span>1300 053 533</a>
           </div>
           <div class="cs_contact_card_bottom">
             <div class="cs_contact_eyebrow_row">
               <span class="cs_contact_eyebrow_icon"><i class="fa-solid fa-seedling"></i></span>
-              <span class="cs_contact_eyebrow_text">CONTACT US</span>
+              <span class="cs_contact_eyebrow_text">PARTNER WITH PHARMACROP</span>
             </div>
-            <h2 class="cs_contact_card_title">Cultivated With Purpose, Delivered With Trust</h2>
-            <p class="cs_contact_card_sub">Australian-grown, GMP-certified cultivation and manufacturing &mdash; get in touch to discuss supply, partnership and product options.</p>
+            <h2 class="cs_contact_card_title">Ready To Explore A Commercial Partnership?</h2>
+            <p class="cs_contact_card_sub">Connect with our team to discuss Australian-grown products, GMP manufacturing, commercial pathways and supply opportunities.</p>
             <form action="https://api.web3forms.com/submit" method="POST" class="cs_contact_form_bar">
               <input type="hidden" name="access_key" value="cd98b256-0db3-478c-ab28-1ec94f80447c">
               <input type="hidden" name="subject" value="New Enquiry - PharmaCrop Website">
-              <input type="text" name="name" placeholder="Type Your Name ..." required>
-              <input type="email" name="email" placeholder="Type Your Mail ..." required>
+              <input type="text" name="name" placeholder="Your Name" required>
+              <input type="email" name="email" placeholder="Your Email" required>
               <select name="interest" defaultValue="">
                 <option value="" disabled selected>Select Your Interest</option>
-                <option value="Pharmacist">Pharmacist</option>
-                <option value="Prescriber">Prescriber</option>
-                <option value="Distributor">Distributor</option>
-                <option value="Other">Other</option>
+                <option value="Retail">Retail</option>
+                <option value="Green Label">Green Label</option>
+                <option value="White Label">White Label</option>
+                <option value="Bulk Flower">Bulk Flower</option>
+                <option value="Distribution / Export">Distribution / Export</option>
+                <option value="General Enquiry">General Enquiry</option>
               </select>
               <button type="submit" class="cs_contact_form_btn">Let's Connect</button>
             </form>
