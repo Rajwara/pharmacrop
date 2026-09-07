@@ -260,6 +260,111 @@ export default function Page() {
       </div>
     </div>
     <div class="cs_height_100 cs_height_lg_70"></div>
+    <!-- Start Contact Hello Section -->
+    <style>
+      .cs_contact_hello { background: #eee9e3; padding: 100px 0; }
+      .cs_contact_hello_row { display: flex; gap: 80px; align-items: flex-start; }
+      .cs_contact_hello_left { flex: 0 0 420px; }
+      .cs_contact_hello_right { flex: 1; padding-left: 80px; border-left: 1px solid rgba(2, 66, 66, 0.15); }
+      .cs_contact_hello_eyebrow { display: block; font-weight: 700; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #024242; margin-bottom: 16px; }
+      .cs_contact_hello_title { font-size: 40px; font-weight: 800; line-height: 1.3; color: #024242; margin: 0 0 48px; }
+      .cs_contact_hello_title span { color: #d99f59; }
+      .cs_contact_hello_info { display: flex; gap: 48px; flex-wrap: wrap; }
+      .cs_contact_hello_info_col { display: flex; flex-direction: column; gap: 28px; }
+      .cs_contact_hello_label { font-size: 13px; color: rgba(2, 66, 66, 0.6); margin: 0 0 6px; }
+      .cs_contact_hello_value { font-size: 16px; font-weight: 700; color: #024242; margin: 0; line-height: 1.5; }
+      .cs_contact_hello_value a { color: #024242; text-decoration: none; }
+      .cs_contact_hello_social { display: flex; gap: 10px; }
+      .cs_contact_hello_social a { width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(2, 66, 66, 0.25); color: #024242; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 14px; transition: background-color 0.3s ease, color 0.3s ease; }
+      .cs_contact_hello_social a:hover { background: #024242; color: #fff; border-color: #024242; }
+      .cs_contact_hello_form { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+      .cs_contact_hello_form .cs_full { grid-column: 1 / -1; }
+      .cs_contact_hello_form label { display: block; font-size: 14px; font-weight: 700; color: #024242; margin-bottom: 8px; }
+      .cs_contact_hello_form input, .cs_contact_hello_form select, .cs_contact_hello_form textarea { width: 100%; border: 1px solid rgba(2, 66, 66, 0.15); background: #fff; border-radius: 8px; padding: 14px 16px; font-size: 14px; color: #1f2419; outline: none; box-sizing: border-box; font-family: inherit; }
+      .cs_contact_hello_form textarea { min-height: 140px; resize: vertical; }
+      .cs_contact_hello_submit { background: #024242; color: #fff; font-weight: 700; padding: 16px; border-radius: 8px; border: none; cursor: pointer; font-size: 14px; transition: background-color 0.3s ease, color 0.3s ease; }
+      .cs_contact_hello_submit:hover { background: #78dca6; color: #024242; }
+      @media (max-width: 991px) {
+        .cs_contact_hello_row { flex-direction: column; gap: 48px; }
+        .cs_contact_hello_left { flex: none; width: 100%; }
+        .cs_contact_hello_right { padding-left: 0; border-left: none; width: 100%; }
+        .cs_contact_hello_title { font-size: 32px; }
+      }
+      @media (max-width: 575px) {
+        .cs_contact_hello_form { grid-template-columns: 1fr; }
+        .cs_contact_hello_info { gap: 32px; }
+      }
+    </style>
+    <section class="cs_contact_hello">
+      <div class="container">
+        <div class="cs_contact_hello_row">
+          <div class="cs_contact_hello_left">
+            <span class="cs_contact_hello_eyebrow">// Contact Us</span>
+            <h2 class="cs_contact_hello_title">Great partnerships start with a simple hello &mdash; <span>Let's talk</span></h2>
+            <div class="cs_contact_hello_info">
+              <div class="cs_contact_hello_info_col">
+                <div>
+                  <p class="cs_contact_hello_label">Address</p>
+                  <p class="cs_contact_hello_value">Noosa Hinterland,<br>Queensland, Australia</p>
+                </div>
+                <div>
+                  <p class="cs_contact_hello_label">Get in touch</p>
+                  <p class="cs_contact_hello_value"><a href="tel:1300053533">1300 053 533</a></p>
+                  <p class="cs_contact_hello_value"><a href="mailto:enquiries@pharmacrop.com.au">enquiries@pharmacrop.com.au</a></p>
+                </div>
+              </div>
+              <div class="cs_contact_hello_info_col">
+                <div>
+                  <p class="cs_contact_hello_label">Business Hours</p>
+                  <p class="cs_contact_hello_value">Monday - Friday:<br>9:00 AM - 5:00 PM</p>
+                </div>
+                <div>
+                  <p class="cs_contact_hello_label">Follow Us</p>
+                  <div class="cs_contact_hello_social">
+                    <a href="https://www.linkedin.com/company/pharmacrop" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/611300053533" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cs_contact_hello_right">
+            <form action="https://api.web3forms.com/submit" method="POST" class="cs_contact_hello_form">
+              <input type="hidden" name="access_key" value="cd98b256-0db3-478c-ab28-1ec94f80447c">
+              <input type="hidden" name="subject" value="New Enquiry - PharmaCrop Contact Page">
+              <div>
+                <label>Name (required)</label>
+                <input type="text" name="name" placeholder="Your name" required>
+              </div>
+              <div>
+                <label>Email (required)</label>
+                <input type="email" name="email" placeholder="Your email" required>
+              </div>
+              <div>
+                <label>Phone</label>
+                <input type="tel" name="phone" placeholder="Phone no">
+              </div>
+              <div>
+                <label>Type</label>
+                <select name="type" defaultValue="">
+                  <option value="" disabled selected>Select your type</option>
+                  <option value="Pharmacist">Pharmacist</option>
+                  <option value="Prescriber">Prescriber</option>
+                  <option value="Distributor">Distributors</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="cs_full">
+                <label>Message</label>
+                <textarea name="message" placeholder="Type message"></textarea>
+              </div>
+              <button type="submit" class="cs_contact_hello_submit cs_full">Submit Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Contact Hello Section -->
     <!-- Start CTA Section -->
     <style>
       .cs_contact_card_section { padding: 100px 0; overflow: hidden; }
