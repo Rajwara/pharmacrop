@@ -1082,7 +1082,7 @@ export default function Page() {
             <span class="cs_footer_v2_col_underline"></span>
             <ul class="cs_footer_v2_list">
               <li><a href="/about">About Us</a></li>
-              <li><a href="/industry">Products</a></li>
+              <li><a href="/products">Products</a></li>
               <li><a href="/commercial-partnerships">Commercial Partnerships</a></li>
               <li><a href="/blog">Blog</a></li>
               <li><a href="/faq">FAQ</a></li>

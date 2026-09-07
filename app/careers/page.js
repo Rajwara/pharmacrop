@@ -89,24 +89,34 @@ export default function Page() {
     </div>
     <!-- End Header Section -->
     <!-- Start Page Heading Sectoin -->
-    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/about_heading_bg.jpg">
+    <style>
+      .cs_careers_heading_sub { color: rgba(255, 255, 255, 0.8); font-size: 18px; line-height: 1.7; max-width: 620px; margin: 20px 0 32px; }
+    </style>
+    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/genetics-to-gmp-manufacturing.webp">
       <div class="container">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
           <li class="breadcrumb-item active">Careers</li>
         </ol>
         <h1 class="cs_page_title mb-0 cs_fs_80 wow fadeInUp">CAREERS</h1>
-        <div class="cs_height_24"></div>
+        <p class="cs_careers_heading_sub wow fadeInUp">Build your career at the intersection of science, cultivation, pharmaceutical manufacturing and healthcare.</p>
         <a href="#cs_expression_of_interest" class="cs_btn cs_style_1 cs_bold cs_heading_color cs_white_bg">Apply Now</a>
       </div>
     </section>
     <!-- End Page Heading Sectoin -->
     <!-- Start Ready to Join Us Section -->
+    <style>
+      .cs_careers_grow_desc { max-width: 640px; font-size: 18px; line-height: 1.7; margin: 20px 0 0; }
+    </style>
     <section>
       <div class="cs_height_100 cs_height_lg_70"></div>
       <div class="container">
         <div class="cs_section_heading cs_style_1">
-          <h2 class="cs_section_title cs_fs_80 mb-0 wow fadeInUp">READY TO <span>JOIN US?</span></h2>
+          <div>
+            <span class="cs_sticky_eyebrow">GROW WITH PHARMACROP</span>
+            <h2 class="cs_section_title cs_fs_80 mb-0 wow fadeInUp">READY TO <span>JOIN US?</span></h2>
+          </div>
+          <p class="cs_careers_grow_desc mb-0">Join a multidisciplinary team working across research, cultivation, pharmaceutical manufacturing, quality and commercial growth.</p>
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
         <div class="row cs_gap_y_50">
@@ -158,106 +168,43 @@ export default function Page() {
         <div class="row">
           <div class="col-lg-8 offset-lg-2">
             <div class="cs_section_heading cs_style_4 cs_mb_25 text-center">
+              <span class="cs_sticky_eyebrow d-block cs_mb_12">JOIN OUR TEAM</span>
               <h2 class="cs_section_title cs_fs_32 cs_bold mb-0">EXPRESSION OF <span>INTEREST</span></h2>
             </div>
-            <p class="text-center cs_fs_20">Please fill out the form below.</p>
+            <p class="text-center cs_fs_20">Interested in building your career with PharmaCrop? Submit your details and CV and our team will be in touch if a suitable opportunity becomes available.</p>
             <div class="cs_height_40 cs_height_lg_30"></div>
             <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" class="row cs_gap_y_24" id="cs_career_form">
               <input type="hidden" name="access_key" value="cd98b256-0db3-478c-ab28-1ec94f80447c">
               <input type="hidden" name="subject" value="New Expression of Interest - PharmaCrop Careers">
               <div class="col-sm-6">
-                <input type="text" name="first_name" class="cs_form_field" placeholder="First Name *" required="">
+                <input type="text" name="first_name" class="cs_form_field" placeholder="First name" required="">
               </div>
               <div class="col-sm-6">
-                <input type="text" name="last_name" class="cs_form_field" placeholder="Last Name *" required="">
+                <input type="text" name="last_name" class="cs_form_field" placeholder="Last name" required="">
               </div>
               <div class="col-sm-6">
-                <input type="email" name="email" class="cs_form_field" placeholder="Email Address *" required="">
+                <input type="email" name="email" class="cs_form_field" placeholder="Email address" required="">
               </div>
               <div class="col-sm-6">
-                <input type="tel" name="phone" class="cs_form_field" placeholder="Phone">
+                <input type="tel" name="phone" class="cs_form_field" placeholder="Phone number">
               </div>
               <div class="col-lg-12">
-                <input type="file" name="resume" class="cs_form_field" accept=".doc,.docx,.pdf">
+                <input type="file" name="resume" class="cs_form_field" accept=".doc,.docx,.pdf" required="">
                 <p class="cs_fs_16 mt-2 mb-0">Allowed resume file types: .doc, .docx, .pdf</p>
               </div>
               <div class="col-lg-12">
-                <button class="cs_btn cs_style_1 cs_type_1 cs_bold cs_heading_bg cs_white_color w-100" type="submit">Submit Expression of Interest</button>
+                <button class="cs_btn cs_style_1 cs_type_1 cs_bold cs_heading_bg cs_white_color w-100" type="submit">SUBMIT EXPRESSION OF INTEREST</button>
                 <div id="cs_career_result" class="cs_heading_color"></div>
               </div>
             </form>
             <div class="cs_height_40 cs_height_lg_30"></div>
-            <p class="text-center mb-0"><a href="https://www.linkedin.com/company/pharmacrop/jobs/" target="_blank" rel="noopener" class="cs_btn cs_style_2 cs_bold cs_heading_color">LinkedIn Job Listings</a></p>
+            <p class="text-center mb-0"><a href="https://www.linkedin.com/company/pharmacrop/jobs/" target="_blank" rel="noopener" class="cs_btn cs_style_2 cs_bold cs_heading_color">VIEW CURRENT OPPORTUNITIES ON LINKEDIN &rarr;</a></p>
           </div>
         </div>
       </div>
       <div class="cs_height_100 cs_height_lg_70"></div>
     </section>
     <!-- End Expression of Interest Section -->
-    <!-- Start CTA Section -->
-    <style>
-      .cs_contact_card_section { padding: 100px 0; overflow: hidden; }
-      .cs_contact_card { position: relative; min-height: 700px; display: flex; flex-direction: column; justify-content: space-between; padding: 40px; }
-      .cs_contact_card_bg { position: absolute; top: 0; bottom: 0; left: 50%; width: 100vw; margin-left: -50vw; z-index: 0; }
-      .cs_contact_card_bg img { width: 100%; height: 100%; object-fit: cover; }
-      .cs_contact_card_bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(2, 34, 34, 0.55) 0%, rgba(2, 34, 34, 0.25) 40%, rgba(2, 20, 20, 0.85) 100%); }
-      .cs_contact_card_top { position: relative; z-index: 2; }
-      .cs_contact_info_label { color: #fff; font-weight: 700; font-size: 16px; margin: 0 0 16px; }
-      .cs_contact_pill { display: inline-flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(6px); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 30px; padding: 10px 20px 10px 10px; color: #fff; text-decoration: none; font-size: 14px; margin-right: 12px; margin-bottom: 12px; }
-      .cs_contact_pill_icon { width: 30px; height: 30px; border-radius: 50%; background: #78dca6; color: #024242; display: flex; align-items: center; justify-content: center; font-size: 13px; flex: none; }
-      .cs_contact_card_bottom { position: relative; z-index: 2; }
-      .cs_contact_eyebrow_row { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
-      .cs_contact_eyebrow_icon { width: 32px; height: 32px; border-radius: 50%; background: #fff; color: #024242; display: flex; align-items: center; justify-content: center; font-size: 14px; }
-      .cs_contact_eyebrow_text { color: #fff; font-weight: 700; font-size: 13px; letter-spacing: 1px; }
-      .cs_contact_card_title { color: #fff; font-size: 44px; font-weight: 800; margin: 0 0 12px; line-height: 1.2; }
-      .cs_contact_card_sub { color: rgba(255, 255, 255, 0.8); font-size: 16px; margin: 0 0 28px; max-width: 520px; }
-      .cs_contact_form_bar { background: #fff; border-radius: 16px; padding: 20px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
-      .cs_contact_form_bar input, .cs_contact_form_bar select { flex: 1; min-width: 180px; border: none; border-bottom: 1px solid #e5e5e5; padding: 12px 4px; font-size: 14px; color: #1f2419; outline: none; }
-      .cs_contact_form_btn { background: #024242; color: #fff; font-weight: 700; padding: 16px 32px; border-radius: 8px; border: none; cursor: pointer; font-size: 13px; letter-spacing: 0.5px; white-space: nowrap; }
-      @media (max-width: 767px) {
-        .cs_contact_card_title { font-size: 30px; }
-        .cs_contact_form_bar { flex-direction: column; align-items: stretch; }
-        .cs_contact_form_btn { width: 100%; }
-        .cs_contact_card_section { padding-bottom: 40px !important; }
-      }
-    </style>
-    <section class="cs_contact_card_section">
-      <div class="container">
-        <div class="cs_contact_card">
-          <div class="cs_contact_card_bg"><img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt=""></div>
-          <div class="cs_contact_card_top">
-            <p class="cs_contact_info_label">Speak With Our Team:</p>
-            <a href="mailto:enquiries@pharmacrop.com.au" class="cs_contact_pill"><span class="cs_contact_pill_icon"><i class="fa-solid fa-envelope"></i></span>enquiries@pharmacrop.com.au</a>
-            <a href="tel:1300053533" class="cs_contact_pill"><span class="cs_contact_pill_icon"><i class="fa-solid fa-phone"></i></span>1300 053 533</a>
-          </div>
-          <div class="cs_contact_card_bottom">
-            <div class="cs_contact_eyebrow_row">
-              <span class="cs_contact_eyebrow_icon"><i class="fa-solid fa-seedling"></i></span>
-              <span class="cs_contact_eyebrow_text">PARTNER WITH PHARMACROP</span>
-            </div>
-            <h2 class="cs_contact_card_title">Ready To Explore A Commercial Partnership?</h2>
-            <p class="cs_contact_card_sub">Connect with our team to discuss Australian-grown products, GMP manufacturing, commercial pathways and supply opportunities.</p>
-            <form action="https://api.web3forms.com/submit" method="POST" class="cs_contact_form_bar">
-              <input type="hidden" name="access_key" value="cd98b256-0db3-478c-ab28-1ec94f80447c">
-              <input type="hidden" name="subject" value="New Enquiry - PharmaCrop Website">
-              <input type="text" name="name" placeholder="Your Name" required>
-              <input type="email" name="email" placeholder="Your Email" required>
-              <select name="interest" defaultValue="">
-                <option value="" disabled selected>Select Your Interest</option>
-                <option value="Retail">Retail</option>
-                <option value="Green Label">Green Label</option>
-                <option value="White Label">White Label</option>
-                <option value="Bulk Flower">Bulk Flower</option>
-                <option value="Distribution / Export">Distribution / Export</option>
-                <option value="General Enquiry">General Enquiry</option>
-              </select>
-              <button type="submit" class="cs_contact_form_btn">Let's Connect</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End CTA Section -->
     <!-- Start Footer Section -->
     <style>
       .cs_footer_v2 { background: #eee9e3; padding: 90px 0 0; position: relative; overflow: hidden; }
@@ -315,7 +262,7 @@ export default function Page() {
             <span class="cs_footer_v2_col_underline"></span>
             <ul class="cs_footer_v2_list">
               <li><a href="/about">About Us</a></li>
-              <li><a href="/industry">Products</a></li>
+              <li><a href="/products">Products</a></li>
               <li><a href="/commercial-partnerships">Commercial Partnerships</a></li>
               <li><a href="/blog">Blog</a></li>
               <li><a href="/faq">FAQ</a></li>
