@@ -375,7 +375,7 @@ export default function Page() {
     <!-- End Services Section -->
     <!-- Start Scroll Stack Projects Section -->
     <style>
-      .cs_scroll_stack { position: relative; height: 200vh; background: #024242; }
+      .cs_scroll_stack { position: relative; height: 150vh; background: #024242; }
       .cs_scroll_stack_sticky { position: sticky; top: 0; height: 100vh; overflow: hidden; display: flex; align-items: center; }
       .cs_scroll_stack_row { display: flex; align-items: center; width: 100%; gap: 60px; padding: 0 80px; box-sizing: border-box; }
       .cs_scroll_stack_left { flex: 0 0 420px; }
@@ -383,39 +383,39 @@ export default function Page() {
       .cs_scroll_stack_title { color: #fff; font-size: 44px; font-weight: 800; line-height: 1.25; margin: 0 0 32px; }
       .cs_scroll_stack_btn { display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(255, 255, 255, 0.5); color: #fff; border-radius: 30px; padding: 14px 28px; font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-decoration: none; transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
       .cs_scroll_stack_btn:hover { background: #78dca6; border-color: #78dca6; color: #024242; }
-      .cs_scroll_stack_right { position: relative; flex: 1; height: 620px; }
-      .cs_scroll_card { position: absolute; top: 50%; left: 50%; width: 700px; max-width: 90vw; border-radius: 16px; overflow: hidden; will-change: transform, filter, opacity; }
-      .cs_scroll_card img { width: 100%; height: 440px; object-fit: cover; display: block; }
+      .cs_scroll_stack_right { position: relative; flex: 1; height: 680px; }
+      .cs_scroll_card { position: absolute; top: 50%; left: 50%; width: 760px; max-width: 90vw; border-radius: 16px; overflow: hidden; will-change: transform, filter, opacity; }
+      .cs_scroll_card img { width: 100%; height: 490px; object-fit: cover; display: block; }
       .cs_scroll_card_content { position: absolute; left: 0; right: 0; bottom: 0; padding: 24px; background: linear-gradient(180deg, rgba(2, 20, 20, 0) 0%, rgba(2, 20, 20, 0.85) 100%); }
       .cs_scroll_card_tags { display: flex; gap: 4px; margin-bottom: 10px; flex-wrap: wrap; }
       .cs_scroll_card_tag { color: rgba(255, 255, 255, 0.8); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
       .cs_scroll_card_tag:not(:last-child)::after { content: "/"; margin-left: 8px; color: rgba(255, 255, 255, 0.4); }
       .cs_scroll_card_title { color: #fff; font-size: 24px; font-weight: 700; margin: 0; }
       @media (min-width: 1400px) {
-        .cs_scroll_card { width: 800px; }
-        .cs_scroll_card img { height: 480px; }
+        .cs_scroll_card { width: 880px; }
+        .cs_scroll_card img { height: 540px; }
       }
       @media (max-width: 1199px) {
         .cs_scroll_stack_row { padding: 0 40px; gap: 32px; }
         .cs_scroll_stack_left { flex: 0 0 340px; }
-        .cs_scroll_stack_right { height: 540px; }
-        .cs_scroll_card { width: 520px; }
-        .cs_scroll_card img { height: 340px; }
+        .cs_scroll_stack_right { height: 580px; }
+        .cs_scroll_card { width: 570px; }
+        .cs_scroll_card img { height: 370px; }
         .cs_scroll_stack_title { font-size: 36px; }
       }
       @media (max-width: 991px) {
-        .cs_scroll_stack { height: 170vh; }
+        .cs_scroll_stack { height: 135vh; }
         .cs_scroll_stack_row { flex-direction: column; padding: 0 24px; gap: 32px; }
         .cs_scroll_stack_left { flex: none; }
-        .cs_scroll_stack_right { width: 100%; height: 460px; }
-        .cs_scroll_card { width: 420px; max-width: 88vw; }
-        .cs_scroll_card img { height: 300px; }
+        .cs_scroll_stack_right { width: 100%; height: 500px; }
+        .cs_scroll_card { width: 460px; max-width: 88vw; }
+        .cs_scroll_card img { height: 320px; }
         .cs_scroll_stack_title { font-size: 30px; }
       }
       @media (max-width: 480px) {
-        .cs_scroll_stack_right { height: 340px; }
-        .cs_scroll_card { width: 320px; }
-        .cs_scroll_card img { height: 220px; }
+        .cs_scroll_stack_right { height: 360px; }
+        .cs_scroll_card { width: 340px; }
+        .cs_scroll_card img { height: 230px; }
         .cs_scroll_card_title { font-size: 18px; }
       }
     </style>
@@ -466,6 +466,101 @@ export default function Page() {
       </div>
     </section>
     <!-- End Scroll Stack Projects Section -->
+    <!-- Start Integrated Platform Journey Section -->
+    <style>
+      .cs_platform_journey { padding: 110px 0; background: #f7faf8; }
+      .cs_platform_journey_head { max-width: 700px; margin: 0 auto 64px; text-align: center; }
+      .cs_platform_journey_eyebrow { display: block; color: #024242; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+      .cs_platform_journey_title { font-size: 40px; font-weight: 800; line-height: 1.25; color: #024242; margin: 0 0 20px; }
+      .cs_platform_journey_title span { background: linear-gradient(223deg, rgba(2, 66, 66, 0.8) 0.37%, #666666 49.66%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+      .cs_platform_journey_text { font-size: 16px; line-height: 1.7; color: #6b7280; margin: 0 auto; max-width: 640px; }
+      .cs_platform_journey_row { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; position: relative; }
+      .cs_platform_journey_row::before { content: ""; position: absolute; top: 34px; left: 60px; right: 60px; height: 2px; background: repeating-linear-gradient(90deg, rgba(2,66,66,0.25) 0 8px, transparent 8px 16px); z-index: 0; }
+      .cs_platform_stage { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 6px; }
+      .cs_platform_stage_icon { width: 68px; height: 68px; border-radius: 50%; background: #024242; color: #78dca6; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px; border: 5px solid #f7faf8; flex-shrink: 0; }
+      .cs_platform_stage h3 { font-size: 16px; font-weight: 700; color: #024242; margin: 0 0 8px; }
+      .cs_platform_stage p { font-size: 13px; line-height: 1.6; color: #6b7280; margin: 0; }
+      @media (max-width: 1300px) {
+        .cs_platform_journey_row::before { left: 40px; right: 40px; }
+        .cs_platform_stage_icon { width: 58px; height: 58px; font-size: 20px; }
+      }
+      @media (max-width: 1199px) {
+        .cs_platform_journey_row { flex-wrap: wrap; row-gap: 48px; }
+        .cs_platform_journey_row::before { display: none; }
+        .cs_platform_stage { flex: 0 0 25%; max-width: 25%; }
+      }
+      @media (max-width: 767px) {
+        .cs_platform_journey { padding: 80px 0; }
+        .cs_platform_journey_title { font-size: 28px; }
+        .cs_platform_journey_row { flex-direction: column; row-gap: 0; }
+        .cs_platform_stage { flex-direction: row; align-items: flex-start; text-align: left; max-width: 100%; width: 100%; padding: 0 0 32px; position: relative; }
+        .cs_platform_stage:last-child { padding-bottom: 0; }
+        .cs_platform_stage_icon { margin-bottom: 0; margin-right: 20px; width: 56px; height: 56px; font-size: 20px; border-width: 4px; }
+        .cs_platform_stage::after { content: ""; position: absolute; top: 56px; left: 27px; bottom: 0; width: 2px; background: rgba(2,66,66,0.15); }
+        .cs_platform_stage:last-child::after { display: none; }
+      }
+    </style>
+    <section class="cs_platform_journey">
+      <div class="container">
+        <div class="cs_platform_journey_head">
+          <span class="cs_platform_journey_eyebrow">Integrated Platform</span>
+          <h2 class="cs_platform_journey_title">ONE INTEGRATED PLATFORM.<br><span>END-TO-END CAPABILITY.</span></h2>
+          <p class="cs_platform_journey_text">From genetics and cultivation through GMP manufacturing, quality, commercialisation and global export &mdash; all under one integrated operation.</p>
+        </div>
+        <div class="cs_platform_journey_row">
+          <div class="cs_platform_stage">
+            <div class="cs_platform_stage_icon"><i class="fa-solid fa-dna"></i></div>
+            <div class="cs_platform_stage_body">
+              <h3>Genetics</h3>
+              <p>Proprietary phenohunt programs select high-performing cultivars.</p>
+            </div>
+          </div>
+          <div class="cs_platform_stage">
+            <div class="cs_platform_stage_icon"><i class="fa-solid fa-seedling"></i></div>
+            <div class="cs_platform_stage_body">
+              <h3>Cultivation</h3>
+              <p>Australian-grown using controlled-environment cultivation in the Noosa Hinterland.</p>
+            </div>
+          </div>
+          <div class="cs_platform_stage">
+            <div class="cs_platform_stage_icon"><i class="fa-solid fa-industry"></i></div>
+            <div class="cs_platform_stage_body">
+              <h3>GMP Manufacturing</h3>
+              <p>Manufacturing within a GMP-certified facility to pharmaceutical standards.</p>
+            </div>
+          </div>
+          <div class="cs_platform_stage">
+            <div class="cs_platform_stage_icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="cs_platform_stage_body">
+              <h3>Quality &amp; Release</h3>
+              <p>Rigorous quality systems support safety, consistency and regulatory compliance.</p>
+            </div>
+          </div>
+          <div class="cs_platform_stage">
+            <div class="cs_platform_stage_icon"><i class="fa-solid fa-microscope"></i></div>
+            <div class="cs_platform_stage_body">
+              <h3>Research &amp; Innovation</h3>
+              <p>Scientific expertise and product innovation drive continual advancement.</p>
+            </div>
+          </div>
+          <div class="cs_platform_stage">
+            <div class="cs_platform_stage_icon"><i class="fa-solid fa-handshake"></i></div>
+            <div class="cs_platform_stage_body">
+              <h3>Market Access &amp; Commercialisation</h3>
+              <p>Commercial expertise supports market access and long-term healthcare adoption.</p>
+            </div>
+          </div>
+          <div class="cs_platform_stage">
+            <div class="cs_platform_stage_icon"><i class="fa-solid fa-globe"></i></div>
+            <div class="cs_platform_stage_body">
+              <h3>Global Export</h3>
+              <p>Export-ready capability supports international partnerships and regulated global expansion.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Integrated Platform Journey Section -->
     <!-- Start Homepage FAQ Section -->
     <style>
       .cs_home_faq_row { align-items: stretch; }
