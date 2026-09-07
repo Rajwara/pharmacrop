@@ -89,7 +89,13 @@ export default function Page() {
     </div>
     <!-- End Header Section -->
     <!-- Start Page Heading Sectoin -->
-    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/about_heading_bg.jpg">
+    <style>
+      .cs_contact_page_heading.cs_page_heading.cs_style_1 { min-height: 320px; }
+      @media (max-width: 991px) {
+        .cs_contact_page_heading.cs_page_heading.cs_style_1 { min-height: 260px; }
+      }
+    </style>
+    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg cs_contact_page_heading" data-src="/assets/img/pharmacrop-banner1.webp">
       <div class="container">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -106,8 +112,9 @@ export default function Page() {
       .cs_contact_hello_left { flex: 0 0 420px; }
       .cs_contact_hello_right { flex: 1; padding-left: 80px; border-left: 1px solid rgba(2, 66, 66, 0.15); }
       .cs_contact_hello_eyebrow { display: block; font-weight: 700; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #024242; margin-bottom: 16px; }
-      .cs_contact_hello_title { font-size: 40px; font-weight: 800; line-height: 1.3; color: #024242; margin: 0 0 48px; }
+      .cs_contact_hello_title { font-size: 40px; font-weight: 800; line-height: 1.3; color: #024242; margin: 0 0 16px; }
       .cs_contact_hello_title span { color: #d99f59; }
+      .cs_contact_hello_desc { font-size: 16px; line-height: 1.7; color: rgba(2, 66, 66, 0.65); max-width: 460px; margin: 0 0 40px; }
       .cs_contact_hello_info { display: flex; gap: 48px; flex-wrap: wrap; }
       .cs_contact_hello_info_col { display: flex; flex-direction: column; gap: 28px; }
       .cs_contact_hello_label { font-size: 13px; color: rgba(2, 66, 66, 0.6); margin: 0 0 6px; }
@@ -139,7 +146,8 @@ export default function Page() {
         <div class="cs_contact_hello_row">
           <div class="cs_contact_hello_left">
             <span class="cs_contact_hello_eyebrow">// Contact Us</span>
-            <h2 class="cs_contact_hello_title">Great partnerships start with a simple hello &mdash; <span>Let's talk</span></h2>
+            <h2 class="cs_contact_hello_title">Start A Conversation With <span>PharmaCrop</span></h2>
+            <p class="cs_contact_hello_desc">Connect with our team to discuss products, commercial partnerships, manufacturing, supply or general enquiries.</p>
             <div class="cs_contact_hello_info">
               <div class="cs_contact_hello_info_col">
                 <div>
@@ -181,7 +189,7 @@ export default function Page() {
               </div>
               <div>
                 <label>Phone</label>
-                <input type="tel" name="phone" placeholder="Phone no">
+                <input type="tel" name="phone" placeholder="Your phone number">
               </div>
               <div>
                 <label>Area of Interest</label>
@@ -198,79 +206,40 @@ export default function Page() {
               </div>
               <div class="cs_full">
                 <label>Message</label>
-                <textarea name="message" placeholder="Type message"></textarea>
+                <textarea name="message" placeholder="Tell us how we can help"></textarea>
               </div>
-              <button type="submit" class="cs_contact_hello_submit cs_full">Submit Message</button>
+              <button type="submit" class="cs_contact_hello_submit cs_full">Send Enquiry</button>
             </form>
           </div>
         </div>
       </div>
     </section>
     <!-- End Contact Hello Section -->
-    <!-- Start CTA Section -->
+    <!-- Start Trust Strip Section -->
     <style>
-      .cs_contact_card_section { padding: 100px 0; overflow: hidden; }
-      .cs_contact_card { position: relative; min-height: 700px; display: flex; flex-direction: column; justify-content: space-between; padding: 40px; }
-      .cs_contact_card_bg { position: absolute; top: 0; bottom: 0; left: 50%; width: 100vw; margin-left: -50vw; z-index: 0; }
-      .cs_contact_card_bg img { width: 100%; height: 100%; object-fit: cover; }
-      .cs_contact_card_bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(2, 34, 34, 0.55) 0%, rgba(2, 34, 34, 0.25) 40%, rgba(2, 20, 20, 0.85) 100%); }
-      .cs_contact_card_top { position: relative; z-index: 2; }
-      .cs_contact_info_label { color: #fff; font-weight: 700; font-size: 16px; margin: 0 0 16px; }
-      .cs_contact_pill { display: inline-flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(6px); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 30px; padding: 10px 20px 10px 10px; color: #fff; text-decoration: none; font-size: 14px; margin-right: 12px; margin-bottom: 12px; }
-      .cs_contact_pill_icon { width: 30px; height: 30px; border-radius: 50%; background: #78dca6; color: #024242; display: flex; align-items: center; justify-content: center; font-size: 13px; flex: none; }
-      .cs_contact_card_bottom { position: relative; z-index: 2; }
-      .cs_contact_eyebrow_row { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
-      .cs_contact_eyebrow_icon { width: 32px; height: 32px; border-radius: 50%; background: #fff; color: #024242; display: flex; align-items: center; justify-content: center; font-size: 14px; }
-      .cs_contact_eyebrow_text { color: #fff; font-weight: 700; font-size: 13px; letter-spacing: 1px; }
-      .cs_contact_card_title { color: #fff; font-size: 44px; font-weight: 800; margin: 0 0 12px; line-height: 1.2; }
-      .cs_contact_card_sub { color: rgba(255, 255, 255, 0.8); font-size: 16px; margin: 0 0 28px; max-width: 520px; }
-      .cs_contact_form_bar { background: #fff; border-radius: 16px; padding: 20px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
-      .cs_contact_form_bar input, .cs_contact_form_bar select { flex: 1; min-width: 180px; border: none; border-bottom: 1px solid #e5e5e5; padding: 12px 4px; font-size: 14px; color: #1f2419; outline: none; }
-      .cs_contact_form_btn { background: #024242; color: #fff; font-weight: 700; padding: 16px 32px; border-radius: 8px; border: none; cursor: pointer; font-size: 13px; letter-spacing: 0.5px; white-space: nowrap; }
-      @media (max-width: 767px) {
-        .cs_contact_card_title { font-size: 30px; }
-        .cs_contact_form_bar { flex-direction: column; align-items: stretch; }
-        .cs_contact_form_btn { width: 100%; }
-        .cs_contact_card_section { padding-bottom: 40px !important; }
+      .cs_trust_strip { background: #f7faf8; padding: 32px 0; border-top: 1px solid rgba(2, 66, 66, 0.08); border-bottom: 1px solid rgba(2, 66, 66, 0.08); }
+      .cs_trust_strip_row { display: flex; align-items: center; justify-content: center; gap: 18px; flex-wrap: wrap; }
+      .cs_trust_strip_item { display: flex; align-items: center; gap: 8px; color: #024242; font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
+      .cs_trust_strip_item i { color: #78dca6; font-size: 13px; }
+      .cs_trust_strip_sep { color: rgba(2, 66, 66, 0.2); font-size: 14px; }
+      @media (max-width: 575px) {
+        .cs_trust_strip_sep { display: none; }
+        .cs_trust_strip_row { gap: 12px; }
+        .cs_trust_strip_item { width: 100%; justify-content: center; }
       }
     </style>
-    <section class="cs_contact_card_section">
+    <section class="cs_trust_strip">
       <div class="container">
-        <div class="cs_contact_card">
-          <div class="cs_contact_card_bg"><img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt=""></div>
-          <div class="cs_contact_card_top">
-            <p class="cs_contact_info_label">Speak With Our Team:</p>
-            <a href="mailto:enquiries@pharmacrop.com.au" class="cs_contact_pill"><span class="cs_contact_pill_icon"><i class="fa-solid fa-envelope"></i></span>enquiries@pharmacrop.com.au</a>
-            <a href="tel:1300053533" class="cs_contact_pill"><span class="cs_contact_pill_icon"><i class="fa-solid fa-phone"></i></span>1300 053 533</a>
-          </div>
-          <div class="cs_contact_card_bottom">
-            <div class="cs_contact_eyebrow_row">
-              <span class="cs_contact_eyebrow_icon"><i class="fa-solid fa-seedling"></i></span>
-              <span class="cs_contact_eyebrow_text">PARTNER WITH PHARMACROP</span>
-            </div>
-            <h2 class="cs_contact_card_title">Ready To Explore A Commercial Partnership?</h2>
-            <p class="cs_contact_card_sub">Connect with our team to discuss Australian-grown products, GMP manufacturing, commercial pathways and supply opportunities.</p>
-            <form action="https://api.web3forms.com/submit" method="POST" class="cs_contact_form_bar">
-              <input type="hidden" name="access_key" value="cd98b256-0db3-478c-ab28-1ec94f80447c">
-              <input type="hidden" name="subject" value="New Enquiry - PharmaCrop Website">
-              <input type="text" name="name" placeholder="Your Name" required>
-              <input type="email" name="email" placeholder="Your Email" required>
-              <select name="interest" defaultValue="">
-                <option value="" disabled selected>Select Your Interest</option>
-                <option value="Retail">Retail</option>
-                <option value="Green Label">Green Label</option>
-                <option value="White Label">White Label</option>
-                <option value="Bulk Flower">Bulk Flower</option>
-                <option value="Distribution / Export">Distribution / Export</option>
-                <option value="General Enquiry">General Enquiry</option>
-              </select>
-              <button type="submit" class="cs_contact_form_btn">Let's Connect</button>
-            </form>
-          </div>
+        <div class="cs_trust_strip_row">
+          <span class="cs_trust_strip_item"><i class="fa-solid fa-circle-check"></i>Australian Made</span>
+          <span class="cs_trust_strip_sep">|</span>
+          <span class="cs_trust_strip_item"><i class="fa-solid fa-circle-check"></i>GMP Certified</span>
+          <span class="cs_trust_strip_sep">|</span>
+          <span class="cs_trust_strip_item"><i class="fa-solid fa-circle-check"></i>TGA Licensed</span>
         </div>
       </div>
     </section>
-    <!-- End CTA Section -->
+    <!-- End Trust Strip Section -->
     <!-- Start Footer Section -->
     <style>
       .cs_footer_v2 { background: #eee9e3; padding: 90px 0 0; position: relative; overflow: hidden; }

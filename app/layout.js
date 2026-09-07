@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
         </button>
 
         <button id="cs_quote_tab" className="cs_quote_tab" type="button">
-          Get a Quote
+          Partner With Us
         </button>
 
         <div id="cs_quote_modal" className="cs_modal_overlay" role="dialog" aria-modal="true" aria-label="Request a quote">
@@ -160,9 +160,14 @@ export default function RootLayout({ children }) {
 
               var quoteTab = document.getElementById('cs_quote_tab');
               if (quoteTab) {
-                quoteTab.addEventListener('click', function () {
-                  openModal('cs_quote_modal');
-                });
+                var path = window.location.pathname;
+                if (path === '/contact' || path === '/contact/') {
+                  quoteTab.style.display = 'none';
+                } else {
+                  quoteTab.addEventListener('click', function () {
+                    openModal('cs_quote_modal');
+                  });
+                }
               }
 
               try {
