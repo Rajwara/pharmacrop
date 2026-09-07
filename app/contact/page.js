@@ -115,14 +115,14 @@ export default function Page() {
       .cs_contact_hello_title { font-size: 40px; font-weight: 800; line-height: 1.3; color: #024242; margin: 0 0 16px; }
       .cs_contact_hello_title span { color: #d99f59; }
       .cs_contact_hello_desc { font-size: 16px; line-height: 1.7; color: rgba(2, 66, 66, 0.65); max-width: 460px; margin: 0 0 40px; }
-      .cs_contact_hello_info { display: flex; gap: 48px; flex-wrap: wrap; }
-      .cs_contact_hello_info_col { display: flex; flex-direction: column; gap: 28px; }
-      .cs_contact_hello_label { font-size: 13px; color: rgba(2, 66, 66, 0.6); margin: 0 0 6px; }
-      .cs_contact_hello_value { font-size: 16px; font-weight: 700; color: #024242; margin: 0; line-height: 1.5; }
-      .cs_contact_hello_value a { color: #024242; text-decoration: none; }
-      .cs_contact_hello_social { display: flex; gap: 10px; }
-      .cs_contact_hello_social a { width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(2, 66, 66, 0.25); color: #024242; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 14px; transition: background-color 0.3s ease, color 0.3s ease; }
-      .cs_contact_hello_social a:hover { background: #024242; color: #fff; border-color: #024242; }
+      .cs_contact_hello_info { display: grid; grid-template-columns: 1fr 1fr; row-gap: 36px; column-gap: 40px; }
+      .cs_contact_hello_label { font-size: 16px; font-weight: 700; color: #024242; margin: 0 0 14px; }
+      .cs_contact_hello_value { font-size: 14px; font-weight: 400; color: rgba(2, 66, 66, 0.55); margin: 0; line-height: 1.7; }
+      .cs_contact_hello_value a { color: rgba(2, 66, 66, 0.55); text-decoration: none; }
+      .cs_contact_hello_value a:hover { color: #024242; }
+      .cs_contact_hello_social { display: flex; align-items: center; gap: 20px; }
+      .cs_contact_hello_social a { color: #024242; text-decoration: none; font-size: 15px; opacity: 0.55; transition: opacity 0.3s ease; }
+      .cs_contact_hello_social a:hover { opacity: 1; }
       .cs_contact_form_card { background: #fff; border-radius: 24px; padding: 48px; box-shadow: 0 25px 60px rgba(2, 66, 66, 0.08); }
       .cs_contact_form_card_title { font-size: 26px; font-weight: 800; color: #024242; margin: 0 0 10px; }
       .cs_contact_form_card_desc { font-size: 14px; line-height: 1.6; color: rgba(2, 66, 66, 0.55); margin: 0 0 32px; max-width: 380px; }
@@ -145,7 +145,7 @@ export default function Page() {
       }
       @media (max-width: 575px) {
         .cs_contact_form_card { padding: 32px 24px; }
-        .cs_contact_hello_info { gap: 32px; }
+        .cs_contact_hello_info { grid-template-columns: 1fr; row-gap: 28px; }
       }
     </style>
     <section class="cs_contact_hello">
@@ -156,29 +156,28 @@ export default function Page() {
             <h2 class="cs_contact_hello_title">Start A Conversation With <span>PharmaCrop</span></h2>
             <p class="cs_contact_hello_desc">Connect with our team to discuss products, commercial partnerships, manufacturing, supply or general enquiries.</p>
             <div class="cs_contact_hello_info">
-              <div class="cs_contact_hello_info_col">
-                <div>
-                  <p class="cs_contact_hello_label">Address</p>
-                  <p class="cs_contact_hello_value">Noosa Hinterland,<br>Queensland, Australia</p>
-                </div>
-                <div>
-                  <p class="cs_contact_hello_label">Get in touch</p>
-                  <p class="cs_contact_hello_value"><a href="tel:1300053533">1300 053 533</a></p>
-                  <p class="cs_contact_hello_value"><a href="mailto:enquiries@pharmacrop.com.au">enquiries@pharmacrop.com.au</a></p>
+              <div>
+                <p class="cs_contact_hello_label">Call Center</p>
+                <p class="cs_contact_hello_value"><a href="tel:1300053533">1300 053 533</a></p>
+              </div>
+              <div>
+                <p class="cs_contact_hello_label">Our Location</p>
+                <p class="cs_contact_hello_value">Noosa Hinterland,<br>Queensland, Australia</p>
+              </div>
+              <div>
+                <p class="cs_contact_hello_label">Email</p>
+                <p class="cs_contact_hello_value"><a href="mailto:enquiries@pharmacrop.com.au">enquiries@pharmacrop.com.au</a></p>
+              </div>
+              <div>
+                <p class="cs_contact_hello_label">Social Network</p>
+                <div class="cs_contact_hello_social">
+                  <a href="https://www.linkedin.com/company/pharmacrop" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="https://wa.me/611300053533" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
               </div>
-              <div class="cs_contact_hello_info_col">
-                <div>
-                  <p class="cs_contact_hello_label">Business Hours</p>
-                  <p class="cs_contact_hello_value">Monday - Friday:<br>9:00 AM - 5:00 PM</p>
-                </div>
-                <div>
-                  <p class="cs_contact_hello_label">Follow Us</p>
-                  <div class="cs_contact_hello_social">
-                    <a href="https://www.linkedin.com/company/pharmacrop" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/611300053533" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-                  </div>
-                </div>
+              <div>
+                <p class="cs_contact_hello_label">Business Hours</p>
+                <p class="cs_contact_hello_value">Monday - Friday:<br>9:00 AM - 5:00 PM</p>
               </div>
             </div>
           </div>
