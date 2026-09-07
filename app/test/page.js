@@ -402,6 +402,87 @@ export default function Page() {
       </div>
     </section>
     <!-- End Testimonial Slider Section -->
+    <!-- Start Leafline Testimonials -->
+    <style>
+      .cs_leaf_testi { padding: 110px 0; background: #f7faf8; }
+      .cs_leaf_testi_row { display: flex; align-items: center; gap: 60px; }
+      .cs_leaf_testi_imgs { flex: 0 0 340px; position: relative; height: 380px; }
+      .cs_leaf_testi_img { position: absolute; inset: 0; border-radius: 12px; overflow: hidden; opacity: 0; transform: scale(0.96); transition: opacity 0.6s ease, transform 0.6s ease; }
+      .cs_leaf_testi_img.active { opacity: 1; transform: scale(1); }
+      .cs_leaf_testi_img img { width: 100%; height: 100%; object-fit: cover; }
+      .cs_leaf_testi_content { flex: 1; }
+      .cs_leaf_testi_content h2 { color: #024242; margin-bottom: 30px; }
+      .cs_leaf_testi_cards { position: relative; min-height: 200px; }
+      .cs_leaf_testi_card { position: absolute; inset: 0; opacity: 0; visibility: hidden; transform: translateY(12px); transition: opacity 0.5s ease, transform 0.5s ease; }
+      .cs_leaf_testi_card.active { opacity: 1; visibility: visible; transform: translateY(0); position: relative; }
+      .cs_leaf_testi_stars { color: #d99f59; margin-bottom: 16px; font-size: 14px; }
+      .cs_leaf_testi_card p { font-size: 19px; line-height: 1.7; color: #333; margin-bottom: 22px; font-style: italic; }
+      .cs_leaf_testi_author strong { display: block; color: #024242; font-size: 16px; }
+      .cs_leaf_testi_author span { color: #888; font-size: 14px; }
+      .cs_leaf_testi_dots { display: flex; gap: 10px; margin-top: 30px; }
+      .cs_leaf_testi_dot { width: 10px; height: 10px; border-radius: 50%; background: #d7e8dd; cursor: pointer; transition: 0.3s; border: none; padding: 0; }
+      .cs_leaf_testi_dot.active { background: #78dca6; width: 26px; border-radius: 6px; }
+      @media (max-width: 991px) { .cs_leaf_testi_row { flex-direction: column; } .cs_leaf_testi_imgs { flex: 0 0 auto; width: 100%; } }
+    </style>
+    <section class="cs_leaf_testi">
+      <div class="container">
+        <div class="cs_leaf_testi_row">
+          <div class="cs_leaf_testi_imgs wow fadeInUp">
+            <div class="cs_leaf_testi_img active"><img src="/assets/Leafline/10004.jpg" alt=""></div>
+            <div class="cs_leaf_testi_img"><img src="/assets/Leafline/10005.jpg" alt=""></div>
+            <div class="cs_leaf_testi_img"><img src="/assets/Leafline/10006.jpg" alt=""></div>
+            <div class="cs_leaf_testi_img"><img src="/assets/Leafline/10007.jpg" alt=""></div>
+            <div class="cs_leaf_testi_img"><img src="/assets/Leafline/10031.jpg" alt=""></div>
+            <div class="cs_leaf_testi_img"><img src="/assets/Leafline/10032.jpg" alt=""></div>
+          </div>
+          <div class="cs_leaf_testi_content wow fadeInUp" data-wow-delay="0.1s">
+            <span class="cs_sticky_eyebrow">TRUSTED ACROSS THE SUPPLY CHAIN</span>
+            <h2 class="cs_two_tone cs_home_heading_sz">WHAT OUR <br><span>PARTNERS SAY</span></h2>
+            <div class="cs_leaf_testi_cards" id="cs_leaf_testi_cards">
+              <div class="cs_leaf_testi_card active">
+                <div class="cs_leaf_testi_stars">★★★★★</div>
+                <p>"PharmaCrop's consistency batch to batch makes compounding straightforward. We always know what we're getting."</p>
+                <div class="cs_leaf_testi_author"><strong>Compounding Pharmacist</strong><span>Community Pharmacy Partner</span></div>
+              </div>
+              <div class="cs_leaf_testi_card">
+                <div class="cs_leaf_testi_stars">★★★★★</div>
+                <p>"Supply confidence is everything in this industry. PharmaCrop has never let a delivery window slip on us."</p>
+                <div class="cs_leaf_testi_author"><strong>Distribution Partner</strong><span>National Wholesale Distributor</span></div>
+              </div>
+              <div class="cs_leaf_testi_card">
+                <div class="cs_leaf_testi_stars">★★★★★</div>
+                <p>"The traceability from cultivar to finished product gives me real confidence when discussing options with patients."</p>
+                <div class="cs_leaf_testi_author"><strong>Prescribing Clinician</strong><span>Telehealth Provider</span></div>
+              </div>
+              <div class="cs_leaf_testi_card">
+                <div class="cs_leaf_testi_stars">★★★★★</div>
+                <p>"You can tell cultivation and manufacturing sit under one roof. The quality is genuinely consistent, order after order."</p>
+                <div class="cs_leaf_testi_author"><strong>Pharmacy Owner</strong><span>Independent Pharmacy Group</span></div>
+              </div>
+              <div class="cs_leaf_testi_card">
+                <div class="cs_leaf_testi_stars">★★★★★</div>
+                <p>"Working with an Australian-grown, GMP-certified supplier has simplified our entire procurement process."</p>
+                <div class="cs_leaf_testi_author"><strong>Industry Partner</strong><span>Healthcare Procurement Lead</span></div>
+              </div>
+              <div class="cs_leaf_testi_card">
+                <div class="cs_leaf_testi_stars">★★★★★</div>
+                <p>"Their hand-packing process and quality systems are the most disciplined I've seen from an integrated grower."</p>
+                <div class="cs_leaf_testi_author"><strong>Operations Lead</strong><span>Contract Manufacturing Partner</span></div>
+              </div>
+            </div>
+            <div class="cs_leaf_testi_dots" id="cs_leaf_testi_dots">
+              <button class="cs_leaf_testi_dot active" data-goto="0" aria-label="Testimonial 1"></button>
+              <button class="cs_leaf_testi_dot" data-goto="1" aria-label="Testimonial 2"></button>
+              <button class="cs_leaf_testi_dot" data-goto="2" aria-label="Testimonial 3"></button>
+              <button class="cs_leaf_testi_dot" data-goto="3" aria-label="Testimonial 4"></button>
+              <button class="cs_leaf_testi_dot" data-goto="4" aria-label="Testimonial 5"></button>
+              <button class="cs_leaf_testi_dot" data-goto="5" aria-label="Testimonial 6"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Leafline Testimonials -->
     <!-- Start Contact Card Section -->
     <style>
       .cs_contact_card_section { padding: 100px 0; }
@@ -726,7 +807,7 @@ export default function Page() {
         .cs_scroll_stack { height: 260vh; }
         .cs_scroll_stack_row { flex-direction: column; padding: 0 24px; gap: 32px; }
         .cs_scroll_stack_left { flex: none; }
-        .cs_scroll_stack_right { width: 100%; height: 320px; }
+        .cs_scroll_stack_right { width: 100%; height: 380px; }
         .cs_scroll_card { width: 320px; }
         .cs_scroll_card img { height: 220px; }
         .cs_scroll_stack_title { font-size: 30px; }
@@ -939,6 +1020,38 @@ export default function Page() {
         })();
       `}
     </Script>
+    <Script id="cs_leaf_testi_slider_script" strategy="afterInteractive">
+      {`
+        (function () {
+          var cards = document.querySelectorAll('#cs_leaf_testi_cards .cs_leaf_testi_card');
+          var imgs = document.querySelectorAll('.cs_leaf_testi_img');
+          var dots = document.querySelectorAll('#cs_leaf_testi_dots .cs_leaf_testi_dot');
+          if (!cards.length) return;
+          var idx = 0;
+          var timer;
+          function show(i) {
+            cards.forEach(function (c, ci) { c.classList.toggle('active', ci === i); });
+            imgs.forEach(function (im, ii) { im.classList.toggle('active', ii === i); });
+            dots.forEach(function (d, di) { d.classList.toggle('active', di === i); });
+            idx = i;
+          }
+          function next() {
+            show((idx + 1) % cards.length);
+          }
+          function restart() {
+            clearInterval(timer);
+            timer = setInterval(next, 5000);
+          }
+          dots.forEach(function (d) {
+            d.addEventListener('click', function () {
+              show(parseInt(d.getAttribute('data-goto'), 10));
+              restart();
+            });
+          });
+          restart();
+        })();
+      `}
+    </Script>
     <Script id="cs_scroll_stack_script" strategy="afterInteractive">
       {`
         (function () {
@@ -957,25 +1070,32 @@ export default function Page() {
             var scrolled = clamp(-rect.top, 0, totalScrollable);
             var overall = totalScrollable > 0 ? scrolled / totalScrollable : 0;
 
+            var isNarrow = window.innerWidth <= 767;
+            var rotateIn = isNarrow ? -8 : -18;
+            var rotateOut = isNarrow ? 6 : 12;
+
             cards.forEach(function (card, i) {
               var ownProgress = clamp(overall * n - i, 0, 1);
               var nextProgress = i < n - 1 ? clamp(overall * n - (i + 1), 0, 1) : 0;
 
+              var w = card.offsetWidth;
+              var h = card.offsetHeight;
+
               var scale = lerp(0.7, 1, ownProgress);
-              var rotate = lerp(-18, 0, ownProgress);
-              var translateX = lerp(18, 0, ownProgress);
-              var translateY = lerp(12, 0, ownProgress);
+              var rotate = lerp(rotateIn, 0, ownProgress);
+              var translateX = lerp(w * 0.16, 0, ownProgress);
+              var translateY = lerp(h * 0.14, 0, ownProgress);
               var blur = lerp(16, 0, ownProgress);
               var opacity = Math.min(ownProgress * 2, 1);
 
               scale = lerp(scale, 0.72, nextProgress);
-              rotate = lerp(rotate, 12, nextProgress);
-              translateX = lerp(translateX, 26, nextProgress);
-              translateY = lerp(translateY, -20, nextProgress);
+              rotate = lerp(rotate, rotateOut, nextProgress);
+              translateX = lerp(translateX, w * 0.22, nextProgress);
+              translateY = lerp(translateY, -h * 0.2, nextProgress);
               opacity = opacity * lerp(1, 0.55, nextProgress);
               blur = blur + lerp(0, 2, nextProgress);
 
-              card.style.transform = 'translate3d(calc(-50% + ' + translateX + 'vw), calc(-50% + ' + translateY + 'vh), 0) scale(' + scale + ') rotate(' + rotate + 'deg)';
+              card.style.transform = 'translate3d(calc(-50% + ' + translateX + 'px), calc(-50% + ' + translateY + 'px), 0) scale(' + scale + ') rotate(' + rotate + 'deg)';
               card.style.filter = 'blur(' + blur + 'px)';
               card.style.opacity = opacity;
               card.style.zIndex = 10 + i;
