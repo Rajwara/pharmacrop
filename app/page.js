@@ -381,65 +381,136 @@ export default function Page() {
       .cs_platform_journey_title { font-size: 38px; font-weight: 800; line-height: 1.25; color: #024242; margin: 0 0 20px; }
       .cs_platform_journey_title span { background: linear-gradient(223deg, rgba(2, 66, 66, 0.8) 0.37%, #666666 49.66%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
       .cs_platform_journey_text { font-size: 16px; line-height: 1.7; color: #666; margin: 0 auto; max-width: 640px; }
-      .cs_platform_journey_grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-      .cs_platform_stage { background: #fff; border-radius: 12px; padding: 40px 32px; transition: 0.3s; border: 1px solid #eee; }
-      .cs_platform_stage:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(2,66,66,0.1); border-color: transparent; }
-      .cs_platform_stage_icon { width: 62px; height: 62px; border-radius: 50%; background: rgba(120,220,166,0.15); display: flex; align-items: center; justify-content: center; margin-bottom: 22px; font-size: 24px; color: #024242; }
-      .cs_platform_stage h3 { color: #024242; font-size: 20px; margin: 0 0 12px; }
-      .cs_platform_stage p { color: #666; font-size: 15px; line-height: 1.7; margin: 0; }
+      .cs_platform_tabs { display: grid; grid-template-columns: 360px 1fr; gap: 40px; align-items: start; }
+      .cs_platform_tabs_nav { position: sticky; top: 110px; display: flex; flex-direction: column; background: #fff; border: 1px solid #eee; border-radius: 12px; overflow: hidden; }
+      .cs_platform_tab { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; text-align: left; padding: 20px 24px; background: #fff; border: none; border-bottom: 1px solid #eee; font-family: inherit; font-size: 16px; font-weight: 600; color: #024242; cursor: pointer; transition: background 0.3s ease, color 0.3s ease; }
+      .cs_platform_tab:last-child { border-bottom: none; }
+      .cs_platform_tab i { font-size: 13px; transition: transform 0.3s ease; flex-shrink: 0; }
+      .cs_platform_tab:hover { background: rgba(120,220,166,0.18); }
+      .cs_platform_tab.active { background: linear-gradient(90deg, #78dca6 0%, rgba(120,220,166,0.2) 100%); }
+      .cs_platform_tab.active i { transform: translateX(4px); }
+      .cs_platform_tabs_panel { position: relative; min-height: 420px; }
+      .cs_platform_tab_content { display: none; background: #024242; border-radius: 16px; overflow: hidden; align-items: stretch; }
+      .cs_platform_tab_content.active { display: flex; animation: cs_platform_fade 0.4s ease; }
+      @keyframes cs_platform_fade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+      .cs_platform_tab_img { flex: 0 0 45%; }
+      .cs_platform_tab_img img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; display: block; }
+      .cs_platform_tab_body { flex: 1; padding: 48px; display: flex; flex-direction: column; justify-content: center; }
+      .cs_platform_tab_icon { width: 56px; height: 56px; border-radius: 50%; background: rgba(120,220,166,0.18); color: #78dca6; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 20px; }
+      .cs_platform_tab_body h3 { color: #fff; font-size: 28px; margin: 0 0 16px; }
+      .cs_platform_tab_body p { color: rgba(255,255,255,0.85); font-size: 16px; line-height: 1.7; margin: 0; max-width: 440px; }
       @media (max-width: 991px) {
-        .cs_platform_journey_grid { grid-template-columns: repeat(2, 1fr); }
+        .cs_platform_tabs { grid-template-columns: 1fr; }
+        .cs_platform_tabs_nav { position: static; flex-direction: row; overflow-x: auto; }
+        .cs_platform_tab { flex: 0 0 auto; width: auto; white-space: nowrap; border-bottom: none; border-right: 1px solid #eee; }
+        .cs_platform_tab:last-child { border-right: none; }
+        .cs_platform_tab_content { flex-direction: column; }
+        .cs_platform_tab_img img { min-height: 220px; }
+        .cs_platform_tab_body { padding: 32px; }
       }
       @media (max-width: 767px) {
         .cs_platform_journey { padding: 80px 0; }
         .cs_platform_journey_title { font-size: 28px; }
       }
       @media (max-width: 600px) {
-        .cs_platform_journey_grid { grid-template-columns: 1fr; }
+        .cs_platform_tab_body h3 { font-size: 22px; }
       }
     </style>
-    <section class="cs_platform_journey">
+    <section class="cs_platform_journey" id="cs_platform_journey">
       <div class="container">
         <div class="cs_platform_journey_head">
           <span class="cs_platform_journey_eyebrow">Integrated Platform</span>
           <h2 class="cs_platform_journey_title">ONE INTEGRATED PLATFORM.<br><span>END-TO-END CAPABILITY.</span></h2>
           <p class="cs_platform_journey_text">From genetics and cultivation through GMP manufacturing, quality, commercialisation and global export &mdash; all under one integrated operation.</p>
         </div>
-        <div class="cs_platform_journey_grid">
-          <div class="cs_platform_stage wow fadeInUp">
-            <div class="cs_platform_stage_icon"><i class="fa-solid fa-dna"></i></div>
-            <h3>Genetics</h3>
-            <p>Proprietary phenohunt programs select high-performing cultivars.</p>
+        <div class="cs_platform_tabs">
+          <div class="cs_platform_tabs_nav">
+            <button type="button" class="cs_platform_tab active" data-target="0">
+              <span>Genetics</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <button type="button" class="cs_platform_tab" data-target="1">
+              <span>Cultivation</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <button type="button" class="cs_platform_tab" data-target="2">
+              <span>GMP Manufacturing</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <button type="button" class="cs_platform_tab" data-target="3">
+              <span>Quality &amp; Release</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <button type="button" class="cs_platform_tab" data-target="4">
+              <span>Research &amp; Innovation</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <button type="button" class="cs_platform_tab" data-target="5">
+              <span>Market Access &amp; Commercialisation</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <button type="button" class="cs_platform_tab" data-target="6">
+              <span>Global Export</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
           </div>
-          <div class="cs_platform_stage wow fadeInUp" data-wow-delay="0.1s">
-            <div class="cs_platform_stage_icon"><i class="fa-solid fa-seedling"></i></div>
-            <h3>Cultivation</h3>
-            <p>Australian-grown using controlled-environment cultivation in the Noosa Hinterland.</p>
-          </div>
-          <div class="cs_platform_stage wow fadeInUp" data-wow-delay="0.2s">
-            <div class="cs_platform_stage_icon"><i class="fa-solid fa-industry"></i></div>
-            <h3>GMP Manufacturing</h3>
-            <p>Manufacturing within a GMP-certified facility to pharmaceutical standards.</p>
-          </div>
-          <div class="cs_platform_stage wow fadeInUp">
-            <div class="cs_platform_stage_icon"><i class="fa-solid fa-shield-halved"></i></div>
-            <h3>Quality &amp; Release</h3>
-            <p>Rigorous quality systems support safety, consistency and regulatory compliance.</p>
-          </div>
-          <div class="cs_platform_stage wow fadeInUp" data-wow-delay="0.1s">
-            <div class="cs_platform_stage_icon"><i class="fa-solid fa-microscope"></i></div>
-            <h3>Research &amp; Innovation</h3>
-            <p>Scientific expertise and product innovation drive continual advancement.</p>
-          </div>
-          <div class="cs_platform_stage wow fadeInUp" data-wow-delay="0.2s">
-            <div class="cs_platform_stage_icon"><i class="fa-solid fa-handshake"></i></div>
-            <h3>Market Access &amp; Commercialisation</h3>
-            <p>Commercial expertise supports market access and long-term healthcare adoption.</p>
-          </div>
-          <div class="cs_platform_stage wow fadeInUp">
-            <div class="cs_platform_stage_icon"><i class="fa-solid fa-globe"></i></div>
-            <h3>Global Export</h3>
-            <p>Export-ready capability supports international partnerships and regulated global expansion.</p>
+          <div class="cs_platform_tabs_panel">
+            <div class="cs_platform_tab_content active" data-index="0">
+              <div class="cs_platform_tab_img"><img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt="Genetics"></div>
+              <div class="cs_platform_tab_body">
+                <span class="cs_platform_tab_icon"><i class="fa-solid fa-dna"></i></span>
+                <h3>Genetics</h3>
+                <p>Proprietary phenohunt programs select high-performing cultivars.</p>
+              </div>
+            </div>
+            <div class="cs_platform_tab_content" data-index="1">
+              <div class="cs_platform_tab_img"><img src="/assets/img/pharma-banner.jpeg" alt="Cultivation"></div>
+              <div class="cs_platform_tab_body">
+                <span class="cs_platform_tab_icon"><i class="fa-solid fa-seedling"></i></span>
+                <h3>Cultivation</h3>
+                <p>Australian-grown using controlled-environment cultivation in the Noosa Hinterland.</p>
+              </div>
+            </div>
+            <div class="cs_platform_tab_content" data-index="2">
+              <div class="cs_platform_tab_img"><img src="/assets/img/pharmacrop-banner2.webp" alt="GMP Manufacturing"></div>
+              <div class="cs_platform_tab_body">
+                <span class="cs_platform_tab_icon"><i class="fa-solid fa-industry"></i></span>
+                <h3>GMP Manufacturing</h3>
+                <p>Manufacturing within a GMP-certified facility to pharmaceutical standards.</p>
+              </div>
+            </div>
+            <div class="cs_platform_tab_content" data-index="3">
+              <div class="cs_platform_tab_img"><img src="/assets/img/pharmacrop-banner3.webp" alt="Quality &amp; Release"></div>
+              <div class="cs_platform_tab_body">
+                <span class="cs_platform_tab_icon"><i class="fa-solid fa-shield-halved"></i></span>
+                <h3>Quality &amp; Release</h3>
+                <p>Rigorous quality systems support safety, consistency and regulatory compliance.</p>
+              </div>
+            </div>
+            <div class="cs_platform_tab_content" data-index="4">
+              <div class="cs_platform_tab_img"><img src="/assets/img/pharmacrop-banner1.webp" alt="Research &amp; Innovation"></div>
+              <div class="cs_platform_tab_body">
+                <span class="cs_platform_tab_icon"><i class="fa-solid fa-microscope"></i></span>
+                <h3>Research &amp; Innovation</h3>
+                <p>Scientific expertise and product innovation drive continual advancement.</p>
+              </div>
+            </div>
+            <div class="cs_platform_tab_content" data-index="5">
+              <div class="cs_platform_tab_img"><img src="/assets/img/health-professionals-card.webp" alt="Market Access &amp; Commercialisation"></div>
+              <div class="cs_platform_tab_body">
+                <span class="cs_platform_tab_icon"><i class="fa-solid fa-handshake"></i></span>
+                <h3>Market Access &amp; Commercialisation</h3>
+                <p>Commercial expertise supports market access and long-term healthcare adoption.</p>
+              </div>
+            </div>
+            <div class="cs_platform_tab_content" data-index="6">
+              <div class="cs_platform_tab_img"><img src="/assets/img/pharmacrop-banner4.webp" alt="Global Export"></div>
+              <div class="cs_platform_tab_body">
+                <span class="cs_platform_tab_icon"><i class="fa-solid fa-globe"></i></span>
+                <h3>Global Export</h3>
+                <p>Export-ready capability supports international partnerships and regulated global expansion.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -859,6 +930,26 @@ export default function Page() {
 `,
       }}
     />
+    <Script id="cs_platform_tabs_script" strategy="afterInteractive">
+      {`
+        (function () {
+          var section = document.getElementById('cs_platform_journey');
+          if (!section) return;
+          var tabs = section.querySelectorAll('.cs_platform_tab');
+          var contents = section.querySelectorAll('.cs_platform_tab_content');
+          tabs.forEach(function (tab) {
+            tab.addEventListener('click', function () {
+              var idx = tab.getAttribute('data-target');
+              tabs.forEach(function (t) { t.classList.remove('active'); });
+              contents.forEach(function (c) { c.classList.remove('active'); });
+              tab.classList.add('active');
+              var target = section.querySelector('.cs_platform_tab_content[data-index="' + idx + '"]');
+              if (target) target.classList.add('active');
+            });
+          });
+        })();
+      `}
+    </Script>
     </>
   );
 }
