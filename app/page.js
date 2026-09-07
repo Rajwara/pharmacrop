@@ -267,6 +267,23 @@ export default function Page() {
       .cs_partners_heading .cs_sticky_text { max-width: 100%; margin-bottom: 0; }
       .cs_two_tone span { background: linear-gradient(223deg, rgba(2, 66, 66, 0.8) 0.37%, #666666 49.66%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
       .cs_card_icon { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 8px; color: #fff; font-size: 18px; margin-bottom: 16px; }
+      .cs_card_1_group .cs_card_title.cs_fs_32 { font-size: 24px !important; }
+      @media (max-width: 1400px) {
+        .cs_card_1_group .cs_card_title.cs_fs_32 { font-size: 22px !important; }
+      }
+      @media (max-width: 1199px) {
+        .cs_card_1_group .cs_card_title.cs_fs_32 { font-size: 20px !important; }
+      }
+      .cs_card_1_group .cs_card.cs_style_1.active .cs_card_title { font-size: 56px !important; }
+      @media (max-width: 1400px) {
+        .cs_card_1_group .cs_card.cs_style_1.active .cs_card_title { font-size: 48px !important; }
+      }
+      @media (max-width: 1199px) {
+        .cs_card_1_group .cs_card.cs_style_1.active .cs_card_title { font-size: 42px !important; }
+      }
+      @media (max-width: 991px) {
+        .cs_card_1_group .cs_card.cs_style_1.active .cs_card_title { font-size: 22px !important; }
+      }
     </style>
     <section>
       <div class="cs_height_100 cs_height_lg_70"></div>
