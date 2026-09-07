@@ -617,6 +617,38 @@ export default function Page() {
       </div>
     </section>
     <!-- End Guide Overlap Section -->
+    <!-- Start What We Do Split Section -->
+    <style>
+      .cs_do_split { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; }
+      .cs_do_split_panel { background: #024242; color: #fff; padding: 100px 80px; display: flex; flex-direction: column; justify-content: center; }
+      .cs_do_split_eyebrow_row { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+      .cs_do_split_line { width: 32px; height: 2px; background: #78dca6; display: inline-block; }
+      .cs_do_split_label { font-weight: 700; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #78dca6; }
+      .cs_do_split_title { color: #fff; font-size: 40px; font-weight: 800; line-height: 1.25; margin: 0 0 20px; }
+      .cs_do_split_text { color: rgba(255, 255, 255, 0.75); font-size: 16px; line-height: 1.7; margin: 0; max-width: 460px; }
+      .cs_do_split_img { position: relative; min-height: 480px; }
+      .cs_do_split_img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      @media (max-width: 991px) {
+        .cs_do_split { grid-template-columns: 1fr; }
+        .cs_do_split_panel { padding: 60px 32px; }
+        .cs_do_split_img { min-height: 300px; }
+        .cs_do_split_title { font-size: 30px; }
+      }
+    </style>
+    <section class="cs_do_split">
+      <div class="cs_do_split_panel">
+        <div class="cs_do_split_eyebrow_row">
+          <span class="cs_do_split_line"></span>
+          <span class="cs_do_split_label">What We Do</span>
+        </div>
+        <h2 class="cs_do_split_title">Cultivated naturally. Manufactured with pharmaceutical precision.</h2>
+        <p class="cs_do_split_text">Every stage of our operation &mdash; from cultivar selection to GMP-certified processing &mdash; is guided by consistency, traceability and care. Australian-grown, and shaped by cultivation expertise drawn from California, Canada and South Africa.</p>
+      </div>
+      <div class="cs_do_split_img">
+        <img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt="PharmaCrop cultivation greenhouse">
+      </div>
+    </section>
+    <!-- End What We Do Split Section -->
     <!-- Start Footer Section -->
     <style>
       .cs_footer_brand { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
