@@ -894,31 +894,39 @@ export default function Page() {
       .cs_platform_tab:hover { background: rgba(120,220,166,0.18); }
       .cs_platform_tab.active { background: linear-gradient(90deg, #78dca6 0%, rgba(120,220,166,0.2) 100%); }
       .cs_platform_tab.active i { transform: translateX(4px); }
-      .cs_platform_tabs_panel { position: relative; min-height: 420px; }
-      .cs_platform_tab_content { display: none; background: #024242; border-radius: 16px; overflow: hidden; align-items: stretch; }
-      .cs_platform_tab_content.active { display: flex; animation: cs_platform_fade 0.4s ease; }
-      @keyframes cs_platform_fade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-      .cs_platform_tab_img { flex: 0 0 45%; }
-      .cs_platform_tab_img img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; display: block; }
-      .cs_platform_tab_body { flex: 1; padding: 48px; display: flex; flex-direction: column; justify-content: center; }
-      .cs_platform_tab_icon { width: 56px; height: 56px; border-radius: 50%; background: rgba(120,220,166,0.18); color: #78dca6; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 20px; }
-      .cs_platform_tab_body h3 { color: #fff; font-size: 28px; margin: 0 0 16px; }
-      .cs_platform_tab_body p { color: rgba(255,255,255,0.85); font-size: 16px; line-height: 1.7; margin: 0; max-width: 440px; }
+      .cs_platform_items { display: flex; flex-direction: column; gap: 20px; }
+      .cs_platform_item { display: flex; align-items: stretch; gap: 32px; border-radius: 16px; padding: 12px; transition: background-color 0.3s ease; }
+      .cs_platform_item_img { flex: 0 0 260px; border-radius: 12px; overflow: hidden; }
+      .cs_platform_item_img img { width: 100%; height: 100%; min-height: 180px; object-fit: cover; display: block; }
+      .cs_platform_item_body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 8px 0; }
+      .cs_platform_item_icon { display: none; width: 48px; height: 48px; border-radius: 50%; background: rgba(120,220,166,0.18); color: #78dca6; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px; }
+      .cs_platform_item_body h3 { color: #024242; font-size: 22px; margin: 0 0 10px; transition: color 0.3s ease; }
+      .cs_platform_item_body p { color: #666; font-size: 15px; line-height: 1.7; margin: 0; max-width: 420px; transition: color 0.3s ease; }
+      .cs_platform_item.active { background: #024242; padding: 0; gap: 0; }
+      .cs_platform_item.active .cs_platform_item_img { flex-basis: 45%; border-radius: 16px 0 0 16px; }
+      .cs_platform_item.active .cs_platform_item_img img { min-height: 380px; border-radius: 0; }
+      .cs_platform_item.active .cs_platform_item_body { padding: 48px; }
+      .cs_platform_item.active .cs_platform_item_icon { display: flex; }
+      .cs_platform_item.active .cs_platform_item_body h3 { color: #fff; font-size: 28px; }
+      .cs_platform_item.active .cs_platform_item_body p { color: rgba(255,255,255,0.85); }
       @media (max-width: 991px) {
         .cs_platform_tabs { grid-template-columns: 1fr; }
         .cs_platform_tabs_nav { position: static; flex-direction: row; overflow-x: auto; }
         .cs_platform_tab { flex: 0 0 auto; width: auto; white-space: nowrap; border-bottom: none; border-right: 1px solid #eee; }
         .cs_platform_tab:last-child { border-right: none; }
-        .cs_platform_tab_content { flex-direction: column; }
-        .cs_platform_tab_img img { min-height: 220px; }
-        .cs_platform_tab_body { padding: 32px; }
       }
       @media (max-width: 767px) {
         .cs_platform_journey { padding: 80px 0; }
         .cs_platform_journey_title { font-size: 28px; }
+        .cs_platform_item { flex-direction: column; }
+        .cs_platform_item_img { flex-basis: auto; }
+        .cs_platform_item_img img { min-height: 200px; }
+        .cs_platform_item.active .cs_platform_item_img { border-radius: 16px 16px 0 0; }
+        .cs_platform_item.active .cs_platform_item_img img { min-height: 220px; }
+        .cs_platform_item.active .cs_platform_item_body { padding: 32px; }
       }
       @media (max-width: 600px) {
-        .cs_platform_tab_body h3 { font-size: 22px; }
+        .cs_platform_item.active .cs_platform_item_body h3 { font-size: 22px; }
       }
     </style>
     <section class="cs_platform_journey" id="cs_platform_journey">
@@ -959,59 +967,59 @@ export default function Page() {
               <i class="fa-solid fa-arrow-right"></i>
             </button>
           </div>
-          <div class="cs_platform_tabs_panel">
-            <div class="cs_platform_tab_content active" data-index="0">
-              <div class="cs_platform_tab_img"><img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt="Genetics"></div>
-              <div class="cs_platform_tab_body">
-                <span class="cs_platform_tab_icon"><i class="fa-solid fa-dna"></i></span>
+          <div class="cs_platform_items">
+            <div class="cs_platform_item active" data-index="0">
+              <div class="cs_platform_item_img"><img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt="Genetics"></div>
+              <div class="cs_platform_item_body">
+                <span class="cs_platform_item_icon"><i class="fa-solid fa-dna"></i></span>
                 <h3>Genetics</h3>
                 <p>Proprietary phenohunt programs select high-performing cultivars.</p>
               </div>
             </div>
-            <div class="cs_platform_tab_content" data-index="1">
-              <div class="cs_platform_tab_img"><img src="/assets/img/pharma-banner.jpeg" alt="Cultivation"></div>
-              <div class="cs_platform_tab_body">
-                <span class="cs_platform_tab_icon"><i class="fa-solid fa-seedling"></i></span>
+            <div class="cs_platform_item" data-index="1">
+              <div class="cs_platform_item_img"><img src="/assets/img/pharma-banner.jpeg" alt="Cultivation"></div>
+              <div class="cs_platform_item_body">
+                <span class="cs_platform_item_icon"><i class="fa-solid fa-seedling"></i></span>
                 <h3>Cultivation</h3>
                 <p>Australian-grown using controlled-environment cultivation in the Noosa Hinterland.</p>
               </div>
             </div>
-            <div class="cs_platform_tab_content" data-index="2">
-              <div class="cs_platform_tab_img"><img src="/assets/img/pharmacrop-banner2.webp" alt="GMP Manufacturing"></div>
-              <div class="cs_platform_tab_body">
-                <span class="cs_platform_tab_icon"><i class="fa-solid fa-industry"></i></span>
+            <div class="cs_platform_item" data-index="2">
+              <div class="cs_platform_item_img"><img src="/assets/img/pharmacrop-banner2.webp" alt="GMP Manufacturing"></div>
+              <div class="cs_platform_item_body">
+                <span class="cs_platform_item_icon"><i class="fa-solid fa-industry"></i></span>
                 <h3>GMP Manufacturing</h3>
                 <p>Manufacturing within a GMP-certified facility to pharmaceutical standards.</p>
               </div>
             </div>
-            <div class="cs_platform_tab_content" data-index="3">
-              <div class="cs_platform_tab_img"><img src="/assets/img/pharmacrop-banner3.webp" alt="Quality &amp; Release"></div>
-              <div class="cs_platform_tab_body">
-                <span class="cs_platform_tab_icon"><i class="fa-solid fa-shield-halved"></i></span>
+            <div class="cs_platform_item" data-index="3">
+              <div class="cs_platform_item_img"><img src="/assets/img/pharmacrop-banner3.webp" alt="Quality &amp; Release"></div>
+              <div class="cs_platform_item_body">
+                <span class="cs_platform_item_icon"><i class="fa-solid fa-shield-halved"></i></span>
                 <h3>Quality &amp; Release</h3>
                 <p>Rigorous quality systems support safety, consistency and regulatory compliance.</p>
               </div>
             </div>
-            <div class="cs_platform_tab_content" data-index="4">
-              <div class="cs_platform_tab_img"><img src="/assets/img/pharmacrop-banner1.webp" alt="Research &amp; Innovation"></div>
-              <div class="cs_platform_tab_body">
-                <span class="cs_platform_tab_icon"><i class="fa-solid fa-microscope"></i></span>
+            <div class="cs_platform_item" data-index="4">
+              <div class="cs_platform_item_img"><img src="/assets/img/pharmacrop-banner1.webp" alt="Research &amp; Innovation"></div>
+              <div class="cs_platform_item_body">
+                <span class="cs_platform_item_icon"><i class="fa-solid fa-microscope"></i></span>
                 <h3>Research &amp; Innovation</h3>
                 <p>Scientific expertise and product innovation drive continual advancement.</p>
               </div>
             </div>
-            <div class="cs_platform_tab_content" data-index="5">
-              <div class="cs_platform_tab_img"><img src="/assets/img/health-professionals-card.webp" alt="Market Access &amp; Commercialisation"></div>
-              <div class="cs_platform_tab_body">
-                <span class="cs_platform_tab_icon"><i class="fa-solid fa-handshake"></i></span>
+            <div class="cs_platform_item" data-index="5">
+              <div class="cs_platform_item_img"><img src="/assets/img/health-professionals-card.webp" alt="Market Access &amp; Commercialisation"></div>
+              <div class="cs_platform_item_body">
+                <span class="cs_platform_item_icon"><i class="fa-solid fa-handshake"></i></span>
                 <h3>Market Access &amp; Commercialisation</h3>
                 <p>Commercial expertise supports market access and long-term healthcare adoption.</p>
               </div>
             </div>
-            <div class="cs_platform_tab_content" data-index="6">
-              <div class="cs_platform_tab_img"><img src="/assets/img/pharmacrop-banner4.webp" alt="Global Export"></div>
-              <div class="cs_platform_tab_body">
-                <span class="cs_platform_tab_icon"><i class="fa-solid fa-globe"></i></span>
+            <div class="cs_platform_item" data-index="6">
+              <div class="cs_platform_item_img"><img src="/assets/img/pharmacrop-banner4.webp" alt="Global Export"></div>
+              <div class="cs_platform_item_body">
+                <span class="cs_platform_item_icon"><i class="fa-solid fa-globe"></i></span>
                 <h3>Global Export</h3>
                 <p>Export-ready capability supports international partnerships and regulated global expansion.</p>
               </div>
@@ -1219,17 +1227,39 @@ export default function Page() {
           var section = document.getElementById('cs_platform_journey');
           if (!section) return;
           var tabs = section.querySelectorAll('.cs_platform_tab');
-          var contents = section.querySelectorAll('.cs_platform_tab_content');
+          var items = section.querySelectorAll('.cs_platform_item');
+
+          function setActive(idx) {
+            tabs.forEach(function (t) { t.classList.toggle('active', t.getAttribute('data-target') === idx); });
+            items.forEach(function (it) { it.classList.toggle('active', it.getAttribute('data-index') === idx); });
+          }
+
           tabs.forEach(function (tab) {
             tab.addEventListener('click', function () {
               var idx = tab.getAttribute('data-target');
-              tabs.forEach(function (t) { t.classList.remove('active'); });
-              contents.forEach(function (c) { c.classList.remove('active'); });
-              tab.classList.add('active');
-              var target = section.querySelector('.cs_platform_tab_content[data-index="' + idx + '"]');
-              if (target) target.classList.add('active');
+              setActive(idx);
+              requestAnimationFrame(function () {
+                var target = section.querySelector('.cs_platform_item[data-index="' + idx + '"]');
+                if (target) {
+                  var rect = target.getBoundingClientRect();
+                  var targetCenter = rect.top + window.scrollY + rect.height / 2;
+                  var y = targetCenter - window.innerHeight / 2;
+                  window.scrollTo({ top: y, behavior: 'smooth' });
+                }
+              });
             });
           });
+
+          if ('IntersectionObserver' in window) {
+            var observer = new IntersectionObserver(function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  setActive(entry.target.getAttribute('data-index'));
+                }
+              });
+            }, { root: null, rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+            items.forEach(function (it) { observer.observe(it); });
+          }
         })();
       `}
     </Script>
