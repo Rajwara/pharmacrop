@@ -881,35 +881,26 @@ export default function Page() {
     <!-- Start Integrated Platform Journey Section -->
     <style>
       .cs_platform_journey { padding: 110px 0; background: #f7faf8; }
-      .cs_platform_journey_head { max-width: 700px; margin: 0 auto 64px; text-align: center; }
-      .cs_platform_journey_eyebrow { display: block; color: #024242; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
-      .cs_platform_journey_title { font-size: 40px; font-weight: 800; line-height: 1.25; color: #024242; margin: 0 0 20px; }
+      .cs_platform_journey_head { max-width: 700px; margin: 0 auto 60px; text-align: center; }
+      .cs_platform_journey_eyebrow { display: block; color: #78dca6; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; font-size: 14px; margin-bottom: 14px; }
+      .cs_platform_journey_title { font-size: 38px; font-weight: 800; line-height: 1.25; color: #024242; margin: 0 0 20px; }
       .cs_platform_journey_title span { background: linear-gradient(223deg, rgba(2, 66, 66, 0.8) 0.37%, #666666 49.66%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-      .cs_platform_journey_text { font-size: 16px; line-height: 1.7; color: #6b7280; margin: 0 auto; max-width: 640px; }
-      .cs_platform_journey_row { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; position: relative; }
-      .cs_platform_journey_row::before { content: ""; position: absolute; top: 34px; left: 60px; right: 60px; height: 2px; background: repeating-linear-gradient(90deg, rgba(2,66,66,0.25) 0 8px, transparent 8px 16px); z-index: 0; }
-      .cs_platform_stage { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 6px; }
-      .cs_platform_stage_icon { width: 68px; height: 68px; border-radius: 50%; background: #024242; color: #78dca6; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px; border: 5px solid #f7faf8; flex-shrink: 0; }
-      .cs_platform_stage h3 { font-size: 16px; font-weight: 700; color: #024242; margin: 0 0 8px; }
-      .cs_platform_stage p { font-size: 13px; line-height: 1.6; color: #6b7280; margin: 0; }
-      @media (max-width: 1300px) {
-        .cs_platform_journey_row::before { left: 40px; right: 40px; }
-        .cs_platform_stage_icon { width: 58px; height: 58px; font-size: 20px; }
-      }
-      @media (max-width: 1199px) {
-        .cs_platform_journey_row { flex-wrap: wrap; row-gap: 48px; }
-        .cs_platform_journey_row::before { display: none; }
-        .cs_platform_stage { flex: 0 0 25%; max-width: 25%; }
+      .cs_platform_journey_text { font-size: 16px; line-height: 1.7; color: #666; margin: 0 auto; max-width: 640px; }
+      .cs_platform_journey_grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+      .cs_platform_stage { background: #fff; border-radius: 12px; padding: 40px 32px; transition: 0.3s; border: 1px solid #eee; }
+      .cs_platform_stage:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(2,66,66,0.1); border-color: transparent; }
+      .cs_platform_stage_icon { width: 62px; height: 62px; border-radius: 50%; background: rgba(120,220,166,0.15); display: flex; align-items: center; justify-content: center; margin-bottom: 22px; font-size: 24px; color: #024242; }
+      .cs_platform_stage h3 { color: #024242; font-size: 20px; margin: 0 0 12px; }
+      .cs_platform_stage p { color: #666; font-size: 15px; line-height: 1.7; margin: 0; }
+      @media (max-width: 991px) {
+        .cs_platform_journey_grid { grid-template-columns: repeat(2, 1fr); }
       }
       @media (max-width: 767px) {
         .cs_platform_journey { padding: 80px 0; }
         .cs_platform_journey_title { font-size: 28px; }
-        .cs_platform_journey_row { flex-direction: column; row-gap: 0; }
-        .cs_platform_stage { flex-direction: row; align-items: flex-start; text-align: left; max-width: 100%; width: 100%; padding: 0 0 32px; position: relative; }
-        .cs_platform_stage:last-child { padding-bottom: 0; }
-        .cs_platform_stage_icon { margin-bottom: 0; margin-right: 20px; width: 56px; height: 56px; font-size: 20px; border-width: 4px; }
-        .cs_platform_stage::after { content: ""; position: absolute; top: 56px; left: 27px; bottom: 0; width: 2px; background: rgba(2,66,66,0.15); }
-        .cs_platform_stage:last-child::after { display: none; }
+      }
+      @media (max-width: 600px) {
+        .cs_platform_journey_grid { grid-template-columns: 1fr; }
       }
     </style>
     <section class="cs_platform_journey">
@@ -919,55 +910,41 @@ export default function Page() {
           <h2 class="cs_platform_journey_title">ONE INTEGRATED PLATFORM.<br><span>END-TO-END CAPABILITY.</span></h2>
           <p class="cs_platform_journey_text">From genetics and cultivation through GMP manufacturing, quality, commercialisation and global export &mdash; all under one integrated operation.</p>
         </div>
-        <div class="cs_platform_journey_row">
-          <div class="cs_platform_stage">
+        <div class="cs_platform_journey_grid">
+          <div class="cs_platform_stage wow fadeInUp">
             <div class="cs_platform_stage_icon"><i class="fa-solid fa-dna"></i></div>
-            <div class="cs_platform_stage_body">
-              <h3>Genetics</h3>
-              <p>Proprietary phenohunt programs select high-performing cultivars.</p>
-            </div>
+            <h3>Genetics</h3>
+            <p>Proprietary phenohunt programs select high-performing cultivars.</p>
           </div>
-          <div class="cs_platform_stage">
+          <div class="cs_platform_stage wow fadeInUp" data-wow-delay="0.1s">
             <div class="cs_platform_stage_icon"><i class="fa-solid fa-seedling"></i></div>
-            <div class="cs_platform_stage_body">
-              <h3>Cultivation</h3>
-              <p>Australian-grown using controlled-environment cultivation in the Noosa Hinterland.</p>
-            </div>
+            <h3>Cultivation</h3>
+            <p>Australian-grown using controlled-environment cultivation in the Noosa Hinterland.</p>
           </div>
-          <div class="cs_platform_stage">
+          <div class="cs_platform_stage wow fadeInUp" data-wow-delay="0.2s">
             <div class="cs_platform_stage_icon"><i class="fa-solid fa-industry"></i></div>
-            <div class="cs_platform_stage_body">
-              <h3>GMP Manufacturing</h3>
-              <p>Manufacturing within a GMP-certified facility to pharmaceutical standards.</p>
-            </div>
+            <h3>GMP Manufacturing</h3>
+            <p>Manufacturing within a GMP-certified facility to pharmaceutical standards.</p>
           </div>
-          <div class="cs_platform_stage">
+          <div class="cs_platform_stage wow fadeInUp">
             <div class="cs_platform_stage_icon"><i class="fa-solid fa-shield-halved"></i></div>
-            <div class="cs_platform_stage_body">
-              <h3>Quality &amp; Release</h3>
-              <p>Rigorous quality systems support safety, consistency and regulatory compliance.</p>
-            </div>
+            <h3>Quality &amp; Release</h3>
+            <p>Rigorous quality systems support safety, consistency and regulatory compliance.</p>
           </div>
-          <div class="cs_platform_stage">
+          <div class="cs_platform_stage wow fadeInUp" data-wow-delay="0.1s">
             <div class="cs_platform_stage_icon"><i class="fa-solid fa-microscope"></i></div>
-            <div class="cs_platform_stage_body">
-              <h3>Research &amp; Innovation</h3>
-              <p>Scientific expertise and product innovation drive continual advancement.</p>
-            </div>
+            <h3>Research &amp; Innovation</h3>
+            <p>Scientific expertise and product innovation drive continual advancement.</p>
           </div>
-          <div class="cs_platform_stage">
+          <div class="cs_platform_stage wow fadeInUp" data-wow-delay="0.2s">
             <div class="cs_platform_stage_icon"><i class="fa-solid fa-handshake"></i></div>
-            <div class="cs_platform_stage_body">
-              <h3>Market Access &amp; Commercialisation</h3>
-              <p>Commercial expertise supports market access and long-term healthcare adoption.</p>
-            </div>
+            <h3>Market Access &amp; Commercialisation</h3>
+            <p>Commercial expertise supports market access and long-term healthcare adoption.</p>
           </div>
-          <div class="cs_platform_stage">
+          <div class="cs_platform_stage wow fadeInUp">
             <div class="cs_platform_stage_icon"><i class="fa-solid fa-globe"></i></div>
-            <div class="cs_platform_stage_body">
-              <h3>Global Export</h3>
-              <p>Export-ready capability supports international partnerships and regulated global expansion.</p>
-            </div>
+            <h3>Global Export</h3>
+            <p>Export-ready capability supports international partnerships and regulated global expansion.</p>
           </div>
         </div>
       </div>
