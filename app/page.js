@@ -138,18 +138,15 @@ export default function Page() {
               <h3 class="cs_fs_24 cs_bold cs_white_color mb-0">QUALITY &amp; COMPLIANCE</h3>
               <p class="cs_fs_20 cs_white_color cs_opacity_7_5 cs_mb_16">Australian-made. GMP-certified. TGA licensed.</p>
               <div class="cs_circle_group">
-                <img src="/assets/img/GMP_1.webp" alt="GMP Quality Certification">
-                <img src="/assets/img/gmp_3.webp" alt="GMP Certified">
-                <img src="/assets/img/GMP_2.webp" alt="ISO 9001:2015 Certified">
+                <img src="/assets/img/AUSTRALIAN-MADE.png" alt="Australian Made">
+                <img src="/assets/img/GMP-CERTIFIED.png" alt="GMP Certified">
+                <img src="/assets/img/TGA-LICENSED.png" alt="TGA Licensed">
               </div>
             </div>
           </div>
           <div class="cs_hero_box wow fadeInUp">
             <div class="cs_hero_box_icon cs_mb_29">
-              <svg width="22" height="30" viewBox="0 0 22 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 0C4.93447 0 0 4.97132 0 11.0821C0 13.0939 0.895529 15.2575 0.933059 15.3488C1.22229 16.0404 1.793 17.1147 2.20453 17.7445L9.74665 29.2575C10.0553 29.7295 10.5121 30 11 30C11.4879 30 11.9447 29.7295 12.2534 29.2581L19.7961 17.7445C20.2083 17.1147 20.7784 16.0404 21.0676 15.3488C21.1051 15.2581 22 13.0945 22 11.0821C22 4.97132 17.0655 0 11 0ZM19.8744 14.8429C19.6162 15.4628 19.085 16.4622 18.7155 17.0267L11.1728 28.5404C11.0239 28.7679 10.9767 28.7679 10.8279 28.5404L3.28512 17.0267C2.91565 16.4622 2.38441 15.4622 2.12624 14.8422C2.11523 14.8155 1.29412 12.824 1.29412 11.0821C1.29412 5.69035 5.64818 1.30378 11 1.30378C16.3518 1.30378 20.7059 5.69035 20.7059 11.0821C20.7059 12.8266 19.8828 14.8233 19.8744 14.8429Z" fill="currentColor"></path>
-                <path d="M11.0003 5.21578C7.78893 5.21578 5.17676 7.84811 5.17676 11.0828C5.17676 14.3175 7.78893 16.9498 11.0003 16.9498C14.2116 16.9498 16.8238 14.3175 16.8238 11.0828C16.8238 7.84811 14.2116 5.21578 11.0003 5.21578ZM11.0003 15.646C8.50329 15.646 6.47088 13.5991 6.47088 11.0828C6.47088 8.56649 8.50329 6.51956 11.0003 6.51956C13.4973 6.51956 15.5297 8.56649 15.5297 11.0828C15.5297 13.5991 13.4973 15.646 11.0003 15.646Z" fill="currentColor"></path>
-              </svg>
+              <img src="/assets/img/Handshake-White.svg" alt="" width="24" height="24">
             </div>
             <h3 class="cs_hero_box_title cs_fs_24 cs_mb_12 cs_white_color">Partner With PharmaCrop</h3>
             <p class="cs_hero_box_subtitle mb-0 cs_opacity_7_5">Explore flexible commercial pathways across Australian-grown products, manufacturing and supply.</p>
@@ -809,18 +806,16 @@ export default function Page() {
       .cs_footer_v2_touch_icon { width: 34px; height: 34px; border-radius: 50%; background: rgba(120, 220, 166, 0.25); color: #024242; display: flex; align-items: center; justify-content: center; font-size: 13px; flex: none; }
       .cs_footer_v2_touch_item a { color: #024242; font-size: 14px; text-decoration: none; }
       .cs_footer_v2_touch_item a:hover { text-decoration: underline; }
-      .cs_footer_v2_quote { font-style: italic; color: rgba(2, 66, 66, 0.35); font-size: 16px; line-height: 1.4; text-align: right; margin: 24px 0 0; }
       .cs_footer_v2_bottom { display: flex; align-items: center; justify-content: space-between; padding: 28px 0; flex-wrap: wrap; gap: 20px; position: relative; z-index: 1; }
       .cs_footer_v2_copyright { color: rgba(2, 66, 66, 0.55); font-size: 13px; margin: 0; }
       .cs_footer_v2_badges { display: flex; align-items: center; gap: 28px; }
       .cs_footer_v2_badge { display: flex; flex-direction: column; align-items: center; gap: 6px; }
-      .cs_footer_v2_badge_icon { width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(2, 66, 66, 0.25); display: flex; align-items: center; justify-content: center; color: #024242; font-size: 16px; }
+      .cs_footer_v2_badge_img { width: 44px; height: 44px; object-fit: contain; }
       .cs_footer_v2_badge_label { font-size: 10px; letter-spacing: 0.5px; text-transform: uppercase; color: rgba(2, 66, 66, 0.55); font-weight: 700; }
       .cs_footer_v2_tagline { display: flex; align-items: center; gap: 12px; color: rgba(2, 66, 66, 0.4); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; font-weight: 700; margin: 0; }
       .cs_footer_v2_tagline::before { content: ""; width: 30px; height: 1px; background: rgba(2, 66, 66, 0.3); }
       @media (max-width: 991px) {
         .cs_footer_v2_row { grid-template-columns: repeat(2, 1fr); }
-        .cs_footer_v2_quote { text-align: left; }
       }
       @media (max-width: 575px) {
         .cs_footer_v2_row { grid-template-columns: 1fr; }
@@ -881,22 +876,21 @@ export default function Page() {
               <span class="cs_footer_v2_touch_icon"><i class="fa-brands fa-linkedin-in"></i></span>
               <a href="https://www.linkedin.com/company/pharmacrop" target="_blank" rel="noopener">Follow us on LinkedIn</a>
             </div>
-            <p class="cs_footer_v2_quote">A healthier<br>tomorrow<br>starts here.</p>
           </div>
         </div>
         <div class="cs_footer_v2_bottom">
           <p class="cs_footer_v2_copyright">&copy; 2026 PharmaCrop. All rights reserved.</p>
           <div class="cs_footer_v2_badges">
             <div class="cs_footer_v2_badge">
-              <span class="cs_footer_v2_badge_icon"><i class="fa-solid fa-flag"></i></span>
+              <img src="/assets/img/AUSTRALIAN-MADE.png" alt="Australian Made" class="cs_footer_v2_badge_img">
               <span class="cs_footer_v2_badge_label">Australian Made</span>
             </div>
             <div class="cs_footer_v2_badge">
-              <span class="cs_footer_v2_badge_icon"><i class="fa-solid fa-certificate"></i></span>
+              <img src="/assets/img/GMP-CERTIFIED.png" alt="GMP Certified" class="cs_footer_v2_badge_img">
               <span class="cs_footer_v2_badge_label">GMP Certified</span>
             </div>
             <div class="cs_footer_v2_badge">
-              <span class="cs_footer_v2_badge_icon"><i class="fa-solid fa-shield-halved"></i></span>
+              <img src="/assets/img/TGA-LICENSED.png" alt="TGA Licensed" class="cs_footer_v2_badge_img">
               <span class="cs_footer_v2_badge_label">TGA Licensed</span>
             </div>
           </div>
