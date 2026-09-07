@@ -375,7 +375,7 @@ export default function Page() {
     <!-- End Services Section -->
     <!-- Start Scroll Stack Projects Section -->
     <style>
-      .cs_scroll_stack { position: relative; height: 320vh; background: #024242; }
+      .cs_scroll_stack { position: relative; height: 200vh; background: #024242; }
       .cs_scroll_stack_sticky { position: sticky; top: 0; height: 100vh; overflow: hidden; display: flex; align-items: center; }
       .cs_scroll_stack_row { display: flex; align-items: center; width: 100%; gap: 60px; padding: 0 80px; box-sizing: border-box; }
       .cs_scroll_stack_left { flex: 0 0 420px; }
@@ -383,38 +383,39 @@ export default function Page() {
       .cs_scroll_stack_title { color: #fff; font-size: 44px; font-weight: 800; line-height: 1.25; margin: 0 0 32px; }
       .cs_scroll_stack_btn { display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(255, 255, 255, 0.5); color: #fff; border-radius: 30px; padding: 14px 28px; font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-decoration: none; transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
       .cs_scroll_stack_btn:hover { background: #78dca6; border-color: #78dca6; color: #024242; }
-      .cs_scroll_stack_right { position: relative; flex: 1; height: 560px; }
-      .cs_scroll_card { position: absolute; top: 50%; left: 50%; width: 640px; max-width: 90vw; border-radius: 16px; overflow: hidden; will-change: transform, filter, opacity; }
-      .cs_scroll_card img { width: 100%; height: 400px; object-fit: cover; display: block; }
+      .cs_scroll_stack_right { position: relative; flex: 1; height: 620px; }
+      .cs_scroll_card { position: absolute; top: 50%; left: 50%; width: 700px; max-width: 90vw; border-radius: 16px; overflow: hidden; will-change: transform, filter, opacity; }
+      .cs_scroll_card img { width: 100%; height: 440px; object-fit: cover; display: block; }
       .cs_scroll_card_content { position: absolute; left: 0; right: 0; bottom: 0; padding: 24px; background: linear-gradient(180deg, rgba(2, 20, 20, 0) 0%, rgba(2, 20, 20, 0.85) 100%); }
       .cs_scroll_card_tags { display: flex; gap: 4px; margin-bottom: 10px; flex-wrap: wrap; }
       .cs_scroll_card_tag { color: rgba(255, 255, 255, 0.8); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
       .cs_scroll_card_tag:not(:last-child)::after { content: "/"; margin-left: 8px; color: rgba(255, 255, 255, 0.4); }
       .cs_scroll_card_title { color: #fff; font-size: 24px; font-weight: 700; margin: 0; }
       @media (min-width: 1400px) {
-        .cs_scroll_card { width: 720px; }
-        .cs_scroll_card img { height: 440px; }
+        .cs_scroll_card { width: 800px; }
+        .cs_scroll_card img { height: 480px; }
       }
       @media (max-width: 1199px) {
         .cs_scroll_stack_row { padding: 0 40px; gap: 32px; }
         .cs_scroll_stack_left { flex: 0 0 340px; }
-        .cs_scroll_card { width: 480px; }
-        .cs_scroll_card img { height: 300px; }
+        .cs_scroll_stack_right { height: 540px; }
+        .cs_scroll_card { width: 520px; }
+        .cs_scroll_card img { height: 340px; }
         .cs_scroll_stack_title { font-size: 36px; }
       }
       @media (max-width: 991px) {
-        .cs_scroll_stack { height: 260vh; }
+        .cs_scroll_stack { height: 170vh; }
         .cs_scroll_stack_row { flex-direction: column; padding: 0 24px; gap: 32px; }
         .cs_scroll_stack_left { flex: none; }
-        .cs_scroll_stack_right { width: 100%; height: 420px; }
-        .cs_scroll_card { width: 380px; max-width: 88vw; }
-        .cs_scroll_card img { height: 260px; }
+        .cs_scroll_stack_right { width: 100%; height: 460px; }
+        .cs_scroll_card { width: 420px; max-width: 88vw; }
+        .cs_scroll_card img { height: 300px; }
         .cs_scroll_stack_title { font-size: 30px; }
       }
       @media (max-width: 480px) {
-        .cs_scroll_stack_right { height: 300px; }
-        .cs_scroll_card { width: 300px; }
-        .cs_scroll_card img { height: 200px; }
+        .cs_scroll_stack_right { height: 340px; }
+        .cs_scroll_card { width: 320px; }
+        .cs_scroll_card img { height: 220px; }
         .cs_scroll_card_title { font-size: 18px; }
       }
     </style>

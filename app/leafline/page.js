@@ -229,6 +229,74 @@ export default function Page() {
       </div>
     </section>
     <!-- End Leafline Services -->
+    <!-- Start Licensing Compliance Section -->
+    <style>
+      .cs_licensing_section { padding: 110px 0; background: #fff; }
+      .cs_licensing_head { text-align: center; max-width: 680px; margin: 0 auto 60px; }
+      .cs_licensing_head span { color: #78dca6; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; font-size: 14px; display: block; margin-bottom: 14px; }
+      .cs_licensing_head h2 { color: #024242; font-size: 38px; line-height: 1.25; margin: 0 0 20px; }
+      .cs_licensing_head p { color: #666; font-size: 16px; line-height: 1.7; margin: 0; }
+      .cs_licensing_grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+      .cs_licensing_card { background: #f7faf8; border-radius: 12px; padding: 40px 32px; transition: 0.3s; border: 1px solid #eee; }
+      .cs_licensing_card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(2,66,66,0.1); border-color: transparent; }
+      .cs_licensing_icon { width: 62px; height: 62px; border-radius: 50%; background: rgba(120,220,166,0.15); display: flex; align-items: center; justify-content: center; margin-bottom: 22px; font-size: 24px; color: #024242; }
+      .cs_licensing_card h3 { color: #024242; font-size: 20px; margin-bottom: 12px; }
+      .cs_licensing_card p { color: #666; font-size: 15px; line-height: 1.7; margin: 0; }
+      .cs_licensing_statement { margin-top: 50px; text-align: center; padding: 28px 32px; border-radius: 12px; background: #024242; }
+      .cs_licensing_statement p { color: #fff; font-size: 17px; font-weight: 600; line-height: 1.6; margin: 0 auto; max-width: 720px; }
+      @media (max-width: 991px) { .cs_licensing_grid { grid-template-columns: repeat(2, 1fr); } }
+      @media (max-width: 600px) {
+        .cs_licensing_grid { grid-template-columns: 1fr; }
+        .cs_licensing_head h2 { font-size: 30px; }
+        .cs_licensing_statement { padding: 24px; }
+        .cs_licensing_statement p { font-size: 15px; }
+      }
+    </style>
+    <section class="cs_licensing_section">
+      <div class="container">
+        <div class="cs_licensing_head wow fadeInUp">
+          <span>Licensing &amp; Compliance</span>
+          <h2>FULLY LICENSED ACROSS THE VALUE CHAIN</h2>
+          <p>End-to-end regulatory capability supporting PharmaCrop from seed import and cultivation through to manufacturing, wholesale and global export.</p>
+        </div>
+        <div class="cs_licensing_grid">
+          <div class="cs_licensing_card wow fadeInUp">
+            <div class="cs_licensing_icon"><i class="fa-solid fa-dna"></i></div>
+            <h3>Seed Import</h3>
+            <p>ODC Import Permit supporting the regulated import of seed and genetic material.</p>
+          </div>
+          <div class="cs_licensing_card wow fadeInUp" data-wow-delay="0.1s">
+            <div class="cs_licensing_icon"><i class="fa-solid fa-seedling"></i></div>
+            <h3>Cultivation</h3>
+            <p>ODC Cultivation &amp; Production Licence supporting regulated Australian cultivation and production.</p>
+          </div>
+          <div class="cs_licensing_card wow fadeInUp" data-wow-delay="0.2s">
+            <div class="cs_licensing_icon"><i class="fa-solid fa-industry"></i></div>
+            <h3>Manufacturing</h3>
+            <p>TGA Licence to Manufacture Therapeutic Goods within PharmaCrop&rsquo;s Australian manufacturing platform.</p>
+          </div>
+          <div class="cs_licensing_card wow fadeInUp">
+            <div class="cs_licensing_icon"><i class="fa-solid fa-box"></i></div>
+            <h3>Packaging</h3>
+            <p>GMP Manufacturing Licence supporting compliant pharmaceutical packaging and finished-product preparation.</p>
+          </div>
+          <div class="cs_licensing_card wow fadeInUp" data-wow-delay="0.1s">
+            <div class="cs_licensing_icon"><i class="fa-solid fa-warehouse"></i></div>
+            <h3>Wholesale</h3>
+            <p>ODC Wholesale Licence supporting regulated commercial supply across the cannabinoid medicines value chain.</p>
+          </div>
+          <div class="cs_licensing_card wow fadeInUp" data-wow-delay="0.2s">
+            <div class="cs_licensing_icon"><i class="fa-solid fa-globe"></i></div>
+            <h3>Export</h3>
+            <p>ODC Export Permit supporting international supply and regulated global market access.</p>
+          </div>
+        </div>
+        <div class="cs_licensing_statement wow fadeInUp">
+          <p>Licensed across the entire value chain to support Australian manufacturing and global supply.</p>
+        </div>
+      </div>
+    </section>
+    <!-- End Licensing Compliance Section -->
 
     <!-- Start Leafline Stats -->
     <style>
