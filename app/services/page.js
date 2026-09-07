@@ -8,12 +8,8 @@ export default function Page() {
       dangerouslySetInnerHTML={{
         __html: `
   <!-- Start Preloader -->
-  <div class="cs_preloader">
-    <div class="cs_preloader_in">
-      <span></span>
-      <span></span>
-    </div>
-    <div class="cs_preloader_text">Loading...</div>
+  <div class="cs_preloader" style="background-color:#000;">
+    <img src="/assets/img/pharma_Crop_logo_loader.gif" alt="Loading" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(70vw,480px);height:auto;">
   </div>
   <!-- End Preloader -->
     <!-- Start Header Section -->
