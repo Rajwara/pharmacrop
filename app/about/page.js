@@ -119,10 +119,10 @@ export default function Page() {
         <div class="cs_height_56 cs_height_lg_35"></div>
         <div class="row cs_gap_y_30">
           <div class="col-lg-4 wow fadeInLeft">
-            <a href="https://www.youtube.com/embed/rRid6GCJtgc" class="cs_video_block cs_style_1 cs_bg_filed cs_video_open cs_center cs_radius_20" data-src="/assets/img/genetics-to-gmp-manufacturing.webp"></a>
+            <a href="https://www.youtube.com/embed/rRid6GCJtgc" class="cs_video_block cs_style_1 cs_bg_filed cs_video_open cs_center cs_radius_20" data-src="/assets/img/THE-PHARMACROP-STORY-1.webp"></a>
           </div>
           <div class="col-lg-8 wow fadeInRight">
-            <div class="cs_cta cs_style_2 cs_bg_filed cs_radius_20" data-src="/assets/img/pharmacrop-banner2.webp">
+            <div class="cs_cta cs_style_2 cs_bg_filed cs_radius_20" data-src="/assets/img/Pharmacrop-story-2.webp">
               <a href="/contact" class="cs_btn cs_style_2 cs_bold cs_white_color">Contact us</a>
             </div>
           </div>
