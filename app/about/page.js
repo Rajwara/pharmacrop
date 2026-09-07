@@ -93,7 +93,7 @@ export default function Page() {
     </div>
     <!-- End Header Section -->
     <!-- Start Page Heading Sectoin -->
-    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/about_heading_bg.jpg">
+    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/pharma-banner.jpeg">
       <div class="container">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -114,16 +114,16 @@ export default function Page() {
             </div>
           </div>
           <div class="col-lg-4">
-            <p class="cs_fs_20 mb-0">Built in the Noosa Hinterland in Queensland, PharmaCrop combines international cultivation expertise with Australian production and GMP-certified manufacturing. Our integrated approach brings key stages of cultivation, processing and manufacturing together, supporting quality, consistency and oversight from cultivar selection through to finished product.</p>
+            <p class="cs_fs_20 mb-0">Built in the Noosa Hinterland, Queensland, PharmaCrop is an Australian medicinal cannabis company designed around pharmaceutical standards. Our integrated operation brings together genetics, cultivation, GMP manufacturing, quality and innovation within one platform.</p>
           </div>
           <div class="col-lg-4">
-            <p class="cs_fs_20 mb-0">The result is a growing portfolio of Australian-grown products shaped by global knowledge and pharmaceutical discipline.</p>
+            <p class="cs_fs_20 mb-0">From Australian-grown cultivation through to finished medicines and global market access, PharmaCrop is built to deliver quality, consistency and long-term commercial capability.</p>
           </div>
         </div>
         <div class="cs_height_56 cs_height_lg_35"></div>
         <div class="row cs_gap_y_30">
           <div class="col-lg-4 wow fadeInLeft">
-            <a href="https://www.youtube.com/embed/rRid6GCJtgc" class="cs_video_block cs_style_1 cs_bg_filed cs_video_open cs_center cs_radius_20" data-src="/assets/img/video_block_bg.jpg">
+            <a href="https://www.youtube.com/embed/rRid6GCJtgc" class="cs_video_block cs_style_1 cs_bg_filed cs_video_open cs_center cs_radius_20" data-src="/assets/img/genetics-to-gmp-manufacturing.webp">
               <span class="cs_player_btn cs_heading_color">
                 <svg width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M18.5 11L0.5 21.3923V0.607696L18.5 11Z" fill="currentColor"></path>
@@ -132,7 +132,7 @@ export default function Page() {
             </a>
           </div>
           <div class="col-lg-8 wow fadeInRight">
-            <div class="cs_cta cs_style_2 cs_bg_filed cs_radius_20" data-src="/assets/img/cta_bg_3.jpg">
+            <div class="cs_cta cs_style_2 cs_bg_filed cs_radius_20" data-src="/assets/img/pharmacrop-banner2.webp">
               <a href="/contact" class="cs_btn cs_style_2 cs_bold cs_white_color">Contact us</a>
             </div>
           </div>
