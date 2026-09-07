@@ -234,24 +234,19 @@ export default function Page() {
     <!-- Start Trust Strip Section -->
     <style>
       .cs_trust_strip { background: #f7faf8; padding: 32px 0; border-top: 1px solid rgba(2, 66, 66, 0.08); border-bottom: 1px solid rgba(2, 66, 66, 0.08); }
-      .cs_trust_strip_row { display: flex; align-items: center; justify-content: center; gap: 18px; flex-wrap: wrap; }
-      .cs_trust_strip_item { display: flex; align-items: center; gap: 8px; color: #024242; font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
-      .cs_trust_strip_item i { color: #78dca6; font-size: 13px; }
-      .cs_trust_strip_sep { color: rgba(2, 66, 66, 0.2); font-size: 14px; }
+      .cs_trust_strip_row { display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap; }
+      .cs_trust_strip_item { display: flex; align-items: center; gap: 10px; color: #024242; font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
+      .cs_trust_strip_item img { width: 32px; height: 32px; object-fit: contain; flex: none; }
       @media (max-width: 575px) {
-        .cs_trust_strip_sep { display: none; }
-        .cs_trust_strip_row { gap: 12px; }
-        .cs_trust_strip_item { width: 100%; justify-content: center; }
+        .cs_trust_strip_row { gap: 24px; }
       }
     </style>
     <section class="cs_trust_strip">
       <div class="container">
         <div class="cs_trust_strip_row">
-          <span class="cs_trust_strip_item"><i class="fa-solid fa-circle-check"></i>Australian Made</span>
-          <span class="cs_trust_strip_sep">|</span>
-          <span class="cs_trust_strip_item"><i class="fa-solid fa-circle-check"></i>GMP Certified</span>
-          <span class="cs_trust_strip_sep">|</span>
-          <span class="cs_trust_strip_item"><i class="fa-solid fa-circle-check"></i>TGA Licensed</span>
+          <span class="cs_trust_strip_item"><img src="/assets/img/AUSTRALIAN-MADE.png" alt="Australian Made">Australian Made</span>
+          <span class="cs_trust_strip_item"><img src="/assets/img/GMP-CERTIFIED.png" alt="GMP Certified">GMP Certified</span>
+          <span class="cs_trust_strip_item"><img src="/assets/img/TGA-LICENSED.png" alt="TGA Licensed">TGA Licensed</span>
         </div>
       </div>
     </section>
