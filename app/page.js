@@ -221,17 +221,17 @@ export default function Page() {
       <div class="container">
         <div class="cs_sticky_services_grid">
           <div class="cs_sticky_services_left">
-            <span class="cs_sticky_eyebrow">What We Do</span>
-            <h2 class="cs_sticky_title cs_two_tone cs_home_heading_sz wow fadeInDown">FROM GENETICS<br>TO GMP<br><span>MANUFACTURING</span></h2>
-            <p class="cs_sticky_text">Where international cultivation expertise meets Australian, GMP-certified manufacturing discipline &mdash; from cultivar selection through to finished product.</p>
+            <span class="cs_sticky_eyebrow">Precision Cultivation</span>
+            <h2 class="cs_sticky_title cs_two_tone cs_home_heading_sz wow fadeInDown">BUILDING<br>PHARMACEUTICAL<br>QUALITY FROM<br><span>THE GROUND UP</span></h2>
+            <p class="cs_sticky_text">Consistent pharmaceutical products begin with consistent agricultural systems. Our cultivation platform combines controlled environments, advanced growing systems and environmental precision.</p>
           </div>
           <div class="cs_sticky_services_right">
             <div class="cs_sticky_card">
-              <img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt="Noosa Hinterland">
-              <span class="cs_sticky_card_icon"><i class="fa-solid fa-house"></i></span>
+              <img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt="Controlled Cultivation">
+              <span class="cs_sticky_card_icon"><i class="fa-solid fa-seedling"></i></span>
               <div class="cs_sticky_card_body">
-                <h3 class="cs_sticky_card_title">Noosa Hinterland</h3>
-                <p class="cs_sticky_card_text">Where PharmaCrop calls home. The Noosa Hinterland provides the home for our cultivation and manufacturing operations, bringing local production together within a single region.</p>
+                <h3 class="cs_sticky_card_title">Controlled Cultivation</h3>
+                <p class="cs_sticky_card_text">Purpose-built hybrid greenhouse designed for repeatable cultivation and consistent, scalable Australian-grown supply.</p>
                 <a href="/about" class="cs_sticky_card_link">READ MORE <span>&rarr;</span></a>
               </div>
             </div>
