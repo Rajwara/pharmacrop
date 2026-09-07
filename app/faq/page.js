@@ -229,31 +229,56 @@ export default function Page() {
     </section>
     <!-- End Card Section -->
     <!-- Start Footer Section -->
-    <footer class="cs_footer cs_style_1 cs_color_1">
+    <style>
+      .cs_footer_brand { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+      .cs_footer_brand .cs_newsletter { width: 100%; }
+      .cs_footer_tagline { margin: 0; width: 100%; }
+      .cs_footer_social_item { display: flex; align-items: center; gap: 10px; }
+      .cs_footer_social_label { text-transform: uppercase; }
+      .cs_footer_social_icon { width: 30px; height: 30px; border-radius: 50%; background: rgba(2, 66, 66, 0.08); color: #024242; display: inline-flex; align-items: center; justify-content: center; transition: background-color 0.3s ease, color 0.3s ease; }
+      .cs_footer_social_icon:hover { background: #024242; color: #fff; }
+      .cs_footer_row { display: grid !important; grid-template-columns: 1.5fr 1fr 1fr 1.3fr !important; gap: 40px !important; }
+      .cs_footer_row .cs_footer_col { position: relative; max-width: none !important; flex: none !important; width: 100% !important; padding-right: 0 !important; }
+      .cs_footer_row .cs_footer_col:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -20px;
+        width: 2px;
+        height: 40px;
+        background: #024242;
+      }
+      .cs_footer_brand .cs_newsletter_input { padding: 10px 48px 10px 20px !important; font-size: 14px !important; }
+      .cs_footer_touch_list li a { font-size: 14px; white-space: nowrap; }
+      @media (max-width: 991px) {
+        .cs_footer_row { grid-template-columns: repeat(2, 1fr) !important; }
+        .cs_footer_row .cs_footer_col:nth-child(2n)::after { display: none; }
+      }
+      @media (max-width: 575px) {
+        .cs_footer_row { grid-template-columns: 1fr !important; }
+        .cs_footer_row .cs_footer_col::after { display: none; }
+      }
+      @media (max-width: 767px) {
+        .cs_footer_row { padding-top: 40px !important; }
+      }
+    </style>
+    <footer class="cs_footer cs_style_1">
       <div class="container">
         <div class="cs_footer_row">
           <div class="cs_footer_col">
             <div class="cs_footer_widget">
-              <div class="cs_text_widget">
-                <img src="/assets/img/logo-light.png" alt="" class="cs_logo_img">
-                <p>Stay updated with our latest <br>
-                  news and product updates.</p>
-                <ul class="cs_footer_widget_menu cs_mp_0 cs_footer_contact_list">
-                  <li><a href="tel:1300053533">Phone: 1300 053 533</a></li>
-                  <li><a href="mailto:enquiries@pharmacrop.com.au">Email: enquiries@pharmacrop.com.au</a></li>
-                  <li><a href="https://www.linkedin.com/company/pharmacrop" target="_blank" rel="noopener">LinkedIn: @pharmacrop</a></li>
-                </ul>
+              <div class="cs_footer_brand">
+                <img src="/assets/img/logo-dark.webp" alt="Logo" class="wow zoomIn cs_logo_img">
+                <p class="cs_footer_tagline">Stay updated with our latest news and product updates.</p>
+                <form action="#" class="cs_newsletter cs_style_1">
+                  <input type="email" placeholder="Enter your email address ..." class="cs_newsletter_input">
+                  <button type="submit" class="cs_newsletter_btn cs_arrow_btn cs_white_bg cs_heading_color">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
+                    </svg>
+                  </button>
+                </form>
               </div>
-            </div>
-            <div class="cs_footer_widget">
-              <form action="#" class="cs_newsletter cs_style_1">
-                <input type="email" placeholder="Enter your email address ..." class="cs_newsletter_input">
-                <button type="submit" class="cs_newsletter_btn cs_arrow_btn cs_white_bg cs_heading_color">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
-                  </svg>                    
-                </button>
-              </form>
             </div>
           </div>
           <div class="cs_footer_col">
@@ -262,7 +287,7 @@ export default function Page() {
               <ul class="cs_footer_widget_menu cs_mp_0">
                 <li><a href="/faq">FAQ</a></li>
                 <li><a href="/industry">INDUSTRY</a></li>
-                <li><a href="/careers">CAREERS</a></li>
+                <li><a href="/services">SERVICES</a></li>
                 <li><a href="/contact">CONTACT</a></li>
                 <li><a href="#">SEE OUR DOCTORS</a></li>
               </ul>
@@ -278,12 +303,25 @@ export default function Page() {
               </ul>
             </div>
           </div>
+          <div class="cs_footer_col">
+            <div class="cs_footer_widget">
+              <h4 class="cs_footer_widget_title">GET IN TOUCH</h4>
+              <ul class="cs_footer_widget_menu cs_mp_0 cs_footer_touch_list">
+                <li><a href="tel:1300053533">Phone: 1300 053 533</a></li>
+                <li><a href="mailto:enquiries@pharmacrop.com.au">Email: enquiries@pharmacrop.com.au</a></li>
+                <li class="cs_footer_social_item">
+                  <span class="cs_footer_social_label">Social:</span>
+                  <a href="https://www.linkedin.com/company/pharmacrop" target="_blank" rel="noopener" class="cs_footer_social_icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
         <div class="cs_bottom_footer">
-          <div class="cs_bottom_footer_left">
+          <div class="cs_bottom_footer_left wow fadeInLeft">
             <div class="cs_copyright">© 2026 PHARMACROP. ALL RIGHTS RESERVED. WEBSITE MAINTAINED BY PHARMACROP.</div>
           </div>
-          <div class="cs_bottom_footer_right">
+          <div class="cs_bottom_footer_right wow fadeInRight">
             <ul class="cs_footer_links cs_mp_0">
               <li>
                 <a href="/privacy-policy">PRIVACY POLICY</a>
