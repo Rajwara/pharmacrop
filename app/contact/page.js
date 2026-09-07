@@ -260,31 +260,6 @@ export default function Page() {
       </div>
     </div>
     <div class="cs_height_100 cs_height_lg_70"></div>
-    <!-- Start Contact Section -->
-    <!-- Start Card Section -->
-    <section class="cs_half_bg">
-      <div class="container">
-        <div class="cs_card cs_style_1 cs_heading_bg cs_bg_filed" data-src="/assets/img/card_bg.jpg">
-          <div class="cs_card_top">
-            <div class="cs_card_tags">
-              <a href="/" class="cs_card_tag">Home</a>
-              <a href="/industry" class="cs_card_tag">Industry</a>
-              <a href="#" class="cs_card_tag">GMP-Certified</a>
-              <a href="#" class="cs_card_tag">Australian-Grown</a>
-            </div>
-          </div>
-          <div class="cs_card_bottom">
-            <h2 class="cs_card_title cs_gradient_color_1 cs_fs_80 mb-0">LET'S START A <br>CONVERSATION</h2>
-          </div>
-          <a href="/contact" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </section>
-    <!-- End Card Section -->
     <!-- Start CTA Section -->
     <style>
       .cs_contact_card_section { padding: 100px 0; overflow: hidden; }
