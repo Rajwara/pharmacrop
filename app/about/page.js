@@ -185,35 +185,6 @@ export default function Page() {
       <!-- End Feature Section -->
     </div>
     <!-- End Features Section -->
-    <!-- Start Vision & Mission Section -->
-    <section>
-      <div class="cs_height_100 cs_height_lg_70"></div>
-      <div class="container">
-        <div class="cs_section_heading cs_style_2 cs_color_1">
-          <h2 class="cs_section_title cs_fs_80 mb-0 wow fadeInDown">VISION <br><span>&amp;</span> MISSION</h2>
-          <div class="cs_section_right">
-            <h3 class="cs_brackets_title cs_normal cs_fs_16 mb-0">PURPOSE</h3>
-          </div>
-        </div>
-        <div class="cs_height_64 cs_height_lg_50"></div>
-        <div class="row cs_gap_y_40">
-          <div class="col-lg-6 wow fadeInLeft">
-            <div class="cs_iconbox cs_style_1">
-              <h3 class="cs_fs_24 cs_mb_12">Vision</h3>
-              <p class="mb-0 cs_fs_20">A world where trusted, traceable Australian-grown medicines are standard in healthcare and accessible to all.</p>
-            </div>
-          </div>
-          <div class="col-lg-6 wow fadeInRight">
-            <div class="cs_iconbox cs_style_1">
-              <h3 class="cs_fs_24 cs_mb_12">Mission</h3>
-              <p class="mb-0 cs_fs_20">To elevate Australian-grown medicines to ensure they are trusted, accessible and profoundly transformative for those who need them most.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="cs_height_100 cs_height_lg_70"></div>
-    </section>
-    <!-- End Vision & Mission Section -->
     <!-- Start Team Expertise Section -->
     <style>
       .cs_team_section { padding: 110px 0; background: #f7faf8; }
@@ -311,7 +282,6 @@ export default function Page() {
       <div class="container">
         <div class="cs_section_heading cs_style_2">
           <div>
-            <h3 class="cs_brackets_title cs_normal cs_fs_16 mb-0 cs_white_color">OUR FACILITY</h3>
             <h2 class="cs_section_title cs_white_color cs_fs_80 mb-0">BUILT IN AUSTRALIA.<br>READY TO <span>SCALE.</span></h2>
             <p class="cs_facility_desc">Located in the Noosa Hinterland, Queensland, PharmaCrop operates from a purpose-built site designed for integrated cultivation, pharmaceutical manufacturing and future expansion.</p>
             <p class="cs_facility_location">Noosa Hinterland, Queensland &mdash; approximately 2 hours from Brisbane.</p>
@@ -350,7 +320,6 @@ export default function Page() {
               <p class="mb-0 cs_white_color cs_opacity_5 cs_fs_20">The site has capacity for additional infrastructure as PharmaCrop&rsquo;s manufacturing and cultivation operations expand.</p>
             </div>
           </div>
-          <div class="cs_section_logo"><img src="/assets/img/logo-light.png" alt="" class="cs_logo_img"></div>
         </div>
       </div>
       <div class="cs_height_100 cs_height_lg_70"></div>
