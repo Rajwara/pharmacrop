@@ -118,6 +118,7 @@ export default function Page() {
         .cs_hero.cs_style_1 .cs_hero_funfact_wrap { max-width: 300px; }
         .cs_hero.cs_style_1 .cs_hero_funfact .cs_fs_20 { font-size: 15px !important; }
         .cs_hero.cs_style_1 .cs_hero_text { max-width: 750px !important; }
+        .cs_hero.cs_style_1 .cs_hero_title.cs_fs_80 { font-size: 64px !important; }
       }
     </style>
     <!-- Start Hero Section -->
