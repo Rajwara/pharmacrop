@@ -897,14 +897,14 @@ export default function Page() {
       .cs_platform_items { display: flex; flex-direction: column; gap: 20px; }
       .cs_platform_item { display: flex; align-items: stretch; gap: 32px; border-radius: 16px; padding: 12px; transition: background-color 0.3s ease; }
       .cs_platform_item_img { flex: 0 0 260px; border-radius: 12px; overflow: hidden; }
-      .cs_platform_item_img img { width: 100%; height: 100%; min-height: 180px; object-fit: cover; display: block; }
+      .cs_platform_item_img img { display: block; width: 100%; height: 220px; object-fit: cover; }
       .cs_platform_item_body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 8px 0; }
       .cs_platform_item_icon { display: none; width: 48px; height: 48px; border-radius: 50%; background: rgba(120,220,166,0.18); color: #78dca6; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px; }
       .cs_platform_item_body h3 { color: #024242; font-size: 22px; margin: 0 0 10px; transition: color 0.3s ease; }
       .cs_platform_item_body p { color: #666; font-size: 15px; line-height: 1.7; margin: 0; max-width: 420px; transition: color 0.3s ease; }
       .cs_platform_item.active { background: #024242; padding: 0; gap: 0; }
       .cs_platform_item.active .cs_platform_item_img { flex-basis: 45%; border-radius: 16px 0 0 16px; }
-      .cs_platform_item.active .cs_platform_item_img img { min-height: 380px; border-radius: 0; }
+      .cs_platform_item.active .cs_platform_item_img img { height: 320px; border-radius: 0; }
       .cs_platform_item.active .cs_platform_item_body { padding: 48px; }
       .cs_platform_item.active .cs_platform_item_icon { display: flex; }
       .cs_platform_item.active .cs_platform_item_body h3 { color: #fff; font-size: 28px; }
@@ -920,9 +920,9 @@ export default function Page() {
         .cs_platform_journey_title { font-size: 28px; }
         .cs_platform_item { flex-direction: column; }
         .cs_platform_item_img { flex-basis: auto; }
-        .cs_platform_item_img img { min-height: 200px; }
+        .cs_platform_item_img img { height: 200px; }
         .cs_platform_item.active .cs_platform_item_img { border-radius: 16px 16px 0 0; }
-        .cs_platform_item.active .cs_platform_item_img img { min-height: 220px; }
+        .cs_platform_item.active .cs_platform_item_img img { height: 220px; }
         .cs_platform_item.active .cs_platform_item_body { padding: 32px; }
       }
       @media (max-width: 600px) {
