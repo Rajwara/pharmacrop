@@ -146,7 +146,7 @@ export default function Page() {
           </div>
           <div class="cs_hero_box wow fadeInUp">
             <div class="cs_hero_box_icon cs_mb_29">
-              <img src="/assets/img/Handshake-White.svg" alt="" width="24" height="24">
+              <img src="/assets/img/Handshake-White.svg" alt="" width="40" height="40">
             </div>
             <h3 class="cs_hero_box_title cs_fs_24 cs_mb_12 cs_white_color">Partner With PharmaCrop</h3>
             <p class="cs_hero_box_subtitle mb-0 cs_opacity_7_5">Explore flexible commercial pathways across Australian-grown products, manufacturing and supply.</p>
@@ -810,7 +810,7 @@ export default function Page() {
       .cs_footer_v2_copyright { color: rgba(2, 66, 66, 0.55); font-size: 13px; margin: 0; }
       .cs_footer_v2_badges { display: flex; align-items: center; gap: 28px; }
       .cs_footer_v2_badge { display: flex; flex-direction: column; align-items: center; gap: 6px; }
-      .cs_footer_v2_badge_img { width: 44px; height: 44px; object-fit: contain; }
+      .cs_footer_v2_badge_img { width: 60px; height: 60px; object-fit: contain; }
       .cs_footer_v2_badge_label { font-size: 10px; letter-spacing: 0.5px; text-transform: uppercase; color: rgba(2, 66, 66, 0.55); font-weight: 700; }
       .cs_footer_v2_tagline { display: flex; align-items: center; gap: 12px; color: rgba(2, 66, 66, 0.4); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; font-weight: 700; margin: 0; }
       .cs_footer_v2_tagline::before { content: ""; width: 30px; height: 1px; background: rgba(2, 66, 66, 0.3); }
