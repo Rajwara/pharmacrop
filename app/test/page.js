@@ -567,6 +567,59 @@ export default function Page() {
       </div>
     </section>
     <!-- End Form Info Split Section -->
+    <!-- Start Contact Section -->
+    <div class="cs_height_100 cs_height_lg_70"></div>
+    <div class="container">
+      <div class="row cs_gap_y_40">
+        <div class="col-lg-5">
+          <div class="cs_map">
+            <iframe id="map" src="https://www.google.com/maps?q=Noosa+Hinterland,+Queensland,+Australia&output=embed" allowfullscreen=""></iframe>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="cs_pl_40">
+            <div class="cs_section_heading cs_style_4 cs_mb_25">
+              <h2 class="cs_section_title cs_fs_32 cs_bold mb-0">SEND US A <span>MESSAGE</span></h2>
+            </div>
+            <form action="https://api.web3forms.com/submit" method="POST" class="row cs_gap_y_24" id="cs_form">
+              <input type="hidden" name="access_key" value="cd98b256-0db3-478c-ab28-1ec94f80447c">
+              <div class="col-sm-6">
+                <input type="text" name="name" class="cs_form_field" placeholder="Name" required="">
+              </div>
+              <div class="col-sm-6">
+                <input type="email" name="email" class="cs_form_field" placeholder="Email" required="">
+              </div>
+              <div class="col-lg-12">
+                <textarea class="cs_form_field" name="message" placeholder="Message" rows="5" required=""></textarea>
+              </div>
+              <div class="col-lg-12">
+                <button class="cs_btn cs_style_1 cs_type_1 cs_bold cs_heading_bg cs_white_color w-100" type="submit">Send Message</button>
+                <div id="cs_result" class="cs_heading_color"></div>
+              </div>
+            </form>
+            <div class="cs_height_60 cs_height_lg_40"></div>
+            <div class="cs_section_heading cs_style_4 cs_mb_25">
+              <h2 class="cs_section_title cs_fs_32 cs_bold mb-0">GET IN <span>TOUCH</span></h2>
+            </div>
+            <ul class="cs_contact_info cs_mp_0">
+              <li>
+                <p class="mb-0">EMAIL</p>
+                <h4 class="mb-0 cs_fs_20 cs_bold">enquiries@pharmacrop.com.au</h4>
+              </li>
+              <li>
+                <p class="mb-0">PHONE</p>
+                <h4 class="mb-0 cs_fs_20 cs_bold">1300 053 533</h4>
+              </li>
+              <li>
+                <p class="mb-0">LINKEDIN</p>
+                <h4 class="mb-0 cs_fs_20 cs_bold">@pharmacrop</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cs_height_100 cs_height_lg_70"></div>
     <!-- Start Guide Overlap Section -->
     <style>
       .cs_guide_section { position: relative; }
