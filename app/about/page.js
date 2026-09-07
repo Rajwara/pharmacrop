@@ -214,131 +214,92 @@ export default function Page() {
       <div class="cs_height_100 cs_height_lg_70"></div>
     </section>
     <!-- End Vision & Mission Section -->
-    <!-- Start Brand Section -->
-    <div class="cs_gray_bg">
-      <div class="cs_height_64 cs_height_lg_50"></div>
+    <!-- Start Team Expertise Section -->
+    <style>
+      .cs_team_section { padding: 110px 0; background: #f7faf8; }
+      .cs_team_head { max-width: 700px; margin: 0 auto 60px; text-align: center; }
+      .cs_team_eyebrow { display: block; color: #78dca6; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; font-size: 14px; margin-bottom: 14px; }
+      .cs_team_head h2 { color: #024242; font-size: 38px; line-height: 1.25; margin: 0 0 20px; }
+      .cs_team_head p { color: #666; font-size: 16px; line-height: 1.7; margin: 0; }
+      .cs_team_grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+      .cs_team_card { flex: 0 1 340px; max-width: 340px; background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid #eee; display: flex; flex-direction: column; transition: 0.3s; }
+      .cs_team_card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(2,66,66,0.1); border-color: transparent; }
+      .cs_team_photo { width: 100%; aspect-ratio: 1 / 1; overflow: hidden; }
+      .cs_team_photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .cs_team_body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+      .cs_team_name { color: #024242; font-size: 19px; font-weight: 700; margin: 0 0 4px; }
+      .cs_team_role { color: #78dca6; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 14px; }
+      .cs_team_credential { color: #024242; font-size: 14px; line-height: 1.6; font-weight: 600; margin: 0 0 10px; }
+      .cs_team_supporting { color: #666; font-size: 14px; line-height: 1.6; margin: 0; }
+      .cs_team_statement { margin-top: 56px; text-align: center; }
+      .cs_team_statement p { color: #024242; font-size: 20px; font-style: italic; font-weight: 600; line-height: 1.6; max-width: 760px; margin: 0 auto; }
+      @media (max-width: 767px) {
+        .cs_team_section { padding: 80px 0; }
+        .cs_team_head h2 { font-size: 28px; }
+        .cs_team_card { flex-basis: 100%; }
+        .cs_team_statement p { font-size: 17px; }
+      }
+    </style>
+    <section class="cs_team_section">
       <div class="container">
-        <div class="cs_slider cs_style_1 cs_slider_gap_24">
-          <div class="cs_slider_container" data-autoplay="0" data-loop="1" data-speed="800" data-center="0" data-variable-width="0" data-slides-per-view="responsive" data-xs-slides="2" data-sm-slides="3" data-md-slides="5" data-lg-slides="6" data-add-slides="6">
-            <div class="cs_slider_wrapper">
-              <div class="cs_slide">
-                <div class="cs_brand cs_style_1">
-                  <img src="/assets/img/brand_logo_1.svg" alt="">
-                </div>
-              </div>
-              <div class="cs_slide">
-                <div class="cs_brand cs_style_1">
-                  <img src="/assets/img/brand_logo_2.svg" alt="">
-                </div>
-              </div>
-              <div class="cs_slide">
-                <div class="cs_brand cs_style_1">
-                  <img src="/assets/img/brand_logo_3.svg" alt="">
-                </div>
-              </div>
-              <div class="cs_slide">
-                <div class="cs_brand cs_style_1">
-                  <img src="/assets/img/brand_logo_4.svg" alt="">
-                </div>
-              </div>
-              <div class="cs_slide">
-                <div class="cs_brand cs_style_1">
-                  <img src="/assets/img/brand_logo_5.svg" alt="">
-                </div>
-              </div>
-              <div class="cs_slide">
-                <div class="cs_brand cs_style_1">
-                  <img src="/assets/img/brand_logo_6.svg" alt="">
-                </div>
-              </div>
-              <div class="cs_slide">
-                <div class="cs_brand cs_style_1">
-                  <img src="/assets/img/brand_logo_3.svg" alt="">
-                </div>
-              </div>
+        <div class="cs_team_head">
+          <span class="cs_team_eyebrow">Our Expertise</span>
+          <h2>THE EXPERTISE BEHIND THE FACILITY</h2>
+          <p>Expertise spanning scientific research, cultivation, pharmaceutical manufacturing, quality and commercial growth.</p>
+        </div>
+        <div class="cs_team_grid">
+          <div class="cs_team_card wow fadeInUp">
+            <div class="cs_team_photo"><img src="/assets/img/DR%20ADEL%20ZAREI.png" alt="Dr Adel Zarei"></div>
+            <div class="cs_team_body">
+              <h3 class="cs_team_name">Dr Adel Zarei</h3>
+              <span class="cs_team_role">Research to Innovation</span>
+              <p class="cs_team_credential">20+ publications. PhD in plant molecular biology.</p>
+              <p class="cs_team_supporting">Converts science into commercially viable products.</p>
+            </div>
+          </div>
+          <div class="cs_team_card wow fadeInUp" data-wow-delay="0.1s">
+            <div class="cs_team_photo"><img src="/assets/img/CHAD%20ESCH.png" alt="Chad Esch"></div>
+            <div class="cs_team_body">
+              <h3 class="cs_team_name">Chad Esch</h3>
+              <span class="cs_team_role">Cultivation to Consistency</span>
+              <p class="cs_team_credential">International cultivation leadership across 3 continents.</p>
+              <p class="cs_team_supporting">Delivers repeatable quality at scale.</p>
+            </div>
+          </div>
+          <div class="cs_team_card wow fadeInUp" data-wow-delay="0.2s">
+            <div class="cs_team_photo"><img src="/assets/img/CAROLYN%20FENNELL.png" alt="Carolyn Fennell"></div>
+            <div class="cs_team_body">
+              <h3 class="cs_team_name">Carolyn Fennell</h3>
+              <span class="cs_team_role">Flower to Medicine</span>
+              <p class="cs_team_credential">20+ years across pharmaceutical manufacturing, compliance and GMP operations.</p>
+              <p class="cs_team_supporting">Delivers pharmaceutical quality from harvest to finished medicine.</p>
+            </div>
+          </div>
+          <div class="cs_team_card wow fadeInUp">
+            <div class="cs_team_photo"><img src="/assets/img/AUDREY%20KUANG.png" alt="Audrey Kuang"></div>
+            <div class="cs_team_body">
+              <h3 class="cs_team_name">Audrey Kuang</h3>
+              <span class="cs_team_role">Quality to Confidence</span>
+              <p class="cs_team_credential">14+ years across laboratory science, validation and pharmaceutical quality.</p>
+              <p class="cs_team_supporting">Builds confidence through rigorous pharmaceutical quality systems.</p>
+            </div>
+          </div>
+          <div class="cs_team_card wow fadeInUp" data-wow-delay="0.1s">
+            <div class="cs_team_photo"><img src="/assets/img/George%20Polimenakos.png" alt="George Polimenakos"></div>
+            <div class="cs_team_body">
+              <h3 class="cs_team_name">George Polimenakos</h3>
+              <span class="cs_team_role">Commercial Growth &amp; Market Development</span>
+              <p class="cs_team_credential">Experienced Australian pharmaceutical and medical cannabis executive specialising in commercial growth, sales, marketing and business development.</p>
+              <p class="cs_team_supporting">Drives commercial strategy, market expansion and long-term business growth.</p>
             </div>
           </div>
         </div>
-      </div>
-      <div class="cs_height_64 cs_height_lg_50"></div>
-    </div>
-    <!-- End Brand Section -->
-    <!-- Start Work Section -->
-    <section>
-      <div class="cs_height_100 cs_height_lg_70"></div>
-      <div class="container">
-        <div class="row align-items-end cs_gap_y_50">
-          <div class="col-xl-3">
-            <div class="cs_section_heading cs_style_5">
-              <h3 class="cs_brackets_title cs_normal cs_fs_16">GALLERY</h3>
-              <h2 class="cs_section_title cs_fs_80 mb-0">OUR <span>WORK</span></h2>
-            </div>
-          </div>
-          <div class="col-xl-9">
-            <div class="cs_isotop cs_style_1 cs_isotop_col_3 cs_has_gutter_24 cs_lightgallery">
-              <div class="cs_grid_sizer"></div>
-              <div class="cs_isotop_item wow fadeInLeft">
-                <a href="/assets/img/work_thumb_1.jpg" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-                  <img src="/assets/img/work_thumb_1.jpg" alt="">
-                  <span class="cs_gallery_info_wrap cs_center">
-                    <span class="cs_gallery_info text-center cs_center">
-                      <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Gallery A</span>
-                      <span class="cs_white_color d-block">2024</span>
-                    </span>
-                  </span>
-                </a>
-              </div>
-              <div class="cs_isotop_item">
-                <a href="/assets/img/work_thumb_2.jpg" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-                  <img src="/assets/img/work_thumb_2.jpg" alt="">
-                  <span class="cs_gallery_info_wrap cs_center">
-                    <span class="cs_gallery_info text-center cs_center">
-                      <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Gallery B</span>
-                      <span class="cs_white_color d-block">2024</span>
-                    </span>
-                  </span>
-                </a>
-              </div>
-              <div class="cs_isotop_item wow fadeInRight">
-                <a href="/assets/img/work_thumb_3.jpg" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-                  <img src="/assets/img/work_thumb_3.jpg" alt="">
-                  <span class="cs_gallery_info_wrap cs_center">
-                    <span class="cs_gallery_info text-center cs_center">
-                      <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Gallery C</span>
-                      <span class="cs_white_color d-block">2024</span>
-                    </span>
-                  </span>
-                </a>
-              </div>
-              <div class="cs_isotop_item">
-                <a href="/assets/img/work_thumb_4.jpg" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-                  <img src="/assets/img/work_thumb_4.jpg" alt="">
-                  <span class="cs_gallery_info_wrap cs_center">
-                    <span class="cs_gallery_info text-center cs_center">
-                      <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Gallery D</span>
-                      <span class="cs_white_color d-block">2024</span>
-                    </span>
-                  </span>
-                </a>
-              </div>
-              <div class="cs_isotop_item">
-                <a href="/assets/img/work_thumb_5.jpg" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-                  <img src="/assets/img/work_thumb_5.jpg" alt="">
-                  <span class="cs_gallery_info_wrap cs_center">
-                    <span class="cs_gallery_info text-center cs_center">
-                      <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Gallery E</span>
-                      <span class="cs_white_color d-block">2024</span>
-                    </span>
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
+        <div class="cs_team_statement wow fadeInUp">
+          <p>&ldquo;Cannabinoid medicines sit at the intersection of science, cultivation and healthcare. So does our team.&rdquo;</p>
         </div>
       </div>
-      <div class="cs_height_100 cs_height_lg_70"></div>
     </section>
-    <!-- End Work Section -->
+    <!-- End Team Expertise Section -->
     <!-- Start CTA Section -->
     <style>
       .cs_contact_card_section { padding: 100px 0; overflow: hidden; }
