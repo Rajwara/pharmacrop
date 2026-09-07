@@ -36,52 +36,9 @@ export default function RootLayout({ children }) {
           <i className="fa-solid fa-arrow-up"></i>
         </button>
 
-        <button id="cs_quote_tab" className="cs_quote_tab" type="button">
+        <a id="cs_quote_tab" className="cs_quote_tab" href="/commercial-partnerships">
           Partner With Us
-        </button>
-
-        <div id="cs_quote_modal" className="cs_modal_overlay" role="dialog" aria-modal="true" aria-label="Request a quote">
-          <div className="cs_modal_box">
-            <button className="cs_modal_close" type="button" aria-label="Close">
-              <i className="fa-solid fa-xmark"></i>
-            </button>
-            <h3 className="cs_fs_32 cs_bold cs_mb_16">Request a Quote</h3>
-            <p className="cs_fs_20 cs_mb_24">Tell us a bit about what you need and we&apos;ll get back to you.</p>
-            <form action="https://api.web3forms.com/submit" method="POST" className="row cs_gap_y_24">
-              <input type="hidden" name="access_key" value="cd98b256-0db3-478c-ab28-1ec94f80447c" />
-              <input type="hidden" name="subject" value="New Quote Request - PharmaCrop Website" />
-              <div className="col-sm-6">
-                <input type="text" name="name" className="cs_form_field" placeholder="Full Name *" required />
-              </div>
-              <div className="col-sm-6">
-                <input type="email" name="email" className="cs_form_field" placeholder="Email Address *" required />
-              </div>
-              <div className="col-sm-6">
-                <input type="tel" name="phone" className="cs_form_field" placeholder="Phone" />
-              </div>
-              <div className="col-sm-6">
-                <input type="text" name="company" className="cs_form_field" placeholder="Company / Organisation" />
-              </div>
-              <div className="col-lg-12">
-                <select name="interest" className="cs_form_field" required defaultValue="">
-                  <option value="" disabled>I&apos;m interested in... *</option>
-                  <option value="Pharmacist">Pharmacist</option>
-                  <option value="Prescriber">Prescriber</option>
-                  <option value="Distributor">Distributor</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-              <div className="col-lg-12">
-                <textarea name="message" className="cs_form_field" placeholder="Tell us about your requirements" rows="4"></textarea>
-              </div>
-              <div className="col-lg-12">
-                <button className="cs_btn cs_style_1 cs_bold cs_heading_bg cs_white_color w-100" type="submit">
-                  Submit Request
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
+        </a>
 
         <div id="cs_newsletter_modal" className="cs_modal_overlay" role="dialog" aria-modal="true" aria-label="Subscribe to our newsletter">
           <div className="cs_modal_box cs_modal_box_sm">
@@ -161,12 +118,8 @@ export default function RootLayout({ children }) {
               var quoteTab = document.getElementById('cs_quote_tab');
               if (quoteTab) {
                 var path = window.location.pathname;
-                if (path === '/contact' || path === '/contact/') {
+                if (path === '/contact' || path === '/contact/' || path === '/commercial-partnerships' || path === '/commercial-partnerships/') {
                   quoteTab.style.display = 'none';
-                } else {
-                  quoteTab.addEventListener('click', function () {
-                    openModal('cs_quote_modal');
-                  });
                 }
               }
 
