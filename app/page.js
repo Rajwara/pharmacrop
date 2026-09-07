@@ -392,14 +392,14 @@ export default function Page() {
       .cs_platform_items { display: flex; flex-direction: column; gap: 20px; }
       .cs_platform_item { display: flex; align-items: stretch; gap: 32px; border-radius: 16px; padding: 12px; transition: background-color 0.3s ease; }
       .cs_platform_item_img { flex: 0 0 260px; border-radius: 12px; overflow: hidden; }
-      .cs_platform_item_img img { width: 100%; height: 100%; min-height: 180px; object-fit: cover; display: block; }
+      .cs_platform_item_img img { display: block; width: 100%; height: 220px; object-fit: cover; }
       .cs_platform_item_body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 8px 0; }
       .cs_platform_item_icon { display: none; width: 48px; height: 48px; border-radius: 50%; background: rgba(120,220,166,0.18); color: #78dca6; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px; }
       .cs_platform_item_body h3 { color: #024242; font-size: 22px; margin: 0 0 10px; transition: color 0.3s ease; }
       .cs_platform_item_body p { color: #666; font-size: 15px; line-height: 1.7; margin: 0; max-width: 420px; transition: color 0.3s ease; }
       .cs_platform_item.active { background: #024242; padding: 0; gap: 0; }
       .cs_platform_item.active .cs_platform_item_img { flex-basis: 45%; border-radius: 16px 0 0 16px; }
-      .cs_platform_item.active .cs_platform_item_img img { min-height: 380px; border-radius: 0; }
+      .cs_platform_item.active .cs_platform_item_img img { height: 320px; border-radius: 0; }
       .cs_platform_item.active .cs_platform_item_body { padding: 48px; }
       .cs_platform_item.active .cs_platform_item_icon { display: flex; }
       .cs_platform_item.active .cs_platform_item_body h3 { color: #fff; font-size: 28px; }
@@ -415,9 +415,9 @@ export default function Page() {
         .cs_platform_journey_title { font-size: 28px; }
         .cs_platform_item { flex-direction: column; }
         .cs_platform_item_img { flex-basis: auto; }
-        .cs_platform_item_img img { min-height: 200px; }
+        .cs_platform_item_img img { height: 200px; }
         .cs_platform_item.active .cs_platform_item_img { border-radius: 16px 16px 0 0; }
-        .cs_platform_item.active .cs_platform_item_img img { min-height: 220px; }
+        .cs_platform_item.active .cs_platform_item_img img { height: 220px; }
         .cs_platform_item.active .cs_platform_item_body { padding: 32px; }
       }
       @media (max-width: 600px) {
@@ -524,6 +524,74 @@ export default function Page() {
       </div>
     </section>
     <!-- End Integrated Platform Journey Section -->
+    <!-- Start Licensing Compliance Section -->
+    <style>
+      .cs_licensing_section { padding: 110px 0; background: #fff; }
+      .cs_licensing_head { text-align: center; max-width: 680px; margin: 0 auto 60px; }
+      .cs_licensing_head span { color: #78dca6; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; font-size: 14px; display: block; margin-bottom: 14px; }
+      .cs_licensing_head h2 { color: #024242; font-size: 38px; line-height: 1.25; margin: 0 0 20px; }
+      .cs_licensing_head p { color: #666; font-size: 16px; line-height: 1.7; margin: 0; }
+      .cs_licensing_grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+      .cs_licensing_card { background: #f7faf8; border-radius: 12px; padding: 40px 32px; transition: 0.3s; border: 1px solid #eee; }
+      .cs_licensing_card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(2,66,66,0.1); border-color: transparent; }
+      .cs_licensing_icon { width: 62px; height: 62px; border-radius: 50%; background: rgba(120,220,166,0.15); display: flex; align-items: center; justify-content: center; margin-bottom: 22px; font-size: 24px; color: #024242; }
+      .cs_licensing_card h3 { color: #024242; font-size: 20px; margin-bottom: 12px; }
+      .cs_licensing_card p { color: #666; font-size: 15px; line-height: 1.7; margin: 0; }
+      .cs_licensing_statement { margin-top: 50px; text-align: center; padding: 28px 32px; border-radius: 12px; background: #024242; }
+      .cs_licensing_statement p { color: #fff; font-size: 17px; font-weight: 600; line-height: 1.6; margin: 0 auto; max-width: 720px; }
+      @media (max-width: 991px) { .cs_licensing_grid { grid-template-columns: repeat(2, 1fr); } }
+      @media (max-width: 600px) {
+        .cs_licensing_grid { grid-template-columns: 1fr; }
+        .cs_licensing_head h2 { font-size: 30px; }
+        .cs_licensing_statement { padding: 24px; }
+        .cs_licensing_statement p { font-size: 15px; }
+      }
+    </style>
+    <section class="cs_licensing_section">
+      <div class="container">
+        <div class="cs_licensing_head wow fadeInUp">
+          <span>Licensing &amp; Compliance</span>
+          <h2>FULLY LICENSED ACROSS THE VALUE CHAIN</h2>
+          <p>End-to-end regulatory capability supporting PharmaCrop from seed import and cultivation through to manufacturing, wholesale and global export.</p>
+        </div>
+        <div class="cs_licensing_grid">
+          <div class="cs_licensing_card wow fadeInUp">
+            <div class="cs_licensing_icon"><i class="fa-solid fa-dna"></i></div>
+            <h3>Seed Import</h3>
+            <p>ODC Import Permit supporting the regulated import of seed and genetic material.</p>
+          </div>
+          <div class="cs_licensing_card wow fadeInUp" data-wow-delay="0.1s">
+            <div class="cs_licensing_icon"><i class="fa-solid fa-seedling"></i></div>
+            <h3>Cultivation</h3>
+            <p>ODC Cultivation &amp; Production Licence supporting regulated Australian cultivation and production.</p>
+          </div>
+          <div class="cs_licensing_card wow fadeInUp" data-wow-delay="0.2s">
+            <div class="cs_licensing_icon"><i class="fa-solid fa-industry"></i></div>
+            <h3>Manufacturing</h3>
+            <p>TGA Licence to Manufacture Therapeutic Goods within PharmaCrop&rsquo;s Australian manufacturing platform.</p>
+          </div>
+          <div class="cs_licensing_card wow fadeInUp">
+            <div class="cs_licensing_icon"><i class="fa-solid fa-box"></i></div>
+            <h3>Packaging</h3>
+            <p>GMP Manufacturing Licence supporting compliant pharmaceutical packaging and finished-product preparation.</p>
+          </div>
+          <div class="cs_licensing_card wow fadeInUp" data-wow-delay="0.1s">
+            <div class="cs_licensing_icon"><i class="fa-solid fa-warehouse"></i></div>
+            <h3>Wholesale</h3>
+            <p>ODC Wholesale Licence supporting regulated commercial supply across the cannabinoid medicines value chain.</p>
+          </div>
+          <div class="cs_licensing_card wow fadeInUp" data-wow-delay="0.2s">
+            <div class="cs_licensing_icon"><i class="fa-solid fa-globe"></i></div>
+            <h3>Export</h3>
+            <p>ODC Export Permit supporting international supply and regulated global market access.</p>
+          </div>
+        </div>
+        <div class="cs_licensing_statement wow fadeInUp">
+          <p>Licensed across the entire value chain to support Australian manufacturing and global supply.</p>
+        </div>
+      </div>
+    </section>
+    <!-- End Licensing Compliance Section -->
     <!-- Start Homepage FAQ Section -->
     <style>
       .cs_home_faq_row { align-items: stretch; }
