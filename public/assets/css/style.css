@@ -5926,6 +5926,7 @@ hr {
 }
 
 .cs_quote_tab {
+  display: inline-block;
   position: fixed;
   left: 0;
   top: 45%;
@@ -5939,6 +5940,7 @@ hr {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
+  text-decoration: none;
   border-radius: 0 10px 10px 0;
   cursor: pointer;
   z-index: 998;
@@ -6012,5 +6014,26 @@ hr {
   .cs_modal_box {
     padding: 28px 20px;
   }
+}
+.cs_header_cta_btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--heading-color);
+  color: var(--white-color);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+.cs_header_cta_btn:hover {
+  background-color: var(--accent-mint);
+  color: var(--heading-color);
+  transform: translateY(-2px);
 }
 /*# sourceMappingURL=style.css.map */
