@@ -234,107 +234,111 @@ export default function Page() {
     <!-- End CTA Section -->
     <!-- Start Footer Section -->
     <style>
-      .cs_footer_brand { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
-      .cs_footer_brand .cs_newsletter { width: 100%; }
-      .cs_footer_tagline { margin: 0; width: 100%; }
-      .cs_footer_social_item { display: flex; align-items: center; gap: 10px; }
-      .cs_footer_social_label { text-transform: uppercase; }
-      .cs_footer_social_icon { width: 30px; height: 30px; border-radius: 50%; background: rgba(2, 66, 66, 0.08); color: #024242; display: inline-flex; align-items: center; justify-content: center; transition: background-color 0.3s ease, color 0.3s ease; }
-      .cs_footer_social_icon:hover { background: #024242; color: #fff; }
-      .cs_footer_row { display: grid !important; grid-template-columns: 1.5fr 1fr 1fr 1.3fr !important; gap: 40px !important; }
-      .cs_footer_row .cs_footer_col { position: relative; max-width: none !important; flex: none !important; width: 100% !important; padding-right: 0 !important; }
-      .cs_footer_row .cs_footer_col:not(:last-child)::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: -20px;
-        width: 2px;
-        height: 40px;
-        background: #024242;
-      }
-      .cs_footer_brand .cs_newsletter_input { padding: 10px 48px 10px 20px !important; font-size: 14px !important; }
-      .cs_footer_touch_list li a { font-size: 14px; white-space: nowrap; }
+      .cs_footer_v2 { background: #eee9e3; padding: 90px 0 0; position: relative; overflow: hidden; }
+      .cs_footer_v2_row { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 40px; padding-bottom: 56px; border-bottom: 1px solid rgba(2, 66, 66, 0.12); position: relative; z-index: 1; }
+      .cs_footer_v2_brand_tagline { color: #024242; font-size: 20px; font-weight: 700; margin: 20px 0 12px; line-height: 1.4; }
+      .cs_footer_v2_desc { color: rgba(2, 66, 66, 0.6); font-size: 14px; line-height: 1.6; margin: 0 0 20px; max-width: 320px; }
+      .cs_footer_v2_newsletter { display: flex; border: 1px solid rgba(2, 66, 66, 0.2); border-radius: 30px; padding: 6px 6px 6px 20px; background: #fff; max-width: 340px; }
+      .cs_footer_v2_newsletter input { flex: 1; border: none; outline: none; font-size: 14px; background: transparent; min-width: 0; }
+      .cs_footer_v2_newsletter button { width: 36px; height: 36px; border-radius: 50%; border: none; background: #024242; color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; flex: none; }
+      .cs_footer_v2_privacy { color: rgba(2, 66, 66, 0.45); font-size: 12px; margin: 12px 0 0; }
+      .cs_footer_v2_col_title { color: #024242; font-weight: 700; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; margin: 0 0 8px; }
+      .cs_footer_v2_col_underline { display: block; width: 26px; height: 2px; background: #d99f59; margin-bottom: 20px; }
+      .cs_footer_v2_list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+      .cs_footer_v2_list a { color: #024242; opacity: 0.75; font-size: 14px; text-decoration: none; }
+      .cs_footer_v2_list a:hover { opacity: 1; text-decoration: underline; }
+      .cs_footer_v2_touch_item { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+      .cs_footer_v2_touch_icon { width: 34px; height: 34px; border-radius: 50%; background: rgba(120, 220, 166, 0.25); color: #024242; display: flex; align-items: center; justify-content: center; font-size: 13px; flex: none; }
+      .cs_footer_v2_touch_item a { color: #024242; font-size: 14px; text-decoration: none; }
+      .cs_footer_v2_touch_item a:hover { text-decoration: underline; }
+      .cs_footer_v2_bottom { display: flex; align-items: center; justify-content: space-between; padding: 28px 0; flex-wrap: wrap; gap: 20px; position: relative; z-index: 1; }
+      .cs_footer_v2_copyright { color: rgba(2, 66, 66, 0.55); font-size: 13px; margin: 0; }
+      .cs_footer_v2_badges { display: flex; align-items: center; gap: 28px; }
+      .cs_footer_v2_badge { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+      .cs_footer_v2_badge_img { width: 60px; height: 60px; object-fit: contain; }
+      .cs_footer_v2_badge_label { font-size: 10px; letter-spacing: 0.5px; text-transform: uppercase; color: rgba(2, 66, 66, 0.55); font-weight: 700; }
+      .cs_footer_v2_tagline { display: flex; align-items: center; gap: 12px; color: rgba(2, 66, 66, 0.4); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; font-weight: 700; margin: 0; }
+      .cs_footer_v2_tagline::before { content: ""; width: 30px; height: 1px; background: rgba(2, 66, 66, 0.3); }
       @media (max-width: 991px) {
-        .cs_footer_row { grid-template-columns: repeat(2, 1fr) !important; }
-        .cs_footer_row .cs_footer_col:nth-child(2n)::after { display: none; }
+        .cs_footer_v2_row { grid-template-columns: repeat(2, 1fr); }
       }
       @media (max-width: 575px) {
-        .cs_footer_row { grid-template-columns: 1fr !important; }
-        .cs_footer_row .cs_footer_col::after { display: none; }
-      }
-      @media (max-width: 767px) {
-        .cs_footer_row { padding-top: 40px !important; }
+        .cs_footer_v2_row { grid-template-columns: 1fr; }
+        .cs_footer_v2_bottom { flex-direction: column; align-items: flex-start; }
       }
     </style>
-    <footer class="cs_footer cs_style_1">
+    <footer class="cs_footer_v2">
       <div class="container">
-        <div class="cs_footer_row">
-          <div class="cs_footer_col">
-            <div class="cs_footer_widget">
-              <div class="cs_footer_brand">
-                <img src="/assets/img/logo-dark.webp" alt="Logo" class="wow zoomIn cs_logo_img">
-                <p class="cs_footer_tagline">Stay updated with our latest news and product updates.</p>
-                <form action="#" class="cs_newsletter cs_style_1">
-                  <input type="email" placeholder="Enter your email address ..." class="cs_newsletter_input">
-                  <button type="submit" class="cs_newsletter_btn cs_arrow_btn cs_white_bg cs_heading_color">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
-                    </svg>
-                  </button>
-                </form>
-              </div>
-            </div>
+        <div class="cs_footer_v2_row">
+          <div>
+            <img src="/assets/img/logo-dark.webp" alt="Logo" class="wow zoomIn cs_logo_img">
+            <p class="cs_footer_v2_brand_tagline">Australian-grown.<br>Pharmaceutical by design.</p>
+            <p class="cs_footer_v2_desc">Stay updated with our latest news, insights and product developments.</p>
+            <form action="#" class="cs_footer_v2_newsletter">
+              <input type="email" placeholder="Enter your email address">
+              <button type="submit" aria-label="Subscribe">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
+                </svg>
+              </button>
+            </form>
+            <p class="cs_footer_v2_privacy">We respect your privacy. No spam, ever.</p>
           </div>
-          <div class="cs_footer_col">
-            <div class="cs_footer_widget">
-              <h4 class="cs_footer_widget_title">SUPPORT</h4>
-              <ul class="cs_footer_widget_menu cs_mp_0">
-                <li><a href="/faq">FAQ</a></li>
-                <li><a href="/industry">INDUSTRY</a></li>
-                <li><a href="/services">SERVICES</a></li>
-                <li><a href="/contact">CONTACT</a></li>
-                <li><a href="#">SEE OUR DOCTORS</a></li>
-              </ul>
-            </div>
+          <div>
+            <h4 class="cs_footer_v2_col_title">Explore</h4>
+            <span class="cs_footer_v2_col_underline"></span>
+            <ul class="cs_footer_v2_list">
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/industry">Products</a></li>
+              <li><a href="/commercial-partnerships">Commercial Partnerships</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="/faq">FAQ</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
           </div>
-          <div class="cs_footer_col">
-            <div class="cs_footer_widget">
-              <h4 class="cs_footer_widget_title">LINKS</h4>
-              <ul class="cs_footer_widget_menu cs_mp_0">
-                <li><a href="/about">ABOUT US</a></li>
-                <li><a href="/projects">PROJECTS</a></li>
-                <li><a href="/blog">BLOG</a></li>
-              </ul>
-            </div>
+          <div>
+            <h4 class="cs_footer_v2_col_title">Support</h4>
+            <span class="cs_footer_v2_col_underline"></span>
+            <ul class="cs_footer_v2_list">
+              <li><a href="/privacy-policy">Privacy Policy</a></li>
+              <li><a href="/terms-and-conditions">Terms &amp; Conditions</a></li>
+              <li><a href="/privacy-policy">Cookie Policy</a></li>
+            </ul>
           </div>
-          <div class="cs_footer_col">
-            <div class="cs_footer_widget">
-              <h4 class="cs_footer_widget_title">GET IN TOUCH</h4>
-              <ul class="cs_footer_widget_menu cs_mp_0 cs_footer_touch_list">
-                <li><a href="tel:1300053533">Phone: 1300 053 533</a></li>
-                <li><a href="mailto:enquiries@pharmacrop.com.au">Email: enquiries@pharmacrop.com.au</a></li>
-                <li class="cs_footer_social_item">
-                  <span class="cs_footer_social_label">Social:</span>
-                  <a href="https://www.linkedin.com/company/pharmacrop" target="_blank" rel="noopener" class="cs_footer_social_icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                </li>
-              </ul>
+          <div>
+            <h4 class="cs_footer_v2_col_title">Get In Touch</h4>
+            <span class="cs_footer_v2_col_underline"></span>
+            <div class="cs_footer_v2_touch_item">
+              <span class="cs_footer_v2_touch_icon"><i class="fa-solid fa-phone"></i></span>
+              <a href="tel:1300053533">1300 053 533</a>
+            </div>
+            <div class="cs_footer_v2_touch_item">
+              <span class="cs_footer_v2_touch_icon"><i class="fa-solid fa-envelope"></i></span>
+              <a href="mailto:enquiries@pharmacrop.com.au">enquiries@pharmacrop.com.au</a>
+            </div>
+            <div class="cs_footer_v2_touch_item">
+              <span class="cs_footer_v2_touch_icon"><i class="fa-brands fa-linkedin-in"></i></span>
+              <a href="https://www.linkedin.com/company/pharmacrop" target="_blank" rel="noopener">Follow us on LinkedIn</a>
             </div>
           </div>
         </div>
-        <div class="cs_bottom_footer">
-          <div class="cs_bottom_footer_left wow fadeInLeft">
-            <div class="cs_copyright">© 2026 PHARMACROP. ALL RIGHTS RESERVED. WEBSITE MAINTAINED BY PHARMACROP.</div>
+        <div class="cs_footer_v2_bottom">
+          <p class="cs_footer_v2_copyright">&copy; 2026 PharmaCrop. All rights reserved.</p>
+          <div class="cs_footer_v2_badges">
+            <div class="cs_footer_v2_badge">
+              <img src="/assets/img/AUSTRALIAN-MADE.png" alt="Australian Made" class="cs_footer_v2_badge_img">
+              <span class="cs_footer_v2_badge_label">Australian Made</span>
+            </div>
+            <div class="cs_footer_v2_badge">
+              <img src="/assets/img/GMP-CERTIFIED.png" alt="GMP Certified" class="cs_footer_v2_badge_img">
+              <span class="cs_footer_v2_badge_label">GMP Certified</span>
+            </div>
+            <div class="cs_footer_v2_badge">
+              <img src="/assets/img/TGA-LICENSED.png" alt="TGA Licensed" class="cs_footer_v2_badge_img">
+              <span class="cs_footer_v2_badge_label">TGA Licensed</span>
+            </div>
           </div>
-          <div class="cs_bottom_footer_right wow fadeInRight">
-            <ul class="cs_footer_links cs_mp_0">
-              <li>
-                <a href="/privacy-policy">PRIVACY POLICY</a>
-              </li>
-              <li>
-                <a href="/terms-and-conditions">TERMS &amp; CONDITION</a>
-              </li>
-            </ul>
-          </div>
+          <p class="cs_footer_v2_tagline">Bring Balance To Your Life</p>
         </div>
       </div>
     </footer>
