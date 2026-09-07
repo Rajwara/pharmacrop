@@ -702,6 +702,81 @@ export default function Page() {
       </div>
     </section>
     <!-- End What We Do Split Section -->
+    <!-- Start Scroll Stack Projects Section -->
+    <style>
+      .cs_scroll_stack { position: relative; height: 320vh; background: #024242; }
+      .cs_scroll_stack_sticky { position: sticky; top: 0; height: 100vh; overflow: hidden; display: flex; align-items: center; }
+      .cs_scroll_stack_row { display: flex; align-items: center; width: 100%; gap: 60px; padding: 0 80px; box-sizing: border-box; }
+      .cs_scroll_stack_left { flex: 0 0 420px; }
+      .cs_scroll_stack_pretitle { color: rgba(255, 255, 255, 0.6); font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px; display: block; }
+      .cs_scroll_stack_title { color: #fff; font-size: 44px; font-weight: 800; line-height: 1.25; margin: 0 0 32px; }
+      .cs_scroll_stack_btn { display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(255, 255, 255, 0.5); color: #fff; border-radius: 30px; padding: 14px 28px; font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-decoration: none; transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
+      .cs_scroll_stack_btn:hover { background: #78dca6; border-color: #78dca6; color: #024242; }
+      .cs_scroll_stack_right { position: relative; flex: 1; height: 480px; }
+      .cs_scroll_card { position: absolute; top: 50%; left: 50%; width: 560px; max-width: 90%; border-radius: 16px; overflow: hidden; will-change: transform, filter, opacity; }
+      .cs_scroll_card img { width: 100%; height: 340px; object-fit: cover; display: block; }
+      .cs_scroll_card_content { position: absolute; left: 0; right: 0; bottom: 0; padding: 24px; background: linear-gradient(180deg, rgba(2, 20, 20, 0) 0%, rgba(2, 20, 20, 0.85) 100%); }
+      .cs_scroll_card_tags { display: flex; gap: 4px; margin-bottom: 10px; flex-wrap: wrap; }
+      .cs_scroll_card_tag { color: rgba(255, 255, 255, 0.8); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+      .cs_scroll_card_tag:not(:last-child)::after { content: "/"; margin-left: 8px; color: rgba(255, 255, 255, 0.4); }
+      .cs_scroll_card_title { color: #fff; font-size: 22px; font-weight: 700; margin: 0; }
+      @media (max-width: 991px) {
+        .cs_scroll_stack { height: 260vh; }
+        .cs_scroll_stack_row { flex-direction: column; padding: 0 24px; gap: 32px; }
+        .cs_scroll_stack_left { flex: none; }
+        .cs_scroll_stack_right { width: 100%; height: 320px; }
+        .cs_scroll_card { width: 320px; }
+        .cs_scroll_card img { height: 220px; }
+        .cs_scroll_stack_title { font-size: 30px; }
+      }
+    </style>
+    <section class="cs_scroll_stack" id="cs_scroll_stack">
+      <div class="cs_scroll_stack_sticky">
+        <div class="cs_scroll_stack_row">
+          <div class="cs_scroll_stack_left">
+            <span class="cs_scroll_stack_pretitle">Partnership In Action</span>
+            <h2 class="cs_scroll_stack_title">Building consistent supply that grows with your business</h2>
+            <a href="/commercial-partnerships" class="cs_scroll_stack_btn">View All Partnerships</a>
+          </div>
+          <div class="cs_scroll_stack_right">
+            <div class="cs_scroll_card" data-index="0">
+              <img src="/assets/img/pharma-banner.jpeg" alt="Noosa Hinterland Cultivation Facility">
+              <div class="cs_scroll_card_content">
+                <div class="cs_scroll_card_tags">
+                  <span class="cs_scroll_card_tag">Cultivation</span>
+                  <span class="cs_scroll_card_tag">Facility</span>
+                  <span class="cs_scroll_card_tag">Scalable</span>
+                </div>
+                <h3 class="cs_scroll_card_title">Noosa Hinterland Cultivation Facility</h3>
+              </div>
+            </div>
+            <div class="cs_scroll_card" data-index="1">
+              <img src="/assets/img/pharmacrop-banner3.webp" alt="GMP Quality Control Lab">
+              <div class="cs_scroll_card_content">
+                <div class="cs_scroll_card_tags">
+                  <span class="cs_scroll_card_tag">GMP</span>
+                  <span class="cs_scroll_card_tag">Quality</span>
+                  <span class="cs_scroll_card_tag">Testing</span>
+                </div>
+                <h3 class="cs_scroll_card_title">GMP Quality Control Lab</h3>
+              </div>
+            </div>
+            <div class="cs_scroll_card" data-index="2">
+              <img src="/assets/img/health-professionals-card.webp" alt="Clinical & Regulatory Support">
+              <div class="cs_scroll_card_content">
+                <div class="cs_scroll_card_tags">
+                  <span class="cs_scroll_card_tag">Clinical</span>
+                  <span class="cs_scroll_card_tag">Guidance</span>
+                  <span class="cs_scroll_card_tag">Support</span>
+                </div>
+                <h3 class="cs_scroll_card_title">Clinical &amp; Regulatory Support</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Scroll Stack Projects Section -->
     <!-- Start Footer Section -->
     <style>
       .cs_footer_brand { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
@@ -859,6 +934,66 @@ export default function Page() {
             });
           });
           restart();
+        })();
+      `}
+    </Script>
+    <Script id="cs_scroll_stack_script" strategy="afterInteractive">
+      {`
+        (function () {
+          var section = document.getElementById('cs_scroll_stack');
+          if (!section) return;
+          var cards = Array.prototype.slice.call(section.querySelectorAll('.cs_scroll_card'));
+          var n = cards.length;
+
+          function lerp(a, b, t) { return a + (b - a) * t; }
+          function clamp(v, min, max) { return Math.max(min, Math.min(max, v)); }
+
+          function update() {
+            var rect = section.getBoundingClientRect();
+            var vh = window.innerHeight;
+            var totalScrollable = rect.height - vh;
+            var scrolled = clamp(-rect.top, 0, totalScrollable);
+            var overall = totalScrollable > 0 ? scrolled / totalScrollable : 0;
+
+            cards.forEach(function (card, i) {
+              var ownProgress = clamp(overall * n - i, 0, 1);
+              var nextProgress = i < n - 1 ? clamp(overall * n - (i + 1), 0, 1) : 0;
+
+              var scale = lerp(0.7, 1, ownProgress);
+              var rotate = lerp(-18, 0, ownProgress);
+              var translateX = lerp(18, 0, ownProgress);
+              var translateY = lerp(12, 0, ownProgress);
+              var blur = lerp(16, 0, ownProgress);
+              var opacity = Math.min(ownProgress * 2, 1);
+
+              scale = lerp(scale, 0.72, nextProgress);
+              rotate = lerp(rotate, 12, nextProgress);
+              translateX = lerp(translateX, 26, nextProgress);
+              translateY = lerp(translateY, -20, nextProgress);
+              opacity = opacity * lerp(1, 0.55, nextProgress);
+              blur = blur + lerp(0, 2, nextProgress);
+
+              card.style.transform = 'translate3d(calc(-50% + ' + translateX + 'vw), calc(-50% + ' + translateY + 'vh), 0) scale(' + scale + ') rotate(' + rotate + 'deg)';
+              card.style.filter = 'blur(' + blur + 'px)';
+              card.style.opacity = opacity;
+              card.style.zIndex = 10 + i;
+            });
+          }
+
+          var ticking = false;
+          function onScroll() {
+            if (!ticking) {
+              window.requestAnimationFrame(function () {
+                update();
+                ticking = false;
+              });
+              ticking = true;
+            }
+          }
+
+          window.addEventListener('scroll', onScroll, { passive: true });
+          window.addEventListener('resize', onScroll);
+          update();
         })();
       `}
     </Script>
