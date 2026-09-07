@@ -123,13 +123,20 @@ export default function Page() {
       .cs_contact_hello_social { display: flex; gap: 10px; }
       .cs_contact_hello_social a { width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(2, 66, 66, 0.25); color: #024242; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 14px; transition: background-color 0.3s ease, color 0.3s ease; }
       .cs_contact_hello_social a:hover { background: #024242; color: #fff; border-color: #024242; }
-      .cs_contact_hello_form { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-      .cs_contact_hello_form .cs_full { grid-column: 1 / -1; }
-      .cs_contact_hello_form label { display: block; font-size: 14px; font-weight: 700; color: #024242; margin-bottom: 8px; }
-      .cs_contact_hello_form input, .cs_contact_hello_form select, .cs_contact_hello_form textarea { width: 100%; border: 1px solid rgba(2, 66, 66, 0.15); background: #fff; border-radius: 8px; padding: 14px 16px; font-size: 14px; color: #1f2419; outline: none; box-sizing: border-box; font-family: inherit; }
-      .cs_contact_hello_form textarea { min-height: 140px; resize: vertical; }
-      .cs_contact_hello_submit { background: #024242; color: #fff; font-weight: 700; padding: 16px; border-radius: 8px; border: none; cursor: pointer; font-size: 14px; transition: background-color 0.3s ease, color 0.3s ease; }
+      .cs_contact_form_card { background: #fff; border-radius: 24px; padding: 48px; box-shadow: 0 25px 60px rgba(2, 66, 66, 0.08); }
+      .cs_contact_form_card_title { font-size: 26px; font-weight: 800; color: #024242; margin: 0 0 10px; }
+      .cs_contact_form_card_desc { font-size: 14px; line-height: 1.6; color: rgba(2, 66, 66, 0.55); margin: 0 0 32px; max-width: 380px; }
+      .cs_contact_hello_form { display: flex; flex-direction: column; }
+      .cs_contact_hello_form > div { border-bottom: 1px solid rgba(2, 66, 66, 0.14); padding: 16px 0; }
+      .cs_contact_hello_form > div:first-of-type { padding-top: 0; }
+      .cs_contact_hello_form label { display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: rgba(2, 66, 66, 0.5); margin-bottom: 6px; }
+      .cs_contact_hello_form input, .cs_contact_hello_form select, .cs_contact_hello_form textarea { width: 100%; border: none; background: transparent; padding: 0; font-size: 15px; color: #024242; outline: none; box-sizing: border-box; font-family: inherit; appearance: none; -webkit-appearance: none; }
+      .cs_contact_hello_form select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23024242' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right center; }
+      .cs_contact_hello_form textarea { min-height: 50px; resize: vertical; }
+      .cs_contact_hello_form input::placeholder, .cs_contact_hello_form textarea::placeholder { color: rgba(2, 66, 66, 0.35); }
+      .cs_contact_hello_submit { margin-top: 32px; display: inline-flex; align-items: center; gap: 10px; background: #024242; color: #fff; font-weight: 700; padding: 15px 28px; border-radius: 999px; border: none; cursor: pointer; font-size: 14px; width: fit-content; transition: background-color 0.3s ease, color 0.3s ease; }
       .cs_contact_hello_submit:hover { background: #78dca6; color: #024242; }
+      .cs_contact_hello_submit svg { flex: none; }
       @media (max-width: 991px) {
         .cs_contact_hello_row { flex-direction: column; gap: 48px; }
         .cs_contact_hello_left { flex: none; width: 100%; }
@@ -137,7 +144,7 @@ export default function Page() {
         .cs_contact_hello_title { font-size: 32px; }
       }
       @media (max-width: 575px) {
-        .cs_contact_hello_form { grid-template-columns: 1fr; }
+        .cs_contact_form_card { padding: 32px 24px; }
         .cs_contact_hello_info { gap: 32px; }
       }
     </style>
@@ -176,40 +183,49 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_contact_hello_right">
-            <form action="https://api.web3forms.com/submit" method="POST" class="cs_contact_hello_form">
-              <input type="hidden" name="access_key" value="cd98b256-0db3-478c-ab28-1ec94f80447c">
-              <input type="hidden" name="subject" value="New Enquiry - PharmaCrop Contact Page">
-              <div>
-                <label>Name (required)</label>
-                <input type="text" name="name" placeholder="Your name" required>
-              </div>
-              <div>
-                <label>Email (required)</label>
-                <input type="email" name="email" placeholder="Your email" required>
-              </div>
-              <div>
-                <label>Phone</label>
-                <input type="tel" name="phone" placeholder="Your phone number">
-              </div>
-              <div>
-                <label>Area of Interest</label>
-                <select name="area_of_interest" defaultValue="">
-                  <option value="" disabled selected>Select your area of interest</option>
-                  <option value="Retail">Retail</option>
-                  <option value="Green Label">Green Label</option>
-                  <option value="White Label">White Label</option>
-                  <option value="Bulk Flower">Bulk Flower</option>
-                  <option value="Distribution / Export">Distribution / Export</option>
-                  <option value="Product Enquiry">Product Enquiry</option>
-                  <option value="General Enquiry">General Enquiry</option>
-                </select>
-              </div>
-              <div class="cs_full">
-                <label>Message</label>
-                <textarea name="message" placeholder="Tell us how we can help"></textarea>
-              </div>
-              <button type="submit" class="cs_contact_hello_submit cs_full">Send Enquiry</button>
-            </form>
+            <div class="cs_contact_form_card">
+              <h3 class="cs_contact_form_card_title">Get in Touch</h3>
+              <p class="cs_contact_form_card_desc">Fill in your details and our team will get back to you shortly.</p>
+              <form action="https://api.web3forms.com/submit" method="POST" class="cs_contact_hello_form">
+                <input type="hidden" name="access_key" value="cd98b256-0db3-478c-ab28-1ec94f80447c">
+                <input type="hidden" name="subject" value="New Enquiry - PharmaCrop Contact Page">
+                <div>
+                  <label>Name (required)</label>
+                  <input type="text" name="name" placeholder="Your name" required>
+                </div>
+                <div>
+                  <label>Email (required)</label>
+                  <input type="email" name="email" placeholder="Your email" required>
+                </div>
+                <div>
+                  <label>Phone</label>
+                  <input type="tel" name="phone" placeholder="Your phone number">
+                </div>
+                <div>
+                  <label>Area of Interest</label>
+                  <select name="area_of_interest" defaultValue="">
+                    <option value="" disabled selected>Select your area of interest</option>
+                    <option value="Retail">Retail</option>
+                    <option value="Green Label">Green Label</option>
+                    <option value="White Label">White Label</option>
+                    <option value="Bulk Flower">Bulk Flower</option>
+                    <option value="Distribution / Export">Distribution / Export</option>
+                    <option value="Product Enquiry">Product Enquiry</option>
+                    <option value="General Enquiry">General Enquiry</option>
+                  </select>
+                </div>
+                <div>
+                  <label>Message</label>
+                  <textarea name="message" placeholder="Tell us how we can help"></textarea>
+                </div>
+                <button type="submit" class="cs_contact_hello_submit">
+                  <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
+                  </svg>
+                  Send Enquiry
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
