@@ -134,52 +134,49 @@ export default function Page() {
     <!-- Start Features Section -->
     <div class="cs_heading_bg cs_white_color">
       <!-- Start Feature Section -->
+      <style>
+        .cs_foundation_head { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+        .cs_foundation_grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+        .cs_foundation_card { background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.14); border-radius: 16px; padding: 32px 24px; }
+        .cs_foundation_icon { width: 56px; height: 56px; border-radius: 12px; background: rgba(120, 220, 166, 0.18); color: #78dca6; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 24px; }
+        .cs_foundation_card h3 { color: #fff; font-size: 20px; margin: 0 0 12px; }
+        .cs_foundation_card p { color: rgba(255, 255, 255, 0.7); font-size: 15px; line-height: 1.7; margin: 0; }
+        @media (max-width: 1199px) {
+          .cs_foundation_grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 575px) {
+          .cs_foundation_grid { grid-template-columns: 1fr; }
+          .cs_foundation_head { flex-direction: column; align-items: flex-start; }
+        }
+      </style>
       <section>
         <div class="cs_height_100 cs_height_lg_70"></div>
         <div class="container">
-          <div class="cs_section_heading cs_style_1">
-            <h2 class="cs_section_title cs_fs_80 mb-0 wow fadeInUp">THE PHARMACROP <span>FOUNDATIONS</span></h2>
-            <div class="cs_section_right">
-              <a href="/contact" class="cs_btn cs_style_1 cs_bold cs_heading_bg cs_white_color w-100 wow fadeInRight">Contact us</a>
-            </div>
+          <div class="cs_foundation_head">
+            <h2 class="cs_section_title cs_fs_80 mb-0 wow fadeInUp">BUILT FOR HEALTHCARE</h2>
+            <a href="/products" class="cs_btn cs_style_1 cs_bold cs_heading_bg cs_white_color wow fadeInRight">EXPLORE OUR PRODUCTS</a>
           </div>
           <div class="cs_height_64 cs_height_lg_50"></div>
-          <div class="row align-items-end cs_gap_y_50">
-            <div class="col-lg-4">
-              <div class="cs_img_box cs_style_1 wow fadeInLeft">
-                <img src="/assets/img/feature_thumb.jpg" alt="">
-              </div>
+          <div class="cs_foundation_grid">
+            <div class="cs_foundation_card wow fadeInUp">
+              <div class="cs_foundation_icon"><i class="fa-solid fa-location-dot"></i></div>
+              <h3>Australian Grown</h3>
+              <p>Trusted Australian production from the Noosa Hinterland, Queensland, combining local cultivation with controlled growing practices designed to support consistent, scalable supply.</p>
             </div>
-            <div class="col-lg-8">
-              <div class="row cs_gap_y_64">
-                <div class="col-sm-6">
-                  <div class="cs_iconbox cs_style_1">
-                    <div class="cs_iconbox_icon cs_center cs_mb_24">
-                      <i class="fa-regular fa-heart"></i>
-                    </div>
-                    <h3 class="cs_fs_24 cs_mb_12">Research &amp; Development</h3>
-                    <p class="mb-0 cs_fs_20">Advancing Australian-grown medicines. Research and development plays an important role across PharmaCrop's operations, continuously improving quality, consistency and future potential.</p>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="cs_iconbox cs_style_1">
-                    <div class="cs_iconbox_icon cs_center cs_mb_24">
-                      <i class="fa-solid fa-link"></i>
-                    </div>
-                    <h3 class="cs_fs_24 cs_mb_12">Cultivation Philosophy</h3>
-                    <p class="mb-0 cs_fs_20">The right cultivar changes everything. Through extensive phenohunting and selection, we identify cultivars best suited to the Noosa Hinterland environment.</p>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="cs_iconbox cs_style_1">
-                    <div class="cs_iconbox_icon cs_center cs_mb_24">
-                      <i class="fa-brands fa-buffer"></i>
-                    </div>
-                    <h3 class="cs_fs_24 cs_mb_12">Manufacturing Standards</h3>
-                    <p class="mb-0 cs_fs_20">Built on pharmaceutical discipline. Our GMP-certified manufacturing facility combines structured quality systems with carefully managed hand-packing processes.</p>
-                  </div>
-                </div>
-              </div>
+            <div class="cs_foundation_card wow fadeInUp" data-wow-delay="0.1s">
+              <div class="cs_foundation_icon"><i class="fa-solid fa-diagram-project"></i></div>
+              <h3>Integrated Operations</h3>
+              <p>Genetics, cultivation, GMP manufacturing and innovation operate within one integrated platform, giving PharmaCrop greater oversight from cultivar selection through to finished product.</p>
+            </div>
+            <div class="cs_foundation_card wow fadeInUp" data-wow-delay="0.2s">
+              <div class="cs_foundation_icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <h3>Pharmaceutical Mindset</h3>
+              <p>Built around pharmaceutical discipline, with GMP systems, structured quality processes and regulatory expertise supporting consistency throughout cultivation and manufacturing.</p>
+            </div>
+            <div class="cs_foundation_card wow fadeInUp" data-wow-delay="0.3s">
+              <div class="cs_foundation_icon"><i class="fa-solid fa-microscope"></i></div>
+              <h3>Research &amp; Innovation</h3>
+              <p>Scientific expertise and ongoing product innovation support continual advancement across PharmaCrop&rsquo;s genetics, cultivation and pharmaceutical manufacturing capabilities.</p>
             </div>
           </div>
         </div>
