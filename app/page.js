@@ -279,66 +279,6 @@ export default function Page() {
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
         <div class="cs_card_1_group">
-          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed active wow fadeInLeft" data-src="/assets/img/pharmacists.webp">
-            <div class="cs_card_top">
-              <div class="cs_card_tags">
-                <a href="/" class="cs_card_tag">Home</a>
-                <a href="/industry" class="cs_card_tag">Industry</a>
-                <a href="#" class="cs_card_tag">Australian-Grown</a>
-                <a href="#" class="cs_card_tag">GMP-Certified</a>
-              </div>
-            </div>
-            <div class="cs_card_bottom">
-              <h2 class="cs_card_title cs_white_color cs_fs_32">PHARMACISTS</h2>
-              <p class="cs_card_subtitle mb-0 cs_white_color">Reliable supply. Simplified access. A dedicated online ordering portal is currently in development to further support pharmacy partners.</p>
-            </div>
-            <a href="/commercial-partnerships" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
-              </svg>
-            </a>
-          </div>
-          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/prescribers.webp">
-            <div class="cs_card_top">
-              <div class="cs_card_tags">
-                <a href="/" class="cs_card_tag">Home</a>
-                <a href="/industry" class="cs_card_tag">Industry</a>
-                <a href="#" class="cs_card_tag">Australian-Grown</a>
-                <a href="#" class="cs_card_tag">GMP-Certified</a>
-              </div>
-            </div>
-            <div class="cs_card_bottom">
-              <h2 class="cs_card_title cs_white_color cs_fs_32">PRESCRIBERS</h2>
-              <p class="cs_card_subtitle mb-0 cs_white_color">Where cultivation expertise meets pharmaceutical discipline, supporting quality, consistency and product integrity across every product we produce.</p>
-            </div>
-            <a href="/commercial-partnerships" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
-              </svg>
-            </a>
-          </div>
-          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed wow fadeInRight" data-src="/assets/img/distributors.webp">
-            <div class="cs_card_top">
-              <div class="cs_card_tags">
-                <a href="/" class="cs_card_tag">Home</a>
-                <a href="/industry" class="cs_card_tag">Industry</a>
-                <a href="#" class="cs_card_tag">Australian-Grown</a>
-                <a href="#" class="cs_card_tag">GMP-Certified</a>
-              </div>
-            </div>
-            <div class="cs_card_bottom">
-              <h2 class="cs_card_title cs_white_color cs_fs_32">DISTRIBUTORS</h2>
-              <p class="cs_card_subtitle mb-0 cs_white_color">A reliable partner from production to supply, with consistent products, reliable supply and a growing Australian-grown portfolio.</p>
-            </div>
-            <a href="/commercial-partnerships" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
-              </svg>
-            </a>
-          </div>
-        </div>
-        <div class="cs_height_24"></div>
-        <div class="cs_card_1_group">
           <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed active wow fadeInLeft" data-src="/assets/img/pharmacrop-banner4.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
@@ -416,87 +356,98 @@ export default function Page() {
       <div class="cs_height_100 cs_height_lg_70"></div>
     </section>
     <!-- End Services Section -->
-    <!-- Start Leafline Testimonials -->
+    <!-- Start Scroll Stack Projects Section -->
     <style>
-      .cs_leaf_testi { padding: 110px 0; background: #f7faf8; }
-      .cs_leaf_testi_row { display: flex; align-items: center; gap: 60px; }
-      .cs_leaf_testi_imgs { flex: 0 0 340px; position: relative; height: 380px; }
-      .cs_leaf_testi_img { position: absolute; inset: 0; border-radius: 12px; overflow: hidden; opacity: 0; transform: scale(0.96); transition: opacity 0.6s ease, transform 0.6s ease; }
-      .cs_leaf_testi_img.active { opacity: 1; transform: scale(1); }
-      .cs_leaf_testi_img img { width: 100%; height: 100%; object-fit: cover; }
-      .cs_leaf_testi_content { flex: 1; }
-      .cs_leaf_testi_content h2 { color: #024242; margin-bottom: 30px; }
-      .cs_leaf_testi_cards { position: relative; min-height: 200px; }
-      .cs_leaf_testi_card { position: absolute; inset: 0; opacity: 0; visibility: hidden; transform: translateY(12px); transition: opacity 0.5s ease, transform 0.5s ease; }
-      .cs_leaf_testi_card.active { opacity: 1; visibility: visible; transform: translateY(0); position: relative; }
-      .cs_leaf_testi_stars { color: #d99f59; margin-bottom: 16px; font-size: 14px; }
-      .cs_leaf_testi_card p { font-size: 19px; line-height: 1.7; color: #333; margin-bottom: 22px; font-style: italic; }
-      .cs_leaf_testi_author strong { display: block; color: #024242; font-size: 16px; }
-      .cs_leaf_testi_author span { color: #888; font-size: 14px; }
-      .cs_leaf_testi_dots { display: flex; gap: 10px; margin-top: 30px; }
-      .cs_leaf_testi_dot { width: 10px; height: 10px; border-radius: 50%; background: #d7e8dd; cursor: pointer; transition: 0.3s; border: none; padding: 0; }
-      .cs_leaf_testi_dot.active { background: #78dca6; width: 26px; border-radius: 6px; }
-      @media (max-width: 991px) { .cs_leaf_testi_row { flex-direction: column; } .cs_leaf_testi_imgs { flex: 0 0 auto; width: 100%; } }
+      .cs_scroll_stack { position: relative; height: 320vh; background: #024242; }
+      .cs_scroll_stack_sticky { position: sticky; top: 0; height: 100vh; overflow: hidden; display: flex; align-items: center; }
+      .cs_scroll_stack_row { display: flex; align-items: center; width: 100%; gap: 60px; padding: 0 80px; box-sizing: border-box; }
+      .cs_scroll_stack_left { flex: 0 0 420px; }
+      .cs_scroll_stack_pretitle { color: rgba(255, 255, 255, 0.6); font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px; display: block; }
+      .cs_scroll_stack_title { color: #fff; font-size: 44px; font-weight: 800; line-height: 1.25; margin: 0 0 32px; }
+      .cs_scroll_stack_btn { display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(255, 255, 255, 0.5); color: #fff; border-radius: 30px; padding: 14px 28px; font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-decoration: none; transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
+      .cs_scroll_stack_btn:hover { background: #78dca6; border-color: #78dca6; color: #024242; }
+      .cs_scroll_stack_right { position: relative; flex: 1; height: 560px; }
+      .cs_scroll_card { position: absolute; top: 50%; left: 50%; width: 640px; max-width: 90vw; border-radius: 16px; overflow: hidden; will-change: transform, filter, opacity; }
+      .cs_scroll_card img { width: 100%; height: 400px; object-fit: cover; display: block; }
+      .cs_scroll_card_content { position: absolute; left: 0; right: 0; bottom: 0; padding: 24px; background: linear-gradient(180deg, rgba(2, 20, 20, 0) 0%, rgba(2, 20, 20, 0.85) 100%); }
+      .cs_scroll_card_tags { display: flex; gap: 4px; margin-bottom: 10px; flex-wrap: wrap; }
+      .cs_scroll_card_tag { color: rgba(255, 255, 255, 0.8); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+      .cs_scroll_card_tag:not(:last-child)::after { content: "/"; margin-left: 8px; color: rgba(255, 255, 255, 0.4); }
+      .cs_scroll_card_title { color: #fff; font-size: 24px; font-weight: 700; margin: 0; }
+      @media (min-width: 1400px) {
+        .cs_scroll_card { width: 720px; }
+        .cs_scroll_card img { height: 440px; }
+      }
+      @media (max-width: 1199px) {
+        .cs_scroll_stack_row { padding: 0 40px; gap: 32px; }
+        .cs_scroll_stack_left { flex: 0 0 340px; }
+        .cs_scroll_card { width: 480px; }
+        .cs_scroll_card img { height: 300px; }
+        .cs_scroll_stack_title { font-size: 36px; }
+      }
+      @media (max-width: 991px) {
+        .cs_scroll_stack { height: 260vh; }
+        .cs_scroll_stack_row { flex-direction: column; padding: 0 24px; gap: 32px; }
+        .cs_scroll_stack_left { flex: none; }
+        .cs_scroll_stack_right { width: 100%; height: 420px; }
+        .cs_scroll_card { width: 380px; max-width: 88vw; }
+        .cs_scroll_card img { height: 260px; }
+        .cs_scroll_stack_title { font-size: 30px; }
+      }
+      @media (max-width: 480px) {
+        .cs_scroll_stack_right { height: 300px; }
+        .cs_scroll_card { width: 300px; }
+        .cs_scroll_card img { height: 200px; }
+        .cs_scroll_card_title { font-size: 18px; }
+      }
     </style>
-    <section class="cs_leaf_testi">
-      <div class="container">
-        <div class="cs_leaf_testi_row">
-          <div class="cs_leaf_testi_imgs wow fadeInUp">
-            <div class="cs_leaf_testi_img active"><img src="/assets/Leafline/10004.jpg" alt=""></div>
-            <div class="cs_leaf_testi_img"><img src="/assets/Leafline/10005.jpg" alt=""></div>
-            <div class="cs_leaf_testi_img"><img src="/assets/Leafline/10006.jpg" alt=""></div>
-            <div class="cs_leaf_testi_img"><img src="/assets/Leafline/10007.jpg" alt=""></div>
-            <div class="cs_leaf_testi_img"><img src="/assets/Leafline/10031.jpg" alt=""></div>
-            <div class="cs_leaf_testi_img"><img src="/assets/Leafline/10032.jpg" alt=""></div>
+    <section class="cs_scroll_stack" id="cs_scroll_stack">
+      <div class="cs_scroll_stack_sticky">
+        <div class="cs_scroll_stack_row">
+          <div class="cs_scroll_stack_left">
+            <span class="cs_scroll_stack_pretitle">Partnership In Action</span>
+            <h2 class="cs_scroll_stack_title">Building consistent supply that grows with your business</h2>
+            <a href="/commercial-partnerships" class="cs_scroll_stack_btn">View All Partnerships</a>
           </div>
-          <div class="cs_leaf_testi_content wow fadeInUp" data-wow-delay="0.1s">
-            <span class="cs_sticky_eyebrow">TRUSTED ACROSS THE SUPPLY CHAIN</span>
-            <h2 class="cs_two_tone cs_home_heading_sz">WHAT OUR <br><span>PARTNERS SAY</span></h2>
-            <div class="cs_leaf_testi_cards" id="cs_leaf_testi_cards">
-              <div class="cs_leaf_testi_card active">
-                <div class="cs_leaf_testi_stars">★★★★★</div>
-                <p>"PharmaCrop's consistency batch to batch makes compounding straightforward. We always know what we're getting."</p>
-                <div class="cs_leaf_testi_author"><strong>Compounding Pharmacist</strong><span>Community Pharmacy Partner</span></div>
-              </div>
-              <div class="cs_leaf_testi_card">
-                <div class="cs_leaf_testi_stars">★★★★★</div>
-                <p>"Supply confidence is everything in this industry. PharmaCrop has never let a delivery window slip on us."</p>
-                <div class="cs_leaf_testi_author"><strong>Distribution Partner</strong><span>National Wholesale Distributor</span></div>
-              </div>
-              <div class="cs_leaf_testi_card">
-                <div class="cs_leaf_testi_stars">★★★★★</div>
-                <p>"The traceability from cultivar to finished product gives me real confidence when discussing options with patients."</p>
-                <div class="cs_leaf_testi_author"><strong>Prescribing Clinician</strong><span>Telehealth Provider</span></div>
-              </div>
-              <div class="cs_leaf_testi_card">
-                <div class="cs_leaf_testi_stars">★★★★★</div>
-                <p>"You can tell cultivation and manufacturing sit under one roof. The quality is genuinely consistent, order after order."</p>
-                <div class="cs_leaf_testi_author"><strong>Pharmacy Owner</strong><span>Independent Pharmacy Group</span></div>
-              </div>
-              <div class="cs_leaf_testi_card">
-                <div class="cs_leaf_testi_stars">★★★★★</div>
-                <p>"Working with an Australian-grown, GMP-certified supplier has simplified our entire procurement process."</p>
-                <div class="cs_leaf_testi_author"><strong>Industry Partner</strong><span>Healthcare Procurement Lead</span></div>
-              </div>
-              <div class="cs_leaf_testi_card">
-                <div class="cs_leaf_testi_stars">★★★★★</div>
-                <p>"Their hand-packing process and quality systems are the most disciplined I've seen from an integrated grower."</p>
-                <div class="cs_leaf_testi_author"><strong>Operations Lead</strong><span>Contract Manufacturing Partner</span></div>
+          <div class="cs_scroll_stack_right">
+            <div class="cs_scroll_card" data-index="0">
+              <img src="/assets/img/pharma-banner.jpeg" alt="Noosa Hinterland Cultivation Facility">
+              <div class="cs_scroll_card_content">
+                <div class="cs_scroll_card_tags">
+                  <span class="cs_scroll_card_tag">Cultivation</span>
+                  <span class="cs_scroll_card_tag">Facility</span>
+                  <span class="cs_scroll_card_tag">Scalable</span>
+                </div>
+                <h3 class="cs_scroll_card_title">Noosa Hinterland Cultivation Facility</h3>
               </div>
             </div>
-            <div class="cs_leaf_testi_dots" id="cs_leaf_testi_dots">
-              <button class="cs_leaf_testi_dot active" data-goto="0" aria-label="Testimonial 1"></button>
-              <button class="cs_leaf_testi_dot" data-goto="1" aria-label="Testimonial 2"></button>
-              <button class="cs_leaf_testi_dot" data-goto="2" aria-label="Testimonial 3"></button>
-              <button class="cs_leaf_testi_dot" data-goto="3" aria-label="Testimonial 4"></button>
-              <button class="cs_leaf_testi_dot" data-goto="4" aria-label="Testimonial 5"></button>
-              <button class="cs_leaf_testi_dot" data-goto="5" aria-label="Testimonial 6"></button>
+            <div class="cs_scroll_card" data-index="1">
+              <img src="/assets/img/pharmacrop-banner3.webp" alt="GMP Quality Control Lab">
+              <div class="cs_scroll_card_content">
+                <div class="cs_scroll_card_tags">
+                  <span class="cs_scroll_card_tag">GMP</span>
+                  <span class="cs_scroll_card_tag">Quality</span>
+                  <span class="cs_scroll_card_tag">Testing</span>
+                </div>
+                <h3 class="cs_scroll_card_title">GMP Quality Control Lab</h3>
+              </div>
+            </div>
+            <div class="cs_scroll_card" data-index="2">
+              <img src="/assets/img/health-professionals-card.webp" alt="Clinical & Regulatory Support">
+              <div class="cs_scroll_card_content">
+                <div class="cs_scroll_card_tags">
+                  <span class="cs_scroll_card_tag">Clinical</span>
+                  <span class="cs_scroll_card_tag">Guidance</span>
+                  <span class="cs_scroll_card_tag">Support</span>
+                </div>
+                <h3 class="cs_scroll_card_title">Clinical &amp; Regulatory Support</h3>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- End Leafline Testimonials -->
+    <!-- End Scroll Stack Projects Section -->
     <!-- Start Homepage FAQ Section -->
     <style>
       .cs_home_faq_row { align-items: stretch; }
@@ -911,35 +862,70 @@ export default function Page() {
 `,
       }}
     />
-    <Script id="cs_leaf_testi_slider_script" strategy="afterInteractive">
+    <Script id="cs_scroll_stack_script" strategy="afterInteractive">
       {`
         (function () {
-          var cards = document.querySelectorAll('#cs_leaf_testi_cards .cs_leaf_testi_card');
-          var imgs = document.querySelectorAll('.cs_leaf_testi_img');
-          var dots = document.querySelectorAll('#cs_leaf_testi_dots .cs_leaf_testi_dot');
-          if (!cards.length) return;
-          var idx = 0;
-          var timer;
-          function show(i) {
-            cards.forEach(function (c, ci) { c.classList.toggle('active', ci === i); });
-            imgs.forEach(function (im, ii) { im.classList.toggle('active', ii === i); });
-            dots.forEach(function (d, di) { d.classList.toggle('active', di === i); });
-            idx = i;
-          }
-          function next() {
-            show((idx + 1) % cards.length);
-          }
-          function restart() {
-            clearInterval(timer);
-            timer = setInterval(next, 5000);
-          }
-          dots.forEach(function (d) {
-            d.addEventListener('click', function () {
-              show(parseInt(d.getAttribute('data-goto'), 10));
-              restart();
+          var section = document.getElementById('cs_scroll_stack');
+          if (!section) return;
+          var cards = Array.prototype.slice.call(section.querySelectorAll('.cs_scroll_card'));
+          var n = cards.length;
+
+          function lerp(a, b, t) { return a + (b - a) * t; }
+          function clamp(v, min, max) { return Math.max(min, Math.min(max, v)); }
+
+          function update() {
+            var rect = section.getBoundingClientRect();
+            var vh = window.innerHeight;
+            var totalScrollable = rect.height - vh;
+            var scrolled = clamp(-rect.top, 0, totalScrollable);
+            var overall = totalScrollable > 0 ? scrolled / totalScrollable : 0;
+
+            var isNarrow = window.innerWidth <= 767;
+            var rotateIn = isNarrow ? -8 : -18;
+            var rotateOut = isNarrow ? 6 : 12;
+
+            cards.forEach(function (card, i) {
+              var ownProgress = clamp(overall * n - i, 0, 1);
+              var nextProgress = i < n - 1 ? clamp(overall * n - (i + 1), 0, 1) : 0;
+
+              var w = card.offsetWidth;
+              var h = card.offsetHeight;
+
+              var scale = lerp(0.7, 1, ownProgress);
+              var rotate = lerp(rotateIn, 0, ownProgress);
+              var translateX = lerp(w * 0.16, 0, ownProgress);
+              var translateY = lerp(h * 0.14, 0, ownProgress);
+              var blur = lerp(16, 0, ownProgress);
+              var opacity = Math.min(ownProgress * 2, 1);
+
+              scale = lerp(scale, 0.72, nextProgress);
+              rotate = lerp(rotate, rotateOut, nextProgress);
+              translateX = lerp(translateX, w * 0.22, nextProgress);
+              translateY = lerp(translateY, -h * 0.2, nextProgress);
+              opacity = opacity * lerp(1, 0.55, nextProgress);
+              blur = blur + lerp(0, 2, nextProgress);
+
+              card.style.transform = 'translate3d(calc(-50% + ' + translateX + 'px), calc(-50% + ' + translateY + 'px), 0) scale(' + scale + ') rotate(' + rotate + 'deg)';
+              card.style.filter = 'blur(' + blur + 'px)';
+              card.style.opacity = opacity;
+              card.style.zIndex = 10 + i;
             });
-          });
-          restart();
+          }
+
+          var ticking = false;
+          function onScroll() {
+            if (!ticking) {
+              window.requestAnimationFrame(function () {
+                update();
+                ticking = false;
+              });
+              ticking = true;
+            }
+          }
+
+          window.addEventListener('scroll', onScroll, { passive: true });
+          window.addEventListener('resize', onScroll);
+          update();
         })();
       `}
     </Script>
