@@ -145,9 +145,9 @@ export default function Page() {
                 <path d="M11.0003 5.21578C7.78893 5.21578 5.17676 7.84811 5.17676 11.0828C5.17676 14.3175 7.78893 16.9498 11.0003 16.9498C14.2116 16.9498 16.8238 14.3175 16.8238 11.0828C16.8238 7.84811 14.2116 5.21578 11.0003 5.21578ZM11.0003 15.646C8.50329 15.646 6.47088 13.5991 6.47088 11.0828C6.47088 8.56649 8.50329 6.51956 11.0003 6.51956C13.4973 6.51956 15.5297 8.56649 15.5297 11.0828C15.5297 13.5991 13.4973 15.646 11.0003 15.646Z" fill="currentColor"></path>
               </svg>
             </div>
-            <h3 class="cs_hero_box_title cs_fs_24 cs_mb_12 cs_white_color">The PharmaCrop Story</h3>
-            <p class="cs_hero_box_subtitle mb-0 cs_opacity_7_5">Built in the Noosa Hinterland in Queensland, combining international cultivation expertise with Australian production and GMP-certified manufacturing.</p>
-            <a href="/contact" class="cs_arrow_btn cs_hero_box_btn cs_center cs_heading_bg cs_white_color">
+            <h3 class="cs_hero_box_title cs_fs_24 cs_mb_12 cs_white_color">Partner With PharmaCrop</h3>
+            <p class="cs_hero_box_subtitle mb-0 cs_opacity_7_5">Explore flexible commercial pathways across Australian-grown products, manufacturing and supply.</p>
+            <a href="/commercial-partnerships" class="cs_arrow_btn cs_hero_box_btn cs_center cs_heading_bg cs_white_color">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
               </svg>                
@@ -221,17 +221,17 @@ export default function Page() {
       <div class="container">
         <div class="cs_sticky_services_grid">
           <div class="cs_sticky_services_left">
-            <span class="cs_sticky_eyebrow">What We Do</span>
-            <h2 class="cs_sticky_title cs_two_tone cs_home_heading_sz wow fadeInDown">FROM GENETICS<br>TO GMP<br><span>MANUFACTURING</span></h2>
-            <p class="cs_sticky_text">Where international cultivation expertise meets Australian, GMP-certified manufacturing discipline &mdash; from cultivar selection through to finished product.</p>
+            <span class="cs_sticky_eyebrow">Precision Cultivation</span>
+            <h2 class="cs_sticky_title cs_two_tone cs_home_heading_sz wow fadeInDown">BUILDING<br>PHARMACEUTICAL<br>QUALITY FROM<br><span>THE GROUND UP</span></h2>
+            <p class="cs_sticky_text">Consistent pharmaceutical products begin with consistent agricultural systems. Our cultivation platform combines controlled environments, advanced growing systems and environmental precision.</p>
           </div>
           <div class="cs_sticky_services_right">
             <div class="cs_sticky_card">
-              <img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt="Noosa Hinterland">
-              <span class="cs_sticky_card_icon"><i class="fa-solid fa-house"></i></span>
+              <img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt="Controlled Cultivation">
+              <span class="cs_sticky_card_icon"><i class="fa-solid fa-seedling"></i></span>
               <div class="cs_sticky_card_body">
-                <h3 class="cs_sticky_card_title">Noosa Hinterland</h3>
-                <p class="cs_sticky_card_text">Where PharmaCrop calls home. The Noosa Hinterland provides the home for our cultivation and manufacturing operations, bringing local production together within a single region.</p>
+                <h3 class="cs_sticky_card_title">Controlled Cultivation</h3>
+                <p class="cs_sticky_card_text">Purpose-built hybrid greenhouse designed for repeatable cultivation and consistent, scalable Australian-grown supply.</p>
                 <a href="/about" class="cs_sticky_card_link">READ MORE <span>&rarr;</span></a>
               </div>
             </div>
