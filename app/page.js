@@ -129,8 +129,8 @@ export default function Page() {
           </div>
           <div class="cs_hero_funfact_wrap wow fadeInRight">
             <div class="cs_hero_funfact">
-              <h3 class="cs_fs_24 cs_bold cs_white_color mb-0">GMP</h3>
-              <p class="cs_fs_20 cs_white_color cs_opacity_7_5 cs_mb_16">Certified Manufacturing</p>
+              <h3 class="cs_fs_24 cs_bold cs_white_color mb-0">QUALITY &amp; COMPLIANCE</h3>
+              <p class="cs_fs_20 cs_white_color cs_opacity_7_5 cs_mb_16">Australian-made. GMP-certified. TGA licensed.</p>
               <div class="cs_circle_group">
                 <img src="/assets/img/GMP_1.webp" alt="GMP Quality Certification">
                 <img src="/assets/img/gmp_3.webp" alt="GMP Certified">
