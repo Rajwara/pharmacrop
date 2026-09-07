@@ -184,13 +184,16 @@ export default function Page() {
                 <input type="tel" name="phone" placeholder="Phone no">
               </div>
               <div>
-                <label>Type</label>
-                <select name="type" defaultValue="">
-                  <option value="" disabled selected>Select your type</option>
-                  <option value="Pharmacist">Pharmacist</option>
-                  <option value="Prescriber">Prescriber</option>
-                  <option value="Distributor">Distributors</option>
-                  <option value="Other">Other</option>
+                <label>Area of Interest</label>
+                <select name="area_of_interest" defaultValue="">
+                  <option value="" disabled selected>Select your area of interest</option>
+                  <option value="Retail">Retail</option>
+                  <option value="Green Label">Green Label</option>
+                  <option value="White Label">White Label</option>
+                  <option value="Bulk Flower">Bulk Flower</option>
+                  <option value="Distribution / Export">Distribution / Export</option>
+                  <option value="Product Enquiry">Product Enquiry</option>
+                  <option value="General Enquiry">General Enquiry</option>
                 </select>
               </div>
               <div class="cs_full">
