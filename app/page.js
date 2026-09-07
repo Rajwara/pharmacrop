@@ -114,6 +114,11 @@ export default function Page() {
         background: #78dca6 !important;
         color: #024242 !important;
       }
+      @media (min-width: 992px) {
+        .cs_hero.cs_style_1 .cs_hero_funfact_wrap { max-width: 300px; }
+        .cs_hero.cs_style_1 .cs_hero_funfact .cs_fs_20 { font-size: 15px !important; }
+        .cs_hero.cs_style_1 .cs_hero_text { max-width: 750px !important; }
+      }
     </style>
     <!-- Start Hero Section -->
     <section class="cs_hero cs_style_1 cs_heading_bg cs_white_color">
@@ -236,20 +241,20 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_sticky_card">
-              <img src="/assets/img/pharmacrop-banner3.webp" alt="Integrated Operations">
-              <span class="cs_sticky_card_icon"><i class="fa-solid fa-link"></i></span>
+              <img src="/assets/img/pharmacrop-banner3.webp" alt="Advanced Growing Systems">
+              <span class="cs_sticky_card_icon"><i class="fa-solid fa-droplet"></i></span>
               <div class="cs_sticky_card_body">
-                <h3 class="cs_sticky_card_title">Integrated Operations</h3>
-                <p class="cs_sticky_card_text">By bringing cultivation, processing and GMP-certified manufacturing together, PharmaCrop maintains oversight from cultivar selection through to finished product.</p>
+                <h3 class="cs_sticky_card_title">Advanced Growing Systems</h3>
+                <p class="cs_sticky_card_text">Soilless cultivation with cultivar-specific nutrition programs, providing bespoke nutrient delivery for strong growth and consistent cannabinoid and terpene expression.</p>
                 <a href="/industry" class="cs_sticky_card_link">READ MORE <span>&rarr;</span></a>
               </div>
             </div>
             <div class="cs_sticky_card">
-              <img src="/assets/img/pharmacrop-banner4.webp" alt="Global Expertise">
-              <span class="cs_sticky_card_icon"><i class="fa-solid fa-earth-americas"></i></span>
+              <img src="/assets/img/pharmacrop-banner4.webp" alt="Environmental Precision">
+              <span class="cs_sticky_card_icon"><i class="fa-solid fa-temperature-half"></i></span>
               <div class="cs_sticky_card_body">
-                <h3 class="cs_sticky_card_title">Global Expertise</h3>
-                <p class="cs_sticky_card_text">Drawing on cultivation expertise from California, Canada and South Africa, our team applies international insights within the unique conditions of the Noosa Hinterland.</p>
+                <h3 class="cs_sticky_card_title">Environmental Precision</h3>
+                <p class="cs_sticky_card_text">Continuous monitoring and control of light, temperature, humidity, CO&#8322; and irrigation to optimise plant health and ensure repeatable, pharmaceutical-grade biomass.</p>
                 <a href="/about" class="cs_sticky_card_link">READ MORE <span>&rarr;</span></a>
               </div>
             </div>
@@ -263,15 +268,16 @@ export default function Page() {
       .cs_partners_heading { max-width: 720px; }
       .cs_partners_heading .cs_sticky_text { max-width: 100%; margin-bottom: 0; }
       .cs_two_tone span { background: linear-gradient(223deg, rgba(2, 66, 66, 0.8) 0.37%, #666666 49.66%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+      .cs_card_icon { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 8px; color: #fff; font-size: 18px; margin-bottom: 16px; }
     </style>
     <section>
       <div class="cs_height_100 cs_height_lg_70"></div>
       <div class="container">
         <div class="cs_partners_heading">
-          <span class="cs_sticky_eyebrow">WHO WE SUPPORT</span>
-          <h2 class="cs_section_title cs_two_tone cs_home_heading_sz mb-0 wow fadeInDown">SUPPORTING OUR <br>INDUSTRY <span>PARTNERS</span></h2>
+          <span class="cs_sticky_eyebrow">COMMERCIAL PARTNERSHIPS</span>
+          <h2 class="cs_section_title cs_two_tone cs_home_heading_sz mb-0 wow fadeInDown">ONE PARTNER.<br>MULTIPLE <span>COMMERCIAL PATHWAYS.</span></h2>
           <div class="cs_height_24"></div>
-          <p class="cs_sticky_text">From pharmacists to prescribers and distributors, PharmaCrop supports every partner across the supply chain with reliable, Australian-grown, GMP-certified product.</p>
+          <p class="cs_sticky_text">One Australian GMP-certified manufacturing platform offering four flexible commercial partnership models to suit your needs.</p>
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
         <div class="cs_card_1_group">
@@ -288,7 +294,7 @@ export default function Page() {
               <h2 class="cs_card_title cs_white_color cs_fs_32">PHARMACISTS</h2>
               <p class="cs_card_subtitle mb-0 cs_white_color">Reliable supply. Simplified access. A dedicated online ordering portal is currently in development to further support pharmacy partners.</p>
             </div>
-            <a href="/industry" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+            <a href="/commercial-partnerships" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
               </svg>
@@ -307,7 +313,7 @@ export default function Page() {
               <h2 class="cs_card_title cs_white_color cs_fs_32">PRESCRIBERS</h2>
               <p class="cs_card_subtitle mb-0 cs_white_color">Where cultivation expertise meets pharmaceutical discipline, supporting quality, consistency and product integrity across every product we produce.</p>
             </div>
-            <a href="/industry" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+            <a href="/commercial-partnerships" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
               </svg>
@@ -326,7 +332,82 @@ export default function Page() {
               <h2 class="cs_card_title cs_white_color cs_fs_32">DISTRIBUTORS</h2>
               <p class="cs_card_subtitle mb-0 cs_white_color">A reliable partner from production to supply, with consistent products, reliable supply and a growing Australian-grown portfolio.</p>
             </div>
-            <a href="/industry" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+            <a href="/commercial-partnerships" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="cs_height_24"></div>
+        <div class="cs_card_1_group">
+          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed active wow fadeInLeft" data-src="/assets/img/pharmacrop-banner4.webp">
+            <div class="cs_card_top">
+              <div class="cs_card_tags">
+                <a href="/" class="cs_card_tag">Home</a>
+                <a href="/commercial-partnerships" class="cs_card_tag">Commercial</a>
+              </div>
+            </div>
+            <div class="cs_card_bottom">
+              <span class="cs_card_icon"><i class="fa-solid fa-prescription-bottle"></i></span>
+              <h2 class="cs_card_title cs_white_color cs_fs_32">RETAIL</h2>
+              <p class="cs_card_subtitle mb-0 cs_white_color">PharmaCrop branded, ready-to-market medicines.</p>
+            </div>
+            <a href="/commercial-partnerships" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
+              </svg>
+            </a>
+          </div>
+          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/pharmacrop-banner2.webp">
+            <div class="cs_card_top">
+              <div class="cs_card_tags">
+                <a href="/" class="cs_card_tag">Home</a>
+                <a href="/commercial-partnerships" class="cs_card_tag">Commercial</a>
+              </div>
+            </div>
+            <div class="cs_card_bottom">
+              <span class="cs_card_icon"><i class="fa-solid fa-tag"></i></span>
+              <h2 class="cs_card_title cs_white_color cs_fs_32">GREEN LABEL</h2>
+              <p class="cs_card_subtitle mb-0 cs_white_color">PharmaCrop products, exclusively branded for your business.</p>
+            </div>
+            <a href="/commercial-partnerships" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
+              </svg>
+            </a>
+          </div>
+          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/health-professionals-card.webp">
+            <div class="cs_card_top">
+              <div class="cs_card_tags">
+                <a href="/" class="cs_card_tag">Home</a>
+                <a href="/commercial-partnerships" class="cs_card_tag">Commercial</a>
+              </div>
+            </div>
+            <div class="cs_card_bottom">
+              <span class="cs_card_icon"><i class="fa-solid fa-box"></i></span>
+              <h2 class="cs_card_title cs_white_color cs_fs_32">WHITE LABEL</h2>
+              <p class="cs_card_subtitle mb-0 cs_white_color">Your brand, supported by PharmaCrop cultivation and GMP packaging.</p>
+            </div>
+            <a href="/commercial-partnerships" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
+              </svg>
+            </a>
+          </div>
+          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed wow fadeInRight" data-src="/assets/img/pharma-banner.jpeg">
+            <div class="cs_card_top">
+              <div class="cs_card_tags">
+                <a href="/" class="cs_card_tag">Home</a>
+                <a href="/commercial-partnerships" class="cs_card_tag">Commercial</a>
+              </div>
+            </div>
+            <div class="cs_card_bottom">
+              <span class="cs_card_icon"><i class="fa-solid fa-cannabis"></i></span>
+              <h2 class="cs_card_title cs_white_color cs_fs_32">BULK FLOWER</h2>
+              <p class="cs_card_subtitle mb-0 cs_white_color">Australian-grown, GMP-certified flower supplied in bulk.</p>
+            </div>
+            <a href="/commercial-partnerships" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
               </svg>
