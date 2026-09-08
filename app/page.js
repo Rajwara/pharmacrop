@@ -523,7 +523,7 @@ export default function Page() {
     <style>
       .cs_licensing_section { padding: 110px 0; background: #fff; }
       .cs_licensing_head { text-align: center; max-width: 680px; margin: 0 auto 60px; }
-      .cs_licensing_head span { color: #78dca6; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; font-size: 14px; display: block; margin-bottom: 14px; }
+      .cs_licensing_head span { display: inline-flex; align-items: center; padding: 8px 22px; border: 1px solid rgba(2, 66, 66, 0.18); border-radius: 30px; background: #fff; color: #024242; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; font-size: 12px; margin-bottom: 18px; }
       .cs_licensing_head h2 { color: #024242; font-size: 38px; line-height: 1.25; margin: 0 0 20px; }
       .cs_licensing_head p { color: #666; font-size: 16px; line-height: 1.7; margin: 0; }
       .cs_licensing_grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
