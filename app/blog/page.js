@@ -2,7 +2,7 @@ import { headerHtml, footerHtml } from "./chrome";
 import { posts, getCategories, getTags, getRecentPosts } from "./posts";
 
 export const metadata = {
-  title: "PharmaCrop - Bring Balance To Your Life",
+  title: "Blog - PharmaCrop",
 };
 
 export default async function Page({ searchParams }) {

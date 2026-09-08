@@ -6077,4 +6077,27 @@ hr {
   background: #78dca6 !important;
   color: #024242 !important;
 }
+.cs_header_login_btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--heading-color);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 11px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+}
+.cs_header_login_btn:hover {
+  background-color: var(--accent-mint);
+  border-color: var(--accent-mint);
+  color: var(--heading-color);
+  transform: translateY(-2px);
+}
 /*# sourceMappingURL=style.css.map */
