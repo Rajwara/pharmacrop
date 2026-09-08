@@ -315,7 +315,7 @@ export default function Page() {
     <style>
       .cs_platform_journey { padding: 110px 0; background: #f7faf8; }
       .cs_platform_journey_head { max-width: 700px; margin: 0 auto 60px; text-align: center; }
-      .cs_platform_journey_eyebrow { display: block; color: #78dca6; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; font-size: 14px; margin-bottom: 14px; }
+      .cs_platform_journey_eyebrow { display: inline-flex; align-items: center; padding: 8px 22px; border: 1px solid rgba(2, 66, 66, 0.18); border-radius: 30px; background: #fff; color: #024242; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; font-size: 12px; margin-bottom: 18px; }
       .cs_platform_journey_title { font-size: 38px; font-weight: 800; line-height: 1.25; color: #024242; margin: 0 0 20px; }
       .cs_platform_journey_title span { background: linear-gradient(223deg, rgba(2, 66, 66, 0.8) 0.37%, #666666 49.66%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
       .cs_platform_journey_text { font-size: 16px; line-height: 1.7; color: #666; margin: 0 auto; max-width: 640px; }
@@ -890,7 +890,6 @@ export default function Page() {
             <ul class="cs_footer_v2_list">
               <li><a href="/privacy-policy">Privacy Policy</a></li>
               <li><a href="/terms-and-conditions">Terms &amp; Conditions</a></li>
-              <li><a href="/privacy-policy">Cookie Policy</a></li>
             </ul>
           </div>
           <div>

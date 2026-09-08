@@ -252,7 +252,6 @@ export default function Page() {
             <ul class="cs_footer_v2_list">
               <li><a href="/privacy-policy">Privacy Policy</a></li>
               <li><a href="/terms-and-conditions">Terms &amp; Conditions</a></li>
-              <li><a href="/privacy-policy">Cookie Policy</a></li>
             </ul>
           </div>
           <div>
