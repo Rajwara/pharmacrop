@@ -6077,6 +6077,9 @@ hr {
   background: #78dca6 !important;
   color: #024242 !important;
 }
+.cs_main_header_right {
+  gap: 14px !important;
+}
 .cs_header_login_btn {
   display: inline-flex;
   align-items: center;
@@ -6092,7 +6095,13 @@ hr {
   border-radius: 8px;
   text-decoration: none;
   white-space: nowrap;
+  margin-left: 36px;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+}
+@media (max-width: 575px) {
+  .cs_header_login_btn {
+    margin-left: 0;
+  }
 }
 .cs_header_login_btn:hover {
   background-color: var(--accent-mint);
