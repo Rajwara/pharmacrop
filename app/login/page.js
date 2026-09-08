@@ -1,4 +1,12 @@
-export const headerHtml = `
+export const metadata = {
+  title: "Login to Portal - PharmaCrop",
+};
+
+export default function Page() {
+  return (
+    <div
+      dangerouslySetInnerHTML={{
+        __html: `
     <!-- Start Preloader -->
     <div class="cs_preloader" style="background-color:#000;">
       <img src="/assets/img/pharma_Crop_logo_loader.gif" alt="Loading" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(70vw,480px);height:auto;">
@@ -35,73 +43,82 @@ export const headerHtml = `
       </div>
     </header>
     <!-- End Header Section -->
-`;
-
-export const footerHtml = `
-    <!-- Start CTA Section -->
+    <!-- Start Portal Login Section -->
     <style>
-      .cs_contact_card_section { padding: 100px 0; overflow: hidden; }
-      .cs_contact_card { position: relative; min-height: 700px; display: flex; flex-direction: column; justify-content: space-between; padding: 40px; }
-      .cs_contact_card_bg { position: absolute; top: 0; bottom: 0; left: 50%; width: 100vw; margin-left: -50vw; z-index: 0; }
-      .cs_contact_card_bg img { width: 100%; height: 100%; object-fit: cover; }
-      .cs_contact_card_bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(2, 34, 34, 0.55) 0%, rgba(2, 34, 34, 0.25) 40%, rgba(2, 20, 20, 0.85) 100%); }
-      .cs_contact_card_top { position: relative; z-index: 2; }
-      .cs_contact_info_label { color: #fff; font-weight: 700; font-size: 16px; margin: 0 0 16px; }
-      .cs_contact_pill { display: inline-flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(6px); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 30px; padding: 10px 20px 10px 10px; color: #fff; text-decoration: none; font-size: 14px; margin-right: 12px; margin-bottom: 12px; }
-      .cs_contact_pill_icon { width: 30px; height: 30px; border-radius: 50%; background: #78dca6; color: #024242; display: flex; align-items: center; justify-content: center; font-size: 13px; flex: none; }
-      .cs_contact_card_bottom { position: relative; z-index: 2; }
-      .cs_contact_eyebrow_row { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
-      .cs_contact_eyebrow_icon { width: 32px; height: 32px; border-radius: 50%; background: #fff; color: #024242; display: flex; align-items: center; justify-content: center; font-size: 14px; }
-      .cs_contact_eyebrow_text { color: #fff; font-weight: 700; font-size: 13px; letter-spacing: 1px; }
-      .cs_contact_card_title { color: #fff; font-size: 44px; font-weight: 800; margin: 0 0 12px; line-height: 1.2; }
-      .cs_contact_card_sub { color: rgba(255, 255, 255, 0.8); font-size: 16px; margin: 0 0 28px; max-width: 520px; }
-      .cs_contact_form_bar { background: #fff; border-radius: 16px; padding: 20px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
-      .cs_contact_form_bar input, .cs_contact_form_bar select { flex: 1; min-width: 180px; border: none; border-bottom: 1px solid #e5e5e5; padding: 12px 4px; font-size: 14px; color: #1f2419; outline: none; }
-      .cs_contact_form_btn { background: #024242; color: #fff; font-weight: 700; padding: 16px 32px; border-radius: 8px; border: none; cursor: pointer; font-size: 13px; letter-spacing: 0.5px; white-space: nowrap; }
-      @media (max-width: 767px) {
-        .cs_contact_card_title { font-size: 30px; }
-        .cs_contact_form_bar { flex-direction: column; align-items: stretch; }
-        .cs_contact_form_btn { width: 100%; }
-        .cs_contact_card_section { padding-bottom: 40px !important; }
+      .cs_portal_section { position: relative; padding: 170px 0 130px; background: #024242; overflow: hidden; }
+      .cs_portal_section::before { content: ""; position: absolute; top: -180px; right: -140px; width: 460px; height: 460px; border-radius: 50%; background: radial-gradient(circle, rgba(120,220,166,0.18) 0%, rgba(120,220,166,0) 70%); }
+      .cs_portal_section::after { content: ""; position: absolute; bottom: -220px; left: -160px; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(217,159,89,0.14) 0%, rgba(217,159,89,0) 70%); }
+      .cs_portal_head { position: relative; z-index: 2; max-width: 680px; margin: 0 auto 64px; text-align: center; }
+      .cs_portal_pill { display: inline-flex; align-items: center; padding: 8px 22px; border-radius: 30px; background: rgba(120, 220, 166, 0.15); border: 1px solid rgba(120, 220, 166, 0.35); color: #78dca6; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 22px; }
+      .cs_portal_head h1 { color: #fff; font-size: 46px; font-weight: 800; line-height: 1.2; margin: 0 0 18px; }
+      .cs_portal_head h1 span { color: #78dca6; }
+      .cs_portal_head p { color: rgba(255, 255, 255, 0.72); font-size: 17px; line-height: 1.7; margin: 0; }
+      .cs_portal_grid { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+      .cs_portal_card { background: #fff; border-radius: 20px; padding: 46px 34px; text-align: center; transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease; box-shadow: 0 20px 50px rgba(2, 20, 20, 0.25); }
+      .cs_portal_card:hover { transform: translateY(-10px); box-shadow: 0 30px 70px rgba(2, 20, 20, 0.35); }
+      .cs_portal_icon { width: 84px; height: 84px; margin: 0 auto 26px; border-radius: 50%; background: rgba(120, 220, 166, 0.15); display: flex; align-items: center; justify-content: center; font-size: 32px; color: #024242; transition: background-color 0.4s ease, transform 0.4s ease, color 0.4s ease; }
+      .cs_portal_card:hover .cs_portal_icon { background: #024242; color: #78dca6; transform: scale(1.08) rotate(-6deg); }
+      .cs_portal_card h3 { color: #024242; font-size: 22px; font-weight: 800; margin: 0 0 12px; }
+      .cs_portal_card p { color: #666; font-size: 14px; line-height: 1.7; margin: 0 0 30px; min-height: 68px; }
+      .cs_portal_btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%; background: #024242; color: #fff; font-weight: 700; font-size: 13px; letter-spacing: 0.5px; text-transform: uppercase; padding: 15px 20px; border-radius: 8px; text-decoration: none; transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; }
+      .cs_portal_btn:hover { background: #78dca6; color: #024242; transform: translateY(-2px); }
+      .cs_portal_note { position: relative; z-index: 2; text-align: center; margin-top: 44px; }
+      .cs_portal_note p { color: rgba(255, 255, 255, 0.55); font-size: 13px; margin: 0; }
+      .cs_portal_note a { color: #78dca6; text-decoration: underline; }
+      @media (max-width: 991px) {
+        .cs_portal_grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+        .cs_portal_head h1 { font-size: 34px; }
+        .cs_portal_section { padding: 130px 0 90px; }
       }
     </style>
-    <section class="cs_contact_card_section">
+    <section class="cs_portal_section">
       <div class="container">
-        <div class="cs_contact_card">
-          <div class="cs_contact_card_bg"><img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt=""></div>
-          <div class="cs_contact_card_top">
-            <p class="cs_contact_info_label">Speak With Our Team:</p>
-            <a href="mailto:enquiries@pharmacrop.com.au" class="cs_contact_pill"><span class="cs_contact_pill_icon"><i class="fa-solid fa-envelope"></i></span>enquiries@pharmacrop.com.au</a>
-            <a href="tel:1300053533" class="cs_contact_pill"><span class="cs_contact_pill_icon"><i class="fa-solid fa-phone"></i></span>1300 053 533</a>
+        <div class="cs_portal_head">
+          <span class="cs_portal_pill wow fadeInUp">PharmaCrop Portal</span>
+          <h1 class="wow fadeInUp" data-wow-delay="0.1s">Choose How You&rsquo;d Like To <span>Sign In</span></h1>
+          <p class="wow fadeInUp" data-wow-delay="0.2s">Select your role below to access the information and services relevant to you.</p>
+        </div>
+        <div class="cs_portal_grid">
+          <div class="cs_portal_card wow fadeInUp" data-wow-delay="0.1s">
+            <div class="cs_portal_icon"><i class="fa-solid fa-hospital-user"></i></div>
+            <h3>Patient</h3>
+            <p>Access your treatment information and stay connected with your care.</p>
+            <a href="/contact" class="cs_portal_btn">
+              Login as Patient
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
+              </svg>
+            </a>
           </div>
-          <div class="cs_contact_card_bottom">
-            <div class="cs_contact_eyebrow_row">
-              <span class="cs_contact_eyebrow_icon"><i class="fa-solid fa-seedling"></i></span>
-              <span class="cs_contact_eyebrow_text">PARTNER WITH PHARMACROP</span>
-            </div>
-            <h2 class="cs_contact_card_title">Ready To Explore A Commercial Partnership?</h2>
-            <p class="cs_contact_card_sub">Connect with our team to discuss Australian-grown products, GMP manufacturing, commercial pathways and supply opportunities.</p>
-            <form action="https://api.web3forms.com/submit" method="POST" class="cs_contact_form_bar">
-              <input type="hidden" name="access_key" value="cd98b256-0db3-478c-ab28-1ec94f80447c">
-              <input type="hidden" name="subject" value="New Enquiry - PharmaCrop Website">
-              <input type="text" name="name" placeholder="Your Name" required>
-              <input type="email" name="email" placeholder="Your Email" required>
-              <select name="interest" defaultValue="">
-                <option value="" disabled selected>Select Your Interest</option>
-                <option value="Retail">Retail</option>
-                <option value="Green Label">Green Label</option>
-                <option value="White Label">White Label</option>
-                <option value="Bulk Flower">Bulk Flower</option>
-                <option value="Distribution / Export">Distribution / Export</option>
-                <option value="General Enquiry">General Enquiry</option>
-              </select>
-              <button type="submit" class="cs_contact_form_btn">Let's Connect</button>
-            </form>
+          <div class="cs_portal_card wow fadeInUp" data-wow-delay="0.2s">
+            <div class="cs_portal_icon"><i class="fa-solid fa-user-doctor"></i></div>
+            <h3>Doctor</h3>
+            <p>Review product information and manage patient prescribing pathways.</p>
+            <a href="/contact" class="cs_portal_btn">
+              Login as Doctor
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
+              </svg>
+            </a>
           </div>
+          <div class="cs_portal_card wow fadeInUp" data-wow-delay="0.3s">
+            <div class="cs_portal_icon"><i class="fa-solid fa-mortar-pestle"></i></div>
+            <h3>Pharmacist</h3>
+            <p>Order products, track supply and manage your pharmacy account.</p>
+            <a href="/contact" class="cs_portal_btn">
+              Login as Pharmacist
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="cs_portal_note wow fadeInUp" data-wow-delay="0.4s">
+          <p>Don&rsquo;t have portal access yet? <a href="/contact">Get in touch with our team</a>.</p>
         </div>
       </div>
     </section>
-    <!-- End CTA Section -->
+    <!-- End Portal Login Section -->
     <!-- Start Footer Section -->
     <style>
       .cs_footer_v2 { background: #eee9e3; padding: 90px 0 0; position: relative; overflow: hidden; }
@@ -212,4 +229,8 @@ export const footerHtml = `
       </div>
     </footer>
     <!-- End Footer Section -->
-`;
+`,
+      }}
+    />
+  );
+}

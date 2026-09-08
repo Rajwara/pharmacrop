@@ -33,17 +33,12 @@ export default function Page() {
                     <li><a href="/products">Products</a></li>
                     <li><a href="/commercial-partnerships">Commercial Partnerships</a></li>
                     <li><a href="/careers">Careers</a></li>
-                    <li><a href="/blog">Blog</a></li>
                   </ul>
                 </nav>
               </div>
             </div>
             <div class="cs_main_header_right">
-              <div class="cs_header_icon_btns">
-                <a href="#" class="cs_header_icon_btn cs_center" aria-label="Login">
-                  <i class="fa-solid fa-user"></i>
-                </a>
-              </div>
+              <a href="/login" class="cs_header_login_btn">Login to Portal</a>
               <a href="/contact" class="cs_header_cta_btn">Contact Us</a>
             </div>
           </div>
