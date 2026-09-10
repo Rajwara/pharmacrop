@@ -3769,6 +3769,9 @@ hr {
   max-width: 100%;
   height: auto;
 }
+.cs_logo_animated {
+  width: 210px;
+}
 .cs_site_branding + .cs_nav {
   margin-left: 80px;
 }
