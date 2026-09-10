@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Commercial Partnerships - PharmaCrop",
+  title: "Partnerships - PharmaCrop",
 };
 
 export default function Page() {
@@ -28,7 +28,7 @@ export default function Page() {
                   <ul class="cs_nav_list">
                     <li><a href="/about">About Us</a></li>
                     <li><a href="/products">Products</a></li>
-                    <li><a href="/commercial-partnerships">Commercial Partnerships</a></li>
+                    <li><a href="/partnerships">Partnerships</a></li>
                     <li><a href="/careers">Careers</a></li>
                   </ul>
                 </nav>
@@ -65,7 +65,7 @@ export default function Page() {
     <section class="cs_pships_hero cs_heading_bg cs_white_color">
       <div class="cs_pships_hero_bg"><img src="/assets/img/pharmacrop-banner1.webp" alt="PharmaCrop cultivation facility"></div>
       <div class="container cs_pships_hero_content">
-        <span class="cs_pships_hero_pill wow fadeInUp">Commercial Partnerships &mdash; Flexible Pathways</span>
+        <span class="cs_pships_hero_pill wow fadeInUp">Partnerships &mdash; Flexible Pathways</span>
         <h1 class="cs_fs_80 cs_bold wow fadeInUp" data-wow-delay="0.1s">ONE PARTNER.<br><span>MULTIPLE COMMERCIAL PATHWAYS.</span></h1>
         <p class="wow fadeInUp" data-wow-delay="0.2s">Partner with PharmaCrop through four flexible commercial models backed by Australian-grown supply, GMP-certified manufacturing and integrated pharmaceutical capability.</p>
         <div class="cs_pships_hero_btns wow fadeInUp" data-wow-delay="0.3s">
@@ -114,7 +114,7 @@ export default function Page() {
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
-                <a href="/commercial-partnerships" class="cs_card_tag">Commercial</a>
+                <a href="/partnerships" class="cs_card_tag">Commercial</a>
               </div>
             </div>
             <div class="cs_card_bottom">
@@ -132,7 +132,7 @@ export default function Page() {
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
-                <a href="/commercial-partnerships" class="cs_card_tag">Commercial</a>
+                <a href="/partnerships" class="cs_card_tag">Commercial</a>
               </div>
             </div>
             <div class="cs_card_bottom">
@@ -150,7 +150,7 @@ export default function Page() {
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
-                <a href="/commercial-partnerships" class="cs_card_tag">Commercial</a>
+                <a href="/partnerships" class="cs_card_tag">Commercial</a>
               </div>
             </div>
             <div class="cs_card_bottom">
@@ -168,7 +168,7 @@ export default function Page() {
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
-                <a href="/commercial-partnerships" class="cs_card_tag">Commercial</a>
+                <a href="/partnerships" class="cs_card_tag">Commercial</a>
               </div>
             </div>
             <div class="cs_card_bottom">
@@ -423,7 +423,7 @@ export default function Page() {
             <ul class="cs_footer_v2_list">
               <li><a href="/about">About Us</a></li>
               <li><a href="/products">Products</a></li>
-              <li><a href="/commercial-partnerships">Commercial Partnerships</a></li>
+              <li><a href="/partnerships">Partnerships</a></li>
               <li><a href="/blog">Blog</a></li>
               <li><a href="/faq">FAQ</a></li>
               <li><a href="/contact">Contact</a></li>
