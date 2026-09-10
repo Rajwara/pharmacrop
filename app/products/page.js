@@ -72,7 +72,7 @@ export default function Page() {
         <p class="wow fadeInUp" data-wow-delay="0.2s">Explore PharmaCrop&rsquo;s established Australian portfolio across dried flower, oral liquid, pastilles and inhaled liquid.</p>
         <div class="cs_products_hero_btns wow fadeInUp" data-wow-delay="0.3s">
           <a href="#portfolio-overview" class="cs_products_btn_primary">EXPLORE OUR PRODUCTS</a>
-          <a href="/contact" class="cs_products_btn_outline">ACCESS B2B ORDERING PORTAL</a>
+          <a href="/login" class="cs_products_btn_outline">ORDER VIA PHARMACY PORTAL</a>
         </div>
       </div>
     </section>
@@ -103,7 +103,7 @@ export default function Page() {
       <div class="container">
         <div class="cs_portfolio_head wow fadeInUp">
           <span class="cs_portfolio_eyebrow">Our Portfolio</span>
-          <h2>18 FINISHED PRODUCTS. FOUR DOSAGE FORMS.</h2>
+          <h2>AUSTRALIAN-MADE MEDICINES ACROSS KEY DOSAGE FORMS.</h2>
           <p>An established Australian product portfolio spanning dried flower, oral liquid, pastilles and inhaled liquid.</p>
         </div>
         <div class="cs_portfolio_grid">
@@ -150,11 +150,14 @@ export default function Page() {
       .cs_dflower_copy p { color: #555; font-size: 16px; line-height: 1.75; margin: 0 0 20px; }
       .cs_dflower_ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 28px; }
       .cs_dflower_lists { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
-      .cs_dflower_range_title { color: #024242; font-size: 17px; font-weight: 800; margin: 0 0 4px; }
-      .cs_dflower_range_count { color: #78dca6; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 16px; }
-      .cs_dflower_range_list { list-style: none; margin: 0; padding: 0; }
-      .cs_dflower_range_list li { color: #024242; font-size: 14px; font-weight: 600; padding: 10px 0; border-bottom: 1px solid rgba(2, 66, 66, 0.1); }
-      .cs_dflower_range_list li:first-child { padding-top: 0; }
+      .cs_range_card { background: #fff; border: 1px solid rgba(2, 66, 66, 0.1); border-radius: 16px; padding: 32px 28px; }
+      .cs_range_icon { width: 48px; height: 48px; border-radius: 10px; background: rgba(120, 220, 166, 0.15); color: #024242; display: flex; align-items: center; justify-content: center; font-size: 19px; margin-bottom: 20px; }
+      .cs_range_eyebrow { color: #78dca6; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 6px; }
+      .cs_range_title { color: #024242; font-size: 20px; font-weight: 800; margin: 0 0 14px; }
+      .cs_range_tagline { color: #024242; font-size: 15px; font-weight: 700; margin: 0 0 12px; line-height: 1.5; }
+      .cs_range_desc { color: #666; font-size: 14px; line-height: 1.7; margin: 0 0 22px; }
+      .cs_range_cta { color: #024242; font-weight: 700; font-size: 13px; letter-spacing: 0.5px; text-decoration: none; }
+      .cs_range_cta:hover { color: #78dca6; }
       @media (max-width: 991px) {
         .cs_dflower_images { grid-template-columns: 1fr; }
         .cs_dflower_body { grid-template-columns: 1fr; gap: 36px; }
@@ -166,7 +169,7 @@ export default function Page() {
         <div class="cs_dflower_head wow fadeInUp">
           <span class="cs_dflower_label">DRIED FLOWER</span>
           <h2>AUSTRALIAN-GROWN DRIED FLOWER</h2>
-          <p>Explore PharmaCrop&rsquo;s dried flower portfolio across the Noosa Selects and PharmaCrop Premium ranges.</p>
+          <p>PharmaCrop&rsquo;s Australian-grown dried flower portfolio is available across two distinct ranges: Noosa Selects and PharmaCrop Premium.</p>
         </div>
         <div class="cs_dflower_images wow fadeInUp">
           <figure>
@@ -183,33 +186,26 @@ export default function Page() {
             <p>PharmaCrop&rsquo;s dried flower range is Australian-grown and supported by controlled cultivation, pharmaceutical quality systems and an integrated manufacturing platform.</p>
             <p>Across the Noosa Selects and PharmaCrop Premium ranges, PharmaCrop offers a broad selection of finished dried flower products across multiple strengths and product profiles.</p>
             <div class="cs_dflower_ctas">
-              <a href="/contact" class="cs_products_btn_primary" style="color:#023232;">ORDER THROUGH B2B PORTAL &rarr;</a>
+              <a href="/login" class="cs_products_btn_primary" style="color:#023232;">ORDER VIA PHARMACY PORTAL &rarr;</a>
               <a href="/contact" class="cs_btn cs_style_2 cs_bold cs_heading_color">PRODUCT ENQUIRY &rarr;</a>
             </div>
           </div>
           <div class="cs_dflower_lists wow fadeInRight">
-            <div>
-              <p class="cs_dflower_range_title">Noosa Selects</p>
-              <span class="cs_dflower_range_count">6 Products</span>
-              <ul class="cs_dflower_range_list">
-                <li>T19 Hybrid</li>
-                <li>T21 Indica</li>
-                <li>T23 Sativa</li>
-                <li>T25 Sativa</li>
-                <li>T26 Indica</li>
-                <li>T28 Indica</li>
-              </ul>
+            <div class="cs_range_card">
+              <div class="cs_range_icon"><i class="fa-solid fa-tag"></i></div>
+              <span class="cs_range_eyebrow">Noosa Selects</span>
+              <h3 class="cs_range_title">Our Accessible Range</h3>
+              <p class="cs_range_tagline">Redefining value, the Australian way.</p>
+              <p class="cs_range_desc">Australian-grown dried flower combining local cultivation, consistent quality and accessible value across a broad range of strengths and profiles.</p>
+              <a href="/login" class="cs_range_cta">DISCOVER NOOSA SELECTS &rarr;</a>
             </div>
-            <div>
-              <p class="cs_dflower_range_title">PharmaCrop Premium</p>
-              <span class="cs_dflower_range_count">5 Products</span>
-              <ul class="cs_dflower_range_list">
-                <li>Ravine T19</li>
-                <li>Valley T21</li>
-                <li>Valley T23</li>
-                <li>Summit T25</li>
-                <li>Valley T25</li>
-              </ul>
+            <div class="cs_range_card">
+              <div class="cs_range_icon"><i class="fa-solid fa-award"></i></div>
+              <span class="cs_range_eyebrow">PharmaCrop Premium</span>
+              <h3 class="cs_range_title">Our Premium Range</h3>
+              <p class="cs_range_tagline">Where Australian cultivation reaches its peak.</p>
+              <p class="cs_range_desc">Hand-selected, Noosa-grown dried flower curated to meet elevated standards for flower quality and presentation.</p>
+              <a href="/login" class="cs_range_cta">DISCOVER PHARMACROP PREMIUM &rarr;</a>
             </div>
           </div>
         </div>
@@ -254,12 +250,12 @@ export default function Page() {
             <p class="cs_pline_range_title">Oral Liquid Range</p>
             <span class="cs_pline_range_count">3 Products</span>
             <ul class="cs_pline_range_list">
-              <li>Serene 200 Isolate</li>
-              <li>Serene 200 Plus</li>
-              <li>Horizon 30 : 30</li>
+              <li>Isolate</li>
+              <li>Broad Spectrum</li>
+              <li>Balanced</li>
             </ul>
             <div class="cs_pline_ctas">
-              <a href="/contact" class="cs_products_btn_primary" style="color:#023232;">ORDER THROUGH B2B PORTAL &rarr;</a>
+              <a href="/login" class="cs_products_btn_primary" style="color:#023232;">ORDER VIA PHARMACY PORTAL &rarr;</a>
               <a href="/contact" class="cs_btn cs_style_2 cs_bold cs_heading_color">PRODUCT ENQUIRY &rarr;</a>
             </div>
           </div>
@@ -277,13 +273,8 @@ export default function Page() {
             <span class="cs_pline_label">PASTILLES</span>
             <h2>PHARMACROP PASTILLES</h2>
             <p class="cs_pline_desc">The PharmaCrop portfolio includes a finished pastille formulation developed as part of its broader multi-dosage-form product range.</p>
-            <p class="cs_pline_range_title">Pastilles Range</p>
-            <span class="cs_pline_range_count">1 Product</span>
-            <ul class="cs_pline_range_list">
-              <li>20:20:20 Night Pastilles &mdash; THC : CBD : CBN</li>
-            </ul>
             <div class="cs_pline_ctas">
-              <a href="/contact" class="cs_products_btn_primary" style="color:#023232;">ORDER THROUGH B2B PORTAL &rarr;</a>
+              <a href="/login" class="cs_products_btn_primary" style="color:#023232;">ORDER VIA PHARMACY PORTAL &rarr;</a>
               <a href="/contact" class="cs_btn cs_style_2 cs_bold cs_heading_color">PRODUCT ENQUIRY &rarr;</a>
             </div>
           </div>
@@ -301,14 +292,8 @@ export default function Page() {
             <span class="cs_pline_label">INHALED LIQUID</span>
             <h2>PHARMACROP INHALED LIQUID RANGE</h2>
             <p class="cs_pline_desc">PharmaCrop&rsquo;s inhaled liquid portfolio expands the product range across an additional dosage form, with two finished products currently included in the portfolio.</p>
-            <p class="cs_pline_range_title">Inhaled Liquid Range</p>
-            <span class="cs_pline_range_count">2 Products</span>
-            <ul class="cs_pline_range_list">
-              <li>Luminous (750mg)</li>
-              <li>Daydream (850mg)</li>
-            </ul>
             <div class="cs_pline_ctas">
-              <a href="/contact" class="cs_products_btn_primary" style="color:#023232;">ORDER THROUGH B2B PORTAL &rarr;</a>
+              <a href="/login" class="cs_products_btn_primary" style="color:#023232;">ORDER VIA PHARMACY PORTAL &rarr;</a>
               <a href="/contact" class="cs_btn cs_style_2 cs_bold cs_heading_color">PRODUCT ENQUIRY &rarr;</a>
             </div>
           </div>
@@ -319,18 +304,16 @@ export default function Page() {
     <!-- Start Cultivar Portfolio Section -->
     <style>
       .cs_cultivar_section { padding: 100px 0; background: #024242; }
-      .cs_cultivar_head { max-width: 700px; margin: 0 auto 56px; text-align: center; }
+      .cs_cultivar_head { max-width: 780px; margin: 0 auto 56px; text-align: center; }
       .cs_cultivar_eyebrow { display: block; color: #78dca6; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; font-size: 14px; margin-bottom: 14px; }
       .cs_cultivar_head h2 { color: #fff; font-size: 38px; line-height: 1.25; margin: 0 0 16px; }
       .cs_cultivar_head p { color: rgba(255, 255, 255, 0.75); font-size: 16px; line-height: 1.7; margin: 0; }
       .cs_cultivar_grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; margin-bottom: 48px; }
-      .cs_cultivar_card { position: relative; border-radius: 16px; overflow: hidden; height: 380px; }
-      .cs_cultivar_card img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
-      .cs_cultivar_card:hover img { transform: scale(1.08); }
-      .cs_cultivar_overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(2,42,42,0) 35%, rgba(2,34,34,0.92) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 22px; }
-      .cs_cultivar_overlay h3 { color: #fff; font-size: 19px; margin: 0 0 8px; }
-      .cs_cultivar_overlay p { color: rgba(255, 255, 255, 0.75); font-size: 12px; line-height: 1.6; margin: 0 0 4px; }
-      .cs_cultivar_overlay p strong { color: #78dca6; font-weight: 700; }
+      .cs_cultivar_card { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 30px 26px; }
+      .cs_cultivar_icon { width: 46px; height: 46px; border-radius: 50%; background: rgba(120, 220, 166, 0.18); color: #78dca6; display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 24px; }
+      .cs_cultivar_card h3 { color: #fff; font-size: 22px; font-weight: 800; margin: 0 0 6px; }
+      .cs_cultivar_card_sub { color: #78dca6; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 14px; }
+      .cs_cultivar_card p.cs_cultivar_desc { color: rgba(255, 255, 255, 0.7); font-size: 14px; line-height: 1.7; margin: 0; }
       .cs_cultivar_cta { text-align: center; }
       @media (max-width: 991px) {
         .cs_cultivar_grid { grid-template-columns: repeat(2, 1fr); }
@@ -343,46 +326,38 @@ export default function Page() {
     <section class="cs_cultivar_section">
       <div class="container">
         <div class="cs_cultivar_head wow fadeInUp">
-          <span class="cs_cultivar_eyebrow">Cultivar Portfolio</span>
-          <h2>AUSTRALIAN-GROWN CULTIVARS</h2>
-          <p>A portfolio of Australian-grown cultivars developed for pharmaceutical consistency and flexible commercial supply.</p>
+          <span class="cs_cultivar_eyebrow">Our Cultivation Program</span>
+          <h2>FROM THOUSANDS OF POSSIBILITIES TO THE ONES THAT MAKE THE CUT.</h2>
+          <p>PharmaCrop&rsquo;s cultivation program combines genetic diversity, rigorous selection and controlled growing to identify cultivars suited to consistent Australian production.</p>
         </div>
         <div class="cs_cultivar_grid">
           <div class="cs_cultivar_card wow fadeInUp">
-            <img src="/assets/Leafline/10045.jpg" alt="Afternoon Tea cultivar">
-            <div class="cs_cultivar_overlay">
-              <h3>Afternoon Tea</h3>
-              <p><strong>Genetics:</strong> (Biscotti &times; Gelato) &times; EZBake AF</p>
-              <p><strong>Species:</strong> Hybrid (50 | 50)</p>
-            </div>
+            <div class="cs_cultivar_icon"><i class="fa-solid fa-seedling"></i></div>
+            <h3>1,000+</h3>
+            <span class="cs_cultivar_card_sub">Genetics Evaluated</span>
+            <p class="cs_cultivar_desc">A broad starting pool gives our cultivation team the depth to search for differentiated genetics.</p>
           </div>
           <div class="cs_cultivar_card wow fadeInUp" data-wow-delay="0.1s">
-            <img src="/assets/Leafline/10046.jpg" alt="Candyland cultivar">
-            <div class="cs_cultivar_overlay">
-              <h3>Candyland</h3>
-              <p><strong>Genetics:</strong> Grand Daddy Purple &times; Bay Platinum Cookies</p>
-              <p><strong>Species:</strong> Sativa Dominant (70 | 30)</p>
-            </div>
+            <div class="cs_cultivar_icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <h3>Phenohunting</h3>
+            <span class="cs_cultivar_card_sub">Selecting For Quality</span>
+            <p class="cs_cultivar_desc">Genetics are cultivated and assessed to identify standout characteristics and production potential.</p>
           </div>
           <div class="cs_cultivar_card wow fadeInUp" data-wow-delay="0.2s">
-            <img src="/assets/Leafline/10047.jpg" alt="Supermoon cultivar">
-            <div class="cs_cultivar_overlay">
-              <h3>Supermoon</h3>
-              <p><strong>Genetics:</strong> PharmaCrop Exclusive</p>
-              <p><strong>Species:</strong> Indica Dominant (80 | 20)</p>
-            </div>
+            <div class="cs_cultivar_icon"><i class="fa-solid fa-star"></i></div>
+            <h3>Elite Selections</h3>
+            <span class="cs_cultivar_card_sub">Only The Strongest Progress</span>
+            <p class="cs_cultivar_desc">Promising selections move forward for further evaluation and cultivation at scale.</p>
           </div>
           <div class="cs_cultivar_card wow fadeInUp" data-wow-delay="0.3s">
-            <img src="/assets/img/pharma-banner.jpeg" alt="Supermoon Eclipse cultivar">
-            <div class="cs_cultivar_overlay">
-              <h3>Supermoon Eclipse</h3>
-              <p><strong>Genetics:</strong> PharmaCrop Exclusive</p>
-              <p><strong>Species:</strong> Indica Dominant (90 | 10)</p>
-            </div>
+            <div class="cs_cultivar_icon"><i class="fa-solid fa-leaf"></i></div>
+            <h3>Continuous Development</h3>
+            <span class="cs_cultivar_card_sub">The Pipeline Keeps Growing</span>
+            <p class="cs_cultivar_desc">Ongoing selection continues to expand the future opportunities available from our Australian cultivation program.</p>
           </div>
         </div>
         <div class="cs_cultivar_cta wow fadeInUp">
-          <a href="/contact" class="cs_products_btn_primary">ENQUIRE ABOUT CULTIVARS &rarr;</a>
+          <a href="/contact" class="cs_products_btn_primary">ENQUIRE ABOUT OUR CULTIVATION PROGRAM &rarr;</a>
         </div>
       </div>
     </section>
