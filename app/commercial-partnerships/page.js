@@ -19,7 +19,7 @@ export default function Page() {
           <div class="cs_main_header_in">
             <div class="cs_main_header_left">
               <a class="cs_site_branding" href="/">
-                <img src="/assets/img/logo-light.png" alt="Logo" class="cs_logo_img">
+                <img src="/assets/img/pharmacrop-logo-header-animation.gif" alt="Logo" class="cs_logo_img cs_logo_animated">
               </a>
             </div>
             <div class="cs_main_header_center">
