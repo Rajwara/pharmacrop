@@ -31,7 +31,7 @@ export default function Page() {
                   <ul class="cs_nav_list">
                     <li><a href="/about">About Us</a></li>
                     <li><a href="/products">Products</a></li>
-                    <li><a href="/commercial-partnerships">Commercial Partnerships</a></li>
+                    <li><a href="/partnerships">Partnerships</a></li>
                     <li><a href="/careers">Careers</a></li>
                   </ul>
                 </nav>
@@ -504,7 +504,7 @@ export default function Page() {
             <ul class="cs_footer_v2_list">
               <li><a href="/about">About Us</a></li>
               <li><a href="/products">Products</a></li>
-              <li><a href="/commercial-partnerships">Commercial Partnerships</a></li>
+              <li><a href="/partnerships">Partnerships</a></li>
               <li><a href="/blog">Blog</a></li>
               <li><a href="/faq">FAQ</a></li>
               <li><a href="/contact">Contact</a></li>

@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
           <i className="fa-solid fa-arrow-up"></i>
         </button>
 
-        <a id="cs_quote_tab" className="cs_quote_tab" href="/commercial-partnerships">
+        <a id="cs_quote_tab" className="cs_quote_tab" href="/partnerships">
           Partner With Us
         </a>
 
@@ -118,7 +118,7 @@ export default function RootLayout({ children }) {
               var quoteTab = document.getElementById('cs_quote_tab');
               if (quoteTab) {
                 var path = window.location.pathname;
-                if (path === '/contact' || path === '/contact/' || path === '/commercial-partnerships' || path === '/commercial-partnerships/') {
+                if (path === '/contact' || path === '/contact/' || path === '/partnerships' || path === '/partnerships/') {
                   quoteTab.style.display = 'none';
                 }
               }

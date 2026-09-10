@@ -31,7 +31,7 @@ export default function Page() {
                   <ul class="cs_nav_list">
                     <li><a href="/about">About Us</a></li>
                     <li><a href="/products">Products</a></li>
-                    <li><a href="/commercial-partnerships">Commercial Partnerships</a></li>
+                    <li><a href="/partnerships">Partnerships</a></li>
                     <li><a href="/careers">Careers</a></li>
                   </ul>
                 </nav>
@@ -62,7 +62,7 @@ export default function Page() {
             <h1 class="cs_hero_title cs_fs_80 cs_normal cs_mb_12 cs_white_color cs_gradient_color_1 wow fadeInUp">AUSTRALIAN-GROWN. <b>COMPLETE CONTROL.</b></h1>
             <p class="cs_hero_subtitle cs_fs_20 cs_mb_32 cs_opacity_7_5">Natural cultivation with pharmaceutical precision.</p>
             <div class="cs_hero_btns">
-              <a href="https://aleafiate.com.au/" target="_blank" rel="noopener noreferrer" class="cs_btn cs_style_1 cs_bold cs_heading_color cs_white_bg wow fadeInLeft">SEE OUR DOCTORS</a>
+              <a href="https://aleafiate.com.au/" target="_blank" rel="noopener noreferrer" class="cs_btn cs_style_1 cs_bold cs_heading_color cs_white_bg wow fadeInLeft">FIND A HEALTHCARE PROVIDER</a>
               <a href="/about" class="cs_btn cs_style_2 cs_bold cs_white_color wow fadeInRight">ABOUT PHARMACROP</a>
             </div>
           </div>
@@ -83,7 +83,7 @@ export default function Page() {
             </div>
             <h3 class="cs_hero_box_title cs_fs_24 cs_mb_12 cs_white_color">Partner With PharmaCrop</h3>
             <p class="cs_hero_box_subtitle mb-0 cs_opacity_7_5">Explore flexible commercial pathways across Australian-grown products, manufacturing and supply.</p>
-            <a href="/commercial-partnerships" class="cs_arrow_btn cs_hero_box_btn cs_center cs_heading_bg cs_white_color">
+            <a href="/partnerships" class="cs_arrow_btn cs_hero_box_btn cs_center cs_heading_bg cs_white_color">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
               </svg>                
@@ -233,7 +233,7 @@ export default function Page() {
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
-                <a href="/commercial-partnerships" class="cs_card_tag">Commercial</a>
+                <a href="/partnerships" class="cs_card_tag">Commercial</a>
               </div>
             </div>
             <div class="cs_card_bottom">
@@ -241,7 +241,7 @@ export default function Page() {
               <h2 class="cs_card_title cs_white_color cs_fs_32">RETAIL</h2>
               <p class="cs_card_subtitle mb-0 cs_white_color">PharmaCrop branded, ready-to-market medicines.</p>
             </div>
-            <a href="/commercial-partnerships" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+            <a href="/partnerships" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
               </svg>
@@ -251,7 +251,7 @@ export default function Page() {
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
-                <a href="/commercial-partnerships" class="cs_card_tag">Commercial</a>
+                <a href="/partnerships" class="cs_card_tag">Commercial</a>
               </div>
             </div>
             <div class="cs_card_bottom">
@@ -259,7 +259,7 @@ export default function Page() {
               <h2 class="cs_card_title cs_white_color cs_fs_32">GREEN LABEL</h2>
               <p class="cs_card_subtitle mb-0 cs_white_color">PharmaCrop products, exclusively branded for your business.</p>
             </div>
-            <a href="/commercial-partnerships" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+            <a href="/partnerships" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
               </svg>
@@ -269,7 +269,7 @@ export default function Page() {
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
-                <a href="/commercial-partnerships" class="cs_card_tag">Commercial</a>
+                <a href="/partnerships" class="cs_card_tag">Commercial</a>
               </div>
             </div>
             <div class="cs_card_bottom">
@@ -277,7 +277,7 @@ export default function Page() {
               <h2 class="cs_card_title cs_white_color cs_fs_32">WHITE LABEL</h2>
               <p class="cs_card_subtitle mb-0 cs_white_color">Your brand, supported by PharmaCrop cultivation and GMP packaging.</p>
             </div>
-            <a href="/commercial-partnerships" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+            <a href="/partnerships" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
               </svg>
@@ -287,7 +287,7 @@ export default function Page() {
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
-                <a href="/commercial-partnerships" class="cs_card_tag">Commercial</a>
+                <a href="/partnerships" class="cs_card_tag">Commercial</a>
               </div>
             </div>
             <div class="cs_card_bottom">
@@ -295,7 +295,7 @@ export default function Page() {
               <h2 class="cs_card_title cs_white_color cs_fs_32">BULK FLOWER</h2>
               <p class="cs_card_subtitle mb-0 cs_white_color">Australian-grown, GMP-certified flower supplied in bulk.</p>
             </div>
-            <a href="/commercial-partnerships" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+            <a href="/partnerships" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
               </svg>
@@ -873,7 +873,7 @@ export default function Page() {
             <ul class="cs_footer_v2_list">
               <li><a href="/about">About Us</a></li>
               <li><a href="/products">Products</a></li>
-              <li><a href="/commercial-partnerships">Commercial Partnerships</a></li>
+              <li><a href="/partnerships">Partnerships</a></li>
               <li><a href="/blog">Blog</a></li>
               <li><a href="/faq">FAQ</a></li>
               <li><a href="/contact">Contact</a></li>

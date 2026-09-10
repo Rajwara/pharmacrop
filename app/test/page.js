@@ -31,7 +31,7 @@ export default function Page() {
                   <ul class="cs_nav_list">
                     <li><a href="/about">About Us</a></li>
                     <li><a href="/products">Products</a></li>
-                    <li><a href="/commercial-partnerships">Commercial Partnerships</a></li>
+                    <li><a href="/partnerships">Partnerships</a></li>
                     <li><a href="/careers">Careers</a></li>
                   </ul>
                 </nav>
@@ -788,7 +788,7 @@ export default function Page() {
           <div class="cs_scroll_stack_left">
             <span class="cs_scroll_stack_pretitle">Partnership In Action</span>
             <h2 class="cs_scroll_stack_title">Building consistent supply that grows with your business</h2>
-            <a href="/commercial-partnerships" class="cs_scroll_stack_btn">View All Partnerships</a>
+            <a href="/partnerships" class="cs_scroll_stack_btn">View All Partnerships</a>
           </div>
           <div class="cs_scroll_stack_right">
             <div class="cs_scroll_card" data-index="0">
@@ -1038,7 +1038,7 @@ export default function Page() {
             <ul class="cs_footer_v2_list">
               <li><a href="/about">About Us</a></li>
               <li><a href="/products">Products</a></li>
-              <li><a href="/commercial-partnerships">Commercial Partnerships</a></li>
+              <li><a href="/partnerships">Partnerships</a></li>
               <li><a href="/blog">Blog</a></li>
               <li><a href="/faq">FAQ</a></li>
               <li><a href="/contact">Contact</a></li>
