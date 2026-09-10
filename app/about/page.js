@@ -355,7 +355,7 @@ export default function Page() {
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
-                <a href="/partnerships" class="cs_card_tag">Commercial</a>
+                <a href="/partnerships" class="cs_card_tag">Partnerships</a>
               </div>
             </div>
             <div class="cs_card_bottom">
@@ -373,7 +373,7 @@ export default function Page() {
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
-                <a href="/partnerships" class="cs_card_tag">Commercial</a>
+                <a href="/partnerships" class="cs_card_tag">Partnerships</a>
               </div>
             </div>
             <div class="cs_card_bottom">
@@ -391,7 +391,7 @@ export default function Page() {
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
-                <a href="/partnerships" class="cs_card_tag">Commercial</a>
+                <a href="/partnerships" class="cs_card_tag">Partnerships</a>
               </div>
             </div>
             <div class="cs_card_bottom">
@@ -409,7 +409,7 @@ export default function Page() {
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
-                <a href="/partnerships" class="cs_card_tag">Commercial</a>
+                <a href="/partnerships" class="cs_card_tag">Partnerships</a>
               </div>
             </div>
             <div class="cs_card_bottom">
