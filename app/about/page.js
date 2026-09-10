@@ -154,6 +154,7 @@ export default function Page() {
       .cs_team_photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
       .cs_team_body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
       .cs_team_name { color: #024242; font-size: 19px; font-weight: 700; margin: 0 0 4px; }
+      .cs_team_title { color: #666; font-size: 13px; font-weight: 600; margin: 0 0 10px; }
       .cs_team_role { color: #78dca6; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 14px; }
       .cs_team_credential { color: #024242; font-size: 14px; line-height: 1.6; font-weight: 600; margin: 0 0 10px; }
       .cs_team_supporting { color: #666; font-size: 14px; line-height: 1.6; margin: 0; }
@@ -178,6 +179,7 @@ export default function Page() {
             <div class="cs_team_photo"><img src="/assets/img/DR%20ADEL%20ZAREI.png" alt="Dr Adel Zarei"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">Dr Adel Zarei</h3>
+              <p class="cs_team_title">Chief Operating Officer</p>
               <span class="cs_team_role">Research to Innovation</span>
               <p class="cs_team_credential">20+ publications. PhD in plant molecular biology.</p>
               <p class="cs_team_supporting">Converts science into commercially viable products.</p>
@@ -187,6 +189,7 @@ export default function Page() {
             <div class="cs_team_photo"><img src="/assets/img/CHAD%20ESCH.png" alt="Chad Esch"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">Chad Esch</h3>
+              <p class="cs_team_title">Master Grower</p>
               <span class="cs_team_role">Cultivation to Consistency</span>
               <p class="cs_team_credential">International cultivation leadership across 3 continents.</p>
               <p class="cs_team_supporting">Delivers repeatable quality at scale.</p>
@@ -196,6 +199,7 @@ export default function Page() {
             <div class="cs_team_photo"><img src="/assets/img/CAROLYN%20FENNELL.png" alt="Carolyn Fennell"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">Carolyn Fennell</h3>
+              <p class="cs_team_title">GMP Production Manager</p>
               <span class="cs_team_role">Flower to Medicine</span>
               <p class="cs_team_credential">20+ years across pharmaceutical manufacturing, compliance and GMP operations.</p>
               <p class="cs_team_supporting">Delivers pharmaceutical quality from harvest to finished medicine.</p>
@@ -205,6 +209,7 @@ export default function Page() {
             <div class="cs_team_photo"><img src="/assets/img/AUDREY%20KUANG.png" alt="Audrey Kuang"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">Audrey Kuang</h3>
+              <p class="cs_team_title">Head of Quality</p>
               <span class="cs_team_role">Quality to Confidence</span>
               <p class="cs_team_credential">14+ years across laboratory science, validation and pharmaceutical quality.</p>
               <p class="cs_team_supporting">Builds confidence through rigorous pharmaceutical quality systems.</p>
@@ -214,9 +219,40 @@ export default function Page() {
             <div class="cs_team_photo"><img src="/assets/img/George%20Polimenakos.png" alt="George Polimenakos"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">George Polimenakos</h3>
-              <span class="cs_team_role">Commercial Growth &amp; Market Development</span>
-              <p class="cs_team_credential">Experienced Australian pharmaceutical and medical cannabis executive specialising in commercial growth, sales, marketing and business development.</p>
-              <p class="cs_team_supporting">Drives commercial strategy, market expansion and long-term business growth.</p>
+              <p class="cs_team_title">General Manager Commercial</p>
+              <span class="cs_team_role">Products to Patients</span>
+              <p class="cs_team_credential">Global pharmaceutical and healthcare industry leadership.</p>
+              <p class="cs_team_supporting">Turns pharmaceutical capability into sustainable commercial growth.</p>
+            </div>
+          </div>
+          <div class="cs_team_card wow fadeInUp" data-wow-delay="0.2s">
+            <div class="cs_team_photo"><img src="/assets/img/johanna-faccini-placeholder.png" alt="Johanna Faccini"></div>
+            <div class="cs_team_body">
+              <h3 class="cs_team_name">Johanna Faccini</h3>
+              <p class="cs_team_title">Marketing Director</p>
+              <span class="cs_team_role">Strategy to Growth</span>
+              <p class="cs_team_credential">25+ years across pharmaceutical, healthcare and regulated markets.</p>
+              <p class="cs_team_supporting">Turns market insight into strategy, brands and growth.</p>
+            </div>
+          </div>
+          <div class="cs_team_card wow fadeInUp">
+            <div class="cs_team_photo"><img src="/assets/img/suzanne-roberts-placeholder.png" alt="Suzanne Roberts"></div>
+            <div class="cs_team_body">
+              <h3 class="cs_team_name">Suzanne Roberts</h3>
+              <p class="cs_team_title">Sales Director</p>
+              <span class="cs_team_role">Relationships to Results</span>
+              <p class="cs_team_credential">15+ years across pharmaceutical and healthcare sales.</p>
+              <p class="cs_team_supporting">Builds trusted partnerships that deliver commercial results.</p>
+            </div>
+          </div>
+          <div class="cs_team_card wow fadeInUp" data-wow-delay="0.1s">
+            <div class="cs_team_photo"><img src="/assets/img/paul-barker-placeholder.png" alt="Paul Barker"></div>
+            <div class="cs_team_body">
+              <h3 class="cs_team_name">Paul Barker</h3>
+              <p class="cs_team_title">Chief Financial Officer</p>
+              <span class="cs_team_role">Finance to Foresight</span>
+              <p class="cs_team_credential">25+ years across global finance, strategy and commercial leadership.</p>
+              <p class="cs_team_supporting">Turns financial insight into confident business decisions.</p>
             </div>
           </div>
         </div>
