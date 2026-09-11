@@ -23,13 +23,11 @@ export default function RootLayout({ children }) {
         {children}
 
         <a
-          href="https://wa.me/611300053533"
-          className="cs_whatsapp_float"
-          aria-label="Chat with us on WhatsApp"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/contact"
+          className="cs_contact_float"
+          aria-label="Contact Us"
         >
-          <i className="fa-brands fa-whatsapp"></i>
+          <i className="fa-solid fa-envelope"></i>
         </a>
 
         <button id="cs_scroll_top" className="cs_scroll_top" aria-label="Scroll to top" type="button">
