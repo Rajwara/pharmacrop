@@ -96,19 +96,19 @@ export default function Page() {
           <div class="cs_slider_container" data-autoplay="7000" data-loop="1" data-speed="800" data-center="0" data-variable-width="0" data-slides-per-view="1">
             <div class="cs_slider_wrapper">
               <div class="cs_slide">
-                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/pharma-banner.jpeg"></div>
+                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/pharmacrop%20home%20assets/Home%20Page-hero-1.webp"></div>
               </div>
               <div class="cs_slide">
-                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/pharmacrop-banner1.webp"></div>
+                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/pharmacrop%20home%20assets/Home%20Page-hero-2.webp"></div>
               </div>
               <div class="cs_slide">
-                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/pharmacrop-banner2.webp"></div>
+                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/pharmacrop%20home%20assets/Home%20Page-hero-3.webp"></div>
               </div>
               <div class="cs_slide">
-                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/hero_bg_2.jpg"></div>
+                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/pharmacrop%20home%20assets/Home%20Page-hero-4.webp"></div>
               </div>
               <div class="cs_slide">
-                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/pharmacrop-banner4.webp"></div>
+                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/pharmacrop%20home%20assets/Home%20Page-hero-5.webp"></div>
               </div>
             </div>
           </div>
@@ -163,7 +163,7 @@ export default function Page() {
           </div>
           <div class="cs_sticky_services_right">
             <div class="cs_sticky_card">
-              <img src="/assets/img/Controlled%20Cultivation.webp" alt="Controlled Cultivation">
+              <img src="/assets/img/pharmacrop%20home%20assets/Home%20page-Precision%20Cultivation-1.webp" alt="Controlled Cultivation">
               <span class="cs_sticky_card_icon"><i class="fa-solid fa-seedling"></i></span>
               <div class="cs_sticky_card_body">
                 <h3 class="cs_sticky_card_title">Controlled Cultivation</h3>
@@ -172,7 +172,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_sticky_card">
-              <img src="/assets/img/Advanced%20Growing%20Systems.webp" alt="Advanced Growing Systems">
+              <img src="/assets/img/pharmacrop%20home%20assets/Home%20page-Precision%20Cultivation-2.webp" alt="Advanced Growing Systems">
               <span class="cs_sticky_card_icon"><i class="fa-solid fa-droplet"></i></span>
               <div class="cs_sticky_card_body">
                 <h3 class="cs_sticky_card_title">Advanced Growing Systems</h3>
@@ -181,7 +181,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_sticky_card">
-              <img src="/assets/img/Environmental%20Precision%20.webp" alt="Environmental Precision">
+              <img src="/assets/img/pharmacrop%20home%20assets/Home%20page-Precision%20Cultivation-3.webp" alt="Environmental Precision">
               <span class="cs_sticky_card_icon"><i class="fa-solid fa-temperature-half"></i></span>
               <div class="cs_sticky_card_body">
                 <h3 class="cs_sticky_card_title">Environmental Precision</h3>
@@ -229,7 +229,7 @@ export default function Page() {
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
         <div class="cs_card_1_group">
-          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed active wow fadeInLeft" data-src="/assets/img/2-Retain%20.png">
+          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed active wow fadeInLeft" data-src="/assets/img/pharmacrop%20home%20assets/Home%20Page-%20COMMERCIAL%20PARTNERSHIPS-1.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
@@ -247,7 +247,7 @@ export default function Page() {
               </svg>
             </a>
           </div>
-          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/2-%20Green%20Label.png">
+          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/pharmacrop%20home%20assets/Home%20Page-%20COMMERCIAL%20PARTNERSHIPS-2.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
@@ -265,7 +265,7 @@ export default function Page() {
               </svg>
             </a>
           </div>
-          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/2-%20White%20Label.png">
+          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/pharmacrop%20home%20assets/Home%20Page-%20COMMERCIAL%20PARTNERSHIPS-3.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
@@ -283,7 +283,7 @@ export default function Page() {
               </svg>
             </a>
           </div>
-          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed wow fadeInRight" data-src="/assets/img/2-%20Bulk%20Flower.png">
+          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed wow fadeInRight" data-src="/assets/img/pharmacrop%20home%20assets/Home%20Page-%20COMMERCIAL%20PARTNERSHIPS-4.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
@@ -397,7 +397,7 @@ export default function Page() {
           </div>
           <div class="cs_platform_items">
             <div class="cs_platform_item active" data-index="0">
-              <div class="cs_platform_item_img"><img src="/assets/img/Genetics.webp" alt="Genetics"></div>
+              <div class="cs_platform_item_img"><img src="/assets/img/pharmacrop%20home%20assets/Home%20Page-%20Integrated%20Platform-1.webp" alt="Genetics"></div>
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-dna"></i></span>
                 <h3>Genetics</h3>
@@ -405,7 +405,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_platform_item" data-index="1">
-              <div class="cs_platform_item_img"><img src="/assets/img/Cultivation.webp" alt="Cultivation"></div>
+              <div class="cs_platform_item_img"><img src="/assets/img/pharmacrop%20home%20assets/Home%20Page-%20Integrated%20Platform-2.webp" alt="Cultivation"></div>
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-seedling"></i></span>
                 <h3>Cultivation</h3>
@@ -421,7 +421,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_platform_item" data-index="3">
-              <div class="cs_platform_item_img"><img src="/assets/img/Quality-%26-Release.webp" alt="Quality &amp; Release"></div>
+              <div class="cs_platform_item_img"><img src="/assets/img/pharmacrop%20home%20assets/Home%20Page-%20Integrated%20Platform-3.webp" alt="Quality &amp; Release"></div>
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-shield-halved"></i></span>
                 <h3>Quality &amp; Release</h3>
@@ -429,7 +429,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_platform_item" data-index="4">
-              <div class="cs_platform_item_img"><img src="/assets/img/_Research-%26-Innovation.webp" alt="Research &amp; Innovation"></div>
+              <div class="cs_platform_item_img"><img src="/assets/img/pharmacrop%20home%20assets/Home%20Page-%20Integrated%20Platform-4.webp" alt="Research &amp; Innovation"></div>
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-microscope"></i></span>
                 <h3>Research &amp; Innovation</h3>
@@ -437,7 +437,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_platform_item" data-index="5">
-              <div class="cs_platform_item_img"><img src="/assets/img/Market%20Access%20%26%20Commercialisation.webp" alt="Market Access &amp; Commercialisation"></div>
+              <div class="cs_platform_item_img"><img src="/assets/img/pharmacrop%20home%20assets/Home%20Page-%20Integrated%20Platform-5.webp" alt="Market Access &amp; Commercialisation"></div>
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-handshake"></i></span>
                 <h3>Market Access &amp; Commercialisation</h3>
@@ -445,7 +445,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_platform_item" data-index="6">
-              <div class="cs_platform_item_img"><img src="/assets/img/Global-Export.webp" alt="Global Export"></div>
+              <div class="cs_platform_item_img"><img src="/assets/img/pharmacrop%20home%20assets/Home%20Page-%20Integrated%20Platform-6.webp" alt="Global Export"></div>
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-globe"></i></span>
                 <h3>Global Export</h3>
