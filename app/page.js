@@ -836,10 +836,11 @@ export default function Page() {
       .cs_footer_v2_touch_item a:hover { text-decoration: underline; }
       .cs_footer_v2_bottom { display: flex; align-items: center; justify-content: space-between; padding: 28px 0; flex-wrap: wrap; gap: 20px; position: relative; z-index: 1; }
       .cs_footer_v2_copyright { color: rgba(2, 66, 66, 0.55); font-size: 13px; margin: 0; }
-      .cs_footer_v2_badges { display: flex; align-items: center; gap: 28px; }
-      .cs_footer_v2_badge { display: flex; flex-direction: column; align-items: center; gap: 6px; }
-      .cs_footer_v2_badge_img { width: 60px; height: 60px; object-fit: contain; }
-      .cs_footer_v2_badge_label { font-size: 10px; letter-spacing: 0.5px; text-transform: uppercase; color: rgba(2, 66, 66, 0.55); font-weight: 700; }
+      .cs_footer_v2_badges { display: inline-flex; align-items: center; padding: 8px 6px; border: 1px solid rgba(2, 66, 66, 0.15); border-radius: 40px; background: #fff; }
+      .cs_footer_v2_badge { display: flex; align-items: center; gap: 10px; padding: 0 18px; position: relative; }
+      .cs_footer_v2_badge + .cs_footer_v2_badge::before { content: ""; position: absolute; left: 0; top: 4px; bottom: 4px; width: 1px; background: rgba(2, 66, 66, 0.15); }
+      .cs_footer_v2_badge_img { width: 30px; height: 30px; object-fit: contain; flex: none; }
+      .cs_footer_v2_badge_label { font-size: 11px; letter-spacing: 0.3px; text-transform: uppercase; color: rgba(2, 66, 66, 0.65); font-weight: 700; white-space: nowrap; }
       .cs_footer_v2_tagline { display: flex; align-items: center; gap: 12px; color: rgba(2, 66, 66, 0.4); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; font-weight: 700; margin: 0; }
       .cs_footer_v2_tagline::before { content: ""; width: 30px; height: 1px; background: rgba(2, 66, 66, 0.3); }
       @media (max-width: 991px) {
@@ -848,6 +849,9 @@ export default function Page() {
       @media (max-width: 575px) {
         .cs_footer_v2_row { grid-template-columns: 1fr; }
         .cs_footer_v2_bottom { flex-direction: column; align-items: flex-start; }
+        .cs_footer_v2_badge { padding: 0 12px; gap: 7px; }
+        .cs_footer_v2_badge_img { width: 24px; height: 24px; }
+        .cs_footer_v2_badge_label { font-size: 10px; }
       }
     </style>
     <footer class="cs_footer_v2">
