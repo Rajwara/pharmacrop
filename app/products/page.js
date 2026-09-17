@@ -66,7 +66,7 @@ export default function Page() {
       }
     </style>
     <section class="cs_products_hero cs_heading_bg cs_white_color">
-      <div class="cs_products_hero_bg"><img src="/assets/img/pharmacrop-banner3.webp" alt="PharmaCrop products"></div>
+      <div class="cs_products_hero_bg"><img src="/assets/img/PRODUCTS-Hero-v2.webp" alt="PharmaCrop products"></div>
       <div class="container cs_products_hero_content">
         <span class="cs_products_hero_pill wow fadeInUp">Australian Product Portfolio</span>
         <h1 class="cs_fs_80 cs_bold wow fadeInUp" data-wow-delay="0.1s">AUSTRALIAN-GROWN.<br>GMP-CERTIFIED.<br><span>BUILT FOR HEALTHCARE.</span></h1>

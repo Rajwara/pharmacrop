@@ -75,10 +75,10 @@ export default function Page() {
         <div class="cs_height_56 cs_height_lg_35"></div>
         <div class="row cs_gap_y_30">
           <div class="col-lg-4 wow fadeInLeft">
-            <a href="https://www.youtube.com/embed/rRid6GCJtgc" class="cs_video_block cs_style_1 cs_bg_filed cs_video_open cs_center cs_radius_20" data-src="/assets/img/THE-PHARMACROP-STORY-1.webp"></a>
+            <a href="https://www.youtube.com/embed/rRid6GCJtgc" class="cs_video_block cs_style_1 cs_bg_filed cs_video_open cs_center cs_radius_20" data-src="/assets/img/THE%20PHARMACROP%20STORY1-v2.webp"></a>
           </div>
           <div class="col-lg-8 wow fadeInRight">
-            <div class="cs_cta cs_style_2 cs_bg_filed cs_radius_20" data-src="/assets/img/Pharmacrop-story-2.webp">
+            <div class="cs_cta cs_style_2 cs_bg_filed cs_radius_20" data-src="/assets/img/THE%20PHARMACROP%20STORY2-v2.webp">
               <a href="/contact" class="cs_btn cs_style_2 cs_bold cs_white_color">Contact us</a>
             </div>
           </div>
@@ -174,14 +174,14 @@ export default function Page() {
         </div>
         <div class="cs_about_gallery_grid">
           <div class="cs_about_gallery_hero">
-            <img src="/assets/img/pharmacrop-banner1.webp" alt="Aerial view of the PharmaCrop facility">
+            <img src="/assets/img/Our Facility-5.webp" alt="PharmaCrop facility exterior">
             <span class="cs_about_gallery_chip">Facility Overview<br>Noosa Hinterland</span>
           </div>
           <div class="cs_about_gallery_sub_grid">
-            <div class="cs_about_gallery_item"><img src="/assets/img/pharmacrop-bannerv2.webp" alt="Aerial view of the greenhouse complex"></div>
-            <div class="cs_about_gallery_item"><img src="/assets/img/Controlled Cultivation.webp" alt="Controlled cultivation environment"></div>
-            <div class="cs_about_gallery_item"><img src="/assets/img/Genetics.webp" alt="Genetics and breeding program"></div>
-            <div class="cs_about_gallery_item"><img src="/assets/img/GMP Manufacturing.webp" alt="GMP-certified manufacturing"></div>
+            <div class="cs_about_gallery_item"><img src="/assets/img/Our Facility-9.webp" alt="Vegetative growth greenhouse"></div>
+            <div class="cs_about_gallery_item"><img src="/assets/img/Our Facility-2.webp" alt="Crop inspection in greenhouse"></div>
+            <div class="cs_about_gallery_item"><img src="/assets/img/Our Facility-1.webp" alt="GMP-certified packaging line"></div>
+            <div class="cs_about_gallery_item"><img src="/assets/img/Our Facility-7.webp" alt="Staff manually processing flower"></div>
           </div>
         </div>
         <div class="cs_about_gallery_cta">
