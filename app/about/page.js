@@ -148,7 +148,12 @@ export default function Page() {
       .cs_about_gallery_eyebrow { display: block; color: #78dca6; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; font-size: 14px; margin-bottom: 14px; }
       .cs_about_gallery_head h2 { color: #024242; font-size: 38px; line-height: 1.25; margin: 0 0 20px; }
       .cs_about_gallery_head p { color: #666; font-size: 16px; line-height: 1.7; margin: 0; }
-      .cs_about_gallery_grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 44px; }
+      .cs_about_gallery_grid { display: grid; grid-template-columns: 1fr 2fr; gap: 20px; margin-bottom: 44px; }
+      .cs_about_gallery_hero { position: relative; border-radius: 14px; overflow: hidden; min-height: 100%; }
+      .cs_about_gallery_hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .cs_about_gallery_hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(2, 34, 34, 0.1) 0%, rgba(2, 20, 20, 0.6) 100%); pointer-events: none; }
+      .cs_about_gallery_chip { position: absolute; left: 50%; top: 62%; transform: translate(-50%, -50%); width: 130px; height: 130px; border-radius: 50%; background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); border: 1px solid rgba(255, 255, 255, 0.35); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #fff; font-size: 13px; font-weight: 700; line-height: 1.4; z-index: 2; padding: 10px; }
+      .cs_about_gallery_sub_grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
       .cs_about_gallery_item { position: relative; border-radius: 14px; overflow: hidden; aspect-ratio: 4 / 3; }
       .cs_about_gallery_item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
       .cs_about_gallery_item:hover img { transform: scale(1.06); }
@@ -156,7 +161,8 @@ export default function Page() {
       @media (max-width: 767px) {
         .cs_about_gallery_section { padding: 70px 0; }
         .cs_about_gallery_head h2 { font-size: 28px; }
-        .cs_about_gallery_grid { grid-template-columns: repeat(2, 1fr); }
+        .cs_about_gallery_grid { grid-template-columns: 1fr; }
+        .cs_about_gallery_hero { min-height: 260px; }
       }
     </style>
     <section class="cs_about_gallery_section">
@@ -167,12 +173,16 @@ export default function Page() {
           <p>From cultivation through to GMP-certified manufacturing, take a closer look at how PharmaCrop brings science and agriculture together.</p>
         </div>
         <div class="cs_about_gallery_grid">
-          <div class="cs_about_gallery_item"><img src="/assets/img/pharmacrop-banner1.webp" alt="Aerial view of the PharmaCrop facility"></div>
-          <div class="cs_about_gallery_item"><img src="/assets/img/Controlled Cultivation.webp" alt="Controlled cultivation environment"></div>
-          <div class="cs_about_gallery_item"><img src="/assets/img/GMP Manufacturing.webp" alt="GMP-certified manufacturing"></div>
-          <div class="cs_about_gallery_item"><img src="/assets/img/THE-PHARMACROP-STORY-1.webp" alt="Inside the PharmaCrop greenhouse"></div>
-          <div class="cs_about_gallery_item"><img src="/assets/img/Genetics.webp" alt="Genetics and breeding program"></div>
-          <div class="cs_about_gallery_item"><img src="/assets/img/Quality-&amp;-Release.webp" alt="Quality and release testing"></div>
+          <div class="cs_about_gallery_hero">
+            <img src="/assets/img/pharmacrop-banner1.webp" alt="Aerial view of the PharmaCrop facility">
+            <span class="cs_about_gallery_chip">Facility Overview<br>Noosa Hinterland</span>
+          </div>
+          <div class="cs_about_gallery_sub_grid">
+            <div class="cs_about_gallery_item"><img src="/assets/img/pharmacrop-bannerv2.webp" alt="Aerial view of the greenhouse complex"></div>
+            <div class="cs_about_gallery_item"><img src="/assets/img/Controlled Cultivation.webp" alt="Controlled cultivation environment"></div>
+            <div class="cs_about_gallery_item"><img src="/assets/img/Genetics.webp" alt="Genetics and breeding program"></div>
+            <div class="cs_about_gallery_item"><img src="/assets/img/GMP Manufacturing.webp" alt="GMP-certified manufacturing"></div>
+          </div>
         </div>
         <div class="cs_about_gallery_cta">
           <a href="/our-facilities" class="cs_btn cs_style_1 cs_bold cs_heading_bg cs_white_color">VISIT OUR FACILITIES</a>
