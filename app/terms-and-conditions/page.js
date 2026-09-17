@@ -144,7 +144,7 @@ export default function Page() {
     <section class="cs_contact_card_section">
       <div class="container">
         <div class="cs_contact_card">
-          <div class="cs_contact_card_bg"><img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt=""></div>
+          <div class="cs_contact_card_bg"><img src="/assets/img/pharmacrop%20home%20assets/CTA%20BANNER/PARTNER%20WITH%20PHARMACROP.webp" alt=""></div>
           <div class="cs_contact_card_top">
             <p class="cs_contact_info_label">Speak With Our Team:</p>
             <a href="mailto:enquiries@pharmacrop.com.au" class="cs_contact_pill"><span class="cs_contact_pill_icon"><i class="fa-solid fa-envelope"></i></span>enquiries@pharmacrop.com.au</a>

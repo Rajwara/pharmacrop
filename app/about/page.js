@@ -401,7 +401,7 @@ export default function Page() {
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
         <div class="cs_card_1_group">
-          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed active wow fadeInLeft" data-src="/assets/img/Retail-v2.webp">
+          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed active wow fadeInLeft" data-src="/assets/img/pharmacrop%20home%20assets/COMMERCIAL%20PARTNERSHIPS/Retail.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
@@ -419,7 +419,7 @@ export default function Page() {
               </svg>
             </a>
           </div>
-          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/Green%20Label-v2.webp">
+          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/pharmacrop%20home%20assets/COMMERCIAL%20PARTNERSHIPS/Green%20Label.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
@@ -437,7 +437,7 @@ export default function Page() {
               </svg>
             </a>
           </div>
-          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/White%20Label-v2.webp">
+          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/pharmacrop%20home%20assets/COMMERCIAL%20PARTNERSHIPS/White%20Label.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
@@ -455,7 +455,7 @@ export default function Page() {
               </svg>
             </a>
           </div>
-          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed wow fadeInRight" data-src="/assets/img/Bulk%20Flower-v2.webp">
+          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed wow fadeInRight" data-src="/assets/img/pharmacrop%20home%20assets/COMMERCIAL%20PARTNERSHIPS/Bulk%20Flower.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
@@ -508,7 +508,7 @@ export default function Page() {
     <section class="cs_contact_card_section">
       <div class="container">
         <div class="cs_contact_card">
-          <div class="cs_contact_card_bg"><img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt=""></div>
+          <div class="cs_contact_card_bg"><img src="/assets/img/pharmacrop%20home%20assets/CTA%20BANNER/PARTNER%20WITH%20PHARMACROP.webp" alt=""></div>
           <div class="cs_contact_card_top">
             <p class="cs_contact_info_label">Speak With Our Team:</p>
             <a href="mailto:enquiries@pharmacrop.com.au" class="cs_contact_pill"><span class="cs_contact_pill_icon"><i class="fa-solid fa-envelope"></i></span>enquiries@pharmacrop.com.au</a>
