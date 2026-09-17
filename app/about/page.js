@@ -30,7 +30,7 @@ export default function Page() {
                     <li><a href="/products">Products</a></li>
                     <li><a href="/partnerships">Partnerships</a></li>
                     <li><a href="/careers">Careers</a></li>
-                    <li><a href="/gallery">Our Facilities</a></li>
+                    <li><a href="/our-facilities">Our Facilities</a></li>
                   </ul>
                 </nav>
               </div>
@@ -175,7 +175,7 @@ export default function Page() {
           <div class="cs_about_gallery_item"><img src="/assets/img/Quality-&amp;-Release.webp" alt="Quality and release testing"></div>
         </div>
         <div class="cs_about_gallery_cta">
-          <a href="/gallery" class="cs_btn cs_style_1 cs_bold cs_heading_bg cs_white_color">VISIT OUR FACILITIES</a>
+          <a href="/our-facilities" class="cs_btn cs_style_1 cs_bold cs_heading_bg cs_white_color">VISIT OUR FACILITIES</a>
         </div>
       </div>
     </section>
