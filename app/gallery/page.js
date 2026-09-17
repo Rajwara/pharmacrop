@@ -57,6 +57,12 @@ export default function Page() {
     </section>
     <!-- End Page Heading Sectoin -->
     <!-- Start Gallery Section -->
+    <style>
+      .cs_isotop.cs_style_1 .cs_gallery.cs_style_1 { height: 300px !important; }
+      @media (max-width: 575px) {
+        .cs_isotop.cs_style_1 .cs_gallery.cs_style_1 { height: 220px !important; }
+      }
+    </style>
       <div class="cs_height_100 cs_height_lg_70"></div>
       <div class="container">
         <div class="cs_isotop cs_style_1 cs_isotop_col_3 cs_has_gutter_24 cs_lightgallery">
@@ -156,6 +162,39 @@ export default function Page() {
                 <span class="cs_gallery_info text-center cs_center">
                   <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Quality &amp; Release</span>
                   <span class="cs_white_color d-block">Quality Control</span>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="cs_isotop_item">
+            <a href="/assets/img/THE-PHARMACROP-STORY-1.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/THE-PHARMACROP-STORY-1.webp" alt="Inside the PharmaCrop greenhouse">
+              <span class="cs_gallery_info_wrap cs_center">
+                <span class="cs_gallery_info text-center cs_center">
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Inside The Greenhouse</span>
+                  <span class="cs_white_color d-block">Cultivation</span>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="cs_isotop_item">
+            <a href="/assets/img/Genetics.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Genetics.webp" alt="Genetics and breeding program">
+              <span class="cs_gallery_info_wrap cs_center">
+                <span class="cs_gallery_info text-center cs_center">
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Genetics &amp; Breeding</span>
+                  <span class="cs_white_color d-block">Research</span>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="cs_isotop_item">
+            <a href="/assets/img/Pharmacrop-story-2.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Pharmacrop-story-2.webp" alt="PharmaCrop pharmaceutical manufacturing line">
+              <span class="cs_gallery_info_wrap cs_center">
+                <span class="cs_gallery_info text-center cs_center">
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Manufacturing Line</span>
+                  <span class="cs_white_color d-block">Manufacturing</span>
                 </span>
               </span>
             </a>

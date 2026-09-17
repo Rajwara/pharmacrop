@@ -141,6 +141,45 @@ export default function Page() {
       <!-- End Feature Section -->
     </div>
     <!-- End Features Section -->
+    <!-- Start About Gallery Preview Section -->
+    <style>
+      .cs_about_gallery_section { padding: 110px 0 100px; background: #fff; }
+      .cs_about_gallery_head { max-width: 700px; margin: 0 auto 50px; text-align: center; }
+      .cs_about_gallery_eyebrow { display: block; color: #78dca6; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; font-size: 14px; margin-bottom: 14px; }
+      .cs_about_gallery_head h2 { color: #024242; font-size: 38px; line-height: 1.25; margin: 0 0 20px; }
+      .cs_about_gallery_head p { color: #666; font-size: 16px; line-height: 1.7; margin: 0; }
+      .cs_about_gallery_grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 44px; }
+      .cs_about_gallery_item { position: relative; border-radius: 14px; overflow: hidden; aspect-ratio: 4 / 3; }
+      .cs_about_gallery_item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+      .cs_about_gallery_item:hover img { transform: scale(1.06); }
+      .cs_about_gallery_cta { text-align: center; }
+      @media (max-width: 767px) {
+        .cs_about_gallery_section { padding: 70px 0; }
+        .cs_about_gallery_head h2 { font-size: 28px; }
+        .cs_about_gallery_grid { grid-template-columns: repeat(2, 1fr); }
+      }
+    </style>
+    <section class="cs_about_gallery_section">
+      <div class="container">
+        <div class="cs_about_gallery_head">
+          <span class="cs_about_gallery_eyebrow">Gallery</span>
+          <h2>A LOOK INSIDE OUR FACILITY</h2>
+          <p>From cultivation through to GMP-certified manufacturing, take a closer look at how PharmaCrop brings science and agriculture together.</p>
+        </div>
+        <div class="cs_about_gallery_grid">
+          <div class="cs_about_gallery_item"><img src="/assets/img/pharmacrop-banner1.webp" alt="Aerial view of the PharmaCrop facility"></div>
+          <div class="cs_about_gallery_item"><img src="/assets/img/Controlled Cultivation.webp" alt="Controlled cultivation environment"></div>
+          <div class="cs_about_gallery_item"><img src="/assets/img/GMP Manufacturing.webp" alt="GMP-certified manufacturing"></div>
+          <div class="cs_about_gallery_item"><img src="/assets/img/THE-PHARMACROP-STORY-1.webp" alt="Inside the PharmaCrop greenhouse"></div>
+          <div class="cs_about_gallery_item"><img src="/assets/img/Genetics.webp" alt="Genetics and breeding program"></div>
+          <div class="cs_about_gallery_item"><img src="/assets/img/Quality-&amp;-Release.webp" alt="Quality and release testing"></div>
+        </div>
+        <div class="cs_about_gallery_cta">
+          <a href="/gallery" class="cs_btn cs_style_1 cs_bold cs_heading_bg cs_white_color">VISIT GALLERY</a>
+        </div>
+      </div>
+    </section>
+    <!-- End About Gallery Preview Section -->
     <!-- Start Team Expertise Section -->
     <style>
       .cs_team_section { padding: 110px 0; background: #f7faf8; }
