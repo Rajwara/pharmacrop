@@ -59,13 +59,13 @@ export default function Page() {
       .cs_auth_left_content h1 span { color: #78dca6; }
       .cs_auth_tagline { color: #78dca6; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin: 0; }
       .cs_auth_left_bottom { display: flex; flex-direction: column; gap: 18px; }
-      .cs_auth_accred_bar { display: inline-flex; align-items: center; padding: 8px 6px; border: 1px solid rgba(255,255,255,0.25); border-radius: 40px; background: rgba(255,255,255,0.08); width: fit-content; }
-      .cs_auth_accred_item { display: flex; align-items: center; padding: 0 10px; position: relative; }
-      .cs_auth_accred_item + .cs_auth_accred_item::before { content: ""; position: absolute; left: 0; top: 2px; bottom: 2px; width: 1px; background: rgba(255,255,255,0.25); }
-      .cs_auth_accred_item img { width: 30px; height: 30px; object-fit: contain; flex: none; }
+      .cs_auth_accred_bar { display: flex; align-items: center; justify-content: center; padding: 12px 10px; border: 1px solid rgba(255,255,255,0.25); border-radius: 50px; background: rgba(255,255,255,0.08); width: 100%; }
+      .cs_auth_accred_item { display: flex; align-items: center; justify-content: center; flex: 1; padding: 0 14px; position: relative; }
+      .cs_auth_accred_item + .cs_auth_accred_item::before { content: ""; position: absolute; left: 0; top: 4px; bottom: 4px; width: 1px; background: rgba(255,255,255,0.25); }
+      .cs_auth_accred_item img { width: 52px; height: 52px; object-fit: contain; flex: none; }
       .cs_auth_left_bottom_row { display: flex; align-items: center; gap: 14px; }
-      .cs_auth_left_bottom_row::before { content: ""; width: 30px; height: 1px; background: rgba(255,255,255,0.5); }
-      .cs_auth_left_bottom_row p { color: #fff; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; line-height: 1.7; margin: 0; }
+      .cs_auth_left_bottom_row::before { content: ""; width: 30px; height: 1px; background: rgba(255,255,255,0.5); flex: none; }
+      .cs_auth_left_bottom_row p { color: #fff; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; line-height: 1.7; margin: 0; white-space: nowrap; }
       .cs_auth_right { flex: 1; background: #eef1ee; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 170px 40px 64px; position: relative; }
       .cs_auth_card { background: #fff; border-radius: 20px; padding: 44px 40px; width: 100%; max-width: 460px; box-shadow: 0 25px 60px rgba(2, 66, 66, 0.08); transition: max-width 0.3s ease; }
       .cs_auth_card.cs_auth_card_wide { max-width: 620px; }
@@ -132,6 +132,9 @@ export default function Page() {
         .cs_auth_field_row .cs_auth_field.cs_auth_field_sm { flex: 1; }
         .cs_auth_card { padding: 32px 24px; }
         .cs_auth_left { padding: 155px 24px 36px; min-height: 340px; }
+        .cs_auth_accred_item { padding: 0 8px; }
+        .cs_auth_accred_item img { width: 38px; height: 38px; }
+        .cs_auth_left_bottom_row p { white-space: normal; }
       }
     </style>
     <div class="cs_auth_header_scrim"></div>
@@ -149,7 +152,7 @@ export default function Page() {
             <span class="cs_auth_accred_item"><img src="/assets/img/TGA-LICENSED.png" alt="TGA Licensed"></span>
           </div>
           <div class="cs_auth_left_bottom_row">
-            <p>Science For<br>A Healthier Tomorrow.</p>
+            <p>Australian-Grown &middot; GMP Certified &middot; TGA Licensed</p>
           </div>
         </div>
       </div>
@@ -160,6 +163,11 @@ export default function Page() {
             <button type="button" class="cs_auth_tab" data-auth-tab="register">Register</button>
           </div>
           <div class="cs_auth_panel active" data-auth-panel="login">
+            <div class="cs_auth_register_intro">
+              <span class="cs_auth_register_badge">PharmaCrop Portal</span>
+              <h2>Welcome Back</h2>
+              <p>Sign in to access full product information, clinical resources and patient support materials as a verified healthcare professional.</p>
+            </div>
             <div class="cs_auth_field">
               <span class="cs_auth_field_icon"><i class="fa-solid fa-envelope"></i></span>
               <input type="email" placeholder="Email address">
