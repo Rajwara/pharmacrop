@@ -190,25 +190,28 @@ export default function Page() {
       .cs_trust_strip { background: #eef4ef; padding: 56px 0; }
       .cs_trust_strip_eyebrow { display: flex; align-items: center; justify-content: center; gap: 14px; color: rgba(2, 66, 66, 0.55); font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 36px; }
       .cs_trust_strip_eyebrow::before, .cs_trust_strip_eyebrow::after { content: ""; width: 34px; height: 1px; background: rgba(2, 66, 66, 0.3); }
-      .cs_trust_strip_row { display: flex; align-items: center; justify-content: center; gap: 60px; flex-wrap: wrap; }
-      .cs_trust_strip_item { display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 0 40px; position: relative; }
-      .cs_trust_strip_item + .cs_trust_strip_item::before { content: ""; position: absolute; left: -1px; top: 6px; bottom: 6px; width: 1px; background: rgba(2, 66, 66, 0.15); }
-      .cs_trust_strip_item img { width: 84px; height: 84px; object-fit: contain; flex: none; }
-      .cs_trust_strip_item span { color: #024242; font-size: 14px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
+      .cs_trust_strip_row { display: flex; align-items: center; justify-content: center; }
+      .cs_trust_strip_bar { display: inline-flex; align-items: center; padding: 14px 10px; border: 1px solid rgba(2, 66, 66, 0.15); border-radius: 50px; background: #fff; flex-wrap: wrap; justify-content: center; }
+      .cs_trust_strip_item { display: flex; align-items: center; gap: 12px; padding: 0 28px; position: relative; }
+      .cs_trust_strip_item + .cs_trust_strip_item::before { content: ""; position: absolute; left: 0; top: 4px; bottom: 4px; width: 1px; background: rgba(2, 66, 66, 0.15); }
+      .cs_trust_strip_item img { width: 44px; height: 44px; object-fit: contain; flex: none; }
+      .cs_trust_strip_item span { color: #024242; font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; white-space: nowrap; }
       @media (max-width: 767px) {
-        .cs_trust_strip_row { gap: 20px; }
-        .cs_trust_strip_item { padding: 0 12px; }
-        .cs_trust_strip_item + .cs_trust_strip_item::before { display: none; }
-        .cs_trust_strip_item img { width: 64px; height: 64px; }
+        .cs_trust_strip_bar { padding: 10px 6px; }
+        .cs_trust_strip_item { padding: 0 14px; gap: 8px; }
+        .cs_trust_strip_item img { width: 32px; height: 32px; }
+        .cs_trust_strip_item span { font-size: 11px; }
       }
     </style>
     <section class="cs_trust_strip">
       <div class="container">
         <p class="cs_trust_strip_eyebrow">Quality &amp; Compliance</p>
         <div class="cs_trust_strip_row">
-          <span class="cs_trust_strip_item"><img src="/assets/img/AUSTRALIAN-MADE.png" alt="Australian Made"><span>Australian Made</span></span>
-          <span class="cs_trust_strip_item"><img src="/assets/img/GMP-CERTIFIED.png" alt="GMP Certified"><span>GMP Certified</span></span>
-          <span class="cs_trust_strip_item"><img src="/assets/img/TGA-LICENSED.png" alt="TGA Licensed"><span>TGA Licensed</span></span>
+          <div class="cs_trust_strip_bar">
+            <span class="cs_trust_strip_item"><img src="/assets/img/AUSTRALIAN-MADE.png" alt="Australian Made"><span>Australian Made</span></span>
+            <span class="cs_trust_strip_item"><img src="/assets/img/GMP-CERTIFIED.png" alt="GMP Certified"><span>GMP Certified</span></span>
+            <span class="cs_trust_strip_item"><img src="/assets/img/TGA-LICENSED.png" alt="TGA Licensed"><span>TGA Licensed</span></span>
+          </div>
         </div>
       </div>
     </section>
