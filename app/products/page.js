@@ -490,7 +490,7 @@ export default function Page() {
               <li><a href="/partnerships">Partnerships</a></li>
               <li><a href="/blog">Blog</a></li>
               <li><a href="/faq">FAQ</a></li>
-              <li><a href="/contact">Contact</a></li>
+              <li><a href="/our-facilities">Our Facilities</a></li>
             </ul>
           </div>
           <div>
