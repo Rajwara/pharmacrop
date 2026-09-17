@@ -182,17 +182,6 @@ export default function Page() {
               </span>
             </a>
           </div>
-          <div class="cs_isotop_item">
-            <a href="/assets/img/Pharmacrop-story-2.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-              <img src="/assets/img/Pharmacrop-story-2.webp" alt="PharmaCrop pharmaceutical manufacturing line">
-              <span class="cs_gallery_info_wrap cs_center">
-                <span class="cs_gallery_info text-center cs_center">
-                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Manufacturing Line</span>
-                  <span class="cs_white_color d-block">Manufacturing</span>
-                </span>
-              </span>
-            </a>
-          </div>
         </div>
       </div>
       <div class="cs_height_100 cs_height_lg_70"></div>
