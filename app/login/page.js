@@ -45,26 +45,30 @@ export default function Page() {
     <!-- End Header Section -->
     <!-- Start Portal Login Section -->
     <style>
-      .cs_portal_section { position: relative; padding: 170px 0 130px; background: #024242; overflow: hidden; }
-      .cs_portal_section::before { content: ""; position: absolute; top: -180px; right: -140px; width: 460px; height: 460px; border-radius: 50%; background: radial-gradient(circle, rgba(120,220,166,0.18) 0%, rgba(120,220,166,0) 70%); }
-      .cs_portal_section::after { content: ""; position: absolute; bottom: -220px; left: -160px; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(217,159,89,0.14) 0%, rgba(217,159,89,0) 70%); }
+      .cs_portal_section { position: relative; padding: 170px 0 130px; background: #024242 url('/assets/img/portalbgimg.png') center center / cover no-repeat; overflow: hidden; }
+      .cs_portal_section::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(2, 34, 34, 0.35) 0%, rgba(2, 34, 34, 0.55) 100%); }
+      .cs_portal_corner_tagline { position: absolute; right: 40px; bottom: 40px; z-index: 2; color: rgba(255, 255, 255, 0.6); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; line-height: 1.8; text-align: right; }
       .cs_portal_head { position: relative; z-index: 2; max-width: 680px; margin: 0 auto 64px; text-align: center; }
       .cs_portal_pill { display: inline-flex; align-items: center; padding: 8px 22px; border-radius: 30px; background: rgba(120, 220, 166, 0.15); border: 1px solid rgba(120, 220, 166, 0.35); color: #78dca6; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 22px; }
       .cs_portal_head h1 { color: #fff; font-size: 46px; font-weight: 800; line-height: 1.2; margin: 0 0 18px; }
       .cs_portal_head h1 span { color: #78dca6; }
       .cs_portal_head p { color: rgba(255, 255, 255, 0.72); font-size: 17px; line-height: 1.7; margin: 0; }
       .cs_portal_grid { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 780px; margin: 0 auto; }
-      .cs_portal_card { background: #fff; border-radius: 20px; padding: 46px 34px; text-align: center; transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease; box-shadow: 0 20px 50px rgba(2, 20, 20, 0.25); }
+      .cs_portal_card { background: linear-gradient(135deg, #f2f9f4 0%, #ffffff 55%); border-radius: 20px; padding: 46px 34px; text-align: center; transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease; box-shadow: 0 20px 50px rgba(2, 20, 20, 0.25); }
       .cs_portal_card:hover { transform: translateY(-10px); box-shadow: 0 30px 70px rgba(2, 20, 20, 0.35); }
-      .cs_portal_icon { width: 84px; height: 84px; margin: 0 auto 26px; border-radius: 50%; background: rgba(120, 220, 166, 0.15); display: flex; align-items: center; justify-content: center; font-size: 32px; color: #024242; transition: background-color 0.4s ease, transform 0.4s ease, color 0.4s ease; }
-      .cs_portal_card:hover .cs_portal_icon { background: #024242; color: #78dca6; transform: scale(1.08) rotate(-6deg); }
+      .cs_portal_icon { width: 84px; height: 84px; margin: 0 auto 26px; border-radius: 50%; background: linear-gradient(135deg, #024242 0%, #011616 100%); display: flex; align-items: center; justify-content: center; font-size: 32px; color: #78dca6; transition: transform 0.4s ease; }
+      .cs_portal_card:hover .cs_portal_icon { transform: scale(1.08) rotate(-6deg); }
       .cs_portal_card h3 { color: #024242; font-size: 22px; font-weight: 800; margin: 0 0 12px; }
       .cs_portal_card p { color: #666; font-size: 14px; line-height: 1.7; margin: 0 0 30px; min-height: 68px; }
       .cs_portal_btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%; background: #024242; color: #fff; font-weight: 700; font-size: 13px; letter-spacing: 0.5px; text-transform: uppercase; padding: 15px 20px; border-radius: 8px; text-decoration: none; transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; }
       .cs_portal_btn:hover { background: #78dca6; color: #024242; transform: translateY(-2px); }
-      .cs_portal_note { position: relative; z-index: 2; text-align: center; margin-top: 44px; }
+      .cs_portal_note { position: relative; z-index: 2; text-align: center; margin-top: 44px; display: flex; align-items: center; justify-content: center; gap: 14px; }
+      .cs_portal_note::before, .cs_portal_note::after { content: ""; width: 34px; height: 1px; background: rgba(255, 255, 255, 0.3); }
       .cs_portal_note p { color: rgba(255, 255, 255, 0.55); font-size: 13px; margin: 0; }
       .cs_portal_note a { color: #78dca6; text-decoration: underline; }
+      @media (max-width: 575px) {
+        .cs_portal_corner_tagline { display: none; }
+      }
       @media (max-width: 991px) {
         .cs_portal_grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
         .cs_portal_head h1 { font-size: 34px; }
@@ -72,6 +76,7 @@ export default function Page() {
       }
     </style>
     <section class="cs_portal_section">
+      <span class="cs_portal_corner_tagline">Cultivating<br>A Healthier<br>Tomorrow</span>
       <div class="container">
         <div class="cs_portal_head">
           <span class="cs_portal_pill wow fadeInUp">PharmaCrop Portal</span>
