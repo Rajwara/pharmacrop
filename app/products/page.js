@@ -72,7 +72,7 @@ export default function Page() {
         <p class="wow fadeInUp" data-wow-delay="0.2s">Explore PharmaCrop&rsquo;s established Australian portfolio across dried flower, oral liquid, pastilles and inhaled liquid.</p>
         <div class="cs_products_hero_btns wow fadeInUp" data-wow-delay="0.3s">
           <a href="#portfolio-overview" class="cs_products_btn_primary">EXPLORE OUR PRODUCTS</a>
-          <a href="/login" class="cs_products_btn_outline">ORDER VIA PHARMACY PORTAL</a>
+          <a href="/login" class="cs_products_btn_outline">LEARN MORE</a>
         </div>
       </div>
     </section>
@@ -186,7 +186,7 @@ export default function Page() {
             <p>PharmaCrop&rsquo;s dried flower range is Australian-grown and supported by controlled cultivation, pharmaceutical quality systems and an integrated manufacturing platform.</p>
             <p>Across the Noosa Selects and PharmaCrop Premium ranges, PharmaCrop offers a broad selection of finished dried flower products across multiple strengths and product profiles.</p>
             <div class="cs_dflower_ctas">
-              <a href="/login" class="cs_products_btn_primary" style="color:#023232;">ORDER VIA PHARMACY PORTAL &rarr;</a>
+              <a href="/login" class="cs_products_btn_primary" style="color:#023232;">LEARN MORE &rarr;</a>
               <a href="/contact" class="cs_btn cs_style_2 cs_bold cs_heading_color">PRODUCT ENQUIRY &rarr;</a>
             </div>
           </div>
@@ -255,7 +255,7 @@ export default function Page() {
               <li>Balanced</li>
             </ul>
             <div class="cs_pline_ctas">
-              <a href="/login" class="cs_products_btn_primary" style="color:#023232;">ORDER VIA PHARMACY PORTAL &rarr;</a>
+              <a href="/login" class="cs_products_btn_primary" style="color:#023232;">LEARN MORE &rarr;</a>
               <a href="/contact" class="cs_btn cs_style_2 cs_bold cs_heading_color">PRODUCT ENQUIRY &rarr;</a>
             </div>
           </div>
@@ -274,7 +274,7 @@ export default function Page() {
             <h2>PHARMACROP PASTILLES</h2>
             <p class="cs_pline_desc">The PharmaCrop portfolio includes a finished pastille formulation developed as part of its broader multi-dosage-form product range.</p>
             <div class="cs_pline_ctas">
-              <a href="/login" class="cs_products_btn_primary" style="color:#023232;">ORDER VIA PHARMACY PORTAL &rarr;</a>
+              <a href="/login" class="cs_products_btn_primary" style="color:#023232;">LEARN MORE &rarr;</a>
               <a href="/contact" class="cs_btn cs_style_2 cs_bold cs_heading_color">PRODUCT ENQUIRY &rarr;</a>
             </div>
           </div>
@@ -293,7 +293,7 @@ export default function Page() {
             <h2>PHARMACROP INHALED LIQUID RANGE</h2>
             <p class="cs_pline_desc">PharmaCrop&rsquo;s inhaled liquid portfolio expands the product range across an additional dosage form, with two finished products currently included in the portfolio.</p>
             <div class="cs_pline_ctas">
-              <a href="/login" class="cs_products_btn_primary" style="color:#023232;">ORDER VIA PHARMACY PORTAL &rarr;</a>
+              <a href="/login" class="cs_products_btn_primary" style="color:#023232;">LEARN MORE &rarr;</a>
               <a href="/contact" class="cs_btn cs_style_2 cs_bold cs_heading_color">PRODUCT ENQUIRY &rarr;</a>
             </div>
           </div>
