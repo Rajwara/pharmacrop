@@ -57,12 +57,6 @@ export default function Page() {
     </section>
     <!-- End Page Heading Sectoin -->
     <!-- Start Gallery Section -->
-    <style>
-      .cs_isotop.cs_style_1 .cs_gallery.cs_style_1 { height: 300px !important; }
-      @media (max-width: 575px) {
-        .cs_isotop.cs_style_1 .cs_gallery.cs_style_1 { height: 220px !important; }
-      }
-    </style>
       <div class="cs_height_100 cs_height_lg_70"></div>
       <div class="container">
         <div class="cs_isotop cs_style_1 cs_isotop_col_3 cs_has_gutter_24 cs_lightgallery">
