@@ -103,16 +103,16 @@ export default function Page() {
                 <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/pharmacrop%20home%20assets/Home%20Page-hero-1.webp"></div>
               </div>
               <div class="cs_slide">
-                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/pharmacrop%20home%20assets/Home%20Page-hero-2.webp"></div>
+                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/pharmacrop-bannerv2.webp"></div>
               </div>
               <div class="cs_slide">
                 <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/pharmacrop%20home%20assets/Home%20Page-hero-3.webp"></div>
               </div>
               <div class="cs_slide">
-                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/pharmacrop%20home%20assets/Home%20Page-hero-4.webp"></div>
+                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/pharmacrop-bannerv4.webp"></div>
               </div>
               <div class="cs_slide">
-                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/pharmacrop%20home%20assets/Home%20Page-hero-5.webp"></div>
+                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/pharmacrop-bannerv5.webp"></div>
               </div>
             </div>
           </div>
