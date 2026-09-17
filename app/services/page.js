@@ -308,8 +308,6 @@ export default function Page() {
       .cs_footer_v2_badge + .cs_footer_v2_badge::before { content: ""; position: absolute; left: 0; top: 4px; bottom: 4px; width: 1px; background: rgba(2, 66, 66, 0.15); }
       .cs_footer_v2_badge_img { width: 30px; height: 30px; object-fit: contain; flex: none; }
       .cs_footer_v2_badge_label { font-size: 11px; letter-spacing: 0.3px; text-transform: uppercase; color: rgba(2, 66, 66, 0.65); font-weight: 700; white-space: nowrap; }
-      .cs_footer_v2_tagline { display: flex; align-items: center; gap: 12px; color: rgba(2, 66, 66, 0.4); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; font-weight: 700; margin: 0; }
-      .cs_footer_v2_tagline::before { content: ""; width: 30px; height: 1px; background: rgba(2, 66, 66, 0.3); }
       @media (max-width: 991px) {
         .cs_footer_v2_row { grid-template-columns: repeat(2, 1fr); }
       }
@@ -390,9 +388,7 @@ export default function Page() {
               <img src="/assets/img/TGA-LICENSED.png" alt="TGA Licensed" class="cs_footer_v2_badge_img">
               <span class="cs_footer_v2_badge_label">TGA Licensed</span>
             </div>
-          </div>
-          <p class="cs_footer_v2_tagline">Bring Balance To Your Life</p>
-        </div>
+          </div>        </div>
       </div>
     </footer>
     <!-- End Footer Section -->
