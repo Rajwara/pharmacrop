@@ -267,7 +267,7 @@ export default function Page() {
       <div class="container">
         <div class="cs_pline_row">
           <div class="cs_pline_img wow fadeInLeft">
-            <img src="/assets/img/pharmacrop-banner4.webp" alt="PharmaCrop 20:20:20 Night Pastilles">
+            <img src="/assets/img/pharmacrop-banner4.webp" alt="PharmaCrop pastilles">
           </div>
           <div class="cs_pline_content wow fadeInRight">
             <span class="cs_pline_label">PASTILLES</span>
