@@ -182,7 +182,7 @@ export default function Page() {
               <div class="cs_sticky_card_body">
                 <h3 class="cs_sticky_card_title">Advanced Growing Systems</h3>
                 <p class="cs_sticky_card_text">Soilless cultivation with cultivar-specific nutrition programs, providing bespoke nutrient delivery for strong growth and consistent cannabinoid and terpene expression.</p>
-                <a href="/industry" class="cs_sticky_card_link">READ MORE <span>&rarr;</span></a>
+                <a href="/about" class="cs_sticky_card_link">READ MORE <span>&rarr;</span></a>
               </div>
             </div>
             <div class="cs_sticky_card">
@@ -469,13 +469,13 @@ export default function Page() {
       .cs_stats_eyebrow { display: inline-block; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 30px; padding: 6px 16px; font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #78dca6; margin-bottom: 24px; text-transform: uppercase; }
       .cs_stats_title { color: #fff; margin: 0 0 20px; }
       .cs_stats_desc { color: rgba(255, 255, 255, 0.7); font-size: 16px; line-height: 1.7; margin: 0; }
-      .cs_stats_grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; }
+      .cs_stats_grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
       .cs_stats_card { background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.14); border-radius: 16px; padding: 32px 24px; }
       .cs_stats_icon { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 8px; background: rgba(255, 255, 255, 0.12); color: #78dca6; font-size: 16px; margin-bottom: 24px; }
       .cs_stats_number { color: #fff; font-size: 32px; font-weight: 800; line-height: 1.2; margin: 0 0 8px; }
       .cs_stats_label { color: rgba(255, 255, 255, 0.65); font-size: 14px; line-height: 1.5; margin: 0; }
       @media (max-width: 1199px) {
-        .cs_stats_grid { grid-template-columns: repeat(3, 1fr); }
+        .cs_stats_grid { grid-template-columns: repeat(2, 1fr); }
       }
       @media (max-width: 575px) {
         .cs_stats_grid { grid-template-columns: 1fr; }
@@ -509,11 +509,6 @@ export default function Page() {
             <span class="cs_stats_icon"><i class="fa-solid fa-dna"></i></span>
             <h3 class="cs_stats_number">1,000+</h3>
             <p class="cs_stats_label">Candidate genetics evaluated</p>
-          </div>
-          <div class="cs_stats_card">
-            <span class="cs_stats_icon"><i class="fa-solid fa-flask"></i></span>
-            <h3 class="cs_stats_number">18</h3>
-            <p class="cs_stats_label">Finished products</p>
           </div>
         </div>
       </div>
