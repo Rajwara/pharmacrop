@@ -53,6 +53,10 @@ export default function Page() {
         .cs_hero.cs_style_1 .cs_hero_text { max-width: 750px !important; }
         .cs_hero.cs_style_1 .cs_hero_title.cs_fs_80 { font-size: 64px !important; }
       }
+      .cs_accred_bar { display: inline-flex; align-items: center; padding: 8px 6px; border: 1px solid rgba(255, 255, 255, 0.25); border-radius: 40px; background: rgba(255, 255, 255, 0.08); }
+      .cs_accred_bar_item { display: flex; align-items: center; padding: 0 12px; position: relative; }
+      .cs_accred_bar_item + .cs_accred_bar_item::before { content: ""; position: absolute; left: 0; top: 2px; bottom: 2px; width: 1px; background: rgba(255, 255, 255, 0.25); }
+      .cs_accred_bar_item img { width: 28px; height: 28px; object-fit: contain; flex: none; }
     </style>
     <!-- Start Hero Section -->
     <section class="cs_hero cs_style_1 cs_heading_bg cs_white_color">
@@ -70,10 +74,10 @@ export default function Page() {
             <div class="cs_hero_funfact">
               <h3 class="cs_fs_24 cs_bold cs_white_color mb-0">QUALITY &amp; COMPLIANCE</h3>
               <p class="cs_fs_20 cs_white_color cs_opacity_7_5 cs_mb_16">Australian-made. GMP-certified. TGA licensed.</p>
-              <div class="cs_circle_group">
-                <img src="/assets/img/AUSTRALIAN-MADE.png" alt="Australian Made">
-                <img src="/assets/img/GMP-CERTIFIED.png" alt="GMP Certified">
-                <img src="/assets/img/TGA-LICENSED.png" alt="TGA Licensed">
+              <div class="cs_accred_bar">
+                <span class="cs_accred_bar_item"><img src="/assets/img/AUSTRALIAN-MADE.png" alt="Australian Made"></span>
+                <span class="cs_accred_bar_item"><img src="/assets/img/GMP-CERTIFIED.png" alt="GMP Certified"></span>
+                <span class="cs_accred_bar_item"><img src="/assets/img/TGA-LICENSED.png" alt="TGA Licensed"></span>
               </div>
             </div>
           </div>
