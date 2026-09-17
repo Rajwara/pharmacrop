@@ -82,7 +82,7 @@ export default function Page() {
       .cs_auth_field input:focus, .cs_auth_field select:focus { border-color: #78dca6; }
       .cs_auth_field_toggle { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); color: #999; background: none; border: none; cursor: pointer; padding: 0; font-size: 15px; }
       .cs_auth_forgot { text-align: right; margin: -8px 0 24px; }
-      .cs_auth_forgot a { color: #024242; font-size: 13px; text-decoration: underline; }
+      .cs_auth_forgot span { color: #999; font-size: 13px; }
       .cs_auth_btn_primary { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; background: #024242; color: #fff; font-weight: 700; font-size: 14px; padding: 16px 20px; border-radius: 10px; text-decoration: none; box-sizing: border-box; transition: background-color 0.3s ease, transform 0.2s ease; }
       .cs_auth_btn_primary:hover { background: #78dca6; color: #024242; transform: translateY(-2px); }
       .cs_auth_divider { display: flex; align-items: center; gap: 14px; margin: 22px 0; }
@@ -177,7 +177,7 @@ export default function Page() {
               <input type="password" placeholder="Password" data-auth-password>
               <button type="button" class="cs_auth_field_toggle" data-auth-toggle aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
             </div>
-            <div class="cs_auth_forgot"><a href="/contact">Forgot password?</a></div>
+            <div class="cs_auth_forgot"><span>Forgot password?</span></div>
             <a href="/contact" class="cs_auth_btn_primary">
               Log In
               <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path></svg>
