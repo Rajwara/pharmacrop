@@ -106,8 +106,8 @@ export default function Page() {
       .cs_cult_proc_head h2 { color: #fff; font-size: 36px; font-weight: 800; line-height: 1.35; margin: 0 0 20px; }
       .cs_cult_proc_head p { color: rgba(255,255,255,0.65); font-size: 16px; line-height: 1.7; margin: 0; }
       .cs_cult_proc_timeline { position: relative; display: flex; justify-content: space-between; margin: 0 auto 50px; max-width: 1180px; }
-      .cs_cult_proc_track { position: absolute; top: 51px; left: 6%; right: 6%; height: 1px; background: rgba(255,255,255,0.15); z-index: 0; }
-      .cs_cult_proc_track_fill { position: absolute; top: 0; left: 0; height: 100%; width: 0%; background: linear-gradient(90deg, #78dca6, rgba(120,220,166,0.2)); transition: width 1.6s cubic-bezier(0.22, 1, 0.36, 1); }
+      .cs_cult_proc_track { position: absolute; top: 51px; left: 0; width: 0; height: 2px; background: rgba(255,255,255,0.15); z-index: 0; }
+      .cs_cult_proc_track_fill { position: absolute; top: 0; left: 0; height: 100%; width: 0%; background: linear-gradient(90deg, #78dca6, #78dca6); box-shadow: 0 0 10px rgba(120,220,166,0.7); transition: width 1.6s cubic-bezier(0.22, 1, 0.36, 1); }
       .cs_cult_proc_step { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 16px; opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
       .cs_cult_proc_step.cs_in { opacity: 1; transform: translateY(0); }
       .cs_cult_proc_step:nth-child(2) { transition-delay: 0.12s; }
@@ -1408,10 +1408,25 @@ export default function Page() {
         (function () {
           var section = document.getElementById('cs_cult_proc');
           if (!section) return;
+          var timeline = document.getElementById('cs_cult_proc_timeline');
+          var track = section.querySelector('.cs_cult_proc_track');
           var steps = section.querySelectorAll('.cs_cult_proc_step');
           var fill = document.getElementById('cs_cult_proc_track_fill');
           var icons = section.querySelectorAll('.cs_cult_proc_icon');
           var cycleTimer = null;
+
+          function positionTrack() {
+            if (!track || window.innerWidth <= 991 || icons.length < 2) return;
+            var timelineRect = timeline.getBoundingClientRect();
+            var firstRect = icons[0].getBoundingClientRect();
+            var lastRect = icons[icons.length - 1].getBoundingClientRect();
+            var left = (firstRect.left + firstRect.width / 2) - timelineRect.left;
+            var right = (lastRect.left + lastRect.width / 2) - timelineRect.left;
+            var top = (firstRect.top + firstRect.height / 2) - timelineRect.top;
+            track.style.left = left + 'px';
+            track.style.width = (right - left) + 'px';
+            track.style.top = top + 'px';
+          }
 
           function startCycle() {
             if (cycleTimer) return;
@@ -1424,9 +1439,14 @@ export default function Page() {
             }, 2200);
           }
 
+          positionTrack();
+          window.addEventListener('resize', positionTrack);
+          window.addEventListener('load', positionTrack);
+
           var observer = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
               if (entry.isIntersecting) {
+                positionTrack();
                 steps.forEach(function (step) { step.classList.add('cs_in'); });
                 if (fill) fill.style.width = '100%';
                 startCycle();
