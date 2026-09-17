@@ -6022,22 +6022,28 @@ hr {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--white-color);
-  color: var(--heading-color);
-  font-weight: 700;
-  font-size: 13px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  padding: 12px 28px;
-  border-radius: 8px;
+  width: 42px;
+  height: 42px;
+  flex: none;
+  background-color: var(--heading-color);
+  color: #fff;
+  font-size: 15px;
+  border-radius: 50%;
   text-decoration: none;
-  white-space: nowrap;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 .cs_header_cta_btn:hover {
   background-color: var(--accent-mint);
   color: var(--heading-color);
   transform: translateY(-2px);
+}
+.cs_sticky_active .cs_header_cta_btn {
+  background-color: var(--accent-mint);
+  color: var(--heading-color);
+}
+.cs_sticky_active .cs_header_cta_btn:hover {
+  background-color: #fff;
+  color: var(--heading-color);
 }
 
 /* Unified button design system: every solid/outline CTA button site-wide
@@ -6094,7 +6100,8 @@ hr {
   font-size: 13px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  padding: 11px 25px;
+  padding: 13px 40px;
+  min-width: 190px;
   border-radius: 8px;
   text-decoration: none;
   white-space: nowrap;
@@ -6104,6 +6111,8 @@ hr {
 @media (max-width: 575px) {
   .cs_header_login_btn {
     margin-left: 0;
+    min-width: 0;
+    padding: 12px 22px;
   }
 }
 .cs_header_login_btn:hover {
@@ -6111,5 +6120,15 @@ hr {
   border-color: var(--accent-mint);
   color: var(--heading-color);
   transform: translateY(-2px);
+}
+.cs_sticky_active .cs_header_login_btn {
+  background-color: var(--accent-mint);
+  border-color: var(--accent-mint);
+  color: var(--heading-color);
+}
+.cs_sticky_active .cs_header_login_btn:hover {
+  background-color: #fff;
+  border-color: #fff;
+  color: var(--heading-color);
 }
 /*# sourceMappingURL=style.css.map */
