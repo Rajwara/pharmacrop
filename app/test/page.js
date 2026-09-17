@@ -93,6 +93,173 @@ export default function Page() {
       </div>
     </section>
     <!-- End Rotating Hero Banner -->
+    <!-- Start Cultivation Program List Section -->
+    <style>
+      .cs_cult_list_section { padding: 100px 0; background: #0d1712; }
+      .cs_cult_list_head { text-align: center; max-width: 720px; margin: 0 auto 60px; }
+      .cs_cult_list_eyebrow { color: #78dca6; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 16px; }
+      .cs_cult_list_head h2 { color: #fff; font-size: 34px; font-weight: 800; line-height: 1.4; margin: 0 0 20px; }
+      .cs_cult_list_head p { color: rgba(255,255,255,0.65); font-size: 15px; line-height: 1.7; margin: 0; }
+      .cs_cult_list_row { display: flex; align-items: center; gap: 40px; padding: 32px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+      .cs_cult_list_row:first-of-type { border-top: 1px solid rgba(255,255,255,0.1); }
+      .cs_cult_list_img { flex: 0 0 200px; height: 130px; border-radius: 10px; overflow: hidden; }
+      .cs_cult_list_img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .cs_cult_list_body { flex: 1; }
+      .cs_cult_list_num { color: #78dca6; font-size: 13px; font-weight: 700; letter-spacing: 1px; display: block; margin-bottom: 8px; text-transform: uppercase; }
+      .cs_cult_list_title { color: #fff; font-size: 22px; font-weight: 700; margin: 0 0 10px; }
+      .cs_cult_list_text { color: rgba(255,255,255,0.6); font-size: 14px; line-height: 1.6; max-width: 460px; margin: 0; }
+      .cs_cult_list_btns { flex: 0 0 auto; display: flex; flex-direction: column; gap: 10px; }
+      .cs_cult_list_btn { display: inline-flex; align-items: center; justify-content: center; padding: 10px 22px; border-radius: 30px; font-size: 12px; font-weight: 700; letter-spacing: 0.5px; text-decoration: none; white-space: nowrap; }
+      .cs_cult_list_btn.cs_solid { background: #78dca6; color: #024242; }
+      .cs_cult_list_btn.cs_outline { border: 1px solid rgba(255,255,255,0.3); color: #fff; }
+      @media (max-width: 767px) {
+        .cs_cult_list_row { flex-direction: column; align-items: flex-start; gap: 20px; }
+        .cs_cult_list_img { width: 100%; flex-basis: auto; height: 180px; }
+        .cs_cult_list_btns { flex-direction: row; }
+      }
+    </style>
+    <section class="cs_cult_list_section">
+      <div class="container">
+        <div class="cs_cult_list_head">
+          <span class="cs_cult_list_eyebrow">Our Cultivation Program</span>
+          <h2>From Thousands Of Possibilities To The Ones That Make The Cut.</h2>
+          <p>PharmaCrop's cultivation program combines genetic diversity, rigorous selection and controlled growing to identify cultivars suited to consistent Australian production.</p>
+        </div>
+        <div class="cs_cult_list_row">
+          <div class="cs_cult_list_img"><img src="/assets/img/Genetics.webp" alt="Genetics evaluated"></div>
+          <div class="cs_cult_list_body">
+            <span class="cs_cult_list_num">01 &mdash; Genetics Evaluated</span>
+            <h3 class="cs_cult_list_title">1,000+</h3>
+            <p class="cs_cult_list_text">A broad starting pool gives our cultivation team the depth to search for differentiated genetics.</p>
+          </div>
+          <div class="cs_cult_list_btns">
+            <a href="/industry" class="cs_cult_list_btn cs_solid">Learn More</a>
+            <a href="/contact" class="cs_cult_list_btn cs_outline">Enquire Now</a>
+          </div>
+        </div>
+        <div class="cs_cult_list_row">
+          <div class="cs_cult_list_img"><img src="/assets/img/Controlled Cultivation.webp" alt="Phenohunting"></div>
+          <div class="cs_cult_list_body">
+            <span class="cs_cult_list_num">02 &mdash; Selecting For Quality</span>
+            <h3 class="cs_cult_list_title">Phenohunting</h3>
+            <p class="cs_cult_list_text">Genetics are cultivated and assessed to identify standout characteristics and production potential.</p>
+          </div>
+          <div class="cs_cult_list_btns">
+            <a href="/industry" class="cs_cult_list_btn cs_solid">Learn More</a>
+            <a href="/contact" class="cs_cult_list_btn cs_outline">Enquire Now</a>
+          </div>
+        </div>
+        <div class="cs_cult_list_row">
+          <div class="cs_cult_list_img"><img src="/assets/img/Advanced Growing Systems.webp" alt="Elite selections"></div>
+          <div class="cs_cult_list_body">
+            <span class="cs_cult_list_num">03 &mdash; Only The Strongest Progress</span>
+            <h3 class="cs_cult_list_title">Elite Selections</h3>
+            <p class="cs_cult_list_text">Promising selections move forward for further evaluation and cultivation at scale.</p>
+          </div>
+          <div class="cs_cult_list_btns">
+            <a href="/industry" class="cs_cult_list_btn cs_solid">Learn More</a>
+            <a href="/contact" class="cs_cult_list_btn cs_outline">Enquire Now</a>
+          </div>
+        </div>
+        <div class="cs_cult_list_row">
+          <div class="cs_cult_list_img"><img src="/assets/img/Cultivation.webp" alt="Continuous development"></div>
+          <div class="cs_cult_list_body">
+            <span class="cs_cult_list_num">04 &mdash; The Pipeline Keeps Growing</span>
+            <h3 class="cs_cult_list_title">Continuous Development</h3>
+            <p class="cs_cult_list_text">Ongoing selection continues to expand the future opportunities available from our Australian cultivation program.</p>
+          </div>
+          <div class="cs_cult_list_btns">
+            <a href="/industry" class="cs_cult_list_btn cs_solid">Learn More</a>
+            <a href="/contact" class="cs_cult_list_btn cs_outline">Enquire Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Cultivation Program List Section -->
+    <!-- Start Cultivation Program Split Section -->
+    <style>
+      .cs_cult_split_section { padding: 100px 0; background: #fff; }
+      .cs_cult_split_pill { display: inline-flex; align-items: center; gap: 8px; border: 1px solid #d6ded8; border-radius: 30px; padding: 8px 18px; font-size: 13px; font-weight: 600; color: #1f2419; margin-bottom: 24px; }
+      .cs_cult_split_pill i { color: #024242; }
+      .cs_cult_split_head { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; flex-wrap: wrap; margin-bottom: 50px; }
+      .cs_cult_split_head h2 { font-size: 38px; font-weight: 800; color: #024242; line-height: 1.3; margin: 0; max-width: 620px; }
+      .cs_cult_split_head p { color: #666; font-size: 15px; line-height: 1.7; max-width: 400px; margin: 12px 0 0; }
+      .cs_cult_split_grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; }
+      .cs_cult_split_img { border-radius: 20px; overflow: hidden; min-height: 560px; }
+      .cs_cult_split_img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .cs_cult_split_cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+      .cs_cult_split_card { border-radius: 20px; padding: 32px; display: flex; flex-direction: column; gap: 20px; }
+      .cs_cult_split_card.cs_light { background: #f4f6f4; }
+      .cs_cult_split_card.cs_dark { background: #0d0f0d; }
+      .cs_cult_split_card.cs_brand { background: #024242; }
+      .cs_cult_split_card_thumb { width: 64px; height: 64px; border-radius: 12px; overflow: hidden; flex: none; }
+      .cs_cult_split_card_thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .cs_cult_split_card h3 { font-size: 19px; font-weight: 700; margin: 6px 0 10px; }
+      .cs_cult_split_card p { font-size: 14px; line-height: 1.6; margin: 0; }
+      .cs_cult_split_num { display: block; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+      .cs_cult_split_card.cs_light .cs_cult_split_num { color: #024242; opacity: 0.55; }
+      .cs_cult_split_card.cs_light h3 { color: #024242; }
+      .cs_cult_split_card.cs_light p { color: #666; }
+      .cs_cult_split_card.cs_dark .cs_cult_split_num,
+      .cs_cult_split_card.cs_brand .cs_cult_split_num { color: #78dca6; }
+      .cs_cult_split_card.cs_dark h3, .cs_cult_split_card.cs_brand h3 { color: #fff; }
+      .cs_cult_split_card.cs_dark p, .cs_cult_split_card.cs_brand p { color: rgba(255,255,255,0.7); }
+      @media (max-width: 991px) {
+        .cs_cult_split_grid { grid-template-columns: 1fr; }
+        .cs_cult_split_img { min-height: 320px; }
+        .cs_cult_split_head h2 { font-size: 28px; }
+      }
+      @media (max-width: 575px) {
+        .cs_cult_split_cards { grid-template-columns: 1fr; }
+      }
+    </style>
+    <section class="cs_cult_split_section">
+      <div class="container">
+        <span class="cs_cult_split_pill"><i class="fa-solid fa-seedling"></i> Our Cultivation Program</span>
+        <div class="cs_cult_split_head">
+          <h2>From Thousands Of Possibilities To The Ones That Make The Cut.</h2>
+          <p>PharmaCrop's cultivation program combines genetic diversity, rigorous selection and controlled growing to identify cultivars suited to consistent Australian production.</p>
+        </div>
+        <div class="cs_cult_split_grid">
+          <div class="cs_cult_split_img"><img src="/assets/img/Cultivation.webp" alt="PharmaCrop cultivation greenhouse"></div>
+          <div class="cs_cult_split_cards">
+            <div class="cs_cult_split_card cs_light">
+              <div class="cs_cult_split_card_thumb"><img src="/assets/img/Genetics.webp" alt=""></div>
+              <div>
+                <span class="cs_cult_split_num">Genetics Evaluated</span>
+                <h3>1,000+</h3>
+                <p>A broad starting pool gives our cultivation team the depth to search for differentiated genetics.</p>
+              </div>
+            </div>
+            <div class="cs_cult_split_card cs_dark">
+              <div class="cs_cult_split_card_thumb"><img src="/assets/img/Controlled Cultivation.webp" alt=""></div>
+              <div>
+                <span class="cs_cult_split_num">Selecting For Quality</span>
+                <h3>Phenohunting</h3>
+                <p>Genetics are cultivated and assessed to identify standout characteristics and production potential.</p>
+              </div>
+            </div>
+            <div class="cs_cult_split_card cs_brand">
+              <div class="cs_cult_split_card_thumb"><img src="/assets/img/Advanced Growing Systems.webp" alt=""></div>
+              <div>
+                <span class="cs_cult_split_num">Only The Strongest Progress</span>
+                <h3>Elite Selections</h3>
+                <p>Promising selections move forward for further evaluation and cultivation at scale.</p>
+              </div>
+            </div>
+            <div class="cs_cult_split_card cs_light">
+              <div class="cs_cult_split_card_thumb"><img src="/assets/img/pharmacrop-bannerv2.webp" alt=""></div>
+              <div>
+                <span class="cs_cult_split_num">The Pipeline Keeps Growing</span>
+                <h3>Continuous Development</h3>
+                <p>Ongoing selection continues to expand the future opportunities available from our Australian cultivation program.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Cultivation Program Split Section -->
     <!-- Start What We Offer Section -->
     <style>
       .cs_offer_section { padding: 100px 0; background: #f7f7f5; }
