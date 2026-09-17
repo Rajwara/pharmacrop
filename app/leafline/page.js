@@ -33,7 +33,7 @@ export default function Page() {
                     <li><a href="/products">Products</a></li>
                     <li><a href="/partnerships">Partnerships</a></li>
                     <li><a href="/careers">Careers</a></li>
-                    <li><a href="/our-facilities">Our Facilities</a></li>
+                    <li><a href="/our-facilities">Our Facility</a></li>
                   </ul>
                 </nav>
               </div>
@@ -289,7 +289,7 @@ export default function Page() {
     <section class="cs_leaf_facilities">
       <div class="container">
         <div class="cs_leaf_facilities_head wow fadeInUp">
-          <span>Our Facilities</span>
+          <span>Our Facility</span>
           <h2>One Site. Every Stage.</h2>
         </div>
         <div class="cs_leaf_facilities_grid">
@@ -618,7 +618,7 @@ export default function Page() {
               <li><a href="/partnerships">Partnerships</a></li>
               <li><a href="/blog">Blog</a></li>
               <li><a href="/faq">FAQ</a></li>
-              <li><a href="/our-facilities">Our Facilities</a></li>
+              <li><a href="/our-facilities">Our Facility</a></li>
             </ul>
           </div>
           <div>

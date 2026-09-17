@@ -30,7 +30,7 @@ export default function Page() {
                     <li><a href="/products">Products</a></li>
                     <li><a href="/partnerships">Partnerships</a></li>
                     <li><a href="/careers">Careers</a></li>
-                    <li><a href="/our-facilities">Our Facilities</a></li>
+                    <li><a href="/our-facilities">Our Facility</a></li>
                   </ul>
                 </nav>
               </div>
@@ -490,7 +490,7 @@ export default function Page() {
               <li><a href="/partnerships">Partnerships</a></li>
               <li><a href="/blog">Blog</a></li>
               <li><a href="/faq">FAQ</a></li>
-              <li><a href="/our-facilities">Our Facilities</a></li>
+              <li><a href="/our-facilities">Our Facility</a></li>
             </ul>
           </div>
           <div>
