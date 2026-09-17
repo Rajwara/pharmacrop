@@ -402,7 +402,7 @@ export default function Page() {
           </div>
           <div class="cs_platform_items">
             <div class="cs_platform_item active" data-index="0">
-              <div class="cs_platform_item_img"><img src="/assets/img/pharmacrop%20home%20assets/Home%20Page-%20Integrated%20Platform-1.webp" alt="Genetics"></div>
+              <div class="cs_platform_item_img"><img src="/assets/img/Geneticsv2.webp" alt="Genetics"></div>
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-dna"></i></span>
                 <h3>Genetics</h3>
@@ -410,7 +410,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_platform_item" data-index="1">
-              <div class="cs_platform_item_img"><img src="/assets/img/pharmacrop%20home%20assets/Home%20Page-%20Integrated%20Platform-2.webp" alt="Cultivation"></div>
+              <div class="cs_platform_item_img"><img src="/assets/img/Cultivationv2.webp" alt="Cultivation"></div>
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-seedling"></i></span>
                 <h3>Cultivation</h3>
@@ -426,7 +426,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_platform_item" data-index="3">
-              <div class="cs_platform_item_img"><img src="/assets/img/pharmacrop%20home%20assets/Home%20Page-%20Integrated%20Platform-3.webp" alt="Quality &amp; Release"></div>
+              <div class="cs_platform_item_img"><img src="/assets/img/Quality%20%26%20Releasev2.webp" alt="Quality &amp; Release"></div>
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-shield-halved"></i></span>
                 <h3>Quality &amp; Release</h3>
@@ -434,7 +434,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_platform_item" data-index="4">
-              <div class="cs_platform_item_img"><img src="/assets/img/pharmacrop%20home%20assets/Home%20Page-%20Integrated%20Platform-4.webp" alt="Research &amp; Innovation"></div>
+              <div class="cs_platform_item_img"><img src="/assets/img/Research%20%26%20Innovationv2.webp" alt="Research &amp; Innovation"></div>
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-microscope"></i></span>
                 <h3>Research &amp; Innovation</h3>
@@ -450,7 +450,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_platform_item" data-index="6">
-              <div class="cs_platform_item_img"><img src="/assets/img/pharmacrop%20home%20assets/Home%20Page-%20Integrated%20Platform-6.webp" alt="Global Export"></div>
+              <div class="cs_platform_item_img"><img src="/assets/img/Global%20Exportv2.webp" alt="Global Export"></div>
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-globe"></i></span>
                 <h3>Global Export</h3>
