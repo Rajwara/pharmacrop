@@ -471,7 +471,8 @@ export default function Page() {
               <img src="/assets/img/TGA-LICENSED.png" alt="TGA Licensed" class="cs_footer_v2_badge_img">
               <span class="cs_footer_v2_badge_label">TGA Licensed</span>
             </div>
-          </div>        </div>
+          </div>
+        </div>
       </div>
     </footer>
     <!-- End Footer Section -->
