@@ -93,6 +93,129 @@ export default function Page() {
       </div>
     </section>
     <!-- End Rotating Hero Banner -->
+    <!-- Start Cultivation Program Timeline Section -->
+    <style>
+      .cs_cult_proc_section { position: relative; padding: 110px 0; background: #04150f; overflow: hidden; }
+      .cs_cult_proc_glow_1 { position: absolute; top: -120px; left: -120px; width: 360px; height: 360px; border-radius: 50%; background: radial-gradient(circle, rgba(120,220,166,0.16) 0%, rgba(120,220,166,0) 70%); pointer-events: none; }
+      .cs_cult_proc_glow_2 { position: absolute; bottom: -140px; right: -100px; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(circle, rgba(120,220,166,0.12) 0%, rgba(120,220,166,0) 70%); pointer-events: none; }
+      .cs_cult_proc_container { position: relative; z-index: 1; }
+      .cs_cult_proc_head { max-width: 780px; margin: 0 auto 60px; text-align: center; }
+      .cs_cult_proc_eyebrow_row { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 22px; }
+      .cs_cult_proc_eyebrow_row span.cs_line { width: 40px; height: 1px; background: rgba(120,220,166,0.4); }
+      .cs_cult_proc_eyebrow { color: #78dca6; font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; }
+      .cs_cult_proc_head h2 { color: #fff; font-size: 36px; font-weight: 800; line-height: 1.35; margin: 0 0 20px; }
+      .cs_cult_proc_head p { color: rgba(255,255,255,0.65); font-size: 16px; line-height: 1.7; margin: 0; }
+      .cs_cult_proc_timeline { position: relative; display: flex; justify-content: space-between; margin: 0 auto 50px; max-width: 1180px; }
+      .cs_cult_proc_track { position: absolute; top: 51px; left: 6%; right: 6%; height: 1px; background: rgba(255,255,255,0.15); z-index: 0; }
+      .cs_cult_proc_track_fill { position: absolute; top: 0; left: 0; height: 100%; width: 0%; background: linear-gradient(90deg, #78dca6, rgba(120,220,166,0.2)); transition: width 1.6s cubic-bezier(0.22, 1, 0.36, 1); }
+      .cs_cult_proc_step { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 16px; opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+      .cs_cult_proc_step.cs_in { opacity: 1; transform: translateY(0); }
+      .cs_cult_proc_step:nth-child(2) { transition-delay: 0.12s; }
+      .cs_cult_proc_step:nth-child(3) { transition-delay: 0.24s; }
+      .cs_cult_proc_step:nth-child(4) { transition-delay: 0.36s; }
+      .cs_cult_proc_num { color: rgba(255,255,255,0.5); font-size: 13px; font-weight: 700; letter-spacing: 1px; margin-bottom: 14px; }
+      .cs_cult_proc_icon { width: 64px; height: 64px; border-radius: 50%; border: 1px solid rgba(120,220,166,0.4); background: rgba(120,220,166,0.08); color: #78dca6; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 20px; transition: box-shadow 0.6s ease, background-color 0.6s ease, transform 0.6s ease; }
+      .cs_cult_proc_icon.cs_active { background: rgba(120,220,166,0.18); box-shadow: 0 0 0 8px rgba(120,220,166,0.12), 0 0 30px rgba(120,220,166,0.5); transform: scale(1.08); }
+      .cs_cult_proc_step h3 { color: #fff; font-size: 20px; font-weight: 700; margin: 0 0 8px; }
+      .cs_cult_proc_step_label { display: block; color: #78dca6; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px; }
+      .cs_cult_proc_step p { color: rgba(255,255,255,0.6); font-size: 14px; line-height: 1.6; margin: 0; max-width: 240px; }
+      .cs_cult_proc_footer_row { display: flex; align-items: stretch; justify-content: center; gap: 0; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); margin-bottom: 44px; }
+      .cs_cult_proc_footer_item { display: flex; align-items: flex-start; gap: 14px; padding: 0 40px; position: relative; flex: 1; max-width: 360px; }
+      .cs_cult_proc_footer_item + .cs_cult_proc_footer_item::before { content: ""; position: absolute; left: 0; top: 4px; bottom: 4px; width: 1px; background: rgba(255,255,255,0.15); }
+      .cs_cult_proc_footer_icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(120,220,166,0.12); color: #78dca6; display: flex; align-items: center; justify-content: center; font-size: 15px; flex: none; }
+      .cs_cult_proc_footer_item h4 { color: #fff; font-size: 15px; font-weight: 700; margin: 0 0 6px; }
+      .cs_cult_proc_footer_item p { color: rgba(255,255,255,0.55); font-size: 13px; line-height: 1.5; margin: 0; }
+      .cs_cult_proc_cta_row { display: flex; align-items: center; justify-content: center; gap: 28px; flex-wrap: wrap; }
+      .cs_cult_proc_cta_btn { display: inline-flex; align-items: center; gap: 10px; background: #78dca6; color: #024242; font-weight: 700; font-size: 13px; letter-spacing: 0.5px; padding: 16px 28px; border-radius: 8px; text-decoration: none; transition: transform 0.2s ease; }
+      .cs_cult_proc_cta_btn:hover { transform: translateY(-2px); }
+      .cs_cult_proc_cta_link { color: #fff; font-weight: 700; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+      @media (max-width: 991px) {
+        .cs_cult_proc_timeline { flex-wrap: wrap; row-gap: 40px; }
+        .cs_cult_proc_step { flex: 0 0 50%; }
+        .cs_cult_proc_track { display: none; }
+        .cs_cult_proc_footer_row { flex-direction: column; gap: 24px; border-top: none; }
+        .cs_cult_proc_footer_item { max-width: none; padding: 0; }
+        .cs_cult_proc_footer_item + .cs_cult_proc_footer_item::before { display: none; }
+      }
+      @media (max-width: 575px) {
+        .cs_cult_proc_head h2 { font-size: 26px; }
+        .cs_cult_proc_step { flex: 0 0 100%; }
+      }
+    </style>
+    <section class="cs_cult_proc_section" id="cs_cult_proc">
+      <div class="cs_cult_proc_glow_1"></div>
+      <div class="cs_cult_proc_glow_2"></div>
+      <div class="container cs_cult_proc_container">
+        <div class="cs_cult_proc_head">
+          <div class="cs_cult_proc_eyebrow_row">
+            <span class="cs_line"></span>
+            <span class="cs_cult_proc_eyebrow">Our Cultivation Program</span>
+            <span class="cs_line"></span>
+          </div>
+          <h2>From Thousands Of Possibilities To The Ones That Make The Cut.</h2>
+          <p>A rigorous cultivation and selection pipeline, designed to identify exceptional genetics and unlock their full potential for real-world impact.</p>
+        </div>
+        <div class="cs_cult_proc_timeline" id="cs_cult_proc_timeline">
+          <div class="cs_cult_proc_track"><div class="cs_cult_proc_track_fill" id="cs_cult_proc_track_fill"></div></div>
+          <div class="cs_cult_proc_step">
+            <span class="cs_cult_proc_num">01</span>
+            <span class="cs_cult_proc_icon"><i class="fa-solid fa-seedling"></i></span>
+            <h3>1,000+</h3>
+            <span class="cs_cult_proc_step_label">Genetics Evaluated</span>
+            <p>We assess a broad genetic library for quality, stability and potential.</p>
+          </div>
+          <div class="cs_cult_proc_step">
+            <span class="cs_cult_proc_num">02</span>
+            <span class="cs_cult_proc_icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <h3>Phenohunting</h3>
+            <span class="cs_cult_proc_step_label">Selecting For Quality</span>
+            <p>We screen phenotypes and identify the most promising traits.</p>
+          </div>
+          <div class="cs_cult_proc_step">
+            <span class="cs_cult_proc_num">03</span>
+            <span class="cs_cult_proc_icon"><i class="fa-solid fa-star"></i></span>
+            <h3>Elite Selections</h3>
+            <span class="cs_cult_proc_step_label">Only The Strongest Progress</span>
+            <p>We advance only the highest-performing selections.</p>
+          </div>
+          <div class="cs_cult_proc_step">
+            <span class="cs_cult_proc_num">04</span>
+            <span class="cs_cult_proc_icon"><i class="fa-solid fa-leaf"></i></span>
+            <h3>Continuous Development</h3>
+            <span class="cs_cult_proc_step_label">The Pipeline Keeps Growing</span>
+            <p>We refine, trial and expand our pipeline for what&rsquo;s next.</p>
+          </div>
+        </div>
+        <div class="cs_cult_proc_footer_row">
+          <div class="cs_cult_proc_footer_item">
+            <span class="cs_cult_proc_footer_icon"><i class="fa-solid fa-shield-halved"></i></span>
+            <div>
+              <h4>Consistency</h4>
+              <p>Reliable quality from seed to supply.</p>
+            </div>
+          </div>
+          <div class="cs_cult_proc_footer_item">
+            <span class="cs_cult_proc_footer_icon"><i class="fa-solid fa-location-dot"></i></span>
+            <div>
+              <h4>Provenance</h4>
+              <p>Transparent origins and traceability.</p>
+            </div>
+          </div>
+          <div class="cs_cult_proc_footer_item">
+            <span class="cs_cult_proc_footer_icon"><i class="fa-solid fa-chart-column"></i></span>
+            <div>
+              <h4>An expanding portfolio</h4>
+              <p>More high-potential genetics, for a healthier tomorrow.</p>
+            </div>
+          </div>
+        </div>
+        <div class="cs_cult_proc_cta_row">
+          <a href="/products" class="cs_cult_proc_cta_btn">EXPLORE OUR CURRENT SELECTIONS <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="/partnerships" class="cs_cult_proc_cta_link">Partner with us <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+    <!-- End Cultivation Program Timeline Section -->
     <!-- Start Cultivation Program List Section -->
     <style>
       .cs_cult_list_section { padding: 100px 0; background: #0d1712; }
@@ -1277,6 +1400,41 @@ export default function Page() {
               el.style.opacity = 1;
             }, 400);
           }, 2500);
+        })();
+      `}
+    </Script>
+    <Script id="cs_cult_proc_script" strategy="afterInteractive">
+      {`
+        (function () {
+          var section = document.getElementById('cs_cult_proc');
+          if (!section) return;
+          var steps = section.querySelectorAll('.cs_cult_proc_step');
+          var fill = document.getElementById('cs_cult_proc_track_fill');
+          var icons = section.querySelectorAll('.cs_cult_proc_icon');
+          var cycleTimer = null;
+
+          function startCycle() {
+            if (cycleTimer) return;
+            var i = 2;
+            icons[i].classList.add('cs_active');
+            cycleTimer = setInterval(function () {
+              icons.forEach(function (icon) { icon.classList.remove('cs_active'); });
+              i = (i + 1) % icons.length;
+              icons[i].classList.add('cs_active');
+            }, 2200);
+          }
+
+          var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                steps.forEach(function (step) { step.classList.add('cs_in'); });
+                if (fill) fill.style.width = '100%';
+                startCycle();
+                observer.disconnect();
+              }
+            });
+          }, { threshold: 0.35 });
+          observer.observe(section);
         })();
       `}
     </Script>
