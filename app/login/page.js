@@ -88,7 +88,7 @@ export default function Page() {
             <div class="cs_portal_icon"><i class="fa-solid fa-user-doctor"></i></div>
             <h3>Doctor</h3>
             <p>Review product information and manage patient prescribing pathways.</p>
-            <a href="/contact" class="cs_portal_btn">
+            <a href="/register" class="cs_portal_btn">
               Login as Doctor
               <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
@@ -99,7 +99,7 @@ export default function Page() {
             <div class="cs_portal_icon"><i class="fa-solid fa-mortar-pestle"></i></div>
             <h3>Pharmacist</h3>
             <p>Order products, track supply and manage your pharmacy account.</p>
-            <a href="/contact" class="cs_portal_btn">
+            <a href="/register" class="cs_portal_btn">
               Login as Pharmacist
               <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
