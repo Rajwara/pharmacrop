@@ -194,12 +194,12 @@ export default function Page() {
       .cs_trust_strip_bar { display: inline-flex; align-items: center; padding: 14px 10px; border: 1px solid rgba(2, 66, 66, 0.15); border-radius: 50px; background: #fff; flex-wrap: wrap; justify-content: center; }
       .cs_trust_strip_item { display: flex; align-items: center; gap: 12px; padding: 0 28px; position: relative; }
       .cs_trust_strip_item + .cs_trust_strip_item::before { content: ""; position: absolute; left: 0; top: 4px; bottom: 4px; width: 1px; background: rgba(2, 66, 66, 0.15); }
-      .cs_trust_strip_item img { width: 44px; height: 44px; object-fit: contain; flex: none; }
+      .cs_trust_strip_item img { width: 60px; height: 60px; object-fit: contain; flex: none; }
       .cs_trust_strip_item span { color: #024242; font-size: 13px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; white-space: nowrap; }
       @media (max-width: 767px) {
         .cs_trust_strip_bar { padding: 10px 6px; }
         .cs_trust_strip_item { padding: 0 14px; gap: 8px; }
-        .cs_trust_strip_item img { width: 32px; height: 32px; }
+        .cs_trust_strip_item img { width: 40px; height: 40px; }
         .cs_trust_strip_item span { font-size: 11px; }
       }
     </style>
@@ -240,7 +240,7 @@ export default function Page() {
       .cs_footer_v2_badges { display: inline-flex; align-items: center; padding: 8px 6px; border: 1px solid rgba(2, 66, 66, 0.15); border-radius: 40px; background: #fff; }
       .cs_footer_v2_badge { display: flex; align-items: center; gap: 10px; padding: 0 18px; position: relative; }
       .cs_footer_v2_badge + .cs_footer_v2_badge::before { content: ""; position: absolute; left: 0; top: 4px; bottom: 4px; width: 1px; background: rgba(2, 66, 66, 0.15); }
-      .cs_footer_v2_badge_img { width: 30px; height: 30px; object-fit: contain; flex: none; }
+      .cs_footer_v2_badge_img { width: 42px; height: 42px; object-fit: contain; flex: none; }
       .cs_footer_v2_badge_label { font-size: 11px; letter-spacing: 0.3px; text-transform: uppercase; color: rgba(2, 66, 66, 0.65); font-weight: 700; white-space: nowrap; }
       @media (max-width: 991px) {
         .cs_footer_v2_row { grid-template-columns: repeat(2, 1fr); }
@@ -249,7 +249,7 @@ export default function Page() {
         .cs_footer_v2_row { grid-template-columns: 1fr; }
         .cs_footer_v2_bottom { flex-direction: column; align-items: flex-start; }
         .cs_footer_v2_badge { padding: 0 12px; gap: 7px; }
-        .cs_footer_v2_badge_img { width: 24px; height: 24px; }
+        .cs_footer_v2_badge_img { width: 32px; height: 32px; }
         .cs_footer_v2_badge_label { font-size: 10px; }
       }
     </style>
