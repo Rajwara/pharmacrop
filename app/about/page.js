@@ -226,7 +226,7 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp" data-wow-delay="0.2s">
-            <div class="cs_team_photo"><img src="/assets/img/johanna-faccini-placeholder.png" alt="Johanna Faccini"></div>
+            <div class="cs_team_photo"><img src="/assets/img/Johanna%20Faccini.webp" alt="Johanna Faccini"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">Johanna Faccini</h3>
               <p class="cs_team_title">Marketing Director</p>
@@ -236,7 +236,7 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp">
-            <div class="cs_team_photo"><img src="/assets/img/suzanne-roberts-placeholder.png" alt="Suzanne Roberts"></div>
+            <div class="cs_team_photo"><img src="/assets/img/Suzanne%20Roberts.webp" alt="Suzanne Roberts"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">Suzanne Roberts</h3>
               <p class="cs_team_title">Sales Director</p>
@@ -246,7 +246,7 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp" data-wow-delay="0.1s">
-            <div class="cs_team_photo"><img src="/assets/img/paul-barker-placeholder.png" alt="Paul Barker"></div>
+            <div class="cs_team_photo"><img src="/assets/img/Paul%20Baker.webp" alt="Paul Barker"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">Paul Barker</h3>
               <p class="cs_team_title">Chief Financial Officer</p>
