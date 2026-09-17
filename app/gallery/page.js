@@ -30,6 +30,7 @@ export default function Page() {
                     <li><a href="/products">Products</a></li>
                     <li><a href="/partnerships">Partnerships</a></li>
                     <li><a href="/careers">Careers</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
                   </ul>
                 </nav>
               </div>
@@ -44,13 +45,14 @@ export default function Page() {
     </header>
     <!-- End Header Section -->
     <!-- Start Page Heading Sectoin -->
-    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/about_heading_bg.jpg">
+    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/pharmacrop-bannerv2.webp">
       <div class="container">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
           <li class="breadcrumb-item active">Gallery</li>
         </ol>
-        <h1 class="cs_page_title mb-0 cs_fs_80 wow fadeInUp">Our Gallery</h1>
+        <h1 class="cs_page_title mb-0 cs_fs_80 wow fadeInUp">GALLERY</h1>
+        <p class="cs_white_color cs_opacity_7_5 mb-0" style="max-width: 640px; font-size: 16px; margin-top: 16px;">A look inside our Noosa Hinterland facility &mdash; from cultivation through to GMP-certified manufacturing.</p>
       </div>
     </section>
     <!-- End Page Heading Sectoin -->
@@ -60,89 +62,100 @@ export default function Page() {
         <div class="cs_isotop cs_style_1 cs_isotop_col_3 cs_has_gutter_24 cs_lightgallery">
           <div class="cs_grid_sizer"></div>
           <div class="cs_isotop_item">
-            <a href="/assets/img/work_thumb_1.jpg" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-              <img src="/assets/img/work_thumb_1.jpg" alt="">
+            <a href="/assets/img/pharmacrop-banner1.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/pharmacrop-banner1.webp" alt="Aerial view of the PharmaCrop facility">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
-                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Gallery A</span>
-                  <span class="cs_white_color d-block">2024</span>
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Facility Overview</span>
+                  <span class="cs_white_color d-block">Noosa Hinterland</span>
                 </span>
               </span>
             </a>
           </div>
           <div class="cs_isotop_item">
-            <a href="/assets/img/work_thumb_2.jpg" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-              <img src="/assets/img/work_thumb_2.jpg" alt="">
+            <a href="/assets/img/pharmacrop-bannerv2.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/pharmacrop-bannerv2.webp" alt="Aerial view of the greenhouses">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
-                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Gallery B</span>
-                  <span class="cs_white_color d-block">2024</span>
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Greenhouse Complex</span>
+                  <span class="cs_white_color d-block">Noosa Hinterland</span>
                 </span>
               </span>
             </a>
           </div>
           <div class="cs_isotop_item">
-            <a href="/assets/img/work_thumb_3.jpg" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-              <img src="/assets/img/work_thumb_3.jpg" alt="">
+            <a href="/assets/img/Controlled Cultivation.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Controlled Cultivation.webp" alt="Controlled cultivation environment">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
-                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Gallery C</span>
-                  <span class="cs_white_color d-block">2024</span>
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Controlled Cultivation</span>
+                  <span class="cs_white_color d-block">Growing</span>
                 </span>
               </span>
             </a>
           </div>
           <div class="cs_isotop_item">
-            <a href="/assets/img/work_thumb_4.jpg" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-              <img src="/assets/img/work_thumb_4.jpg" alt="">
+            <a href="/assets/img/Advanced Growing Systems.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Advanced Growing Systems.webp" alt="Advanced growing systems">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
-                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Gallery D</span>
-                  <span class="cs_white_color d-block">2024</span>
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Advanced Growing Systems</span>
+                  <span class="cs_white_color d-block">Cultivation</span>
                 </span>
               </span>
             </a>
           </div>
           <div class="cs_isotop_item">
-            <a href="/assets/img/work_thumb_5.jpg" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-              <img src="/assets/img/work_thumb_5.jpg" alt="">
+            <a href="/assets/img/GMP Manufacturing.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/GMP Manufacturing.webp" alt="GMP-certified manufacturing">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
-                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Gallery E</span>
-                  <span class="cs_white_color d-block">2024</span>
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">GMP Manufacturing</span>
+                  <span class="cs_white_color d-block">Manufacturing</span>
                 </span>
               </span>
             </a>
           </div>
           <div class="cs_isotop_item">
-            <a href="/assets/img/work_thumb_2.jpg" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-              <img src="/assets/img/work_thumb_2.jpg" alt="">
+            <a href="/assets/img/pharmacrop-bannerv4.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/pharmacrop-bannerv4.webp" alt="Aerial view of the cultivation site">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
-                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Gallery B</span>
-                  <span class="cs_white_color d-block">2024</span>
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Cultivation Site</span>
+                  <span class="cs_white_color d-block">Noosa Hinterland</span>
                 </span>
               </span>
             </a>
           </div>
           <div class="cs_isotop_item">
-            <a href="/assets/img/work_thumb_3.jpg" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-              <img src="/assets/img/work_thumb_3.jpg" alt="">
+            <a href="/assets/img/pharmacrop-banner3.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/pharmacrop-banner3.webp" alt="PharmaCrop facility grounds">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
-                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Gallery B</span>
-                  <span class="cs_white_color d-block">2024</span>
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Facility Grounds</span>
+                  <span class="cs_white_color d-block">Noosa Hinterland</span>
                 </span>
               </span>
             </a>
           </div>
           <div class="cs_isotop_item">
-            <a href="/assets/img/work_thumb_4.jpg" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-              <img src="/assets/img/work_thumb_4.jpg" alt="">
+            <a href="/assets/img/pharmacrop-bannerv5.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/pharmacrop-bannerv5.webp" alt="Aerial view of the storage and utility buildings">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
-                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Gallery B</span>
-                  <span class="cs_white_color d-block">2024</span>
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Storage &amp; Utilities</span>
+                  <span class="cs_white_color d-block">Noosa Hinterland</span>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="cs_isotop_item">
+            <a href="/assets/img/Quality-&amp;-Release.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Quality-&amp;-Release.webp" alt="Quality and release testing">
+              <span class="cs_gallery_info_wrap cs_center">
+                <span class="cs_gallery_info text-center cs_center">
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Quality &amp; Release</span>
+                  <span class="cs_white_color d-block">Quality Control</span>
                 </span>
               </span>
             </a>
@@ -151,30 +164,6 @@ export default function Page() {
       </div>
       <div class="cs_height_100 cs_height_lg_70"></div>
     <!-- End Gallery Section -->
-    <!-- Start Card Section -->
-    <section class="cs_half_bg">
-      <div class="container">
-        <div class="cs_card cs_style_1 cs_heading_bg cs_bg_filed" data-src="/assets/img/card_bg.jpg">
-          <div class="cs_card_top">
-            <div class="cs_card_tags">
-              <a href="/" class="cs_card_tag">Home</a>
-              <a href="#" class="cs_card_tag">Garden</a>
-              <a href="#" class="cs_card_tag">Landscape Design</a>
-              <a href="#" class="cs_card_tag">Expert</a>
-            </div>
-          </div>
-          <div class="cs_card_bottom">
-            <h2 class="cs_card_title cs_gradient_color_1 cs_fs_80 mb-0">MAKE YOUR DREAM <br>GARDEN INTO REALITY</h2>
-          </div>
-          <a href="/projects" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </section>
-    <!-- End Card Section -->
     <!-- Start CTA Section -->
     <style>
       .cs_contact_card_section { padding: 100px 0; overflow: hidden; }

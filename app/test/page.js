@@ -33,6 +33,7 @@ export default function Page() {
                     <li><a href="/products">Products</a></li>
                     <li><a href="/partnerships">Partnerships</a></li>
                     <li><a href="/careers">Careers</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
                   </ul>
                 </nav>
               </div>
