@@ -73,7 +73,7 @@ export default function Page() {
           </div>
           <div class="cs_hero_funfact_wrap wow fadeInRight">
             <div class="cs_hero_funfact">
-              <h3 class="cs_fs_24 cs_bold cs_white_color mb-0">QUALITY &amp; COMPLIANCE</h3>
+              <h3 class="cs_fs_24 cs_bold cs_white_color mb-0">GROWN IN THE NOOSA HINTERLAND</h3>
               <p class="cs_fs_20 cs_white_color cs_opacity_7_5 cs_mb_16">Australian-made. GMP-certified. TGA licensed.</p>
               <div class="cs_accred_bar">
                 <span class="cs_accred_bar_item"><img src="/assets/img/AUSTRALIAN-MADE.png" alt="Australian Made"></span>
