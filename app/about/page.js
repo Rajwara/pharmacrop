@@ -170,9 +170,9 @@ export default function Page() {
     <section class="cs_team_section">
       <div class="container">
         <div class="cs_team_head">
-          <span class="cs_team_eyebrow">Our Expertise</span>
-          <h2>THE EXPERTISE BEHIND THE FACILITY</h2>
-          <p>Expertise spanning scientific research, cultivation, pharmaceutical manufacturing, quality and commercial growth.</p>
+          <span class="cs_team_eyebrow">Our Team</span>
+          <h2>EXPERIENCE ACROSS THE FULL JOURNEY</h2>
+          <p>From science and cultivation through to pharmaceutical quality and commercialisation, our team brings experience across every stage of the journey.</p>
         </div>
         <div class="cs_team_grid">
           <div class="cs_team_card wow fadeInUp">
