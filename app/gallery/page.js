@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Gallery - PharmaCrop",
+  title: "Our Facilities - PharmaCrop",
 };
 
 export default function Page() {
@@ -30,7 +30,7 @@ export default function Page() {
                     <li><a href="/products">Products</a></li>
                     <li><a href="/partnerships">Partnerships</a></li>
                     <li><a href="/careers">Careers</a></li>
-                    <li><a href="/gallery">Gallery</a></li>
+                    <li><a href="/gallery">Our Facilities</a></li>
                   </ul>
                 </nav>
               </div>
@@ -49,9 +49,9 @@ export default function Page() {
       <div class="container">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
-          <li class="breadcrumb-item active">Gallery</li>
+          <li class="breadcrumb-item active">Our Facilities</li>
         </ol>
-        <h1 class="cs_page_title mb-0 cs_fs_80 wow fadeInUp">GALLERY</h1>
+        <h1 class="cs_page_title mb-0 cs_fs_80 wow fadeInUp">OUR FACILITIES</h1>
         <p class="cs_white_color cs_opacity_7_5 mb-0" style="max-width: 640px; font-size: 16px; margin-top: 16px;">A look inside our Noosa Hinterland facility &mdash; from cultivation through to GMP-certified manufacturing.</p>
       </div>
     </section>
