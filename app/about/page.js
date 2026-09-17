@@ -162,7 +162,7 @@ export default function Page() {
     <section class="cs_about_gallery_section">
       <div class="container">
         <div class="cs_about_gallery_head">
-          <span class="cs_about_gallery_eyebrow">Gallery</span>
+          <span class="cs_about_gallery_eyebrow">Our Facility</span>
           <h2>A LOOK INSIDE OUR FACILITY</h2>
           <p>From cultivation through to GMP-certified manufacturing, take a closer look at how PharmaCrop brings science and agriculture together.</p>
         </div>
