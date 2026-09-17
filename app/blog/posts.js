@@ -5,7 +5,7 @@ export const posts = [
     date: "11 Aug 2026",
     category: "Cultivation",
     tags: ["Noosa Hinterland", "Cultivation", "Australian-Grown"],
-    image: "/assets/img/hero_bg.jpg",
+    image: "/assets/img/pharmacrop%20home%20assets/BLOGS/THE%20NOOSA%20HINTERLAND%20HOME%20OF%20PHARMACROP.webp",
     excerpt:
       "The Noosa Hinterland provides the home for our cultivation and manufacturing operations, bringing local production together within a single region.",
     content: [
@@ -37,7 +37,7 @@ export const posts = [
     date: "25 Aug 2026",
     category: "Cultivation",
     tags: ["Global Expertise", "Cultivation Philosophy", "Phenohunting"],
-    image: "/assets/img/post_1.jpg",
+    image: "/assets/img/pharmacrop%20home%20assets/BLOGS/GLOBAL%20CULTIVATION%20EXPERTISE%2C%20HINTERLAND-HONED.webp",
     excerpt:
       "Drawing on cultivation expertise from California, Canada and South Africa, our team applies international insights within the unique conditions of the Noosa Hinterland.",
     content: [

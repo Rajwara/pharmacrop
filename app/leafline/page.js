@@ -463,7 +463,7 @@ export default function Page() {
         </div>
         <div class="cs_leaf_blog_grid">
           <div class="cs_leaf_blog_card wow fadeInUp">
-            <img src="/assets/img/hero_bg.jpg" alt="The Noosa Hinterland: Home of PharmaCrop">
+            <img src="/assets/img/pharmacrop%20home%20assets/BLOGS/THE%20NOOSA%20HINTERLAND%20HOME%20OF%20PHARMACROP.webp" alt="The Noosa Hinterland: Home of PharmaCrop">
             <div class="cs_leaf_blog_card_body">
               <span class="cs_leaf_blog_meta">Cultivation &middot; 11 Aug 2026</span>
               <h3>The Noosa Hinterland: Home of PharmaCrop</h3>
@@ -479,7 +479,7 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_leaf_blog_card wow fadeInUp" data-wow-delay="0.2s">
-            <img src="/assets/img/post_1.jpg" alt="Global Cultivation Expertise, Hinterland-Honed">
+            <img src="/assets/img/pharmacrop%20home%20assets/BLOGS/GLOBAL%20CULTIVATION%20EXPERTISE%2C%20HINTERLAND-HONED.webp" alt="Global Cultivation Expertise, Hinterland-Honed">
             <div class="cs_leaf_blog_card_body">
               <span class="cs_leaf_blog_meta">Cultivation &middot; 25 Aug 2026</span>
               <h3>Global Cultivation Expertise, Hinterland-Honed</h3>
@@ -521,7 +521,7 @@ export default function Page() {
     <section class="cs_contact_card_section">
       <div class="container">
         <div class="cs_contact_card">
-          <div class="cs_contact_card_bg"><img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt=""></div>
+          <div class="cs_contact_card_bg"><img src="/assets/img/pharmacrop%20home%20assets/CTA%20BANNER/PARTNER%20WITH%20PHARMACROP.webp" alt=""></div>
           <div class="cs_contact_card_top">
             <p class="cs_contact_info_label">Speak With Our Team:</p>
             <a href="mailto:enquiries@pharmacrop.com.au" class="cs_contact_pill"><span class="cs_contact_pill_icon"><i class="fa-solid fa-envelope"></i></span>enquiries@pharmacrop.com.au</a>
