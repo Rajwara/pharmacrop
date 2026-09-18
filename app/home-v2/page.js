@@ -29,7 +29,7 @@ export default function Page() {
               <div class="cs_nav cs_heading_color">
                 <nav class="cs_nav_list_wrap text-uppercase">
                   <ul class="cs_nav_list">
-                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/about-us">About Us</a></li>
                     <li><a href="/products">Products</a></li>
                     <li><a href="/partnerships">Partnerships</a></li>
                     <li><a href="/careers">Careers</a></li>
@@ -124,7 +124,7 @@ export default function Page() {
               <h3 class="cs_offer_card_title">Noosa Hinterland</h3>
               <p class="cs_offer_card_text">Where PharmaCrop calls home. The Noosa Hinterland provides the home for our cultivation and manufacturing operations, bringing local production together within a single region.</p>
             </div>
-            <a href="/about" class="cs_offer_card_link">Learn More &rarr;</a>
+            <a href="/about-us" class="cs_offer_card_link">Learn More &rarr;</a>
           </div>
           <div class="cs_offer_img">
             <img src="/assets/img/pharmacrop-banner3.webp" alt="PharmaCrop cultivation facility">
@@ -146,7 +146,7 @@ export default function Page() {
               <h3 class="cs_offer_card_title">Global Expertise</h3>
               <p class="cs_offer_card_text">Drawing on cultivation expertise from California, Canada and South Africa, our team applies international insights within the unique conditions of the Noosa Hinterland.</p>
             </div>
-            <a href="/about" class="cs_offer_card_link">Learn More &rarr;</a>
+            <a href="/about-us" class="cs_offer_card_link">Learn More &rarr;</a>
           </div>
         </div>
       </div>
@@ -505,7 +505,7 @@ export default function Page() {
             <h4 class="cs_footer_v2_col_title">Explore</h4>
             <span class="cs_footer_v2_col_underline"></span>
             <ul class="cs_footer_v2_list">
-              <li><a href="/about">About Us</a></li>
+              <li><a href="/about-us">About Us</a></li>
               <li><a href="/products">Products</a></li>
               <li><a href="/partnerships">Partnerships</a></li>
               <li><a href="/blog">Blog</a></li>

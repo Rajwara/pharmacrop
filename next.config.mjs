@@ -12,6 +12,11 @@ const nextConfig = {
         destination: "/our-facilities",
         permanent: true,
       },
+      {
+        source: "/about",
+        destination: "/about-us",
+        permanent: true,
+      },
     ];
   },
 };

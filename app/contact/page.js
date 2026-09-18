@@ -26,7 +26,7 @@ export default function Page() {
               <div class="cs_nav cs_heading_color">
                 <nav class="cs_nav_list_wrap text-uppercase">
                   <ul class="cs_nav_list">
-                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/about-us">About Us</a></li>
                     <li><a href="/products">Products</a></li>
                     <li><a href="/partnerships">Partnerships</a></li>
                     <li><a href="/careers">Careers</a></li>
@@ -275,7 +275,7 @@ export default function Page() {
             <h4 class="cs_footer_v2_col_title">Explore</h4>
             <span class="cs_footer_v2_col_underline"></span>
             <ul class="cs_footer_v2_list">
-              <li><a href="/about">About Us</a></li>
+              <li><a href="/about-us">About Us</a></li>
               <li><a href="/products">Products</a></li>
               <li><a href="/partnerships">Partnerships</a></li>
               <li><a href="/blog">Blog</a></li>
