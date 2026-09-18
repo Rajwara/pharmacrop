@@ -29,7 +29,7 @@ export default function Page() {
               <div class="cs_nav cs_heading_color">
                 <nav class="cs_nav_list_wrap text-uppercase">
                   <ul class="cs_nav_list">
-                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/about-us">About Us</a></li>
                     <li><a href="/products">Products</a></li>
                     <li><a href="/partnerships">Partnerships</a></li>
                     <li><a href="/careers">Careers</a></li>
@@ -68,7 +68,7 @@ export default function Page() {
             <p class="cs_hero_subtitle cs_fs_20 cs_mb_32 cs_opacity_7_5">Natural cultivation with pharmaceutical precision.</p>
             <div class="cs_hero_btns">
               <a href="https://aleafiate.com.au/" target="_blank" rel="noopener noreferrer" class="cs_btn cs_style_1 cs_bold cs_heading_color cs_white_bg wow fadeInLeft">FIND A HEALTHCARE PROVIDER</a>
-              <a href="/about" class="cs_btn cs_style_2 cs_bold cs_white_color wow fadeInRight">ABOUT PHARMACROP</a>
+              <a href="/about-us" class="cs_btn cs_style_2 cs_bold cs_white_color wow fadeInRight">ABOUT PHARMACROP</a>
             </div>
           </div>
           <div class="cs_hero_funfact_wrap wow fadeInRight">
@@ -173,7 +173,7 @@ export default function Page() {
               <div class="cs_sticky_card_body">
                 <h3 class="cs_sticky_card_title">Controlled Cultivation</h3>
                 <p class="cs_sticky_card_text">Purpose-built hybrid greenhouse designed for repeatable cultivation and consistent, scalable Australian-grown supply.</p>
-                <a href="/about" class="cs_sticky_card_link">READ MORE <span>&rarr;</span></a>
+                <a href="/about-us" class="cs_sticky_card_link">READ MORE <span>&rarr;</span></a>
               </div>
             </div>
             <div class="cs_sticky_card">
@@ -182,7 +182,7 @@ export default function Page() {
               <div class="cs_sticky_card_body">
                 <h3 class="cs_sticky_card_title">Advanced Growing Systems</h3>
                 <p class="cs_sticky_card_text">Soilless cultivation with cultivar-specific nutrition programs, providing bespoke nutrient delivery for strong growth and consistent cannabinoid and terpene expression.</p>
-                <a href="/about" class="cs_sticky_card_link">READ MORE <span>&rarr;</span></a>
+                <a href="/about-us" class="cs_sticky_card_link">READ MORE <span>&rarr;</span></a>
               </div>
             </div>
             <div class="cs_sticky_card">
@@ -191,7 +191,7 @@ export default function Page() {
               <div class="cs_sticky_card_body">
                 <h3 class="cs_sticky_card_title">Environmental Precision</h3>
                 <p class="cs_sticky_card_text">Continuous monitoring and control of light, temperature, humidity, CO&#8322; and irrigation to optimise plant health and ensure repeatable, pharmaceutical-grade biomass.</p>
-                <a href="/about" class="cs_sticky_card_link">READ MORE <span>&rarr;</span></a>
+                <a href="/about-us" class="cs_sticky_card_link">READ MORE <span>&rarr;</span></a>
               </div>
             </div>
           </div>
@@ -873,7 +873,7 @@ export default function Page() {
             <h4 class="cs_footer_v2_col_title">Explore</h4>
             <span class="cs_footer_v2_col_underline"></span>
             <ul class="cs_footer_v2_list">
-              <li><a href="/about">About Us</a></li>
+              <li><a href="/about-us">About Us</a></li>
               <li><a href="/products">Products</a></li>
               <li><a href="/partnerships">Partnerships</a></li>
               <li><a href="/blog">Blog</a></li>
