@@ -65,7 +65,7 @@ export default function Page() {
                 <i class="fa-solid fa-chevron-down"></i>
               </button>
               <div class="cs_dash_user_menu">
-                <a href="/register">My Profile / Account</a>
+                <a href="/profile">My Profile / Account</a>
                 <a href="/">Sign Out</a>
               </div>
             </div>
@@ -246,7 +246,7 @@ export default function Page() {
               <div class="cs_prod_body_top"><h3>Sunridge 22</h3><span class="cs_prod_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
               <span class="cs_prod_category">Dried Flower</span>
               <span class="cs_prod_spec">THC 22% &nbsp;|&nbsp; CBD &lt;1%<br>10g pack</span>
-              <a href="/contact" class="cs_prod_link">View Product &rarr;</a>
+              <a href="/all-products/sunridge-22" class="cs_prod_link">View Product &rarr;</a>
             </div>
           </div>
           <div class="cs_prod_card" data-name="balance 10:10" data-category="oral-liquid" data-strength="balanced" data-packsize="30 mL bottle">
@@ -255,7 +255,7 @@ export default function Page() {
               <div class="cs_prod_body_top"><h3>Balance 10:10</h3><span class="cs_prod_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
               <span class="cs_prod_category">Oral Liquid</span>
               <span class="cs_prod_spec">THC 10 mg/mL &nbsp;|&nbsp; CBD 10 mg/mL<br>30 mL bottle</span>
-              <a href="/contact" class="cs_prod_link">View Product &rarr;</a>
+              <a href="/all-products/balance-10-10" class="cs_prod_link">View Product &rarr;</a>
             </div>
           </div>
           <div class="cs_prod_card" data-name="calm pastilles" data-category="pastilles" data-strength="balanced" data-packsize="30 pastilles">
@@ -264,7 +264,7 @@ export default function Page() {
               <div class="cs_prod_body_top"><h3>Calm Pastilles</h3><span class="cs_prod_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
               <span class="cs_prod_category">Pastilles</span>
               <span class="cs_prod_spec">THC 2.5 mg &nbsp;|&nbsp; CBD 2.5 mg<br>30 pastilles</span>
-              <a href="/contact" class="cs_prod_link">View Product &rarr;</a>
+              <a href="/all-products/calm-pastilles" class="cs_prod_link">View Product &rarr;</a>
             </div>
           </div>
           <div class="cs_prod_card" data-name="clear flow" data-category="inhaled-liquid" data-strength="thc" data-packsize="1 cartridge (0.5 mL)">
@@ -273,7 +273,7 @@ export default function Page() {
               <div class="cs_prod_body_top"><h3>Clear Flow</h3><span class="cs_prod_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
               <span class="cs_prod_category">Inhaled Liquid</span>
               <span class="cs_prod_spec">THC 50 mg/mL &nbsp;|&nbsp; CBD 0 mg/mL<br>1 cartridge (0.5 mL)</span>
-              <a href="/contact" class="cs_prod_link">View Product &rarr;</a>
+              <a href="/all-products/clear-flow" class="cs_prod_link">View Product &rarr;</a>
             </div>
           </div>
           <div class="cs_prod_card" data-name="meadowlands 18" data-category="dried-flower" data-strength="thc" data-packsize="10g pack">
@@ -282,7 +282,7 @@ export default function Page() {
               <div class="cs_prod_body_top"><h3>Meadowlands 18</h3><span class="cs_prod_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
               <span class="cs_prod_category">Dried Flower</span>
               <span class="cs_prod_spec">THC 18% &nbsp;|&nbsp; CBD &lt;1%<br>10g pack</span>
-              <a href="/contact" class="cs_prod_link">View Product &rarr;</a>
+              <a href="/all-products/meadowlands-18" class="cs_prod_link">View Product &rarr;</a>
             </div>
           </div>
           <div class="cs_prod_card" data-name="rest easy" data-category="oral-liquid" data-strength="cbd" data-packsize="30 mL bottle">
@@ -291,7 +291,7 @@ export default function Page() {
               <div class="cs_prod_body_top"><h3>Rest Easy</h3><span class="cs_prod_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
               <span class="cs_prod_category">Oral Liquid</span>
               <span class="cs_prod_spec">THC 5 mg/mL &nbsp;|&nbsp; CBD 15 mg/mL<br>30 mL bottle</span>
-              <a href="/contact" class="cs_prod_link">View Product &rarr;</a>
+              <a href="/all-products/rest-easy" class="cs_prod_link">View Product &rarr;</a>
             </div>
           </div>
           <div class="cs_prod_card" data-name="focus pastilles" data-category="pastilles" data-strength="thc" data-packsize="30 pastilles">
@@ -300,7 +300,7 @@ export default function Page() {
               <div class="cs_prod_body_top"><h3>Focus Pastilles</h3><span class="cs_prod_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
               <span class="cs_prod_category">Pastilles</span>
               <span class="cs_prod_spec">THC 5 mg &nbsp;|&nbsp; CBD 0 mg<br>30 pastilles</span>
-              <a href="/contact" class="cs_prod_link">View Product &rarr;</a>
+              <a href="/all-products/focus-pastilles" class="cs_prod_link">View Product &rarr;</a>
             </div>
           </div>
           <div class="cs_prod_card" data-name="airis" data-category="inhaled-liquid" data-strength="balanced" data-packsize="1 cartridge (0.5 mL)">
@@ -309,7 +309,7 @@ export default function Page() {
               <div class="cs_prod_body_top"><h3>Airis</h3><span class="cs_prod_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
               <span class="cs_prod_category">Inhaled Liquid</span>
               <span class="cs_prod_spec">THC 25 mg/mL &nbsp;|&nbsp; CBD 25 mg/mL<br>1 cartridge (0.5 mL)</span>
-              <a href="/contact" class="cs_prod_link">View Product &rarr;</a>
+              <a href="/all-products/airis" class="cs_prod_link">View Product &rarr;</a>
             </div>
           </div>
           <div class="cs_prod_card" data-name="highland 25" data-category="dried-flower" data-strength="thc" data-packsize="10g pack">
@@ -318,7 +318,7 @@ export default function Page() {
               <div class="cs_prod_body_top"><h3>Highland 25</h3><span class="cs_prod_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
               <span class="cs_prod_category">Dried Flower</span>
               <span class="cs_prod_spec">THC 25% &nbsp;|&nbsp; CBD &lt;1%<br>10g pack</span>
-              <a href="/contact" class="cs_prod_link">View Product &rarr;</a>
+              <a href="/all-products/highland-25" class="cs_prod_link">View Product &rarr;</a>
             </div>
           </div>
           <div class="cs_prod_card" data-name="clarity 1:20" data-category="oral-liquid" data-strength="cbd" data-packsize="30 mL bottle">
@@ -327,7 +327,7 @@ export default function Page() {
               <div class="cs_prod_body_top"><h3>Clarity 1:20</h3><span class="cs_prod_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
               <span class="cs_prod_category">Oral Liquid</span>
               <span class="cs_prod_spec">THC 1 mg/mL &nbsp;|&nbsp; CBD 20 mg/mL<br>30 mL bottle</span>
-              <a href="/contact" class="cs_prod_link">View Product &rarr;</a>
+              <a href="/all-products/clarity-1-20" class="cs_prod_link">View Product &rarr;</a>
             </div>
           </div>
         </div>

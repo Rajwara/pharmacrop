@@ -65,7 +65,7 @@ export default function Page() {
                 <i class="fa-solid fa-chevron-down"></i>
               </button>
               <div class="cs_dash_user_menu">
-                <a href="/register">My Profile / Account</a>
+                <a href="/profile">My Profile / Account</a>
                 <a href="/">Sign Out</a>
               </div>
             </div>
