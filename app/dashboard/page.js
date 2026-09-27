@@ -130,7 +130,7 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_dash_hero_media wow fadeInRight">
-            <img src="/assets/img/Our%20Facility-2.webp" alt="PharmaCrop cultivation team">
+            <img src="/assets/img/dashboard/good%20to%20see%20you.webp" alt="PharmaCrop cultivation team">
             <div class="cs_dash_hero_card">
               <div>
                 <div class="cs_dash_hero_card_icon"><i class="fa-solid fa-leaf"></i></div>
@@ -179,7 +179,7 @@ export default function Page() {
         </div>
         <div class="cs_dash_cat_grid">
           <a href="/products#dried-flower" class="cs_dash_cat_card wow fadeInUp">
-            <img src="/assets/img/pharma-banner.jpeg" alt="Dried Flower">
+            <img src="/assets/img/dashboard/Dried%20Flower%20Category.webp" alt="Dried Flower">
             <div class="cs_dash_cat_body">
               <div class="cs_dash_cat_body_top"><span class="cs_dash_cat_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
               <h3>Dried Flower</h3>
@@ -187,7 +187,7 @@ export default function Page() {
             </div>
           </a>
           <a href="/products#oral-liquid" class="cs_dash_cat_card wow fadeInUp" data-wow-delay="0.1s">
-            <img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt="Oral Liquid">
+            <img src="/assets/img/dashboard/Oral%20Liquid%20Category.webp" alt="Oral Liquid">
             <div class="cs_dash_cat_body">
               <div class="cs_dash_cat_body_top"><span class="cs_dash_cat_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
               <h3>Oral Liquid</h3>
@@ -195,7 +195,7 @@ export default function Page() {
             </div>
           </a>
           <a href="/products#pastilles" class="cs_dash_cat_card wow fadeInUp" data-wow-delay="0.2s">
-            <img src="/assets/img/pharmacrop-banner4.webp" alt="Pastilles">
+            <img src="/assets/img/dashboard/Pastilles%20Category.webp" alt="Pastilles">
             <div class="cs_dash_cat_body">
               <div class="cs_dash_cat_body_top"><span class="cs_dash_cat_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
               <h3>Pastilles</h3>
@@ -203,7 +203,7 @@ export default function Page() {
             </div>
           </a>
           <a href="/products#inhaled-liquid" class="cs_dash_cat_card wow fadeInUp" data-wow-delay="0.3s">
-            <img src="/assets/img/health-professionals-card.webp" alt="Inhaled Liquid">
+            <img src="/assets/img/dashboard/Inhaled%20liquid%20Category.webp" alt="Inhaled Liquid">
             <div class="cs_dash_cat_body">
               <div class="cs_dash_cat_body_top"><span class="cs_dash_cat_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
               <h3>Inhaled Liquid</h3>
@@ -244,7 +244,7 @@ export default function Page() {
         </div>
         <div class="cs_dash_feat_grid">
           <div class="cs_dash_feat_card wow fadeInUp">
-            <div class="cs_dash_feat_img"><img src="/assets/img/pharma-banner.jpeg" alt="PharmaCrop THC25 Dried Flower"></div>
+            <div class="cs_dash_feat_img"><img src="/assets/img/dashboard/PharmaCrop%20THC25%20Dried%20Flower.webp" alt="PharmaCrop THC25 Dried Flower"></div>
             <div class="cs_dash_feat_body">
               <h3>PharmaCrop THC25 Dried Flower</h3>
               <span class="cs_dash_feat_spec">Dried Flower &nbsp;|&nbsp; THC 25%</span>
@@ -252,7 +252,7 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_dash_feat_card wow fadeInUp" data-wow-delay="0.1s">
-            <div class="cs_dash_feat_img"><img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt="PharmaCrop CBD100 Oral Liquid"></div>
+            <div class="cs_dash_feat_img"><img src="/assets/img/dashboard/pharmaCrop%20CBD100%20Oral%20Liquid.webp" alt="PharmaCrop CBD100 Oral Liquid"></div>
             <div class="cs_dash_feat_body">
               <h3>PharmaCrop CBD100 Oral Liquid</h3>
               <span class="cs_dash_feat_spec">Oral Liquid &nbsp;|&nbsp; CBD 100 mg/mL</span>
@@ -260,7 +260,7 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_dash_feat_card wow fadeInUp" data-wow-delay="0.2s">
-            <div class="cs_dash_feat_img"><img src="/assets/img/pharmacrop-banner4.webp" alt="PharmaCrop Balance Pastilles"></div>
+            <div class="cs_dash_feat_img"><img src="/assets/img/dashboard/pharmaCrop%20Balance%20Pastilles.webp" alt="PharmaCrop Balance Pastilles"></div>
             <div class="cs_dash_feat_body">
               <h3>PharmaCrop Balance Pastilles</h3>
               <span class="cs_dash_feat_spec">Pastilles &nbsp;|&nbsp; THC 5 mg / CBD 5 mg</span>
@@ -268,7 +268,7 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_dash_feat_card wow fadeInUp" data-wow-delay="0.3s">
-            <div class="cs_dash_feat_img"><img src="/assets/img/health-professionals-card.webp" alt="PharmaCrop Relief Inhaled Liquid"></div>
+            <div class="cs_dash_feat_img"><img src="/assets/img/dashboard/pharmaCrop%20Relief%20Inhaled%20Liquid.webp" alt="PharmaCrop Relief Inhaled Liquid"></div>
             <div class="cs_dash_feat_body">
               <h3>PharmaCrop Relief Inhaled Liquid</h3>
               <span class="cs_dash_feat_spec">Inhaled Liquid &nbsp;|&nbsp; THC 10 mg/mL</span>
@@ -304,7 +304,7 @@ export default function Page() {
         </div>
         <div class="cs_dash_quick_grid">
           <a href="#clinical-resource" class="cs_dash_quick_card wow fadeInUp">
-            <img src="/assets/img/health-professionals-card.webp" alt="HCP Resources">
+            <img src="/assets/img/dashboard/hCP%20resource%20bg.webp" alt="HCP Resources">
             <div class="cs_dash_quick_body">
               <div class="cs_dash_quick_icon"><i class="fa-solid fa-file-lines"></i></div>
               <h3>HCP Resources</h3>
@@ -313,7 +313,7 @@ export default function Page() {
             <span class="cs_dash_quick_go"><i class="fa-solid fa-arrow-right"></i></span>
           </a>
           <a href="/faq" class="cs_dash_quick_card wow fadeInUp" data-wow-delay="0.1s">
-            <img src="/assets/img/pharmacrop%20home%20assets/Integrated%20Platform/Quality%20%26%20Release.webp" alt="Documents and Downloads">
+            <img src="/assets/img/dashboard/documents%20%26%20downloads%20bg.webp" alt="Documents and Downloads">
             <div class="cs_dash_quick_body">
               <div class="cs_dash_quick_icon"><i class="fa-solid fa-download"></i></div>
               <h3>Documents &amp; Downloads</h3>
@@ -348,7 +348,7 @@ export default function Page() {
         </div>
         <div class="cs_dash_res_row wow fadeInUp">
           <div class="cs_dash_res_img">
-            <img src="/assets/img/Our%20Facility-9.webp" alt="Integrating Medicinal Cannabis into Clinical Practice">
+            <img src="/assets/img/dashboard/clinical%20guide.webp" alt="Integrating Medicinal Cannabis into Clinical Practice">
           </div>
           <div class="cs_dash_res_content">
             <span class="cs_dash_res_eyebrow">Clinical Guide</span>
@@ -362,7 +362,7 @@ export default function Page() {
     <!-- End Latest Professional Resource Section -->
     <!-- Start Dashboard CTA -->
     <style>
-      .cs_dash_cta_section { padding: 70px 0; background: #024242 url('/assets/img/portalbgimg.png') center center / cover no-repeat; }
+      .cs_dash_cta_section { padding: 70px 0; background: #024242 url('/assets/img/dashboard/working%20together.webp') center center / cover no-repeat; }
       .cs_dash_cta_row { display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
       .cs_dash_cta_eyebrow { display: block; color: #78dca6; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px; }
       .cs_dash_cta_row h2 { color: #fff; font-size: 32px; font-weight: 800; margin: 0 0 10px; max-width: 560px; }
