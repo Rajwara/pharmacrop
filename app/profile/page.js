@@ -136,6 +136,11 @@ export default function Page() {
       .cs_prof_badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(120,220,166,0.15); color: #024242; font-size: 12.5px; font-weight: 700; padding: 8px 16px; border-radius: 20px; }
       .cs_prof_dots { letter-spacing: 3px; color: #024242; font-weight: 700; }
       .cs_prof_actions_row { display: flex; gap: 12px; flex-wrap: wrap; }
+      .cs_prof_edit_input { border: 1px solid rgba(2,66,66,0.2); border-radius: 8px; padding: 6px 10px; font-size: 13.5px; font-family: inherit; color: #024242; text-align: right; max-width: 240px; }
+      .cs_prof_edit_input:focus { outline: none; border-color: #78dca6; }
+      .cs_prof_edit_actions { display: flex; gap: 8px; align-items: center; }
+      .cs_prof_save_btn { background: #024242; color: #fff; border: none; }
+      .cs_prof_save_btn:disabled { opacity: 0.6; }
       @media (max-width: 900px) {
         .cs_prof_layout { grid-template-columns: 1fr; }
         .cs_prof_side { position: static; text-align: left; }
@@ -164,8 +169,9 @@ export default function Page() {
                   <span class="cs_prof_card_icon"><i class="fa-solid fa-user"></i></span>
                   <div><h3>Professional Details</h3><p>Your professional information as registered with PharmaCrop.</p></div>
                 </div>
-                <a href="/contact" class="cs_prof_edit_btn"><i class="fa-solid fa-pen"></i> Edit Details</a>
+                <a href="/contact" class="cs_prof_edit_btn" data-edit-trigger="professional"><i class="fa-solid fa-pen"></i> Edit Details</a>
               </div>
+              <span class="cs_auth_error" data-edit-error="professional" style="display:none; margin-bottom: 10px;"></span>
               <div class="cs_prof_row"><span class="k">Full Name</span><span class="v" data-field="fullName">Dr Sarah Mitchell</span></div>
               <div class="cs_prof_row"><span class="k">Profession / Role</span><span class="v" data-field="profession">Healthcare Professional</span></div>
               <div class="cs_prof_row"><span class="k">Professional Registration Number</span><span class="v" data-field="ahpra">&mdash;</span></div>
@@ -180,8 +186,9 @@ export default function Page() {
                   <span class="cs_prof_card_icon"><i class="fa-solid fa-phone"></i></span>
                   <div><h3>Contact Details</h3><p>Your contact information for your PharmaCrop account.</p></div>
                 </div>
-                <a href="/contact" class="cs_prof_edit_btn"><i class="fa-solid fa-pen"></i> Edit Contact Details</a>
+                <a href="/contact" class="cs_prof_edit_btn" data-edit-trigger="contact"><i class="fa-solid fa-pen"></i> Edit Contact Details</a>
               </div>
+              <span class="cs_auth_error" data-edit-error="contact" style="display:none; margin-bottom: 10px;"></span>
               <div class="cs_prof_row"><span class="k">Email Address</span><span class="v" data-field="email">dr.s.mitchell@example.com</span></div>
               <div class="cs_prof_row"><span class="k">Phone Number</span><span class="v" data-field="phone">+61 400 123 456</span></div>
             </div>
@@ -341,6 +348,85 @@ export default function Page() {
               if (window.PharmaCropAuth) window.PharmaCropAuth.setSession(token, p);
             })
             .catch(function () {});
+
+          function updateProfile(payload) {
+            return fetch(WP_API_URL + '/wp-json/pharmacrop/v1/profile', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + token },
+              body: JSON.stringify(payload),
+            }).then(function (res) {
+              return res.json().then(function (data) {
+                if (!res.ok) throw new Error((data && data.message) || 'Could not save changes.');
+                return data;
+              });
+            });
+          }
+
+          function setupEditing(triggerName, fieldNames, buildPayload) {
+            var trigger = document.querySelector('[data-edit-trigger="' + triggerName + '"]');
+            var errorEl = document.querySelector('[data-edit-error="' + triggerName + '"]');
+            if (!trigger) return;
+
+            trigger.addEventListener('click', function (e) {
+              e.preventDefault();
+              if (trigger.dataset.editing === 'true') return;
+              trigger.dataset.editing = 'true';
+              if (errorEl) errorEl.style.display = 'none';
+
+              var inputs = {};
+              fieldNames.forEach(function (name) {
+                var el = document.querySelector('[data-field="' + name + '"]');
+                if (!el) return;
+                var input = document.createElement('input');
+                input.type = 'text';
+                input.className = 'cs_prof_edit_input';
+                input.value = el.textContent.trim() === '—' ? '' : el.textContent.trim();
+                el.replaceWith(input);
+                input.dataset.field = name;
+                inputs[name] = input;
+              });
+
+              trigger.style.display = 'none';
+              var actions = document.createElement('span');
+              actions.className = 'cs_prof_edit_actions';
+              actions.innerHTML = '<button type="button" class="cs_prof_edit_btn cs_prof_save_btn" data-save-btn>Save</button><button type="button" class="cs_prof_edit_btn" data-cancel-btn>Cancel</button>';
+              trigger.insertAdjacentElement('afterend', actions);
+
+              actions.querySelector('[data-cancel-btn]').addEventListener('click', function () {
+                window.location.reload();
+              });
+
+              actions.querySelector('[data-save-btn]').addEventListener('click', function () {
+                var saveBtn = actions.querySelector('[data-save-btn]');
+                saveBtn.disabled = true;
+                saveBtn.textContent = 'Saving...';
+                var payload = buildPayload(inputs);
+                updateProfile(payload)
+                  .then(function () { window.location.reload(); })
+                  .catch(function (err) {
+                    if (errorEl) {
+                      errorEl.textContent = err.message || 'Could not save changes.';
+                      errorEl.style.display = 'block';
+                    }
+                    saveBtn.disabled = false;
+                    saveBtn.textContent = 'Save';
+                  });
+              });
+            });
+          }
+
+          setupEditing('professional', ['fullName', 'practiceName'], function (inputs) {
+            var nameParts = inputs.fullName.value.trim().split(/\\s+/);
+            return {
+              firstName: nameParts.shift() || '',
+              lastName: nameParts.join(' '),
+              practiceName: inputs.practiceName.value.trim(),
+            };
+          });
+
+          setupEditing('contact', ['phone'], function (inputs) {
+            return { mobile: inputs.phone.value.trim() };
+          });
         })();
       `}
     </Script>
