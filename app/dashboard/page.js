@@ -157,7 +157,7 @@ export default function Page() {
       .cs_dash_section_link { color: #024242; font-weight: 700; font-size: 14px; text-decoration: none; white-space: nowrap; }
       .cs_dash_section_link:hover { color: #78dca6; }
       .cs_dash_cat_grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-      .cs_dash_cat_card { position: relative; border-radius: 16px; overflow: hidden; min-height: 260px; display: flex; align-items: flex-end; text-decoration: none; }
+      .cs_dash_cat_card { position: relative; border-radius: 16px; overflow: hidden; min-height: 380px; display: flex; align-items: flex-end; text-decoration: none; }
       .cs_dash_cat_card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
       .cs_dash_cat_card:hover img { transform: scale(1.06); }
       .cs_dash_cat_card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(2,34,34,0.1) 30%, rgba(2,20,20,0.85) 100%); }
