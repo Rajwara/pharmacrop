@@ -66,7 +66,7 @@ export default function Page() {
               </button>
               <div class="cs_dash_user_menu">
                 <a href="/profile">My Profile / Account</a>
-                <a href="/">Sign Out</a>
+                <a href="/" data-logout-link>Sign Out</a>
               </div>
             </div>
           </div>
@@ -119,7 +119,7 @@ export default function Page() {
         <div class="cs_dash_hero_inner">
           <div class="cs_dash_hero_content wow fadeInUp">
             <span class="cs_dash_hero_eyebrow">Welcome Back</span>
-            <h1>Good to see you,<br>Dr. Sarah Mitchell</h1>
+            <h1>Good to see you,<br><span data-field="heroName">Dr. Sarah Mitchell</span></h1>
             <p class="cs_dash_hero_desc">Your trusted source for Australian-grown, pharmaceutical-grade medicinal cannabis information, products and clinical resources.</p>
             <form class="cs_dash_search" data-dash-search-form>
               <i class="fa-solid fa-magnifying-glass"></i>
@@ -421,6 +421,15 @@ export default function Page() {
     <Script id="cs_dashboard_script" strategy="afterInteractive">
       {`
         (function () {
+          if (window.PharmaCropAuth) {
+            if (!window.PharmaCropAuth.requireAuth()) return;
+            window.PharmaCropAuth.personalizeHeader();
+            window.PharmaCropAuth.wireLogout();
+            var user = window.PharmaCropAuth.getUser();
+            var heroNameEl = document.querySelector('[data-field="heroName"]');
+            if (heroNameEl && user) heroNameEl.textContent = window.PharmaCropAuth.displayName(user);
+          }
+
           var userToggle = document.querySelector('[data-dash-user-toggle]');
           var userWrap = document.querySelector('[data-dash-user]');
           if (userToggle && userWrap) {

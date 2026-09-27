@@ -66,6 +66,7 @@ export default function RootLayout({ children }) {
         <Script src="/assets/js/isotope.pkg.min.js" strategy="beforeInteractive" />
         <Script src="/assets/js/lightgallery.min.js" strategy="beforeInteractive" />
         <Script src="/assets/js/main.js" strategy="beforeInteractive" />
+        <Script src="/assets/js/pharmacrop-auth.js" strategy="beforeInteractive" />
         <Script id="cs_scroll_top_script" strategy="afterInteractive">
           {`
             (function () {

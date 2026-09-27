@@ -4,6 +4,8 @@ export const metadata = {
   title: "My Profile - PharmaCrop HCP Portal",
 };
 
+const WP_API_URL = process.env.NEXT_PUBLIC_WP_API_URL || "http://pharmacrop.local";
+
 export default function Page() {
   return (
     <>
@@ -64,7 +66,7 @@ export default function Page() {
               </button>
               <div class="cs_dash_user_menu">
                 <a href="/profile">My Profile / Account</a>
-                <a href="/">Sign Out</a>
+                <a href="/" data-logout-link>Sign Out</a>
               </div>
             </div>
           </div>
@@ -144,10 +146,10 @@ export default function Page() {
       <div class="container">
         <div class="cs_prof_layout">
           <div class="cs_prof_side wow fadeInUp">
-            <div class="cs_prof_side_avatar">SM</div>
-            <h3>Dr Sarah Mitchell</h3>
-            <span class="role">Healthcare Professional</span>
-            <div class="cs_prof_side_email"><i class="fa-solid fa-envelope"></i> dr.s.mitchell@example.com</div>
+            <div class="cs_prof_side_avatar" data-field="avatarInitials">SM</div>
+            <h3 data-field="sideName">Dr Sarah Mitchell</h3>
+            <span class="role" data-field="sideRole">Healthcare Professional</span>
+            <div class="cs_prof_side_email"><i class="fa-solid fa-envelope"></i> <span data-field="sideEmail">dr.s.mitchell@example.com</span></div>
             <span class="cs_prof_verified"><i class="fa-solid fa-circle-check"></i> Verified Healthcare Professional</span>
             <ul class="cs_prof_side_nav">
               <li><a href="/profile" class="active"><span><i class="fa-solid fa-user left"></i> My Profile</span> <i class="fa-solid fa-chevron-right"></i></a></li>
@@ -164,12 +166,12 @@ export default function Page() {
                 </div>
                 <a href="/contact" class="cs_prof_edit_btn"><i class="fa-solid fa-pen"></i> Edit Details</a>
               </div>
-              <div class="cs_prof_row"><span class="k">Full Name</span><span class="v">Dr Sarah Mitchell</span></div>
-              <div class="cs_prof_row"><span class="k">Profession / Role</span><span class="v">Healthcare Professional</span></div>
-              <div class="cs_prof_row"><span class="k">Professional Registration Number</span><span class="v">&mdash;</span></div>
-              <div class="cs_prof_row"><span class="k">Registration Authority</span><span class="v">&mdash;</span></div>
-              <div class="cs_prof_row"><span class="k">Organisation / Practice</span><span class="v">Riverside Medical Centre</span></div>
-              <div class="cs_prof_row"><span class="k">Professional Location / State</span><span class="v">VIC, Australia</span></div>
+              <div class="cs_prof_row"><span class="k">Full Name</span><span class="v" data-field="fullName">Dr Sarah Mitchell</span></div>
+              <div class="cs_prof_row"><span class="k">Profession / Role</span><span class="v" data-field="profession">Healthcare Professional</span></div>
+              <div class="cs_prof_row"><span class="k">Professional Registration Number</span><span class="v" data-field="ahpra">&mdash;</span></div>
+              <div class="cs_prof_row"><span class="k">Registration Authority</span><span class="v" data-field="registrationAuthority">&mdash;</span></div>
+              <div class="cs_prof_row"><span class="k">Organisation / Practice</span><span class="v" data-field="practiceName">Riverside Medical Centre</span></div>
+              <div class="cs_prof_row"><span class="k">Professional Location / State</span><span class="v" data-field="location">VIC, Australia</span></div>
             </div>
 
             <div class="cs_prof_card wow fadeInUp">
@@ -180,8 +182,8 @@ export default function Page() {
                 </div>
                 <a href="/contact" class="cs_prof_edit_btn"><i class="fa-solid fa-pen"></i> Edit Contact Details</a>
               </div>
-              <div class="cs_prof_row"><span class="k">Email Address</span><span class="v">dr.s.mitchell@example.com</span></div>
-              <div class="cs_prof_row"><span class="k">Phone Number</span><span class="v">+61 400 123 456</span></div>
+              <div class="cs_prof_row"><span class="k">Email Address</span><span class="v" data-field="email">dr.s.mitchell@example.com</span></div>
+              <div class="cs_prof_row"><span class="k">Phone Number</span><span class="v" data-field="phone">+61 400 123 456</span></div>
             </div>
 
             <div class="cs_prof_card wow fadeInUp">
@@ -193,10 +195,10 @@ export default function Page() {
                 <span class="cs_prof_badge"><i class="fa-solid fa-circle-check"></i> Verified Healthcare Professional</span>
               </div>
               <div class="cs_prof_row"><span class="k">Verification Status</span><span class="v">Verified Healthcare Professional</span></div>
-              <div class="cs_prof_row"><span class="k">Profession</span><span class="v">Healthcare Professional</span></div>
-              <div class="cs_prof_row"><span class="k">Registration Number</span><span class="v">&mdash;</span></div>
-              <div class="cs_prof_row"><span class="k">Registration Authority</span><span class="v">&mdash;</span></div>
-              <div class="cs_prof_row"><span class="k">Verification Date</span><span class="v">15 Jan 2024</span></div>
+              <div class="cs_prof_row"><span class="k">Profession</span><span class="v" data-field="profession">Healthcare Professional</span></div>
+              <div class="cs_prof_row"><span class="k">Registration Number</span><span class="v" data-field="ahpra">&mdash;</span></div>
+              <div class="cs_prof_row"><span class="k">Registration Authority</span><span class="v" data-field="registrationAuthority">&mdash;</span></div>
+              <div class="cs_prof_row"><span class="k">Registered Since</span><span class="v" data-field="verificationDate">15 Jan 2024</span></div>
             </div>
 
             <div class="cs_prof_card wow fadeInUp">
@@ -286,6 +288,8 @@ export default function Page() {
     <Script id="cs_profile_script" strategy="afterInteractive">
       {`
         (function () {
+          var WP_API_URL = ${JSON.stringify(WP_API_URL)};
+
           var userToggle = document.querySelector('[data-dash-user-toggle]');
           var userWrap = document.querySelector('[data-dash-user]');
           if (userToggle && userWrap) {
@@ -297,6 +301,46 @@ export default function Page() {
               userWrap.classList.remove('active');
             });
           }
+
+          if (!window.PharmaCropAuth) return;
+          var token = window.PharmaCropAuth.requireAuth();
+          if (!token) return;
+          window.PharmaCropAuth.personalizeHeader();
+          window.PharmaCropAuth.wireLogout();
+
+          function setField(name, value) {
+            document.querySelectorAll('[data-field="' + name + '"]').forEach(function (el) {
+              el.textContent = value || '—';
+            });
+          }
+
+          fetch(WP_API_URL + '/wp-json/pharmacrop/v1/profile', {
+            headers: { Authorization: 'Bearer ' + token },
+          })
+            .then(function (res) { return res.json(); })
+            .then(function (p) {
+              var fullName = ((p.firstName || '') + ' ' + (p.lastName || '')).trim() || p.email;
+              var initials = (((p.firstName || '?')[0] || '') + ((p.lastName || '')[0] || '')).toUpperCase();
+              var location = [p.suburb, p.state].filter(Boolean).join(', ');
+              var registeredAt = p.registeredAt ? p.registeredAt.split(' ')[0] : '';
+
+              setField('avatarInitials', initials || 'HC');
+              setField('sideName', fullName);
+              setField('sideRole', p.profession);
+              setField('sideEmail', p.email);
+              setField('fullName', fullName);
+              setField('profession', p.profession);
+              setField('ahpra', p.ahpra);
+              setField('registrationAuthority', p.ahpra ? 'AHPRA' : '');
+              setField('practiceName', p.practiceName);
+              setField('location', location);
+              setField('email', p.email);
+              setField('phone', p.mobile);
+              setField('verificationDate', registeredAt);
+
+              if (window.PharmaCropAuth) window.PharmaCropAuth.setSession(token, p);
+            })
+            .catch(function () {});
         })();
       `}
     </Script>

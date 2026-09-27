@@ -66,7 +66,7 @@ export default function Page() {
               </button>
               <div class="cs_dash_user_menu">
                 <a href="/profile">My Profile / Account</a>
-                <a href="/">Sign Out</a>
+                <a href="/" data-logout-link>Sign Out</a>
               </div>
             </div>
           </div>
@@ -443,6 +443,12 @@ export default function Page() {
     <Script id="cs_all_products_script" strategy="afterInteractive">
       {`
         (function () {
+          if (window.PharmaCropAuth) {
+            if (!window.PharmaCropAuth.requireAuth()) return;
+            window.PharmaCropAuth.personalizeHeader();
+            window.PharmaCropAuth.wireLogout();
+          }
+
           var userToggle = document.querySelector('[data-dash-user-toggle]');
           var userWrap = document.querySelector('[data-dash-user]');
           if (userToggle && userWrap) {

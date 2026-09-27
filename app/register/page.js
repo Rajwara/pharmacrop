@@ -4,6 +4,8 @@ export const metadata = {
   title: "HCP Login & Register - PharmaCrop",
 };
 
+const WP_API_URL = process.env.NEXT_PUBLIC_WP_API_URL || "http://pharmacrop.local";
+
 export default function Page() {
   return (
     <>
@@ -168,20 +170,23 @@ export default function Page() {
               <h2>Welcome Back</h2>
               <p>Sign in to access full product information, clinical resources and patient support materials as a verified healthcare professional.</p>
             </div>
-            <div class="cs_auth_field">
-              <span class="cs_auth_field_icon"><i class="fa-solid fa-envelope"></i></span>
-              <input type="email" placeholder="Email address">
-            </div>
-            <div class="cs_auth_field">
-              <span class="cs_auth_field_icon"><i class="fa-solid fa-lock"></i></span>
-              <input type="password" placeholder="Password" data-auth-password>
-              <button type="button" class="cs_auth_field_toggle" data-auth-toggle aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
-            </div>
-            <div class="cs_auth_forgot"><span>Forgot password?</span></div>
-            <a href="/dashboard" class="cs_auth_btn_primary">
-              Log In
-              <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path></svg>
-            </a>
+            <form id="cs_login_form" novalidate>
+              <span class="cs_auth_error" data-login-error style="display:none; margin-bottom: 16px;">Invalid login.</span>
+              <div class="cs_auth_field">
+                <span class="cs_auth_field_icon"><i class="fa-solid fa-envelope"></i></span>
+                <input type="email" name="loginEmail" placeholder="Email address" required>
+              </div>
+              <div class="cs_auth_field">
+                <span class="cs_auth_field_icon"><i class="fa-solid fa-lock"></i></span>
+                <input type="password" name="loginPassword" placeholder="Password" data-auth-password required>
+                <button type="button" class="cs_auth_field_toggle" data-auth-toggle aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
+              </div>
+              <div class="cs_auth_forgot"><span>Forgot password?</span></div>
+              <button type="submit" class="cs_auth_btn_primary" data-login-submit-btn>
+                <span data-login-submit-label>Log In</span>
+                <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path></svg>
+              </button>
+            </form>
             <div class="cs_auth_divider"><span>OR</span></div>
             <button type="button" class="cs_auth_btn_outline" data-auth-switch="register">
               Create An Account
@@ -333,6 +338,13 @@ export default function Page() {
     <Script id="cs_auth_script" strategy="afterInteractive">
       {`
         (function () {
+          var WP_API_URL = ${JSON.stringify(WP_API_URL)};
+
+          if (window.PharmaCropAuth && window.PharmaCropAuth.getToken()) {
+            window.location.href = '/dashboard';
+            return;
+          }
+
           var tabs = document.querySelectorAll('.cs_auth_tab');
           var panels = document.querySelectorAll('.cs_auth_panel');
           var switches = document.querySelectorAll('[data-auth-switch]');
@@ -344,12 +356,65 @@ export default function Page() {
             if (card) card.classList.toggle('cs_auth_card_wide', name === 'register');
           }
 
+          var initialTab = new URLSearchParams(window.location.search).get('tab');
+          if (initialTab === 'login' || initialTab === 'register') {
+            setActive(initialTab);
+          }
+
           tabs.forEach(function (tab) {
             tab.addEventListener('click', function () { setActive(tab.getAttribute('data-auth-tab')); });
           });
           switches.forEach(function (btn) {
             btn.addEventListener('click', function () { setActive(btn.getAttribute('data-auth-switch')); });
           });
+
+          var loginForm = document.getElementById('cs_login_form');
+          if (loginForm) {
+            loginForm.addEventListener('submit', function (e) {
+              e.preventDefault();
+              var email = loginForm.loginEmail.value.trim();
+              var password = loginForm.loginPassword.value;
+              var errorEl = loginForm.querySelector('[data-login-error]');
+              var btn = loginForm.querySelector('[data-login-submit-btn]');
+              var label = loginForm.querySelector('[data-login-submit-label]');
+              if (errorEl) errorEl.style.display = 'none';
+
+              if (!email || !password) {
+                if (errorEl) { errorEl.textContent = 'Enter your email and password.'; errorEl.style.display = 'block'; }
+                return;
+              }
+
+              if (btn) btn.disabled = true;
+              if (label) label.textContent = 'Signing in...';
+
+              fetch(WP_API_URL + '/wp-json/jwt-auth/v1/token', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: 'username=' + encodeURIComponent(email) + '&password=' + encodeURIComponent(password),
+              })
+                .then(function (res) { return res.json().then(function (data) { return { ok: res.ok, data: data }; }); })
+                .then(function (result) {
+                  if (!result.ok) {
+                    var msg = (result.data && result.data.message) ? result.data.message.replace(/<[^>]*>/g, '') : 'Login failed. Please try again.';
+                    throw new Error(msg);
+                  }
+                  var token = result.data.token;
+                  return fetch(WP_API_URL + '/wp-json/pharmacrop/v1/profile', {
+                    headers: { Authorization: 'Bearer ' + token },
+                  })
+                    .then(function (r) { return r.json(); })
+                    .then(function (profile) {
+                      if (window.PharmaCropAuth) window.PharmaCropAuth.setSession(token, profile);
+                      window.location.href = '/dashboard';
+                    });
+                })
+                .catch(function (err) {
+                  if (errorEl) { errorEl.textContent = err.message || 'Login failed. Please try again.'; errorEl.style.display = 'block'; }
+                  if (btn) btn.disabled = false;
+                  if (label) label.textContent = 'Log In';
+                });
+            });
+          }
 
           var otherTrigger = document.querySelector('[data-other-trigger]');
           var otherField = document.querySelector('[data-other-field]');
@@ -435,18 +500,44 @@ export default function Page() {
               if (submitBtn) submitBtn.disabled = true;
               if (submitLabel) submitLabel.textContent = 'Submitting...';
 
-              fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: { 'Accept': 'application/json' },
-                body: new FormData(form),
-              })
-                .then(function (res) { return res.json(); })
-                .then(function (data) {
-                  if (!data.success) throw new Error(data.message || 'Submission failed');
+              var prescribingField = form.querySelector('input[name="prescribing"]:checked');
+              var payload = {
+                firstName: form.firstName.value.trim(),
+                lastName: form.lastName.value.trim(),
+                workEmail: form.workEmail.value.trim(),
+                mobile: form.mobile.value.trim(),
+                profession: form.profession.value,
+                professionOther: form.professionOther ? form.professionOther.value.trim() : '',
+                ahpra: form.ahpra.value.trim(),
+                practiceName: form.practiceName.value.trim(),
+                streetAddress: form.streetAddress.value.trim(),
+                suburb: form.suburb.value.trim(),
+                state: form.state.value,
+                postcode: form.postcode.value.trim(),
+                prescribing: prescribingField ? prescribingField.value : '',
+                referral: form.referral.value || '',
+                marketingOptIn: !!form.marketingOptIn.checked,
+              };
 
-                  var emailField = form.querySelector('[name="workEmail"]');
+              fetch(WP_API_URL + '/wp-json/pharmacrop/v1/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
+              })
+                .then(function (res) { return res.json().then(function (data) { return { ok: res.ok, data: data }; }); })
+                .then(function (result) {
+                  if (!result.ok) {
+                    throw new Error((result.data && result.data.message) || 'Submission failed');
+                  }
+
+                  fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: { 'Accept': 'application/json' },
+                    body: new FormData(form),
+                  }).catch(function () {});
+
                   var confirmEmailEl = document.querySelector('[data-confirm-email]');
-                  if (confirmEmailEl) confirmEmailEl.textContent = emailField ? emailField.value.trim() : 'you';
+                  if (confirmEmailEl) confirmEmailEl.textContent = payload.workEmail || 'you';
 
                   form.style.display = 'none';
                   var intro = document.querySelector('.cs_auth_register_intro');
@@ -454,8 +545,11 @@ export default function Page() {
                   var confirm = document.querySelector('[data-auth-confirm]');
                   if (confirm) confirm.hidden = false;
                 })
-                .catch(function () {
-                  if (submitError) submitError.style.display = 'block';
+                .catch(function (err) {
+                  if (submitError) {
+                    submitError.textContent = (err && err.message) || 'Something went wrong submitting your registration. Please try again or contact us directly.';
+                    submitError.style.display = 'block';
+                  }
                   if (submitBtn) submitBtn.disabled = false;
                   if (submitLabel) submitLabel.textContent = 'Submit Registration';
                 });
