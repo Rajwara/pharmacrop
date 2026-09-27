@@ -259,15 +259,40 @@ export default function Page() {
             return typeof value === 'string' && value.indexOf('http') === 0;
           }
 
+          var mediaUrlCache = {};
+
+          function resolveMediaUrl(value) {
+            if (isImageUrl(value)) return Promise.resolve(value);
+            if (typeof value === 'number' && value > 0) {
+              if (mediaUrlCache[value]) return mediaUrlCache[value];
+              mediaUrlCache[value] = fetch(WP_API_URL + '/wp-json/wp/v2/media/' + value)
+                .then(function (res) { return res.ok ? res.json() : null; })
+                .then(function (media) { return (media && media.source_url) || null; })
+                .catch(function () { return null; });
+              return mediaUrlCache[value];
+            }
+            return Promise.resolve(null);
+          }
+
           function mapProduct(raw) {
             var acf = raw.acf || {};
             var media = raw._embedded && raw._embedded['wp:featuredmedia'] && raw._embedded['wp:featuredmedia'][0];
             var featured = (media && media.source_url) || null;
 
-            var photos = [featured, acf.gallery_image_1, acf.gallery_image_2, acf.gallery_image_3, acf.gallery_image_4]
-              .filter(isImageUrl);
-            if (!photos.length) photos = [FALLBACK_IMG];
+            return Promise.all([
+              Promise.resolve(featured),
+              resolveMediaUrl(acf.gallery_image_1),
+              resolveMediaUrl(acf.gallery_image_2),
+              resolveMediaUrl(acf.gallery_image_3),
+              resolveMediaUrl(acf.gallery_image_4),
+            ]).then(function (resolved) {
+              var photos = resolved.filter(isImageUrl);
+              if (!photos.length) photos = [FALLBACK_IMG];
+              return finishProduct(raw, acf, photos);
+            });
+          }
 
+          function finishProduct(raw, acf, photos) {
             var image = photos[0];
             var altImage = photos[1] || photos[0];
             var overviewImage = photos[1] || photos[0];
@@ -430,20 +455,23 @@ export default function Page() {
                 if (content) content.innerHTML = '<div class="cs_pd_loading"><p>Product not found.</p><a href="/all-products" class="cs_pd_btn_primary" style="display:inline-flex;">Back to All Products</a></div>';
                 return;
               }
-              var p = mapProduct(results[0]);
-              document.title = p.name + ' - PharmaCrop HCP Portal';
+              return mapProduct(results[0]).then(function (p) {
+                document.title = p.name + ' - PharmaCrop HCP Portal';
 
-              return fetch(WP_API_URL + '/wp-json/wp/v2/product?per_page=100&_embed')
-                .then(function (res) { return res.ok ? res.json() : []; })
-                .then(function (all) {
-                  var related = (all || [])
-                    .map(mapProduct)
-                    .filter(function (r) { return r.categorySlug === p.categorySlug && r.slug !== p.slug; })
-                    .slice(0, 4);
+                return fetch(WP_API_URL + '/wp-json/wp/v2/product?per_page=100&_embed')
+                  .then(function (res) { return res.ok ? res.json() : []; })
+                  .then(function (all) {
+                    return Promise.all((all || []).map(mapProduct));
+                  })
+                  .then(function (allMapped) {
+                    var related = allMapped
+                      .filter(function (r) { return r.categorySlug === p.categorySlug && r.slug !== p.slug; })
+                      .slice(0, 4);
 
-                  if (content) content.innerHTML = renderContent(p, related);
-                  wireGallery();
-                });
+                    if (content) content.innerHTML = renderContent(p, related);
+                    wireGallery();
+                  });
+              });
             })
             .catch(function () {
               if (content) content.innerHTML = '<div class="cs_pd_loading"><p>Could not load this product right now.</p></div>';
