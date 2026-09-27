@@ -4,6 +4,8 @@ export const metadata = {
   title: "All Products - PharmaCrop HCP Portal",
 };
 
+const WP_API_URL = process.env.NEXT_PUBLIC_WP_API_URL || "http://pharmacrop.local";
+
 export default function Page() {
   return (
     <>
@@ -148,12 +150,8 @@ export default function Page() {
         .cs_prod_bar { flex-direction: column; align-items: stretch; }
       }
     </style>
-        <div class="cs_prod_pills">
-          <button type="button" class="cs_prod_pill active" data-prod-pill="all">All Products (10)</button>
-          <button type="button" class="cs_prod_pill" data-prod-pill="dried-flower">Dried Flower (3)</button>
-          <button type="button" class="cs_prod_pill" data-prod-pill="oral-liquid">Oral Liquid (3)</button>
-          <button type="button" class="cs_prod_pill" data-prod-pill="pastilles">Pastilles (2)</button>
-          <button type="button" class="cs_prod_pill" data-prod-pill="inhaled-liquid">Inhaled Liquid (2)</button>
+        <div class="cs_prod_pills" data-prod-pills>
+          <button type="button" class="cs_prod_pill active" data-prod-pill="all">All Products (0)</button>
         </div>
         <div class="cs_prod_bar">
           <div class="cs_prod_search">
@@ -164,10 +162,6 @@ export default function Page() {
             <label>Category</label>
             <select data-prod-category-select>
               <option value="all">All categories</option>
-              <option value="dried-flower">Dried Flower</option>
-              <option value="oral-liquid">Oral Liquid</option>
-              <option value="pastilles">Pastilles</option>
-              <option value="inhaled-liquid">Inhaled Liquid</option>
             </select>
           </div>
           <div class="cs_prod_select_wrap">
@@ -183,10 +177,6 @@ export default function Page() {
             <label>Pack size</label>
             <select data-prod-packsize>
               <option value="all">All pack sizes</option>
-              <option value="10g pack">10g pack</option>
-              <option value="30 mL bottle">30 mL bottle</option>
-              <option value="30 pastilles">30 pastilles</option>
-              <option value="1 cartridge (0.5 mL)">1 cartridge (0.5 mL)</option>
             </select>
           </div>
           <button type="button" class="cs_prod_clear" data-prod-clear>Clear filters</button>
@@ -228,6 +218,7 @@ export default function Page() {
       .cs_prod_link { color: #024242; font-weight: 700; font-size: 13px; text-decoration: none; }
       .cs_prod_link:hover { color: #78dca6; }
       .cs_prod_empty { display: none; text-align: center; padding: 60px 20px; color: #999; }
+      .cs_prod_empty[data-prod-loading] { display: block; }
       @media (max-width: 991px) {
         .cs_prod_grid { grid-template-columns: repeat(2, 1fr); }
       }
@@ -239,100 +230,12 @@ export default function Page() {
     </style>
     <section class="cs_prod_grid_section">
       <div class="container">
-        <div class="cs_prod_grid" data-prod-grid>
-          <a class="cs_prod_card" href="/all-products/sunridge-22" data-name="sunridge 22" data-category="dried-flower" data-strength="thc" data-packsize="10g pack">
-            <div class="cs_prod_img"><img src="/assets/img/dashboard/Dried%20Flower%20Category.webp" alt="Sunridge 22"></div>
-            <div class="cs_prod_body">
-              <h3>Sunridge 22</h3>
-              <span class="cs_prod_category">Dried Flower</span>
-              <span class="cs_prod_spec">THC 22% &nbsp;|&nbsp; CBD &lt;1%<br>10g pack</span>
-              <span class="cs_prod_link">View Product &rarr;</span>
-            </div>
-          </a>
-          <a class="cs_prod_card" href="/all-products/balance-10-10" data-name="balance 10:10" data-category="oral-liquid" data-strength="balanced" data-packsize="30 mL bottle">
-            <div class="cs_prod_img"><img src="/assets/img/dashboard/Oral%20Liquid%20Category.webp" alt="Balance 10:10"></div>
-            <div class="cs_prod_body">
-              <h3>Balance 10:10</h3>
-              <span class="cs_prod_category">Oral Liquid</span>
-              <span class="cs_prod_spec">THC 10 mg/mL &nbsp;|&nbsp; CBD 10 mg/mL<br>30 mL bottle</span>
-              <span class="cs_prod_link">View Product &rarr;</span>
-            </div>
-          </a>
-          <a class="cs_prod_card" href="/all-products/calm-pastilles" data-name="calm pastilles" data-category="pastilles" data-strength="balanced" data-packsize="30 pastilles">
-            <div class="cs_prod_img"><img src="/assets/img/dashboard/Pastilles%20Category.webp" alt="Calm Pastilles"></div>
-            <div class="cs_prod_body">
-              <h3>Calm Pastilles</h3>
-              <span class="cs_prod_category">Pastilles</span>
-              <span class="cs_prod_spec">THC 2.5 mg &nbsp;|&nbsp; CBD 2.5 mg<br>30 pastilles</span>
-              <span class="cs_prod_link">View Product &rarr;</span>
-            </div>
-          </a>
-          <a class="cs_prod_card" href="/all-products/clear-flow" data-name="clear flow" data-category="inhaled-liquid" data-strength="thc" data-packsize="1 cartridge (0.5 mL)">
-            <div class="cs_prod_img"><img src="/assets/img/dashboard/Inhaled%20liquid%20Category.webp" alt="Clear Flow"></div>
-            <div class="cs_prod_body">
-              <h3>Clear Flow</h3>
-              <span class="cs_prod_category">Inhaled Liquid</span>
-              <span class="cs_prod_spec">THC 50 mg/mL &nbsp;|&nbsp; CBD 0 mg/mL<br>1 cartridge (0.5 mL)</span>
-              <span class="cs_prod_link">View Product &rarr;</span>
-            </div>
-          </a>
-          <a class="cs_prod_card" href="/all-products/meadowlands-18" data-name="meadowlands 18" data-category="dried-flower" data-strength="thc" data-packsize="10g pack">
-            <div class="cs_prod_img"><img src="/assets/img/dashboard/PharmaCrop%20THC25%20Dried%20Flower.webp" alt="Meadowlands 18"></div>
-            <div class="cs_prod_body">
-              <h3>Meadowlands 18</h3>
-              <span class="cs_prod_category">Dried Flower</span>
-              <span class="cs_prod_spec">THC 18% &nbsp;|&nbsp; CBD &lt;1%<br>10g pack</span>
-              <span class="cs_prod_link">View Product &rarr;</span>
-            </div>
-          </a>
-          <a class="cs_prod_card" href="/all-products/rest-easy" data-name="rest easy" data-category="oral-liquid" data-strength="cbd" data-packsize="30 mL bottle">
-            <div class="cs_prod_img"><img src="/assets/img/dashboard/pharmaCrop%20CBD100%20Oral%20Liquid.webp" alt="Rest Easy"></div>
-            <div class="cs_prod_body">
-              <h3>Rest Easy</h3>
-              <span class="cs_prod_category">Oral Liquid</span>
-              <span class="cs_prod_spec">THC 5 mg/mL &nbsp;|&nbsp; CBD 15 mg/mL<br>30 mL bottle</span>
-              <span class="cs_prod_link">View Product &rarr;</span>
-            </div>
-          </a>
-          <a class="cs_prod_card" href="/all-products/focus-pastilles" data-name="focus pastilles" data-category="pastilles" data-strength="thc" data-packsize="30 pastilles">
-            <div class="cs_prod_img"><img src="/assets/img/dashboard/pharmaCrop%20Balance%20Pastilles.webp" alt="Focus Pastilles"></div>
-            <div class="cs_prod_body">
-              <h3>Focus Pastilles</h3>
-              <span class="cs_prod_category">Pastilles</span>
-              <span class="cs_prod_spec">THC 5 mg &nbsp;|&nbsp; CBD 0 mg<br>30 pastilles</span>
-              <span class="cs_prod_link">View Product &rarr;</span>
-            </div>
-          </a>
-          <a class="cs_prod_card" href="/all-products/airis" data-name="airis" data-category="inhaled-liquid" data-strength="balanced" data-packsize="1 cartridge (0.5 mL)">
-            <div class="cs_prod_img"><img src="/assets/img/dashboard/pharmaCrop%20Relief%20Inhaled%20Liquid.webp" alt="Airis"></div>
-            <div class="cs_prod_body">
-              <h3>Airis</h3>
-              <span class="cs_prod_category">Inhaled Liquid</span>
-              <span class="cs_prod_spec">THC 25 mg/mL &nbsp;|&nbsp; CBD 25 mg/mL<br>1 cartridge (0.5 mL)</span>
-              <span class="cs_prod_link">View Product &rarr;</span>
-            </div>
-          </a>
-          <a class="cs_prod_card" href="/all-products/highland-25" data-name="highland 25" data-category="dried-flower" data-strength="thc" data-packsize="10g pack">
-            <div class="cs_prod_img"><img src="/assets/img/dashboard/Dried%20Flower%20Category.webp" alt="Highland 25"></div>
-            <div class="cs_prod_body">
-              <h3>Highland 25</h3>
-              <span class="cs_prod_category">Dried Flower</span>
-              <span class="cs_prod_spec">THC 25% &nbsp;|&nbsp; CBD &lt;1%<br>10g pack</span>
-              <span class="cs_prod_link">View Product &rarr;</span>
-            </div>
-          </a>
-          <a class="cs_prod_card" href="/all-products/clarity-1-20" data-name="clarity 1:20" data-category="oral-liquid" data-strength="cbd" data-packsize="30 mL bottle">
-            <div class="cs_prod_img"><img src="/assets/img/dashboard/Oral%20Liquid%20Category.webp" alt="Clarity 1:20"></div>
-            <div class="cs_prod_body">
-              <h3>Clarity 1:20</h3>
-              <span class="cs_prod_category">Oral Liquid</span>
-              <span class="cs_prod_spec">THC 1 mg/mL &nbsp;|&nbsp; CBD 20 mg/mL<br>30 mL bottle</span>
-              <span class="cs_prod_link">View Product &rarr;</span>
-            </div>
-          </a>
-        </div>
+        <div class="cs_prod_grid" data-prod-grid></div>
         <div class="cs_prod_empty" data-prod-empty>
           <p>No products match your filters. Try clearing them to see the full portfolio.</p>
+        </div>
+        <div class="cs_prod_empty" data-prod-loading>
+          <p>Loading products...</p>
         </div>
       </div>
     </section>
@@ -443,6 +346,8 @@ export default function Page() {
     <Script id="cs_all_products_script" strategy="afterInteractive">
       {`
         (function () {
+          var WP_API_URL = ${JSON.stringify(WP_API_URL)};
+
           if (window.PharmaCropAuth) {
             if (!window.PharmaCropAuth.requireAuth()) return;
             window.PharmaCropAuth.personalizeHeader();
@@ -461,9 +366,43 @@ export default function Page() {
             });
           }
 
+          function formatLabel(slug) {
+            return String(slug || '').replace(/[-_]+/g, ' ').replace(/\\b\\w/g, function (c) { return c.toUpperCase(); }).trim();
+          }
+
+          function classifyStrength(thc, cbd) {
+            var thcNum = parseFloat(String(thc || '').replace(/[^0-9.]/g, '')) || 0;
+            var cbdNum = parseFloat(String(cbd || '').replace(/[^0-9.]/g, '')) || 0;
+            if (thcNum > cbdNum * 1.5) return 'thc';
+            if (cbdNum > thcNum * 1.5) return 'cbd';
+            return 'balanced';
+          }
+
+          var FALLBACK_IMG = '/assets/img/dashboard/Dried%20Flower%20Category.webp';
+
+          function mapProduct(raw) {
+            var acf = raw.acf || {};
+            var media = raw._embedded && raw._embedded['wp:featuredmedia'] && raw._embedded['wp:featuredmedia'][0];
+            var image = (media && media.source_url) || FALLBACK_IMG;
+            var altImage = (typeof acf.alt_image === 'string' && acf.alt_image.indexOf('http') === 0) ? acf.alt_image : image;
+            var categorySlug = acf.category || 'uncategorised';
+            return {
+              slug: raw.slug,
+              name: raw.title && raw.title.rendered,
+              categorySlug: categorySlug,
+              category: formatLabel(categorySlug),
+              thc: acf.thc || '',
+              cbd: acf.cbd || '',
+              packSize: acf.pack_size || '',
+              strength: classifyStrength(acf.thc, acf.cbd),
+              image: image,
+              altImage: altImage,
+            };
+          }
+
           var grid = document.querySelector('[data-prod-grid]');
-          var cards = Array.prototype.slice.call(document.querySelectorAll('.cs_prod_card'));
-          var pills = Array.prototype.slice.call(document.querySelectorAll('[data-prod-pill]'));
+          var loadingEl = document.querySelector('[data-prod-loading]');
+          var pillsWrap = document.querySelector('[data-prod-pills]');
           var categorySelect = document.querySelector('[data-prod-category-select]');
           var strengthSelect = document.querySelector('[data-prod-strength]');
           var packSelect = document.querySelector('[data-prod-packsize]');
@@ -474,101 +413,151 @@ export default function Page() {
           var clearBtn = document.querySelector('[data-prod-clear]');
           var viewBtns = Array.prototype.slice.call(document.querySelectorAll('[data-prod-view]'));
 
-          function setPillActive(category) {
-            pills.forEach(function (p) {
-              p.classList.toggle('active', p.getAttribute('data-prod-pill') === category);
-            });
+          function cardHtml(p) {
+            var specLine = [p.thc ? 'THC ' + p.thc : '', p.cbd ? 'CBD ' + p.cbd : ''].filter(Boolean).join(' &nbsp;|&nbsp; ');
+            return '<a class="cs_prod_card" href="/all-products/' + p.slug + '" data-name="' + p.name.toLowerCase() + '" data-category="' + p.categorySlug + '" data-strength="' + p.strength + '" data-packsize="' + p.packSize + '">' +
+              '<div class="cs_prod_img"><img src="' + p.image + '" alt="' + p.name + '"></div>' +
+              '<div class="cs_prod_body"><h3>' + p.name + '</h3>' +
+              '<span class="cs_prod_category">' + p.category + '</span>' +
+              '<span class="cs_prod_spec">' + specLine + (p.packSize ? '<br>' + p.packSize : '') + '</span>' +
+              '<span class="cs_prod_link">View Product &rarr;</span></div></a>';
           }
 
-          function applyFilters() {
-            var category = categorySelect.value;
-            var strength = strengthSelect.value;
-            var pack = packSelect.value;
-            var query = searchInput.value.trim().toLowerCase();
-            var visibleCount = 0;
+          function initFilters(products) {
+            grid.innerHTML = products.map(cardHtml).join('');
 
-            cards.forEach(function (card) {
-              var matchesCategory = category === 'all' || card.getAttribute('data-category') === category;
-              var matchesStrength = strength === 'all' || card.getAttribute('data-strength') === strength;
-              var matchesPack = pack === 'all' || card.getAttribute('data-packsize') === pack;
-              var matchesSearch = !query || card.getAttribute('data-name').indexOf(query) !== -1 || card.getAttribute('data-category').indexOf(query) !== -1;
-              var visible = matchesCategory && matchesStrength && matchesPack && matchesSearch;
-              card.style.display = visible ? '' : 'none';
-              if (visible) visibleCount++;
+            var categories = {};
+            var packSizes = {};
+            products.forEach(function (p) {
+              categories[p.categorySlug] = (categories[p.categorySlug] || { label: p.category, count: 0 });
+              categories[p.categorySlug].count++;
+              if (p.packSize) packSizes[p.packSize] = true;
             });
 
-            countEl.textContent = visibleCount + (visibleCount === 1 ? ' PRODUCT' : ' PRODUCTS');
-            emptyEl.style.display = visibleCount === 0 ? 'block' : 'none';
-            grid.style.display = visibleCount === 0 ? 'none' : 'grid';
-          }
+            Object.keys(categories).forEach(function (slug) {
+              var btn = document.createElement('button');
+              btn.type = 'button';
+              btn.className = 'cs_prod_pill';
+              btn.setAttribute('data-prod-pill', slug);
+              btn.textContent = categories[slug].label + ' (' + categories[slug].count + ')';
+              pillsWrap.appendChild(btn);
 
-          function applySort() {
-            var mode = sortSelect.value;
-            if (mode === 'name') {
-              cards.sort(function (a, b) { return a.getAttribute('data-name').localeCompare(b.getAttribute('data-name')); });
-            } else {
-              cards.sort(function (a, b) { return cards.indexOf(a) - cards.indexOf(b); });
+              var opt = document.createElement('option');
+              opt.value = slug;
+              opt.textContent = categories[slug].label;
+              categorySelect.appendChild(opt);
+            });
+
+            Object.keys(packSizes).forEach(function (size) {
+              var opt = document.createElement('option');
+              opt.value = size;
+              opt.textContent = size;
+              packSelect.appendChild(opt);
+            });
+
+            var allPill = document.querySelector('[data-prod-pill="all"]');
+            if (allPill) allPill.textContent = 'All Products (' + products.length + ')';
+
+            var pills = Array.prototype.slice.call(document.querySelectorAll('[data-prod-pill]'));
+            var cards = Array.prototype.slice.call(document.querySelectorAll('.cs_prod_card'));
+            var originalOrder = cards.slice();
+
+            function setPillActive(category) {
+              pills.forEach(function (p) {
+                p.classList.toggle('active', p.getAttribute('data-prod-pill') === category);
+              });
             }
-          }
 
-          var originalOrder = cards.slice();
+            function applyFilters() {
+              var category = categorySelect.value;
+              var strength = strengthSelect.value;
+              var pack = packSelect.value;
+              var query = searchInput.value.trim().toLowerCase();
+              var visibleCount = 0;
 
-          pills.forEach(function (pill) {
-            pill.addEventListener('click', function () {
-              var category = pill.getAttribute('data-prod-pill');
-              categorySelect.value = category;
-              setPillActive(category);
+              cards.forEach(function (card) {
+                var matchesCategory = category === 'all' || card.getAttribute('data-category') === category;
+                var matchesStrength = strength === 'all' || card.getAttribute('data-strength') === strength;
+                var matchesPack = pack === 'all' || card.getAttribute('data-packsize') === pack;
+                var matchesSearch = !query || card.getAttribute('data-name').indexOf(query) !== -1 || card.getAttribute('data-category').indexOf(query) !== -1;
+                var visible = matchesCategory && matchesStrength && matchesPack && matchesSearch;
+                card.style.display = visible ? '' : 'none';
+                if (visible) visibleCount++;
+              });
+
+              countEl.textContent = visibleCount + (visibleCount === 1 ? ' PRODUCT' : ' PRODUCTS');
+              emptyEl.style.display = visibleCount === 0 ? 'block' : 'none';
+              grid.style.display = visibleCount === 0 ? 'none' : 'grid';
+            }
+
+            pills.forEach(function (pill) {
+              pill.addEventListener('click', function () {
+                var category = pill.getAttribute('data-prod-pill');
+                categorySelect.value = category;
+                setPillActive(category);
+                applyFilters();
+              });
+            });
+
+            categorySelect.addEventListener('change', function () {
+              setPillActive(categorySelect.value);
               applyFilters();
             });
-          });
+            strengthSelect.addEventListener('change', applyFilters);
+            packSelect.addEventListener('change', applyFilters);
+            searchInput.addEventListener('input', applyFilters);
 
-          categorySelect.addEventListener('change', function () {
-            setPillActive(categorySelect.value);
-            applyFilters();
-          });
-          strengthSelect.addEventListener('change', applyFilters);
-          packSelect.addEventListener('change', applyFilters);
-          searchInput.addEventListener('input', applyFilters);
-
-          sortSelect.addEventListener('change', function () {
-            var mode = sortSelect.value;
-            var ordered = mode === 'name'
-              ? originalOrder.slice().sort(function (a, b) { return a.getAttribute('data-name').localeCompare(b.getAttribute('data-name')); })
-              : originalOrder;
-            ordered.forEach(function (card) { grid.appendChild(card); });
-          });
-
-          clearBtn.addEventListener('click', function () {
-            categorySelect.value = 'all';
-            strengthSelect.value = 'all';
-            packSelect.value = 'all';
-            searchInput.value = '';
-            setPillActive('all');
-            applyFilters();
-          });
-
-          viewBtns.forEach(function (btn) {
-            btn.addEventListener('click', function () {
-              viewBtns.forEach(function (b) { b.classList.remove('active'); });
-              btn.classList.add('active');
-              grid.classList.toggle('cs_prod_grid_list', btn.getAttribute('data-prod-view') === 'list');
+            sortSelect.addEventListener('change', function () {
+              var mode = sortSelect.value;
+              var ordered = mode === 'name'
+                ? originalOrder.slice().sort(function (a, b) { return a.getAttribute('data-name').localeCompare(b.getAttribute('data-name')); })
+                : originalOrder;
+              ordered.forEach(function (card) { grid.appendChild(card); });
             });
-          });
 
-          var searchToggle = document.querySelector('[data-prod-search-toggle]');
-          if (searchToggle) {
-            searchToggle.addEventListener('click', function () {
-              searchInput.focus();
+            clearBtn.addEventListener('click', function () {
+              categorySelect.value = 'all';
+              strengthSelect.value = 'all';
+              packSelect.value = 'all';
+              searchInput.value = '';
+              setPillActive('all');
+              applyFilters();
             });
+
+            viewBtns.forEach(function (btn) {
+              btn.addEventListener('click', function () {
+                viewBtns.forEach(function (b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+                grid.classList.toggle('cs_prod_grid_list', btn.getAttribute('data-prod-view') === 'list');
+              });
+            });
+
+            var searchToggle = document.querySelector('[data-prod-search-toggle]');
+            if (searchToggle) {
+              searchToggle.addEventListener('click', function () {
+                searchInput.focus();
+              });
+            }
+
+            var urlParams = new URLSearchParams(window.location.search);
+            var initialCategory = urlParams.get('category');
+            if (initialCategory) {
+              categorySelect.value = initialCategory;
+              setPillActive(initialCategory);
+            }
+            applyFilters();
           }
 
-          var params = new URLSearchParams(window.location.search);
-          var initialCategory = params.get('category');
-          if (initialCategory) {
-            categorySelect.value = initialCategory;
-            setPillActive(initialCategory);
-            applyFilters();
-          }
+          fetch(WP_API_URL + '/wp-json/wp/v2/product?per_page=100&_embed')
+            .then(function (res) { return res.ok ? res.json() : []; })
+            .then(function (raw) {
+              var products = (raw || []).map(mapProduct);
+              if (loadingEl) loadingEl.style.display = 'none';
+              initFilters(products);
+            })
+            .catch(function () {
+              if (loadingEl) loadingEl.textContent = 'Could not load products right now.';
+            });
         })();
       `}
     </Script>
