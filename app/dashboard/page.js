@@ -170,7 +170,7 @@ export default function Page() {
         .cs_dash_cat_grid { grid-template-columns: 1fr; }
       }
     </style>
-    <section style="padding: 70px 0 20px; background: #fff;">
+    <section style="padding: 70px 0; background: #fff;">
       <div class="container">
         <div class="cs_dash_section_head wow fadeInUp">
           <div>
