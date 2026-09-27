@@ -79,9 +79,13 @@ export default function Page() {
     <!-- End Dashboard Header -->
     <!-- Start Dashboard Hero -->
     <style>
-      .cs_dash_hero { padding: 60px 0; background: #f7faf8; }
-      .cs_dash_hero_grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 50px; align-items: center; }
-      .cs_dash_hero_eyebrow { display: block; color: #78dca6; background: rgba(120,220,166,0.15); border-radius: 20px; padding: 6px 16px; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 20px; }
+      .cs_dash_hero { position: relative; overflow: hidden; }
+      .cs_dash_hero_bg { position: absolute; inset: 0; z-index: 0; }
+      .cs_dash_hero_bg img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .cs_dash_hero_bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, #f7faf8 0%, #f7faf8 34%, rgba(247,250,248,0.92) 44%, rgba(247,250,248,0.55) 56%, rgba(247,250,248,0.05) 68%); }
+      .cs_dash_hero_inner { position: relative; z-index: 1; min-height: 420px; display: flex; align-items: center; padding: 70px 0; }
+      .cs_dash_hero_content { max-width: 540px; }
+      .cs_dash_hero_eyebrow { display: block; color: #78dca6; background: rgba(120,220,166,0.15); border-radius: 20px; padding: 6px 16px; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 20px; width: fit-content; }
       .cs_dash_hero h1 { color: #024242; font-size: 40px; font-weight: 800; line-height: 1.25; margin: 0 0 16px; }
       .cs_dash_hero p.cs_dash_hero_desc { color: #666; font-size: 16px; line-height: 1.7; margin: 0 0 30px; max-width: 520px; }
       .cs_dash_search { display: flex; align-items: center; gap: 10px; background: #fff; border: 1px solid rgba(2,66,66,0.15); border-radius: 40px; padding: 8px 8px 8px 26px; box-shadow: 0 10px 30px rgba(2,66,66,0.06); max-width: 560px; }
@@ -93,26 +97,30 @@ export default function Page() {
       .cs_dash_popular span.cs_dash_popular_label { color: #666; font-size: 13px; font-weight: 600; }
       .cs_dash_chip { display: inline-flex; align-items: center; background: #fff; border: 1px solid rgba(2,66,66,0.15); border-radius: 20px; padding: 7px 16px; color: #024242; font-size: 13px; font-weight: 600; text-decoration: none; }
       .cs_dash_chip:hover { background: #024242; color: #fff; border-color: #024242; }
-      .cs_dash_hero_media { position: relative; border-radius: 20px; overflow: hidden; min-height: 380px; }
-      .cs_dash_hero_media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-      .cs_dash_hero_card { position: absolute; left: 24px; right: 24px; bottom: 24px; background: rgba(2,42,42,0.82); backdrop-filter: blur(6px); border-radius: 16px; padding: 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+      .cs_dash_hero_card { position: absolute; right: 0; bottom: 0; width: 340px; background: rgba(2,42,42,0.82); backdrop-filter: blur(6px); border-radius: 16px; padding: 24px; display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; }
       .cs_dash_hero_card_icon { width: 40px; height: 40px; border-radius: 50%; background: rgba(120,220,166,0.2); color: #78dca6; display: flex; align-items: center; justify-content: center; font-size: 16px; flex: none; margin-bottom: 10px; }
       .cs_dash_hero_card h4 { color: #fff; font-size: 17px; font-weight: 800; margin: 0 0 6px; }
-      .cs_dash_hero_card p { color: rgba(255,255,255,0.75); font-size: 13px; line-height: 1.6; margin: 0; max-width: 300px; }
+      .cs_dash_hero_card p { color: rgba(255,255,255,0.75); font-size: 13px; line-height: 1.6; margin: 0; }
       .cs_dash_hero_card_link { width: 42px; height: 42px; border-radius: 50%; background: #78dca6; color: #024242; display: flex; align-items: center; justify-content: center; font-size: 15px; flex: none; text-decoration: none; }
       @media (max-width: 991px) {
-        .cs_dash_hero_grid { grid-template-columns: 1fr; }
+        .cs_dash_hero_bg::after { background: linear-gradient(180deg, #f7faf8 0%, #f7faf8 46%, rgba(247,250,248,0.85) 60%, rgba(247,250,248,0.55) 100%); }
+        .cs_dash_hero_inner { flex-direction: column; align-items: flex-start; min-height: 0; padding: 130px 0 260px; }
+        .cs_dash_hero_content { max-width: 100%; }
         .cs_dash_hero h1 { font-size: 32px; }
-        .cs_dash_hero_media { min-height: 300px; }
+        .cs_dash_hero_card { left: 0; right: 0; width: auto; bottom: 40px; }
       }
       @media (max-width: 575px) {
         .cs_dash_hero_card { flex-direction: column; align-items: flex-start; }
+        .cs_dash_hero_inner { padding-bottom: 320px; }
       }
     </style>
     <section class="cs_dash_hero">
+      <div class="cs_dash_hero_bg">
+        <img src="/assets/img/dashboard/good%20to%20see%20you.webp" alt="PharmaCrop cultivation team">
+      </div>
       <div class="container">
-        <div class="cs_dash_hero_grid">
-          <div class="wow fadeInUp">
+        <div class="cs_dash_hero_inner">
+          <div class="cs_dash_hero_content wow fadeInUp">
             <span class="cs_dash_hero_eyebrow">Welcome Back</span>
             <h1>Good to see you,<br>Dr. Sarah Mitchell</h1>
             <p class="cs_dash_hero_desc">Your trusted source for Australian-grown, pharmaceutical-grade medicinal cannabis information, products and clinical resources.</p>
@@ -129,16 +137,13 @@ export default function Page() {
               <a href="/products" class="cs_dash_chip">Product catalogue</a>
             </div>
           </div>
-          <div class="cs_dash_hero_media wow fadeInRight">
-            <img src="/assets/img/dashboard/good%20to%20see%20you.webp" alt="PharmaCrop cultivation team">
-            <div class="cs_dash_hero_card">
-              <div>
-                <div class="cs_dash_hero_card_icon"><i class="fa-solid fa-leaf"></i></div>
-                <h4>Australian-grown.<br>Complete control.</h4>
-                <p>From cultivars to patient outcomes. Built for better care.</p>
-              </div>
-              <a href="/products" class="cs_dash_hero_card_link" aria-label="View products"><i class="fa-solid fa-arrow-right"></i></a>
+          <div class="cs_dash_hero_card wow fadeInRight">
+            <div>
+              <div class="cs_dash_hero_card_icon"><i class="fa-solid fa-leaf"></i></div>
+              <h4>Australian-grown.<br>Complete control.</h4>
+              <p>From cultivars to patient outcomes. Built for better care.</p>
             </div>
+            <a href="/products" class="cs_dash_hero_card_link" aria-label="View products"><i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
