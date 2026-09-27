@@ -1,44 +1,17 @@
 import Script from "next/script";
-import { notFound } from "next/navigation";
-import { products, getProductBySlug, getRelatedProducts } from "../products-data";
 
-export function generateStaticParams() {
-  return products.map((p) => ({ slug: p.slug }));
-}
+export const metadata = {
+  title: "Product - PharmaCrop HCP Portal",
+};
 
-export async function generateMetadata({ params }) {
-  const { slug } = await params;
-  const product = getProductBySlug(slug);
-  if (!product) {
-    return { title: "Product - PharmaCrop HCP Portal" };
-  }
-  return { title: `${product.name} - PharmaCrop HCP Portal` };
-}
+const WP_API_URL = process.env.NEXT_PUBLIC_WP_API_URL || "http://pharmacrop.local";
 
-export default async function Page({ params }) {
-  const { slug } = await params;
-  const product = getProductBySlug(slug);
-  if (!product) {
-    notFound();
-  }
-  const related = getRelatedProducts(product, 4);
-
-  const relatedHtml = related
-    .map(
-      (r) => `
-          <a href="/all-products/${r.slug}" class="cs_pd_related_card">
-            <div class="cs_pd_related_img"><img src="${r.image}" alt="${r.name}"></div>
-            <div class="cs_pd_related_body">
-              <h4>${r.name}</h4>
-              <span>${r.category}</span>
-              <span class="cs_pd_related_spec">THC ${r.thc} &nbsp;|&nbsp; CBD ${r.cbd}<br>${r.packSize}</span>
-              <span class="cs_pd_related_link">View Product <i class="fa-solid fa-arrow-right"></i></span>
-            </div>
-          </a>`
-    )
-    .join("");
-
-  const html = `
+export default function Page() {
+  return (
+    <>
+    <div
+      dangerouslySetInnerHTML={{
+        __html: `
     <!-- Start Preloader -->
     <div class="cs_preloader" style="background-color:#000;">
       <img src="/assets/img/pharma_Crop_logo_loader.gif" alt="Loading" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(70vw,480px);height:auto;">
@@ -91,7 +64,7 @@ export default async function Page({ params }) {
               </button>
               <div class="cs_dash_user_menu">
                 <a href="/profile">My Profile / Account</a>
-                <a href="/">Sign Out</a>
+                <a href="/" data-logout-link>Sign Out</a>
               </div>
             </div>
           </div>
@@ -132,46 +105,6 @@ export default async function Page({ params }) {
         .cs_pd_hero_grid { grid-template-columns: 1fr; }
         .cs_pd_stats { grid-template-columns: repeat(2, 1fr); }
       }
-    </style>
-    <div class="cs_pd_breadcrumb">
-      <div class="container">
-        <a href="/all-products">Products</a> &gt; <a href="/all-products?category=${product.categorySlug}">${product.category}</a> &gt; <span class="current">${product.name}</span>
-      </div>
-    </div>
-    <section class="cs_pd_hero">
-      <div class="container">
-        <div class="cs_pd_hero_grid">
-          <div class="wow fadeInUp">
-            <div class="cs_pd_gallery_main"><img src="${product.image}" alt="${product.name}" data-pd-main-img></div>
-            <div class="cs_pd_gallery_thumbs">
-              <button type="button" class="active" data-pd-thumb="${product.image}"><img src="${product.image}" alt="${product.name} thumbnail 1"></button>
-              <button type="button" data-pd-thumb="${product.altImage}"><img src="${product.altImage}" alt="${product.name} thumbnail 2"></button>
-              <button type="button" data-pd-thumb="${product.image}"><img src="${product.image}" alt="${product.name} thumbnail 3"></button>
-            </div>
-          </div>
-          <div class="wow fadeInUp" data-wow-delay="0.1s">
-            <span class="cs_pd_eyebrow">HCP Portal</span>
-            <h1>${product.name}</h1>
-            <span class="cs_pd_category">${product.category}</span>
-            <p class="cs_pd_desc">A premium ${product.category.toLowerCase()} product, cultivated and processed to PharmaCrop&rsquo;s high quality standards. ${product.name} is available to healthcare professionals with detailed product information and supporting documentation.</p>
-            <div class="cs_pd_stats">
-              <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-leaf"></i></span><span><span class="label">THC</span><span class="value">${product.thc}</span></span></div>
-              <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-flask"></i></span><span><span class="label">CBD</span><span class="value">${product.cbd}</span></span></div>
-              <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-box"></i></span><span><span class="label">Pack Size</span><span class="value">${product.packSize}</span></span></div>
-              <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-gear"></i></span><span><span class="label">Dosage Form</span><span class="value">${product.dosageForm}</span></span></div>
-            </div>
-            <div class="cs_pd_ctas">
-              <a href="/contact" class="cs_pd_btn_primary"><i class="fa-solid fa-download"></i> Download Product Information <i class="fa-solid fa-arrow-right"></i></a>
-              <a href="#documents" class="cs_pd_btn_outline"><i class="fa-solid fa-file-lines"></i> View Documents</a>
-            </div>
-            <p class="cs_pd_note">For healthcare professionals only.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Product Detail Hero -->
-    <!-- Start Product Overview -->
-    <style>
       .cs_pd_section_head { margin-bottom: 24px; }
       .cs_pd_section_head h2 { color: #024242; font-size: 26px; font-weight: 800; margin: 0 0 8px; }
       .cs_pd_section_head p { color: #666; font-size: 14px; margin: 0; }
@@ -184,25 +117,6 @@ export default async function Page({ params }) {
         .cs_pd_overview_row { flex-direction: column; }
         .cs_pd_overview_img { width: 100%; }
       }
-    </style>
-    <section style="padding: 60px 0; background: #fff;">
-      <div class="container">
-        <div class="cs_pd_section_head wow fadeInUp">
-          <h2>Product Overview</h2>
-        </div>
-        <div class="cs_pd_overview_row wow fadeInUp">
-          <div class="cs_pd_overview_text">
-            <p>${product.name} is a ${product.category.toLowerCase()} product, cultivated and processed to meet PharmaCrop&rsquo;s quality standards. This product is provided for healthcare professionals with detailed product information, including product specifications and supporting documentation.</p>
-          </div>
-          <div class="cs_pd_overview_img">
-            <img src="${product.altImage}" alt="${product.name} overview">
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Product Overview -->
-    <!-- Start Product Details -->
-    <style>
       .cs_pd_details_grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
       .cs_pd_table { background: #fff; border: 1px solid rgba(2,66,66,0.1); border-radius: 12px; overflow: hidden; }
       .cs_pd_table_row { display: flex; align-items: center; gap: 14px; padding: 16px 20px; border-bottom: 1px solid rgba(2,66,66,0.08); }
@@ -213,33 +127,6 @@ export default async function Page({ params }) {
       @media (max-width: 767px) {
         .cs_pd_details_grid { grid-template-columns: 1fr; }
       }
-    </style>
-    <section style="padding: 60px 0; background: #f7faf8;">
-      <div class="container">
-        <div class="cs_pd_section_head wow fadeInUp">
-          <h2>Product Details</h2>
-          <p>Key product information and specifications for ${product.name}.</p>
-        </div>
-        <div class="cs_pd_details_grid">
-          <div class="cs_pd_table wow fadeInUp">
-            <div class="cs_pd_table_row"><i class="fa-solid fa-tag"></i><span class="k">Product Name</span><span class="v">${product.name}</span></div>
-            <div class="cs_pd_table_row"><i class="fa-solid fa-leaf"></i><span class="k">Dosage Form</span><span class="v">${product.dosageForm}</span></div>
-            <div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">THC Strength</span><span class="v">${product.thc}</span></div>
-            <div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">CBD Strength</span><span class="v">${product.cbd}</span></div>
-          </div>
-          <div class="cs_pd_table wow fadeInUp" data-wow-delay="0.1s">
-            <div class="cs_pd_table_row"><i class="fa-solid fa-seedling"></i><span class="k">${product.typeLabel}</span><span class="v">${product.typeValue}</span></div>
-            <div class="cs_pd_table_row"><i class="fa-solid fa-box-open"></i><span class="k">Presentation</span><span class="v">${product.presentation}</span></div>
-            <div class="cs_pd_table_row"><i class="fa-solid fa-box"></i><span class="k">Pack Size</span><span class="v">${product.packSize}</span></div>
-            <div class="cs_pd_table_row"><i class="fa-solid fa-list"></i><span class="k">Quantity</span><span class="v">${product.quantity}</span></div>
-            <div class="cs_pd_table_row"><i class="fa-solid fa-file-lines"></i><span class="k">Other Product Characteristics</span><span class="v">${product.otherCharacteristics}</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Product Details -->
-    <!-- Start Cultivar Information -->
-    <style>
       .cs_pd_cultivar_grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
       .cs_pd_cultivar_card { background: #fff; border: 1px solid rgba(2,66,66,0.1); border-radius: 12px; padding: 24px; }
       .cs_pd_cultivar_icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(120,220,166,0.15); color: #024242; display: flex; align-items: center; justify-content: center; font-size: 16px; margin-bottom: 16px; }
@@ -248,35 +135,6 @@ export default async function Page({ params }) {
       @media (max-width: 767px) {
         .cs_pd_cultivar_grid { grid-template-columns: 1fr; }
       }
-    </style>
-    <section style="padding: 60px 0; background: #fff;">
-      <div class="container">
-        <div class="cs_pd_section_head wow fadeInUp">
-          <h2>Cultivar Information</h2>
-          <p>Information about the cultivar and product characteristics.</p>
-        </div>
-        <div class="cs_pd_cultivar_grid">
-          <div class="cs_pd_cultivar_card wow fadeInUp">
-            <div class="cs_pd_cultivar_icon"><i class="fa-solid fa-seedling"></i></div>
-            <h4>${product.typeFieldLabel}</h4>
-            <p>${product.typeDesc}</p>
-          </div>
-          <div class="cs_pd_cultivar_card wow fadeInUp" data-wow-delay="0.1s">
-            <div class="cs_pd_cultivar_icon"><i class="fa-solid fa-diagram-project"></i></div>
-            <h4>Cannabinoid Composition</h4>
-            <p><strong>${product.cannabinoid}</strong><br>Full cannabinoid profile and additional analysis information is available in the product documentation.</p>
-          </div>
-          <div class="cs_pd_cultivar_card wow fadeInUp" data-wow-delay="0.2s">
-            <div class="cs_pd_cultivar_icon"><i class="fa-solid fa-gear"></i></div>
-            <h4>Other Characteristics</h4>
-            <p>${product.otherCharacteristics} Grown and processed in accordance with PharmaCrop&rsquo;s quality standards.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Cultivar Information -->
-    <!-- Start Presentation and Packaging -->
-    <style>
       .cs_pd_pack_row { display: flex; align-items: stretch; gap: 24px; }
       .cs_pd_pack_img { flex: 0 0 42%; border-radius: 14px; overflow: hidden; }
       .cs_pd_pack_img img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 200px; }
@@ -284,115 +142,12 @@ export default async function Page({ params }) {
       @media (max-width: 767px) {
         .cs_pd_pack_row { flex-direction: column; }
       }
-    </style>
-    <section style="padding: 60px 0; background: #f7faf8;">
-      <div class="container">
-        <div class="cs_pd_section_head wow fadeInUp">
-          <h2>Presentation &amp; Packaging</h2>
-          <p>Product presentation and packaging details for ${product.name}.</p>
-        </div>
-        <div class="cs_pd_pack_row wow fadeInUp">
-          <div class="cs_pd_pack_img"><img src="${product.image}" alt="${product.name} packaging"></div>
-          <div class="cs_pd_pack_table cs_pd_table">
-            <div class="cs_pd_table_row"><i class="fa-solid fa-box"></i><span class="k">Pack Size</span><span class="v">${product.packSize}</span></div>
-            <div class="cs_pd_table_row"><i class="fa-solid fa-list"></i><span class="k">Quantity</span><span class="v">${product.quantity}</span></div>
-            <div class="cs_pd_table_row"><i class="fa-solid fa-box-open"></i><span class="k">Presentation</span><span class="v">${product.presentation}</span></div>
-            <div class="cs_pd_table_row"><i class="fa-solid fa-leaf"></i><span class="k">Dosage Form</span><span class="v">${product.dosageForm}</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Presentation and Packaging -->
-    <!-- Start Professional Information -->
-    <style>
       .cs_pd_prof_row { display: flex; gap: 40px; align-items: flex-start; }
       .cs_pd_prof_row .cs_pd_section_head { flex: 0 0 320px; margin-bottom: 0; }
       .cs_pd_prof_row p.cs_pd_prof_text { flex: 1; color: #666; font-size: 15px; line-height: 1.7; margin: 0; }
       @media (max-width: 767px) {
         .cs_pd_prof_row { flex-direction: column; gap: 16px; }
       }
-    </style>
-    <section style="padding: 60px 0 30px; background: #fff;">
-      <div class="container">
-        <div class="cs_pd_prof_row wow fadeInUp">
-          <div class="cs_pd_section_head">
-            <h2>Professional Information</h2>
-            <p>Detailed product information for healthcare professionals.</p>
-          </div>
-          <p class="cs_pd_prof_text">Comprehensive professional information, including product specifications, analytical data and supporting documentation, is available for healthcare professionals. Please refer to the relevant documents below.</p>
-        </div>
-      </div>
-    </section>
-    <!-- End Professional Information -->
-    <!-- Start Documents & Downloads -->
-    <style>
-      .cs_pd_doc_grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-      .cs_pd_doc_card { background: #fff; border: 1px solid rgba(2,66,66,0.1); border-radius: 12px; padding: 20px; }
-      .cs_pd_doc_icon { width: 34px; height: 34px; border-radius: 8px; background: rgba(120,220,166,0.15); color: #024242; display: flex; align-items: center; justify-content: center; font-size: 14px; margin-bottom: 14px; }
-      .cs_pd_doc_card h4 { color: #024242; font-size: 14px; font-weight: 800; margin: 0 0 4px; }
-      .cs_pd_doc_card span.meta { color: #999; font-size: 12px; display: block; margin-bottom: 14px; }
-      .cs_pd_doc_actions { display: flex; gap: 16px; }
-      .cs_pd_doc_actions a { color: #024242; font-weight: 700; font-size: 12.5px; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; }
-      .cs_pd_doc_actions a:hover { color: #78dca6; }
-      @media (max-width: 991px) {
-        .cs_pd_doc_grid { grid-template-columns: repeat(2, 1fr); }
-      }
-      @media (max-width: 575px) {
-        .cs_pd_doc_grid { grid-template-columns: 1fr; }
-      }
-    </style>
-    <section id="documents" style="padding: 30px 0 60px; background: #fff; scroll-margin-top: 100px;">
-      <div class="container">
-        <div class="cs_pd_section_head wow fadeInUp">
-          <h2>Documents &amp; Downloads</h2>
-          <p>Access product information and supporting documentation.</p>
-        </div>
-        <div class="cs_pd_doc_grid">
-          <div class="cs_pd_doc_card wow fadeInUp">
-            <div class="cs_pd_doc_icon"><i class="fa-solid fa-file-lines"></i></div>
-            <h4>Product Information</h4>
-            <span class="meta">PDF &middot; 1.2 MB</span>
-            <div class="cs_pd_doc_actions">
-              <a href="${product.image}" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View</a>
-              <a href="/contact"><i class="fa-solid fa-download"></i> Download</a>
-            </div>
-          </div>
-          <div class="cs_pd_doc_card wow fadeInUp" data-wow-delay="0.1s">
-            <div class="cs_pd_doc_icon"><i class="fa-solid fa-file-lines"></i></div>
-            <h4>Consumer Medicine Information</h4>
-            <span class="meta">PDF &middot; 1.1 MB</span>
-            <div class="cs_pd_doc_actions">
-              <a href="${product.altImage}" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View</a>
-              <a href="/contact"><i class="fa-solid fa-download"></i> Download</a>
-            </div>
-          </div>
-          <div class="cs_pd_doc_card wow fadeInUp" data-wow-delay="0.2s">
-            <div class="cs_pd_doc_icon"><i class="fa-solid fa-file-lines"></i></div>
-            <h4>Product Technical Sheet</h4>
-            <span class="meta">PDF &middot; 800 KB</span>
-            <div class="cs_pd_doc_actions">
-              <a href="${product.image}" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View</a>
-              <a href="/contact"><i class="fa-solid fa-download"></i> Download</a>
-            </div>
-          </div>
-          <div class="cs_pd_doc_card wow fadeInUp" data-wow-delay="0.3s">
-            <div class="cs_pd_doc_icon"><i class="fa-solid fa-file-lines"></i></div>
-            <h4>Supporting HCP Documentation</h4>
-            <span class="meta">PDF &middot; 950 KB</span>
-            <div class="cs_pd_doc_actions">
-              <a href="${product.altImage}" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View</a>
-              <a href="/contact"><i class="fa-solid fa-download"></i> Download</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Documents & Downloads -->
-    ${
-      related.length
-        ? `
-    <!-- Start Related Products -->
-    <style>
       .cs_pd_related_grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
       .cs_pd_related_card { background: #fff; border: 1px solid rgba(2,66,66,0.1); border-radius: 12px; overflow: hidden; text-decoration: none; display: block; }
       .cs_pd_related_img { height: 130px; overflow: hidden; }
@@ -409,23 +164,12 @@ export default async function Page({ params }) {
       @media (max-width: 575px) {
         .cs_pd_related_grid { grid-template-columns: 1fr; }
       }
+      .cs_pd_loading { text-align: center; padding: 80px 20px; color: #999; }
     </style>
-    <section style="padding: 0 0 70px; background: #fff;">
-      <div class="container">
-        <div class="cs_dash_section_head wow fadeInUp" style="display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:24px; gap:20px; flex-wrap:wrap;">
-          <div class="cs_pd_section_head" style="margin-bottom:0;">
-            <h2>Related Products</h2>
-            <p>Explore other ${product.category.toLowerCase()} products in our portfolio.</p>
-          </div>
-          <a href="/all-products?category=${product.categorySlug}" style="color:#024242; font-weight:700; font-size:14px; text-decoration:none;">View All ${product.category} Products &rarr;</a>
-        </div>
-        <div class="cs_pd_related_grid">${relatedHtml}
-        </div>
-      </div>
-    </section>
-    <!-- End Related Products -->`
-        : ""
-    }
+    <div data-pd-content>
+      <div class="cs_pd_loading">Loading product...</div>
+    </div>
+    <!-- End Product Detail -->
     <!-- Start CTA -->
     <style>
       .cs_pd_cta_section { padding: 70px 0; background: #024242 url('/assets/img/dashboard/working%20together.webp') center center / cover no-repeat; }
@@ -479,25 +223,177 @@ export default async function Page({ params }) {
       </div>
     </footer>
     <!-- End Dashboard Footer -->
-  `;
+`,
+      }}
+    />
+    <Script id="cs_product_detail_script" strategy="afterInteractive">
+      {`
+        (function () {
+          var WP_API_URL = ${JSON.stringify(WP_API_URL)};
 
-  return (
-    <>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-      <Script id="cs_product_detail_script" strategy="afterInteractive">
-        {`
-          (function () {
-            var userToggle = document.querySelector('[data-dash-user-toggle]');
-            var userWrap = document.querySelector('[data-dash-user]');
-            if (userToggle && userWrap) {
-              userToggle.addEventListener('click', function (e) {
-                e.stopPropagation();
-                userWrap.classList.toggle('active');
-              });
-              document.addEventListener('click', function () {
-                userWrap.classList.remove('active');
-              });
-            }
+          if (window.PharmaCropAuth) {
+            if (!window.PharmaCropAuth.requireAuth()) return;
+            window.PharmaCropAuth.personalizeHeader();
+            window.PharmaCropAuth.wireLogout();
+          }
+
+          var userToggle = document.querySelector('[data-dash-user-toggle]');
+          var userWrap = document.querySelector('[data-dash-user]');
+          if (userToggle && userWrap) {
+            userToggle.addEventListener('click', function (e) {
+              e.stopPropagation();
+              userWrap.classList.toggle('active');
+            });
+            document.addEventListener('click', function () {
+              userWrap.classList.remove('active');
+            });
+          }
+
+          function formatLabel(slug) {
+            return String(slug || '').replace(/[-_]+/g, ' ').replace(/\\b\\w/g, function (c) { return c.toUpperCase(); }).trim();
+          }
+
+          var FALLBACK_IMG = '/assets/img/dashboard/Dried%20Flower%20Category.webp';
+
+          function mapProduct(raw) {
+            var acf = raw.acf || {};
+            var media = raw._embedded && raw._embedded['wp:featuredmedia'] && raw._embedded['wp:featuredmedia'][0];
+            var image = (media && media.source_url) || FALLBACK_IMG;
+            var altImage = (typeof acf.alt_image === 'string' && acf.alt_image.indexOf('http') === 0) ? acf.alt_image : image;
+            var categorySlug = acf.category || 'uncategorised';
+            var category = formatLabel(categorySlug);
+            return {
+              slug: raw.slug,
+              name: (raw.title && raw.title.rendered) || '',
+              categorySlug: categorySlug,
+              category: category,
+              dosageForm: category,
+              thc: acf.thc || '—',
+              cbd: acf.cbd || '—',
+              packSize: acf.pack_size || '—',
+              quantity: acf.quantity || '—',
+              presentation: acf.presentation || '—',
+              otherCharacteristics: acf.other_characteristics || '',
+              typeLabel: acf.type_label || 'Type',
+              typeFieldLabel: acf.type_label || 'Type',
+              typeValue: acf.type_value || '—',
+              typeDesc: acf.type_desc || '',
+              cannabinoid: acf.cannabinoid || '',
+              image: image,
+              altImage: altImage,
+            };
+          }
+
+          function relatedCardHtml(r) {
+            return '<a href="/all-products/' + r.slug + '" class="cs_pd_related_card">' +
+              '<div class="cs_pd_related_img"><img src="' + r.image + '" alt="' + r.name + '"></div>' +
+              '<div class="cs_pd_related_body"><h4>' + r.name + '</h4><span>' + r.category + '</span>' +
+              '<span class="cs_pd_related_spec">THC ' + r.thc + ' &nbsp;|&nbsp; CBD ' + r.cbd + '<br>' + r.packSize + '</span>' +
+              '<span class="cs_pd_related_link">View Product <i class="fa-solid fa-arrow-right"></i></span></div></a>';
+          }
+
+          function renderContent(p, related) {
+            var relatedHtml = related.map(relatedCardHtml).join('');
+            var relatedSection = related.length ? (
+              '<section style="padding: 0 0 70px; background: #fff;">' +
+              '<div class="container">' +
+              '<div class="cs_dash_section_head wow fadeInUp" style="display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:24px; gap:20px; flex-wrap:wrap;">' +
+              '<div class="cs_pd_section_head" style="margin-bottom:0;"><h2>Related Products</h2><p>Explore other ' + p.category.toLowerCase() + ' products in our portfolio.</p></div>' +
+              '<a href="/all-products?category=' + p.categorySlug + '" style="color:#024242; font-weight:700; font-size:14px; text-decoration:none;">View All ' + p.category + ' Products &rarr;</a>' +
+              '</div>' +
+              '<div class="cs_pd_related_grid">' + relatedHtml + '</div>' +
+              '</div></section>'
+            ) : '';
+
+            return (
+              '<div class="cs_pd_breadcrumb"><div class="container">' +
+              '<a href="/all-products">Products</a> &gt; <a href="/all-products?category=' + p.categorySlug + '">' + p.category + '</a> &gt; <span class="current">' + p.name + '</span>' +
+              '</div></div>' +
+              '<section class="cs_pd_hero"><div class="container"><div class="cs_pd_hero_grid">' +
+              '<div class="wow fadeInUp">' +
+              '<div class="cs_pd_gallery_main"><img src="' + p.image + '" alt="' + p.name + '" data-pd-main-img></div>' +
+              '<div class="cs_pd_gallery_thumbs">' +
+              '<button type="button" class="active" data-pd-thumb="' + p.image + '"><img src="' + p.image + '" alt="' + p.name + ' thumbnail 1"></button>' +
+              '<button type="button" data-pd-thumb="' + p.altImage + '"><img src="' + p.altImage + '" alt="' + p.name + ' thumbnail 2"></button>' +
+              '</div></div>' +
+              '<div class="wow fadeInUp" data-wow-delay="0.1s">' +
+              '<span class="cs_pd_eyebrow">HCP Portal</span><h1>' + p.name + '</h1>' +
+              '<span class="cs_pd_category">' + p.category + '</span>' +
+              '<p class="cs_pd_desc">A premium ' + p.category.toLowerCase() + ' product, cultivated and processed to PharmaCrop’s high quality standards. ' + p.name + ' is available to healthcare professionals with detailed product information and supporting documentation.</p>' +
+              '<div class="cs_pd_stats">' +
+              '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-leaf"></i></span><span><span class="label">THC</span><span class="value">' + p.thc + '</span></span></div>' +
+              '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-flask"></i></span><span><span class="label">CBD</span><span class="value">' + p.cbd + '</span></span></div>' +
+              '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-box"></i></span><span><span class="label">Pack Size</span><span class="value">' + p.packSize + '</span></span></div>' +
+              '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-gear"></i></span><span><span class="label">Dosage Form</span><span class="value">' + p.dosageForm + '</span></span></div>' +
+              '</div>' +
+              '<div class="cs_pd_ctas">' +
+              '<a href="/contact" class="cs_pd_btn_primary"><i class="fa-solid fa-download"></i> Download Product Information <i class="fa-solid fa-arrow-right"></i></a>' +
+              '<a href="#documents" class="cs_pd_btn_outline"><i class="fa-solid fa-file-lines"></i> View Documents</a>' +
+              '</div><p class="cs_pd_note">For healthcare professionals only.</p>' +
+              '</div></div></div></section>' +
+              '<section style="padding: 60px 0; background: #fff;"><div class="container">' +
+              '<div class="cs_pd_section_head wow fadeInUp"><h2>Product Overview</h2></div>' +
+              '<div class="cs_pd_overview_row wow fadeInUp">' +
+              '<div class="cs_pd_overview_text"><p>' + p.name + ' is a ' + p.category.toLowerCase() + ' product, cultivated and processed to meet PharmaCrop’s quality standards. This product is provided for healthcare professionals with detailed product information, including product specifications and supporting documentation.</p></div>' +
+              '<div class="cs_pd_overview_img"><img src="' + p.altImage + '" alt="' + p.name + ' overview"></div>' +
+              '</div></div></section>' +
+              '<section style="padding: 60px 0; background: #f7faf8;"><div class="container">' +
+              '<div class="cs_pd_section_head wow fadeInUp"><h2>Product Details</h2><p>Key product information and specifications for ' + p.name + '.</p></div>' +
+              '<div class="cs_pd_details_grid">' +
+              '<div class="cs_pd_table wow fadeInUp">' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-tag"></i><span class="k">Product Name</span><span class="v">' + p.name + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-leaf"></i><span class="k">Dosage Form</span><span class="v">' + p.dosageForm + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">THC Strength</span><span class="v">' + p.thc + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">CBD Strength</span><span class="v">' + p.cbd + '</span></div>' +
+              '</div>' +
+              '<div class="cs_pd_table wow fadeInUp" data-wow-delay="0.1s">' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-seedling"></i><span class="k">' + p.typeLabel + '</span><span class="v">' + p.typeValue + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-box-open"></i><span class="k">Presentation</span><span class="v">' + p.presentation + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-box"></i><span class="k">Pack Size</span><span class="v">' + p.packSize + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-list"></i><span class="k">Quantity</span><span class="v">' + p.quantity + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-file-lines"></i><span class="k">Other Product Characteristics</span><span class="v">' + p.otherCharacteristics + '</span></div>' +
+              '</div></div></div></section>' +
+              '<section style="padding: 60px 0; background: #fff;"><div class="container">' +
+              '<div class="cs_pd_section_head wow fadeInUp"><h2>Cultivar Information</h2><p>Information about the cultivar and product characteristics.</p></div>' +
+              '<div class="cs_pd_cultivar_grid">' +
+              '<div class="cs_pd_cultivar_card wow fadeInUp"><div class="cs_pd_cultivar_icon"><i class="fa-solid fa-seedling"></i></div><h4>' + p.typeFieldLabel + '</h4><p>' + p.typeDesc + '</p></div>' +
+              '<div class="cs_pd_cultivar_card wow fadeInUp" data-wow-delay="0.1s"><div class="cs_pd_cultivar_icon"><i class="fa-solid fa-diagram-project"></i></div><h4>Cannabinoid Composition</h4><p><strong>' + p.cannabinoid + '</strong><br>Full cannabinoid profile and additional analysis information is available in the product documentation.</p></div>' +
+              '<div class="cs_pd_cultivar_card wow fadeInUp" data-wow-delay="0.2s"><div class="cs_pd_cultivar_icon"><i class="fa-solid fa-gear"></i></div><h4>Other Characteristics</h4><p>' + p.otherCharacteristics + ' Grown and processed in accordance with PharmaCrop’s quality standards.</p></div>' +
+              '</div></div></section>' +
+              '<section style="padding: 60px 0; background: #f7faf8;"><div class="container">' +
+              '<div class="cs_pd_section_head wow fadeInUp"><h2>Presentation &amp; Packaging</h2><p>Product presentation and packaging details for ' + p.name + '.</p></div>' +
+              '<div class="cs_pd_pack_row wow fadeInUp">' +
+              '<div class="cs_pd_pack_img"><img src="' + p.image + '" alt="' + p.name + ' packaging"></div>' +
+              '<div class="cs_pd_pack_table cs_pd_table">' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-box"></i><span class="k">Pack Size</span><span class="v">' + p.packSize + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-list"></i><span class="k">Quantity</span><span class="v">' + p.quantity + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-box-open"></i><span class="k">Presentation</span><span class="v">' + p.presentation + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-leaf"></i><span class="k">Dosage Form</span><span class="v">' + p.dosageForm + '</span></div>' +
+              '</div></div></div></section>' +
+              '<section style="padding: 60px 0 30px; background: #fff;"><div class="container">' +
+              '<div class="cs_pd_prof_row wow fadeInUp">' +
+              '<div class="cs_pd_section_head"><h2>Professional Information</h2><p>Detailed product information for healthcare professionals.</p></div>' +
+              '<p class="cs_pd_prof_text">Comprehensive professional information, including product specifications, analytical data and supporting documentation, is available for healthcare professionals. Please refer to the relevant documents below.</p>' +
+              '</div></div></section>' +
+              '<section id="documents" style="padding: 30px 0 60px; background: #fff; scroll-margin-top: 100px;"><div class="container">' +
+              '<div class="cs_pd_section_head wow fadeInUp"><h2>Documents &amp; Downloads</h2><p>Access product information and supporting documentation.</p></div>' +
+              '<div class="cs_pd_doc_grid" style="display:grid; grid-template-columns:repeat(4,1fr); gap:20px;">' +
+              '<div class="cs_pd_doc_card wow fadeInUp" style="background:#fff; border:1px solid rgba(2,66,66,0.1); border-radius:12px; padding:20px;">' +
+              '<div class="cs_pd_doc_icon" style="width:34px;height:34px;border-radius:8px;background:rgba(120,220,166,0.15);color:#024242;display:flex;align-items:center;justify-content:center;font-size:14px;margin-bottom:14px;"><i class="fa-solid fa-file-lines"></i></div>' +
+              '<h4 style="color:#024242;font-size:14px;font-weight:800;margin:0 0 4px;">Product Information</h4><span class="meta" style="color:#999;font-size:12px;display:block;margin-bottom:14px;">PDF</span>' +
+              '<div style="display:flex; gap:16px;"><a href="' + p.image + '" target="_blank" rel="noopener" style="color:#024242;font-weight:700;font-size:12.5px;text-decoration:none;"><i class="fa-solid fa-eye"></i> View</a><a href="/contact" style="color:#024242;font-weight:700;font-size:12.5px;text-decoration:none;"><i class="fa-solid fa-download"></i> Download</a></div>' +
+              '</div>' +
+              '<div class="cs_pd_doc_card wow fadeInUp" style="background:#fff; border:1px solid rgba(2,66,66,0.1); border-radius:12px; padding:20px;">' +
+              '<div class="cs_pd_doc_icon" style="width:34px;height:34px;border-radius:8px;background:rgba(120,220,166,0.15);color:#024242;display:flex;align-items:center;justify-content:center;font-size:14px;margin-bottom:14px;"><i class="fa-solid fa-file-lines"></i></div>' +
+              '<h4 style="color:#024242;font-size:14px;font-weight:800;margin:0 0 4px;">Consumer Medicine Information</h4><span class="meta" style="color:#999;font-size:12px;display:block;margin-bottom:14px;">PDF</span>' +
+              '<div style="display:flex; gap:16px;"><a href="' + p.altImage + '" target="_blank" rel="noopener" style="color:#024242;font-weight:700;font-size:12.5px;text-decoration:none;"><i class="fa-solid fa-eye"></i> View</a><a href="/contact" style="color:#024242;font-weight:700;font-size:12.5px;text-decoration:none;"><i class="fa-solid fa-download"></i> Download</a></div>' +
+              '</div>' +
+              '</div></div></section>' +
+              relatedSection
+            );
+          }
+
+          function wireGallery() {
             var mainImg = document.querySelector('[data-pd-main-img]');
             var thumbs = Array.prototype.slice.call(document.querySelectorAll('[data-pd-thumb]'));
             thumbs.forEach(function (btn) {
@@ -507,9 +403,39 @@ export default async function Page({ params }) {
                 if (mainImg) mainImg.src = btn.getAttribute('data-pd-thumb');
               });
             });
-          })();
-        `}
-      </Script>
+          }
+
+          var slug = window.location.pathname.split('/').filter(Boolean).pop();
+          var content = document.querySelector('[data-pd-content]');
+
+          fetch(WP_API_URL + '/wp-json/wp/v2/product?slug=' + encodeURIComponent(slug) + '&_embed')
+            .then(function (res) { return res.ok ? res.json() : []; })
+            .then(function (results) {
+              if (!results || !results.length) {
+                if (content) content.innerHTML = '<div class="cs_pd_loading"><p>Product not found.</p><a href="/all-products" class="cs_pd_btn_primary" style="display:inline-flex;">Back to All Products</a></div>';
+                return;
+              }
+              var p = mapProduct(results[0]);
+              document.title = p.name + ' - PharmaCrop HCP Portal';
+
+              return fetch(WP_API_URL + '/wp-json/wp/v2/product?per_page=100&_embed')
+                .then(function (res) { return res.ok ? res.json() : []; })
+                .then(function (all) {
+                  var related = (all || [])
+                    .map(mapProduct)
+                    .filter(function (r) { return r.categorySlug === p.categorySlug && r.slug !== p.slug; })
+                    .slice(0, 4);
+
+                  if (content) content.innerHTML = renderContent(p, related);
+                  wireGallery();
+                });
+            })
+            .catch(function () {
+              if (content) content.innerHTML = '<div class="cs_pd_loading"><p>Could not load this product right now.</p></div>';
+            });
+        })();
+      `}
+    </Script>
     </>
   );
 }
