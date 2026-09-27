@@ -153,7 +153,7 @@ export default function Page() {
     <!-- End Featured Resource -->
     <!-- Start Resource Filters -->
     <style>
-      .cs_res_filters_section { padding: 10px 0 0; background: #fff; }
+      .cs_res_filters_section { padding: 40px 0; background: #fff; }
       .cs_res_pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
       .cs_res_pill { display: inline-flex; align-items: center; background: #fff; border: 1px solid rgba(2,66,66,0.15); border-radius: 30px; padding: 9px 20px; color: #024242; font-size: 14px; font-weight: 600; cursor: pointer; font-family: inherit; }
       .cs_res_pill.active { background: #024242; color: #fff; border-color: #024242; }
