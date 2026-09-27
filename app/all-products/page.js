@@ -76,19 +76,20 @@ export default function Page() {
     <!-- End Dashboard Header -->
     <!-- Start Product Portfolio Hero -->
     <style>
-      .cs_prod_hero { position: relative; overflow: hidden; }
+      .cs_prod_hero { position: relative; overflow: hidden; background: #f7faf8; }
       .cs_prod_hero_bg { position: absolute; inset: 0; z-index: 0; }
       .cs_prod_hero_bg img { width: 100%; height: 100%; object-fit: cover; display: block; }
-      .cs_prod_hero_bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, #f7faf8 0%, #f7faf8 34%, rgba(247,250,248,0.92) 44%, rgba(247,250,248,0.55) 56%, rgba(247,250,248,0.05) 68%); }
-      .cs_prod_hero_inner { position: relative; z-index: 1; min-height: 340px; display: flex; align-items: center; padding: 60px 0; }
+      .cs_prod_hero_bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(247,250,248,0) 55%, #f7faf8 100%), linear-gradient(90deg, #f7faf8 0%, #f7faf8 34%, rgba(247,250,248,0.92) 44%, rgba(247,250,248,0.55) 56%, rgba(247,250,248,0.05) 68%); }
+      .cs_prod_hero_inner { position: relative; z-index: 1; min-height: 460px; display: flex; align-items: center; padding: 60px 0 20px; }
       .cs_prod_hero_content { max-width: 540px; }
       .cs_prod_hero_eyebrow { display: block; color: #024242; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px; }
       .cs_prod_hero h1 { color: #024242; font-size: 38px; font-weight: 800; line-height: 1.2; margin: 0 0 16px; }
       .cs_prod_hero p { color: #666; font-size: 15px; line-height: 1.7; margin: 0 0 28px; }
       .cs_prod_hero_btn { display: inline-flex; align-items: center; gap: 10px; background: #024242; color: #fff; font-weight: 700; font-size: 14px; padding: 15px 24px; border-radius: 10px; text-decoration: none; }
       .cs_prod_hero_btn:hover { background: #78dca6; color: #024242; }
+      .cs_prod_filters_wrap { position: relative; z-index: 1; padding: 20px 0 40px; }
       @media (max-width: 991px) {
-        .cs_prod_hero_bg::after { background: linear-gradient(180deg, #f7faf8 0%, #f7faf8 46%, rgba(247,250,248,0.85) 60%, rgba(247,250,248,0.55) 100%); }
+        .cs_prod_hero_bg::after { background: linear-gradient(180deg, rgba(247,250,248,0) 55%, #f7faf8 100%), linear-gradient(180deg, #f7faf8 0%, #f7faf8 46%, rgba(247,250,248,0.85) 60%, rgba(247,250,248,0.55) 100%); }
         .cs_prod_hero_inner { min-height: 0; padding: 130px 0 260px; }
         .cs_prod_hero_content { max-width: 100%; }
         .cs_prod_hero h1 { font-size: 30px; }
@@ -96,7 +97,7 @@ export default function Page() {
     </style>
     <section class="cs_prod_hero">
       <div class="cs_prod_hero_bg">
-        <img src="/assets/img/Our%20Facility-2.webp" alt="PharmaCrop cultivation team">
+        <img src="/assets/img/dashboard/all%20products/product%20portfolio%20banner.webp" alt="PharmaCrop lab team reviewing product samples">
       </div>
       <div class="container">
         <div class="cs_prod_hero_inner">
@@ -107,12 +108,9 @@ export default function Page() {
             <a href="/contact" class="cs_prod_hero_btn"><i class="fa-solid fa-download"></i> Download Full Product Portfolio <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- End Product Portfolio Hero -->
+        <div class="cs_prod_filters_wrap">
     <!-- Start Product Filters -->
     <style>
-      .cs_prod_filters_section { padding: 40px 0 0; background: #f7faf8; }
       .cs_prod_pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
       .cs_prod_pill { display: inline-flex; align-items: center; background: #fff; border: 1px solid rgba(2,66,66,0.15); border-radius: 30px; padding: 9px 20px; color: #024242; font-size: 14px; font-weight: 600; cursor: pointer; font-family: inherit; }
       .cs_prod_pill.active { background: #024242; color: #fff; border-color: #024242; }
@@ -135,8 +133,6 @@ export default function Page() {
         .cs_prod_bar { flex-direction: column; align-items: stretch; }
       }
     </style>
-    <section class="cs_prod_filters_section">
-      <div class="container">
         <div class="cs_prod_pills">
           <button type="button" class="cs_prod_pill active" data-prod-pill="all">All Products (10)</button>
           <button type="button" class="cs_prod_pill" data-prod-pill="dried-flower">Dried Flower (3)</button>
@@ -192,6 +188,7 @@ export default function Page() {
               <button type="button" data-prod-view="list" aria-label="List view"><i class="fa-solid fa-list"></i></button>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>
