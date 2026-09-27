@@ -244,9 +244,7 @@ export default function Page() {
       .cs_res_img img { width: 100%; height: 100%; object-fit: cover; display: block; }
       .cs_res_img_icon { position: absolute; left: 14px; bottom: -18px; width: 36px; height: 36px; border-radius: 50%; background: #024242; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 14px; border: 3px solid #fff; }
       .cs_res_body { padding: 26px 18px 18px; flex: 1; }
-      .cs_res_body_top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
       .cs_res_body h3 { color: #024242; font-size: 15px; font-weight: 800; margin: 0 0 4px; line-height: 1.4; }
-      .cs_res_arrow { width: 28px; height: 28px; border-radius: 50%; border: 1px solid rgba(2,66,66,0.2); color: #024242; display: flex; align-items: center; justify-content: center; font-size: 11px; flex: none; }
       .cs_res_category { color: #78dca6; font-weight: 700; font-size: 12px; margin: 0 0 8px; display: block; }
       .cs_res_meta { color: #999; font-size: 12px; line-height: 1.6; display: block; margin-bottom: 10px; }
       .cs_res_desc { color: #666; font-size: 12.5px; line-height: 1.6; margin: 0 0 12px; }
@@ -271,7 +269,7 @@ export default function Page() {
           <div class="cs_res_card" data-name="hcp product overview" data-category="product-resources" data-product="sunridge 22">
             <div class="cs_res_img"><img src="/assets/img/dashboard/HCP%20Resources/HCP%20Product%20Overview.webp" alt="HCP Product Overview"><span class="cs_res_img_icon"><i class="fa-solid fa-file-lines"></i></span></div>
             <div class="cs_res_body">
-              <div class="cs_res_body_top"><h3>HCP Product Overview</h3><span class="cs_res_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
+              <h3>HCP Product Overview</h3>
               <span class="cs_res_category">Product Resources</span>
               <span class="cs_res_meta">PDF &nbsp;|&nbsp; 1.1 MB &nbsp;|&nbsp; Updated Jan 15, 2024</span>
               <p class="cs_res_desc">Overview of PharmaCrop&rsquo;s product portfolio, including product information and key characteristics.</p>
@@ -285,7 +283,7 @@ export default function Page() {
           <div class="cs_res_card" data-name="prescribing & access guide" data-category="prescribing-access" data-product="all">
             <div class="cs_res_img"><img src="/assets/img/dashboard/HCP%20Resources/Prescribing%20%26%20Access%20Guide.webp" alt="Prescribing and Access Guide"><span class="cs_res_img_icon"><i class="fa-solid fa-file-lines"></i></span></div>
             <div class="cs_res_body">
-              <div class="cs_res_body_top"><h3>Prescribing &amp; Access Guide</h3><span class="cs_res_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
+              <h3>Prescribing &amp; Access Guide</h3>
               <span class="cs_res_category">Prescribing &amp; Access</span>
               <span class="cs_res_meta">PDF &nbsp;|&nbsp; 980 KB &nbsp;|&nbsp; Updated Jan 10, 2024</span>
               <p class="cs_res_desc">Information to support healthcare professionals with product access pathways and prescribing considerations.</p>
@@ -299,7 +297,7 @@ export default function Page() {
           <div class="cs_res_card" data-name="product technical resource" data-category="product-resources" data-product="all">
             <div class="cs_res_img"><img src="/assets/img/dashboard/HCP%20Resources/Product%20Technical%20Resource.webp" alt="Product Technical Resource"><span class="cs_res_img_icon"><i class="fa-solid fa-file-lines"></i></span></div>
             <div class="cs_res_body">
-              <div class="cs_res_body_top"><h3>Product Technical Resource</h3><span class="cs_res_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
+              <h3>Product Technical Resource</h3>
               <span class="cs_res_category">Product Resources</span>
               <span class="cs_res_meta">PDF &nbsp;|&nbsp; 1.4 MB &nbsp;|&nbsp; Updated Jan 8, 2024</span>
               <p class="cs_res_desc">Detailed product technical information, including product specifications and quality details.</p>
@@ -313,7 +311,7 @@ export default function Page() {
           <div class="cs_res_card" data-name="clinical reference material" data-category="clinical-professional" data-product="all">
             <div class="cs_res_img"><img src="/assets/img/dashboard/HCP%20Resources/Clinical%20Reference%20Material.webp" alt="Clinical Reference Material"><span class="cs_res_img_icon"><i class="fa-solid fa-file-lines"></i></span></div>
             <div class="cs_res_body">
-              <div class="cs_res_body_top"><h3>Clinical Reference Material</h3><span class="cs_res_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
+              <h3>Clinical Reference Material</h3>
               <span class="cs_res_category">Clinical / Professional</span>
               <span class="cs_res_meta">PDF &nbsp;|&nbsp; 1.4 MB &nbsp;|&nbsp; Updated Jan 8, 2024</span>
               <p class="cs_res_desc">Professional reference material supporting the clinical use of PharmaCrop products.</p>
@@ -327,7 +325,7 @@ export default function Page() {
           <div class="cs_res_card" data-name="product information resource" data-category="product-resources" data-product="balance 10:10">
             <div class="cs_res_img"><img src="/assets/img/dashboard/HCP%20Resources/Product%20Information%20Resource.webp" alt="Product Information Resource"><span class="cs_res_img_icon"><i class="fa-solid fa-file-lines"></i></span></div>
             <div class="cs_res_body">
-              <div class="cs_res_body_top"><h3>Product Information Resource</h3><span class="cs_res_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
+              <h3>Product Information Resource</h3>
               <span class="cs_res_category">Product Resources</span>
               <span class="cs_res_meta">PDF &nbsp;|&nbsp; 1.2 MB &nbsp;|&nbsp; Updated Dec 20, 2023</span>
               <p class="cs_res_desc">Comprehensive product information including product characteristics and formulation details.</p>
@@ -341,7 +339,7 @@ export default function Page() {
           <div class="cs_res_card" data-name="educational resource" data-category="education" data-product="all">
             <div class="cs_res_img"><img src="/assets/img/dashboard/HCP%20Resources/Educational%20Resource.webp" alt="Educational Resource"><span class="cs_res_img_icon"><i class="fa-solid fa-file-lines"></i></span></div>
             <div class="cs_res_body">
-              <div class="cs_res_body_top"><h3>Educational Resource</h3><span class="cs_res_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
+              <h3>Educational Resource</h3>
               <span class="cs_res_category">Education</span>
               <span class="cs_res_meta">PDF &nbsp;|&nbsp; 1.0 MB &nbsp;|&nbsp; Updated Dec 18, 2023</span>
               <p class="cs_res_desc">Educational material to support healthcare professional understanding of PharmaCrop products.</p>
@@ -355,7 +353,7 @@ export default function Page() {
           <div class="cs_res_card" data-name="product overview document" data-category="product-resources" data-product="highland 25">
             <div class="cs_res_img"><img src="/assets/img/dashboard/HCP%20Resources/Product%20Overview%20Document.webp" alt="Product Overview Document"><span class="cs_res_img_icon"><i class="fa-solid fa-file-lines"></i></span></div>
             <div class="cs_res_body">
-              <div class="cs_res_body_top"><h3>Product Overview Document</h3><span class="cs_res_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
+              <h3>Product Overview Document</h3>
               <span class="cs_res_category">Product Resources</span>
               <span class="cs_res_meta">PDF &nbsp;|&nbsp; 1.3 MB &nbsp;|&nbsp; Updated Dec 12, 2023</span>
               <p class="cs_res_desc">Product overview including key information and supporting resources for healthcare professionals.</p>
@@ -369,7 +367,7 @@ export default function Page() {
           <div class="cs_res_card" data-name="access information" data-category="prescribing-access" data-product="all">
             <div class="cs_res_img"><img src="/assets/img/dashboard/HCP%20Resources/Access%20Information.webp" alt="Access Information"><span class="cs_res_img_icon"><i class="fa-solid fa-file-lines"></i></span></div>
             <div class="cs_res_body">
-              <div class="cs_res_body_top"><h3>Access Information</h3><span class="cs_res_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
+              <h3>Access Information</h3>
               <span class="cs_res_category">Prescribing &amp; Access</span>
               <span class="cs_res_meta">PDF &nbsp;|&nbsp; 890 KB &nbsp;|&nbsp; Updated Dec 8, 2023</span>
               <p class="cs_res_desc">Information to support product access and ordering for healthcare professionals.</p>
