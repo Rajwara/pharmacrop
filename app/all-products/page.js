@@ -54,7 +54,7 @@ export default function Page() {
           <ul class="cs_dash_nav">
             <li><a href="/dashboard">Dashboard</a></li>
             <li><a href="/all-products" class="active">All Products</a></li>
-            <li><a href="/dashboard#resources">HCP Resources</a></li>
+            <li><a href="/hcp-resources">HCP Resources</a></li>
           </ul>
           <div class="cs_dash_header_right">
             <button type="button" class="cs_dash_search_btn" aria-label="Search" data-prod-search-toggle><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -359,10 +359,10 @@ export default function Page() {
             <span style="display: block; color: #78dca6; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px;">HCP Resources</span>
             <h2 style="color: #024242; font-size: 30px; font-weight: 800; margin: 0;">Related professional resources</h2>
           </div>
-          <a href="/dashboard#resources" style="color: #024242; font-weight: 700; font-size: 14px; text-decoration: none;">View all resources &rarr;</a>
+          <a href="/hcp-resources" style="color: #024242; font-weight: 700; font-size: 14px; text-decoration: none;">View all resources &rarr;</a>
         </div>
         <div class="cs_prod_quick_grid">
-          <a href="/dashboard#clinical-resource" class="cs_prod_quick_card wow fadeInUp">
+          <a href="/hcp-resources" class="cs_prod_quick_card wow fadeInUp">
             <img src="/assets/img/dashboard/hCP%20resource%20bg.webp" alt="HCP Resources">
             <div class="cs_prod_quick_body">
               <div class="cs_prod_quick_icon"><i class="fa-solid fa-file-lines"></i></div>
@@ -426,7 +426,7 @@ export default function Page() {
           <ul class="cs_dash_footer_nav">
             <li><a href="/dashboard">Dashboard</a></li>
             <li><a href="/all-products">All Products</a></li>
-            <li><a href="/dashboard#resources">HCP Resources</a></li>
+            <li><a href="/hcp-resources">HCP Resources</a></li>
           </ul>
           <ul class="cs_dash_footer_links">
             <li><a href="/contact">Contact</a></li>

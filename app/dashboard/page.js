@@ -54,7 +54,7 @@ export default function Page() {
           <ul class="cs_dash_nav">
             <li><a href="/dashboard">Dashboard</a></li>
             <li><a href="/all-products">All Products</a></li>
-            <li><a href="#resources">HCP Resources</a></li>
+            <li><a href="/hcp-resources">HCP Resources</a></li>
           </ul>
           <div class="cs_dash_header_right">
             <button type="button" class="cs_dash_search_btn" aria-label="Search" data-dash-search-toggle><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -305,7 +305,7 @@ export default function Page() {
           </div>
         </div>
         <div class="cs_dash_quick_grid">
-          <a href="#clinical-resource" class="cs_dash_quick_card wow fadeInUp">
+          <a href="/hcp-resources" class="cs_dash_quick_card wow fadeInUp">
             <img src="/assets/img/dashboard/hCP%20resource%20bg.webp" alt="HCP Resources">
             <div class="cs_dash_quick_body">
               <div class="cs_dash_quick_icon"><i class="fa-solid fa-file-lines"></i></div>
@@ -404,7 +404,7 @@ export default function Page() {
           <ul class="cs_dash_footer_nav">
             <li><a href="/dashboard">Dashboard</a></li>
             <li><a href="/all-products">All Products</a></li>
-            <li><a href="#resources">HCP Resources</a></li>
+            <li><a href="/hcp-resources">HCP Resources</a></li>
           </ul>
           <ul class="cs_dash_footer_links">
             <li><a href="/contact">Contact</a></li>
