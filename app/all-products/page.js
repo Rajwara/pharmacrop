@@ -87,6 +87,14 @@ export default function Page() {
       .cs_prod_hero p { color: #666; font-size: 15px; line-height: 1.7; margin: 0 0 28px; }
       .cs_prod_hero_btn { display: inline-flex; align-items: center; gap: 10px; background: #024242; color: #fff; font-weight: 700; font-size: 14px; padding: 15px 24px; border-radius: 10px; text-decoration: none; }
       .cs_prod_hero_btn:hover { background: #78dca6; color: #024242; }
+      .cs_prod_brochure_card { display: flex; align-items: center; gap: 16px; background: #fff; border: 1px solid rgba(2,66,66,0.1); border-radius: 14px; padding: 14px; box-shadow: 0 15px 40px rgba(2,66,66,0.08); text-decoration: none; max-width: 420px; }
+      .cs_prod_brochure_thumb { width: 60px; height: 60px; border-radius: 8px; overflow: hidden; flex: none; }
+      .cs_prod_brochure_thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .cs_prod_brochure_body { flex: 1; min-width: 0; }
+      .cs_prod_brochure_body h4 { color: #024242; font-size: 14px; font-weight: 800; margin: 0 0 3px; }
+      .cs_prod_brochure_body span { color: #999; font-size: 12px; }
+      .cs_prod_brochure_go { width: 38px; height: 38px; border-radius: 50%; background: #024242; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 14px; flex: none; }
+      .cs_prod_brochure_card:hover .cs_prod_brochure_go { background: #78dca6; color: #024242; }
       .cs_prod_filters_wrap { position: relative; z-index: 1; padding: 20px 0 40px; }
       @media (max-width: 991px) {
         .cs_prod_hero_bg::after { background: linear-gradient(180deg, rgba(247,250,248,0) 55%, #f7faf8 100%), linear-gradient(180deg, #f7faf8 0%, #f7faf8 46%, rgba(247,250,248,0.85) 60%, rgba(247,250,248,0.55) 100%); }
@@ -105,7 +113,14 @@ export default function Page() {
             <span class="cs_prod_hero_eyebrow">HCP Portal</span>
             <h1>Product Portfolio</h1>
             <p>Explore PharmaCrop&rsquo;s product portfolio and access detailed professional product information, including product specifications and supporting resources for healthcare professionals.</p>
-            <a href="/contact" class="cs_prod_hero_btn"><i class="fa-solid fa-download"></i> Download Full Product Portfolio <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="/contact" class="cs_prod_brochure_card">
+              <span class="cs_prod_brochure_thumb"><img src="/assets/img/dashboard/all%20products/product%20portfolio%20brochure.webp" alt="PharmaCrop Product Portfolio brochure"></span>
+              <span class="cs_prod_brochure_body">
+                <h4>Download Full Product Portfolio</h4>
+                <span>PDF &middot; Request from our team</span>
+              </span>
+              <span class="cs_prod_brochure_go"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
           </div>
         </div>
         <div class="cs_prod_filters_wrap">
