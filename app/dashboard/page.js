@@ -52,11 +52,10 @@ export default function Page() {
             PharmaCrop
           </a>
           <ul class="cs_dash_nav">
-            <li><a href="/products">Products</a></li>
-            <li><a href="#resources">Resources</a></li>
-            <li><a href="#clinical-resource">Clinical Information</a></li>
-            <li><a href="/faq">Quality &amp; Compliance</a></li>
-            <li><a href="/about-us">About</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/products">All Products</a></li>
+            <li><a href="#resources">HCP Resources</a></li>
+            <li><a href="/register">My Profile / Account</a></li>
           </ul>
           <div class="cs_dash_header_right">
             <button type="button" class="cs_dash_search_btn" aria-label="Search" data-dash-search-toggle><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -405,11 +404,10 @@ export default function Page() {
         <div class="cs_dash_footer_row">
           <span class="cs_dash_footer_brand">PharmaCrop</span>
           <ul class="cs_dash_footer_nav">
-            <li><a href="/products">Products</a></li>
-            <li><a href="#resources">Resources</a></li>
-            <li><a href="#clinical-resource">Clinical Information</a></li>
-            <li><a href="/faq">Quality &amp; Compliance</a></li>
-            <li><a href="/about-us">About</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/products">All Products</a></li>
+            <li><a href="#resources">HCP Resources</a></li>
+            <li><a href="/register">My Profile / Account</a></li>
           </ul>
           <ul class="cs_dash_footer_links">
             <li><a href="/contact">Contact</a></li>
