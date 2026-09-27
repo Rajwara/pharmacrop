@@ -195,6 +195,10 @@ export default function Page() {
               <p>Verified healthcare professionals can access full product information, clinical resources and patient support materials. Registration takes two minutes and we verify every application within one business day.</p>
             </div>
             <form id="cs_register_form" novalidate>
+              <input type="hidden" name="access_key" value="cd98b256-0db3-478c-ab28-1ec94f80447c">
+              <input type="hidden" name="subject" value="New HCP Registration Application - PharmaCrop">
+              <input type="hidden" name="from_name" value="PharmaCrop HCP Registration">
+              <span class="cs_auth_error" data-register-submit-error style="display:none; margin-bottom: 16px;">Something went wrong submitting your registration. Please try again or <a href="/contact">contact us</a> directly.</span>
               <div class="cs_auth_form_section">
                 <h4 class="cs_auth_section_title">Your details</h4>
                 <div class="cs_auth_field_row">
@@ -306,8 +310,8 @@ export default function Page() {
               </label>
               <span class="cs_auth_error" data-error-for="consent">You must confirm your registration status to continue.</span>
 
-              <button type="submit" class="cs_auth_btn_primary" style="margin-top: 8px;">
-                Submit Registration
+              <button type="submit" class="cs_auth_btn_primary" style="margin-top: 8px;" data-register-submit-btn>
+                <span data-register-submit-label>Submit Registration</span>
                 <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path></svg>
               </button>
               <div class="cs_auth_switch">Already registered? <button type="button" data-auth-switch="login">Sign in</button> &middot; Pharmacist? <a href="/login">Order via the Pharmacy Portal</a></div>
@@ -315,7 +319,7 @@ export default function Page() {
 
             <div class="cs_auth_confirm" data-auth-confirm hidden>
               <h2>Thanks &mdash; we&rsquo;ve received your registration.</h2>
-              <p>Our team verifies every application within one business day. We&rsquo;ll email <strong data-confirm-email>you</strong> once your access is approved, with a link to set your password.</p>
+              <p>Our team verifies every application within one business day. We&rsquo;ll email <strong data-confirm-email>you</strong> once your access is approved, with your login details.</p>
               <a href="/" class="cs_auth_btn_primary">Return To Homepage</a>
             </div>
           </div>
@@ -424,15 +428,37 @@ export default function Page() {
                 return;
               }
 
-              var emailField = form.querySelector('[name="workEmail"]');
-              var confirmEmailEl = document.querySelector('[data-confirm-email]');
-              if (confirmEmailEl) confirmEmailEl.textContent = emailField ? emailField.value.trim() : 'you';
+              var submitBtn = form.querySelector('[data-register-submit-btn]');
+              var submitLabel = form.querySelector('[data-register-submit-label]');
+              var submitError = form.querySelector('[data-register-submit-error]');
+              if (submitError) submitError.style.display = 'none';
+              if (submitBtn) submitBtn.disabled = true;
+              if (submitLabel) submitLabel.textContent = 'Submitting...';
 
-              form.style.display = 'none';
-              var intro = document.querySelector('.cs_auth_register_intro');
-              if (intro) intro.style.display = 'none';
-              var confirm = document.querySelector('[data-auth-confirm]');
-              if (confirm) confirm.hidden = false;
+              fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: new FormData(form),
+              })
+                .then(function (res) { return res.json(); })
+                .then(function (data) {
+                  if (!data.success) throw new Error(data.message || 'Submission failed');
+
+                  var emailField = form.querySelector('[name="workEmail"]');
+                  var confirmEmailEl = document.querySelector('[data-confirm-email]');
+                  if (confirmEmailEl) confirmEmailEl.textContent = emailField ? emailField.value.trim() : 'you';
+
+                  form.style.display = 'none';
+                  var intro = document.querySelector('.cs_auth_register_intro');
+                  if (intro) intro.style.display = 'none';
+                  var confirm = document.querySelector('[data-auth-confirm]');
+                  if (confirm) confirm.hidden = false;
+                })
+                .catch(function () {
+                  if (submitError) submitError.style.display = 'block';
+                  if (submitBtn) submitBtn.disabled = false;
+                  if (submitLabel) submitLabel.textContent = 'Submit Registration';
+                });
             });
           }
 
