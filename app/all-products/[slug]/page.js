@@ -255,11 +255,23 @@ export default function Page() {
 
           var FALLBACK_IMG = '/assets/img/dashboard/Dried%20Flower%20Category.webp';
 
+          function isImageUrl(value) {
+            return typeof value === 'string' && value.indexOf('http') === 0;
+          }
+
           function mapProduct(raw) {
             var acf = raw.acf || {};
             var media = raw._embedded && raw._embedded['wp:featuredmedia'] && raw._embedded['wp:featuredmedia'][0];
-            var image = (media && media.source_url) || FALLBACK_IMG;
-            var altImage = (typeof acf.alt_image === 'string' && acf.alt_image.indexOf('http') === 0) ? acf.alt_image : image;
+            var featured = (media && media.source_url) || null;
+
+            var photos = [featured, acf.gallery_image_1, acf.gallery_image_2, acf.gallery_image_3, acf.gallery_image_4]
+              .filter(isImageUrl);
+            if (!photos.length) photos = [FALLBACK_IMG];
+
+            var image = photos[0];
+            var altImage = photos[1] || photos[0];
+            var overviewImage = photos[1] || photos[0];
+            var packagingImage = photos[2] || photos[0];
             var categorySlug = acf.category || 'uncategorised';
             var category = formatLabel(categorySlug);
             return {
@@ -281,6 +293,9 @@ export default function Page() {
               cannabinoid: acf.cannabinoid || '',
               image: image,
               altImage: altImage,
+              overviewImage: overviewImage,
+              packagingImage: packagingImage,
+              photos: photos,
             };
           }
 
@@ -294,6 +309,9 @@ export default function Page() {
 
           function renderContent(p, related) {
             var relatedHtml = related.map(relatedCardHtml).join('');
+            var thumbsHtml = p.photos.map(function (src, i) {
+              return '<button type="button" class="' + (i === 0 ? 'active' : '') + '" data-pd-thumb="' + src + '"><img src="' + src + '" alt="' + p.name + ' thumbnail ' + (i + 1) + '"></button>';
+            }).join('');
             var relatedSection = related.length ? (
               '<section style="padding: 0 0 70px; background: #fff;">' +
               '<div class="container">' +
@@ -312,10 +330,7 @@ export default function Page() {
               '<section class="cs_pd_hero"><div class="container"><div class="cs_pd_hero_grid">' +
               '<div class="wow fadeInUp">' +
               '<div class="cs_pd_gallery_main"><img src="' + p.image + '" alt="' + p.name + '" data-pd-main-img></div>' +
-              '<div class="cs_pd_gallery_thumbs">' +
-              '<button type="button" class="active" data-pd-thumb="' + p.image + '"><img src="' + p.image + '" alt="' + p.name + ' thumbnail 1"></button>' +
-              '<button type="button" data-pd-thumb="' + p.altImage + '"><img src="' + p.altImage + '" alt="' + p.name + ' thumbnail 2"></button>' +
-              '</div></div>' +
+              '<div class="cs_pd_gallery_thumbs">' + thumbsHtml + '</div></div>' +
               '<div class="wow fadeInUp" data-wow-delay="0.1s">' +
               '<span class="cs_pd_eyebrow">HCP Portal</span><h1>' + p.name + '</h1>' +
               '<span class="cs_pd_category">' + p.category + '</span>' +
@@ -335,7 +350,7 @@ export default function Page() {
               '<div class="cs_pd_section_head wow fadeInUp"><h2>Product Overview</h2></div>' +
               '<div class="cs_pd_overview_row wow fadeInUp">' +
               '<div class="cs_pd_overview_text"><p>' + p.name + ' is a ' + p.category.toLowerCase() + ' product, cultivated and processed to meet PharmaCrop’s quality standards. This product is provided for healthcare professionals with detailed product information, including product specifications and supporting documentation.</p></div>' +
-              '<div class="cs_pd_overview_img"><img src="' + p.altImage + '" alt="' + p.name + ' overview"></div>' +
+              '<div class="cs_pd_overview_img"><img src="' + p.overviewImage + '" alt="' + p.name + ' overview"></div>' +
               '</div></div></section>' +
               '<section style="padding: 60px 0; background: #f7faf8;"><div class="container">' +
               '<div class="cs_pd_section_head wow fadeInUp"><h2>Product Details</h2><p>Key product information and specifications for ' + p.name + '.</p></div>' +
@@ -363,7 +378,7 @@ export default function Page() {
               '<section style="padding: 60px 0; background: #f7faf8;"><div class="container">' +
               '<div class="cs_pd_section_head wow fadeInUp"><h2>Presentation &amp; Packaging</h2><p>Product presentation and packaging details for ' + p.name + '.</p></div>' +
               '<div class="cs_pd_pack_row wow fadeInUp">' +
-              '<div class="cs_pd_pack_img"><img src="' + p.image + '" alt="' + p.name + ' packaging"></div>' +
+              '<div class="cs_pd_pack_img"><img src="' + p.packagingImage + '" alt="' + p.name + ' packaging"></div>' +
               '<div class="cs_pd_pack_table cs_pd_table">' +
               '<div class="cs_pd_table_row"><i class="fa-solid fa-box"></i><span class="k">Pack Size</span><span class="v">' + p.packSize + '</span></div>' +
               '<div class="cs_pd_table_row"><i class="fa-solid fa-list"></i><span class="k">Quantity</span><span class="v">' + p.quantity + '</span></div>' +
