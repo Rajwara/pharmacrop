@@ -53,7 +53,7 @@ export default function Page() {
           </a>
           <ul class="cs_dash_nav">
             <li><a href="/dashboard">Dashboard</a></li>
-            <li><a href="/products">All Products</a></li>
+            <li><a href="/all-products">All Products</a></li>
             <li><a href="#resources">HCP Resources</a></li>
           </ul>
           <div class="cs_dash_header_right">
@@ -128,10 +128,10 @@ export default function Page() {
             </form>
             <div class="cs_dash_popular">
               <span class="cs_dash_popular_label">Popular searches:</span>
-              <a href="/products#dried-flower" class="cs_dash_chip">Dried flower</a>
+              <a href="/all-products?category=dried-flower" class="cs_dash_chip">Dried flower</a>
               <a href="/faq" class="cs_dash_chip">Dosing guide</a>
               <a href="/faq" class="cs_dash_chip">TGA information</a>
-              <a href="/products" class="cs_dash_chip">Product catalogue</a>
+              <a href="/all-products" class="cs_dash_chip">Product catalogue</a>
             </div>
           </div>
           <div class="cs_dash_hero_card wow fadeInRight">
@@ -140,7 +140,7 @@ export default function Page() {
               <h4>Australian-grown.<br>Complete control.</h4>
               <p>From cultivars to patient outcomes. Built for better care.</p>
             </div>
-            <a href="/products" class="cs_dash_hero_card_link" aria-label="View products"><i class="fa-solid fa-arrow-right"></i></a>
+            <a href="/all-products" class="cs_dash_hero_card_link" aria-label="View products"><i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
@@ -177,10 +177,10 @@ export default function Page() {
             <span class="cs_dash_section_eyebrow">Our Product Range</span>
             <h2>Explore by product category</h2>
           </div>
-          <a href="/products" class="cs_dash_section_link">View all products &rarr;</a>
+          <a href="/all-products" class="cs_dash_section_link">View all products &rarr;</a>
         </div>
         <div class="cs_dash_cat_grid">
-          <a href="/products#dried-flower" class="cs_dash_cat_card wow fadeInUp">
+          <a href="/all-products?category=dried-flower" class="cs_dash_cat_card wow fadeInUp">
             <img src="/assets/img/dashboard/Dried%20Flower%20Category.webp" alt="Dried Flower">
             <div class="cs_dash_cat_body">
               <div class="cs_dash_cat_body_top"><span class="cs_dash_cat_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
@@ -188,7 +188,7 @@ export default function Page() {
               <p>Consistent quality, Australian-grown flower for a range of clinical needs.</p>
             </div>
           </a>
-          <a href="/products#oral-liquid" class="cs_dash_cat_card wow fadeInUp" data-wow-delay="0.1s">
+          <a href="/all-products?category=oral-liquid" class="cs_dash_cat_card wow fadeInUp" data-wow-delay="0.1s">
             <img src="/assets/img/dashboard/Oral%20Liquid%20Category.webp" alt="Oral Liquid">
             <div class="cs_dash_cat_body">
               <div class="cs_dash_cat_body_top"><span class="cs_dash_cat_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
@@ -196,7 +196,7 @@ export default function Page() {
               <p>Precisely formulated oral liquids for flexible dosing options.</p>
             </div>
           </a>
-          <a href="/products#pastilles" class="cs_dash_cat_card wow fadeInUp" data-wow-delay="0.2s">
+          <a href="/all-products?category=pastilles" class="cs_dash_cat_card wow fadeInUp" data-wow-delay="0.2s">
             <img src="/assets/img/dashboard/Pastilles%20Category.webp" alt="Pastilles">
             <div class="cs_dash_cat_body">
               <div class="cs_dash_cat_body_top"><span class="cs_dash_cat_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
@@ -204,7 +204,7 @@ export default function Page() {
               <p>Discreet, convenient pastilles for patient preference and ease of use.</p>
             </div>
           </a>
-          <a href="/products#inhaled-liquid" class="cs_dash_cat_card wow fadeInUp" data-wow-delay="0.3s">
+          <a href="/all-products?category=inhaled-liquid" class="cs_dash_cat_card wow fadeInUp" data-wow-delay="0.3s">
             <img src="/assets/img/dashboard/Inhaled%20liquid%20Category.webp" alt="Inhaled Liquid">
             <div class="cs_dash_cat_body">
               <div class="cs_dash_cat_body_top"><span class="cs_dash_cat_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
@@ -242,7 +242,7 @@ export default function Page() {
             <span class="cs_dash_section_eyebrow">Featured Products</span>
             <h2>Recently added</h2>
           </div>
-          <a href="/products" class="cs_dash_section_link">View all products &rarr;</a>
+          <a href="/all-products" class="cs_dash_section_link">View all products &rarr;</a>
         </div>
         <div class="cs_dash_feat_grid">
           <div class="cs_dash_feat_card wow fadeInUp">
@@ -250,7 +250,7 @@ export default function Page() {
             <div class="cs_dash_feat_body">
               <h3>PharmaCrop THC25 Dried Flower</h3>
               <span class="cs_dash_feat_spec">Dried Flower &nbsp;|&nbsp; THC 25%</span>
-              <a href="/products#dried-flower" class="cs_dash_feat_link">View product &rarr;</a>
+              <a href="/all-products?category=dried-flower" class="cs_dash_feat_link">View product &rarr;</a>
             </div>
           </div>
           <div class="cs_dash_feat_card wow fadeInUp" data-wow-delay="0.1s">
@@ -258,7 +258,7 @@ export default function Page() {
             <div class="cs_dash_feat_body">
               <h3>PharmaCrop CBD100 Oral Liquid</h3>
               <span class="cs_dash_feat_spec">Oral Liquid &nbsp;|&nbsp; CBD 100 mg/mL</span>
-              <a href="/products#oral-liquid" class="cs_dash_feat_link">View product &rarr;</a>
+              <a href="/all-products?category=oral-liquid" class="cs_dash_feat_link">View product &rarr;</a>
             </div>
           </div>
           <div class="cs_dash_feat_card wow fadeInUp" data-wow-delay="0.2s">
@@ -266,7 +266,7 @@ export default function Page() {
             <div class="cs_dash_feat_body">
               <h3>PharmaCrop Balance Pastilles</h3>
               <span class="cs_dash_feat_spec">Pastilles &nbsp;|&nbsp; THC 5 mg / CBD 5 mg</span>
-              <a href="/products#pastilles" class="cs_dash_feat_link">View product &rarr;</a>
+              <a href="/all-products?category=pastilles" class="cs_dash_feat_link">View product &rarr;</a>
             </div>
           </div>
           <div class="cs_dash_feat_card wow fadeInUp" data-wow-delay="0.3s">
@@ -274,7 +274,7 @@ export default function Page() {
             <div class="cs_dash_feat_body">
               <h3>PharmaCrop Relief Inhaled Liquid</h3>
               <span class="cs_dash_feat_spec">Inhaled Liquid &nbsp;|&nbsp; THC 10 mg/mL</span>
-              <a href="/products#inhaled-liquid" class="cs_dash_feat_link">View product &rarr;</a>
+              <a href="/all-products?category=inhaled-liquid" class="cs_dash_feat_link">View product &rarr;</a>
             </div>
           </div>
         </div>
@@ -380,7 +380,7 @@ export default function Page() {
             <h2>Better access. Better outcomes.</h2>
             <p>Supporting Australian healthcare professionals with trusted medicinal cannabis products and evidence-based resources.</p>
           </div>
-          <a href="/products" class="cs_dash_cta_btn">Explore our range <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="/all-products" class="cs_dash_cta_btn">Explore our range <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
     </section>
@@ -403,7 +403,7 @@ export default function Page() {
           <span class="cs_dash_footer_brand">PharmaCrop</span>
           <ul class="cs_dash_footer_nav">
             <li><a href="/dashboard">Dashboard</a></li>
-            <li><a href="/products">All Products</a></li>
+            <li><a href="/all-products">All Products</a></li>
             <li><a href="#resources">HCP Resources</a></li>
           </ul>
           <ul class="cs_dash_footer_links">
