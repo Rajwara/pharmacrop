@@ -123,7 +123,9 @@ export default function RootLayout({ children }) {
               }
 
               try {
-                if (!sessionStorage.getItem('cs_newsletter_shown')) {
+                var portalPaths = ['/dashboard', '/all-products', '/hcp-resources', '/profile'];
+                var isPortalPage = portalPaths.some(function (p) { return path === p || path.indexOf(p + '/') === 0; });
+                if (!isPortalPage && !sessionStorage.getItem('cs_newsletter_shown')) {
                   var onScroll = function () {
                     var docHeight = document.documentElement.scrollHeight - window.innerHeight;
                     if (docHeight <= 0) return;

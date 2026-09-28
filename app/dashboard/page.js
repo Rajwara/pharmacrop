@@ -4,6 +4,8 @@ export const metadata = {
   title: "Dashboard - PharmaCrop HCP Portal",
 };
 
+const WP_API_URL = process.env.NEXT_PUBLIC_WP_API_URL || "http://pharmacrop.local";
+
 export default function Page() {
   return (
     <>
@@ -244,39 +246,8 @@ export default function Page() {
           </div>
           <a href="/all-products" class="cs_dash_section_link">View all products &rarr;</a>
         </div>
-        <div class="cs_dash_feat_grid">
-          <div class="cs_dash_feat_card wow fadeInUp">
-            <div class="cs_dash_feat_img"><img src="/assets/img/dashboard/PharmaCrop%20THC25%20Dried%20Flower.webp" alt="PharmaCrop THC25 Dried Flower"></div>
-            <div class="cs_dash_feat_body">
-              <h3>PharmaCrop THC25 Dried Flower</h3>
-              <span class="cs_dash_feat_spec">Dried Flower &nbsp;|&nbsp; THC 25%</span>
-              <a href="/all-products?category=dried-flower" class="cs_dash_feat_link">View product &rarr;</a>
-            </div>
-          </div>
-          <div class="cs_dash_feat_card wow fadeInUp" data-wow-delay="0.1s">
-            <div class="cs_dash_feat_img"><img src="/assets/img/dashboard/pharmaCrop%20CBD100%20Oral%20Liquid.webp" alt="PharmaCrop CBD100 Oral Liquid"></div>
-            <div class="cs_dash_feat_body">
-              <h3>PharmaCrop CBD100 Oral Liquid</h3>
-              <span class="cs_dash_feat_spec">Oral Liquid &nbsp;|&nbsp; CBD 100 mg/mL</span>
-              <a href="/all-products?category=oral-liquid" class="cs_dash_feat_link">View product &rarr;</a>
-            </div>
-          </div>
-          <div class="cs_dash_feat_card wow fadeInUp" data-wow-delay="0.2s">
-            <div class="cs_dash_feat_img"><img src="/assets/img/dashboard/pharmaCrop%20Balance%20Pastilles.webp" alt="PharmaCrop Balance Pastilles"></div>
-            <div class="cs_dash_feat_body">
-              <h3>PharmaCrop Balance Pastilles</h3>
-              <span class="cs_dash_feat_spec">Pastilles &nbsp;|&nbsp; THC 5 mg / CBD 5 mg</span>
-              <a href="/all-products?category=pastilles" class="cs_dash_feat_link">View product &rarr;</a>
-            </div>
-          </div>
-          <div class="cs_dash_feat_card wow fadeInUp" data-wow-delay="0.3s">
-            <div class="cs_dash_feat_img"><img src="/assets/img/dashboard/pharmaCrop%20Relief%20Inhaled%20Liquid.webp" alt="PharmaCrop Relief Inhaled Liquid"></div>
-            <div class="cs_dash_feat_body">
-              <h3>PharmaCrop Relief Inhaled Liquid</h3>
-              <span class="cs_dash_feat_spec">Inhaled Liquid &nbsp;|&nbsp; THC 10 mg/mL</span>
-              <a href="/all-products?category=inhaled-liquid" class="cs_dash_feat_link">View product &rarr;</a>
-            </div>
-          </div>
+        <div class="cs_dash_feat_grid" data-feat-grid>
+          <div class="cs_dash_feat_card wow fadeInUp"><div class="cs_dash_feat_body"><p style="color:#999; margin:0;">Loading products...</p></div></div>
         </div>
       </div>
     </section>
@@ -421,6 +392,8 @@ export default function Page() {
     <Script id="cs_dashboard_script" strategy="afterInteractive">
       {`
         (function () {
+          var WP_API_URL = ${JSON.stringify(WP_API_URL)};
+
           if (window.PharmaCropAuth) {
             if (!window.PharmaCropAuth.requireAuth()) return;
             window.PharmaCropAuth.personalizeHeader();
@@ -454,6 +427,50 @@ export default function Page() {
               var input = document.querySelector('[data-dash-search-form] input');
               if (input) input.focus();
             });
+          }
+
+          function formatLabel(slug) {
+            return String(slug || '').replace(/[-_]+/g, ' ').replace(/\\b\\w/g, function (c) { return c.toUpperCase(); }).trim();
+          }
+
+          var FALLBACK_IMG = '/assets/img/dashboard/Dried%20Flower%20Category.webp';
+
+          function featCardHtml(p) {
+            var specLine = [p.thc ? 'THC ' + p.thc : '', p.cbd ? 'CBD ' + p.cbd : ''].filter(Boolean).join(' / ');
+            return '<div class="cs_dash_feat_card wow fadeInUp">' +
+              '<div class="cs_dash_feat_img"><img src="' + p.image + '" alt="' + p.name + '"></div>' +
+              '<div class="cs_dash_feat_body"><h3>' + p.name + '</h3>' +
+              '<span class="cs_dash_feat_spec">' + p.category + (specLine ? ' &nbsp;|&nbsp; ' + specLine : '') + '</span>' +
+              '<a href="/all-products/' + p.slug + '" class="cs_dash_feat_link">View product &rarr;</a>' +
+              '</div></div>';
+          }
+
+          var featGrid = document.querySelector('[data-feat-grid]');
+          if (featGrid) {
+            fetch(WP_API_URL + '/wp-json/wp/v2/product?per_page=4&orderby=date&order=desc&_embed')
+              .then(function (res) { return res.ok ? res.json() : []; })
+              .then(function (raw) {
+                if (!raw || !raw.length) {
+                  featGrid.innerHTML = '<div class="cs_dash_feat_card wow fadeInUp"><div class="cs_dash_feat_body"><p style="color:#999; margin:0;">No products yet.</p></div></div>';
+                  return;
+                }
+                var products = raw.map(function (item) {
+                  var acf = item.acf || {};
+                  var media = item._embedded && item._embedded['wp:featuredmedia'] && item._embedded['wp:featuredmedia'][0];
+                  return {
+                    slug: item.slug,
+                    name: (item.title && item.title.rendered) || '',
+                    category: formatLabel(acf.category),
+                    thc: acf.thc || '',
+                    cbd: acf.cbd || '',
+                    image: (media && media.source_url) || FALLBACK_IMG,
+                  };
+                });
+                featGrid.innerHTML = products.map(featCardHtml).join('');
+              })
+              .catch(function () {
+                featGrid.innerHTML = '<div class="cs_dash_feat_card wow fadeInUp"><div class="cs_dash_feat_body"><p style="color:#999; margin:0;">Could not load products.</p></div></div>';
+              });
           }
         })();
       `}
