@@ -142,9 +142,16 @@ export default function Page() {
       .cs_pd_pack_row { display: flex; align-items: stretch; gap: 24px; }
       .cs_pd_pack_img { flex: 0 0 42%; border-radius: 14px; overflow: hidden; }
       .cs_pd_pack_img img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 200px; }
-      .cs_pd_pack_table { flex: 1; }
+      .cs_pd_pack_table { flex: 1; display: flex; flex-direction: column; gap: 16px; }
+      .cs_pd_pack_card { display: flex; align-items: center; gap: 18px; background: #fff; border: 1px solid rgba(2,66,66,0.08); border-radius: 16px; padding: 18px 22px; box-shadow: 0 4px 14px rgba(2,66,66,0.04); }
+      .cs_pd_pack_card_icon { width: 50px; height: 50px; border-radius: 14px; background: rgba(120,220,166,0.15); color: #024242; display: flex; align-items: center; justify-content: center; font-size: 19px; flex: none; }
+      .cs_pd_pack_card_body { flex: 1; min-width: 0; }
+      .cs_pd_pack_card_body h4 { margin: 0 0 3px; color: #024242; font-size: 16px; font-weight: 800; }
+      .cs_pd_pack_card_body p { margin: 0; color: #8a9a95; font-size: 13px; }
+      .cs_pd_pack_card_value { background: #eef1ee; color: #024242; font-weight: 700; font-size: 14px; padding: 10px 20px; border-radius: 10px; white-space: nowrap; flex: none; }
       @media (max-width: 767px) {
         .cs_pd_pack_row { flex-direction: column; }
+        .cs_pd_pack_card { flex-wrap: wrap; }
       }
       .cs_pd_prof_row { display: flex; gap: 40px; align-items: flex-start; }
       .cs_pd_prof_row .cs_pd_section_head { flex: 0 0 320px; margin-bottom: 0; }
@@ -404,10 +411,10 @@ export default function Page() {
               '<div class="cs_pd_section_head wow fadeInUp"><h2>Presentation &amp; Packaging</h2><p>Product presentation and packaging details for ' + p.name + '.</p></div>' +
               '<div class="cs_pd_pack_row wow fadeInUp">' +
               '<div class="cs_pd_pack_img"><img src="' + p.packagingImage + '" alt="' + p.name + ' packaging"></div>' +
-              '<div class="cs_pd_pack_table cs_pd_table">' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-box"></i><span class="k">Pack Size</span><span class="v">' + p.packSize + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-box-open"></i><span class="k">Presentation</span><span class="v">' + p.presentation + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-leaf"></i><span class="k">Dosage Form</span><span class="v">' + p.dosageForm + '</span></div>' +
+              '<div class="cs_pd_pack_table">' +
+              '<div class="cs_pd_pack_card"><span class="cs_pd_pack_card_icon"><i class="fa-solid fa-box"></i></span><div class="cs_pd_pack_card_body"><h4>Pack Size</h4><p>Product quantity per unit.</p></div><span class="cs_pd_pack_card_value">' + p.packSize + '</span></div>' +
+              '<div class="cs_pd_pack_card"><span class="cs_pd_pack_card_icon"><i class="fa-solid fa-box-open"></i></span><div class="cs_pd_pack_card_body"><h4>Presentation</h4><p>How the product is supplied.</p></div><span class="cs_pd_pack_card_value">' + p.presentation + '</span></div>' +
+              '<div class="cs_pd_pack_card"><span class="cs_pd_pack_card_icon"><i class="fa-solid fa-leaf"></i></span><div class="cs_pd_pack_card_body"><h4>Dosage Form</h4><p>Physical form of the product.</p></div><span class="cs_pd_pack_card_value">' + p.dosageForm + '</span></div>' +
               '</div></div></div></section>' +
               '<section style="padding: 60px 0 30px; background: #fff;"><div class="container">' +
               '<div class="cs_pd_prof_row wow fadeInUp">' +
