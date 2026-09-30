@@ -373,7 +373,7 @@ export default function Page() {
               '</div>' +
               '<div class="cs_pd_ctas">' +
               '<a href="/contact" class="cs_pd_btn_primary"><i class="fa-solid fa-download"></i> Download Product Information <i class="fa-solid fa-arrow-right"></i></a>' +
-              '<a href="#documents" class="cs_pd_btn_outline"><i class="fa-solid fa-file-lines"></i> View Documents</a>' +
+              '<a href="#documents" class="cs_pd_btn_outline"><i class="fa-solid fa-file-lines"></i> Download CMI</a>' +
               '</div><p class="cs_pd_note">For healthcare professionals only.</p>' +
               '</div></div></div></section>' +
               '<section style="padding: 60px 0; background: #fff;"><div class="container">' +
