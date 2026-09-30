@@ -350,6 +350,7 @@ export default function Page() {
               tgaCategory: acf.tga_category || '—',
               schedule: acf.schedule || '—',
               cannabinoid: acf.cannabinoid || '',
+              spectrum: acf.spectrum || '',
               price: acf.price || '—',
               image: image,
               altImage: altImage,
@@ -383,6 +384,18 @@ export default function Page() {
               '</div></section>'
             ) : '';
 
+            var statsHtml = p.cannabinoid ? (
+              '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-flask"></i></span><span><span class="label">Cannabinoids</span><span class="value">' + p.cannabinoid + '</span></span></div>' +
+              '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-atom"></i></span><span><span class="label">Spectrum</span><span class="value">' + (p.spectrum || '—') + '</span></span></div>' +
+              '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-box"></i></span><span><span class="label">Pack Size</span><span class="value">' + p.packSize + '</span></span></div>' +
+              '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-tag"></i></span><span><span class="label">RRP</span><span class="value">' + (p.price !== '—' ? '$' + p.price + ' (to patient)' : '—') + '</span></span></div>'
+            ) : (
+              '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-leaf"></i></span><span><span class="label">THC</span><span class="value">' + p.thc + '</span></span></div>' +
+              '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-flask"></i></span><span><span class="label">CBD</span><span class="value">' + p.cbd + '</span></span></div>' +
+              '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-box"></i></span><span><span class="label">Pack Size</span><span class="value">' + p.packSize + '</span></span></div>' +
+              '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-gear"></i></span><span><span class="label">Dosage Form</span><span class="value">' + p.dosageForm + '</span></span></div>'
+            );
+
             return (
               '<div class="cs_pd_breadcrumb"><div class="container">' +
               '<a href="/all-products">Products</a> &gt; <a href="/all-products?category=' + p.categorySlug + '">' + p.category + '</a> &gt; <span class="current">' + p.name + '</span>' +
@@ -396,11 +409,7 @@ export default function Page() {
               '<span class="cs_pd_category">' + p.category + (p.speciesRatio !== '—' ? ' | <span class="strain">' + p.speciesRatio + '</span>' : '') + '</span>' +
               (p.price !== '—' ? '<span class="cs_pd_rrp">RRP <strong>$' + p.price + '</strong>' + (p.packSize !== '—' ? ' (' + p.packSize + ' pack)' : '') + '</span>' : '') +
               '<p class="cs_pd_desc">A premium ' + p.category.toLowerCase() + ' product, cultivated and processed to PharmaCrop’s high quality standards. ' + p.name + ' is available to healthcare professionals with detailed product information and supporting documentation.</p>' +
-              '<div class="cs_pd_stats">' +
-              '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-leaf"></i></span><span><span class="label">THC</span><span class="value">' + p.thc + '</span></span></div>' +
-              '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-flask"></i></span><span><span class="label">CBD</span><span class="value">' + p.cbd + '</span></span></div>' +
-              '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-box"></i></span><span><span class="label">Pack Size</span><span class="value">' + p.packSize + '</span></span></div>' +
-              '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-gear"></i></span><span><span class="label">Dosage Form</span><span class="value">' + p.dosageForm + '</span></span></div>' +
+              '<div class="cs_pd_stats">' + statsHtml +
               '</div>' +
               '<div class="cs_pd_ctas">' +
               '<a href="/contact" class="cs_pd_btn_primary"><i class="fa-solid fa-download"></i> Download Product Information <i class="fa-solid fa-arrow-right"></i></a>' +
