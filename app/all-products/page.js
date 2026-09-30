@@ -323,7 +323,7 @@ export default function Page() {
               <span class="cs_prod_category">Oral Liquid</span>
               <span class="cs_prod_spec">THC 5 mg/mL &nbsp;|&nbsp; CBD 15 mg/mL</span>
               <div class="cs_prod_meta_row">
-                <div><span class="cs_prod_strain_pill cs_prod_strain_hybrid">Hybrid</span><span class="cs_prod_packsize">30 mL bottle</span></div>
+                <div><span class="cs_prod_strain_pill cs_prod_strain_hybrid">Hybrid &ndash; Indica 50% : Sativa 50%</span><span class="cs_prod_packsize">30 mL bottle</span></div>
                 <div class="cs_prod_price"><span class="cs_prod_price_value">$90</span> <span class="cs_prod_price_rrp">RRP</span><span class="cs_prod_price_sub">(to patient)</span></div>
               </div>
               <span class="cs_prod_link">View Product &rarr;</span>
@@ -362,7 +362,7 @@ export default function Page() {
               <span class="cs_prod_category">Dried Flower</span>
               <span class="cs_prod_spec">THC 25% &nbsp;|&nbsp; CBD &lt;1%</span>
               <div class="cs_prod_meta_row">
-                <div><span class="cs_prod_strain_pill cs_prod_strain_hybrid">Hybrid</span><span class="cs_prod_packsize">10g pack</span></div>
+                <div><span class="cs_prod_strain_pill cs_prod_strain_hybrid">Hybrid &ndash; Indica 60% : Sativa 40%</span><span class="cs_prod_packsize">10g pack</span></div>
                 <div class="cs_prod_price"><span class="cs_prod_price_value">$150</span> <span class="cs_prod_price_rrp">RRP</span><span class="cs_prod_price_sub">(to patient)</span></div>
               </div>
               <span class="cs_prod_link">View Product &rarr;</span>
