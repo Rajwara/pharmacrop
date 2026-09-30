@@ -226,7 +226,7 @@ export default function Page() {
         </div>
         <div class="cs_team_grid">
           <div class="cs_team_card wow fadeInUp">
-            <div class="cs_team_photo"><img src="/assets/img/DR%20ADEL%20ZAREI.png" alt="Dr Adel Zarei"></div>
+            <div class="cs_team_photo"><img src="/assets/img/Team%20Image-Dr%20Adel%20Zarei.webp" alt="Dr Adel Zarei"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">Dr Adel Zarei</h3>
               <p class="cs_team_title">Chief Operating Officer</p>
@@ -236,7 +236,7 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp" data-wow-delay="0.1s">
-            <div class="cs_team_photo"><img src="/assets/img/Paul%20Baker.webp" alt="Paul Barker"></div>
+            <div class="cs_team_photo"><img src="/assets/img/Team%20Image-Paul%20Barker.webp" alt="Paul Barker"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">Paul Barker</h3>
               <p class="cs_team_title">Chief Financial Officer</p>
@@ -246,7 +246,7 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp" data-wow-delay="0.2s">
-            <div class="cs_team_photo"><img src="/assets/img/George%20Polimenakos.png" alt="George Polimenakos"></div>
+            <div class="cs_team_photo"><img src="/assets/img/Team%20Image-George%20Polimenakos.webp" alt="George Polimenakos"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">George Polimenakos</h3>
               <p class="cs_team_title">General Manager Commercial</p>
@@ -256,7 +256,7 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp">
-            <div class="cs_team_photo"><img src="/assets/img/CHAD%20ESCH.png" alt="Chad Esch"></div>
+            <div class="cs_team_photo"><img src="/assets/img/Team%20Image-Chad%20Esch.webp" alt="Chad Esch"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">Chad Esch</h3>
               <p class="cs_team_title">Master Grower</p>
@@ -266,7 +266,7 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp" data-wow-delay="0.1s">
-            <div class="cs_team_photo"><img src="/assets/img/AUDREY%20KUANG.png" alt="Audrey Kuang"></div>
+            <div class="cs_team_photo"><img src="/assets/img/Team%20Image-Audrey%20Kuang.webp" alt="Audrey Kuang"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">Audrey Kuang</h3>
               <p class="cs_team_title">Head of Quality</p>
@@ -276,7 +276,7 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp" data-wow-delay="0.2s">
-            <div class="cs_team_photo"><img src="/assets/img/CAROLYN%20FENNELL.png" alt="Carolyn Fennell"></div>
+            <div class="cs_team_photo"><img src="/assets/img/Team%20Image-Carolyn%20Fennell.webp" alt="Carolyn Fennell"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">Carolyn Fennell</h3>
               <p class="cs_team_title">GMP Production Manager</p>
@@ -286,7 +286,7 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp">
-            <div class="cs_team_photo"><img src="/assets/img/Johanna%20Faccini.webp" alt="Johanna Faccini"></div>
+            <div class="cs_team_photo"><img src="/assets/img/Team%20Image-Johanna%20Faccini.webp" alt="Johanna Faccini"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">Johanna Faccini</h3>
               <p class="cs_team_title">Marketing Director</p>
@@ -296,7 +296,7 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp" data-wow-delay="0.1s">
-            <div class="cs_team_photo"><img src="/assets/img/Suzanne%20Roberts.webp" alt="Suzanne Roberts"></div>
+            <div class="cs_team_photo"><img src="/assets/img/Team%20Image-Suzanne%20Roberts.webp" alt="Suzanne Roberts"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">Suzanne Roberts</h3>
               <p class="cs_team_title">Sales Director</p>
