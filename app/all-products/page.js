@@ -407,6 +407,7 @@ export default function Page() {
               packSize: acf.pack_size || '',
               strength: classifyStrength(acf.thc, acf.cbd),
               strainType: acf.type_value || '',
+              speciesRatio: acf.species_ratio || '',
               price: acf.price || '',
               image: image,
               altImage: altImage,
@@ -436,7 +437,7 @@ export default function Page() {
 
           function cardHtml(p) {
             var specLine = [p.thc ? 'THC ' + p.thc : '', p.cbd ? 'CBD ' + p.cbd : ''].filter(Boolean).join(' &nbsp;|&nbsp; ');
-            var strainPill = p.strainType ? '<span class="' + strainPillClass(p.strainType) + '">' + p.strainType + '</span>' : '<span></span>';
+            var strainPill = p.strainType ? '<span class="' + strainPillClass(p.strainType) + '">' + p.strainType + (p.speciesRatio ? ' &ndash; ' + p.speciesRatio : '') + '</span>' : '<span></span>';
             var priceBlock = p.price
               ? '<div class="cs_prod_price"><span class="cs_prod_price_value">$' + p.price + '</span> <span class="cs_prod_price_rrp">RRP</span><span class="cs_prod_price_sub">(to patient)</span></div>'
               : '<div class="cs_prod_price"></div>';
