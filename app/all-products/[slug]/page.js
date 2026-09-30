@@ -342,10 +342,13 @@ export default function Page() {
               dosageForm: category,
               thc: acf.thc || '—',
               cbd: acf.cbd || '—',
+              cbg: acf.cbg || '—',
+              cbn: acf.cbn || '—',
               packSize: acf.pack_size || '—',
               presentation: acf.presentation || '—',
               speciesRatio: acf.species_ratio || '—',
               dominantTerpenes: acf.dominant_terpenes || '—',
+              excipients: acf.excipients || '—',
               therapeuticProfile: acf.therapeutic_profile || '—',
               tgaCategory: acf.tga_category || '—',
               schedule: acf.schedule || '—',
@@ -396,6 +399,37 @@ export default function Page() {
               '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-gear"></i></span><span><span class="label">Dosage Form</span><span class="value">' + p.dosageForm + '</span></span></div>'
             );
 
+            var detailsTable1Html = p.cannabinoid ? (
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-tag"></i><span class="k">Product Name</span><span class="v">' + p.name + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-leaf"></i><span class="k">Dosage Form</span><span class="v">' + p.dosageForm + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">CBD Strength</span><span class="v">' + p.cbd + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">CBG Strength</span><span class="v">' + p.cbg + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">CBN Strength</span><span class="v">' + p.cbn + '</span></div>'
+            ) : (
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-tag"></i><span class="k">Product Name</span><span class="v">' + p.name + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-leaf"></i><span class="k">Dosage Form</span><span class="v">' + p.dosageForm + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">THC Strength</span><span class="v">' + p.thc + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">CBD Strength</span><span class="v">' + p.cbd + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-seedling"></i><span class="k">Plant Species</span><span class="v">' + p.speciesRatio + '</span></div>'
+            );
+
+            var detailsTable2Html = p.cannabinoid ? (
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-box-open"></i><span class="k">Presentation</span><span class="v">' + p.presentation + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-box"></i><span class="k">Pack Size</span><span class="v">' + p.packSize + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-atom"></i><span class="k">Spectrum</span><span class="v">' + p.spectrum + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-vial"></i><span class="k">Excipients</span><span class="v">' + p.excipients + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-heart-pulse"></i><span class="k">Therapeutic Profile</span><span class="v">' + p.therapeuticProfile + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-shield-halved"></i><span class="k">TGA Category</span><span class="v">' + p.tgaCategory + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-scale-balanced"></i><span class="k">Schedule</span><span class="v">' + p.schedule + '</span></div>'
+            ) : (
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-box-open"></i><span class="k">Presentation</span><span class="v">' + p.presentation + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-box"></i><span class="k">Pack Size</span><span class="v">' + p.packSize + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-wind"></i><span class="k">Dominant Terpenes</span><span class="v">' + p.dominantTerpenes + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-heart-pulse"></i><span class="k">Therapeutic Profile</span><span class="v">' + p.therapeuticProfile + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-shield-halved"></i><span class="k">TGA Category</span><span class="v">' + p.tgaCategory + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-scale-balanced"></i><span class="k">Schedule</span><span class="v">' + p.schedule + '</span></div>'
+            );
+
             return (
               '<div class="cs_pd_breadcrumb"><div class="container">' +
               '<a href="/all-products">Products</a> &gt; <a href="/all-products?category=' + p.categorySlug + '">' + p.category + '</a> &gt; <span class="current">' + p.name + '</span>' +
@@ -425,20 +459,9 @@ export default function Page() {
               '<section style="padding: 60px 0; background: #f7faf8;"><div class="container">' +
               '<div class="cs_pd_section_head wow fadeInUp"><h2>Product Details</h2><p>Key product information and specifications for ' + p.name + '.</p></div>' +
               '<div class="cs_pd_details_grid">' +
-              '<div class="cs_pd_table wow fadeInUp">' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-tag"></i><span class="k">Product Name</span><span class="v">' + p.name + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-leaf"></i><span class="k">Dosage Form</span><span class="v">' + p.dosageForm + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">THC Strength</span><span class="v">' + p.thc + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">CBD Strength</span><span class="v">' + p.cbd + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-seedling"></i><span class="k">Plant Species</span><span class="v">' + p.speciesRatio + '</span></div>' +
+              '<div class="cs_pd_table wow fadeInUp">' + detailsTable1Html +
               '</div>' +
-              '<div class="cs_pd_table wow fadeInUp" data-wow-delay="0.1s">' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-box-open"></i><span class="k">Presentation</span><span class="v">' + p.presentation + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-box"></i><span class="k">Pack Size</span><span class="v">' + p.packSize + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-wind"></i><span class="k">Dominant Terpenes</span><span class="v">' + p.dominantTerpenes + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-heart-pulse"></i><span class="k">Therapeutic Profile</span><span class="v">' + p.therapeuticProfile + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-shield-halved"></i><span class="k">TGA Category</span><span class="v">' + p.tgaCategory + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-scale-balanced"></i><span class="k">Schedule</span><span class="v">' + p.schedule + '</span></div>' +
+              '<div class="cs_pd_table wow fadeInUp" data-wow-delay="0.1s">' + detailsTable2Html +
               '</div></div></div></section>' +
               '<section style="padding: 60px 0; background: #fff;"><div class="container">' +
               '<div class="cs_pd_pack_row wow fadeInUp">' +
