@@ -113,11 +113,15 @@ export default async function Page({ params }) {
       .cs_pd_gallery_thumbs button { padding: 0; border: 2px solid transparent; border-radius: 10px; overflow: hidden; width: 90px; height: 70px; cursor: pointer; background: none; }
       .cs_pd_gallery_thumbs button.active { border-color: #024242; }
       .cs_pd_gallery_thumbs img { width: 100%; height: 100%; object-fit: cover; display: block; }
-      .cs_pd_eyebrow { display: block; color: #024242; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
+      .cs_pd_origin_badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(120,220,166,0.15); color: #024242; font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; padding: 6px 12px; border-radius: 20px; margin-bottom: 14px; }
+      .cs_pd_origin_badge i.fa-circle-info { opacity: 0.55; font-size: 11px; }
       .cs_pd_hero h1 { color: #024242; font-size: 40px; font-weight: 800; margin: 0 0 6px; }
-      .cs_pd_category { display: block; color: #78dca6; font-weight: 700; font-size: 15px; margin-bottom: 18px; }
+      .cs_pd_category { display: block; color: #024242; font-weight: 700; font-size: 15px; margin-bottom: 10px; }
+      .cs_pd_category .strain { color: #78dca6; }
+      .cs_pd_rrp { display: block; color: #024242; font-size: 15px; font-weight: 600; margin-bottom: 18px; }
+      .cs_pd_rrp strong { font-size: 23px; font-weight: 800; }
       .cs_pd_desc { color: #666; font-size: 15px; line-height: 1.7; margin: 0 0 26px; }
-      .cs_pd_stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-bottom: 30px; }
+      .cs_pd_stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 30px; }
       .cs_pd_stat { display: flex; align-items: center; gap: 10px; }
       .cs_pd_stat_icon { width: 34px; height: 34px; border-radius: 8px; background: rgba(120,220,166,0.15); color: #024242; display: flex; align-items: center; justify-content: center; font-size: 14px; flex: none; }
       .cs_pd_stat span.label { display: block; color: #999; font-size: 11px; }
@@ -128,9 +132,6 @@ export default async function Page({ params }) {
       .cs_pd_btn_outline { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: #024242; font-weight: 700; font-size: 14px; padding: 14px 22px; border-radius: 10px; text-decoration: none; border: 1px solid rgba(2,66,66,0.2); }
       .cs_pd_btn_outline:hover { border-color: #024242; }
       .cs_pd_note { color: #999; font-size: 12px; margin: 0; }
-      @media (max-width: 1199px) {
-        .cs_pd_stats { grid-template-columns: repeat(3, 1fr); }
-      }
       @media (max-width: 991px) {
         .cs_pd_hero_grid { grid-template-columns: 1fr; }
         .cs_pd_stats { grid-template-columns: repeat(2, 1fr); }
@@ -153,16 +154,16 @@ export default async function Page({ params }) {
             </div>
           </div>
           <div class="wow fadeInUp" data-wow-delay="0.1s">
-            <span class="cs_pd_eyebrow">HCP Portal</span>
+            <span class="cs_pd_origin_badge"><i class="fa-solid fa-leaf"></i> Australian Grown <i class="fa-solid fa-circle-info"></i></span>
             <h1>${product.name}</h1>
-            <span class="cs_pd_category">${product.category}</span>
+            <span class="cs_pd_category">${product.category}${product.strainType ? ` | <span class="strain">${product.strainType}</span>` : ''}</span>
+            ${product.price ? `<span class="cs_pd_rrp">RRP <strong>$${product.price}</strong>${product.packSize ? ` (${product.packSize} pack)` : ''}</span>` : ''}
             <p class="cs_pd_desc">A premium ${product.category.toLowerCase()} product, cultivated and processed to PharmaCrop&rsquo;s high quality standards. ${product.name} is available to healthcare professionals with detailed product information and supporting documentation.</p>
             <div class="cs_pd_stats">
               <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-leaf"></i></span><span><span class="label">THC</span><span class="value">${product.thc}</span></span></div>
               <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-flask"></i></span><span><span class="label">CBD</span><span class="value">${product.cbd}</span></span></div>
               <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-box"></i></span><span><span class="label">Pack Size</span><span class="value">${product.packSize}</span></span></div>
               <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-gear"></i></span><span><span class="label">Dosage Form</span><span class="value">${product.dosageForm}</span></span></div>
-              <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-tag"></i></span><span><span class="label">RRP</span><span class="value">$${product.price} RRP</span></span></div>
             </div>
             <div class="cs_pd_ctas">
               <a href="/contact" class="cs_pd_btn_primary"><i class="fa-solid fa-download"></i> Download Product Information <i class="fa-solid fa-arrow-right"></i></a>
