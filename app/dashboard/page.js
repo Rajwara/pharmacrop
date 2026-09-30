@@ -401,7 +401,9 @@ export default function Page() {
           var FALLBACK_IMG = '/assets/img/dashboard/Dried%20Flower%20Category.webp';
 
           function featCardHtml(p) {
-            var specLine = p.cannabinoid || [p.thc ? 'THC ' + p.thc : '', p.cbd ? 'CBD ' + p.cbd : ''].filter(Boolean).join(' / ');
+            var specLine = (p.cbg || p.cbn)
+              ? [p.cbd ? 'CBD ' + p.cbd : '', p.cbg ? 'CBG ' + p.cbg : '', p.cbn ? 'CBN ' + p.cbn : ''].filter(Boolean).join(' / ')
+              : [p.thc ? 'THC ' + p.thc : '', p.cbd ? 'CBD ' + p.cbd : ''].filter(Boolean).join(' / ');
             return '<div class="cs_dash_feat_card wow fadeInUp">' +
               '<div class="cs_dash_feat_img"><img src="' + p.image + '" alt="' + p.name + '"></div>' +
               '<div class="cs_dash_feat_body"><h3>' + p.name + '</h3>' +
@@ -428,7 +430,8 @@ export default function Page() {
                     category: formatLabel(acf.category),
                     thc: acf.thc || '',
                     cbd: acf.cbd || '',
-                    cannabinoid: acf.cannabinoid || '',
+                    cbg: acf.cbg || '',
+                    cbn: acf.cbn || '',
                     image: (media && media.source_url) || FALLBACK_IMG,
                   };
                 });

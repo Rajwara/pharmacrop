@@ -404,7 +404,8 @@ export default function Page() {
               category: formatLabel(categorySlug),
               thc: acf.thc || '',
               cbd: acf.cbd || '',
-              cannabinoid: acf.cannabinoid || '',
+              cbg: acf.cbg || '',
+              cbn: acf.cbn || '',
               packSize: acf.pack_size || '',
               strength: classifyStrength(acf.thc, acf.cbd),
               speciesRatio: acf.species_ratio || '',
@@ -436,7 +437,9 @@ export default function Page() {
           }
 
           function cardHtml(p) {
-            var specLine = p.cannabinoid || [p.thc ? 'THC ' + p.thc : '', p.cbd ? 'CBD ' + p.cbd : ''].filter(Boolean).join(' &nbsp;|&nbsp; ');
+            var specLine = (p.cbg || p.cbn)
+              ? [p.cbd ? 'CBD ' + p.cbd : '', p.cbg ? 'CBG ' + p.cbg : '', p.cbn ? 'CBN ' + p.cbn : ''].filter(Boolean).join(' &nbsp;|&nbsp; ')
+              : [p.thc ? 'THC ' + p.thc : '', p.cbd ? 'CBD ' + p.cbd : ''].filter(Boolean).join(' &nbsp;|&nbsp; ');
             var strainPill = p.speciesRatio ? '<span class="' + strainPillClass(p.speciesRatio) + '">' + p.speciesRatio + '</span>' : '<span></span>';
             var priceBlock = p.price
               ? '<div class="cs_prod_price"><span class="cs_prod_price_value">$' + p.price + '</span> <span class="cs_prod_price_rrp">RRP</span><span class="cs_prod_price_sub">(to patient)</span></div>'

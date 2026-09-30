@@ -342,8 +342,8 @@ export default function Page() {
               dosageForm: category,
               thc: acf.thc || '—',
               cbd: acf.cbd || '—',
-              cbg: acf.cbg || '—',
-              cbn: acf.cbn || '—',
+              cbg: acf.cbg || '',
+              cbn: acf.cbn || '',
               packSize: acf.pack_size || '—',
               presentation: acf.presentation || '—',
               speciesRatio: acf.species_ratio || '—',
@@ -352,7 +352,6 @@ export default function Page() {
               therapeuticProfile: acf.therapeutic_profile || '—',
               tgaCategory: acf.tga_category || '—',
               schedule: acf.schedule || '—',
-              cannabinoid: acf.cannabinoid || '',
               spectrum: acf.spectrum || '',
               price: acf.price || '—',
               image: image,
@@ -387,8 +386,16 @@ export default function Page() {
               '</div></section>'
             ) : '';
 
-            var statsHtml = p.cannabinoid ? (
-              '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-flask"></i></span><span><span class="label">Cannabinoids</span><span class="value">' + p.cannabinoid + '</span></span></div>' +
+            var isBroadSpectrum = !!(p.cbg || p.cbn);
+            var cannabinoidLine = [
+              p.thc && p.thc !== '—' ? 'THC ' + p.thc : '',
+              p.cbd && p.cbd !== '—' ? 'CBD ' + p.cbd : '',
+              p.cbg ? 'CBG ' + p.cbg : '',
+              p.cbn ? 'CBN ' + p.cbn : ''
+            ].filter(Boolean).join(' | ');
+
+            var statsHtml = isBroadSpectrum ? (
+              '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-flask"></i></span><span><span class="label">Cannabinoids</span><span class="value">' + cannabinoidLine + '</span></span></div>' +
               '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-atom"></i></span><span><span class="label">Spectrum</span><span class="value">' + (p.spectrum || '—') + '</span></span></div>' +
               '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-box"></i></span><span><span class="label">Pack Size</span><span class="value">' + p.packSize + '</span></span></div>' +
               '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-tag"></i></span><span><span class="label">RRP</span><span class="value">' + (p.price !== '—' ? '$' + p.price + ' (to patient)' : '—') + '</span></span></div>'
@@ -399,12 +406,12 @@ export default function Page() {
               '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-gear"></i></span><span><span class="label">Dosage Form</span><span class="value">' + p.dosageForm + '</span></span></div>'
             );
 
-            var detailsTable1Html = p.cannabinoid ? (
+            var detailsTable1Html = isBroadSpectrum ? (
               '<div class="cs_pd_table_row"><i class="fa-solid fa-tag"></i><span class="k">Product Name</span><span class="v">' + p.name + '</span></div>' +
               '<div class="cs_pd_table_row"><i class="fa-solid fa-leaf"></i><span class="k">Dosage Form</span><span class="v">' + p.dosageForm + '</span></div>' +
               '<div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">CBD Strength</span><span class="v">' + p.cbd + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">CBG Strength</span><span class="v">' + p.cbg + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">CBN Strength</span><span class="v">' + p.cbn + '</span></div>'
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">CBG Strength</span><span class="v">' + (p.cbg || '—') + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">CBN Strength</span><span class="v">' + (p.cbn || '—') + '</span></div>'
             ) : (
               '<div class="cs_pd_table_row"><i class="fa-solid fa-tag"></i><span class="k">Product Name</span><span class="v">' + p.name + '</span></div>' +
               '<div class="cs_pd_table_row"><i class="fa-solid fa-leaf"></i><span class="k">Dosage Form</span><span class="v">' + p.dosageForm + '</span></div>' +
@@ -413,7 +420,7 @@ export default function Page() {
               '<div class="cs_pd_table_row"><i class="fa-solid fa-seedling"></i><span class="k">Plant Species</span><span class="v">' + p.speciesRatio + '</span></div>'
             );
 
-            var detailsTable2Html = p.cannabinoid ? (
+            var detailsTable2Html = isBroadSpectrum ? (
               '<div class="cs_pd_table_row"><i class="fa-solid fa-box-open"></i><span class="k">Presentation</span><span class="v">' + p.presentation + '</span></div>' +
               '<div class="cs_pd_table_row"><i class="fa-solid fa-box"></i><span class="k">Pack Size</span><span class="v">' + p.packSize + '</span></div>' +
               '<div class="cs_pd_table_row"><i class="fa-solid fa-atom"></i><span class="k">Spectrum</span><span class="v">' + p.spectrum + '</span></div>' +
