@@ -120,8 +120,8 @@ export default function RootLayout({ children }) {
               var quoteTab = document.getElementById('cs_quote_tab');
               if (quoteTab) {
                 if (isPortalPage) {
-                  quoteTab.textContent = 'Call An MSL';
-                  quoteTab.href = 'tel:1300053533';
+                  quoteTab.textContent = 'Request A Call With MSL';
+                  quoteTab.href = '/contact';
                 } else if (path === '/contact' || path === '/contact/' || path === '/partnerships' || path === '/partnerships/') {
                   quoteTab.style.display = 'none';
                 }
