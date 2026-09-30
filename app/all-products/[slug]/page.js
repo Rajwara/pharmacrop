@@ -282,7 +282,6 @@ export default async function Page({ params }) {
         <div class="cs_pd_prof_row wow fadeInUp">
           <div class="cs_pd_section_head">
             <h2>Professional Information</h2>
-            <p>Detailed product information for healthcare professionals.</p>
           </div>
           <p class="cs_pd_prof_text">Comprehensive professional information, including product specifications, analytical data and supporting documentation, is available for healthcare professionals. Please refer to the relevant documents below.</p>
         </div>
