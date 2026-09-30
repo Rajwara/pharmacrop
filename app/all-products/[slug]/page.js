@@ -395,7 +395,6 @@ export default function Page() {
               '<div class="cs_pd_table_row"><i class="fa-solid fa-seedling"></i><span class="k">' + p.typeLabel + '</span><span class="v">' + p.typeValue + '</span></div>' +
               '<div class="cs_pd_table_row"><i class="fa-solid fa-box-open"></i><span class="k">Presentation</span><span class="v">' + p.presentation + '</span></div>' +
               '<div class="cs_pd_table_row"><i class="fa-solid fa-box"></i><span class="k">Pack Size</span><span class="v">' + p.packSize + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-list"></i><span class="k">Quantity</span><span class="v">' + p.quantity + '</span></div>' +
               '<div class="cs_pd_table_row"><i class="fa-solid fa-file-lines"></i><span class="k">Other Product Characteristics</span><span class="v">' + p.otherCharacteristics + '</span></div>' +
               '</div></div></div></section>' +
               '<section style="padding: 60px 0; background: #fff;"><div class="container">' +
@@ -411,7 +410,6 @@ export default function Page() {
               '<div class="cs_pd_pack_img"><img src="' + p.packagingImage + '" alt="' + p.name + ' packaging"></div>' +
               '<div class="cs_pd_pack_table cs_pd_table">' +
               '<div class="cs_pd_table_row"><i class="fa-solid fa-box"></i><span class="k">Pack Size</span><span class="v">' + p.packSize + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-list"></i><span class="k">Quantity</span><span class="v">' + p.quantity + '</span></div>' +
               '<div class="cs_pd_table_row"><i class="fa-solid fa-box-open"></i><span class="k">Presentation</span><span class="v">' + p.presentation + '</span></div>' +
               '<div class="cs_pd_table_row"><i class="fa-solid fa-leaf"></i><span class="k">Dosage Form</span><span class="v">' + p.dosageForm + '</span></div>' +
               '</div></div></div></section>' +
