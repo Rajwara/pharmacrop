@@ -408,7 +408,7 @@ export default function Page() {
               '</div></div></div></section>' +
               '<section style="padding: 60px 0 30px; background: #fff;"><div class="container">' +
               '<div class="cs_pd_prof_row wow fadeInUp">' +
-              '<div class="cs_pd_section_head"><h2>Professional Information</h2><p>Detailed product information for healthcare professionals.</p></div>' +
+              '<div class="cs_pd_section_head"><h2>Professional Information</h2></div>' +
               '<p class="cs_pd_prof_text">Comprehensive professional information, including product specifications, analytical data and supporting documentation, is available for healthcare professionals. Please refer to the relevant documents below.</p>' +
               '</div></div></section>' +
               '<section id="documents" style="padding: 30px 0 60px; background: #fff; scroll-margin-top: 100px;"><div class="container">' +
