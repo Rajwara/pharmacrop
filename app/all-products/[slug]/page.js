@@ -305,14 +305,16 @@ export default async function Page({ params }) {
     <!-- End Professional Information -->
     <!-- Start Documents & Downloads -->
     <style>
-      .cs_pd_doc_grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-      .cs_pd_doc_card { background: #fff; border: 1px solid rgba(2,66,66,0.1); border-radius: 12px; padding: 20px; }
-      .cs_pd_doc_icon { width: 34px; height: 34px; border-radius: 8px; background: rgba(120,220,166,0.15); color: #024242; display: flex; align-items: center; justify-content: center; font-size: 14px; margin-bottom: 14px; }
-      .cs_pd_doc_card h4 { color: #024242; font-size: 14px; font-weight: 800; margin: 0 0 4px; }
-      .cs_pd_doc_card span.meta { color: #999; font-size: 12px; display: block; margin-bottom: 14px; }
-      .cs_pd_doc_actions { display: flex; gap: 16px; }
-      .cs_pd_doc_actions a { color: #024242; font-weight: 700; font-size: 12.5px; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; }
+      .cs_pd_doc_grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; align-items: stretch; }
+      .cs_pd_doc_card { display: flex; flex-direction: column; background: #fff; border: 1px solid rgba(2,66,66,0.08); border-radius: 16px; padding: 26px 24px; box-shadow: 0 4px 14px rgba(2,66,66,0.04); }
+      .cs_pd_doc_icon { width: 52px; height: 52px; border-radius: 14px; background: rgba(120,220,166,0.15); color: #024242; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 18px; flex: none; }
+      .cs_pd_doc_card h4 { color: #024242; font-size: 17px; font-weight: 800; margin: 0 0 10px; line-height: 1.3; }
+      .cs_pd_doc_card p.cs_pd_doc_desc { color: #7c8f89; font-size: 13.5px; line-height: 1.5; margin: 0; flex: 1; }
+      .cs_pd_doc_actions { display: flex; gap: 18px; margin-top: 20px; padding-top: 18px; border-top: 1px solid rgba(2,66,66,0.08); }
+      .cs_pd_doc_actions a { color: #024242; font-weight: 700; font-size: 13px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
       .cs_pd_doc_actions a:hover { color: #78dca6; }
+      .cs_pd_doc_cta_btn { margin-top: 20px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #024242; color: #fff; font-weight: 700; font-size: 13.5px; padding: 13px 18px; border-radius: 10px; text-decoration: none; }
+      .cs_pd_doc_cta_btn:hover { background: #78dca6; color: #024242; }
       @media (max-width: 991px) {
         .cs_pd_doc_grid { grid-template-columns: repeat(2, 1fr); }
       }
@@ -330,7 +332,7 @@ export default async function Page({ params }) {
           <div class="cs_pd_doc_card wow fadeInUp">
             <div class="cs_pd_doc_icon"><i class="fa-solid fa-file-lines"></i></div>
             <h4>Product Information</h4>
-            <span class="meta">PDF &middot; 1.2 MB</span>
+            <p class="cs_pd_doc_desc">Key product details, formulation information and intended use.</p>
             <div class="cs_pd_doc_actions">
               <a href="${product.image}" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View</a>
               <a href="/contact"><i class="fa-solid fa-download"></i> Download</a>
@@ -339,29 +341,26 @@ export default async function Page({ params }) {
           <div class="cs_pd_doc_card wow fadeInUp" data-wow-delay="0.1s">
             <div class="cs_pd_doc_icon"><i class="fa-solid fa-file-lines"></i></div>
             <h4>Consumer Medicine Information</h4>
-            <span class="meta">PDF &middot; 1.1 MB</span>
+            <p class="cs_pd_doc_desc">Consumer medicine information for patients.</p>
             <div class="cs_pd_doc_actions">
               <a href="${product.altImage}" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View</a>
               <a href="/contact"><i class="fa-solid fa-download"></i> Download</a>
             </div>
           </div>
           <div class="cs_pd_doc_card wow fadeInUp" data-wow-delay="0.2s">
-            <div class="cs_pd_doc_icon"><i class="fa-solid fa-file-lines"></i></div>
-            <h4>Product Technical Sheet</h4>
-            <span class="meta">PDF &middot; 800 KB</span>
+            <div class="cs_pd_doc_icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+            <h4>Patient Support</h4>
+            <p class="cs_pd_doc_desc">A patient-friendly booklet with dosing guidance and support information.</p>
             <div class="cs_pd_doc_actions">
-              <a href="${product.image}" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View</a>
-              <a href="/contact"><i class="fa-solid fa-download"></i> Download</a>
+              <a href="https://pharmacropglobal.sharepoint.com/:b:/r/sites/PharmaCropWebsiteRevampPortal2.0/Content/Portal/Doctor/Files%20to%20link/PC%20Patient%20A5%20booklet.pdf?d=wa4a1e692b93c419db6c7185b5bbef23c&csf=1&web=1&e=uZbhLY" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View</a>
+              <a href="https://pharmacropglobal.sharepoint.com/:b:/r/sites/PharmaCropWebsiteRevampPortal2.0/Content/Portal/Doctor/Files%20to%20link/PC%20Patient%20A5%20booklet.pdf?d=wa4a1e692b93c419db6c7185b5bbef23c&csf=1&web=1&e=uZbhLY" target="_blank" rel="noopener"><i class="fa-solid fa-download"></i> Download</a>
             </div>
           </div>
           <div class="cs_pd_doc_card wow fadeInUp" data-wow-delay="0.3s">
-            <div class="cs_pd_doc_icon"><i class="fa-solid fa-file-lines"></i></div>
-            <h4>Supporting HCP Documentation</h4>
-            <span class="meta">PDF &middot; 950 KB</span>
-            <div class="cs_pd_doc_actions">
-              <a href="${product.altImage}" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View</a>
-              <a href="/contact"><i class="fa-solid fa-download"></i> Download</a>
-            </div>
+            <div class="cs_pd_doc_icon"><i class="fa-solid fa-file-circle-check"></i></div>
+            <h4>Request the Latest Certificate of Analysis</h4>
+            <p class="cs_pd_doc_desc">Get the most recent Certificate of Analysis (CoA) for this product from our team.</p>
+            <a href="/contact" class="cs_pd_doc_cta_btn"><i class="fa-solid fa-envelope"></i> Request Certificate of Analysis</a>
           </div>
         </div>
       </div>
