@@ -398,13 +398,6 @@ export default function Page() {
               '<div class="cs_pd_table_row"><i class="fa-solid fa-file-lines"></i><span class="k">Other Product Characteristics</span><span class="v">' + p.otherCharacteristics + '</span></div>' +
               '</div></div></div></section>' +
               '<section style="padding: 60px 0; background: #fff;"><div class="container">' +
-              '<div class="cs_pd_section_head wow fadeInUp"><h2>Cultivar Information</h2><p>Information about the cultivar and product characteristics.</p></div>' +
-              '<div class="cs_pd_cultivar_grid">' +
-              '<div class="cs_pd_cultivar_card wow fadeInUp"><div class="cs_pd_cultivar_icon"><i class="fa-solid fa-seedling"></i></div><h4>' + p.typeFieldLabel + '</h4><p>' + p.typeDesc + '</p></div>' +
-              '<div class="cs_pd_cultivar_card wow fadeInUp" data-wow-delay="0.1s"><div class="cs_pd_cultivar_icon"><i class="fa-solid fa-diagram-project"></i></div><h4>Cannabinoid Composition</h4><p><strong>' + p.cannabinoid + '</strong><br>Full cannabinoid profile and additional analysis information is available in the product documentation.</p></div>' +
-              '<div class="cs_pd_cultivar_card wow fadeInUp" data-wow-delay="0.2s"><div class="cs_pd_cultivar_icon"><i class="fa-solid fa-gear"></i></div><h4>Other Characteristics</h4><p>' + p.otherCharacteristics + ' Grown and processed in accordance with PharmaCrop’s quality standards.</p></div>' +
-              '</div></div></section>' +
-              '<section style="padding: 60px 0; background: #f7faf8;"><div class="container">' +
               '<div class="cs_pd_section_head wow fadeInUp"><h2>Presentation &amp; Packaging</h2><p>Product presentation and packaging details for ' + p.name + '.</p></div>' +
               '<div class="cs_pd_pack_row wow fadeInUp">' +
               '<div class="cs_pd_pack_img"><img src="' + p.packagingImage + '" alt="' + p.name + ' packaging"></div>' +
