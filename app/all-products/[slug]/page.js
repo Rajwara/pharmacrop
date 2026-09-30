@@ -50,6 +50,37 @@ export default async function Page({ params }) {
               <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-box"></i></span><span><span class="label">Pack Size</span><span class="value">${product.packSize}</span></span></div>
               <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-gear"></i></span><span><span class="label">Dosage Form</span><span class="value">${product.dosageForm}</span></span></div>`;
 
+  const detailsTable1Html = product.cannabinoid
+    ? `
+            <div class="cs_pd_table_row"><i class="fa-solid fa-tag"></i><span class="k">Product Name</span><span class="v">${product.name}</span></div>
+            <div class="cs_pd_table_row"><i class="fa-solid fa-leaf"></i><span class="k">Dosage Form</span><span class="v">${product.dosageForm}</span></div>
+            <div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">CBD Strength</span><span class="v">${product.cbd}</span></div>
+            <div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">CBG Strength</span><span class="v">${product.cbg || "—"}</span></div>
+            <div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">CBN Strength</span><span class="v">${product.cbn || "—"}</span></div>`
+    : `
+            <div class="cs_pd_table_row"><i class="fa-solid fa-tag"></i><span class="k">Product Name</span><span class="v">${product.name}</span></div>
+            <div class="cs_pd_table_row"><i class="fa-solid fa-leaf"></i><span class="k">Dosage Form</span><span class="v">${product.dosageForm}</span></div>
+            <div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">THC Strength</span><span class="v">${product.thc}</span></div>
+            <div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">CBD Strength</span><span class="v">${product.cbd}</span></div>
+            <div class="cs_pd_table_row"><i class="fa-solid fa-seedling"></i><span class="k">Plant Species</span><span class="v">${product.strainType}${product.speciesRatio ? ` (${product.speciesRatio})` : ""}</span></div>`;
+
+  const detailsTable2Html = product.cannabinoid
+    ? `
+            <div class="cs_pd_table_row"><i class="fa-solid fa-box-open"></i><span class="k">Presentation</span><span class="v">${product.presentation}</span></div>
+            <div class="cs_pd_table_row"><i class="fa-solid fa-box"></i><span class="k">Pack Size</span><span class="v">${product.packSize}</span></div>
+            <div class="cs_pd_table_row"><i class="fa-solid fa-atom"></i><span class="k">Spectrum</span><span class="v">${product.spectrum || "—"}</span></div>
+            <div class="cs_pd_table_row"><i class="fa-solid fa-vial"></i><span class="k">Excipients</span><span class="v">${product.excipients || "—"}</span></div>
+            <div class="cs_pd_table_row"><i class="fa-solid fa-heart-pulse"></i><span class="k">Therapeutic Profile</span><span class="v">${product.therapeuticProfile}</span></div>
+            <div class="cs_pd_table_row"><i class="fa-solid fa-shield-halved"></i><span class="k">TGA Category</span><span class="v">${product.tgaCategory}</span></div>
+            <div class="cs_pd_table_row"><i class="fa-solid fa-scale-balanced"></i><span class="k">Schedule</span><span class="v">${product.schedule}</span></div>`
+    : `
+            <div class="cs_pd_table_row"><i class="fa-solid fa-box-open"></i><span class="k">Presentation</span><span class="v">${product.presentation}</span></div>
+            <div class="cs_pd_table_row"><i class="fa-solid fa-box"></i><span class="k">Pack Size</span><span class="v">${product.packSize}</span></div>
+            <div class="cs_pd_table_row"><i class="fa-solid fa-wind"></i><span class="k">Dominant Terpenes</span><span class="v">${product.dominantTerpenes}</span></div>
+            <div class="cs_pd_table_row"><i class="fa-solid fa-heart-pulse"></i><span class="k">Therapeutic Profile</span><span class="v">${product.therapeuticProfile}</span></div>
+            <div class="cs_pd_table_row"><i class="fa-solid fa-shield-halved"></i><span class="k">TGA Category</span><span class="v">${product.tgaCategory}</span></div>
+            <div class="cs_pd_table_row"><i class="fa-solid fa-scale-balanced"></i><span class="k">Schedule</span><span class="v">${product.schedule}</span></div>`;
+
   const html = `
     <!-- Start Preloader -->
     <div class="cs_preloader" style="background-color:#000;">
@@ -234,20 +265,9 @@ export default async function Page({ params }) {
           <p>Key product information and specifications for ${product.name}.</p>
         </div>
         <div class="cs_pd_details_grid">
-          <div class="cs_pd_table wow fadeInUp">
-            <div class="cs_pd_table_row"><i class="fa-solid fa-tag"></i><span class="k">Product Name</span><span class="v">${product.name}</span></div>
-            <div class="cs_pd_table_row"><i class="fa-solid fa-leaf"></i><span class="k">Dosage Form</span><span class="v">${product.dosageForm}</span></div>
-            <div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">THC Strength</span><span class="v">${product.thc}</span></div>
-            <div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">CBD Strength</span><span class="v">${product.cbd}</span></div>
-            <div class="cs_pd_table_row"><i class="fa-solid fa-seedling"></i><span class="k">Plant Species</span><span class="v">${product.strainType}${product.speciesRatio ? ` (${product.speciesRatio})` : ''}</span></div>
+          <div class="cs_pd_table wow fadeInUp">${detailsTable1Html}
           </div>
-          <div class="cs_pd_table wow fadeInUp" data-wow-delay="0.1s">
-            <div class="cs_pd_table_row"><i class="fa-solid fa-box-open"></i><span class="k">Presentation</span><span class="v">${product.presentation}</span></div>
-            <div class="cs_pd_table_row"><i class="fa-solid fa-box"></i><span class="k">Pack Size</span><span class="v">${product.packSize}</span></div>
-            <div class="cs_pd_table_row"><i class="fa-solid fa-wind"></i><span class="k">Dominant Terpenes</span><span class="v">${product.dominantTerpenes}</span></div>
-            <div class="cs_pd_table_row"><i class="fa-solid fa-heart-pulse"></i><span class="k">Therapeutic Profile</span><span class="v">${product.therapeuticProfile}</span></div>
-            <div class="cs_pd_table_row"><i class="fa-solid fa-shield-halved"></i><span class="k">TGA Category</span><span class="v">${product.tgaCategory}</span></div>
-            <div class="cs_pd_table_row"><i class="fa-solid fa-scale-balanced"></i><span class="k">Schedule</span><span class="v">${product.schedule}</span></div>
+          <div class="cs_pd_table wow fadeInUp" data-wow-delay="0.1s">${detailsTable2Html}
           </div>
         </div>
       </div>
