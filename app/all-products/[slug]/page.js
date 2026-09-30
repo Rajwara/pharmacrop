@@ -117,7 +117,7 @@ export default async function Page({ params }) {
       .cs_pd_hero h1 { color: #024242; font-size: 40px; font-weight: 800; margin: 0 0 6px; }
       .cs_pd_category { display: block; color: #78dca6; font-weight: 700; font-size: 15px; margin-bottom: 18px; }
       .cs_pd_desc { color: #666; font-size: 15px; line-height: 1.7; margin: 0 0 26px; }
-      .cs_pd_stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 30px; }
+      .cs_pd_stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-bottom: 30px; }
       .cs_pd_stat { display: flex; align-items: center; gap: 10px; }
       .cs_pd_stat_icon { width: 34px; height: 34px; border-radius: 8px; background: rgba(120,220,166,0.15); color: #024242; display: flex; align-items: center; justify-content: center; font-size: 14px; flex: none; }
       .cs_pd_stat span.label { display: block; color: #999; font-size: 11px; }
@@ -128,6 +128,9 @@ export default async function Page({ params }) {
       .cs_pd_btn_outline { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: #024242; font-weight: 700; font-size: 14px; padding: 14px 22px; border-radius: 10px; text-decoration: none; border: 1px solid rgba(2,66,66,0.2); }
       .cs_pd_btn_outline:hover { border-color: #024242; }
       .cs_pd_note { color: #999; font-size: 12px; margin: 0; }
+      @media (max-width: 1199px) {
+        .cs_pd_stats { grid-template-columns: repeat(3, 1fr); }
+      }
       @media (max-width: 991px) {
         .cs_pd_hero_grid { grid-template-columns: 1fr; }
         .cs_pd_stats { grid-template-columns: repeat(2, 1fr); }
@@ -159,6 +162,7 @@ export default async function Page({ params }) {
               <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-flask"></i></span><span><span class="label">CBD</span><span class="value">${product.cbd}</span></span></div>
               <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-box"></i></span><span><span class="label">Pack Size</span><span class="value">${product.packSize}</span></span></div>
               <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-gear"></i></span><span><span class="label">Dosage Form</span><span class="value">${product.dosageForm}</span></span></div>
+              <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-tag"></i></span><span><span class="label">RRP</span><span class="value">$${product.price} RRP</span></span></div>
             </div>
             <div class="cs_pd_ctas">
               <a href="/contact" class="cs_pd_btn_primary"><i class="fa-solid fa-download"></i> Download Product Information <i class="fa-solid fa-arrow-right"></i></a>

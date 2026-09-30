@@ -58,7 +58,7 @@ function slugify(name) {
     .replace(/(^-|-$)/g, "");
 }
 
-function buildProduct({ name, categorySlug, thc, cbd, packSize, quantity }) {
+function buildProduct({ name, categorySlug, thc, cbd, packSize, quantity, price }) {
   const meta = categoryMeta[categorySlug];
   return {
     slug: slugify(name),
@@ -69,6 +69,7 @@ function buildProduct({ name, categorySlug, thc, cbd, packSize, quantity }) {
     thc,
     cbd,
     packSize,
+    price,
     quantity: quantity || `${packSize} per pack`,
     presentation: meta.presentation,
     otherCharacteristics: meta.otherCharacteristics,
@@ -83,16 +84,16 @@ function buildProduct({ name, categorySlug, thc, cbd, packSize, quantity }) {
 }
 
 export const products = [
-  buildProduct({ name: "Sunridge 22", categorySlug: "dried-flower", thc: "22%", cbd: "<1%", packSize: "10 g" }),
-  buildProduct({ name: "Meadowlands 18", categorySlug: "dried-flower", thc: "18%", cbd: "<1%", packSize: "10 g" }),
-  buildProduct({ name: "Highland 25", categorySlug: "dried-flower", thc: "25%", cbd: "<1%", packSize: "10 g" }),
-  buildProduct({ name: "Balance 10:10", categorySlug: "oral-liquid", thc: "10 mg/mL", cbd: "10 mg/mL", packSize: "30 mL bottle" }),
-  buildProduct({ name: "Rest Easy", categorySlug: "oral-liquid", thc: "5 mg/mL", cbd: "15 mg/mL", packSize: "30 mL bottle" }),
-  buildProduct({ name: "Clarity 1:20", categorySlug: "oral-liquid", thc: "1 mg/mL", cbd: "20 mg/mL", packSize: "30 mL bottle" }),
-  buildProduct({ name: "Calm Pastilles", categorySlug: "pastilles", thc: "2.5 mg", cbd: "2.5 mg", packSize: "30 pastilles" }),
-  buildProduct({ name: "Focus Pastilles", categorySlug: "pastilles", thc: "5 mg", cbd: "0 mg", packSize: "30 pastilles" }),
-  buildProduct({ name: "Clear Flow", categorySlug: "inhaled-liquid", thc: "50 mg/mL", cbd: "0 mg/mL", packSize: "1 cartridge (0.5 mL)" }),
-  buildProduct({ name: "Airis", categorySlug: "inhaled-liquid", thc: "25 mg/mL", cbd: "25 mg/mL", packSize: "1 cartridge (0.5 mL)" }),
+  buildProduct({ name: "Sunridge 22", categorySlug: "dried-flower", thc: "22%", cbd: "<1%", packSize: "10 g", price: "135" }),
+  buildProduct({ name: "Meadowlands 18", categorySlug: "dried-flower", thc: "18%", cbd: "<1%", packSize: "10 g", price: "120" }),
+  buildProduct({ name: "Highland 25", categorySlug: "dried-flower", thc: "25%", cbd: "<1%", packSize: "10 g", price: "150" }),
+  buildProduct({ name: "Balance 10:10", categorySlug: "oral-liquid", thc: "10 mg/mL", cbd: "10 mg/mL", packSize: "30 mL bottle", price: "95" }),
+  buildProduct({ name: "Rest Easy", categorySlug: "oral-liquid", thc: "5 mg/mL", cbd: "15 mg/mL", packSize: "30 mL bottle", price: "90" }),
+  buildProduct({ name: "Clarity 1:20", categorySlug: "oral-liquid", thc: "1 mg/mL", cbd: "20 mg/mL", packSize: "30 mL bottle", price: "85" }),
+  buildProduct({ name: "Calm Pastilles", categorySlug: "pastilles", thc: "2.5 mg", cbd: "2.5 mg", packSize: "30 pastilles", price: "60" }),
+  buildProduct({ name: "Focus Pastilles", categorySlug: "pastilles", thc: "5 mg", cbd: "0 mg", packSize: "30 pastilles", price: "65" }),
+  buildProduct({ name: "Clear Flow", categorySlug: "inhaled-liquid", thc: "50 mg/mL", cbd: "0 mg/mL", packSize: "1 cartridge (0.5 mL)", price: "110" }),
+  buildProduct({ name: "Airis", categorySlug: "inhaled-liquid", thc: "25 mg/mL", cbd: "25 mg/mL", packSize: "1 cartridge (0.5 mL)", price: "100" }),
 ];
 
 export function getProductBySlug(slug) {
