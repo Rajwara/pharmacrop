@@ -38,9 +38,18 @@ export default async function Page({ params }) {
     )
     .join("");
 
-  const statsHtml = product.cannabinoid
+  const isBroadSpectrum = Boolean(product.cbg || product.cbn);
+  const cannabinoidLine = [
+    product.cbd ? `CBD ${product.cbd}` : "",
+    product.cbg ? `CBG ${product.cbg}` : "",
+    product.cbn ? `CBN ${product.cbn}` : "",
+  ]
+    .filter(Boolean)
+    .join(" | ");
+
+  const statsHtml = isBroadSpectrum
     ? `
-              <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-flask"></i></span><span><span class="label">Cannabinoids</span><span class="value">${product.cannabinoid}</span></span></div>
+              <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-flask"></i></span><span><span class="label">Cannabinoids</span><span class="value">${cannabinoidLine}</span></span></div>
               <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-atom"></i></span><span><span class="label">Spectrum</span><span class="value">${product.spectrum || "—"}</span></span></div>
               <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-box"></i></span><span><span class="label">Pack Size</span><span class="value">${product.packSize}</span></span></div>
               <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-tag"></i></span><span><span class="label">RRP</span><span class="value">$${product.price} (to patient)</span></span></div>`
@@ -50,7 +59,7 @@ export default async function Page({ params }) {
               <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-box"></i></span><span><span class="label">Pack Size</span><span class="value">${product.packSize}</span></span></div>
               <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-gear"></i></span><span><span class="label">Dosage Form</span><span class="value">${product.dosageForm}</span></span></div>`;
 
-  const detailsTable1Html = product.cannabinoid
+  const detailsTable1Html = isBroadSpectrum
     ? `
             <div class="cs_pd_table_row"><i class="fa-solid fa-tag"></i><span class="k">Product Name</span><span class="v">${product.name}</span></div>
             <div class="cs_pd_table_row"><i class="fa-solid fa-leaf"></i><span class="k">Dosage Form</span><span class="v">${product.dosageForm}</span></div>
@@ -64,7 +73,7 @@ export default async function Page({ params }) {
             <div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">CBD Strength</span><span class="v">${product.cbd}</span></div>
             <div class="cs_pd_table_row"><i class="fa-solid fa-seedling"></i><span class="k">Plant Species</span><span class="v">${product.strainType}${product.speciesRatio ? ` (${product.speciesRatio})` : ""}</span></div>`;
 
-  const detailsTable2Html = product.cannabinoid
+  const detailsTable2Html = isBroadSpectrum
     ? `
             <div class="cs_pd_table_row"><i class="fa-solid fa-box-open"></i><span class="k">Presentation</span><span class="v">${product.presentation}</span></div>
             <div class="cs_pd_table_row"><i class="fa-solid fa-box"></i><span class="k">Pack Size</span><span class="v">${product.packSize}</span></div>
