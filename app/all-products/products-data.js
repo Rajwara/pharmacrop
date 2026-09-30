@@ -50,7 +50,7 @@ function slugify(name) {
     .replace(/(^-|-$)/g, "");
 }
 
-function buildProduct({ name, categorySlug, thc, cbd, packSize, price, strainType, speciesRatio, tgaCategory, schedule }) {
+function buildProduct({ name, categorySlug, thc, cbd, packSize, price, strainType, speciesRatio, tgaCategory, schedule, cannabinoid, spectrum }) {
   const meta = categoryMeta[categorySlug];
   return {
     slug: slugify(name),
@@ -69,7 +69,8 @@ function buildProduct({ name, categorySlug, thc, cbd, packSize, price, strainTyp
     therapeuticProfile: meta.therapeuticProfile,
     tgaCategory: tgaCategory || "Unapproved Therapeutic Good – Category B",
     schedule: schedule || "Schedule 8 (S8)",
-    cannabinoid: `THC: ${thc} &nbsp;|&nbsp; CBD: ${cbd}`,
+    cannabinoid: cannabinoid || "",
+    spectrum: spectrum || "",
     image: categoryImages[categorySlug],
     altImage: featuredImages[categorySlug],
   };
