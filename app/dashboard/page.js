@@ -327,41 +327,6 @@ export default function Page() {
       </div>
     </section>
     <!-- End Quick Access Section -->
-    <!-- Start Latest Professional Resource Section -->
-    <style>
-      .cs_dash_res_row { display: flex; align-items: center; gap: 60px; }
-      .cs_dash_res_img { flex: 0 0 48%; border-radius: 16px; overflow: hidden; }
-      .cs_dash_res_img img { width: 100%; height: 360px; object-fit: cover; display: block; }
-      .cs_dash_res_content { flex: 1; }
-      .cs_dash_res_eyebrow { display: block; color: #024242; background: #eef1ee; border-radius: 20px; padding: 6px 16px; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px; width: fit-content; }
-      .cs_dash_res_content h2 { color: #024242; font-size: 28px; font-weight: 800; line-height: 1.3; margin: 0 0 16px; }
-      .cs_dash_res_content p { color: #666; font-size: 15px; line-height: 1.7; margin: 0 0 26px; }
-      @media (max-width: 991px) {
-        .cs_dash_res_row { flex-direction: column; gap: 32px; }
-        .cs_dash_res_img { flex: none; width: 100%; }
-      }
-    </style>
-    <section id="clinical-resource" style="padding: 70px 0; background: #f7faf8; scroll-margin-top: 100px;">
-      <div class="container">
-        <div class="cs_dash_section_head wow fadeInUp">
-          <div>
-            <span class="cs_dash_section_eyebrow">Latest Professional Resource</span>
-          </div>
-        </div>
-        <div class="cs_dash_res_row wow fadeInUp">
-          <div class="cs_dash_res_img">
-            <img src="/assets/img/dashboard/clinical%20guide.webp" alt="Integrating Medicinal Cannabis into Clinical Practice">
-          </div>
-          <div class="cs_dash_res_content">
-            <span class="cs_dash_res_eyebrow">Clinical Guide</span>
-            <h2>Integrating Medicinal Cannabis into Clinical Practice</h2>
-            <p>A practical guide for healthcare professionals, covering patient selection, dosing considerations and monitoring.</p>
-            <a href="/faq" class="cs_auth_btn_primary" style="width: auto; display: inline-flex; padding: 15px 28px;">Read the guide &rarr;</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Latest Professional Resource Section -->
     <!-- Start Dashboard CTA -->
     <style>
       .cs_dash_cta_section { padding: 70px 0; background: #024242 url('/assets/img/dashboard/working%20together.webp') center center / cover no-repeat; }
