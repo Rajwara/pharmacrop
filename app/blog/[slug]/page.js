@@ -10,7 +10,7 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) {
-    return { title: "PharmaCrop - Bring Balance To Your Life" };
+    return { title: "PharmaCrop - Australian-Grown. Complete Control." };
   }
   return {
     title: `${post.title} - PharmaCrop`,
