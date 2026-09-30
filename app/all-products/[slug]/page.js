@@ -235,7 +235,6 @@ export default async function Page({ params }) {
             <div class="cs_pd_table_row"><i class="fa-solid fa-seedling"></i><span class="k">${product.typeLabel}</span><span class="v">${product.typeValue}</span></div>
             <div class="cs_pd_table_row"><i class="fa-solid fa-box-open"></i><span class="k">Presentation</span><span class="v">${product.presentation}</span></div>
             <div class="cs_pd_table_row"><i class="fa-solid fa-box"></i><span class="k">Pack Size</span><span class="v">${product.packSize}</span></div>
-            <div class="cs_pd_table_row"><i class="fa-solid fa-list"></i><span class="k">Quantity</span><span class="v">${product.quantity}</span></div>
             <div class="cs_pd_table_row"><i class="fa-solid fa-file-lines"></i><span class="k">Other Product Characteristics</span><span class="v">${product.otherCharacteristics}</span></div>
           </div>
         </div>
@@ -299,7 +298,6 @@ export default async function Page({ params }) {
           <div class="cs_pd_pack_img"><img src="${product.image}" alt="${product.name} packaging"></div>
           <div class="cs_pd_pack_table cs_pd_table">
             <div class="cs_pd_table_row"><i class="fa-solid fa-box"></i><span class="k">Pack Size</span><span class="v">${product.packSize}</span></div>
-            <div class="cs_pd_table_row"><i class="fa-solid fa-list"></i><span class="k">Quantity</span><span class="v">${product.quantity}</span></div>
             <div class="cs_pd_table_row"><i class="fa-solid fa-box-open"></i><span class="k">Presentation</span><span class="v">${product.presentation}</span></div>
             <div class="cs_pd_table_row"><i class="fa-solid fa-leaf"></i><span class="k">Dosage Form</span><span class="v">${product.dosageForm}</span></div>
           </div>
