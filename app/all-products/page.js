@@ -207,14 +207,25 @@ export default function Page() {
       .cs_prod_card:hover { box-shadow: 0 15px 40px rgba(2,66,66,0.12); transform: translateY(-3px); }
       .cs_prod_card:hover .cs_prod_link { color: #78dca6; }
       .cs_prod_grid_list .cs_prod_card { display: flex; align-items: stretch; }
-      .cs_prod_img { height: 220px; overflow: hidden; }
+      .cs_prod_img { height: 220px; overflow: hidden; position: relative; }
       .cs_prod_grid_list .cs_prod_img { width: 220px; height: auto; flex: none; }
       .cs_prod_img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
       .cs_prod_card:hover .cs_prod_img img { transform: scale(1.06); }
+      .cs_prod_origin_badge { position: absolute; top: 14px; left: 14px; display: inline-flex; align-items: center; gap: 6px; background: #fff; border-radius: 20px; padding: 6px 14px; font-size: 12px; font-weight: 700; color: #024242; box-shadow: 0 4px 12px rgba(2,66,66,0.15); }
       .cs_prod_body { padding: 20px; flex: 1; }
       .cs_prod_body h3 { color: #024242; font-size: 16px; font-weight: 800; margin: 0; }
-      .cs_prod_category { color: #024242; font-weight: 700; font-size: 13px; margin: 8px 0 4px; }
-      .cs_prod_spec { color: #999; font-size: 12.5px; line-height: 1.6; display: block; margin-bottom: 14px; }
+      .cs_prod_category { color: #999; font-size: 13px; margin: 4px 0 8px; display: block; }
+      .cs_prod_spec { color: #666; font-size: 13px; font-weight: 600; display: block; margin-bottom: 14px; }
+      .cs_prod_meta_row { display: flex; align-items: flex-end; justify-content: space-between; gap: 10px; margin-bottom: 16px; }
+      .cs_prod_strain_pill { display: inline-block; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 700; background: #eef1ee; color: #024242; margin-bottom: 8px; }
+      .cs_prod_strain_indica { background: #e6e0f5; color: #5b3fa0; }
+      .cs_prod_strain_sativa { background: #e1f3e1; color: #2f7d32; }
+      .cs_prod_strain_hybrid { background: #faecd6; color: #b5751f; }
+      .cs_prod_packsize { display: block; color: #999; font-size: 12.5px; }
+      .cs_prod_price { text-align: right; }
+      .cs_prod_price_value { color: #024242; font-size: 17px; font-weight: 800; }
+      .cs_prod_price_rrp { color: #024242; font-size: 12px; font-weight: 700; }
+      .cs_prod_price_sub { display: block; color: #999; font-size: 11px; }
       .cs_prod_link { color: #024242; font-weight: 700; font-size: 13px; text-decoration: none; }
       .cs_prod_link:hover { color: #78dca6; }
       .cs_prod_empty { display: none; text-align: center; padding: 60px 20px; color: #999; }
@@ -395,6 +406,8 @@ export default function Page() {
               cbd: acf.cbd || '',
               packSize: acf.pack_size || '',
               strength: classifyStrength(acf.thc, acf.cbd),
+              strainType: acf.type_value || '',
+              price: acf.price || '',
               image: image,
               altImage: altImage,
             };
@@ -413,13 +426,29 @@ export default function Page() {
           var clearBtn = document.querySelector('[data-prod-clear]');
           var viewBtns = Array.prototype.slice.call(document.querySelectorAll('[data-prod-view]'));
 
+          function strainPillClass(strainType) {
+            var normalized = String(strainType || '').toLowerCase();
+            if (normalized === 'indica') return 'cs_prod_strain_pill cs_prod_strain_indica';
+            if (normalized === 'sativa') return 'cs_prod_strain_pill cs_prod_strain_sativa';
+            if (normalized === 'hybrid') return 'cs_prod_strain_pill cs_prod_strain_hybrid';
+            return 'cs_prod_strain_pill';
+          }
+
           function cardHtml(p) {
             var specLine = [p.thc ? 'THC ' + p.thc : '', p.cbd ? 'CBD ' + p.cbd : ''].filter(Boolean).join(' &nbsp;|&nbsp; ');
+            var strainPill = p.strainType ? '<span class="' + strainPillClass(p.strainType) + '">' + p.strainType + '</span>' : '<span></span>';
+            var priceBlock = p.price
+              ? '<div class="cs_prod_price"><span class="cs_prod_price_value">$' + p.price + '</span> <span class="cs_prod_price_rrp">RRP</span><span class="cs_prod_price_sub">(to patient)</span></div>'
+              : '<div class="cs_prod_price"></div>';
             return '<a class="cs_prod_card" href="/all-products/' + p.slug + '" data-name="' + p.name.toLowerCase() + '" data-category="' + p.categorySlug + '" data-strength="' + p.strength + '" data-packsize="' + p.packSize + '">' +
-              '<div class="cs_prod_img"><img src="' + p.image + '" alt="' + p.name + '"></div>' +
+              '<div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Grown</span><img src="' + p.image + '" alt="' + p.name + '"></div>' +
               '<div class="cs_prod_body"><h3>' + p.name + '</h3>' +
               '<span class="cs_prod_category">' + p.category + '</span>' +
-              '<span class="cs_prod_spec">' + specLine + (p.packSize ? '<br>' + p.packSize : '') + '</span>' +
+              '<span class="cs_prod_spec">' + specLine + '</span>' +
+              '<div class="cs_prod_meta_row">' +
+              '<div>' + strainPill + (p.packSize ? '<span class="cs_prod_packsize">' + p.packSize + '</span>' : '') + '</div>' +
+              priceBlock +
+              '</div>' +
               '<span class="cs_prod_link">View Product &rarr;</span></div></a>';
           }
 
