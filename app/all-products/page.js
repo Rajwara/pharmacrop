@@ -271,7 +271,7 @@ export default function Page() {
               <span class="cs_prod_category">Oral Liquid</span>
               <span class="cs_prod_spec">THC 10 mg/mL &nbsp;|&nbsp; CBD 10 mg/mL</span>
               <div class="cs_prod_meta_row">
-                <div><span></span><span class="cs_prod_packsize">30 mL bottle</span></div>
+                <div><span class="cs_prod_strain_pill cs_prod_strain_sativa">Sativa</span><span class="cs_prod_packsize">30 mL bottle</span></div>
                 <div class="cs_prod_price"><span class="cs_prod_price_value">$95</span> <span class="cs_prod_price_rrp">RRP</span><span class="cs_prod_price_sub">(to patient)</span></div>
               </div>
               <span class="cs_prod_link">View Product &rarr;</span>
@@ -284,7 +284,7 @@ export default function Page() {
               <span class="cs_prod_category">Pastilles</span>
               <span class="cs_prod_spec">THC 2.5 mg &nbsp;|&nbsp; CBD 2.5 mg</span>
               <div class="cs_prod_meta_row">
-                <div><span></span><span class="cs_prod_packsize">30 pastilles</span></div>
+                <div><span class="cs_prod_strain_pill cs_prod_strain_indica">Indica</span><span class="cs_prod_packsize">30 pastilles</span></div>
                 <div class="cs_prod_price"><span class="cs_prod_price_value">$60</span> <span class="cs_prod_price_rrp">RRP</span><span class="cs_prod_price_sub">(to patient)</span></div>
               </div>
               <span class="cs_prod_link">View Product &rarr;</span>
@@ -297,7 +297,7 @@ export default function Page() {
               <span class="cs_prod_category">Inhaled Liquid</span>
               <span class="cs_prod_spec">THC 50 mg/mL &nbsp;|&nbsp; CBD 0 mg/mL</span>
               <div class="cs_prod_meta_row">
-                <div><span></span><span class="cs_prod_packsize">1 cartridge (0.5 mL)</span></div>
+                <div><span class="cs_prod_strain_pill cs_prod_strain_sativa">Sativa</span><span class="cs_prod_packsize">1 cartridge (0.5 mL)</span></div>
                 <div class="cs_prod_price"><span class="cs_prod_price_value">$110</span> <span class="cs_prod_price_rrp">RRP</span><span class="cs_prod_price_sub">(to patient)</span></div>
               </div>
               <span class="cs_prod_link">View Product &rarr;</span>
@@ -323,7 +323,7 @@ export default function Page() {
               <span class="cs_prod_category">Oral Liquid</span>
               <span class="cs_prod_spec">THC 5 mg/mL &nbsp;|&nbsp; CBD 15 mg/mL</span>
               <div class="cs_prod_meta_row">
-                <div><span></span><span class="cs_prod_packsize">30 mL bottle</span></div>
+                <div><span class="cs_prod_strain_pill cs_prod_strain_hybrid">Hybrid</span><span class="cs_prod_packsize">30 mL bottle</span></div>
                 <div class="cs_prod_price"><span class="cs_prod_price_value">$90</span> <span class="cs_prod_price_rrp">RRP</span><span class="cs_prod_price_sub">(to patient)</span></div>
               </div>
               <span class="cs_prod_link">View Product &rarr;</span>
@@ -336,7 +336,7 @@ export default function Page() {
               <span class="cs_prod_category">Pastilles</span>
               <span class="cs_prod_spec">THC 5 mg &nbsp;|&nbsp; CBD 0 mg</span>
               <div class="cs_prod_meta_row">
-                <div><span></span><span class="cs_prod_packsize">30 pastilles</span></div>
+                <div><span class="cs_prod_strain_pill cs_prod_strain_indica">Indica</span><span class="cs_prod_packsize">30 pastilles</span></div>
                 <div class="cs_prod_price"><span class="cs_prod_price_value">$65</span> <span class="cs_prod_price_rrp">RRP</span><span class="cs_prod_price_sub">(to patient)</span></div>
               </div>
               <span class="cs_prod_link">View Product &rarr;</span>
@@ -349,7 +349,7 @@ export default function Page() {
               <span class="cs_prod_category">Inhaled Liquid</span>
               <span class="cs_prod_spec">THC 25 mg/mL &nbsp;|&nbsp; CBD 25 mg/mL</span>
               <div class="cs_prod_meta_row">
-                <div><span></span><span class="cs_prod_packsize">1 cartridge (0.5 mL)</span></div>
+                <div><span class="cs_prod_strain_pill cs_prod_strain_sativa">Sativa</span><span class="cs_prod_packsize">1 cartridge (0.5 mL)</span></div>
                 <div class="cs_prod_price"><span class="cs_prod_price_value">$100</span> <span class="cs_prod_price_rrp">RRP</span><span class="cs_prod_price_sub">(to patient)</span></div>
               </div>
               <span class="cs_prod_link">View Product &rarr;</span>
@@ -375,7 +375,7 @@ export default function Page() {
               <span class="cs_prod_category">Oral Liquid</span>
               <span class="cs_prod_spec">THC 1 mg/mL &nbsp;|&nbsp; CBD 20 mg/mL</span>
               <div class="cs_prod_meta_row">
-                <div><span></span><span class="cs_prod_packsize">30 mL bottle</span></div>
+                <div><span class="cs_prod_strain_pill cs_prod_strain_indica">Indica</span><span class="cs_prod_packsize">30 mL bottle</span></div>
                 <div class="cs_prod_price"><span class="cs_prod_price_value">$85</span> <span class="cs_prod_price_rrp">RRP</span><span class="cs_prod_price_sub">(to patient)</span></div>
               </div>
               <span class="cs_prod_link">View Product &rarr;</span>
