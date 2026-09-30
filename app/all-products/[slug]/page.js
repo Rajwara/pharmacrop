@@ -241,43 +241,6 @@ export default async function Page({ params }) {
       </div>
     </section>
     <!-- End Product Details -->
-    <!-- Start Cultivar Information -->
-    <style>
-      .cs_pd_cultivar_grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-      .cs_pd_cultivar_card { background: #fff; border: 1px solid rgba(2,66,66,0.1); border-radius: 12px; padding: 24px; }
-      .cs_pd_cultivar_icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(120,220,166,0.15); color: #024242; display: flex; align-items: center; justify-content: center; font-size: 16px; margin-bottom: 16px; }
-      .cs_pd_cultivar_card h4 { color: #024242; font-size: 15px; font-weight: 800; margin: 0 0 10px; }
-      .cs_pd_cultivar_card p { color: #666; font-size: 13.5px; line-height: 1.7; margin: 0; }
-      @media (max-width: 767px) {
-        .cs_pd_cultivar_grid { grid-template-columns: 1fr; }
-      }
-    </style>
-    <section style="padding: 60px 0; background: #fff;">
-      <div class="container">
-        <div class="cs_pd_section_head wow fadeInUp">
-          <h2>Cultivar Information</h2>
-          <p>Information about the cultivar and product characteristics.</p>
-        </div>
-        <div class="cs_pd_cultivar_grid">
-          <div class="cs_pd_cultivar_card wow fadeInUp">
-            <div class="cs_pd_cultivar_icon"><i class="fa-solid fa-seedling"></i></div>
-            <h4>${product.typeFieldLabel}</h4>
-            <p>${product.typeDesc}</p>
-          </div>
-          <div class="cs_pd_cultivar_card wow fadeInUp" data-wow-delay="0.1s">
-            <div class="cs_pd_cultivar_icon"><i class="fa-solid fa-diagram-project"></i></div>
-            <h4>Cannabinoid Composition</h4>
-            <p><strong>${product.cannabinoid}</strong><br>Full cannabinoid profile and additional analysis information is available in the product documentation.</p>
-          </div>
-          <div class="cs_pd_cultivar_card wow fadeInUp" data-wow-delay="0.2s">
-            <div class="cs_pd_cultivar_icon"><i class="fa-solid fa-gear"></i></div>
-            <h4>Other Characteristics</h4>
-            <p>${product.otherCharacteristics} Grown and processed in accordance with PharmaCrop&rsquo;s quality standards.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Cultivar Information -->
     <!-- Start Presentation and Packaging -->
     <style>
       .cs_pd_pack_row { display: flex; align-items: stretch; gap: 24px; }
@@ -288,7 +251,7 @@ export default async function Page({ params }) {
         .cs_pd_pack_row { flex-direction: column; }
       }
     </style>
-    <section style="padding: 60px 0; background: #f7faf8;">
+    <section style="padding: 60px 0; background: #fff;">
       <div class="container">
         <div class="cs_pd_section_head wow fadeInUp">
           <h2>Presentation &amp; Packaging</h2>
