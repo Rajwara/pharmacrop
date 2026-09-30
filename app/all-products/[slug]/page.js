@@ -94,8 +94,8 @@ export default function Page() {
       .cs_pd_rrp { display: block; color: #024242; font-size: 15px; font-weight: 600; margin-bottom: 18px; }
       .cs_pd_rrp strong { font-size: 23px; font-weight: 800; }
       .cs_pd_desc { color: #666; font-size: 15px; line-height: 1.7; margin: 0 0 26px; }
-      .cs_pd_stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 30px; }
-      .cs_pd_stat { display: flex; align-items: center; gap: 10px; }
+      .cs_pd_stats { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 30px; }
+      .cs_pd_stat { display: flex; align-items: center; gap: 10px; flex: 1 1 140px; min-width: 140px; }
       .cs_pd_stat_icon { width: 34px; height: 34px; border-radius: 8px; background: rgba(120,220,166,0.15); color: #024242; display: flex; align-items: center; justify-content: center; font-size: 14px; flex: none; }
       .cs_pd_stat span.label { display: block; color: #999; font-size: 11px; }
       .cs_pd_stat span.value { display: block; color: #024242; font-weight: 800; font-size: 15px; }
@@ -107,7 +107,6 @@ export default function Page() {
       .cs_pd_note { color: #999; font-size: 12px; margin: 0; }
       @media (max-width: 991px) {
         .cs_pd_hero_grid { grid-template-columns: 1fr; }
-        .cs_pd_stats { grid-template-columns: repeat(2, 1fr); }
       }
       .cs_pd_section_head { margin-bottom: 24px; }
       .cs_pd_section_head h2 { color: #024242; font-size: 26px; font-weight: 800; margin: 0 0 8px; }
@@ -394,47 +393,56 @@ export default function Page() {
               p.cbn ? 'CBN ' + p.cbn : ''
             ].filter(Boolean).join(' | ');
 
+            function statTile(icon, label, value) {
+              if (!value || value === '—') return '';
+              return '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid ' + icon + '"></i></span><span><span class="label">' + label + '</span><span class="value">' + value + '</span></span></div>';
+            }
+            function tableRow(icon, label, value) {
+              if (!value || value === '—') return '';
+              return '<div class="cs_pd_table_row"><i class="fa-solid ' + icon + '"></i><span class="k">' + label + '</span><span class="v">' + value + '</span></div>';
+            }
+
             var statsHtml = isBroadSpectrum ? (
-              '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-flask"></i></span><span><span class="label">Cannabinoids</span><span class="value">' + cannabinoidLine + '</span></span></div>' +
-              '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-atom"></i></span><span><span class="label">Spectrum</span><span class="value">' + (p.spectrum || '—') + '</span></span></div>' +
-              '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-box"></i></span><span><span class="label">Pack Size</span><span class="value">' + p.packSize + '</span></span></div>' +
-              '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-tag"></i></span><span><span class="label">RRP</span><span class="value">' + (p.price !== '—' ? '$' + p.price + ' (to patient)' : '—') + '</span></span></div>'
+              statTile('fa-flask', 'Cannabinoids', cannabinoidLine) +
+              statTile('fa-atom', 'Spectrum', p.spectrum) +
+              statTile('fa-box', 'Pack Size', p.packSize) +
+              statTile('fa-tag', 'RRP', p.price !== '—' ? '$' + p.price + ' (to patient)' : '')
             ) : (
-              '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-leaf"></i></span><span><span class="label">THC</span><span class="value">' + p.thc + '</span></span></div>' +
-              '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-flask"></i></span><span><span class="label">CBD</span><span class="value">' + p.cbd + '</span></span></div>' +
-              '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-box"></i></span><span><span class="label">Pack Size</span><span class="value">' + p.packSize + '</span></span></div>' +
-              '<div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-gear"></i></span><span><span class="label">Dosage Form</span><span class="value">' + p.dosageForm + '</span></span></div>'
+              statTile('fa-leaf', 'THC', p.thc) +
+              statTile('fa-flask', 'CBD', p.cbd) +
+              statTile('fa-box', 'Pack Size', p.packSize) +
+              statTile('fa-gear', 'Dosage Form', p.dosageForm)
             );
 
             var detailsTable1Html = isBroadSpectrum ? (
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-tag"></i><span class="k">Product Name</span><span class="v">' + p.name + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-leaf"></i><span class="k">Dosage Form</span><span class="v">' + p.dosageForm + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">CBD Strength</span><span class="v">' + p.cbd + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">CBG Strength</span><span class="v">' + (p.cbg || '—') + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">CBN Strength</span><span class="v">' + (p.cbn || '—') + '</span></div>'
+              tableRow('fa-tag', 'Product Name', p.name) +
+              tableRow('fa-leaf', 'Dosage Form', p.dosageForm) +
+              tableRow('fa-flask', 'CBD Strength', p.cbd) +
+              tableRow('fa-flask', 'CBG Strength', p.cbg) +
+              tableRow('fa-flask', 'CBN Strength', p.cbn)
             ) : (
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-tag"></i><span class="k">Product Name</span><span class="v">' + p.name + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-leaf"></i><span class="k">Dosage Form</span><span class="v">' + p.dosageForm + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">THC Strength</span><span class="v">' + p.thc + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">CBD Strength</span><span class="v">' + p.cbd + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-seedling"></i><span class="k">Plant Species</span><span class="v">' + p.speciesRatio + '</span></div>'
+              tableRow('fa-tag', 'Product Name', p.name) +
+              tableRow('fa-leaf', 'Dosage Form', p.dosageForm) +
+              tableRow('fa-flask', 'THC Strength', p.thc) +
+              tableRow('fa-flask', 'CBD Strength', p.cbd) +
+              tableRow('fa-seedling', 'Plant Species', p.speciesRatio)
             );
 
             var detailsTable2Html = isBroadSpectrum ? (
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-box-open"></i><span class="k">Presentation</span><span class="v">' + p.presentation + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-box"></i><span class="k">Pack Size</span><span class="v">' + p.packSize + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-atom"></i><span class="k">Spectrum</span><span class="v">' + p.spectrum + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-vial"></i><span class="k">Excipients</span><span class="v">' + p.excipients + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-heart-pulse"></i><span class="k">Therapeutic Profile</span><span class="v">' + p.therapeuticProfile + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-shield-halved"></i><span class="k">TGA Category</span><span class="v">' + p.tgaCategory + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-scale-balanced"></i><span class="k">Schedule</span><span class="v">' + p.schedule + '</span></div>'
+              tableRow('fa-box-open', 'Presentation', p.presentation) +
+              tableRow('fa-box', 'Pack Size', p.packSize) +
+              tableRow('fa-atom', 'Spectrum', p.spectrum) +
+              tableRow('fa-vial', 'Excipients', p.excipients) +
+              tableRow('fa-heart-pulse', 'Therapeutic Profile', p.therapeuticProfile) +
+              tableRow('fa-shield-halved', 'TGA Category', p.tgaCategory) +
+              tableRow('fa-scale-balanced', 'Schedule', p.schedule)
             ) : (
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-box-open"></i><span class="k">Presentation</span><span class="v">' + p.presentation + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-box"></i><span class="k">Pack Size</span><span class="v">' + p.packSize + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-wind"></i><span class="k">Dominant Terpenes</span><span class="v">' + p.dominantTerpenes + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-heart-pulse"></i><span class="k">Therapeutic Profile</span><span class="v">' + p.therapeuticProfile + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-shield-halved"></i><span class="k">TGA Category</span><span class="v">' + p.tgaCategory + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-scale-balanced"></i><span class="k">Schedule</span><span class="v">' + p.schedule + '</span></div>'
+              tableRow('fa-box-open', 'Presentation', p.presentation) +
+              tableRow('fa-box', 'Pack Size', p.packSize) +
+              tableRow('fa-wind', 'Dominant Terpenes', p.dominantTerpenes) +
+              tableRow('fa-heart-pulse', 'Therapeutic Profile', p.therapeuticProfile) +
+              tableRow('fa-shield-halved', 'TGA Category', p.tgaCategory) +
+              tableRow('fa-scale-balanced', 'Schedule', p.schedule)
             );
 
             return (
