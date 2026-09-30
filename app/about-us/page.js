@@ -236,6 +236,26 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp" data-wow-delay="0.1s">
+            <div class="cs_team_photo"><img src="/assets/img/Paul%20Baker.webp" alt="Paul Barker"></div>
+            <div class="cs_team_body">
+              <h3 class="cs_team_name">Paul Barker</h3>
+              <p class="cs_team_title">Chief Financial Officer</p>
+              <span class="cs_team_role">Finance to Foresight</span>
+              <p class="cs_team_credential">25+ years across global finance, strategy and commercial leadership.</p>
+              <p class="cs_team_supporting">Turns financial insight into confident business decisions.</p>
+            </div>
+          </div>
+          <div class="cs_team_card wow fadeInUp" data-wow-delay="0.2s">
+            <div class="cs_team_photo"><img src="/assets/img/George%20Polimenakos.png" alt="George Polimenakos"></div>
+            <div class="cs_team_body">
+              <h3 class="cs_team_name">George Polimenakos</h3>
+              <p class="cs_team_title">General Manager Commercial</p>
+              <span class="cs_team_role">Products to Patients</span>
+              <p class="cs_team_credential">Global pharmaceutical and healthcare industry leadership.</p>
+              <p class="cs_team_supporting">Turns pharmaceutical capability into sustainable commercial growth.</p>
+            </div>
+          </div>
+          <div class="cs_team_card wow fadeInUp">
             <div class="cs_team_photo"><img src="/assets/img/CHAD%20ESCH.png" alt="Chad Esch"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">Chad Esch</h3>
@@ -243,6 +263,16 @@ export default function Page() {
               <span class="cs_team_role">Cultivation to Consistency</span>
               <p class="cs_team_credential">International cultivation leadership across 3 continents.</p>
               <p class="cs_team_supporting">Delivers repeatable quality at scale.</p>
+            </div>
+          </div>
+          <div class="cs_team_card wow fadeInUp" data-wow-delay="0.1s">
+            <div class="cs_team_photo"><img src="/assets/img/AUDREY%20KUANG.png" alt="Audrey Kuang"></div>
+            <div class="cs_team_body">
+              <h3 class="cs_team_name">Audrey Kuang</h3>
+              <p class="cs_team_title">Head of Quality</p>
+              <span class="cs_team_role">Quality to Confidence</span>
+              <p class="cs_team_credential">14+ years across laboratory science, validation and pharmaceutical quality.</p>
+              <p class="cs_team_supporting">Builds confidence through rigorous pharmaceutical quality systems.</p>
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp" data-wow-delay="0.2s">
@@ -256,26 +286,6 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp">
-            <div class="cs_team_photo"><img src="/assets/img/AUDREY%20KUANG.png" alt="Audrey Kuang"></div>
-            <div class="cs_team_body">
-              <h3 class="cs_team_name">Audrey Kuang</h3>
-              <p class="cs_team_title">Head of Quality</p>
-              <span class="cs_team_role">Quality to Confidence</span>
-              <p class="cs_team_credential">14+ years across laboratory science, validation and pharmaceutical quality.</p>
-              <p class="cs_team_supporting">Builds confidence through rigorous pharmaceutical quality systems.</p>
-            </div>
-          </div>
-          <div class="cs_team_card wow fadeInUp" data-wow-delay="0.1s">
-            <div class="cs_team_photo"><img src="/assets/img/George%20Polimenakos.png" alt="George Polimenakos"></div>
-            <div class="cs_team_body">
-              <h3 class="cs_team_name">George Polimenakos</h3>
-              <p class="cs_team_title">General Manager Commercial</p>
-              <span class="cs_team_role">Products to Patients</span>
-              <p class="cs_team_credential">Global pharmaceutical and healthcare industry leadership.</p>
-              <p class="cs_team_supporting">Turns pharmaceutical capability into sustainable commercial growth.</p>
-            </div>
-          </div>
-          <div class="cs_team_card wow fadeInUp" data-wow-delay="0.2s">
             <div class="cs_team_photo"><img src="/assets/img/Johanna%20Faccini.webp" alt="Johanna Faccini"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">Johanna Faccini</h3>
@@ -285,7 +295,7 @@ export default function Page() {
               <p class="cs_team_supporting">Turns market insight into strategy, brands and growth.</p>
             </div>
           </div>
-          <div class="cs_team_card wow fadeInUp">
+          <div class="cs_team_card wow fadeInUp" data-wow-delay="0.1s">
             <div class="cs_team_photo"><img src="/assets/img/Suzanne%20Roberts.webp" alt="Suzanne Roberts"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">Suzanne Roberts</h3>
@@ -293,16 +303,6 @@ export default function Page() {
               <span class="cs_team_role">Relationships to Results</span>
               <p class="cs_team_credential">15+ years across pharmaceutical and healthcare sales.</p>
               <p class="cs_team_supporting">Builds trusted partnerships that deliver commercial results.</p>
-            </div>
-          </div>
-          <div class="cs_team_card wow fadeInUp" data-wow-delay="0.1s">
-            <div class="cs_team_photo"><img src="/assets/img/Paul%20Baker.webp" alt="Paul Barker"></div>
-            <div class="cs_team_body">
-              <h3 class="cs_team_name">Paul Barker</h3>
-              <p class="cs_team_title">Chief Financial Officer</p>
-              <span class="cs_team_role">Finance to Foresight</span>
-              <p class="cs_team_credential">25+ years across global finance, strategy and commercial leadership.</p>
-              <p class="cs_team_supporting">Turns financial insight into confident business decisions.</p>
             </div>
           </div>
         </div>
