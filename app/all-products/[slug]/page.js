@@ -38,6 +38,18 @@ export default async function Page({ params }) {
     )
     .join("");
 
+  const statsHtml = product.cannabinoid
+    ? `
+              <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-flask"></i></span><span><span class="label">Cannabinoids</span><span class="value">${product.cannabinoid}</span></span></div>
+              <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-atom"></i></span><span><span class="label">Spectrum</span><span class="value">${product.spectrum || "—"}</span></span></div>
+              <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-box"></i></span><span><span class="label">Pack Size</span><span class="value">${product.packSize}</span></span></div>
+              <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-tag"></i></span><span><span class="label">RRP</span><span class="value">$${product.price} (to patient)</span></span></div>`
+    : `
+              <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-leaf"></i></span><span><span class="label">THC</span><span class="value">${product.thc}</span></span></div>
+              <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-flask"></i></span><span><span class="label">CBD</span><span class="value">${product.cbd}</span></span></div>
+              <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-box"></i></span><span><span class="label">Pack Size</span><span class="value">${product.packSize}</span></span></div>
+              <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-gear"></i></span><span><span class="label">Dosage Form</span><span class="value">${product.dosageForm}</span></span></div>`;
+
   const html = `
     <!-- Start Preloader -->
     <div class="cs_preloader" style="background-color:#000;">
@@ -159,11 +171,7 @@ export default async function Page({ params }) {
             <span class="cs_pd_category">${product.category}${product.strainType ? ` | <span class="strain">${product.strainType}</span>` : ''}</span>
             ${product.price ? `<span class="cs_pd_rrp">RRP <strong>$${product.price}</strong>${product.packSize ? ` (${product.packSize} pack)` : ''}</span>` : ''}
             <p class="cs_pd_desc">A premium ${product.category.toLowerCase()} product, cultivated and processed to PharmaCrop&rsquo;s high quality standards. ${product.name} is available to healthcare professionals with detailed product information and supporting documentation.</p>
-            <div class="cs_pd_stats">
-              <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-leaf"></i></span><span><span class="label">THC</span><span class="value">${product.thc}</span></span></div>
-              <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-flask"></i></span><span><span class="label">CBD</span><span class="value">${product.cbd}</span></span></div>
-              <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-box"></i></span><span><span class="label">Pack Size</span><span class="value">${product.packSize}</span></span></div>
-              <div class="cs_pd_stat"><span class="cs_pd_stat_icon"><i class="fa-solid fa-gear"></i></span><span><span class="label">Dosage Form</span><span class="value">${product.dosageForm}</span></span></div>
+            <div class="cs_pd_stats">${statsHtml}
             </div>
             <div class="cs_pd_ctas">
               <a href="/contact" class="cs_pd_btn_primary"><i class="fa-solid fa-download"></i> Download Product Information <i class="fa-solid fa-arrow-right"></i></a>
