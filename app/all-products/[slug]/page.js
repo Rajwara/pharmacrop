@@ -247,28 +247,32 @@ export default async function Page({ params }) {
     <!-- End Product Details -->
     <!-- Start Presentation and Packaging -->
     <style>
-      .cs_pd_pack_row { display: flex; align-items: stretch; gap: 24px; }
-      .cs_pd_pack_img { flex: 0 0 42%; border-radius: 14px; overflow: hidden; }
+      .cs_pd_pack_row { display: flex; align-items: center; gap: 28px; }
+      .cs_pd_pack_head { flex: 0 0 240px; }
+      .cs_pd_pack_head h2 { color: #024242; font-size: 24px; font-weight: 800; margin: 0 0 8px; }
+      .cs_pd_pack_head p { color: #666; font-size: 14px; margin: 0; }
+      .cs_pd_pack_img { flex: 0 0 32%; border-radius: 14px; overflow: hidden; align-self: stretch; }
       .cs_pd_pack_img img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 200px; }
-      .cs_pd_pack_table { flex: 1; display: flex; flex-direction: column; gap: 16px; }
+      .cs_pd_pack_table { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
       .cs_pd_pack_card { display: flex; align-items: center; gap: 18px; background: #fff; border: 1px solid rgba(2,66,66,0.08); border-radius: 16px; padding: 18px 22px; box-shadow: 0 4px 14px rgba(2,66,66,0.04); }
       .cs_pd_pack_card_icon { width: 50px; height: 50px; border-radius: 14px; background: rgba(120,220,166,0.15); color: #024242; display: flex; align-items: center; justify-content: center; font-size: 19px; flex: none; }
       .cs_pd_pack_card_body { flex: 1; min-width: 0; }
       .cs_pd_pack_card_body h4 { margin: 0 0 3px; color: #024242; font-size: 16px; font-weight: 800; }
       .cs_pd_pack_card_body p { margin: 0; color: #8a9a95; font-size: 13px; }
       .cs_pd_pack_card_value { background: #eef1ee; color: #024242; font-weight: 700; font-size: 14px; padding: 10px 20px; border-radius: 10px; white-space: nowrap; flex: none; }
+      @media (max-width: 991px) {
+        .cs_pd_pack_row { flex-wrap: wrap; }
+        .cs_pd_pack_head { flex: 0 0 100%; }
+      }
       @media (max-width: 767px) {
-        .cs_pd_pack_row { flex-direction: column; }
+        .cs_pd_pack_row { flex-direction: column; align-items: stretch; }
         .cs_pd_pack_card { flex-wrap: wrap; }
       }
     </style>
     <section style="padding: 60px 0; background: #fff;">
       <div class="container">
-        <div class="cs_pd_section_head wow fadeInUp">
-          <h2>Presentation &amp; Packaging</h2>
-          <p>Product presentation and packaging details for ${product.name}.</p>
-        </div>
         <div class="cs_pd_pack_row wow fadeInUp">
+          <div class="cs_pd_pack_head"><h2>Presentation &amp; Packaging</h2><p>Product presentation and packaging details for ${product.name}.</p></div>
           <div class="cs_pd_pack_img"><img src="${product.image}" alt="${product.name} packaging"></div>
           <div class="cs_pd_pack_table">
             <div class="cs_pd_pack_card"><span class="cs_pd_pack_card_icon"><i class="fa-solid fa-box"></i></span><div class="cs_pd_pack_card_body"><h4>Pack Size</h4><p>Product quantity per unit.</p></div><span class="cs_pd_pack_card_value">${product.packSize}</span></div>
