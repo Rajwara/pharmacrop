@@ -305,6 +305,16 @@ export default function Page() {
               <p class="cs_team_supporting">Builds trusted partnerships that deliver commercial results.</p>
             </div>
           </div>
+          <div class="cs_team_card wow fadeInUp" data-wow-delay="0.2s">
+            <div class="cs_team_photo"><img src="/assets/img/Team%20Image-Margaret%20Meldrum.webp" alt="Margaret Meldrum"></div>
+            <div class="cs_team_body">
+              <h3 class="cs_team_name">Margaret Meldrum</h3>
+              <p class="cs_team_title">Commercial Operations &amp; Supply Chain Manager</p>
+              <span class="cs_team_role">Demand to Delivery</span>
+              <p class="cs_team_credential">7+ years&rsquo; medicinal cannabis experience across commercial operations, product and supply chain.</p>
+              <p class="cs_team_supporting">Connects demand, supply and distribution to ensure reliable product delivery.</p>
+            </div>
+          </div>
         </div>
         <div class="cs_team_statement wow fadeInUp">
           <p>&ldquo;Cannabinoid medicines sit at the intersection of science, cultivation and healthcare. So does our team.&rdquo;</p>
