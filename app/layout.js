@@ -114,11 +114,13 @@ export default function RootLayout({ children }) {
                 }
               });
 
+              var path = window.location.pathname;
+              var portalPaths = ['/dashboard', '/all-products', '/hcp-resources', '/profile'];
+              var isPortalPage = portalPaths.some(function (p) { return path === p || path.indexOf(p + '/') === 0; });
+
               var quoteTab = document.getElementById('cs_quote_tab');
               if (quoteTab) {
-                var path = window.location.pathname;
-                var isLoggedIn = !!(window.PharmaCropAuth && window.PharmaCropAuth.getToken());
-                if (isLoggedIn) {
+                if (isPortalPage) {
                   quoteTab.textContent = 'Call An MSL';
                   quoteTab.href = 'tel:1300053533';
                 } else if (path === '/contact' || path === '/contact/' || path === '/partnerships' || path === '/partnerships/') {
@@ -127,8 +129,6 @@ export default function RootLayout({ children }) {
               }
 
               try {
-                var portalPaths = ['/dashboard', '/all-products', '/hcp-resources', '/profile'];
-                var isPortalPage = portalPaths.some(function (p) { return path === p || path.indexOf(p + '/') === 0; });
                 if (!isPortalPage && !sessionStorage.getItem('cs_newsletter_shown')) {
                   var onScroll = function () {
                     var docHeight = document.documentElement.scrollHeight - window.innerHeight;
