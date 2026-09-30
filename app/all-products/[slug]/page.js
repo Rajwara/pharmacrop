@@ -313,8 +313,7 @@ export default function Page() {
               cbd: acf.cbd || '—',
               packSize: acf.pack_size || '—',
               presentation: acf.presentation || '—',
-              typeValue: acf.type_value || '—',
-              speciesRatio: acf.species_ratio || '',
+              speciesRatio: acf.species_ratio || '—',
               dominantTerpenes: acf.dominant_terpenes || '—',
               therapeuticProfile: acf.therapeutic_profile || '—',
               tgaCategory: acf.tga_category || '—',
@@ -363,7 +362,7 @@ export default function Page() {
               '<div class="cs_pd_gallery_thumbs">' + thumbsHtml + '</div></div>' +
               '<div class="wow fadeInUp" data-wow-delay="0.1s">' +
               '<span class="cs_pd_origin_badge"><i class="fa-solid fa-leaf"></i> Australian Grown <i class="fa-solid fa-circle-info"></i></span><h1>' + p.name + '</h1>' +
-              '<span class="cs_pd_category">' + p.category + (p.typeValue !== '—' ? ' | <span class="strain">' + p.typeValue + '</span>' : '') + '</span>' +
+              '<span class="cs_pd_category">' + p.category + (p.speciesRatio !== '—' ? ' | <span class="strain">' + p.speciesRatio + '</span>' : '') + '</span>' +
               (p.price !== '—' ? '<span class="cs_pd_rrp">RRP <strong>$' + p.price + '</strong>' + (p.packSize !== '—' ? ' (' + p.packSize + ' pack)' : '') + '</span>' : '') +
               '<p class="cs_pd_desc">A premium ' + p.category.toLowerCase() + ' product, cultivated and processed to PharmaCrop’s high quality standards. ' + p.name + ' is available to healthcare professionals with detailed product information and supporting documentation.</p>' +
               '<div class="cs_pd_stats">' +
@@ -391,7 +390,7 @@ export default function Page() {
               '<div class="cs_pd_table_row"><i class="fa-solid fa-leaf"></i><span class="k">Dosage Form</span><span class="v">' + p.dosageForm + '</span></div>' +
               '<div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">THC Strength</span><span class="v">' + p.thc + '</span></div>' +
               '<div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">CBD Strength</span><span class="v">' + p.cbd + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-seedling"></i><span class="k">Plant Species</span><span class="v">' + p.typeValue + (p.speciesRatio ? ' (' + p.speciesRatio + ')' : '') + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-seedling"></i><span class="k">Plant Species</span><span class="v">' + p.speciesRatio + '</span></div>' +
               '</div>' +
               '<div class="cs_pd_table wow fadeInUp" data-wow-delay="0.1s">' +
               '<div class="cs_pd_table_row"><i class="fa-solid fa-box-open"></i><span class="k">Presentation</span><span class="v">' + p.presentation + '</span></div>' +
