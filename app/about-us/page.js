@@ -306,7 +306,7 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp" data-wow-delay="0.2s">
-            <div class="cs_team_photo"><img src="/assets/img/Team%20Image-Margaret%20Meldrum.webp" alt="Margaret Meldrum"></div>
+            <div class="cs_team_photo"><img src="/assets/img/Team%20Image-Margs.webp" alt="Margaret Meldrum"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">Margaret Meldrum</h3>
               <p class="cs_team_title">Commercial Operations &amp; Supply Chain Manager</p>
