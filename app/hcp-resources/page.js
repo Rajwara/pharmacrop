@@ -140,8 +140,7 @@ export default function Page() {
             <div class="cs_res_feat_meta"><i class="fa-solid fa-file-lines"></i> PDF &nbsp;|&nbsp; 1.8 MB &nbsp;|&nbsp; Updated Jan 15, 2024</div>
             <p class="cs_res_feat_desc">Comprehensive product information and professional guidance for PharmaCrop&rsquo;s medical cannabis products, including product overview, quality information and supporting resources.</p>
             <div class="cs_res_feat_ctas">
-              <a href="/assets/img/dashboard/HCP%20Resources/HCP%20resources%20banner.webp" target="_blank" rel="noopener" class="cs_res_btn_primary"><i class="fa-solid fa-eye"></i> View Resource <i class="fa-solid fa-arrow-right"></i></a>
-              <a href="/contact" class="cs_res_btn_outline"><i class="fa-solid fa-download"></i> Download PDF</a>
+              <a href="https://pharmacropglobal.sharepoint.com/:b:/r/sites/PharmaCropWebsiteRevampPortal2.0/Content/Portal/Doctor/September%2026%20PC%20Product%20Guide%20%20(2).pdf?d=w82a37c891065401fbe5f0684294ac50d&csf=1&web=1&e=l0LjBP" target="_blank" rel="noopener" class="cs_res_btn_primary"><i class="fa-solid fa-download"></i> Download Product Guide <i class="fa-solid fa-arrow-right"></i></a>
             </div>
           </div>
           <div class="cs_res_feat_img">
