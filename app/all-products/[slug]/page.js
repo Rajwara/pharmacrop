@@ -312,13 +312,13 @@ export default function Page() {
               thc: acf.thc || '—',
               cbd: acf.cbd || '—',
               packSize: acf.pack_size || '—',
-              quantity: acf.quantity || '—',
               presentation: acf.presentation || '—',
-              otherCharacteristics: acf.other_characteristics || '',
-              typeLabel: acf.type_label || 'Type',
-              typeFieldLabel: acf.type_label || 'Type',
               typeValue: acf.type_value || '—',
-              typeDesc: acf.type_desc || '',
+              speciesRatio: acf.species_ratio || '',
+              dominantTerpenes: acf.dominant_terpenes || '—',
+              therapeuticProfile: acf.therapeutic_profile || '—',
+              tgaCategory: acf.tga_category || '—',
+              schedule: acf.schedule || '—',
               cannabinoid: acf.cannabinoid || '',
               price: acf.price || '—',
               image: image,
@@ -391,12 +391,15 @@ export default function Page() {
               '<div class="cs_pd_table_row"><i class="fa-solid fa-leaf"></i><span class="k">Dosage Form</span><span class="v">' + p.dosageForm + '</span></div>' +
               '<div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">THC Strength</span><span class="v">' + p.thc + '</span></div>' +
               '<div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">CBD Strength</span><span class="v">' + p.cbd + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-seedling"></i><span class="k">Plant Species</span><span class="v">' + p.typeValue + (p.speciesRatio ? ' (' + p.speciesRatio + ')' : '') + '</span></div>' +
               '</div>' +
               '<div class="cs_pd_table wow fadeInUp" data-wow-delay="0.1s">' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-seedling"></i><span class="k">' + p.typeLabel + '</span><span class="v">' + p.typeValue + '</span></div>' +
               '<div class="cs_pd_table_row"><i class="fa-solid fa-box-open"></i><span class="k">Presentation</span><span class="v">' + p.presentation + '</span></div>' +
               '<div class="cs_pd_table_row"><i class="fa-solid fa-box"></i><span class="k">Pack Size</span><span class="v">' + p.packSize + '</span></div>' +
-              '<div class="cs_pd_table_row"><i class="fa-solid fa-file-lines"></i><span class="k">Other Product Characteristics</span><span class="v">' + p.otherCharacteristics + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-wind"></i><span class="k">Dominant Terpenes</span><span class="v">' + p.dominantTerpenes + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-heart-pulse"></i><span class="k">Therapeutic Profile</span><span class="v">' + p.therapeuticProfile + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-shield-halved"></i><span class="k">TGA Category</span><span class="v">' + p.tgaCategory + '</span></div>' +
+              '<div class="cs_pd_table_row"><i class="fa-solid fa-scale-balanced"></i><span class="k">Schedule</span><span class="v">' + p.schedule + '</span></div>' +
               '</div></div></div></section>' +
               '<section style="padding: 60px 0; background: #fff;"><div class="container">' +
               '<div class="cs_pd_section_head wow fadeInUp"><h2>Presentation &amp; Packaging</h2><p>Product presentation and packaging details for ' + p.name + '.</p></div>' +
