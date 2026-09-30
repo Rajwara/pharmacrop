@@ -231,12 +231,15 @@ export default async function Page({ params }) {
             <div class="cs_pd_table_row"><i class="fa-solid fa-leaf"></i><span class="k">Dosage Form</span><span class="v">${product.dosageForm}</span></div>
             <div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">THC Strength</span><span class="v">${product.thc}</span></div>
             <div class="cs_pd_table_row"><i class="fa-solid fa-flask"></i><span class="k">CBD Strength</span><span class="v">${product.cbd}</span></div>
+            <div class="cs_pd_table_row"><i class="fa-solid fa-seedling"></i><span class="k">Plant Species</span><span class="v">${product.strainType}${product.speciesRatio ? ` (${product.speciesRatio})` : ''}</span></div>
           </div>
           <div class="cs_pd_table wow fadeInUp" data-wow-delay="0.1s">
-            <div class="cs_pd_table_row"><i class="fa-solid fa-seedling"></i><span class="k">${product.typeLabel}</span><span class="v">${product.typeValue}</span></div>
             <div class="cs_pd_table_row"><i class="fa-solid fa-box-open"></i><span class="k">Presentation</span><span class="v">${product.presentation}</span></div>
             <div class="cs_pd_table_row"><i class="fa-solid fa-box"></i><span class="k">Pack Size</span><span class="v">${product.packSize}</span></div>
-            <div class="cs_pd_table_row"><i class="fa-solid fa-file-lines"></i><span class="k">Other Product Characteristics</span><span class="v">${product.otherCharacteristics}</span></div>
+            <div class="cs_pd_table_row"><i class="fa-solid fa-wind"></i><span class="k">Dominant Terpenes</span><span class="v">${product.dominantTerpenes}</span></div>
+            <div class="cs_pd_table_row"><i class="fa-solid fa-heart-pulse"></i><span class="k">Therapeutic Profile</span><span class="v">${product.therapeuticProfile}</span></div>
+            <div class="cs_pd_table_row"><i class="fa-solid fa-shield-halved"></i><span class="k">TGA Category</span><span class="v">${product.tgaCategory}</span></div>
+            <div class="cs_pd_table_row"><i class="fa-solid fa-scale-balanced"></i><span class="k">Schedule</span><span class="v">${product.schedule}</span></div>
           </div>
         </div>
       </div>
