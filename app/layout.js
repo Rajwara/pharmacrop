@@ -2,8 +2,8 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata = {
-  title: "PharmaCrop - Bring Balance To Your Life",
-  description: "PharmaCrop - Bring Balance To Your Life",
+  title: "PharmaCrop - Australian-Grown. Complete Control.",
+  description: "Natural cultivation with pharmaceutical precision. Australian-grown, GMP-certified, TGA-licensed medicinal cannabis products.",
   icons: {
     icon: "/assets/img/favicon.png",
   },
