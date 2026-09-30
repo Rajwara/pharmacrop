@@ -190,7 +190,7 @@ export default function Page() {
       .cs_pd_doc_actions { display: flex; gap: 18px; margin-top: 20px; padding-top: 18px; border-top: 1px solid rgba(2,66,66,0.08); }
       .cs_pd_doc_actions a { color: #024242; font-weight: 700; font-size: 13px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
       .cs_pd_doc_actions a:hover { color: #78dca6; }
-      .cs_pd_doc_cta_btn { margin-top: 20px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #024242; color: #fff; font-weight: 700; font-size: 13.5px; padding: 13px 18px; border-radius: 10px; text-decoration: none; }
+      .cs_pd_doc_cta_btn { width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 8px; white-space: nowrap; background: #024242; color: #fff; font-weight: 700; font-size: 13.5px; padding: 13px 14px; border-radius: 10px; text-decoration: none; }
       .cs_pd_doc_cta_btn:hover { background: #78dca6; color: #024242; }
       @media (max-width: 991px) {
         .cs_pd_doc_grid { grid-template-columns: repeat(2, 1fr); }
@@ -458,14 +458,14 @@ export default function Page() {
               '<div class="cs_pd_doc_actions"><a href="' + p.altImage + '" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View</a><a href="/contact"><i class="fa-solid fa-download"></i> Download</a></div>' +
               '</div>' +
               '<div class="cs_pd_doc_card wow fadeInUp" data-wow-delay="0.2s">' +
+              '<div class="cs_pd_doc_icon"><i class="fa-solid fa-file-circle-check"></i></div>' +
+              '<h4>Request the Latest Certificate of Analysis</h4><p class="cs_pd_doc_desc">Get the most recent Certificate of Analysis (CoA) for this product from our team.</p>' +
+              '<div class="cs_pd_doc_actions"><a href="/contact" class="cs_pd_doc_cta_btn"><i class="fa-solid fa-envelope"></i> Request COA</a></div>' +
+              '</div>' +
+              '<div class="cs_pd_doc_card wow fadeInUp" data-wow-delay="0.3s">' +
               '<div class="cs_pd_doc_icon"><i class="fa-solid fa-hand-holding-heart"></i></div>' +
               '<h4>Patient Support</h4><p class="cs_pd_doc_desc">A patient-friendly booklet with dosing guidance and support information.</p>' +
               '<div class="cs_pd_doc_actions"><a href="https://pharmacropglobal.sharepoint.com/:b:/r/sites/PharmaCropWebsiteRevampPortal2.0/Content/Portal/Doctor/Files%20to%20link/PC%20Patient%20A5%20booklet.pdf?d=wa4a1e692b93c419db6c7185b5bbef23c&csf=1&web=1&e=uZbhLY" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View</a><a href="https://pharmacropglobal.sharepoint.com/:b:/r/sites/PharmaCropWebsiteRevampPortal2.0/Content/Portal/Doctor/Files%20to%20link/PC%20Patient%20A5%20booklet.pdf?d=wa4a1e692b93c419db6c7185b5bbef23c&csf=1&web=1&e=uZbhLY" target="_blank" rel="noopener"><i class="fa-solid fa-download"></i> Download</a></div>' +
-              '</div>' +
-              '<div class="cs_pd_doc_card wow fadeInUp" data-wow-delay="0.3s">' +
-              '<div class="cs_pd_doc_icon"><i class="fa-solid fa-file-circle-check"></i></div>' +
-              '<h4>Request the Latest Certificate of Analysis</h4><p class="cs_pd_doc_desc">Get the most recent Certificate of Analysis (CoA) for this product from our team.</p>' +
-              '<a href="/contact" class="cs_pd_doc_cta_btn"><i class="fa-solid fa-envelope"></i> Request Certificate of Analysis</a>' +
               '</div>' +
               '</div></div></section>' +
               relatedSection
