@@ -12,7 +12,7 @@ export default function Page() {
         __html: `
     <!-- Start Preloader -->
     <div class="cs_preloader" style="background-color:#000;">
-      <img src="/assets/img/pharma_Crop_logo_loader.gif" alt="Loading" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(70vw,480px);height:auto;">
+      <img src="/assets/img/General Images/Branding/pharma_Crop_logo_loader.gif" alt="Loading" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(70vw,480px);height:auto;">
     </div>
     <!-- End Preloader -->
     <!-- Start Header Section -->
@@ -22,7 +22,7 @@ export default function Page() {
           <div class="cs_main_header_in">
             <div class="cs_main_header_left">
               <a class="cs_site_branding" href="/">
-                <img src="/assets/img/pharmacrop-logo-header-animation.gif" alt="Logo" class="cs_logo_img cs_logo_gif">
+                <img src="/assets/img/General Images/Branding/pharmacrop-logo-header-animation.gif" alt="Logo" class="cs_logo_img cs_logo_gif">
               </a>
             </div>
             <div class="cs_main_header_center">
@@ -310,7 +310,7 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_leaf_facility_card wow fadeInUp" data-wow-delay="0.2s">
-            <img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt="GMP manufacturing facility">
+            <img src="/assets/img/General Images/Site Content/genetics-to-gmp-manufacturing.webp" alt="GMP manufacturing facility">
             <div class="cs_leaf_facility_overlay">
               <span>Stage 03</span>
               <h3>GMP-Certified Manufacturing</h3>
@@ -463,7 +463,7 @@ export default function Page() {
         </div>
         <div class="cs_leaf_blog_grid">
           <div class="cs_leaf_blog_card wow fadeInUp">
-            <img src="/assets/img/pharmacrop%20home%20assets/BLOGS/THE%20NOOSA%20HINTERLAND%20HOME%20OF%20PHARMACROP.webp" alt="The Noosa Hinterland: Home of PharmaCrop">
+            <img src="/assets/img/General%20Images/Blog/THE%20NOOSA%20HINTERLAND%20HOME%20OF%20PHARMACROP.webp" alt="The Noosa Hinterland: Home of PharmaCrop">
             <div class="cs_leaf_blog_card_body">
               <span class="cs_leaf_blog_meta">Cultivation &middot; 11 Aug 2026</span>
               <h3>The Noosa Hinterland: Home of PharmaCrop</h3>
@@ -471,7 +471,7 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_leaf_blog_card wow fadeInUp" data-wow-delay="0.1s">
-            <img src="/assets/img/video_block_bg.jpg" alt="From Genetics to GMP-Certified Manufacturing">
+            <img src="/assets/img/General Images/Blog/video_block_bg.jpg" alt="From Genetics to GMP-Certified Manufacturing">
             <div class="cs_leaf_blog_card_body">
               <span class="cs_leaf_blog_meta">Manufacturing &middot; 18 Aug 2026</span>
               <h3>From Genetics to GMP-Certified Manufacturing</h3>
@@ -479,7 +479,7 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_leaf_blog_card wow fadeInUp" data-wow-delay="0.2s">
-            <img src="/assets/img/pharmacrop%20home%20assets/BLOGS/GLOBAL%20CULTIVATION%20EXPERTISE%2C%20HINTERLAND-HONED.webp" alt="Global Cultivation Expertise, Hinterland-Honed">
+            <img src="/assets/img/General%20Images/Blog/GLOBAL%20CULTIVATION%20EXPERTISE%2C%20HINTERLAND-HONED.webp" alt="Global Cultivation Expertise, Hinterland-Honed">
             <div class="cs_leaf_blog_card_body">
               <span class="cs_leaf_blog_meta">Cultivation &middot; 25 Aug 2026</span>
               <h3>Global Cultivation Expertise, Hinterland-Honed</h3>
@@ -521,7 +521,7 @@ export default function Page() {
     <section class="cs_contact_card_section">
       <div class="container">
         <div class="cs_contact_card">
-          <div class="cs_contact_card_bg"><img src="/assets/img/pharmacrop%20home%20assets/CTA%20BANNER/PARTNER%20WITH%20PHARMACROP.webp" alt=""></div>
+          <div class="cs_contact_card_bg"><img src="/assets/img/General%20Images/CTA%20Banner/PARTNER%20WITH%20PHARMACROP.webp" alt=""></div>
           <div class="cs_contact_card_top">
             <p class="cs_contact_info_label">Speak With Our Team:</p>
             <a href="mailto:enquiries@pharmacrop.com.au" class="cs_contact_pill"><span class="cs_contact_pill_icon"><i class="fa-solid fa-envelope"></i></span>enquiries@pharmacrop.com.au</a>
@@ -596,7 +596,7 @@ export default function Page() {
       <div class="container">
         <div class="cs_footer_v2_row">
           <div>
-            <img src="/assets/img/pharmacrop-logo-footer-animation.gif" alt="Logo" class="wow zoomIn cs_logo_img cs_logo_gif">
+            <img src="/assets/img/General Images/Branding/pharmacrop-logo-footer-animation.gif" alt="Logo" class="wow zoomIn cs_logo_img cs_logo_gif">
             <p class="cs_footer_v2_brand_tagline">Australian-grown.<br>Pharmaceutical by design.</p>
             <p class="cs_footer_v2_desc">Stay updated with our latest news, insights and product developments.</p>
             <form action="#" class="cs_footer_v2_newsletter">
@@ -650,15 +650,15 @@ export default function Page() {
           <p class="cs_footer_v2_copyright">&copy; 2026 PharmaCrop. All rights reserved.</p>
           <div class="cs_footer_v2_badges">
             <div class="cs_footer_v2_badge">
-              <img src="/assets/img/AUSTRALIAN-MADE.png" alt="Australian Made" class="cs_footer_v2_badge_img">
+              <img src="/assets/img/General Images/Certifications/AUSTRALIAN-MADE.png" alt="Australian Made" class="cs_footer_v2_badge_img">
               <span class="cs_footer_v2_badge_label">Australian Made</span>
             </div>
             <div class="cs_footer_v2_badge">
-              <img src="/assets/img/GMP-CERTIFIED.png" alt="GMP Certified" class="cs_footer_v2_badge_img">
+              <img src="/assets/img/General Images/Certifications/GMP-CERTIFIED.png" alt="GMP Certified" class="cs_footer_v2_badge_img">
               <span class="cs_footer_v2_badge_label">GMP Certified</span>
             </div>
             <div class="cs_footer_v2_badge">
-              <img src="/assets/img/TGA-LICENSED.png" alt="TGA Licensed" class="cs_footer_v2_badge_img">
+              <img src="/assets/img/General Images/Certifications/TGA-LICENSED.png" alt="TGA Licensed" class="cs_footer_v2_badge_img">
               <span class="cs_footer_v2_badge_label">TGA Licensed</span>
             </div>
           </div>

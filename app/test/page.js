@@ -12,7 +12,7 @@ export default function Page() {
         __html: `
     <!-- Start Preloader -->
     <div class="cs_preloader" style="background-color:#000;">
-      <img src="/assets/img/pharma_Crop_logo_loader.gif" alt="Loading" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(70vw,480px);height:auto;">
+      <img src="/assets/img/General Images/Branding/pharma_Crop_logo_loader.gif" alt="Loading" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(70vw,480px);height:auto;">
     </div>
     <!-- End Preloader -->
     <!-- Start Header Section -->
@@ -22,7 +22,7 @@ export default function Page() {
           <div class="cs_main_header_in">
             <div class="cs_main_header_left">
               <a class="cs_site_branding" href="/">
-                <img src="/assets/img/pharmacrop-logo-header-animation.gif" alt="Logo" class="cs_logo_img cs_logo_gif">
+                <img src="/assets/img/General Images/Branding/pharmacrop-logo-header-animation.gif" alt="Logo" class="cs_logo_img cs_logo_gif">
               </a>
             </div>
             <div class="cs_main_header_center">
@@ -119,7 +119,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_cult_split_card cs_light">
-              <div class="cs_cult_split_card_thumb"><img src="/assets/img/pharmacrop-bannerv2.webp" alt=""></div>
+              <div class="cs_cult_split_card_thumb"><img src="/assets/img/General Images/Site Content/pharmacrop-bannerv2.webp" alt=""></div>
               <div>
                 <span class="cs_cult_split_num">The Pipeline Keeps Growing</span>
                 <h3>Continuous Development</h3>
@@ -132,7 +132,7 @@ export default function Page() {
     </section>
     <!-- End Cultivation Program Split Section -->
     <!-- Start Page Heading Sectoin -->
-    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/about_heading_bg.jpg">
+    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/General Images/Site Content/about_heading_bg.jpg">
       <div class="container">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -163,7 +163,7 @@ export default function Page() {
     </style>
     <section class="cs_rotate_hero">
       <div class="cs_rotate_hero_bg">
-        <img src="/assets/img/pharmacrop-banner1.webp" alt="">
+        <img src="/assets/img/General Images/Site Content/pharmacrop-banner1.webp" alt="">
       </div>
       <div class="container">
         <div class="cs_rotate_hero_content">
@@ -414,7 +414,7 @@ export default function Page() {
         </div>
         <div class="cs_offer_grid">
           <div class="cs_offer_img">
-            <img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt="">
+            <img src="/assets/img/General Images/Site Content/genetics-to-gmp-manufacturing.webp" alt="">
           </div>
           <div class="cs_offer_card">
             <div>
@@ -425,7 +425,7 @@ export default function Page() {
             <a href="#" class="cs_offer_card_link">Learn More &rarr;</a>
           </div>
           <div class="cs_offer_img">
-            <img src="/assets/img/pharmacrop-banner1.webp" alt="">
+            <img src="/assets/img/General Images/Site Content/pharmacrop-banner1.webp" alt="">
           </div>
           <div class="cs_offer_card">
             <div>
@@ -436,7 +436,7 @@ export default function Page() {
             <a href="#" class="cs_offer_card_link">Learn More &rarr;</a>
           </div>
           <div class="cs_offer_img">
-            <img src="/assets/img/pharmacrop-banner2.webp" alt="">
+            <img src="/assets/img/General Images/Site Content/pharmacrop-banner2.webp" alt="">
           </div>
           <div class="cs_offer_card">
             <div>
@@ -452,7 +452,7 @@ export default function Page() {
     <!-- End What We Offer Section -->
     <!-- Start CTA Split Section -->
     <style>
-      .cs_cta_split { position: relative; padding: 100px 0; background-image: url('/assets/img/pharmacrop-banner1.webp'); background-size: cover; background-position: center; }
+      .cs_cta_split { position: relative; padding: 100px 0; background-image: url('/assets/img/General Images/Site Content/pharmacrop-banner1.webp'); background-size: cover; background-position: center; }
       .cs_cta_split::before { content: ""; position: absolute; inset: 0; background: rgba(2, 20, 20, 0.55); }
       .cs_cta_split .container { position: relative; z-index: 1; }
       .cs_cta_split_grid { display: grid; grid-template-columns: 1fr 1.6fr 1fr; gap: 24px; align-items: stretch; }
@@ -523,7 +523,7 @@ export default function Page() {
           </div>
           <div class="cs_sticky_services_right">
             <div class="cs_sticky_card">
-              <img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt="Cultivation and Genetics">
+              <img src="/assets/img/General Images/Site Content/genetics-to-gmp-manufacturing.webp" alt="Cultivation and Genetics">
               <span class="cs_sticky_card_icon"><i class="fa-solid fa-seedling"></i></span>
               <div class="cs_sticky_card_body">
                 <h3 class="cs_sticky_card_title">Cultivation &amp; Genetics</h3>
@@ -531,7 +531,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_sticky_card">
-              <img src="/assets/img/pharmacrop-banner2.webp" alt="GMP Manufacturing">
+              <img src="/assets/img/General Images/Site Content/pharmacrop-banner2.webp" alt="GMP Manufacturing">
               <span class="cs_sticky_card_icon"><i class="fa-solid fa-industry"></i></span>
               <div class="cs_sticky_card_body">
                 <h3 class="cs_sticky_card_title">GMP-Certified Manufacturing</h3>
@@ -539,7 +539,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_sticky_card">
-              <img src="/assets/img/pharmacrop-banner4.webp" alt="Quality and Packaging">
+              <img src="/assets/img/General Images/Site Content/pharmacrop-banner4.webp" alt="Quality and Packaging">
               <span class="cs_sticky_card_icon"><i class="fa-solid fa-boxes-stacked"></i></span>
               <div class="cs_sticky_card_body">
                 <h3 class="cs_sticky_card_title">Quality &amp; Packaging</h3>
@@ -754,7 +754,7 @@ export default function Page() {
     <section class="cs_contact_card_section">
       <div class="container">
         <div class="cs_contact_card">
-          <div class="cs_contact_card_bg"><img src="/assets/img/pharmacrop%20home%20assets/CTA%20BANNER/PARTNER%20WITH%20PHARMACROP.webp" alt=""></div>
+          <div class="cs_contact_card_bg"><img src="/assets/img/General%20Images/CTA%20Banner/PARTNER%20WITH%20PHARMACROP.webp" alt=""></div>
           <div class="cs_contact_card_top">
             <p class="cs_contact_info_label">Speak With Our Team:</p>
             <a href="mailto:enquiries@pharmacrop.com.au" class="cs_contact_pill"><span class="cs_contact_pill_icon"><i class="fa-solid fa-envelope"></i></span>enquiries@pharmacrop.com.au</a>
@@ -966,7 +966,7 @@ export default function Page() {
     </style>
     <section class="cs_guide_section">
       <div class="cs_guide_bg">
-        <img src="/assets/img/pharmacrop-banner2.webp" alt="">
+        <img src="/assets/img/General Images/Site Content/pharmacrop-banner2.webp" alt="">
         <div class="cs_guide_card">
           <h2 class="cs_guide_title">What Guides Our Cultivation And Manufacturing Team</h2>
           <p class="cs_guide_desc">Every batch we produce is shaped by pharmaceutical discipline, consistent quality systems and a commitment to clear, reliable communication with our partners.</p>
@@ -1023,7 +1023,7 @@ export default function Page() {
         <p class="cs_do_split_text">Every stage of our operation &mdash; from cultivar selection to GMP-certified processing &mdash; is guided by consistency, traceability and care. Australian-grown, and shaped by cultivation expertise drawn from California, Canada and South Africa.</p>
       </div>
       <div class="cs_do_split_img">
-        <img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt="PharmaCrop cultivation greenhouse">
+        <img src="/assets/img/General Images/Site Content/genetics-to-gmp-manufacturing.webp" alt="PharmaCrop cultivation greenhouse">
       </div>
     </section>
     <!-- End What We Do Split Section -->
@@ -1083,7 +1083,7 @@ export default function Page() {
           </div>
           <div class="cs_scroll_stack_right">
             <div class="cs_scroll_card" data-index="0">
-              <img src="/assets/img/pharma-banner.jpeg" alt="Noosa Hinterland Cultivation Facility">
+              <img src="/assets/img/General Images/Site Content/pharma-banner.jpeg" alt="Noosa Hinterland Cultivation Facility">
               <div class="cs_scroll_card_content">
                 <div class="cs_scroll_card_tags">
                   <span class="cs_scroll_card_tag">Cultivation</span>
@@ -1105,7 +1105,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_scroll_card" data-index="2">
-              <img src="/assets/img/health-professionals-card.webp" alt="Clinical & Regulatory Support">
+              <img src="/assets/img/General Images/Site Content/health-professionals-card.webp" alt="Clinical & Regulatory Support">
               <div class="cs_scroll_card_content">
                 <div class="cs_scroll_card_tags">
                   <span class="cs_scroll_card_tag">Clinical</span>
@@ -1211,7 +1211,7 @@ export default function Page() {
           </div>
           <div class="cs_platform_items">
             <div class="cs_platform_item active" data-index="0">
-              <div class="cs_platform_item_img"><img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt="Genetics"></div>
+              <div class="cs_platform_item_img"><img src="/assets/img/General Images/Site Content/genetics-to-gmp-manufacturing.webp" alt="Genetics"></div>
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-dna"></i></span>
                 <h3>Genetics</h3>
@@ -1219,7 +1219,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_platform_item" data-index="1">
-              <div class="cs_platform_item_img"><img src="/assets/img/pharma-banner.jpeg" alt="Cultivation"></div>
+              <div class="cs_platform_item_img"><img src="/assets/img/General Images/Site Content/pharma-banner.jpeg" alt="Cultivation"></div>
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-seedling"></i></span>
                 <h3>Cultivation</h3>
@@ -1227,7 +1227,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_platform_item" data-index="2">
-              <div class="cs_platform_item_img"><img src="/assets/img/pharmacrop-banner2.webp" alt="GMP Manufacturing"></div>
+              <div class="cs_platform_item_img"><img src="/assets/img/General Images/Site Content/pharmacrop-banner2.webp" alt="GMP Manufacturing"></div>
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-industry"></i></span>
                 <h3>GMP Manufacturing</h3>
@@ -1243,7 +1243,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_platform_item" data-index="4">
-              <div class="cs_platform_item_img"><img src="/assets/img/pharmacrop-banner1.webp" alt="Research &amp; Innovation"></div>
+              <div class="cs_platform_item_img"><img src="/assets/img/General Images/Site Content/pharmacrop-banner1.webp" alt="Research &amp; Innovation"></div>
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-microscope"></i></span>
                 <h3>Research &amp; Innovation</h3>
@@ -1251,7 +1251,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_platform_item" data-index="5">
-              <div class="cs_platform_item_img"><img src="/assets/img/health-professionals-card.webp" alt="Market Access &amp; Commercialisation"></div>
+              <div class="cs_platform_item_img"><img src="/assets/img/General Images/Site Content/health-professionals-card.webp" alt="Market Access &amp; Commercialisation"></div>
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-handshake"></i></span>
                 <h3>Market Access &amp; Commercialisation</h3>
@@ -1259,7 +1259,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_platform_item" data-index="6">
-              <div class="cs_platform_item_img"><img src="/assets/img/pharmacrop-banner4.webp" alt="Global Export"></div>
+              <div class="cs_platform_item_img"><img src="/assets/img/General Images/Site Content/pharmacrop-banner4.webp" alt="Global Export"></div>
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-globe"></i></span>
                 <h3>Global Export</h3>
@@ -1312,7 +1312,7 @@ export default function Page() {
       <div class="container">
         <div class="cs_footer_v2_row">
           <div>
-            <img src="/assets/img/pharmacrop-logo-footer-animation.gif" alt="Logo" class="wow zoomIn cs_logo_img cs_logo_gif">
+            <img src="/assets/img/General Images/Branding/pharmacrop-logo-footer-animation.gif" alt="Logo" class="wow zoomIn cs_logo_img cs_logo_gif">
             <p class="cs_footer_v2_brand_tagline">Australian-grown.<br>Pharmaceutical by design.</p>
             <p class="cs_footer_v2_desc">Stay updated with our latest news, insights and product developments.</p>
             <form action="#" class="cs_footer_v2_newsletter">
@@ -1366,15 +1366,15 @@ export default function Page() {
           <p class="cs_footer_v2_copyright">&copy; 2026 PharmaCrop. All rights reserved.</p>
           <div class="cs_footer_v2_badges">
             <div class="cs_footer_v2_badge">
-              <img src="/assets/img/AUSTRALIAN-MADE.png" alt="Australian Made" class="cs_footer_v2_badge_img">
+              <img src="/assets/img/General Images/Certifications/AUSTRALIAN-MADE.png" alt="Australian Made" class="cs_footer_v2_badge_img">
               <span class="cs_footer_v2_badge_label">Australian Made</span>
             </div>
             <div class="cs_footer_v2_badge">
-              <img src="/assets/img/GMP-CERTIFIED.png" alt="GMP Certified" class="cs_footer_v2_badge_img">
+              <img src="/assets/img/General Images/Certifications/GMP-CERTIFIED.png" alt="GMP Certified" class="cs_footer_v2_badge_img">
               <span class="cs_footer_v2_badge_label">GMP Certified</span>
             </div>
             <div class="cs_footer_v2_badge">
-              <img src="/assets/img/TGA-LICENSED.png" alt="TGA Licensed" class="cs_footer_v2_badge_img">
+              <img src="/assets/img/General Images/Certifications/TGA-LICENSED.png" alt="TGA Licensed" class="cs_footer_v2_badge_img">
               <span class="cs_footer_v2_badge_label">TGA Licensed</span>
             </div>
           </div>

@@ -112,7 +112,7 @@ export default async function Page({ params }) {
   const html = `
     <!-- Start Preloader -->
     <div class="cs_preloader" style="background-color:#000;">
-      <img src="/assets/img/pharma_Crop_logo_loader.gif" alt="Loading" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(70vw,480px);height:auto;">
+      <img src="/assets/img/General Images/Branding/pharma_Crop_logo_loader.gif" alt="Loading" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(70vw,480px);height:auto;">
     </div>
     <!-- End Preloader -->
     <!-- Start Dashboard Header -->
@@ -144,7 +144,7 @@ export default async function Page({ params }) {
       <div class="container">
         <div class="cs_dash_header_in">
           <a href="/dashboard" class="cs_dash_logo">
-            <img src="/assets/img/favicon.png" alt="PharmaCrop" onerror="this.style.display='none'">
+            <img src="/assets/img/General Images/Branding/favicon.png" alt="PharmaCrop" onerror="this.style.display='none'">
             PharmaCrop
           </a>
           <ul class="cs_dash_nav">
