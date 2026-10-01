@@ -177,11 +177,11 @@ export default function Page() {
     <section class="cs_res_filters_section">
       <div class="container">
         <div class="cs_res_pills">
-          <button type="button" class="cs_res_pill active" data-res-pill="all">All Resources (8)</button>
-          <button type="button" class="cs_res_pill" data-res-pill="prescribing-access">Prescribing &amp; Access (2)</button>
-          <button type="button" class="cs_res_pill" data-res-pill="education">Education (1)</button>
-          <button type="button" class="cs_res_pill" data-res-pill="product-resources">Product Resources (4)</button>
-          <button type="button" class="cs_res_pill" data-res-pill="clinical-professional">Clinical / Professional (1)</button>
+          <button type="button" class="cs_res_pill active" data-res-pill="all">All Resources (4)</button>
+          <button type="button" class="cs_res_pill" data-res-pill="pricing">Pricing (1)</button>
+          <button type="button" class="cs_res_pill" data-res-pill="patient-support">Patient Support (1)</button>
+          <button type="button" class="cs_res_pill" data-res-pill="company">Company Information (1)</button>
+          <button type="button" class="cs_res_pill" data-res-pill="msl-support">MSL Support (1)</button>
         </div>
         <div class="cs_res_bar">
           <div class="cs_res_search">
@@ -199,24 +199,15 @@ export default function Page() {
             <label>Category</label>
             <select data-res-category-select>
               <option value="all">All categories</option>
-              <option value="prescribing-access">Prescribing &amp; Access</option>
-              <option value="education">Education</option>
-              <option value="product-resources">Product Resources</option>
-              <option value="clinical-professional">Clinical / Professional</option>
-            </select>
-          </div>
-          <div class="cs_res_select_wrap">
-            <label>Product</label>
-            <select data-res-product>
-              <option value="all">All products</option>
-              <option value="sunridge 22">Sunridge 22</option>
-              <option value="balance 10:10">Balance 10:10</option>
-              <option value="highland 25">Highland 25</option>
+              <option value="pricing">Pricing</option>
+              <option value="patient-support">Patient Support</option>
+              <option value="company">Company Information</option>
+              <option value="msl-support">MSL Support</option>
             </select>
           </div>
         </div>
         <div class="cs_res_meta_row">
-          <span class="cs_res_count" data-res-count>8 RESOURCES</span>
+          <span class="cs_res_count" data-res-count>4 RESOURCES</span>
           <div class="cs_res_sort_view">
             <select data-res-sort>
               <option value="latest">Sort by: Latest</option>
@@ -265,115 +256,53 @@ export default function Page() {
     <section class="cs_res_grid_section">
       <div class="container">
         <div class="cs_res_grid" data-res-grid>
-          <div class="cs_res_card" data-name="hcp product overview" data-category="product-resources" data-product="sunridge 22">
-            <div class="cs_res_img"><img src="/assets/img/dashboard/HCP%20Resources/HCP%20Product%20Overview.webp" alt="HCP Product Overview"><span class="cs_res_img_icon"><i class="fa-solid fa-file-lines"></i></span></div>
+          <div class="cs_res_card" data-name="hcp pricelist" data-category="pricing">
+            <div class="cs_res_img"><img src="/assets/img/dashboard/HCP%20Resources/HCP%20Product%20Overview.webp" alt="HCP Pricelist"><span class="cs_res_img_icon"><i class="fa-solid fa-file-invoice-dollar"></i></span></div>
             <div class="cs_res_body">
-              <h3>HCP Product Overview</h3>
-              <span class="cs_res_category">Product Resources</span>
-              <span class="cs_res_meta">PDF &nbsp;|&nbsp; 1.1 MB &nbsp;|&nbsp; Updated Jan 15, 2024</span>
-              <p class="cs_res_desc">Overview of PharmaCrop&rsquo;s product portfolio, including product information and key characteristics.</p>
-              <a href="/all-products?category=dried-flower" class="cs_res_tag">Related Product: Sunridge 22</a>
+              <h3>HCP Pricelist</h3>
+              <span class="cs_res_category">Pricing</span>
+              <span class="cs_res_meta">PDF</span>
+              <p class="cs_res_desc">Current pricing information for PharmaCrop&rsquo;s medicinal cannabis product range, available exclusively to healthcare professionals.</p>
               <div class="cs_res_actions">
-                <a href="/assets/img/dashboard/HCP%20Resources/HCP%20Product%20Overview.webp" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View Resource</a>
-                <a href="/contact"><i class="fa-solid fa-download"></i> Download</a>
+                <a href="https://pharmacropglobal.sharepoint.com/:b:/r/sites/PharmaCropWebsiteRevampPortal2.0/Content/Portal/Doctor/SEPT%2026%20Pricelist%20HCP.pdf?d=wfe75e90c95a94c378f34f6e3dff48609&csf=1&web=1&e=Nndb7O" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View Resource</a>
+                <a href="https://pharmacropglobal.sharepoint.com/:b:/r/sites/PharmaCropWebsiteRevampPortal2.0/Content/Portal/Doctor/SEPT%2026%20Pricelist%20HCP.pdf?d=wfe75e90c95a94c378f34f6e3dff48609&csf=1&web=1&e=Nndb7O" target="_blank" rel="noopener"><i class="fa-solid fa-download"></i> Download</a>
               </div>
             </div>
           </div>
-          <div class="cs_res_card" data-name="prescribing & access guide" data-category="prescribing-access" data-product="all">
-            <div class="cs_res_img"><img src="/assets/img/dashboard/HCP%20Resources/Prescribing%20%26%20Access%20Guide.webp" alt="Prescribing and Access Guide"><span class="cs_res_img_icon"><i class="fa-solid fa-file-lines"></i></span></div>
+          <div class="cs_res_card" data-name="patient support booklet" data-category="patient-support">
+            <div class="cs_res_img"><img src="/assets/img/dashboard/HCP%20Resources/Product%20Information%20Resource.webp" alt="Patient Support Booklet"><span class="cs_res_img_icon"><i class="fa-solid fa-hand-holding-heart"></i></span></div>
             <div class="cs_res_body">
-              <h3>Prescribing &amp; Access Guide</h3>
-              <span class="cs_res_category">Prescribing &amp; Access</span>
-              <span class="cs_res_meta">PDF &nbsp;|&nbsp; 980 KB &nbsp;|&nbsp; Updated Jan 10, 2024</span>
-              <p class="cs_res_desc">Information to support healthcare professionals with product access pathways and prescribing considerations.</p>
-              <a href="/all-products" class="cs_res_tag">All Products</a>
+              <h3>Patient Support Booklet</h3>
+              <span class="cs_res_category">Patient Support</span>
+              <span class="cs_res_meta">PDF</span>
+              <p class="cs_res_desc">A patient-friendly booklet with dosing guidance and support information, designed to assist conversations with patients.</p>
               <div class="cs_res_actions">
-                <a href="/assets/img/dashboard/HCP%20Resources/Prescribing%20%26%20Access%20Guide.webp" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View Resource</a>
-                <a href="/contact"><i class="fa-solid fa-download"></i> Download</a>
+                <a href="https://pharmacropglobal.sharepoint.com/:b:/r/sites/PharmaCropWebsiteRevampPortal2.0/Content/Portal/Doctor/Files%20to%20link/PC%20Patient%20A5%20booklet.pdf?d=wa4a1e692b93c419db6c7185b5bbef23c&csf=1&web=1&e=uZbhLY" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View Resource</a>
+                <a href="https://pharmacropglobal.sharepoint.com/:b:/r/sites/PharmaCropWebsiteRevampPortal2.0/Content/Portal/Doctor/Files%20to%20link/PC%20Patient%20A5%20booklet.pdf?d=wa4a1e692b93c419db6c7185b5bbef23c&csf=1&web=1&e=uZbhLY" target="_blank" rel="noopener"><i class="fa-solid fa-download"></i> Download</a>
               </div>
             </div>
           </div>
-          <div class="cs_res_card" data-name="product technical resource" data-category="product-resources" data-product="all">
-            <div class="cs_res_img"><img src="/assets/img/dashboard/HCP%20Resources/Product%20Technical%20Resource.webp" alt="Product Technical Resource"><span class="cs_res_img_icon"><i class="fa-solid fa-file-lines"></i></span></div>
+          <div class="cs_res_card" data-name="the pharmacrop difference" data-category="company">
+            <div class="cs_res_img"><img src="/assets/img/dashboard/HCP%20Resources/Clinical%20Reference%20Material.webp" alt="The PharmaCrop Difference"><span class="cs_res_img_icon"><i class="fa-solid fa-leaf"></i></span></div>
             <div class="cs_res_body">
-              <h3>Product Technical Resource</h3>
-              <span class="cs_res_category">Product Resources</span>
-              <span class="cs_res_meta">PDF &nbsp;|&nbsp; 1.4 MB &nbsp;|&nbsp; Updated Jan 8, 2024</span>
-              <p class="cs_res_desc">Detailed product technical information, including product specifications and quality details.</p>
-              <a href="/all-products?category=dried-flower" class="cs_res_tag">Product Category: Dried Flower</a>
+              <h3>The PharmaCrop Difference</h3>
+              <span class="cs_res_category">Company Information</span>
+              <span class="cs_res_meta">PDF</span>
+              <p class="cs_res_desc">Learn what sets PharmaCrop apart &mdash; our approach to quality, cultivation and patient care.</p>
               <div class="cs_res_actions">
-                <a href="/assets/img/dashboard/HCP%20Resources/Product%20Technical%20Resource.webp" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View Resource</a>
-                <a href="/contact"><i class="fa-solid fa-download"></i> Download</a>
+                <a href="https://pharmacropglobal.sharepoint.com/:b:/r/sites/PharmaCropWebsiteRevampPortal2.0/Content/Portal/Doctor/Pharmacrop%20Difference%20Leave-Behind%20MAY%202026%20(4).pdf?d=w1e01e3bddfc04904a2cd92872fa6675c&csf=1&web=1&e=YrLAgK" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View Resource</a>
+                <a href="https://pharmacropglobal.sharepoint.com/:b:/r/sites/PharmaCropWebsiteRevampPortal2.0/Content/Portal/Doctor/Pharmacrop%20Difference%20Leave-Behind%20MAY%202026%20(4).pdf?d=w1e01e3bddfc04904a2cd92872fa6675c&csf=1&web=1&e=YrLAgK" target="_blank" rel="noopener"><i class="fa-solid fa-download"></i> Download</a>
               </div>
             </div>
           </div>
-          <div class="cs_res_card" data-name="clinical reference material" data-category="clinical-professional" data-product="all">
-            <div class="cs_res_img"><img src="/assets/img/dashboard/HCP%20Resources/Clinical%20Reference%20Material.webp" alt="Clinical Reference Material"><span class="cs_res_img_icon"><i class="fa-solid fa-file-lines"></i></span></div>
+          <div class="cs_res_card" data-name="msl support" data-category="msl-support">
+            <div class="cs_res_img"><img src="/assets/img/dashboard/working%20together.webp" alt="MSL Support"><span class="cs_res_img_icon"><i class="fa-solid fa-user-doctor"></i></span></div>
             <div class="cs_res_body">
-              <h3>Clinical Reference Material</h3>
-              <span class="cs_res_category">Clinical / Professional</span>
-              <span class="cs_res_meta">PDF &nbsp;|&nbsp; 1.4 MB &nbsp;|&nbsp; Updated Jan 8, 2024</span>
-              <p class="cs_res_desc">Professional reference material supporting the clinical use of PharmaCrop products.</p>
-              <a href="/all-products" class="cs_res_tag">All Products</a>
+              <h3>MSL Support</h3>
+              <span class="cs_res_category">MSL Support</span>
+              <p class="cs_res_desc">Request a call or visit from one of our Medical Science Liaisons to discuss our products in more detail.</p>
               <div class="cs_res_actions">
-                <a href="/assets/img/dashboard/HCP%20Resources/Clinical%20Reference%20Material.webp" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View Resource</a>
-                <a href="/contact"><i class="fa-solid fa-download"></i> Download</a>
-              </div>
-            </div>
-          </div>
-          <div class="cs_res_card" data-name="product information resource" data-category="product-resources" data-product="balance 10:10">
-            <div class="cs_res_img"><img src="/assets/img/dashboard/HCP%20Resources/Product%20Information%20Resource.webp" alt="Product Information Resource"><span class="cs_res_img_icon"><i class="fa-solid fa-file-lines"></i></span></div>
-            <div class="cs_res_body">
-              <h3>Product Information Resource</h3>
-              <span class="cs_res_category">Product Resources</span>
-              <span class="cs_res_meta">PDF &nbsp;|&nbsp; 1.2 MB &nbsp;|&nbsp; Updated Dec 20, 2023</span>
-              <p class="cs_res_desc">Comprehensive product information including product characteristics and formulation details.</p>
-              <a href="/all-products?category=oral-liquid" class="cs_res_tag">Related Product: Balance 10:10</a>
-              <div class="cs_res_actions">
-                <a href="/assets/img/dashboard/HCP%20Resources/Product%20Information%20Resource.webp" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View Resource</a>
-                <a href="/contact"><i class="fa-solid fa-download"></i> Download</a>
-              </div>
-            </div>
-          </div>
-          <div class="cs_res_card" data-name="educational resource" data-category="education" data-product="all">
-            <div class="cs_res_img"><img src="/assets/img/dashboard/HCP%20Resources/Educational%20Resource.webp" alt="Educational Resource"><span class="cs_res_img_icon"><i class="fa-solid fa-file-lines"></i></span></div>
-            <div class="cs_res_body">
-              <h3>Educational Resource</h3>
-              <span class="cs_res_category">Education</span>
-              <span class="cs_res_meta">PDF &nbsp;|&nbsp; 1.0 MB &nbsp;|&nbsp; Updated Dec 18, 2023</span>
-              <p class="cs_res_desc">Educational material to support healthcare professional understanding of PharmaCrop products.</p>
-              <a href="/all-products" class="cs_res_tag">All Products</a>
-              <div class="cs_res_actions">
-                <a href="/assets/img/dashboard/HCP%20Resources/Educational%20Resource.webp" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View Resource</a>
-                <a href="/contact"><i class="fa-solid fa-download"></i> Download</a>
-              </div>
-            </div>
-          </div>
-          <div class="cs_res_card" data-name="product overview document" data-category="product-resources" data-product="highland 25">
-            <div class="cs_res_img"><img src="/assets/img/dashboard/HCP%20Resources/Product%20Overview%20Document.webp" alt="Product Overview Document"><span class="cs_res_img_icon"><i class="fa-solid fa-file-lines"></i></span></div>
-            <div class="cs_res_body">
-              <h3>Product Overview Document</h3>
-              <span class="cs_res_category">Product Resources</span>
-              <span class="cs_res_meta">PDF &nbsp;|&nbsp; 1.3 MB &nbsp;|&nbsp; Updated Dec 12, 2023</span>
-              <p class="cs_res_desc">Product overview including key information and supporting resources for healthcare professionals.</p>
-              <a href="/all-products?category=dried-flower" class="cs_res_tag">Related Product: Highland 25</a>
-              <div class="cs_res_actions">
-                <a href="/assets/img/dashboard/HCP%20Resources/Product%20Overview%20Document.webp" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View Resource</a>
-                <a href="/contact"><i class="fa-solid fa-download"></i> Download</a>
-              </div>
-            </div>
-          </div>
-          <div class="cs_res_card" data-name="access information" data-category="prescribing-access" data-product="all">
-            <div class="cs_res_img"><img src="/assets/img/dashboard/HCP%20Resources/Access%20Information.webp" alt="Access Information"><span class="cs_res_img_icon"><i class="fa-solid fa-file-lines"></i></span></div>
-            <div class="cs_res_body">
-              <h3>Access Information</h3>
-              <span class="cs_res_category">Prescribing &amp; Access</span>
-              <span class="cs_res_meta">PDF &nbsp;|&nbsp; 890 KB &nbsp;|&nbsp; Updated Dec 8, 2023</span>
-              <p class="cs_res_desc">Information to support product access and ordering for healthcare professionals.</p>
-              <a href="/all-products" class="cs_res_tag">All Products</a>
-              <div class="cs_res_actions">
-                <a href="/assets/img/dashboard/HCP%20Resources/Access%20Information.webp" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View Resource</a>
-                <a href="/contact"><i class="fa-solid fa-download"></i> Download</a>
+                <a href="/contact"><i class="fa-solid fa-phone-volume"></i> Request a Call</a>
               </div>
             </div>
           </div>
@@ -503,7 +432,6 @@ export default function Page() {
           var cards = Array.prototype.slice.call(document.querySelectorAll('.cs_res_card'));
           var pills = Array.prototype.slice.call(document.querySelectorAll('[data-res-pill]'));
           var categorySelect = document.querySelector('[data-res-category-select]');
-          var productSelect = document.querySelector('[data-res-product]');
           var sortSelect = document.querySelector('[data-res-sort]');
           var searchInput = document.querySelector('[data-res-search]');
           var countEl = document.querySelector('[data-res-count]');
@@ -519,15 +447,13 @@ export default function Page() {
 
           function applyFilters() {
             var category = categorySelect.value;
-            var product = productSelect.value;
             var query = searchInput.value.trim().toLowerCase();
             var visibleCount = 0;
 
             cards.forEach(function (card) {
               var matchesCategory = category === 'all' || card.getAttribute('data-category') === category;
-              var matchesProduct = product === 'all' || card.getAttribute('data-product') === product;
               var matchesSearch = !query || card.getAttribute('data-name').indexOf(query) !== -1;
-              var visible = matchesCategory && matchesProduct && matchesSearch;
+              var visible = matchesCategory && matchesSearch;
               card.style.display = visible ? '' : 'none';
               if (visible) visibleCount++;
             });
@@ -550,7 +476,6 @@ export default function Page() {
             setPillActive(categorySelect.value);
             applyFilters();
           });
-          productSelect.addEventListener('change', applyFilters);
           searchInput.addEventListener('input', applyFilters);
 
           sortSelect.addEventListener('change', function () {
