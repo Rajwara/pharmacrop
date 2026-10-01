@@ -45,7 +45,7 @@ export default function Page() {
     </header>
     <!-- End Header Section -->
     <!-- Start Page Heading Sectoin -->
-    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/General%20Images/Site%20Content/pharma-banner.jpeg">
+    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/About-Us/THE%20PHARMACROP%20STORY/About-Us%20hero%20image.webp">
       <div class="container">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -75,11 +75,13 @@ export default function Page() {
         <div class="cs_height_56 cs_height_lg_35"></div>
         <div class="row cs_gap_y_30">
           <div class="col-lg-4 wow fadeInLeft">
-            <a href="https://www.youtube.com/embed/rRid6GCJtgc" class="cs_video_block cs_style_1 cs_bg_filed cs_video_open cs_center cs_radius_20" data-src="/assets/img/About-Us/THE%20PHARMACROP%20STORY/THE%20PHARMACROP%20STORY1-v2.webp"></a>
+            <a href="https://www.youtube.com/embed/rRid6GCJtgc" class="cs_video_block cs_style_1 cs_bg_filed cs_video_open cs_center cs_radius_20" data-src="/assets/img/About-Us/THE%20PHARMACROP%20STORY/THE%20PHARMACROP%20STORY-1.webp"></a>
           </div>
           <div class="col-lg-8 wow fadeInRight">
-            <div class="cs_cta cs_style_2 cs_bg_filed cs_radius_20" data-src="/assets/img/About-Us/THE%20PHARMACROP%20STORY/THE%20PHARMACROP%20STORY2-v2.webp">
-              <a href="/contact" class="cs_btn cs_style_2 cs_bold cs_white_color">Contact us</a>
+            <div class="cs_cta cs_style_2 cs_radius_20" style="position: relative; overflow: hidden;">
+              <video src="/assets/img/About-Us/THE%20PHARMACROP%20STORY/856x300.mp4" autoplay muted loop playsinline style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;"></video>
+              <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(2,34,34,0) 40%, rgba(2,20,20,0.75) 100%); z-index: 1;"></div>
+              <a href="/contact" class="cs_btn cs_style_2 cs_bold cs_white_color" style="position: relative; z-index: 2;">Contact us</a>
             </div>
           </div>
         </div>
