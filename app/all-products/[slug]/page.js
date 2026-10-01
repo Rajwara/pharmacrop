@@ -93,6 +93,22 @@ export default async function Page({ params }) {
       tableRow("fa-shield-halved", "TGA Category", product.tgaCategory) +
       tableRow("fa-scale-balanced", "Schedule", product.schedule);
 
+  function nutritionItem(icon, label, unit, value) {
+    if (!value) return "";
+    return `<div class="cs_pd_nutrition_item"><span class="cs_pd_nutrition_icon"><i class="fa-solid ${icon}"></i></span><span class="cs_pd_nutrition_label">${label}</span><span class="cs_pd_nutrition_unit">(${unit})</span><span class="cs_pd_nutrition_value">${value}</span></div>`;
+  }
+  const nutritionItemsHtml = [
+    nutritionItem("fa-bolt", "Energy", "kJ", product.energyKj),
+    nutritionItem("fa-cubes", "Sugars", "g", product.sugars),
+    nutritionItem("fa-wheat-awn", "Carbs", "g", product.carbs),
+    nutritionItem("fa-bottle-droplet", "Sodium", "mg", product.sodium),
+    nutritionItem("fa-droplet", "Fat", "g", product.fat),
+  ].join("");
+  const nutritionHtml =
+    product.categorySlug === "pastilles" && nutritionItemsHtml
+      ? `<div class="cs_pd_nutrition_wrap wow fadeInUp"><div class="cs_pd_nutrition_row">${nutritionItemsHtml}</div><div class="cs_pd_nutrition_caption">Nutritional Facts (per pastille)</div></div>`
+      : "";
+
   const html = `
     <!-- Start Preloader -->
     <div class="cs_preloader" style="background-color:#000;">
@@ -239,6 +255,19 @@ export default async function Page({ params }) {
         .cs_pd_overview_row { flex-direction: column; }
         .cs_pd_overview_img { width: 100%; }
       }
+      .cs_pd_nutrition_wrap { background: #eef8f1; border-radius: 20px; padding: 36px 24px 26px; margin-top: 34px; }
+      .cs_pd_nutrition_row { display: flex; align-items: stretch; justify-content: center; flex-wrap: wrap; }
+      .cs_pd_nutrition_item { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 28px; position: relative; }
+      .cs_pd_nutrition_item + .cs_pd_nutrition_item::before { content: ''; position: absolute; left: 0; top: 10%; bottom: 10%; width: 1px; background: rgba(2,66,66,0.15); }
+      .cs_pd_nutrition_icon { width: 64px; height: 64px; border-radius: 50%; background: rgba(120,220,166,0.2); color: #024242; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 14px; }
+      .cs_pd_nutrition_label { color: #024242; font-weight: 600; font-size: 15px; }
+      .cs_pd_nutrition_unit { color: #8a9a95; font-size: 12px; margin-bottom: 8px; }
+      .cs_pd_nutrition_value { color: #024242; font-weight: 800; font-size: 24px; }
+      .cs_pd_nutrition_caption { text-align: center; color: #5c6f69; letter-spacing: 2px; font-size: 11.5px; font-weight: 700; margin-top: 26px; text-transform: uppercase; }
+      @media (max-width: 767px) {
+        .cs_pd_nutrition_item { padding: 14px 20px; flex: 0 0 50%; }
+        .cs_pd_nutrition_item + .cs_pd_nutrition_item::before { display: none; }
+      }
     </style>
     <section style="padding: 60px 0; background: #fff;">
       <div class="container">
@@ -253,6 +282,7 @@ export default async function Page({ params }) {
             <img src="${product.altImage}" alt="${product.name} overview">
           </div>
         </div>
+        ${nutritionHtml}
       </div>
     </section>
     <!-- End Product Overview -->
