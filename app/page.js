@@ -427,7 +427,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_platform_item" data-index="3">
-              <div class="cs_platform_item_img"><img src="/assets/img/Home/Integrated%20Platform/Quality%20%26%20Release.webp" alt="Quality &amp; Release"></div>
+              <div class="cs_platform_item_img"><img src="/assets/img/Home/Integrated%20Platform/Quality%20%26%20Release%20.webp" alt="Quality &amp; Release"></div>
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-shield-halved"></i></span>
                 <h3>Quality &amp; Release</h3>
@@ -443,7 +443,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_platform_item" data-index="5">
-              <div class="cs_platform_item_img"><img src="/assets/img/Home/Integrated%20Platform/Home%20Page-%20Integrated%20Platform-5.webp" alt="Market Access &amp; Commercialisation"></div>
+              <div class="cs_platform_item_img"><img src="/assets/img/Home/Integrated%20Platform/Market%20Access%20%26%20Commercialisation.webp" alt="Market Access &amp; Commercialisation"></div>
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-handshake"></i></span>
                 <h3>Market Access &amp; Commercialisation</h3>
