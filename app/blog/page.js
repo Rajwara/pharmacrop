@@ -30,7 +30,7 @@ export default async function Page({ searchParams }) {
     <>
       <div dangerouslySetInnerHTML={{ __html: headerHtml }} />
 
-      <section className="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/General Images/Site Content/about_heading_bg.jpg">
+      <section className="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/General%20Images/Site%20Content/about_heading_bg.jpg">
         <div className="container">
           <ol className="breadcrumb">
             <li className="breadcrumb-item"><a href="/">Home</a></li>
