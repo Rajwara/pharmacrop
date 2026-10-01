@@ -169,7 +169,7 @@ export default function Page() {
           </div>
           <div class="cs_sticky_services_right">
             <div class="cs_sticky_card">
-              <img src="/assets/img/Home/Precision%20Cultivation/Home%20page-Precision%20Cultivation-1.webp" alt="Controlled Cultivation">
+              <img src="/assets/img/Home/Precision%20Cultivation/Controlled%20Cultivation.webp" alt="Controlled Cultivation">
               <span class="cs_sticky_card_icon"><i class="fa-solid fa-seedling"></i></span>
               <div class="cs_sticky_card_body">
                 <h3 class="cs_sticky_card_title">Controlled Cultivation</h3>
@@ -187,7 +187,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_sticky_card">
-              <img src="/assets/img/Home/Precision%20Cultivation/Home%20page-Precision%20Cultivation-3.webp" alt="Environmental Precision">
+              <img src="/assets/img/Home/Precision%20Cultivation/Environmental%20Precision.webp" alt="Environmental Precision">
               <span class="cs_sticky_card_icon"><i class="fa-solid fa-temperature-half"></i></span>
               <div class="cs_sticky_card_body">
                 <h3 class="cs_sticky_card_title">Environmental Precision</h3>
