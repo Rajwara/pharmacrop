@@ -120,6 +120,19 @@ export default function Page() {
         .cs_pd_overview_row { flex-direction: column; }
         .cs_pd_overview_img { width: 100%; }
       }
+      .cs_pd_nutrition_wrap { background: #eef8f1; border-radius: 20px; padding: 36px 24px 26px; margin-top: 34px; }
+      .cs_pd_nutrition_row { display: flex; align-items: stretch; justify-content: center; flex-wrap: wrap; }
+      .cs_pd_nutrition_item { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 28px; position: relative; }
+      .cs_pd_nutrition_item + .cs_pd_nutrition_item::before { content: ''; position: absolute; left: 0; top: 10%; bottom: 10%; width: 1px; background: rgba(2,66,66,0.15); }
+      .cs_pd_nutrition_icon { width: 64px; height: 64px; border-radius: 50%; background: rgba(120,220,166,0.2); color: #024242; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 14px; }
+      .cs_pd_nutrition_label { color: #024242; font-weight: 600; font-size: 15px; }
+      .cs_pd_nutrition_unit { color: #8a9a95; font-size: 12px; margin-bottom: 8px; }
+      .cs_pd_nutrition_value { color: #024242; font-weight: 800; font-size: 24px; }
+      .cs_pd_nutrition_caption { text-align: center; color: #5c6f69; letter-spacing: 2px; font-size: 11.5px; font-weight: 700; margin-top: 26px; text-transform: uppercase; }
+      @media (max-width: 767px) {
+        .cs_pd_nutrition_item { padding: 14px 20px; flex: 0 0 50%; }
+        .cs_pd_nutrition_item + .cs_pd_nutrition_item::before { display: none; }
+      }
       .cs_pd_details_grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
       .cs_pd_table { background: #fff; border: 1px solid rgba(2,66,66,0.1); border-radius: 12px; overflow: hidden; }
       .cs_pd_table_row { display: flex; align-items: center; gap: 14px; padding: 16px 20px; border-bottom: 1px solid rgba(2,66,66,0.08); }
@@ -352,6 +365,11 @@ export default function Page() {
               tgaCategory: acf.tga_category || '—',
               schedule: acf.schedule || '—',
               spectrum: acf.spectrum || '',
+              energyKj: acf.energy_kj || '',
+              sugars: acf.sugars || '',
+              carbs: acf.carbs || '',
+              sodium: acf.sodium || '',
+              fat: acf.fat || '',
               price: acf.price || '—',
               image: image,
               altImage: altImage,
@@ -445,6 +463,22 @@ export default function Page() {
               tableRow('fa-scale-balanced', 'Schedule', p.schedule)
             );
 
+            function nutritionItem(icon, label, unit, value) {
+              if (!value) return '';
+              return '<div class="cs_pd_nutrition_item"><span class="cs_pd_nutrition_icon"><i class="fa-solid ' + icon + '"></i></span><span class="cs_pd_nutrition_label">' + label + '</span><span class="cs_pd_nutrition_unit">(' + unit + ')</span><span class="cs_pd_nutrition_value">' + value + '</span></div>';
+            }
+            var nutritionItemsHtml = [
+              nutritionItem('fa-bolt', 'Energy', 'kJ', p.energyKj),
+              nutritionItem('fa-cubes', 'Sugars', 'g', p.sugars),
+              nutritionItem('fa-wheat-awn', 'Carbs', 'g', p.carbs),
+              nutritionItem('fa-bottle-droplet', 'Sodium', 'mg', p.sodium),
+              nutritionItem('fa-droplet', 'Fat', 'g', p.fat)
+            ].join('');
+            var nutritionHtml = (p.categorySlug === 'pastilles' && nutritionItemsHtml) ? (
+              '<div class="cs_pd_nutrition_wrap wow fadeInUp"><div class="cs_pd_nutrition_row">' + nutritionItemsHtml + '</div>' +
+              '<div class="cs_pd_nutrition_caption">Nutritional Facts (per pastille)</div></div>'
+            ) : '';
+
             return (
               '<div class="cs_pd_breadcrumb"><div class="container">' +
               '<a href="/all-products">Products</a> &gt; <a href="/all-products?category=' + p.categorySlug + '">' + p.category + '</a> &gt; <span class="current">' + p.name + '</span>' +
@@ -470,7 +504,7 @@ export default function Page() {
               '<div class="cs_pd_overview_row wow fadeInUp">' +
               '<div class="cs_pd_overview_text"><p>' + p.name + ' is a ' + p.category.toLowerCase() + ' product, cultivated and processed to meet PharmaCrop’s quality standards. This product is provided for healthcare professionals with detailed product information, including product specifications and supporting documentation.</p></div>' +
               '<div class="cs_pd_overview_img"><img src="' + p.overviewImage + '" alt="' + p.name + ' overview"></div>' +
-              '</div></div></section>' +
+              '</div>' + nutritionHtml + '</div></section>' +
               '<section style="padding: 60px 0; background: #f7faf8;"><div class="container">' +
               '<div class="cs_pd_section_head wow fadeInUp"><h2>Product Details</h2><p>Key product information and specifications for ' + p.name + '.</p></div>' +
               '<div class="cs_pd_details_grid">' +
