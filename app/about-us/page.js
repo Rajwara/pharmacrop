@@ -174,14 +174,14 @@ export default function Page() {
         </div>
         <div class="cs_about_gallery_grid">
           <div class="cs_about_gallery_hero">
-            <img src="/assets/img/About-Us/Our Facility/Our Facility-5.webp" alt="PharmaCrop facility exterior">
+            <img src="/assets/img/About-Us/Our Facility/Our Facility image -1.webp" alt="Aerial view of PharmaCrop's Noosa Hinterland facility">
             <span class="cs_about_gallery_chip">Facility Overview<br>Noosa Hinterland</span>
           </div>
           <div class="cs_about_gallery_sub_grid">
-            <div class="cs_about_gallery_item"><img src="/assets/img/About-Us/Our Facility/Our Facility-9.webp" alt="Vegetative growth greenhouse"></div>
-            <div class="cs_about_gallery_item"><img src="/assets/img/About-Us/Our Facility/Our Facility-2.webp" alt="Crop inspection in greenhouse"></div>
-            <div class="cs_about_gallery_item"><img src="/assets/img/About-Us/Our Facility/Our Facility-1.webp" alt="GMP-certified packaging line"></div>
-            <div class="cs_about_gallery_item"><img src="/assets/img/About-Us/Our Facility/Our Facility-7.webp" alt="Staff manually processing flower"></div>
+            <div class="cs_about_gallery_item"><img src="/assets/img/About-Us/Our Facility/Our Facility image-2.webp" alt="Rows of cannabis plants under greenhouse grow lights"></div>
+            <div class="cs_about_gallery_item"><img src="/assets/img/About-Us/Our Facility/Our Facility image-3.webp" alt="PharmaCrop staff member among the crop"></div>
+            <div class="cs_about_gallery_item"><img src="/assets/img/About-Us/Our Facility/our facility-4.webp" alt="Product labeling on the packaging line"></div>
+            <div class="cs_about_gallery_item"><img src="/assets/img/About-Us/Our Facility/Our Facility image-5.webp" alt="Staff processing harvested flower in the greenhouse"></div>
           </div>
         </div>
         <div class="cs_about_gallery_cta">
