@@ -132,7 +132,7 @@ export default function Page() {
     </section>
     <!-- End Cultivation Program Split Section -->
     <!-- Start Page Heading Sectoin -->
-    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/General Images/Site Content/about_heading_bg.jpg">
+    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/General%20Images/Site%20Content/about_heading_bg.jpg">
       <div class="container">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/">Home</a></li>

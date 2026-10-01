@@ -316,7 +316,7 @@ export default function Page() {
                 </div>
                 <div class="cs_slide">
                   <div class="cs_card cs_style_4">
-                    <div class="cs_card_thumb cs_bg_filed cs_mb_40" data-src="/assets/img/General Images/Site Content/health-professionals-card.webp"></div>
+                    <div class="cs_card_thumb cs_bg_filed cs_mb_40" data-src="/assets/img/General%20Images/Site%20Content/health-professionals-card.webp"></div>
                     <div class="cs_card_info">
                       <ul class="cs_card_info_list cs_mp_0">
                         <li>

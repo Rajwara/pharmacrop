@@ -51,7 +51,7 @@ export default function Page() {
         .cs_contact_page_heading.cs_page_heading.cs_style_1 { min-height: 260px; }
       }
     </style>
-    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg cs_contact_page_heading" data-src="/assets/img/General Images/Site Content/pharmacrop-banner1.webp">
+    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg cs_contact_page_heading" data-src="/assets/img/General%20Images/Site%20Content/pharmacrop-banner1.webp">
       <div class="container">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/">Home</a></li>

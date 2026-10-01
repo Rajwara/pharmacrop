@@ -102,19 +102,19 @@ export default function Page() {
           <div class="cs_slider_container" data-autoplay="7000" data-loop="1" data-speed="800" data-center="0" data-variable-width="0" data-slides-per-view="1">
             <div class="cs_slider_wrapper">
               <div class="cs_slide">
-                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/Home/Banner/Hero image-1.webp"></div>
+                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/Home/Banner/Hero%20image-1.webp"></div>
               </div>
               <div class="cs_slide">
-                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/Home/Banner/Hero image-2.webp"></div>
+                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/Home/Banner/Hero%20image-2.webp"></div>
               </div>
               <div class="cs_slide">
-                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/Home/Banner/Hero image-3.webp"></div>
+                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/Home/Banner/Hero%20image-3.webp"></div>
               </div>
               <div class="cs_slide">
-                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/Home/Banner/Hero image-4.webp"></div>
+                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/Home/Banner/Hero%20image-4.webp"></div>
               </div>
               <div class="cs_slide">
-                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/Home/Banner/Hero image-5.webp"></div>
+                <div class="cs_hero_bg_in cs_bg_filed" data-src="/assets/img/Home/Banner/Hero%20image-5.webp"></div>
               </div>
             </div>
           </div>
