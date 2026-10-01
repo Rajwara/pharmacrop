@@ -12,7 +12,7 @@ export default function Page() {
         __html: `
     <!-- Start Preloader -->
     <div class="cs_preloader" style="background-color:#000;">
-      <img src="/assets/img/pharma_Crop_logo_loader.gif" alt="Loading" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(70vw,480px);height:auto;">
+      <img src="/assets/img/General Images/Branding/pharma_Crop_logo_loader.gif" alt="Loading" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(70vw,480px);height:auto;">
     </div>
     <!-- End Preloader -->
     <!-- Start Header Section -->
@@ -22,7 +22,7 @@ export default function Page() {
           <div class="cs_main_header_in">
             <div class="cs_main_header_left">
               <a class="cs_site_branding" href="/">
-                <img src="/assets/img/pharmacrop-logo-header-animation.gif" alt="Logo" class="cs_logo_img cs_logo_gif">
+                <img src="/assets/img/General Images/Branding/pharmacrop-logo-header-animation.gif" alt="Logo" class="cs_logo_img cs_logo_gif">
               </a>
             </div>
             <div class="cs_main_header_center">
@@ -71,7 +71,7 @@ export default function Page() {
     </style>
     <section class="cs_rotate_hero">
       <div class="cs_rotate_hero_bg">
-        <img src="/assets/img/pharmacrop-banner1.webp" alt="">
+        <img src="/assets/img/General Images/Site Content/pharmacrop-banner1.webp" alt="">
       </div>
       <div class="container">
         <div class="cs_rotate_hero_content">
@@ -116,7 +116,7 @@ export default function Page() {
         </div>
         <div class="cs_offer_grid">
           <div class="cs_offer_img wow fadeInLeft">
-            <img src="/assets/img/genetics-to-gmp-manufacturing.webp" alt="Genetics to GMP manufacturing">
+            <img src="/assets/img/General Images/Site Content/genetics-to-gmp-manufacturing.webp" alt="Genetics to GMP manufacturing">
           </div>
           <div class="cs_offer_card">
             <div>
@@ -138,7 +138,7 @@ export default function Page() {
             <a href="/industry" class="cs_offer_card_link">Learn More &rarr;</a>
           </div>
           <div class="cs_offer_img wow fadeInRight">
-            <img src="/assets/img/pharmacrop-banner4.webp" alt="PharmaCrop GMP-certified manufacturing">
+            <img src="/assets/img/General Images/Site Content/pharmacrop-banner4.webp" alt="PharmaCrop GMP-certified manufacturing">
           </div>
           <div class="cs_offer_card">
             <div>
@@ -316,7 +316,7 @@ export default function Page() {
                 </div>
                 <div class="cs_slide">
                   <div class="cs_card cs_style_4">
-                    <div class="cs_card_thumb cs_bg_filed cs_mb_40" data-src="/assets/img/health-professionals-card.webp"></div>
+                    <div class="cs_card_thumb cs_bg_filed cs_mb_40" data-src="/assets/img/General Images/Site Content/health-professionals-card.webp"></div>
                     <div class="cs_card_info">
                       <ul class="cs_card_info_list cs_mp_0">
                         <li>
@@ -347,7 +347,7 @@ export default function Page() {
     <!-- End Works Section -->
     <!-- Start CTA Section -->
     <style>
-      .cs_cta_split { position: relative; padding: 100px 0; background-image: url('/assets/img/pharmacrop-banner1.webp'); background-size: cover; background-position: center; }
+      .cs_cta_split { position: relative; padding: 100px 0; background-image: url('/assets/img/General Images/Site Content/pharmacrop-banner1.webp'); background-size: cover; background-position: center; }
       .cs_cta_split::before { content: ""; position: absolute; inset: 0; background: rgba(2, 20, 20, 0.55); }
       .cs_cta_split .container { position: relative; z-index: 1; }
       .cs_cta_split_grid { display: grid; grid-template-columns: 1fr 1.6fr 1fr; gap: 24px; align-items: stretch; }
@@ -413,7 +413,7 @@ export default function Page() {
     <section class="cs_contact_card_section">
       <div class="container">
         <div class="cs_contact_card">
-          <div class="cs_contact_card_bg"><img src="/assets/img/pharmacrop%20home%20assets/CTA%20BANNER/PARTNER%20WITH%20PHARMACROP.webp" alt=""></div>
+          <div class="cs_contact_card_bg"><img src="/assets/img/General%20Images/CTA%20Banner/PARTNER%20WITH%20PHARMACROP.webp" alt=""></div>
           <div class="cs_contact_card_top">
             <p class="cs_contact_info_label">Speak With Our Team:</p>
             <a href="mailto:enquiries@pharmacrop.com.au" class="cs_contact_pill"><span class="cs_contact_pill_icon"><i class="fa-solid fa-envelope"></i></span>enquiries@pharmacrop.com.au</a>
@@ -488,7 +488,7 @@ export default function Page() {
       <div class="container">
         <div class="cs_footer_v2_row">
           <div>
-            <img src="/assets/img/pharmacrop-logo-footer-animation.gif" alt="Logo" class="wow zoomIn cs_logo_img cs_logo_gif">
+            <img src="/assets/img/General Images/Branding/pharmacrop-logo-footer-animation.gif" alt="Logo" class="wow zoomIn cs_logo_img cs_logo_gif">
             <p class="cs_footer_v2_brand_tagline">Australian-grown.<br>Pharmaceutical by design.</p>
             <p class="cs_footer_v2_desc">Stay updated with our latest news, insights and product developments.</p>
             <form action="#" class="cs_footer_v2_newsletter">
@@ -542,15 +542,15 @@ export default function Page() {
           <p class="cs_footer_v2_copyright">&copy; 2026 PharmaCrop. All rights reserved.</p>
           <div class="cs_footer_v2_badges">
             <div class="cs_footer_v2_badge">
-              <img src="/assets/img/AUSTRALIAN-MADE.png" alt="Australian Made" class="cs_footer_v2_badge_img">
+              <img src="/assets/img/General Images/Certifications/AUSTRALIAN-MADE.png" alt="Australian Made" class="cs_footer_v2_badge_img">
               <span class="cs_footer_v2_badge_label">Australian Made</span>
             </div>
             <div class="cs_footer_v2_badge">
-              <img src="/assets/img/GMP-CERTIFIED.png" alt="GMP Certified" class="cs_footer_v2_badge_img">
+              <img src="/assets/img/General Images/Certifications/GMP-CERTIFIED.png" alt="GMP Certified" class="cs_footer_v2_badge_img">
               <span class="cs_footer_v2_badge_label">GMP Certified</span>
             </div>
             <div class="cs_footer_v2_badge">
-              <img src="/assets/img/TGA-LICENSED.png" alt="TGA Licensed" class="cs_footer_v2_badge_img">
+              <img src="/assets/img/General Images/Certifications/TGA-LICENSED.png" alt="TGA Licensed" class="cs_footer_v2_badge_img">
               <span class="cs_footer_v2_badge_label">TGA Licensed</span>
             </div>
           </div>

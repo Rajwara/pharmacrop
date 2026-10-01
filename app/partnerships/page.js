@@ -9,7 +9,7 @@ export default function Page() {
         __html: `
     <!-- Start Preloader -->
     <div class="cs_preloader" style="background-color:#000;">
-      <img src="/assets/img/pharma_Crop_logo_loader.gif" alt="Loading" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(70vw,480px);height:auto;">
+      <img src="/assets/img/General Images/Branding/pharma_Crop_logo_loader.gif" alt="Loading" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(70vw,480px);height:auto;">
     </div>
     <!-- End Preloader -->
     <!-- Start Header Section -->
@@ -19,7 +19,7 @@ export default function Page() {
           <div class="cs_main_header_in">
             <div class="cs_main_header_left">
               <a class="cs_site_branding" href="/">
-                <img src="/assets/img/pharmacrop-logo-header-animation.gif" alt="Logo" class="cs_logo_img cs_logo_gif">
+                <img src="/assets/img/General Images/Branding/pharmacrop-logo-header-animation.gif" alt="Logo" class="cs_logo_img cs_logo_gif">
               </a>
             </div>
             <div class="cs_main_header_center">
@@ -64,7 +64,7 @@ export default function Page() {
       }
     </style>
     <section class="cs_pships_hero cs_heading_bg cs_white_color">
-      <div class="cs_pships_hero_bg"><img src="/assets/img/pharmacrop-banner1.webp" alt="PharmaCrop cultivation facility"></div>
+      <div class="cs_pships_hero_bg"><img src="/assets/img/General Images/Site Content/pharmacrop-banner1.webp" alt="PharmaCrop cultivation facility"></div>
       <div class="container cs_pships_hero_content">
         <span class="cs_pships_hero_pill wow fadeInUp">Partnerships &mdash; Flexible Pathways</span>
         <h1 class="cs_fs_80 cs_bold wow fadeInUp" data-wow-delay="0.1s">ONE PARTNER.<br><span>MULTIPLE COMMERCIAL PATHWAYS.</span></h1>
@@ -111,7 +111,7 @@ export default function Page() {
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
         <div class="cs_card_1_group">
-          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed active wow fadeInLeft" data-src="/assets/img/pharmacrop%20home%20assets/COMMERCIAL%20PARTNERSHIPS/Retail.webp">
+          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed active wow fadeInLeft" data-src="/assets/img/General%20Images/Commercial%20Partnerships/Retail.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
@@ -129,7 +129,7 @@ export default function Page() {
               </svg>
             </a>
           </div>
-          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/pharmacrop%20home%20assets/COMMERCIAL%20PARTNERSHIPS/Green%20Label.webp">
+          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/General%20Images/Commercial%20Partnerships/Green%20Label.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
@@ -147,7 +147,7 @@ export default function Page() {
               </svg>
             </a>
           </div>
-          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/pharmacrop%20home%20assets/COMMERCIAL%20PARTNERSHIPS/White%20Label.webp">
+          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/General%20Images/Commercial%20Partnerships/White%20Label.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
@@ -165,7 +165,7 @@ export default function Page() {
               </svg>
             </a>
           </div>
-          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed wow fadeInRight" data-src="/assets/img/pharmacrop%20home%20assets/COMMERCIAL%20PARTNERSHIPS/Bulk%20Flower.webp">
+          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed wow fadeInRight" data-src="/assets/img/General%20Images/Commercial%20Partnerships/Bulk%20Flower.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
@@ -218,7 +218,7 @@ export default function Page() {
       <div class="container">
         <div class="cs_pmodel_row">
           <div class="cs_pmodel_img wow fadeInLeft">
-            <img src="/assets/img/pharmacrop-banner4.webp" alt="PharmaCrop established medicines">
+            <img src="/assets/img/General Images/Site Content/pharmacrop-banner4.webp" alt="PharmaCrop established medicines">
           </div>
           <div class="cs_pmodel_content wow fadeInRight">
             <span class="cs_pmodel_label">01 / RETAIL</span>
@@ -240,7 +240,7 @@ export default function Page() {
       <div class="container">
         <div class="cs_pmodel_row cs_pmodel_row_rev">
           <div class="cs_pmodel_img wow fadeInRight">
-            <img src="/assets/img/pharmacrop-banner2.webp" alt="Green Label branded partnership">
+            <img src="/assets/img/General Images/Site Content/pharmacrop-banner2.webp" alt="Green Label branded partnership">
           </div>
           <div class="cs_pmodel_content wow fadeInLeft">
             <span class="cs_pmodel_label">02 / GREEN LABEL</span>
@@ -262,7 +262,7 @@ export default function Page() {
       <div class="container">
         <div class="cs_pmodel_row">
           <div class="cs_pmodel_img wow fadeInLeft">
-            <img src="/assets/img/health-professionals-card.webp" alt="White Label branded partnership">
+            <img src="/assets/img/General Images/Site Content/health-professionals-card.webp" alt="White Label branded partnership">
           </div>
           <div class="cs_pmodel_content wow fadeInRight">
             <span class="cs_pmodel_label">03 / WHITE LABEL</span>
@@ -284,7 +284,7 @@ export default function Page() {
       <div class="container">
         <div class="cs_pmodel_row cs_pmodel_row_rev">
           <div class="cs_pmodel_img wow fadeInRight">
-            <img src="/assets/img/pharma-banner.jpeg" alt="Australian-grown bulk flower cultivation">
+            <img src="/assets/img/General Images/Site Content/pharma-banner.jpeg" alt="Australian-grown bulk flower cultivation">
           </div>
           <div class="cs_pmodel_content wow fadeInLeft">
             <span class="cs_pmodel_label">04 / BULK FLOWER</span>
@@ -332,7 +332,7 @@ export default function Page() {
     <section class="cs_contact_card_section">
       <div class="container">
         <div class="cs_contact_card">
-          <div class="cs_contact_card_bg"><img src="/assets/img/pharmacrop%20home%20assets/CTA%20BANNER/PARTNER%20WITH%20PHARMACROP.webp" alt=""></div>
+          <div class="cs_contact_card_bg"><img src="/assets/img/General%20Images/CTA%20Banner/PARTNER%20WITH%20PHARMACROP.webp" alt=""></div>
           <div class="cs_contact_card_top">
             <p class="cs_contact_info_label">Speak With Our Team:</p>
             <a href="mailto:enquiries@pharmacrop.com.au" class="cs_contact_pill"><span class="cs_contact_pill_icon"><i class="fa-solid fa-envelope"></i></span>enquiries@pharmacrop.com.au</a>
@@ -407,7 +407,7 @@ export default function Page() {
       <div class="container">
         <div class="cs_footer_v2_row">
           <div>
-            <img src="/assets/img/pharmacrop-logo-footer-animation.gif" alt="Logo" class="wow zoomIn cs_logo_img cs_logo_gif">
+            <img src="/assets/img/General Images/Branding/pharmacrop-logo-footer-animation.gif" alt="Logo" class="wow zoomIn cs_logo_img cs_logo_gif">
             <p class="cs_footer_v2_brand_tagline">Australian-grown.<br>Pharmaceutical by design.</p>
             <p class="cs_footer_v2_desc">Stay updated with our latest news, insights and product developments.</p>
             <form action="#" class="cs_footer_v2_newsletter">
@@ -461,15 +461,15 @@ export default function Page() {
           <p class="cs_footer_v2_copyright">&copy; 2026 PharmaCrop. All rights reserved.</p>
           <div class="cs_footer_v2_badges">
             <div class="cs_footer_v2_badge">
-              <img src="/assets/img/AUSTRALIAN-MADE.png" alt="Australian Made" class="cs_footer_v2_badge_img">
+              <img src="/assets/img/General Images/Certifications/AUSTRALIAN-MADE.png" alt="Australian Made" class="cs_footer_v2_badge_img">
               <span class="cs_footer_v2_badge_label">Australian Made</span>
             </div>
             <div class="cs_footer_v2_badge">
-              <img src="/assets/img/GMP-CERTIFIED.png" alt="GMP Certified" class="cs_footer_v2_badge_img">
+              <img src="/assets/img/General Images/Certifications/GMP-CERTIFIED.png" alt="GMP Certified" class="cs_footer_v2_badge_img">
               <span class="cs_footer_v2_badge_label">GMP Certified</span>
             </div>
             <div class="cs_footer_v2_badge">
-              <img src="/assets/img/TGA-LICENSED.png" alt="TGA Licensed" class="cs_footer_v2_badge_img">
+              <img src="/assets/img/General Images/Certifications/TGA-LICENSED.png" alt="TGA Licensed" class="cs_footer_v2_badge_img">
               <span class="cs_footer_v2_badge_label">TGA Licensed</span>
             </div>
           </div>

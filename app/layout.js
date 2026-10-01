@@ -5,7 +5,7 @@ export const metadata = {
   title: "PharmaCrop - Australian-Grown. Complete Control.",
   description: "Natural cultivation with pharmaceutical precision. Australian-grown, GMP-certified, TGA-licensed medicinal cannabis products.",
   icons: {
-    icon: "/assets/img/favicon.png",
+    icon: "/assets/img/General Images/Branding/favicon.png",
   },
 };
 

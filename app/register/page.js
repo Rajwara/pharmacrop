@@ -14,7 +14,7 @@ export default function Page() {
         __html: `
     <!-- Start Preloader -->
     <div class="cs_preloader" style="background-color:#000;">
-      <img src="/assets/img/pharma_Crop_logo_loader.gif" alt="Loading" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(70vw,480px);height:auto;">
+      <img src="/assets/img/General Images/Branding/pharma_Crop_logo_loader.gif" alt="Loading" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(70vw,480px);height:auto;">
     </div>
     <!-- End Preloader -->
     <!-- Start Header Section -->
@@ -24,7 +24,7 @@ export default function Page() {
           <div class="cs_main_header_in">
             <div class="cs_main_header_left">
               <a class="cs_site_branding" href="/">
-                <img src="/assets/img/pharmacrop-logo-header-animation.gif" alt="Logo" class="cs_logo_img cs_logo_gif">
+                <img src="/assets/img/General Images/Branding/pharmacrop-logo-header-animation.gif" alt="Logo" class="cs_logo_img cs_logo_gif">
               </a>
             </div>
             <div class="cs_main_header_center">
@@ -53,7 +53,7 @@ export default function Page() {
     <style>
       .cs_auth_header_scrim { position: absolute; top: 0; left: 0; right: 0; height: 140px; background: linear-gradient(180deg, rgba(2,20,20,0.6) 0%, rgba(2,20,20,0.25) 65%, rgba(2,20,20,0) 100%); z-index: 50; pointer-events: none; }
       .cs_auth_page { display: flex; min-height: 100vh; }
-      .cs_auth_left { flex: 0 0 46%; position: relative; display: flex; flex-direction: column; justify-content: space-between; padding: 170px 56px 64px; background: #011f1f url('/assets/img/register-side-img.png') center center / cover no-repeat; overflow: hidden; }
+      .cs_auth_left { flex: 0 0 46%; position: relative; display: flex; flex-direction: column; justify-content: space-between; padding: 170px 56px 64px; background: #011f1f url('/assets/img/Register/register-side-img.png') center center / cover no-repeat; overflow: hidden; }
       .cs_auth_left::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(2,34,34,0.55) 0%, rgba(2,20,20,0.15) 30%, rgba(2,20,20,0.35) 70%, rgba(2,20,20,0.75) 100%); pointer-events: none; }
       .cs_auth_left_content, .cs_auth_left_bottom { position: relative; z-index: 2; }
       .cs_auth_eyebrow { display: block; color: #78dca6; font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; }
@@ -149,9 +149,9 @@ export default function Page() {
         </div>
         <div class="cs_auth_left_bottom">
           <div class="cs_auth_accred_bar">
-            <span class="cs_auth_accred_item"><img src="/assets/img/AUSTRALIAN-MADE.png" alt="Australian Made"></span>
-            <span class="cs_auth_accred_item"><img src="/assets/img/GMP-CERTIFIED.png" alt="GMP Certified"></span>
-            <span class="cs_auth_accred_item"><img src="/assets/img/TGA-LICENSED.png" alt="TGA Licensed"></span>
+            <span class="cs_auth_accred_item"><img src="/assets/img/General Images/Certifications/AUSTRALIAN-MADE.png" alt="Australian Made"></span>
+            <span class="cs_auth_accred_item"><img src="/assets/img/General Images/Certifications/GMP-CERTIFIED.png" alt="GMP Certified"></span>
+            <span class="cs_auth_accred_item"><img src="/assets/img/General Images/Certifications/TGA-LICENSED.png" alt="TGA Licensed"></span>
           </div>
           <div class="cs_auth_left_bottom_row">
             <p>Australian-Grown &middot; GMP Certified &middot; TGA Licensed</p>
