@@ -121,8 +121,8 @@ export default function Page() {
         .cs_pd_overview_img { width: 100%; }
       }
       .cs_pd_nutrition_wrap { background: #eef8f1; border-radius: 20px; padding: 36px 24px 26px; margin-top: 34px; }
-      .cs_pd_nutrition_row { display: flex; align-items: stretch; justify-content: center; flex-wrap: wrap; }
-      .cs_pd_nutrition_item { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 28px; position: relative; }
+      .cs_pd_nutrition_row { display: flex; align-items: stretch; justify-content: space-between; flex-wrap: wrap; }
+      .cs_pd_nutrition_item { display: flex; flex: 1 1 0; flex-direction: column; align-items: center; text-align: center; padding: 0 16px; position: relative; min-width: 100px; }
       .cs_pd_nutrition_item + .cs_pd_nutrition_item::before { content: ''; position: absolute; left: 0; top: 10%; bottom: 10%; width: 1px; background: rgba(2,66,66,0.15); }
       .cs_pd_nutrition_icon { width: 64px; height: 64px; border-radius: 50%; background: rgba(120,220,166,0.2); color: #024242; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 14px; }
       .cs_pd_nutrition_label { color: #024242; font-weight: 600; font-size: 15px; }
