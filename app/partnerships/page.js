@@ -64,7 +64,7 @@ export default function Page() {
       }
     </style>
     <section class="cs_pships_hero cs_heading_bg cs_white_color">
-      <div class="cs_pships_hero_bg"><img src="/assets/img/General Images/Site Content/pharmacrop-banner1.webp" alt="PharmaCrop cultivation facility"></div>
+      <div class="cs_pships_hero_bg"><img src="/assets/img/Partnerships/Partnerships-Hero Image.webp" alt="PharmaCrop cultivation facility"></div>
       <div class="container cs_pships_hero_content">
         <span class="cs_pships_hero_pill wow fadeInUp">Partnerships &mdash; Flexible Pathways</span>
         <h1 class="cs_fs_80 cs_bold wow fadeInUp" data-wow-delay="0.1s">ONE PARTNER.<br><span>MULTIPLE COMMERCIAL PATHWAYS.</span></h1>
@@ -111,7 +111,7 @@ export default function Page() {
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
         <div class="cs_card_1_group">
-          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed active wow fadeInLeft" data-src="/assets/img/General%20Images/Commercial%20Partnerships/Retail.webp">
+          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed active wow fadeInLeft" data-src="/assets/img/Partnerships/RETAIL.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
@@ -129,7 +129,7 @@ export default function Page() {
               </svg>
             </a>
           </div>
-          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/General%20Images/Commercial%20Partnerships/Green%20Label.webp">
+          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/Partnerships/GREEN%20LABEL.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
@@ -147,7 +147,7 @@ export default function Page() {
               </svg>
             </a>
           </div>
-          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/General%20Images/Commercial%20Partnerships/White%20Label.webp">
+          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/Partnerships/White-label.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
@@ -165,7 +165,7 @@ export default function Page() {
               </svg>
             </a>
           </div>
-          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed wow fadeInRight" data-src="/assets/img/General%20Images/Commercial%20Partnerships/Bulk%20Flower.webp">
+          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed wow fadeInRight" data-src="/assets/img/Partnerships/Bulk%20Flower.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <a href="/" class="cs_card_tag">Home</a>
@@ -218,7 +218,7 @@ export default function Page() {
       <div class="container">
         <div class="cs_pmodel_row">
           <div class="cs_pmodel_img wow fadeInLeft">
-            <img src="/assets/img/General Images/Site Content/pharmacrop-banner4.webp" alt="PharmaCrop established medicines">
+            <img src="/assets/img/Partnerships/RETAIL-ESTABLISHED PHARMACROP MEDICINES .webp" alt="PharmaCrop established medicines">
           </div>
           <div class="cs_pmodel_content wow fadeInRight">
             <span class="cs_pmodel_label">01 / RETAIL</span>
@@ -240,7 +240,7 @@ export default function Page() {
       <div class="container">
         <div class="cs_pmodel_row cs_pmodel_row_rev">
           <div class="cs_pmodel_img wow fadeInRight">
-            <img src="/assets/img/General Images/Site Content/pharmacrop-banner2.webp" alt="Green Label branded partnership">
+            <img src="/assets/img/Partnerships/GREEN LABEL-ESTABLISHED MEDICINES. YOUR EXCLUSIVE BRAND.webp" alt="Green Label branded partnership">
           </div>
           <div class="cs_pmodel_content wow fadeInLeft">
             <span class="cs_pmodel_label">02 / GREEN LABEL</span>
@@ -262,7 +262,7 @@ export default function Page() {
       <div class="container">
         <div class="cs_pmodel_row">
           <div class="cs_pmodel_img wow fadeInLeft">
-            <img src="/assets/img/General Images/Site Content/health-professionals-card.webp" alt="White Label branded partnership">
+            <img src="/assets/img/Partnerships/WHITE LABEL-YOUR BRAND. OUR CULTIVATION & PACKAGING..webp" alt="White Label branded partnership">
           </div>
           <div class="cs_pmodel_content wow fadeInRight">
             <span class="cs_pmodel_label">03 / WHITE LABEL</span>
@@ -284,7 +284,7 @@ export default function Page() {
       <div class="container">
         <div class="cs_pmodel_row cs_pmodel_row_rev">
           <div class="cs_pmodel_img wow fadeInRight">
-            <img src="/assets/img/General Images/Site Content/pharma-banner.jpeg" alt="Australian-grown bulk flower cultivation">
+            <img src="/assets/img/Partnerships/BULK FLOWER-AUSTRALIAN-GROWN. SUPPLIED IN BULK.webp" alt="Australian-grown bulk flower cultivation">
           </div>
           <div class="cs_pmodel_content wow fadeInLeft">
             <span class="cs_pmodel_label">04 / BULK FLOWER</span>
