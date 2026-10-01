@@ -75,10 +75,10 @@ export default function Page() {
         <div class="cs_height_56 cs_height_lg_35"></div>
         <div class="row cs_gap_y_30">
           <div class="col-lg-4 wow fadeInLeft">
-            <a href="https://www.youtube.com/embed/rRid6GCJtgc" class="cs_video_block cs_style_1 cs_bg_filed cs_video_open cs_center cs_radius_20" data-src="/assets/img/About-Us/THE%20PHARMACROP%20STORY1-v2.webp"></a>
+            <a href="https://www.youtube.com/embed/rRid6GCJtgc" class="cs_video_block cs_style_1 cs_bg_filed cs_video_open cs_center cs_radius_20" data-src="/assets/img/About-Us/THE%20PHARMACROP%20STORY/THE%20PHARMACROP%20STORY1-v2.webp"></a>
           </div>
           <div class="col-lg-8 wow fadeInRight">
-            <div class="cs_cta cs_style_2 cs_bg_filed cs_radius_20" data-src="/assets/img/About-Us/THE%20PHARMACROP%20STORY2-v2.webp">
+            <div class="cs_cta cs_style_2 cs_bg_filed cs_radius_20" data-src="/assets/img/About-Us/THE%20PHARMACROP%20STORY/THE%20PHARMACROP%20STORY2-v2.webp">
               <a href="/contact" class="cs_btn cs_style_2 cs_bold cs_white_color">Contact us</a>
             </div>
           </div>
@@ -174,14 +174,14 @@ export default function Page() {
         </div>
         <div class="cs_about_gallery_grid">
           <div class="cs_about_gallery_hero">
-            <img src="/assets/img/General Images/Our Facility/Our Facility-5.webp" alt="PharmaCrop facility exterior">
+            <img src="/assets/img/About-Us/Our Facility/Our Facility-5.webp" alt="PharmaCrop facility exterior">
             <span class="cs_about_gallery_chip">Facility Overview<br>Noosa Hinterland</span>
           </div>
           <div class="cs_about_gallery_sub_grid">
-            <div class="cs_about_gallery_item"><img src="/assets/img/General Images/Our Facility/Our Facility-9.webp" alt="Vegetative growth greenhouse"></div>
-            <div class="cs_about_gallery_item"><img src="/assets/img/General Images/Our Facility/Our Facility-2.webp" alt="Crop inspection in greenhouse"></div>
-            <div class="cs_about_gallery_item"><img src="/assets/img/General Images/Our Facility/Our Facility-1.webp" alt="GMP-certified packaging line"></div>
-            <div class="cs_about_gallery_item"><img src="/assets/img/General Images/Our Facility/Our Facility-7.webp" alt="Staff manually processing flower"></div>
+            <div class="cs_about_gallery_item"><img src="/assets/img/About-Us/Our Facility/Our Facility-9.webp" alt="Vegetative growth greenhouse"></div>
+            <div class="cs_about_gallery_item"><img src="/assets/img/About-Us/Our Facility/Our Facility-2.webp" alt="Crop inspection in greenhouse"></div>
+            <div class="cs_about_gallery_item"><img src="/assets/img/About-Us/Our Facility/Our Facility-1.webp" alt="GMP-certified packaging line"></div>
+            <div class="cs_about_gallery_item"><img src="/assets/img/About-Us/Our Facility/Our Facility-7.webp" alt="Staff manually processing flower"></div>
           </div>
         </div>
         <div class="cs_about_gallery_cta">
@@ -226,7 +226,7 @@ export default function Page() {
         </div>
         <div class="cs_team_grid">
           <div class="cs_team_card wow fadeInUp">
-            <div class="cs_team_photo"><img src="/assets/img/Team%20Image-Dr%20Adel%20Zarei.webp" alt="Dr Adel Zarei"></div>
+            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Dr%20Adel%20Zarei.webp" alt="Dr Adel Zarei"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">Dr Adel Zarei</h3>
               <p class="cs_team_title">Chief Operating Officer</p>
@@ -236,7 +236,7 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp" data-wow-delay="0.1s">
-            <div class="cs_team_photo"><img src="/assets/img/Team%20Image-Paul%20Barker.webp" alt="Paul Barker"></div>
+            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Paul%20Barker.webp" alt="Paul Barker"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">Paul Barker</h3>
               <p class="cs_team_title">Chief Financial Officer</p>
@@ -246,7 +246,7 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp" data-wow-delay="0.2s">
-            <div class="cs_team_photo"><img src="/assets/img/Team%20Image-George%20Polimenakos.webp" alt="George Polimenakos"></div>
+            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-George%20Polimenakos.webp" alt="George Polimenakos"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">George Polimenakos</h3>
               <p class="cs_team_title">General Manager Commercial</p>
@@ -256,7 +256,7 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp">
-            <div class="cs_team_photo"><img src="/assets/img/Team%20Image-Chad%20Esch.webp" alt="Chad Esch"></div>
+            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Chad%20Esch.webp" alt="Chad Esch"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">Chad Esch</h3>
               <p class="cs_team_title">Master Grower</p>
@@ -266,7 +266,7 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp" data-wow-delay="0.1s">
-            <div class="cs_team_photo"><img src="/assets/img/Team%20Image-Audrey%20Kuang.webp" alt="Audrey Kuang"></div>
+            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Audrey%20Kuang.webp" alt="Audrey Kuang"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">Audrey Kuang</h3>
               <p class="cs_team_title">Head of Quality</p>
@@ -276,7 +276,7 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp" data-wow-delay="0.2s">
-            <div class="cs_team_photo"><img src="/assets/img/Team%20Image-Carolyn%20Fennell.webp" alt="Carolyn Fennell"></div>
+            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Carolyn%20Fennell.webp" alt="Carolyn Fennell"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">Carolyn Fennell</h3>
               <p class="cs_team_title">GMP Production Manager</p>
@@ -286,7 +286,7 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp">
-            <div class="cs_team_photo"><img src="/assets/img/Team%20Image-Johanna%20Faccini.webp" alt="Johanna Faccini"></div>
+            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Johanna%20Faccini.webp" alt="Johanna Faccini"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">Johanna Faccini</h3>
               <p class="cs_team_title">Marketing Director</p>
@@ -296,7 +296,7 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp" data-wow-delay="0.1s">
-            <div class="cs_team_photo"><img src="/assets/img/Team%20Image-Suzanne%20Roberts.webp" alt="Suzanne Roberts"></div>
+            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Suzanne%20Roberts.webp" alt="Suzanne Roberts"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">Suzanne Roberts</h3>
               <p class="cs_team_title">Sales Director</p>
@@ -306,7 +306,7 @@ export default function Page() {
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp" data-wow-delay="0.2s">
-            <div class="cs_team_photo"><img src="/assets/img/Team%20Image-Margs.webp" alt="Margaret Meldrum"></div>
+            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Margs.webp" alt="Margaret Meldrum"></div>
             <div class="cs_team_body">
               <h3 class="cs_team_name">Margaret Meldrum</h3>
               <p class="cs_team_title">Commercial Operations &amp; Supply Chain Manager</p>
