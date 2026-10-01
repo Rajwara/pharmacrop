@@ -403,7 +403,7 @@ export default function Page() {
           </div>
           <div class="cs_platform_items">
             <div class="cs_platform_item active" data-index="0">
-              <div class="cs_platform_item_img"><img src="/assets/img/Home/Genetics.webp" alt="Genetics"></div>
+              <div class="cs_platform_item_img"><img src="/assets/img/Home/Integrated Platform/Genetics.webp" alt="Genetics"></div>
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-dna"></i></span>
                 <h3>Genetics</h3>
@@ -411,7 +411,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_platform_item" data-index="1">
-              <div class="cs_platform_item_img"><img src="/assets/img/Home/Cultivation.webp" alt="Cultivation"></div>
+              <div class="cs_platform_item_img"><img src="/assets/img/Home/Integrated Platform/Cultivation.webp" alt="Cultivation"></div>
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-seedling"></i></span>
                 <h3>Cultivation</h3>
@@ -419,7 +419,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_platform_item" data-index="2">
-              <div class="cs_platform_item_img"><img src="/assets/img/Home/GMP%20Manufacturing.webp" alt="GMP Manufacturing"></div>
+              <div class="cs_platform_item_img"><img src="/assets/img/Home/Integrated%20Platform/GMP%20Manufacturing.webp" alt="GMP Manufacturing"></div>
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-industry"></i></span>
                 <h3>GMP Manufacturing</h3>
@@ -427,7 +427,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_platform_item" data-index="3">
-              <div class="cs_platform_item_img"><img src="/assets/img/Home/Quality%20%26%20Release.webp" alt="Quality &amp; Release"></div>
+              <div class="cs_platform_item_img"><img src="/assets/img/Home/Integrated%20Platform/Quality%20%26%20Release.webp" alt="Quality &amp; Release"></div>
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-shield-halved"></i></span>
                 <h3>Quality &amp; Release</h3>
@@ -435,7 +435,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_platform_item" data-index="4">
-              <div class="cs_platform_item_img"><img src="/assets/img/Home/Research%20%26%20Innovation.webp" alt="Research &amp; Innovation"></div>
+              <div class="cs_platform_item_img"><img src="/assets/img/Home/Integrated%20Platform/Research%20%26%20Innovation.webp" alt="Research &amp; Innovation"></div>
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-microscope"></i></span>
                 <h3>Research &amp; Innovation</h3>
@@ -443,7 +443,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_platform_item" data-index="5">
-              <div class="cs_platform_item_img"><img src="/assets/img/Home/Home%20Page-%20Integrated%20Platform-5.webp" alt="Market Access &amp; Commercialisation"></div>
+              <div class="cs_platform_item_img"><img src="/assets/img/Home/Integrated%20Platform/Home%20Page-%20Integrated%20Platform-5.webp" alt="Market Access &amp; Commercialisation"></div>
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-handshake"></i></span>
                 <h3>Market Access &amp; Commercialisation</h3>
@@ -451,7 +451,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_platform_item" data-index="6">
-              <div class="cs_platform_item_img"><img src="/assets/img/Home/Global%20Export.webp" alt="Global Export"></div>
+              <div class="cs_platform_item_img"><img src="/assets/img/Home/Integrated%20Platform/Global%20Export.webp" alt="Global Export"></div>
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-globe"></i></span>
                 <h3>Global Export</h3>
