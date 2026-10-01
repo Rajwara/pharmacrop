@@ -66,7 +66,7 @@ export default function Page() {
       }
     </style>
     <section class="cs_products_hero cs_heading_bg cs_white_color">
-      <div class="cs_products_hero_bg"><img src="/assets/img/Products/PRODUCTS-Hero-v2.webp" alt="PharmaCrop products"></div>
+      <div class="cs_products_hero_bg"><img src="/assets/img/Products/Products Page Hero Image.webp" alt="PharmaCrop products"></div>
       <div class="container cs_products_hero_content">
         <span class="cs_products_hero_pill wow fadeInUp">Australian Product Portfolio</span>
         <h1 class="cs_fs_80 cs_bold wow fadeInUp" data-wow-delay="0.1s">AUSTRALIAN-GROWN.<br>GMP-CERTIFIED.<br><span>BUILT FOR HEALTHCARE.</span></h1>
@@ -174,11 +174,11 @@ export default function Page() {
         </div>
         <div class="cs_dflower_images wow fadeInUp">
           <figure>
-            <img src="/assets/img/General Images/Site Content/pharma-banner.jpeg" alt="Noosa Selects dried flower range">
+            <img src="/assets/img/Products/Noosa Selects Range.webp" alt="Noosa Selects dried flower range">
             <figcaption>Noosa Selects Range</figcaption>
           </figure>
           <figure>
-            <img src="/assets/img/General Images/Site Content/pharmacrop-banner2.webp" alt="PharmaCrop Premium dried flower range">
+            <img src="/assets/img/Products/PharmaCrop Premium Range.webp" alt="PharmaCrop Premium dried flower range">
             <figcaption>PharmaCrop Premium Range</figcaption>
           </figure>
         </div>
@@ -242,7 +242,7 @@ export default function Page() {
       <div class="container">
         <div class="cs_pline_row cs_pline_row_rev">
           <div class="cs_pline_img wow fadeInRight">
-            <img src="/assets/img/General Images/Site Content/genetics-to-gmp-manufacturing.webp" alt="PharmaCrop oral liquid range">
+            <img src="/assets/img/Products/ORAL LIQUID-PHARMACROP ORAL LIQUID RANGE .webp" alt="PharmaCrop oral liquid range">
           </div>
           <div class="cs_pline_content wow fadeInLeft">
             <span class="cs_pline_label">ORAL LIQUID</span>
@@ -268,7 +268,7 @@ export default function Page() {
       <div class="container">
         <div class="cs_pline_row">
           <div class="cs_pline_img wow fadeInLeft">
-            <img src="/assets/img/General Images/Site Content/pharmacrop-banner4.webp" alt="PharmaCrop pastilles">
+            <img src="/assets/img/Products/PASTILLES-PHARMACROP PASTILLES.webp" alt="PharmaCrop pastilles">
           </div>
           <div class="cs_pline_content wow fadeInRight">
             <span class="cs_pline_label">PASTILLES</span>
@@ -287,7 +287,7 @@ export default function Page() {
       <div class="container">
         <div class="cs_pline_row cs_pline_row_rev">
           <div class="cs_pline_img wow fadeInRight">
-            <img src="/assets/img/General Images/Site Content/health-professionals-card.webp" alt="PharmaCrop inhaled liquid range">
+            <img src="/assets/img/Products/INHALED LIQUID-PHARMACROP INHALED LIQUID RANGE.webp" alt="PharmaCrop inhaled liquid range">
           </div>
           <div class="cs_pline_content wow fadeInLeft">
             <span class="cs_pline_label">INHALED LIQUID</span>
