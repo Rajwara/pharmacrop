@@ -5,7 +5,7 @@ export const posts = [
     date: "11 Aug 2026",
     category: "Cultivation",
     tags: ["Noosa Hinterland", "Cultivation", "Australian-Grown"],
-    image: "/assets/img/pharmacrop%20home%20assets/BLOGS/THE%20NOOSA%20HINTERLAND%20HOME%20OF%20PHARMACROP.webp",
+    image: "/assets/img/General%20Images/Blog/THE%20NOOSA%20HINTERLAND%20HOME%20OF%20PHARMACROP.webp",
     excerpt:
       "The Noosa Hinterland provides the home for our cultivation and manufacturing operations, bringing local production together within a single region.",
     content: [
@@ -21,7 +21,7 @@ export const posts = [
     date: "18 Aug 2026",
     category: "Manufacturing",
     tags: ["GMP", "Manufacturing", "Integrated Operations"],
-    image: "/assets/img/video_block_bg.jpg",
+    image: "/assets/img/General Images/Blog/video_block_bg.jpg",
     excerpt:
       "By bringing cultivation, processing and GMP-certified manufacturing together, PharmaCrop maintains oversight from cultivar selection through to finished product.",
     content: [
@@ -37,7 +37,7 @@ export const posts = [
     date: "25 Aug 2026",
     category: "Cultivation",
     tags: ["Global Expertise", "Cultivation Philosophy", "Phenohunting"],
-    image: "/assets/img/pharmacrop%20home%20assets/BLOGS/GLOBAL%20CULTIVATION%20EXPERTISE%2C%20HINTERLAND-HONED.webp",
+    image: "/assets/img/General%20Images/Blog/GLOBAL%20CULTIVATION%20EXPERTISE%2C%20HINTERLAND-HONED.webp",
     excerpt:
       "Drawing on cultivation expertise from California, Canada and South Africa, our team applies international insights within the unique conditions of the Noosa Hinterland.",
     content: [
@@ -53,7 +53,7 @@ export const posts = [
     date: "27 Aug 2026",
     category: "Compliance",
     tags: ["TGA", "Compliance", "Patients", "Health Professionals"],
-    image: "/assets/img/hero_bg_4.jpg",
+    image: "/assets/img/General Images/Blog/hero_bg_4.jpg",
     excerpt:
       "The Therapeutic Goods Administration (TGA) publishes dedicated guidance for both patients and health professionals on medicinal cannabis.",
     content: [
@@ -69,7 +69,7 @@ export const posts = [
     date: "01 Sep 2026",
     category: "Company News",
     tags: ["Portfolio", "Australian-Grown", "Company News"],
-    image: "/assets/img/feature_thumb.jpg",
+    image: "/assets/img/General Images/Blog/feature_thumb.jpg",
     excerpt:
       "PharmaCrop continues to expand its portfolio of Australian-grown products, combining cultivation expertise with GMP-certified manufacturing and carefully managed production.",
     content: [
