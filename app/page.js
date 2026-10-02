@@ -144,7 +144,7 @@ export default function Page() {
       .cs_sticky_text { color: #6b7280; font-size: 16px; line-height: 1.7; margin: 0 0 32px; max-width: 380px; }
       .cs_sticky_btn { display: inline-block; background: #024242; color: #fff; font-weight: 700; font-size: 13px; letter-spacing: 0.5px; padding: 16px 28px; border-radius: 6px; text-decoration: none; }
       .cs_sticky_services_right { flex: 1; display: flex; flex-direction: column; gap: 32px; }
-      .cs_sticky_card { position: relative; border-radius: 20px; overflow: hidden; min-height: 560px; display: flex; align-items: flex-end; }
+      .cs_sticky_card { position: relative; border-radius: 20px; overflow: hidden; min-height: 560px; display: flex; align-items: flex-end; text-decoration: none; }
       .cs_sticky_card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
       .cs_sticky_card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(2,34,34,0) 45%, rgba(2,20,20,0.85) 100%); z-index: 1; }
       .cs_sticky_card_icon { position: absolute; top: 28px; left: 28px; z-index: 2; width: 44px; height: 44px; border: 1px solid rgba(255,255,255,0.5); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 18px; }
@@ -168,33 +168,33 @@ export default function Page() {
             <p class="cs_sticky_text">Consistent pharmaceutical products begin with consistent agricultural systems. Our cultivation platform combines controlled environments, advanced growing systems and environmental precision.</p>
           </div>
           <div class="cs_sticky_services_right">
-            <div class="cs_sticky_card">
+            <a href="/about-us" class="cs_sticky_card">
               <img src="/assets/img/Home/Precision%20Cultivation/Controlled%20Cultivation.webp" alt="Controlled Cultivation">
               <span class="cs_sticky_card_icon"><i class="fa-solid fa-seedling"></i></span>
               <div class="cs_sticky_card_body">
                 <h3 class="cs_sticky_card_title">Controlled Cultivation</h3>
                 <p class="cs_sticky_card_text">Purpose-built hybrid greenhouse designed for repeatable cultivation and consistent, scalable Australian-grown supply.</p>
-                <a href="/about-us" class="cs_sticky_card_link">READ MORE <span>&rarr;</span></a>
+                <span class="cs_sticky_card_link">READ MORE <span>&rarr;</span></span>
               </div>
-            </div>
-            <div class="cs_sticky_card">
+            </a>
+            <a href="/about-us" class="cs_sticky_card">
               <img src="/assets/img/Home/Precision%20Cultivation/Advanced%20Growing%20Systems.webp" alt="Advanced Growing Systems">
               <span class="cs_sticky_card_icon"><i class="fa-solid fa-droplet"></i></span>
               <div class="cs_sticky_card_body">
                 <h3 class="cs_sticky_card_title">Advanced Growing Systems</h3>
                 <p class="cs_sticky_card_text">Soilless cultivation with cultivar-specific nutrition programs, providing bespoke nutrient delivery for strong growth and consistent cannabinoid and terpene expression.</p>
-                <a href="/about-us" class="cs_sticky_card_link">READ MORE <span>&rarr;</span></a>
+                <span class="cs_sticky_card_link">READ MORE <span>&rarr;</span></span>
               </div>
-            </div>
-            <div class="cs_sticky_card">
+            </a>
+            <a href="/about-us" class="cs_sticky_card">
               <img src="/assets/img/Home/Precision%20Cultivation/Environmental%20Precision.webp" alt="Environmental Precision">
               <span class="cs_sticky_card_icon"><i class="fa-solid fa-temperature-half"></i></span>
               <div class="cs_sticky_card_body">
                 <h3 class="cs_sticky_card_title">Environmental Precision</h3>
                 <p class="cs_sticky_card_text">Continuous monitoring and control of light, temperature, humidity, CO&#8322; and irrigation to optimise plant health and ensure repeatable, pharmaceutical-grade biomass.</p>
-                <a href="/about-us" class="cs_sticky_card_link">READ MORE <span>&rarr;</span></a>
+                <span class="cs_sticky_card_link">READ MORE <span>&rarr;</span></span>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
