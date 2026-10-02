@@ -78,15 +78,16 @@ export default async function Page({ params }) {
       tableRow("fa-flask", "CBD Strength", product.cbd) +
       tableRow("fa-seedling", "Plant Species", product.strainType ? `${product.strainType}${product.speciesRatio ? ` (${product.speciesRatio})` : ""}` : "");
 
+  const isDriedFlower = product.category === "Dried Flower";
   const detailsTable2Html = isBroadSpectrum
-    ? tableRow("fa-box-open", "Presentation", product.presentation) +
+    ? (isDriedFlower ? "" : tableRow("fa-box-open", "Presentation", product.presentation)) +
       tableRow("fa-box", "Pack Size", product.packSize) +
       tableRow("fa-atom", "Spectrum", product.spectrum) +
       tableRow("fa-vial", "Excipients", product.excipients) +
       tableRow("fa-heart-pulse", "Therapeutic Profile", product.therapeuticProfile) +
       tableRow("fa-shield-halved", "TGA Category", product.tgaCategory) +
       tableRow("fa-scale-balanced", "Schedule", product.schedule)
-    : tableRow("fa-box-open", "Presentation", product.presentation) +
+    : (isDriedFlower ? "" : tableRow("fa-box-open", "Presentation", product.presentation)) +
       tableRow("fa-box", "Pack Size", product.packSize) +
       tableRow("fa-wind", "Dominant Terpenes", product.dominantTerpenes) +
       tableRow("fa-heart-pulse", "Therapeutic Profile", product.therapeuticProfile) +
