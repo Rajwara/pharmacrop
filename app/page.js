@@ -40,7 +40,7 @@ export default function Page() {
               </div>
             </div>
             <div class="cs_main_header_right">
-              <a href="/login" class="cs_header_login_btn">HCP Portals</a>
+              <a href="/coming-soon" class="cs_header_login_btn">HCP Portals</a>
               <a href="/contact" class="cs_header_cta_btn" aria-label="Contact Us"><i class="fa-solid fa-envelope"></i></a>
             </div>
           </div>
