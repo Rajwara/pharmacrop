@@ -405,7 +405,8 @@ export default function Page() {
               '</div></section>'
             ) : '';
 
-            var isBroadSpectrum = !!(p.cbg || p.cbn);
+            var isInhaledLiquid = p.category === 'Inhaled Liquid';
+            var isBroadSpectrum = !!(p.cbg || p.cbn) && !isInhaledLiquid;
             var cannabinoidLine = [
               p.thc && p.thc !== '—' ? 'THC ' + p.thc : '',
               p.cbd && p.cbd !== '—' ? 'CBD ' + p.cbd : '',
@@ -461,7 +462,6 @@ export default function Page() {
             );
 
             var isOralLiquid = p.category === 'Oral Liquid';
-            var isInhaledLiquid = p.category === 'Inhaled Liquid';
             var hidePresentation = p.category === 'Dried Flower' || isOralLiquid || isPastilles || isInhaledLiquid;
             var useSpectrumFields = isBroadSpectrum || isOralLiquid || isPastilles;
             var terpeneLabel = isInhaledLiquid ? 'Terpene Profile' : 'Dominant Terpenes';
