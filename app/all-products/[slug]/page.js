@@ -449,9 +449,11 @@ export default function Page() {
               tableRow('fa-seedling', 'Plant Species', p.speciesRatio)
             );
 
-            var isDriedFlower = p.category === 'Dried Flower';
-            var detailsTable2Html = isBroadSpectrum ? (
-              (isDriedFlower ? '' : tableRow('fa-box-open', 'Presentation', p.presentation)) +
+            var isOralLiquid = p.category === 'Oral Liquid';
+            var hidePresentation = p.category === 'Dried Flower' || isOralLiquid;
+            var useSpectrumFields = isBroadSpectrum || isOralLiquid;
+            var detailsTable2Html = useSpectrumFields ? (
+              (hidePresentation ? '' : tableRow('fa-box-open', 'Presentation', p.presentation)) +
               tableRow('fa-box', 'Pack Size', p.packSize) +
               tableRow('fa-atom', 'Spectrum', p.spectrum) +
               tableRow('fa-vial', 'Excipients', p.excipients) +
@@ -459,7 +461,7 @@ export default function Page() {
               tableRow('fa-shield-halved', 'TGA Category', p.tgaCategory) +
               tableRow('fa-scale-balanced', 'Schedule', p.schedule)
             ) : (
-              (isDriedFlower ? '' : tableRow('fa-box-open', 'Presentation', p.presentation)) +
+              (hidePresentation ? '' : tableRow('fa-box-open', 'Presentation', p.presentation)) +
               tableRow('fa-box', 'Pack Size', p.packSize) +
               tableRow('fa-wind', 'Dominant Terpenes', p.dominantTerpenes) +
               tableRow('fa-heart-pulse', 'Therapeutic Profile', p.therapeuticProfile) +
