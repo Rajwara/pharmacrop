@@ -28,9 +28,9 @@ export default function Page() {
       .cs_coming_soon_content p { color: rgba(255, 255, 255, 0.72); font-size: 18px; line-height: 1.7; margin: 0 auto 40px; max-width: 540px; }
       .cs_coming_soon_actions { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
       .cs_coming_soon_btn { display: inline-flex; align-items: center; gap: 10px; background: #78dca6; color: #024242; font-weight: 700; font-size: 13px; letter-spacing: 0.5px; text-transform: uppercase; padding: 16px 32px; border-radius: 8px; text-decoration: none; transition: transform 0.2s ease, box-shadow 0.2s ease; }
-      .cs_coming_soon_btn:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(120, 220, 166, 0.25); }
+      .cs_coming_soon_btn:hover { color: #024242; transform: translateY(-2px); box-shadow: 0 12px 30px rgba(120, 220, 166, 0.25); }
       .cs_coming_soon_btn_outline { display: inline-flex; align-items: center; gap: 10px; border: 1px solid rgba(255, 255, 255, 0.35); color: #fff; font-weight: 700; font-size: 13px; letter-spacing: 0.5px; text-transform: uppercase; padding: 16px 32px; border-radius: 8px; text-decoration: none; transition: background-color 0.2s ease, transform 0.2s ease; }
-      .cs_coming_soon_btn_outline:hover { background: rgba(255, 255, 255, 0.08); transform: translateY(-2px); }
+      .cs_coming_soon_btn_outline:hover { background: rgba(255, 255, 255, 0.08); color: #fff; transform: translateY(-2px); }
       .cs_coming_soon_footer { position: relative; z-index: 2; padding: 0 24px 40px; text-align: center; }
       .cs_coming_soon_badges { display: inline-flex; align-items: center; gap: 0; padding: 8px 6px; border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 40px; background: rgba(255, 255, 255, 0.04); margin-bottom: 20px; }
       .cs_coming_soon_badge { display: flex; align-items: center; gap: 10px; padding: 0 18px; position: relative; }
