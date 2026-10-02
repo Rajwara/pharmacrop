@@ -50,7 +50,7 @@ function slugify(name) {
     .replace(/(^-|-$)/g, "");
 }
 
-function buildProduct({ name, categorySlug, thc, cbd, cbg, cbn, packSize, price, strainType, speciesRatio, tgaCategory, schedule, spectrum, excipients, energyKj, sugars, carbs, sodium, fat }) {
+function buildProduct({ name, categorySlug, thc, cbd, cbg, cbn, packSize, price, strainType, speciesRatio, cultivar, tgaCategory, schedule, spectrum, excipients, energyKj, sugars, carbs, sodium, fat }) {
   const meta = categoryMeta[categorySlug];
   return {
     slug: slugify(name),
@@ -66,6 +66,7 @@ function buildProduct({ name, categorySlug, thc, cbd, cbg, cbn, packSize, price,
     price,
     strainType,
     speciesRatio: speciesRatio || "",
+    cultivar: cultivar || "",
     presentation: meta.presentation,
     dominantTerpenes: meta.dominantTerpenes,
     excipients: excipients || "",
@@ -84,7 +85,7 @@ function buildProduct({ name, categorySlug, thc, cbd, cbg, cbn, packSize, price,
 }
 
 export const products = [
-  buildProduct({ name: "Sunridge 22", categorySlug: "dried-flower", thc: "22%", cbd: "<1%", packSize: "10 g", price: "135", strainType: "Indica" }),
+  buildProduct({ name: "Sunridge 22", categorySlug: "dried-flower", thc: "22%", cbd: "<1%", packSize: "10 g", price: "135", strainType: "Indica", cultivar: "Afternoon Tea" }),
   buildProduct({ name: "Meadowlands 18", categorySlug: "dried-flower", thc: "18%", cbd: "<1%", packSize: "10 g", price: "120", strainType: "Sativa" }),
   buildProduct({ name: "Highland 25", categorySlug: "dried-flower", thc: "25%", cbd: "<1%", packSize: "10 g", price: "150", strainType: "Hybrid", speciesRatio: "Indica 60% : Sativa 40%" }),
   buildProduct({ name: "Balance 10:10", categorySlug: "oral-liquid", thc: "10 mg/mL", cbd: "10 mg/mL", packSize: "30 mL bottle", price: "95", strainType: "Sativa" }),

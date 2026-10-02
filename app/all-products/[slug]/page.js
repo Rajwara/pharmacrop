@@ -68,11 +68,13 @@ export default async function Page({ params }) {
 
   const detailsTable1Html = isBroadSpectrum
     ? tableRow("fa-tag", "Product Name", product.name) +
+      tableRow("fa-seedling", "Cultivar", product.cultivar) +
       tableRow("fa-leaf", "Dosage Form", product.dosageForm) +
       tableRow("fa-flask", "CBD Strength", product.cbd) +
       tableRow("fa-flask", "CBG Strength", product.cbg) +
       tableRow("fa-flask", "CBN Strength", product.cbn)
     : tableRow("fa-tag", "Product Name", product.name) +
+      tableRow("fa-seedling", "Cultivar", product.cultivar) +
       tableRow("fa-leaf", "Dosage Form", product.dosageForm) +
       tableRow("fa-flask", "THC Strength", product.thc) +
       tableRow("fa-flask", "CBD Strength", product.cbd) +
