@@ -227,7 +227,7 @@ export default async function Page({ params }) {
             </div>
           </div>
           <div class="wow fadeInUp" data-wow-delay="0.1s">
-            <span class="cs_pd_origin_badge"><i class="fa-solid fa-leaf"></i> Australian Grown <i class="fa-solid fa-circle-info"></i></span>
+            <span class="cs_pd_origin_badge"><i class="fa-solid fa-leaf"></i> Australian Manufactured <i class="fa-solid fa-circle-info"></i></span>
             <h1>${product.name}</h1>
             <span class="cs_pd_category">${product.category}${product.strainType ? ` | <span class="strain">${product.strainType}</span>` : ''}</span>
             ${product.price ? `<span class="cs_pd_rrp">RRP <strong>$${product.price}</strong>${product.packSize ? ` (${product.packSize} pack)` : ''}</span>` : ''}

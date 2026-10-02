@@ -252,7 +252,7 @@ export default function Page() {
       <div class="container">
         <div class="cs_prod_grid" data-prod-grid>
           <a class="cs_prod_card" href="/all-products/sunridge-22" data-name="sunridge 22" data-category="dried-flower" data-strength="thc" data-packsize="10g pack">
-            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Grown</span><img src="/assets/img/dashboard/Dried%20Flower%20Category.webp" alt="Sunridge 22"></div>
+            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Manufactured</span><img src="/assets/img/dashboard/Dried%20Flower%20Category.webp" alt="Sunridge 22"></div>
             <div class="cs_prod_body">
               <h3>Sunridge 22</h3>
               <span class="cs_prod_category">Dried Flower</span>
@@ -265,7 +265,7 @@ export default function Page() {
             </div>
           </a>
           <a class="cs_prod_card" href="/all-products/balance-10-10" data-name="balance 10:10" data-category="oral-liquid" data-strength="balanced" data-packsize="30 mL bottle">
-            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Grown</span><img src="/assets/img/dashboard/Oral%20Liquid%20Category.webp" alt="Balance 10:10"></div>
+            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Manufactured</span><img src="/assets/img/dashboard/Oral%20Liquid%20Category.webp" alt="Balance 10:10"></div>
             <div class="cs_prod_body">
               <h3>Balance 10:10</h3>
               <span class="cs_prod_category">Oral Liquid</span>
@@ -278,7 +278,7 @@ export default function Page() {
             </div>
           </a>
           <a class="cs_prod_card" href="/all-products/calm-pastilles" data-name="calm pastilles" data-category="pastilles" data-strength="balanced" data-packsize="30 pastilles">
-            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Grown</span><img src="/assets/img/dashboard/Pastilles%20Category.webp" alt="Calm Pastilles"></div>
+            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Manufactured</span><img src="/assets/img/dashboard/Pastilles%20Category.webp" alt="Calm Pastilles"></div>
             <div class="cs_prod_body">
               <h3>Calm Pastilles</h3>
               <span class="cs_prod_category">Pastilles</span>
@@ -291,7 +291,7 @@ export default function Page() {
             </div>
           </a>
           <a class="cs_prod_card" href="/all-products/clear-flow" data-name="clear flow" data-category="inhaled-liquid" data-strength="thc" data-packsize="1 cartridge (0.5 mL)">
-            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Grown</span><img src="/assets/img/dashboard/Inhaled%20liquid%20Category.webp" alt="Clear Flow"></div>
+            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Manufactured</span><img src="/assets/img/dashboard/Inhaled%20liquid%20Category.webp" alt="Clear Flow"></div>
             <div class="cs_prod_body">
               <h3>Clear Flow</h3>
               <span class="cs_prod_category">Inhaled Liquid</span>
@@ -304,7 +304,7 @@ export default function Page() {
             </div>
           </a>
           <a class="cs_prod_card" href="/all-products/meadowlands-18" data-name="meadowlands 18" data-category="dried-flower" data-strength="thc" data-packsize="10g pack">
-            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Grown</span><img src="/assets/img/dashboard/PharmaCrop%20THC25%20Dried%20Flower.webp" alt="Meadowlands 18"></div>
+            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Manufactured</span><img src="/assets/img/dashboard/PharmaCrop%20THC25%20Dried%20Flower.webp" alt="Meadowlands 18"></div>
             <div class="cs_prod_body">
               <h3>Meadowlands 18</h3>
               <span class="cs_prod_category">Dried Flower</span>
@@ -317,7 +317,7 @@ export default function Page() {
             </div>
           </a>
           <a class="cs_prod_card" href="/all-products/rest-easy" data-name="rest easy" data-category="oral-liquid" data-strength="cbd" data-packsize="30 mL bottle">
-            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Grown</span><img src="/assets/img/dashboard/pharmaCrop%20CBD100%20Oral%20Liquid.webp" alt="Rest Easy"></div>
+            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Manufactured</span><img src="/assets/img/dashboard/pharmaCrop%20CBD100%20Oral%20Liquid.webp" alt="Rest Easy"></div>
             <div class="cs_prod_body">
               <h3>Rest Easy</h3>
               <span class="cs_prod_category">Oral Liquid</span>
@@ -330,7 +330,7 @@ export default function Page() {
             </div>
           </a>
           <a class="cs_prod_card" href="/all-products/focus-pastilles" data-name="focus pastilles" data-category="pastilles" data-strength="thc" data-packsize="30 pastilles">
-            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Grown</span><img src="/assets/img/dashboard/pharmaCrop%20Balance%20Pastilles.webp" alt="Focus Pastilles"></div>
+            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Manufactured</span><img src="/assets/img/dashboard/pharmaCrop%20Balance%20Pastilles.webp" alt="Focus Pastilles"></div>
             <div class="cs_prod_body">
               <h3>Focus Pastilles</h3>
               <span class="cs_prod_category">Pastilles</span>
@@ -343,7 +343,7 @@ export default function Page() {
             </div>
           </a>
           <a class="cs_prod_card" href="/all-products/airis" data-name="airis" data-category="inhaled-liquid" data-strength="balanced" data-packsize="1 cartridge (0.5 mL)">
-            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Grown</span><img src="/assets/img/dashboard/pharmaCrop%20Relief%20Inhaled%20Liquid.webp" alt="Airis"></div>
+            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Manufactured</span><img src="/assets/img/dashboard/pharmaCrop%20Relief%20Inhaled%20Liquid.webp" alt="Airis"></div>
             <div class="cs_prod_body">
               <h3>Airis</h3>
               <span class="cs_prod_category">Inhaled Liquid</span>
@@ -356,7 +356,7 @@ export default function Page() {
             </div>
           </a>
           <a class="cs_prod_card" href="/all-products/highland-25" data-name="highland 25" data-category="dried-flower" data-strength="thc" data-packsize="10g pack">
-            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Grown</span><img src="/assets/img/dashboard/Dried%20Flower%20Category.webp" alt="Highland 25"></div>
+            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Manufactured</span><img src="/assets/img/dashboard/Dried%20Flower%20Category.webp" alt="Highland 25"></div>
             <div class="cs_prod_body">
               <h3>Highland 25</h3>
               <span class="cs_prod_category">Dried Flower</span>
@@ -369,7 +369,7 @@ export default function Page() {
             </div>
           </a>
           <a class="cs_prod_card" href="/all-products/clarity-1-20" data-name="clarity 1:20" data-category="oral-liquid" data-strength="cbd" data-packsize="30 mL bottle">
-            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Grown</span><img src="/assets/img/dashboard/Oral%20Liquid%20Category.webp" alt="Clarity 1:20"></div>
+            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Manufactured</span><img src="/assets/img/dashboard/Oral%20Liquid%20Category.webp" alt="Clarity 1:20"></div>
             <div class="cs_prod_body">
               <h3>Clarity 1:20</h3>
               <span class="cs_prod_category">Oral Liquid</span>
