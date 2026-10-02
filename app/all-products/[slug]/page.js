@@ -424,7 +424,7 @@ export default function Page() {
               statTile('fa-flask', 'Cannabinoids', cannabinoidLine) +
               statTile('fa-atom', 'Spectrum', p.spectrum) +
               statTile('fa-box', 'Pack Size', p.packSize) +
-              statTile('fa-tag', 'RRP', p.price !== '—' ? '$' + p.price + ' (to patient)' : '')
+              statTile('fa-tag', 'RRP', p.price !== '—' ? '$' + p.price : '')
             ) : (
               statTile('fa-leaf', 'THC', p.thc) +
               statTile('fa-flask', 'CBD', p.cbd) +
