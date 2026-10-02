@@ -446,8 +446,9 @@ export default function Page() {
               tableRow('fa-seedling', 'Plant Species', p.speciesRatio)
             );
 
+            var isDriedFlower = p.category === 'Dried Flower';
             var detailsTable2Html = isBroadSpectrum ? (
-              tableRow('fa-box-open', 'Presentation', p.presentation) +
+              (isDriedFlower ? '' : tableRow('fa-box-open', 'Presentation', p.presentation)) +
               tableRow('fa-box', 'Pack Size', p.packSize) +
               tableRow('fa-atom', 'Spectrum', p.spectrum) +
               tableRow('fa-vial', 'Excipients', p.excipients) +
@@ -455,7 +456,7 @@ export default function Page() {
               tableRow('fa-shield-halved', 'TGA Category', p.tgaCategory) +
               tableRow('fa-scale-balanced', 'Schedule', p.schedule)
             ) : (
-              tableRow('fa-box-open', 'Presentation', p.presentation) +
+              (isDriedFlower ? '' : tableRow('fa-box-open', 'Presentation', p.presentation)) +
               tableRow('fa-box', 'Pack Size', p.packSize) +
               tableRow('fa-wind', 'Dominant Terpenes', p.dominantTerpenes) +
               tableRow('fa-heart-pulse', 'Therapeutic Profile', p.therapeuticProfile) +
