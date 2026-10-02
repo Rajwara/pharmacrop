@@ -157,7 +157,7 @@ export default function Page() {
       .cs_dash_cat_card { position: relative; border-radius: 16px; overflow: hidden; min-height: 380px; display: flex; align-items: flex-end; text-decoration: none; }
       .cs_dash_cat_card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
       .cs_dash_cat_card:hover img { transform: scale(1.06); }
-      .cs_dash_cat_card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(2,34,34,0.1) 30%, rgba(2,20,20,0.85) 100%); }
+      .cs_dash_cat_card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(120,220,166,0.28) 0%, rgba(2,34,34,0.15) 35%, rgba(2,20,20,0.85) 100%); }
       .cs_dash_cat_body { position: relative; z-index: 1; padding: 22px; width: 100%; }
       .cs_dash_cat_body_top { display: flex; align-items: center; justify-content: space-between; }
       .cs_dash_cat_body h3 { color: #fff; font-size: 18px; font-weight: 800; margin: 10px 0 8px; }
@@ -181,7 +181,7 @@ export default function Page() {
         </div>
         <div class="cs_dash_cat_grid">
           <a href="/all-products?category=dried-flower" class="cs_dash_cat_card wow fadeInUp">
-            <img src="/assets/img/dashboard/Dried%20Flower%20Category.webp" alt="Dried Flower">
+            <img src="/assets/img/Dashboard%20HCP/category%20images/Our%20Product%20Range-Dried%20Flower.webp" alt="Dried Flower">
             <div class="cs_dash_cat_body">
               <div class="cs_dash_cat_body_top"><span class="cs_dash_cat_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
               <h3>Dried Flower</h3>
@@ -189,7 +189,7 @@ export default function Page() {
             </div>
           </a>
           <a href="/all-products?category=oral-liquid" class="cs_dash_cat_card wow fadeInUp" data-wow-delay="0.1s">
-            <img src="/assets/img/dashboard/Oral%20Liquid%20Category.webp" alt="Oral Liquid">
+            <img src="/assets/img/Dashboard%20HCP/category%20images/Our%20Product%20Range-Oral%20Liquid.webp" alt="Oral Liquid">
             <div class="cs_dash_cat_body">
               <div class="cs_dash_cat_body_top"><span class="cs_dash_cat_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
               <h3>Oral Liquid</h3>
@@ -197,7 +197,7 @@ export default function Page() {
             </div>
           </a>
           <a href="/all-products?category=pastilles" class="cs_dash_cat_card wow fadeInUp" data-wow-delay="0.2s">
-            <img src="/assets/img/dashboard/Pastilles%20Category.webp" alt="Pastilles">
+            <img src="/assets/img/Dashboard%20HCP/category%20images/Our%20Product%20Range-Pastilles.webp" alt="Pastilles">
             <div class="cs_dash_cat_body">
               <div class="cs_dash_cat_body_top"><span class="cs_dash_cat_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
               <h3>Pastilles</h3>
@@ -205,7 +205,7 @@ export default function Page() {
             </div>
           </a>
           <a href="/all-products?category=inhaled-liquid" class="cs_dash_cat_card wow fadeInUp" data-wow-delay="0.3s">
-            <img src="/assets/img/dashboard/Inhaled%20liquid%20Category.webp" alt="Inhaled Liquid">
+            <img src="/assets/img/Dashboard%20HCP/category%20images/Our%20Product%20Range-Inhaled%20Liquid.webp" alt="Inhaled Liquid">
             <div class="cs_dash_cat_body">
               <div class="cs_dash_cat_body_top"><span class="cs_dash_cat_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
               <h3>Inhaled Liquid</h3>
@@ -246,34 +246,34 @@ export default function Page() {
         </div>
         <div class="cs_dash_feat_grid">
           <div class="cs_dash_feat_card wow fadeInUp">
-            <div class="cs_dash_feat_img"><img src="/assets/img/dashboard/PharmaCrop%20THC25%20Dried%20Flower.webp" alt="PharmaCrop THC25 Dried Flower"></div>
+            <div class="cs_dash_feat_img"><img src="/assets/img/Dashboard%20HCP/white%20bg%20images/Noosa%20Selects%20T19%20Hybrid%20white%20bg.webp" alt="Noosa Selects T19 Hybrid"></div>
             <div class="cs_dash_feat_body">
-              <h3>PharmaCrop THC25 Dried Flower</h3>
-              <span class="cs_dash_feat_spec">Dried Flower &nbsp;|&nbsp; THC 25%</span>
+              <h3>Noosa Selects T19 Hybrid</h3>
+              <span class="cs_dash_feat_spec">Dried Flower &nbsp;|&nbsp; THC 19%</span>
               <a href="/all-products?category=dried-flower" class="cs_dash_feat_link">View product &rarr;</a>
             </div>
           </div>
           <div class="cs_dash_feat_card wow fadeInUp" data-wow-delay="0.1s">
-            <div class="cs_dash_feat_img"><img src="/assets/img/dashboard/pharmaCrop%20CBD100%20Oral%20Liquid.webp" alt="PharmaCrop CBD100 Oral Liquid"></div>
+            <div class="cs_dash_feat_img"><img src="/assets/img/Dashboard%20HCP/white%20bg%20images/Oral%20Liquid%20Horizon%2030-30%20whitebg.webp" alt="PharmaCrop Horizon 30:30"></div>
             <div class="cs_dash_feat_body">
-              <h3>PharmaCrop CBD100 Oral Liquid</h3>
-              <span class="cs_dash_feat_spec">Oral Liquid &nbsp;|&nbsp; CBD 100 mg/mL</span>
+              <h3>PharmaCrop Horizon 30:30</h3>
+              <span class="cs_dash_feat_spec">Oral Liquid &nbsp;|&nbsp; THC 30 mg/mL / CBD 30 mg/mL</span>
               <a href="/all-products?category=oral-liquid" class="cs_dash_feat_link">View product &rarr;</a>
             </div>
           </div>
           <div class="cs_dash_feat_card wow fadeInUp" data-wow-delay="0.2s">
-            <div class="cs_dash_feat_img"><img src="/assets/img/dashboard/pharmaCrop%20Balance%20Pastilles.webp" alt="PharmaCrop Balance Pastilles"></div>
+            <div class="cs_dash_feat_img"><img src="/assets/img/Dashboard%20HCP/white%20bg%20images/PSTILLES%20white%20bg.webp" alt="PharmaCrop 20:20:20 Night"></div>
             <div class="cs_dash_feat_body">
-              <h3>PharmaCrop Balance Pastilles</h3>
-              <span class="cs_dash_feat_spec">Pastilles &nbsp;|&nbsp; THC 5 mg / CBD 5 mg</span>
+              <h3>PharmaCrop 20:20:20 Night</h3>
+              <span class="cs_dash_feat_spec">Pastilles &nbsp;|&nbsp; THC 20mg / CBD 20mg / CBN 20mg</span>
               <a href="/all-products?category=pastilles" class="cs_dash_feat_link">View product &rarr;</a>
             </div>
           </div>
           <div class="cs_dash_feat_card wow fadeInUp" data-wow-delay="0.3s">
-            <div class="cs_dash_feat_img"><img src="/assets/img/dashboard/pharmaCrop%20Relief%20Inhaled%20Liquid.webp" alt="PharmaCrop Relief Inhaled Liquid"></div>
+            <div class="cs_dash_feat_img"><img src="/assets/img/Dashboard%20HCP/white%20bg%20images/PharmaCrop%20Daydream%20white%20bg.webp" alt="PharmaCrop Daydream"></div>
             <div class="cs_dash_feat_body">
-              <h3>PharmaCrop Relief Inhaled Liquid</h3>
-              <span class="cs_dash_feat_spec">Inhaled Liquid &nbsp;|&nbsp; THC 10 mg/mL</span>
+              <h3>PharmaCrop Daydream</h3>
+              <span class="cs_dash_feat_spec">Inhaled Liquid &nbsp;|&nbsp; THC 850mg &nbsp;|&nbsp; Sativa Dominant</span>
               <a href="/all-products?category=inhaled-liquid" class="cs_dash_feat_link">View product &rarr;</a>
             </div>
           </div>
