@@ -358,6 +358,7 @@ export default function Page() {
               cbn: acf.cbn || '',
               packSize: acf.pack_size || '—',
               presentation: acf.presentation || '—',
+              cultivar: acf.cultivar || acf.cultivar_name || acf.strain_name || '',
               speciesRatio: acf.species_ratio || '—',
               dominantTerpenes: acf.dominant_terpenes || '—',
               excipients: acf.excipients || '—',
@@ -434,12 +435,14 @@ export default function Page() {
 
             var detailsTable1Html = isBroadSpectrum ? (
               tableRow('fa-tag', 'Product Name', p.name) +
+              tableRow('fa-seedling', 'Cultivar', p.cultivar) +
               tableRow('fa-leaf', 'Dosage Form', p.dosageForm) +
               tableRow('fa-flask', 'CBD Strength', p.cbd) +
               tableRow('fa-flask', 'CBG Strength', p.cbg) +
               tableRow('fa-flask', 'CBN Strength', p.cbn)
             ) : (
               tableRow('fa-tag', 'Product Name', p.name) +
+              tableRow('fa-seedling', 'Cultivar', p.cultivar) +
               tableRow('fa-leaf', 'Dosage Form', p.dosageForm) +
               tableRow('fa-flask', 'THC Strength', p.thc) +
               tableRow('fa-flask', 'CBD Strength', p.cbd) +
