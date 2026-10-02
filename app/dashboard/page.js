@@ -250,7 +250,7 @@ export default function Page() {
             <div class="cs_dash_feat_body">
               <h3>Noosa Selects T19 Hybrid</h3>
               <span class="cs_dash_feat_spec">Dried Flower &nbsp;|&nbsp; THC 19%</span>
-              <a href="/all-products?category=dried-flower" class="cs_dash_feat_link">View product &rarr;</a>
+              <a href="/all-products/noosa-selects-t19-hybrid" class="cs_dash_feat_link">View product &rarr;</a>
             </div>
           </div>
           <div class="cs_dash_feat_card wow fadeInUp" data-wow-delay="0.1s">
@@ -258,7 +258,7 @@ export default function Page() {
             <div class="cs_dash_feat_body">
               <h3>PharmaCrop Horizon 30:30</h3>
               <span class="cs_dash_feat_spec">Oral Liquid &nbsp;|&nbsp; THC 30 mg/mL / CBD 30 mg/mL</span>
-              <a href="/all-products?category=oral-liquid" class="cs_dash_feat_link">View product &rarr;</a>
+              <a href="/all-products/pharmacrop-horizon-30-30" class="cs_dash_feat_link">View product &rarr;</a>
             </div>
           </div>
           <div class="cs_dash_feat_card wow fadeInUp" data-wow-delay="0.2s">
@@ -266,7 +266,7 @@ export default function Page() {
             <div class="cs_dash_feat_body">
               <h3>PharmaCrop 20:20:20 Night</h3>
               <span class="cs_dash_feat_spec">Pastilles &nbsp;|&nbsp; THC 20mg / CBD 20mg / CBN 20mg</span>
-              <a href="/all-products?category=pastilles" class="cs_dash_feat_link">View product &rarr;</a>
+              <a href="/all-products/pharmacrop-20-20-20-night" class="cs_dash_feat_link">View product &rarr;</a>
             </div>
           </div>
           <div class="cs_dash_feat_card wow fadeInUp" data-wow-delay="0.3s">
@@ -274,7 +274,7 @@ export default function Page() {
             <div class="cs_dash_feat_body">
               <h3>PharmaCrop Daydream</h3>
               <span class="cs_dash_feat_spec">Inhaled Liquid &nbsp;|&nbsp; THC 850mg &nbsp;|&nbsp; Sativa Dominant</span>
-              <a href="/all-products?category=inhaled-liquid" class="cs_dash_feat_link">View product &rarr;</a>
+              <a href="/all-products/pharmacrop-daydream" class="cs_dash_feat_link">View product &rarr;</a>
             </div>
           </div>
         </div>
