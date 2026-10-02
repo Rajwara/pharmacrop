@@ -455,12 +455,16 @@ export default function Page() {
               tableRow('fa-leaf', 'Dosage Form', p.dosageForm) +
               tableRow('fa-flask', 'THC Strength', p.thc) +
               tableRow('fa-flask', 'CBD Strength', p.cbd) +
+              tableRow('fa-flask', 'CBG Strength', p.cbg) +
+              tableRow('fa-flask', 'CBN Strength', p.cbn) +
               tableRow('fa-seedling', 'Plant Species', p.speciesRatio)
             );
 
             var isOralLiquid = p.category === 'Oral Liquid';
-            var hidePresentation = p.category === 'Dried Flower' || isOralLiquid || isPastilles;
+            var isInhaledLiquid = p.category === 'Inhaled Liquid';
+            var hidePresentation = p.category === 'Dried Flower' || isOralLiquid || isPastilles || isInhaledLiquid;
             var useSpectrumFields = isBroadSpectrum || isOralLiquid || isPastilles;
+            var terpeneLabel = isInhaledLiquid ? 'Terpene Profile' : 'Dominant Terpenes';
             var detailsTable2Html = useSpectrumFields ? (
               (hidePresentation ? '' : tableRow('fa-box-open', 'Presentation', p.presentation)) +
               tableRow('fa-box', 'Pack Size', p.packSize) +
@@ -473,7 +477,7 @@ export default function Page() {
             ) : (
               (hidePresentation ? '' : tableRow('fa-box-open', 'Presentation', p.presentation)) +
               tableRow('fa-box', 'Pack Size', p.packSize) +
-              tableRow('fa-wind', 'Dominant Terpenes', p.dominantTerpenes) +
+              tableRow('fa-wind', terpeneLabel, p.dominantTerpenes) +
               tableRow('fa-heart-pulse', 'Therapeutic Profile', p.therapeuticProfile) +
               tableRow('fa-shield-halved', 'TGA Category', p.tgaCategory) +
               tableRow('fa-scale-balanced', 'Schedule', p.schedule)
