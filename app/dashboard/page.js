@@ -159,7 +159,7 @@ export default function Page() {
       .cs_dash_cat_card { position: relative; border-radius: 16px; overflow: hidden; min-height: 380px; display: flex; align-items: flex-end; text-decoration: none; }
       .cs_dash_cat_card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
       .cs_dash_cat_card:hover img { transform: scale(1.06); }
-      .cs_dash_cat_card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(2,34,34,0.1) 30%, rgba(2,20,20,0.85) 100%); }
+      .cs_dash_cat_card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(120,220,166,0.28) 0%, rgba(2,34,34,0.15) 35%, rgba(2,20,20,0.85) 100%); }
       .cs_dash_cat_body { position: relative; z-index: 1; padding: 22px; width: 100%; }
       .cs_dash_cat_body_top { display: flex; align-items: center; justify-content: space-between; }
       .cs_dash_cat_body h3 { color: #fff; font-size: 18px; font-weight: 800; margin: 10px 0 8px; }
@@ -183,7 +183,7 @@ export default function Page() {
         </div>
         <div class="cs_dash_cat_grid">
           <a href="/all-products?category=dried-flower" class="cs_dash_cat_card wow fadeInUp">
-            <img src="/assets/img/dashboard/Dried%20Flower%20Category.webp" alt="Dried Flower">
+            <img src="/assets/img/Dashboard%20HCP/category%20images/Our%20Product%20Range-Dried%20Flower.webp" alt="Dried Flower">
             <div class="cs_dash_cat_body">
               <div class="cs_dash_cat_body_top"><span class="cs_dash_cat_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
               <h3>Dried Flower</h3>
@@ -191,7 +191,7 @@ export default function Page() {
             </div>
           </a>
           <a href="/all-products?category=oral-liquid" class="cs_dash_cat_card wow fadeInUp" data-wow-delay="0.1s">
-            <img src="/assets/img/dashboard/Oral%20Liquid%20Category.webp" alt="Oral Liquid">
+            <img src="/assets/img/Dashboard%20HCP/category%20images/Our%20Product%20Range-Oral%20Liquid.webp" alt="Oral Liquid">
             <div class="cs_dash_cat_body">
               <div class="cs_dash_cat_body_top"><span class="cs_dash_cat_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
               <h3>Oral Liquid</h3>
@@ -199,7 +199,7 @@ export default function Page() {
             </div>
           </a>
           <a href="/all-products?category=pastilles" class="cs_dash_cat_card wow fadeInUp" data-wow-delay="0.2s">
-            <img src="/assets/img/dashboard/Pastilles%20Category.webp" alt="Pastilles">
+            <img src="/assets/img/Dashboard%20HCP/category%20images/Our%20Product%20Range-Pastilles.webp" alt="Pastilles">
             <div class="cs_dash_cat_body">
               <div class="cs_dash_cat_body_top"><span class="cs_dash_cat_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
               <h3>Pastilles</h3>
@@ -207,7 +207,7 @@ export default function Page() {
             </div>
           </a>
           <a href="/all-products?category=inhaled-liquid" class="cs_dash_cat_card wow fadeInUp" data-wow-delay="0.3s">
-            <img src="/assets/img/dashboard/Inhaled%20liquid%20Category.webp" alt="Inhaled Liquid">
+            <img src="/assets/img/Dashboard%20HCP/category%20images/Our%20Product%20Range-Inhaled%20Liquid.webp" alt="Inhaled Liquid">
             <div class="cs_dash_cat_body">
               <div class="cs_dash_cat_body_top"><span class="cs_dash_cat_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
               <h3>Inhaled Liquid</h3>
