@@ -50,7 +50,7 @@ function slugify(name) {
     .replace(/(^-|-$)/g, "");
 }
 
-function buildProduct({ name, categorySlug, thc, cbd, cbg, cbn, packSize, price, strainType, speciesRatio, cultivar, tgaCategory, schedule, spectrum, excipients, energyKj, sugars, carbs, sodium, fat }) {
+function buildProduct({ name, categorySlug, thc, cbd, cbg, cbn, packSize, price, strainType, speciesRatio, cultivar, tgaCategory, schedule, spectrum, excipients, flavour, dietaryTags, energyKj, sugars, carbs, sodium, fat }) {
   const meta = categoryMeta[categorySlug];
   return {
     slug: slugify(name),
@@ -74,6 +74,8 @@ function buildProduct({ name, categorySlug, thc, cbd, cbg, cbn, packSize, price,
     tgaCategory: tgaCategory || "Unapproved Therapeutic Good – Category B",
     schedule: schedule || "Schedule 8 (S8)",
     spectrum: spectrum || "",
+    flavour: flavour || "",
+    dietaryTags: dietaryTags || "",
     energyKj: energyKj || "",
     sugars: sugars || "",
     carbs: carbs || "",
@@ -91,10 +93,10 @@ export const products = [
   buildProduct({ name: "Balance 10:10", categorySlug: "oral-liquid", thc: "10 mg/mL", cbd: "10 mg/mL", packSize: "30 mL bottle", price: "95", strainType: "Sativa", spectrum: "Full Spectrum", excipients: "MCT carrier oil" }),
   buildProduct({ name: "Rest Easy", categorySlug: "oral-liquid", thc: "5 mg/mL", cbd: "15 mg/mL", packSize: "30 mL bottle", price: "90", strainType: "Hybrid", speciesRatio: "Indica 50% : Sativa 50%", spectrum: "Broad Spectrum", excipients: "MCT carrier oil" }),
   buildProduct({ name: "Clarity 1:20", categorySlug: "oral-liquid", thc: "1 mg/mL", cbd: "20 mg/mL", packSize: "30 mL bottle", price: "85", strainType: "Indica", spectrum: "Full Spectrum", excipients: "MCT carrier oil" }),
-  buildProduct({ name: "Calm Pastilles", categorySlug: "pastilles", thc: "2.5 mg", cbd: "2.5 mg", packSize: "30 pastilles", price: "60", strainType: "Indica", energyKj: "37.5", sugars: "1.5", carbs: "2.19", sodium: "7.8", fat: "<0.01" }),
-  buildProduct({ name: "Focus Pastilles", categorySlug: "pastilles", thc: "5 mg", cbd: "0 mg", packSize: "30 pastilles", price: "65", strainType: "Indica" }),
-  buildProduct({ name: "Clear Flow", categorySlug: "inhaled-liquid", thc: "50 mg/mL", cbd: "0 mg/mL", packSize: "1 cartridge (0.5 mL)", price: "110", strainType: "Sativa" }),
-  buildProduct({ name: "Airis", categorySlug: "inhaled-liquid", thc: "25 mg/mL", cbd: "25 mg/mL", packSize: "1 cartridge (0.5 mL)", price: "100", strainType: "Sativa" }),
+  buildProduct({ name: "Calm Pastilles", categorySlug: "pastilles", thc: "2.5 mg", cbd: "2.5 mg", cbn: "2.5 mg", packSize: "30 pastilles", price: "60", strainType: "Indica", spectrum: "Full Spectrum", flavour: "Mixed Berry", dietaryTags: "Vegan Friendly | Gluten Free", energyKj: "37.5", sugars: "1.5", carbs: "2.19", sodium: "7.8", fat: "<0.01" }),
+  buildProduct({ name: "Focus Pastilles", categorySlug: "pastilles", thc: "5 mg", cbd: "0 mg", cbn: "0 mg", packSize: "30 pastilles", price: "65", strainType: "Indica", spectrum: "Broad Spectrum", flavour: "Citrus", dietaryTags: "Vegan Friendly | Gluten Free" }),
+  buildProduct({ name: "Clear Flow", categorySlug: "inhaled-liquid", thc: "50 mg/mL", cbd: "0 mg/mL", cbg: "0 mg/mL", cbn: "0 mg/mL", packSize: "1 cartridge (0.5 mL)", price: "110", strainType: "Sativa" }),
+  buildProduct({ name: "Airis", categorySlug: "inhaled-liquid", thc: "25 mg/mL", cbd: "25 mg/mL", cbg: "5 mg/mL", cbn: "5 mg/mL", packSize: "1 cartridge (0.5 mL)", price: "100", strainType: "Sativa" }),
 ];
 
 export function getProductBySlug(slug) {

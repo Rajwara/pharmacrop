@@ -38,7 +38,8 @@ export default async function Page({ params }) {
     )
     .join("");
 
-  const isBroadSpectrum = Boolean(product.cbg || product.cbn);
+  const isInhaledLiquid = product.category === "Inhaled Liquid";
+  const isBroadSpectrum = Boolean(product.cbg || product.cbn) && !isInhaledLiquid;
   const cannabinoidLine = [
     product.cbd ? `CBD ${product.cbd}` : "",
     product.cbg ? `CBG ${product.cbg}` : "",
@@ -66,7 +67,15 @@ export default async function Page({ params }) {
       statTile("fa-box", "Pack Size", product.packSize) +
       statTile("fa-gear", "Dosage Form", product.dosageForm);
 
-  const detailsTable1Html = isBroadSpectrum
+  const isPastilles = product.category === "Pastilles";
+  const detailsTable1Html = isPastilles
+    ? tableRow("fa-tag", "Product Name", product.name) +
+      tableRow("fa-seedling", "Cultivar", product.cultivar) +
+      tableRow("fa-leaf", "Dosage Form", product.dosageForm) +
+      tableRow("fa-flask", "THC Strength", product.thc) +
+      tableRow("fa-flask", "CBD Strength", product.cbd) +
+      tableRow("fa-flask", "CBN Strength", product.cbn)
+    : isBroadSpectrum
     ? tableRow("fa-tag", "Product Name", product.name) +
       tableRow("fa-seedling", "Cultivar", product.cultivar) +
       tableRow("fa-leaf", "Dosage Form", product.dosageForm) +
@@ -78,22 +87,26 @@ export default async function Page({ params }) {
       tableRow("fa-leaf", "Dosage Form", product.dosageForm) +
       tableRow("fa-flask", "THC Strength", product.thc) +
       tableRow("fa-flask", "CBD Strength", product.cbd) +
+      tableRow("fa-flask", "CBG Strength", product.cbg) +
+      tableRow("fa-flask", "CBN Strength", product.cbn) +
       tableRow("fa-seedling", "Plant Species", product.strainType ? `${product.strainType}${product.speciesRatio ? ` (${product.speciesRatio})` : ""}` : "");
 
   const isOralLiquid = product.category === "Oral Liquid";
-  const hidePresentation = product.category === "Dried Flower" || isOralLiquid;
-  const useSpectrumFields = isBroadSpectrum || isOralLiquid;
+  const hidePresentation = product.category === "Dried Flower" || isOralLiquid || isPastilles || isInhaledLiquid;
+  const useSpectrumFields = isBroadSpectrum || isOralLiquid || isPastilles;
+  const terpeneLabel = isInhaledLiquid ? "Terpene Profile" : "Dominant Terpenes";
   const detailsTable2Html = useSpectrumFields
     ? (hidePresentation ? "" : tableRow("fa-box-open", "Presentation", product.presentation)) +
       tableRow("fa-box", "Pack Size", product.packSize) +
       tableRow("fa-atom", "Spectrum", product.spectrum) +
+      tableRow("fa-ice-cream", "Flavour", product.flavour) +
       tableRow("fa-vial", "Excipients", product.excipients) +
       tableRow("fa-heart-pulse", "Therapeutic Profile", product.therapeuticProfile) +
       tableRow("fa-shield-halved", "TGA Category", product.tgaCategory) +
       tableRow("fa-scale-balanced", "Schedule", product.schedule)
     : (hidePresentation ? "" : tableRow("fa-box-open", "Presentation", product.presentation)) +
       tableRow("fa-box", "Pack Size", product.packSize) +
-      tableRow("fa-wind", "Dominant Terpenes", product.dominantTerpenes) +
+      tableRow("fa-wind", terpeneLabel, product.dominantTerpenes) +
       tableRow("fa-heart-pulse", "Therapeutic Profile", product.therapeuticProfile) +
       tableRow("fa-shield-halved", "TGA Category", product.tgaCategory) +
       tableRow("fa-scale-balanced", "Schedule", product.schedule);
@@ -231,7 +244,7 @@ export default async function Page({ params }) {
           <div class="wow fadeInUp" data-wow-delay="0.1s">
             <span class="cs_pd_origin_badge"><i class="fa-solid fa-leaf"></i> Australian Manufactured <i class="fa-solid fa-circle-info"></i></span>
             <h1>${product.name}</h1>
-            <span class="cs_pd_category">${product.category}${product.strainType ? ` | <span class="strain">${product.strainType}</span>` : ''}</span>
+            <span class="cs_pd_category">${product.category}${product.strainType && product.category !== 'Pastilles' ? ` | <span class="strain">${product.strainType}</span>` : ''}</span>
             ${product.price ? `<span class="cs_pd_rrp">RRP <strong>$${product.price}</strong>${product.packSize ? ` (${product.packSize} pack)` : ''}</span>` : ''}
             <p class="cs_pd_desc">A premium ${product.category.toLowerCase()} product, cultivated and processed to PharmaCrop&rsquo;s high quality standards. ${product.name} is available to healthcare professionals with detailed product information and supporting documentation.</p>
             <div class="cs_pd_stats">${statsHtml}
