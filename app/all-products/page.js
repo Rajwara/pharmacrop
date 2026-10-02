@@ -442,7 +442,7 @@ export default function Page() {
             var specLine = (p.cbg || p.cbn)
               ? [p.cbd ? 'CBD ' + p.cbd : '', p.cbg ? 'CBG ' + p.cbg : '', p.cbn ? 'CBN ' + p.cbn : ''].filter(Boolean).join(' &nbsp;|&nbsp; ')
               : [p.thc ? 'THC ' + p.thc : '', p.cbd ? 'CBD ' + p.cbd : ''].filter(Boolean).join(' &nbsp;|&nbsp; ');
-            var strainPill = p.speciesRatio ? '<span class="' + strainPillClass(p.speciesRatio) + '">' + p.speciesRatio + '</span>' : '<span></span>';
+            var strainPill = (p.speciesRatio && p.category !== 'Pastilles') ? '<span class="' + strainPillClass(p.speciesRatio) + '">' + p.speciesRatio + '</span>' : '<span></span>';
             var priceBlock = p.price
               ? '<div class="cs_prod_price"><span class="cs_prod_price_value">$' + p.price + '</span> <span class="cs_prod_price_rrp">RRP</span></div>'
               : '<div class="cs_prod_price"></div>';
