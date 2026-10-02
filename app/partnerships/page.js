@@ -111,11 +111,11 @@ export default function Page() {
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
         <div class="cs_card_1_group">
-          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed active wow fadeInLeft" data-src="/assets/img/General%20Images/Commercial%20Partnerships/Retail.webp">
+          <a href="#retail-partnership" class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed active wow fadeInLeft" data-src="/assets/img/General%20Images/Commercial%20Partnerships/Retail.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
-                <a href="/" class="cs_card_tag">Home</a>
-                <a href="/partnerships" class="cs_card_tag">Partnerships</a>
+                <span class="cs_card_tag">Home</span>
+                <span class="cs_card_tag">Partnerships</span>
               </div>
             </div>
             <div class="cs_card_bottom">
@@ -123,17 +123,17 @@ export default function Page() {
               <h2 class="cs_card_title cs_white_color cs_fs_32">RETAIL</h2>
               <p class="cs_card_subtitle mb-0 cs_white_color">PharmaCrop branded, ready-to-market medicines.</p>
             </div>
-            <a href="#retail-partnership" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+            <span class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
               </svg>
-            </a>
-          </div>
-          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/General%20Images/Commercial%20Partnerships/Green%20Label.webp">
+            </span>
+          </a>
+          <a href="#green-label-partnership" class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/General%20Images/Commercial%20Partnerships/Green%20Label.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
-                <a href="/" class="cs_card_tag">Home</a>
-                <a href="/partnerships" class="cs_card_tag">Partnerships</a>
+                <span class="cs_card_tag">Home</span>
+                <span class="cs_card_tag">Partnerships</span>
               </div>
             </div>
             <div class="cs_card_bottom">
@@ -141,17 +141,17 @@ export default function Page() {
               <h2 class="cs_card_title cs_white_color cs_fs_32">GREEN LABEL</h2>
               <p class="cs_card_subtitle mb-0 cs_white_color">PharmaCrop products, exclusively branded for your business.</p>
             </div>
-            <a href="#green-label-partnership" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+            <span class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
               </svg>
-            </a>
-          </div>
-          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/General%20Images/Commercial%20Partnerships/White%20Label.webp">
+            </span>
+          </a>
+          <a href="#white-label-partnership" class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/General%20Images/Commercial%20Partnerships/White%20Label.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
-                <a href="/" class="cs_card_tag">Home</a>
-                <a href="/partnerships" class="cs_card_tag">Partnerships</a>
+                <span class="cs_card_tag">Home</span>
+                <span class="cs_card_tag">Partnerships</span>
               </div>
             </div>
             <div class="cs_card_bottom">
@@ -159,17 +159,17 @@ export default function Page() {
               <h2 class="cs_card_title cs_white_color cs_fs_32">WHITE LABEL</h2>
               <p class="cs_card_subtitle mb-0 cs_white_color">Your brand, supported by PharmaCrop cultivation and GMP packaging.</p>
             </div>
-            <a href="#white-label-partnership" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+            <span class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
               </svg>
-            </a>
-          </div>
-          <div class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed wow fadeInRight" data-src="/assets/img/General%20Images/Commercial%20Partnerships/Bulk%20Flower.webp">
+            </span>
+          </a>
+          <a href="#bulk-flower-partnership" class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed wow fadeInRight" data-src="/assets/img/General%20Images/Commercial%20Partnerships/Bulk%20Flower.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
-                <a href="/" class="cs_card_tag">Home</a>
-                <a href="/partnerships" class="cs_card_tag">Partnerships</a>
+                <span class="cs_card_tag">Home</span>
+                <span class="cs_card_tag">Partnerships</span>
               </div>
             </div>
             <div class="cs_card_bottom">
@@ -177,12 +177,12 @@ export default function Page() {
               <h2 class="cs_card_title cs_white_color cs_fs_32">BULK FLOWER</h2>
               <p class="cs_card_subtitle mb-0 cs_white_color">Australian-grown, GMP-certified flower supplied in bulk.</p>
             </div>
-            <a href="#bulk-flower-partnership" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
+            <span class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
               </svg>
-            </a>
-          </div>
+            </span>
+          </a>
         </div>
       </div>
       <div class="cs_height_100 cs_height_lg_70"></div>
