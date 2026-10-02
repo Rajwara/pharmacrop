@@ -1,10 +1,58 @@
 import Script from "next/script";
+import { products } from "./products-data";
 
 export const metadata = {
   title: "All Products - PharmaCrop HCP Portal",
 };
 
 export default function Page() {
+  const counts = {
+    all: products.length,
+    "dried-flower": products.filter((p) => p.categorySlug === "dried-flower").length,
+    "oral-liquid": products.filter((p) => p.categorySlug === "oral-liquid").length,
+    pastilles: products.filter((p) => p.categorySlug === "pastilles").length,
+    "inhaled-liquid": products.filter((p) => p.categorySlug === "inhaled-liquid").length,
+  };
+  const packSizes = Array.from(new Set(products.map((p) => p.packSize)));
+
+  function specLine(p) {
+    const parts = [];
+    if (p.thc) parts.push(`THC ${p.thc}`);
+    if (p.cbd) parts.push(`CBD ${p.cbd}`);
+    if (p.cbg) parts.push(`CBG ${p.cbg}`);
+    if (p.cbn) parts.push(`CBN ${p.cbn}`);
+    return parts.join(" &nbsp;|&nbsp; ");
+  }
+
+  function strainPillHtml(p) {
+    if (!p.strainType || p.category === "Pastilles") return "";
+    const cls = `cs_prod_strain_pill cs_prod_strain_${p.strainType.toLowerCase()}`;
+    const text = p.strainType === "Hybrid" && p.speciesRatio ? `${p.strainType} &ndash; ${p.speciesRatio}` : p.strainType;
+    return `<span class="${cls}">${text}</span>`;
+  }
+
+  const cardsHtml = products
+    .map(
+      (p) => `
+          <a class="cs_prod_card" href="/all-products/${p.slug}" data-name="${p.name.toLowerCase()}" data-category="${p.categorySlug}" data-strength="${p.strength}" data-packsize="${p.packSize}">
+            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Manufactured</span><img src="${p.image}" alt="${p.name}"></div>
+            <div class="cs_prod_body">
+              <h3>${p.name}</h3>
+              <span class="cs_prod_category">${p.category}</span>
+              <span class="cs_prod_spec">${specLine(p)}</span>
+              ${p.dietaryTags ? `<span class="cs_prod_dietary">${p.dietaryTags}</span>` : ""}
+              <div class="cs_prod_meta_row">
+                <div>${strainPillHtml(p)}<span class="cs_prod_packsize">${p.packSize}</span></div>
+                <div class="cs_prod_price"><span class="cs_prod_price_value">$${p.price}</span> <span class="cs_prod_price_rrp">RRP</span></div>
+              </div>
+              <span class="cs_prod_link">View Product &rarr;</span>
+            </div>
+          </a>`
+    )
+    .join("");
+
+  const packSizeOptionsHtml = packSizes.map((size) => `<option value="${size}">${size}</option>`).join("");
+
   return (
     <>
     <div
@@ -149,11 +197,11 @@ export default function Page() {
       }
     </style>
         <div class="cs_prod_pills">
-          <button type="button" class="cs_prod_pill active" data-prod-pill="all">All Products (10)</button>
-          <button type="button" class="cs_prod_pill" data-prod-pill="dried-flower">Dried Flower (3)</button>
-          <button type="button" class="cs_prod_pill" data-prod-pill="oral-liquid">Oral Liquid (3)</button>
-          <button type="button" class="cs_prod_pill" data-prod-pill="pastilles">Pastilles (2)</button>
-          <button type="button" class="cs_prod_pill" data-prod-pill="inhaled-liquid">Inhaled Liquid (2)</button>
+          <button type="button" class="cs_prod_pill active" data-prod-pill="all">All Products (${counts.all})</button>
+          <button type="button" class="cs_prod_pill" data-prod-pill="dried-flower">Dried Flower (${counts["dried-flower"]})</button>
+          <button type="button" class="cs_prod_pill" data-prod-pill="oral-liquid">Oral Liquid (${counts["oral-liquid"]})</button>
+          <button type="button" class="cs_prod_pill" data-prod-pill="pastilles">Pastilles (${counts.pastilles})</button>
+          <button type="button" class="cs_prod_pill" data-prod-pill="inhaled-liquid">Inhaled Liquid (${counts["inhaled-liquid"]})</button>
         </div>
         <div class="cs_prod_bar">
           <div class="cs_prod_search">
@@ -183,16 +231,13 @@ export default function Page() {
             <label>Pack size</label>
             <select data-prod-packsize>
               <option value="all">All pack sizes</option>
-              <option value="10g pack">10g pack</option>
-              <option value="30 mL bottle">30 mL bottle</option>
-              <option value="30 pastilles">30 pastilles</option>
-              <option value="1 cartridge (0.5 mL)">1 cartridge (0.5 mL)</option>
+              ${packSizeOptionsHtml}
             </select>
           </div>
           <button type="button" class="cs_prod_clear" data-prod-clear>Clear filters</button>
         </div>
         <div class="cs_prod_meta_row">
-          <span class="cs_prod_count" data-prod-count>10 PRODUCTS</span>
+          <span class="cs_prod_count" data-prod-count>${products.length} PRODUCTS</span>
           <div class="cs_prod_sort_view">
             <select data-prod-sort>
               <option value="featured">Sort by: Featured</option>
@@ -251,139 +296,7 @@ export default function Page() {
     </style>
     <section class="cs_prod_grid_section">
       <div class="container">
-        <div class="cs_prod_grid" data-prod-grid>
-          <a class="cs_prod_card" href="/all-products/sunridge-22" data-name="sunridge 22" data-category="dried-flower" data-strength="thc" data-packsize="10g pack">
-            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Manufactured</span><img src="/assets/img/dashboard/Dried%20Flower%20Category.webp" alt="Sunridge 22"></div>
-            <div class="cs_prod_body">
-              <h3>Sunridge 22</h3>
-              <span class="cs_prod_category">Dried Flower</span>
-              <span class="cs_prod_spec">THC 22% &nbsp;|&nbsp; CBD &lt;1%</span>
-              <div class="cs_prod_meta_row">
-                <div><span class="cs_prod_strain_pill cs_prod_strain_indica">Indica</span><span class="cs_prod_packsize">10g pack</span></div>
-                <div class="cs_prod_price"><span class="cs_prod_price_value">$135</span> <span class="cs_prod_price_rrp">RRP</span></div>
-              </div>
-              <span class="cs_prod_link">View Product &rarr;</span>
-            </div>
-          </a>
-          <a class="cs_prod_card" href="/all-products/balance-10-10" data-name="balance 10:10" data-category="oral-liquid" data-strength="balanced" data-packsize="30 mL bottle">
-            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Manufactured</span><img src="/assets/img/dashboard/Oral%20Liquid%20Category.webp" alt="Balance 10:10"></div>
-            <div class="cs_prod_body">
-              <h3>Balance 10:10</h3>
-              <span class="cs_prod_category">Oral Liquid</span>
-              <span class="cs_prod_spec">THC 10 mg/mL &nbsp;|&nbsp; CBD 10 mg/mL</span>
-              <div class="cs_prod_meta_row">
-                <div><span class="cs_prod_strain_pill cs_prod_strain_sativa">Sativa</span><span class="cs_prod_packsize">30 mL bottle</span></div>
-                <div class="cs_prod_price"><span class="cs_prod_price_value">$95</span> <span class="cs_prod_price_rrp">RRP</span></div>
-              </div>
-              <span class="cs_prod_link">View Product &rarr;</span>
-            </div>
-          </a>
-          <a class="cs_prod_card" href="/all-products/calm-pastilles" data-name="calm pastilles" data-category="pastilles" data-strength="balanced" data-packsize="30 pastilles">
-            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Manufactured</span><img src="/assets/img/dashboard/Pastilles%20Category.webp" alt="Calm Pastilles"></div>
-            <div class="cs_prod_body">
-              <h3>Calm Pastilles</h3>
-              <span class="cs_prod_category">Pastilles</span>
-              <span class="cs_prod_spec">THC 2.5 mg &nbsp;|&nbsp; CBD 2.5 mg</span>
-              <span class="cs_prod_dietary">Vegan Friendly | Gluten Free</span>
-              <div class="cs_prod_meta_row">
-                <div><span class="cs_prod_packsize">30 pastilles</span></div>
-                <div class="cs_prod_price"><span class="cs_prod_price_value">$60</span> <span class="cs_prod_price_rrp">RRP</span></div>
-              </div>
-              <span class="cs_prod_link">View Product &rarr;</span>
-            </div>
-          </a>
-          <a class="cs_prod_card" href="/all-products/clear-flow" data-name="clear flow" data-category="inhaled-liquid" data-strength="thc" data-packsize="1 cartridge (0.5 mL)">
-            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Manufactured</span><img src="/assets/img/dashboard/Inhaled%20liquid%20Category.webp" alt="Clear Flow"></div>
-            <div class="cs_prod_body">
-              <h3>Clear Flow</h3>
-              <span class="cs_prod_category">Inhaled Liquid</span>
-              <span class="cs_prod_spec">THC 50 mg/mL &nbsp;|&nbsp; CBD 0 mg/mL</span>
-              <div class="cs_prod_meta_row">
-                <div><span class="cs_prod_strain_pill cs_prod_strain_sativa">Sativa</span><span class="cs_prod_packsize">1 cartridge (0.5 mL)</span></div>
-                <div class="cs_prod_price"><span class="cs_prod_price_value">$110</span> <span class="cs_prod_price_rrp">RRP</span></div>
-              </div>
-              <span class="cs_prod_link">View Product &rarr;</span>
-            </div>
-          </a>
-          <a class="cs_prod_card" href="/all-products/meadowlands-18" data-name="meadowlands 18" data-category="dried-flower" data-strength="thc" data-packsize="10g pack">
-            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Manufactured</span><img src="/assets/img/dashboard/PharmaCrop%20THC25%20Dried%20Flower.webp" alt="Meadowlands 18"></div>
-            <div class="cs_prod_body">
-              <h3>Meadowlands 18</h3>
-              <span class="cs_prod_category">Dried Flower</span>
-              <span class="cs_prod_spec">THC 18% &nbsp;|&nbsp; CBD &lt;1%</span>
-              <div class="cs_prod_meta_row">
-                <div><span class="cs_prod_strain_pill cs_prod_strain_sativa">Sativa</span><span class="cs_prod_packsize">10g pack</span></div>
-                <div class="cs_prod_price"><span class="cs_prod_price_value">$120</span> <span class="cs_prod_price_rrp">RRP</span></div>
-              </div>
-              <span class="cs_prod_link">View Product &rarr;</span>
-            </div>
-          </a>
-          <a class="cs_prod_card" href="/all-products/rest-easy" data-name="rest easy" data-category="oral-liquid" data-strength="cbd" data-packsize="30 mL bottle">
-            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Manufactured</span><img src="/assets/img/dashboard/pharmaCrop%20CBD100%20Oral%20Liquid.webp" alt="Rest Easy"></div>
-            <div class="cs_prod_body">
-              <h3>Rest Easy</h3>
-              <span class="cs_prod_category">Oral Liquid</span>
-              <span class="cs_prod_spec">THC 5 mg/mL &nbsp;|&nbsp; CBD 15 mg/mL</span>
-              <div class="cs_prod_meta_row">
-                <div><span class="cs_prod_strain_pill cs_prod_strain_hybrid">Hybrid &ndash; Indica 50% : Sativa 50%</span><span class="cs_prod_packsize">30 mL bottle</span></div>
-                <div class="cs_prod_price"><span class="cs_prod_price_value">$90</span> <span class="cs_prod_price_rrp">RRP</span></div>
-              </div>
-              <span class="cs_prod_link">View Product &rarr;</span>
-            </div>
-          </a>
-          <a class="cs_prod_card" href="/all-products/focus-pastilles" data-name="focus pastilles" data-category="pastilles" data-strength="thc" data-packsize="30 pastilles">
-            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Manufactured</span><img src="/assets/img/dashboard/pharmaCrop%20Balance%20Pastilles.webp" alt="Focus Pastilles"></div>
-            <div class="cs_prod_body">
-              <h3>Focus Pastilles</h3>
-              <span class="cs_prod_category">Pastilles</span>
-              <span class="cs_prod_spec">THC 5 mg &nbsp;|&nbsp; CBD 0 mg</span>
-              <span class="cs_prod_dietary">Vegan Friendly | Gluten Free</span>
-              <div class="cs_prod_meta_row">
-                <div><span class="cs_prod_packsize">30 pastilles</span></div>
-                <div class="cs_prod_price"><span class="cs_prod_price_value">$65</span> <span class="cs_prod_price_rrp">RRP</span></div>
-              </div>
-              <span class="cs_prod_link">View Product &rarr;</span>
-            </div>
-          </a>
-          <a class="cs_prod_card" href="/all-products/airis" data-name="airis" data-category="inhaled-liquid" data-strength="balanced" data-packsize="1 cartridge (0.5 mL)">
-            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Manufactured</span><img src="/assets/img/dashboard/pharmaCrop%20Relief%20Inhaled%20Liquid.webp" alt="Airis"></div>
-            <div class="cs_prod_body">
-              <h3>Airis</h3>
-              <span class="cs_prod_category">Inhaled Liquid</span>
-              <span class="cs_prod_spec">THC 25 mg/mL &nbsp;|&nbsp; CBD 25 mg/mL</span>
-              <div class="cs_prod_meta_row">
-                <div><span class="cs_prod_strain_pill cs_prod_strain_sativa">Sativa</span><span class="cs_prod_packsize">1 cartridge (0.5 mL)</span></div>
-                <div class="cs_prod_price"><span class="cs_prod_price_value">$100</span> <span class="cs_prod_price_rrp">RRP</span></div>
-              </div>
-              <span class="cs_prod_link">View Product &rarr;</span>
-            </div>
-          </a>
-          <a class="cs_prod_card" href="/all-products/highland-25" data-name="highland 25" data-category="dried-flower" data-strength="thc" data-packsize="10g pack">
-            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Manufactured</span><img src="/assets/img/dashboard/Dried%20Flower%20Category.webp" alt="Highland 25"></div>
-            <div class="cs_prod_body">
-              <h3>Highland 25</h3>
-              <span class="cs_prod_category">Dried Flower</span>
-              <span class="cs_prod_spec">THC 25% &nbsp;|&nbsp; CBD &lt;1%</span>
-              <div class="cs_prod_meta_row">
-                <div><span class="cs_prod_strain_pill cs_prod_strain_hybrid">Hybrid &ndash; Indica 60% : Sativa 40%</span><span class="cs_prod_packsize">10g pack</span></div>
-                <div class="cs_prod_price"><span class="cs_prod_price_value">$150</span> <span class="cs_prod_price_rrp">RRP</span></div>
-              </div>
-              <span class="cs_prod_link">View Product &rarr;</span>
-            </div>
-          </a>
-          <a class="cs_prod_card" href="/all-products/clarity-1-20" data-name="clarity 1:20" data-category="oral-liquid" data-strength="cbd" data-packsize="30 mL bottle">
-            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Manufactured</span><img src="/assets/img/dashboard/Oral%20Liquid%20Category.webp" alt="Clarity 1:20"></div>
-            <div class="cs_prod_body">
-              <h3>Clarity 1:20</h3>
-              <span class="cs_prod_category">Oral Liquid</span>
-              <span class="cs_prod_spec">THC 1 mg/mL &nbsp;|&nbsp; CBD 20 mg/mL</span>
-              <div class="cs_prod_meta_row">
-                <div><span class="cs_prod_strain_pill cs_prod_strain_indica">Indica</span><span class="cs_prod_packsize">30 mL bottle</span></div>
-                <div class="cs_prod_price"><span class="cs_prod_price_value">$85</span> <span class="cs_prod_price_rrp">RRP</span></div>
-              </div>
-              <span class="cs_prod_link">View Product &rarr;</span>
-            </div>
-          </a>
+        <div class="cs_prod_grid" data-prod-grid>${cardsHtml}
         </div>
         <div class="cs_prod_empty" data-prod-empty>
           <p>No products match your filters. Try clearing them to see the full portfolio.</p>

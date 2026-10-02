@@ -23,6 +23,14 @@ export default async function Page({ params }) {
   }
   const related = getRelatedProducts(product, 4);
 
+  function relatedSpecLine(r) {
+    const parts = [];
+    if (r.thc) parts.push(`THC ${r.thc}`);
+    if (r.cbd) parts.push(`CBD ${r.cbd}`);
+    if (r.cbg) parts.push(`CBG ${r.cbg}`);
+    if (r.cbn) parts.push(`CBN ${r.cbn}`);
+    return parts.join(" &nbsp;|&nbsp; ");
+  }
   const relatedHtml = related
     .map(
       (r) => `
@@ -31,10 +39,18 @@ export default async function Page({ params }) {
             <div class="cs_pd_related_body">
               <h4>${r.name}</h4>
               <span>${r.category}</span>
-              <span class="cs_pd_related_spec">THC ${r.thc} &nbsp;|&nbsp; CBD ${r.cbd}<br>${r.packSize}</span>
+              <span class="cs_pd_related_spec">${relatedSpecLine(r)}<br>${r.packSize}</span>
               <span class="cs_pd_related_link">View Product <i class="fa-solid fa-arrow-right"></i></span>
             </div>
           </a>`
+    )
+    .join("");
+
+  const galleryImages = product.images && product.images.length ? product.images : [product.image];
+  const galleryThumbsHtml = galleryImages
+    .map(
+      (src, i) =>
+        `\n              <button type="button" class="${i === 0 ? "active" : ""}" data-pd-thumb="${src}"><img src="${src}" alt="${product.name} thumbnail ${i + 1}"></button>`
     )
     .join("");
 
@@ -235,10 +251,7 @@ export default async function Page({ params }) {
         <div class="cs_pd_hero_grid">
           <div class="wow fadeInUp">
             <div class="cs_pd_gallery_main"><img src="${product.image}" alt="${product.name}" data-pd-main-img></div>
-            <div class="cs_pd_gallery_thumbs">
-              <button type="button" class="active" data-pd-thumb="${product.image}"><img src="${product.image}" alt="${product.name} thumbnail 1"></button>
-              <button type="button" data-pd-thumb="${product.altImage}"><img src="${product.altImage}" alt="${product.name} thumbnail 2"></button>
-              <button type="button" data-pd-thumb="${product.image}"><img src="${product.image}" alt="${product.name} thumbnail 3"></button>
+            <div class="cs_pd_gallery_thumbs">${galleryThumbsHtml}
             </div>
           </div>
           <div class="wow fadeInUp" data-wow-delay="0.1s">
