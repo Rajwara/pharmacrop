@@ -492,7 +492,7 @@ export default function Page() {
               '<div class="cs_pd_gallery_main"><img src="' + p.image + '" alt="' + p.name + '" data-pd-main-img></div>' +
               '<div class="cs_pd_gallery_thumbs">' + thumbsHtml + '</div></div>' +
               '<div class="wow fadeInUp" data-wow-delay="0.1s">' +
-              '<span class="cs_pd_origin_badge"><i class="fa-solid fa-leaf"></i> Australian Grown <i class="fa-solid fa-circle-info"></i></span><h1>' + p.name + '</h1>' +
+              '<span class="cs_pd_origin_badge"><i class="fa-solid fa-leaf"></i> Australian Manufactured <i class="fa-solid fa-circle-info"></i></span><h1>' + p.name + '</h1>' +
               '<span class="cs_pd_category">' + p.category + (p.speciesRatio !== '—' ? ' | <span class="strain">' + p.speciesRatio + '</span>' : '') + '</span>' +
               (p.price !== '—' ? '<span class="cs_pd_rrp">RRP <strong>$' + p.price + '</strong>' + (p.packSize !== '—' ? ' (' + p.packSize + ' pack)' : '') + '</span>' : '') +
               '<p class="cs_pd_desc">A premium ' + p.category.toLowerCase() + ' product, cultivated and processed to PharmaCrop’s high quality standards. ' + p.name + ' is available to healthcare professionals with detailed product information and supporting documentation.</p>' +
