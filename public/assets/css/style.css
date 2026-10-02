@@ -5193,6 +5193,7 @@ hr {
 .cs_card.cs_style_1 {
   position: relative;
   padding: 24px;
+  text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
