@@ -60,7 +60,7 @@ export default async function Page({ params }) {
     ? statTile("fa-flask", "Cannabinoids", cannabinoidLine) +
       statTile("fa-atom", "Spectrum", product.spectrum) +
       statTile("fa-box", "Pack Size", product.packSize) +
-      statTile("fa-tag", "RRP", product.price ? `$${product.price} (to patient)` : "")
+      statTile("fa-tag", "RRP", product.price ? `$${product.price}` : "")
     : statTile("fa-leaf", "THC", product.thc) +
       statTile("fa-flask", "CBD", product.cbd) +
       statTile("fa-box", "Pack Size", product.packSize) +
