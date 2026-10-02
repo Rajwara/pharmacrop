@@ -366,6 +366,7 @@ export default function Page() {
               tgaCategory: acf.tga_category || '—',
               schedule: acf.schedule || '—',
               spectrum: acf.spectrum || '',
+              flavour: acf.flavour || acf.flavor || '',
               energyKj: acf.energy_kj || '',
               sugars: acf.sugars || acf.sugars_g || '',
               carbs: acf.carbs || acf.carbs_g || '',
@@ -433,7 +434,15 @@ export default function Page() {
               statTile('fa-gear', 'Dosage Form', p.dosageForm)
             );
 
-            var detailsTable1Html = isBroadSpectrum ? (
+            var isPastilles = p.category === 'Pastilles';
+            var detailsTable1Html = isPastilles ? (
+              tableRow('fa-tag', 'Product Name', p.name) +
+              tableRow('fa-seedling', 'Cultivar', p.cultivar) +
+              tableRow('fa-leaf', 'Dosage Form', p.dosageForm) +
+              tableRow('fa-flask', 'THC Strength', p.thc) +
+              tableRow('fa-flask', 'CBD Strength', p.cbd) +
+              tableRow('fa-flask', 'CBN Strength', p.cbn)
+            ) : isBroadSpectrum ? (
               tableRow('fa-tag', 'Product Name', p.name) +
               tableRow('fa-seedling', 'Cultivar', p.cultivar) +
               tableRow('fa-leaf', 'Dosage Form', p.dosageForm) +
@@ -450,12 +459,13 @@ export default function Page() {
             );
 
             var isOralLiquid = p.category === 'Oral Liquid';
-            var hidePresentation = p.category === 'Dried Flower' || isOralLiquid;
-            var useSpectrumFields = isBroadSpectrum || isOralLiquid;
+            var hidePresentation = p.category === 'Dried Flower' || isOralLiquid || isPastilles;
+            var useSpectrumFields = isBroadSpectrum || isOralLiquid || isPastilles;
             var detailsTable2Html = useSpectrumFields ? (
               (hidePresentation ? '' : tableRow('fa-box-open', 'Presentation', p.presentation)) +
               tableRow('fa-box', 'Pack Size', p.packSize) +
               tableRow('fa-atom', 'Spectrum', p.spectrum) +
+              tableRow('fa-ice-cream', 'Flavour', p.flavour) +
               tableRow('fa-vial', 'Excipients', p.excipients) +
               tableRow('fa-heart-pulse', 'Therapeutic Profile', p.therapeuticProfile) +
               tableRow('fa-shield-halved', 'TGA Category', p.tgaCategory) +
@@ -495,7 +505,7 @@ export default function Page() {
               '<div class="cs_pd_gallery_thumbs">' + thumbsHtml + '</div></div>' +
               '<div class="wow fadeInUp" data-wow-delay="0.1s">' +
               '<span class="cs_pd_origin_badge"><i class="fa-solid fa-leaf"></i> Australian Manufactured <i class="fa-solid fa-circle-info"></i></span><h1>' + p.name + '</h1>' +
-              '<span class="cs_pd_category">' + p.category + (p.speciesRatio !== '—' ? ' | <span class="strain">' + p.speciesRatio + '</span>' : '') + '</span>' +
+              '<span class="cs_pd_category">' + p.category + (p.speciesRatio !== '—' && p.category !== 'Pastilles' ? ' | <span class="strain">' + p.speciesRatio + '</span>' : '') + '</span>' +
               (p.price !== '—' ? '<span class="cs_pd_rrp">RRP <strong>$' + p.price + '</strong>' + (p.packSize !== '—' ? ' (' + p.packSize + ' pack)' : '') + '</span>' : '') +
               '<p class="cs_pd_desc">A premium ' + p.category.toLowerCase() + ' product, cultivated and processed to PharmaCrop’s high quality standards. ' + p.name + ' is available to healthcare professionals with detailed product information and supporting documentation.</p>' +
               '<div class="cs_pd_stats">' + statsHtml +
