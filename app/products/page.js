@@ -109,7 +109,7 @@ export default function Page() {
       <div class="container">
         <div class="cs_portfolio_head wow fadeInUp">
           <span class="cs_portfolio_eyebrow">Our Portfolio</span>
-          <h2>AUSTRALIAN-MADE MEDICINES ACROSS KEY DOSAGE FORMS.</h2>
+          <h2>FOUR DOSAGE FORMS. ONE TRUSTED PORTFOLIO.</h2>
           <p>An established Australian product portfolio spanning dried flower, oral liquid, pastilles and inhaled liquid.</p>
         </div>
         <div class="cs_portfolio_grid">
