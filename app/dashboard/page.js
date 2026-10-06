@@ -1,10 +1,60 @@
 import Script from "next/script";
+import { products } from "./../all-products/products-data";
 
 export const metadata = {
   title: "Dashboard - PharmaCrop HCP Portal",
 };
 
+const featuredSlugs = [
+  "noosa-selects-t19-hybrid",
+  "pharmacrop-horizon-30-30",
+  "pharmacrop-20-20-20-night",
+  "pharmacrop-daydream",
+];
+
 export default function Page() {
+  function specLine(p) {
+    const parts = [];
+    if (p.thc) parts.push(`THC ${p.thc}`);
+    if (p.cbd) parts.push(`CBD ${p.cbd}`);
+    if (p.cbg) parts.push(`CBG ${p.cbg}`);
+    if (p.cbn) parts.push(`CBN ${p.cbn}`);
+    return parts.join(" &nbsp;|&nbsp; ");
+  }
+
+  function strainPillHtml(p) {
+    if (!p.strainType || p.category === "Pastilles") return "";
+    const cls = `cs_dash_feat_strain_pill cs_dash_feat_strain_${p.strainType.toLowerCase()}`;
+    const text = p.strainType === "Hybrid" && p.speciesRatio ? `${p.strainType} &ndash; ${p.speciesRatio}` : p.strainType;
+    return `<span class="${cls}">${text}</span>`;
+  }
+
+  const featuredProducts = featuredSlugs.map((slug) => products.find((p) => p.slug === slug)).filter(Boolean);
+
+  const featuredCardsHtml = featuredProducts
+    .map(
+      (p, i) => `
+          <div class="cs_dash_feat_card wow fadeInUp"${i > 0 ? ` data-wow-delay="0.${i}s"` : ""}>
+            <div class="cs_dash_feat_img">
+              <span class="cs_dash_feat_badge">&#127807; Australian Manufactured</span>
+              <img src="${p.image}" alt="${p.name}">
+            </div>
+            <div class="cs_dash_feat_body">
+              <h3>${p.name}</h3>
+              <span class="cs_dash_feat_category">${p.category}</span>
+              <span class="cs_dash_feat_spec">${specLine(p)}</span>
+              ${p.dietaryTags ? `<span class="cs_dash_feat_dietary">${p.dietaryTags}</span>` : ""}
+              ${strainPillHtml(p) ? `<div class="cs_dash_feat_pill_row">${strainPillHtml(p)}</div>` : ""}
+              <div class="cs_dash_feat_meta_row">
+                <span class="cs_dash_feat_packsize">${p.packSize}</span>
+                <div class="cs_dash_feat_price"><span class="cs_dash_feat_price_value">$${p.price}</span> <span class="cs_dash_feat_price_rrp">RRP</span></div>
+              </div>
+              <a href="/all-products/${p.slug}" class="cs_dash_feat_link">View product &rarr;</a>
+            </div>
+          </div>`
+    )
+    .join("");
+
   return (
     <>
     <div
@@ -219,14 +269,27 @@ export default function Page() {
     <!-- Start Featured Products Section -->
     <style>
       .cs_dash_feat_grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-      .cs_dash_feat_card { background: #fff; border: 1px solid rgba(2,66,66,0.1); border-radius: 16px; overflow: hidden; }
-      .cs_dash_feat_img { height: 260px; overflow: hidden; }
+      .cs_dash_feat_card { background: #fff; border: 1px solid rgba(2,66,66,0.1); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; }
+      .cs_dash_feat_img { height: 220px; overflow: hidden; position: relative; }
       .cs_dash_feat_img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
       .cs_dash_feat_card:hover .cs_dash_feat_img img { transform: scale(1.06); }
-      .cs_dash_feat_body { padding: 20px; }
-      .cs_dash_feat_body h3 { color: #024242; font-size: 16px; font-weight: 800; margin: 0 0 8px; line-height: 1.4; }
-      .cs_dash_feat_spec { color: #78dca6; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px; display: block; margin-bottom: 14px; }
-      .cs_dash_feat_link { color: #024242; font-weight: 700; font-size: 13px; text-decoration: none; }
+      .cs_dash_feat_badge { position: absolute; top: 14px; left: 14px; display: inline-flex; align-items: center; gap: 6px; background: #fff; border-radius: 20px; padding: 6px 14px; font-size: 12px; font-weight: 700; color: #024242; box-shadow: 0 4px 12px rgba(2,66,66,0.15); }
+      .cs_dash_feat_body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+      .cs_dash_feat_body h3 { color: #024242; font-size: 16px; font-weight: 800; margin: 0; }
+      .cs_dash_feat_category { color: #999; font-size: 13px; margin: 4px 0 8px; display: block; }
+      .cs_dash_feat_spec { color: #666; font-size: 13px; font-weight: 600; display: block; margin-bottom: 14px; }
+      .cs_dash_feat_dietary { color: #024242; font-size: 12px; font-weight: 700; display: block; margin: -8px 0 14px; }
+      .cs_dash_feat_pill_row { margin-bottom: 10px; }
+      .cs_dash_feat_strain_pill { display: inline-block; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 700; background: #eef1ee; color: #024242; }
+      .cs_dash_feat_strain_indica { background: #e6e0f5; color: #5b3fa0; }
+      .cs_dash_feat_strain_sativa { background: #e1f3e1; color: #2f7d32; }
+      .cs_dash_feat_strain_hybrid { background: #faecd6; color: #b5751f; }
+      .cs_dash_feat_meta_row { display: flex; flex-wrap: nowrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 16px; }
+      .cs_dash_feat_packsize { display: block; color: #999; font-size: 12.5px; }
+      .cs_dash_feat_price { text-align: right; }
+      .cs_dash_feat_price_value { color: #024242; font-size: 17px; font-weight: 800; }
+      .cs_dash_feat_price_rrp { color: #024242; font-size: 12px; font-weight: 700; }
+      .cs_dash_feat_link { color: #024242; font-weight: 700; font-size: 13px; text-decoration: none; margin-top: auto; }
       .cs_dash_feat_link:hover { color: #78dca6; }
       @media (max-width: 991px) {
         .cs_dash_feat_grid { grid-template-columns: repeat(2, 1fr); }
@@ -244,39 +307,7 @@ export default function Page() {
           </div>
           <a href="/all-products" class="cs_dash_section_link">View all products &rarr;</a>
         </div>
-        <div class="cs_dash_feat_grid">
-          <div class="cs_dash_feat_card wow fadeInUp">
-            <div class="cs_dash_feat_img"><img src="/assets/img/Dashboard%20HCP/white%20bg%20images/Noosa%20Selects%20T19%20Hybrid%20white%20bg.webp" alt="Noosa Selects T19 Hybrid"></div>
-            <div class="cs_dash_feat_body">
-              <h3>Noosa Selects T19 Hybrid</h3>
-              <span class="cs_dash_feat_spec">Dried Flower &nbsp;|&nbsp; THC 19%</span>
-              <a href="/all-products/noosa-selects-t19-hybrid" class="cs_dash_feat_link">View product &rarr;</a>
-            </div>
-          </div>
-          <div class="cs_dash_feat_card wow fadeInUp" data-wow-delay="0.1s">
-            <div class="cs_dash_feat_img"><img src="/assets/img/Dashboard%20HCP/white%20bg%20images/Oral%20Liquid%20Horizon%2030-30%20whitebg.webp" alt="PharmaCrop Horizon 30:30"></div>
-            <div class="cs_dash_feat_body">
-              <h3>PharmaCrop Horizon 30:30</h3>
-              <span class="cs_dash_feat_spec">Oral Liquid &nbsp;|&nbsp; THC 30 mg/mL / CBD 30 mg/mL</span>
-              <a href="/all-products/pharmacrop-horizon-30-30" class="cs_dash_feat_link">View product &rarr;</a>
-            </div>
-          </div>
-          <div class="cs_dash_feat_card wow fadeInUp" data-wow-delay="0.2s">
-            <div class="cs_dash_feat_img"><img src="/assets/img/Dashboard%20HCP/white%20bg%20images/PSTILLES%20white%20bg.webp" alt="PharmaCrop 20:20:20 Night"></div>
-            <div class="cs_dash_feat_body">
-              <h3>PharmaCrop 20:20:20 Night</h3>
-              <span class="cs_dash_feat_spec">Pastilles &nbsp;|&nbsp; THC 20mg / CBD 20mg / CBN 20mg</span>
-              <a href="/all-products/pharmacrop-20-20-20-night" class="cs_dash_feat_link">View product &rarr;</a>
-            </div>
-          </div>
-          <div class="cs_dash_feat_card wow fadeInUp" data-wow-delay="0.3s">
-            <div class="cs_dash_feat_img"><img src="/assets/img/Dashboard%20HCP/white%20bg%20images/PharmaCrop%20Daydream%20white%20bg.webp" alt="PharmaCrop Daydream"></div>
-            <div class="cs_dash_feat_body">
-              <h3>PharmaCrop Daydream</h3>
-              <span class="cs_dash_feat_spec">Inhaled Liquid &nbsp;|&nbsp; THC 850mg &nbsp;|&nbsp; Sativa Dominant</span>
-              <a href="/all-products/pharmacrop-daydream" class="cs_dash_feat_link">View product &rarr;</a>
-            </div>
-          </div>
+        <div class="cs_dash_feat_grid">${featuredCardsHtml}
         </div>
       </div>
     </section>
