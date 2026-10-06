@@ -53,7 +53,12 @@ export default function Page() {
       .cs_pships_hero_bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(2, 42, 42, 0.78) 0%, rgba(2, 30, 30, 0.9) 100%); }
       .cs_pships_hero_content { position: relative; z-index: 2; max-width: 820px; margin: 0 auto; }
       .cs_pships_hero_pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 22px; border-radius: 30px; background: rgba(120, 220, 166, 0.15); border: 1px solid rgba(120, 220, 166, 0.35); color: #78dca6; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 26px; }
-      .cs_pships_hero_content h1 { color: #fff; margin: 0 0 22px; line-height: 1.15; }
+      .cs_pships_hero_content h1 { color: #fff; margin: 0 0 22px; line-height: 1.15; font-size: 56px; }
+      @media (max-width: 1400px) { .cs_pships_hero_content h1 { font-size: 50px; } }
+      @media (max-width: 1199px) { .cs_pships_hero_content h1 { font-size: 44px; } }
+      @media (max-width: 991px) { .cs_pships_hero_content h1 { font-size: 38px; } }
+      @media (max-width: 767px) { .cs_pships_hero_content h1 { font-size: 34px; } }
+      @media (max-width: 575px) { .cs_pships_hero_content h1 { font-size: 28px; } }
       .cs_pships_hero_content h1 span { color: #78dca6; }
       .cs_pships_hero_content p { color: rgba(255, 255, 255, 0.8); font-size: 18px; line-height: 1.7; margin: 0 auto 36px; max-width: 640px; }
       .cs_pships_hero_btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
