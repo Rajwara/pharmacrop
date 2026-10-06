@@ -18,8 +18,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: "/login",
-        destination: "/portals",
+        source: "/register",
+        destination: "/login",
         permanent: true,
       },
     ];
