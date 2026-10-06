@@ -221,14 +221,27 @@ export default function Page() {
     <!-- Start Featured Products Section -->
     <style>
       .cs_dash_feat_grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-      .cs_dash_feat_card { background: #fff; border: 1px solid rgba(2,66,66,0.1); border-radius: 16px; overflow: hidden; }
-      .cs_dash_feat_img { height: 260px; overflow: hidden; }
+      .cs_dash_feat_card { background: #fff; border: 1px solid rgba(2,66,66,0.1); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; }
+      .cs_dash_feat_img { height: 220px; overflow: hidden; position: relative; }
       .cs_dash_feat_img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
       .cs_dash_feat_card:hover .cs_dash_feat_img img { transform: scale(1.06); }
-      .cs_dash_feat_body { padding: 20px; }
-      .cs_dash_feat_body h3 { color: #024242; font-size: 16px; font-weight: 800; margin: 0 0 8px; line-height: 1.4; }
-      .cs_dash_feat_spec { color: #78dca6; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px; display: block; margin-bottom: 14px; }
-      .cs_dash_feat_link { color: #024242; font-weight: 700; font-size: 13px; text-decoration: none; }
+      .cs_dash_feat_badge { position: absolute; top: 14px; left: 14px; display: inline-flex; align-items: center; gap: 6px; background: #fff; border-radius: 20px; padding: 6px 14px; font-size: 12px; font-weight: 700; color: #024242; box-shadow: 0 4px 12px rgba(2,66,66,0.15); }
+      .cs_dash_feat_body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+      .cs_dash_feat_body h3 { color: #024242; font-size: 16px; font-weight: 800; margin: 0; }
+      .cs_dash_feat_category { color: #999; font-size: 13px; margin: 4px 0 8px; display: block; }
+      .cs_dash_feat_spec { color: #666; font-size: 13px; font-weight: 600; display: block; margin-bottom: 14px; }
+      .cs_dash_feat_dietary { color: #024242; font-size: 12px; font-weight: 700; display: block; margin: -8px 0 14px; }
+      .cs_dash_feat_pill_row { margin-bottom: 10px; }
+      .cs_dash_feat_strain_pill { display: inline-block; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 700; background: #eef1ee; color: #024242; }
+      .cs_dash_feat_strain_indica { background: #e6e0f5; color: #5b3fa0; }
+      .cs_dash_feat_strain_sativa { background: #e1f3e1; color: #2f7d32; }
+      .cs_dash_feat_strain_hybrid { background: #faecd6; color: #b5751f; }
+      .cs_dash_feat_meta_row { display: flex; flex-wrap: nowrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 16px; }
+      .cs_dash_feat_packsize { display: block; color: #999; font-size: 12.5px; }
+      .cs_dash_feat_price { text-align: right; }
+      .cs_dash_feat_price_value { color: #024242; font-size: 17px; font-weight: 800; }
+      .cs_dash_feat_price_rrp { color: #024242; font-size: 12px; font-weight: 700; }
+      .cs_dash_feat_link { color: #024242; font-weight: 700; font-size: 13px; text-decoration: none; margin-top: auto; }
       .cs_dash_feat_link:hover { color: #78dca6; }
       @media (max-width: 991px) {
         .cs_dash_feat_grid { grid-template-columns: repeat(2, 1fr); }
@@ -400,14 +413,33 @@ export default function Page() {
 
           var FALLBACK_IMG = '/assets/img/dashboard/Dried%20Flower%20Category.webp';
 
+          function featStrainPillClass(speciesRatio) {
+            var normalized = String(speciesRatio || '').trim().split(/[\s–-]+/)[0].toLowerCase();
+            if (normalized === 'indica') return 'cs_dash_feat_strain_pill cs_dash_feat_strain_indica';
+            if (normalized === 'sativa') return 'cs_dash_feat_strain_pill cs_dash_feat_strain_sativa';
+            if (normalized === 'hybrid') return 'cs_dash_feat_strain_pill cs_dash_feat_strain_hybrid';
+            return 'cs_dash_feat_strain_pill';
+          }
+
           function featCardHtml(p) {
             var specLine = (p.cbg || p.cbn)
-              ? [p.cbd ? 'CBD ' + p.cbd : '', p.cbg ? 'CBG ' + p.cbg : '', p.cbn ? 'CBN ' + p.cbn : ''].filter(Boolean).join(' / ')
-              : [p.thc ? 'THC ' + p.thc : '', p.cbd ? 'CBD ' + p.cbd : ''].filter(Boolean).join(' / ');
+              ? [p.cbd ? 'CBD ' + p.cbd : '', p.cbg ? 'CBG ' + p.cbg : '', p.cbn ? 'CBN ' + p.cbn : ''].filter(Boolean).join(' &nbsp;|&nbsp; ')
+              : [p.thc ? 'THC ' + p.thc : '', p.cbd ? 'CBD ' + p.cbd : ''].filter(Boolean).join(' &nbsp;|&nbsp; ');
+            var strainPill = (p.speciesRatio && p.category !== 'Pastilles') ? '<span class="' + featStrainPillClass(p.speciesRatio) + '">' + p.speciesRatio + '</span>' : '';
+            var priceBlock = p.price
+              ? '<div class="cs_dash_feat_price"><span class="cs_dash_feat_price_value">$' + p.price + '</span> <span class="cs_dash_feat_price_rrp">RRP</span></div>'
+              : '<div class="cs_dash_feat_price"></div>';
             return '<div class="cs_dash_feat_card wow fadeInUp">' +
-              '<div class="cs_dash_feat_img"><img src="' + p.image + '" alt="' + p.name + '"></div>' +
+              '<div class="cs_dash_feat_img"><span class="cs_dash_feat_badge">&#127807; Australian Manufactured</span><img src="' + p.image + '" alt="' + p.name + '"></div>' +
               '<div class="cs_dash_feat_body"><h3>' + p.name + '</h3>' +
-              '<span class="cs_dash_feat_spec">' + p.category + (specLine ? ' &nbsp;|&nbsp; ' + specLine : '') + '</span>' +
+              '<span class="cs_dash_feat_category">' + p.category + '</span>' +
+              '<span class="cs_dash_feat_spec">' + specLine + '</span>' +
+              (p.dietaryTags ? '<span class="cs_dash_feat_dietary">' + p.dietaryTags + '</span>' : '') +
+              (strainPill ? '<div class="cs_dash_feat_pill_row">' + strainPill + '</div>' : '') +
+              '<div class="cs_dash_feat_meta_row">' +
+              (p.packSize ? '<span class="cs_dash_feat_packsize">' + p.packSize + '</span>' : '<span></span>') +
+              priceBlock +
+              '</div>' +
               '<a href="/all-products/' + p.slug + '" class="cs_dash_feat_link">View product &rarr;</a>' +
               '</div></div>';
           }
@@ -432,6 +464,10 @@ export default function Page() {
                     cbd: acf.cbd || '',
                     cbg: acf.cbg || '',
                     cbn: acf.cbn || '',
+                    packSize: acf.pack_size || '',
+                    speciesRatio: acf.species_ratio || '',
+                    price: acf.price || '',
+                    dietaryTags: acf.dietary_tags || acf.dietary_info || '',
                     image: (media && media.source_url) || FALLBACK_IMG,
                   };
                 });
