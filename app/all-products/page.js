@@ -217,8 +217,9 @@ export default function Page() {
       .cs_prod_category { color: #999; font-size: 13px; margin: 4px 0 8px; display: block; }
       .cs_prod_spec { color: #666; font-size: 13px; font-weight: 600; display: block; margin-bottom: 14px; }
       .cs_prod_dietary { color: #024242; font-size: 12px; font-weight: 700; display: block; margin: -8px 0 14px; }
-      .cs_prod_meta_row { display: flex; align-items: flex-end; justify-content: space-between; gap: 10px; margin-bottom: 16px; }
-      .cs_prod_strain_pill { display: inline-block; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 700; background: #eef1ee; color: #024242; margin-bottom: 8px; }
+      .cs_prod_pill_row { margin-bottom: 10px; }
+      .cs_prod_meta_row { display: flex; flex-wrap: nowrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 16px; }
+      .cs_prod_strain_pill { display: inline-block; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 700; background: #eef1ee; color: #024242; }
       .cs_prod_strain_indica { background: #e6e0f5; color: #5b3fa0; }
       .cs_prod_strain_sativa { background: #e1f3e1; color: #2f7d32; }
       .cs_prod_strain_hybrid { background: #faecd6; color: #b5751f; }
@@ -442,7 +443,7 @@ export default function Page() {
             var specLine = (p.cbg || p.cbn)
               ? [p.cbd ? 'CBD ' + p.cbd : '', p.cbg ? 'CBG ' + p.cbg : '', p.cbn ? 'CBN ' + p.cbn : ''].filter(Boolean).join(' &nbsp;|&nbsp; ')
               : [p.thc ? 'THC ' + p.thc : '', p.cbd ? 'CBD ' + p.cbd : ''].filter(Boolean).join(' &nbsp;|&nbsp; ');
-            var strainPill = (p.speciesRatio && p.category !== 'Pastilles') ? '<span class="' + strainPillClass(p.speciesRatio) + '">' + p.speciesRatio + '</span>' : '<span></span>';
+            var strainPill = (p.speciesRatio && p.category !== 'Pastilles') ? '<span class="' + strainPillClass(p.speciesRatio) + '">' + p.speciesRatio + '</span>' : '';
             var priceBlock = p.price
               ? '<div class="cs_prod_price"><span class="cs_prod_price_value">$' + p.price + '</span> <span class="cs_prod_price_rrp">RRP</span></div>'
               : '<div class="cs_prod_price"></div>';
@@ -452,8 +453,9 @@ export default function Page() {
               '<span class="cs_prod_category">' + p.category + '</span>' +
               '<span class="cs_prod_spec">' + specLine + '</span>' +
               (p.dietaryTags ? '<span class="cs_prod_dietary">' + p.dietaryTags + '</span>' : '') +
+              (strainPill ? '<div class="cs_prod_pill_row">' + strainPill + '</div>' : '') +
               '<div class="cs_prod_meta_row">' +
-              '<div>' + strainPill + (p.packSize ? '<span class="cs_prod_packsize">' + p.packSize + '</span>' : '') + '</div>' +
+              (p.packSize ? '<span class="cs_prod_packsize">' + p.packSize + '</span>' : '<span></span>') +
               priceBlock +
               '</div>' +
               '<span class="cs_prod_link">View Product &rarr;</span></div></a>';
