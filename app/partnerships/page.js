@@ -110,7 +110,7 @@ export default function Page() {
       <div class="container">
         <div class="cs_partners_heading">
           <span class="cs_sticky_eyebrow">COMMERCIAL PARTNERSHIPS</span>
-          <h2 class="cs_section_title cs_two_tone cs_home_heading_sz mb-0 wow fadeInDown">ONE PARTNER.<br>MULTIPLE <span>COMMERCIAL PATHWAYS.</span></h2>
+          <h2 class="cs_section_title cs_two_tone cs_home_heading_sz mb-0 wow fadeInDown">CHOOSE YOUR<br><span>PARTNERSHIP MODEL.</span></h2>
           <div class="cs_height_24"></div>
           <p class="cs_sticky_text">One Australian GMP-certified manufacturing platform offering four flexible commercial partnership models to suit your needs.</p>
         </div>
