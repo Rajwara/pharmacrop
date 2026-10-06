@@ -30,7 +30,7 @@
   function requireAuth() {
     var token = getToken();
     if (!token) {
-      window.location.href = '/register?tab=login';
+      window.location.href = '/login?tab=login';
       return null;
     }
     return token;
