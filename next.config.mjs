@@ -17,6 +17,11 @@ const nextConfig = {
         destination: "/about-us",
         permanent: true,
       },
+      {
+        source: "/login",
+        destination: "/portals",
+        permanent: true,
+      },
     ];
   },
 };
