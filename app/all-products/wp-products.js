@@ -126,8 +126,12 @@ async function mapProduct(raw) {
     resolveMediaUrl(acf.gallery_image_3),
     resolveMediaUrl(acf.gallery_image_4),
   ]);
-  const images = [featured, ...gallery].filter(isImageUrl);
-  if (!images.length) images.push(FALLBACK_IMG);
+  // The card/grid photo is the WordPress Featured Image; the detail page's
+  // gallery is the 4 ACF images only, kept separate so the Featured Image
+  // doesn't also show up as an extra 5th gallery thumbnail.
+  const galleryImages = gallery.filter(isImageUrl);
+  const images = galleryImages.length ? galleryImages : featured ? [featured] : [FALLBACK_IMG];
+  const cardImage = featured || galleryImages[0] || FALLBACK_IMG;
 
   const categorySlug = acf.category || "uncategorised";
   const meta = categoryMeta[categorySlug] || {
@@ -172,7 +176,7 @@ async function mapProduct(raw) {
     sodium: acf.sodium || acf.sodium_mg || "",
     fat: acf.fat || acf.fat_g || "",
     images,
-    image: images[0],
+    image: cardImage,
     altImage: images[1] || images[0],
     dateGmt: raw.date_gmt || raw.date || "",
   };
