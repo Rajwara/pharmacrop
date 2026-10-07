@@ -113,7 +113,7 @@ export default function Page() {
             <p class="cs_contact_hello_desc">Connect with our team to discuss products, commercial partnerships, manufacturing, supply or general enquiries.</p>
             <div class="cs_contact_hello_info">
               <div>
-                <p class="cs_contact_hello_label">Call Center</p>
+                <p class="cs_contact_hello_label">Phone</p>
                 <p class="cs_contact_hello_value"><a href="tel:1300053533">1300 053 533</a></p>
               </div>
               <div>
@@ -128,12 +128,11 @@ export default function Page() {
                 <p class="cs_contact_hello_label">Social Network</p>
                 <div class="cs_contact_hello_social">
                   <a href="https://www.linkedin.com/company/pharmacrop" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                  <a href="https://wa.me/611300053533" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
               </div>
               <div>
                 <p class="cs_contact_hello_label">Business Hours</p>
-                <p class="cs_contact_hello_value">Monday - Friday:<br>9:00 AM - 5:00 PM</p>
+                <p class="cs_contact_hello_value">Monday - Friday:<br>8:00 AM - 4:00 PM</p>
               </div>
             </div>
           </div>
