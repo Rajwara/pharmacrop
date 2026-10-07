@@ -82,6 +82,11 @@ const mediaUrlCache = new Map();
 
 function resolveMediaUrl(value) {
   if (isImageUrl(value)) return Promise.resolve(value);
+  // ACF's "Image" field can also return an Array/Object (Return Format
+  // set to "Image Array" or "Image Object" instead of "Image URL"/"Image ID").
+  if (value && typeof value === "object" && isImageUrl(value.url)) {
+    return Promise.resolve(value.url);
+  }
   if (typeof value === "number" && value > 0) {
     if (mediaUrlCache.has(value)) return mediaUrlCache.get(value);
     const promise = fetch(`${WP_API_URL}/wp-json/wp/v2/media/${value}`, {
