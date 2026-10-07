@@ -166,7 +166,6 @@ export default function Page() {
               <span class="cs_prod_brochure_thumb"><img src="/assets/img/dashboard/all%20products/product%20portfolio%20brochure.webp" alt="PharmaCrop Product Portfolio brochure"></span>
               <span class="cs_prod_brochure_body">
                 <h4>Download Full Product Portfolio</h4>
-                <span>PDF &middot; Request from our team</span>
               </span>
               <span class="cs_prod_brochure_go"><i class="fa-solid fa-arrow-right"></i></span>
             </a>
