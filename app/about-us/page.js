@@ -187,7 +187,7 @@ export default function Page() {
           </div>
         </div>
         <div class="cs_about_gallery_cta">
-          <a href="/our-facilities" class="cs_btn cs_style_1 cs_bold cs_heading_bg cs_white_color">VISIT OUR FACILITY</a>
+          <a href="/our-facilities" class="cs_btn cs_style_1 cs_bold cs_heading_bg cs_white_color">View our facility</a>
         </div>
       </div>
     </section>
