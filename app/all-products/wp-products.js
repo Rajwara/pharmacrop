@@ -27,6 +27,14 @@ const categoryMeta = {
 
 const FALLBACK_IMG = "/assets/img/dashboard/Dried%20Flower%20Category.webp";
 
+// Some WordPress security/firewall plugins block requests that don't look
+// like they came from a real browser (no User-Agent, etc). Server-to-server
+// fetches from Next.js don't send one by default, so set one explicitly.
+const WP_FETCH_HEADERS = {
+  "User-Agent": "Mozilla/5.0 (compatible; PharmaCropSite/1.0; +https://pharmacrop.com.au)",
+  Accept: "application/json",
+};
+
 function formatLabel(slug) {
   return String(slug || "")
     .replace(/[-_]+/g, " ")
@@ -64,7 +72,10 @@ function resolveMediaUrl(value) {
   if (isImageUrl(value)) return Promise.resolve(value);
   if (typeof value === "number" && value > 0) {
     if (mediaUrlCache.has(value)) return mediaUrlCache.get(value);
-    const promise = fetch(`${WP_API_URL}/wp-json/wp/v2/media/${value}`, { next: { revalidate: 60 } })
+    const promise = fetch(`${WP_API_URL}/wp-json/wp/v2/media/${value}`, {
+      headers: WP_FETCH_HEADERS,
+      next: { revalidate: 60 },
+    })
       .then((res) => (res.ok ? res.json() : null))
       .then((media) => (media && media.source_url) || null)
       .catch(() => null);
@@ -135,7 +146,7 @@ async function mapProduct(raw) {
 async function fetchLiveProducts() {
   const url = `${WP_API_URL}/wp-json/wp/v2/product?per_page=100&_embed`;
   try {
-    const res = await fetch(url, { next: { revalidate: 60 } });
+    const res = await fetch(url, { headers: WP_FETCH_HEADERS, next: { revalidate: 60 } });
     if (!res.ok) {
       console.error(`[wp-products] WordPress returned ${res.status} ${res.statusText} for ${url}`);
       return [];
