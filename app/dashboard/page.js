@@ -31,7 +31,7 @@ export default async function Page() {
       (p, i) => `
           <div class="cs_dash_feat_card wow fadeInUp"${i > 0 ? ` data-wow-delay="0.${i}s"` : ""}>
             <div class="cs_dash_feat_img">
-              <span class="cs_dash_feat_badge">&#127807; Australian Manufactured</span>
+              <span class="cs_dash_feat_badge">&#127807; ${p.categorySlug === "dried-flower" ? "Australian Grown" : "Australian Manufactured"}</span>
               <img src="${p.image}" alt="${p.name}">
             </div>
             <div class="cs_dash_feat_body">

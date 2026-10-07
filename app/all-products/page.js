@@ -38,7 +38,7 @@ export default async function Page() {
     .map(
       (p) => `
           <a class="cs_prod_card" href="/all-products/${p.slug}" data-name="${p.name.toLowerCase()}" data-category="${p.categorySlug}" data-strength="${p.strength}" data-packsize="${p.packSize}">
-            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; Australian Manufactured</span><img src="${p.image}" alt="${p.name}"></div>
+            <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; ${p.categorySlug === "dried-flower" ? "Australian Grown" : "Australian Manufactured"}</span><img src="${p.image}" alt="${p.name}"></div>
             <div class="cs_prod_body">
               <h3>${p.name}</h3>
               <span class="cs_prod_category">${p.category}</span>
