@@ -1,3 +1,5 @@
+import { products as demoProducts } from "./products-data";
+
 const WP_API_URL = process.env.NEXT_PUBLIC_WP_API_URL || "http://pharmacrop.local";
 
 const categoryMeta = {
@@ -117,7 +119,7 @@ async function mapProduct(raw) {
   };
 }
 
-export async function fetchAllProducts() {
+async function fetchLiveProducts() {
   try {
     const res = await fetch(`${WP_API_URL}/wp-json/wp/v2/product?per_page=100&_embed`, {
       next: { revalidate: 60 },
@@ -128,6 +130,18 @@ export async function fetchAllProducts() {
   } catch (err) {
     return [];
   }
+}
+
+// Each category shows live WordPress products once any exist for it; until
+// then it keeps showing the demo products so the live site is never empty
+// for a category you haven't migrated yet.
+export async function fetchAllProducts() {
+  const live = await fetchLiveProducts();
+  const liveCategories = new Set(live.map((p) => p.categorySlug));
+  const demoFallback = demoProducts
+    .filter((p) => !liveCategories.has(p.categorySlug))
+    .map((p) => ({ ...p, dateGmt: p.dateGmt || "1970-01-01T00:00:00" }));
+  return [...live, ...demoFallback];
 }
 
 export async function getProductBySlug(slug) {
