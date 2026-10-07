@@ -1,11 +1,14 @@
 import Script from "next/script";
-import { products } from "./products-data";
+import { fetchAllProducts } from "./wp-products";
 
 export const metadata = {
   title: "All Products - PharmaCrop HCP Portal",
 };
 
-export default function Page() {
+export const revalidate = 60;
+
+export default async function Page() {
+  const products = await fetchAllProducts();
   const counts = {
     all: products.length,
     "dried-flower": products.filter((p) => p.categorySlug === "dried-flower").length,

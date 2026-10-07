@@ -1,18 +1,15 @@
 import Script from "next/script";
-import { products } from "./../all-products/products-data";
+import { getFeaturedProducts } from "./../all-products/wp-products";
 
 export const metadata = {
   title: "Dashboard - PharmaCrop HCP Portal",
 };
 
-const featuredSlugs = [
-  "noosa-selects-t19-hybrid",
-  "pharmacrop-horizon-30-30",
-  "pharmacrop-20-20-20-night",
-  "pharmacrop-daydream",
-];
+export const revalidate = 60;
 
-export default function Page() {
+export default async function Page() {
+  const featuredProducts = await getFeaturedProducts(4);
+
   function specLine(p) {
     const parts = [];
     if (p.thc) parts.push(`THC ${p.thc}`);
@@ -28,8 +25,6 @@ export default function Page() {
     const text = p.strainType === "Hybrid" && p.speciesRatio ? `${p.strainType} &ndash; ${p.speciesRatio}` : p.strainType;
     return `<span class="${cls}">${text}</span>`;
   }
-
-  const featuredProducts = featuredSlugs.map((slug) => products.find((p) => p.slug === slug)).filter(Boolean);
 
   const featuredCardsHtml = featuredProducts
     .map(

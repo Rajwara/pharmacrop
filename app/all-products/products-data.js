@@ -250,11 +250,3 @@ export const products = [
     images: productImages("Inhaled Liquid/PharmaCrop Daydream", 4),
   }),
 ];
-
-export function getProductBySlug(slug) {
-  return products.find((p) => p.slug === slug);
-}
-
-export function getRelatedProducts(product, count = 4) {
-  return products.filter((p) => p.categorySlug === product.categorySlug && p.slug !== product.slug).slice(0, count);
-}

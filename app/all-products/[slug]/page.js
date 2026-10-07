@@ -1,14 +1,17 @@
 import Script from "next/script";
 import { notFound } from "next/navigation";
-import { products, getProductBySlug, getRelatedProducts } from "../products-data";
+import { fetchAllProducts, getProductBySlug, getRelatedProducts } from "../wp-products";
 
-export function generateStaticParams() {
+export const revalidate = 60;
+
+export async function generateStaticParams() {
+  const products = await fetchAllProducts();
   return products.map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const product = getProductBySlug(slug);
+  const product = await getProductBySlug(slug);
   if (!product) {
     return { title: "Product - PharmaCrop HCP Portal" };
   }
@@ -17,11 +20,11 @@ export async function generateMetadata({ params }) {
 
 export default async function Page({ params }) {
   const { slug } = await params;
-  const product = getProductBySlug(slug);
+  const product = await getProductBySlug(slug);
   if (!product) {
     notFound();
   }
-  const related = getRelatedProducts(product, 4);
+  const related = await getRelatedProducts(product, 4);
 
   function relatedSpecLine(r) {
     const parts = [];
