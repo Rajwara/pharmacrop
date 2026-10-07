@@ -93,9 +93,23 @@ function resolveMediaUrl(value) {
       headers: WP_FETCH_HEADERS,
       next: { revalidate: 60 },
     })
-      .then((res) => (res.ok ? res.json() : null))
+      .then((res) => {
+        if (!res.ok) {
+          console.error(`[wp-products] Media ${value} returned ${res.status} ${res.statusText}`);
+          return null;
+        }
+        return res.json();
+      })
       .then((media) => (media && media.source_url) || null)
-      .catch(() => null);
+      .catch((err) => {
+        console.error(`[wp-products] Failed to fetch media ${value}:`, err && err.message ? err.message : err);
+        return null;
+      });
+    // Don't let a transient failure get stuck forever in this long-lived
+    // module-level cache — only cache successful resolutions.
+    promise.then((url) => {
+      if (!url) mediaUrlCache.delete(value);
+    });
     mediaUrlCache.set(value, promise);
     return promise;
   }
@@ -121,7 +135,11 @@ async function mapProduct(raw) {
     dosageForm: formatLabel(categorySlug),
     presentation: "",
   };
-  const derivedStrain = parseStrain(acf.species_ratio);
+  // ACF sometimes auto-generates an awkward field name from the label
+  // ("Species Ratio (Indica : Sativa)" -> "species_ratio_indica_:_sativa")
+  // instead of the plain "species_ratio" the rest of this file expects.
+  const speciesRatioRaw = acf.species_ratio || acf["species_ratio_indica_:_sativa"] || "";
+  const derivedStrain = parseStrain(speciesRatioRaw);
 
   return {
     slug: raw.slug,
@@ -138,7 +156,7 @@ async function mapProduct(raw) {
     price: acf.price || "",
     strength: classifyStrength(acf.thc, acf.cbd),
     strainType: acf.strain_type || derivedStrain.strainType,
-    speciesRatio: acf.strain_type ? formatSpeciesRatio(acf.species_ratio) : derivedStrain.speciesRatio,
+    speciesRatio: acf.strain_type ? formatSpeciesRatio(speciesRatioRaw) : derivedStrain.speciesRatio,
     cultivar: acf.cultivar || acf.cultivar_name || acf.strain_name || "",
     dominantTerpenes: acf.dominant_terpenes || "",
     excipients: acf.excipients || "",
