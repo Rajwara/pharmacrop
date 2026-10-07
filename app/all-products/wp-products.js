@@ -66,6 +66,18 @@ function parseStrain(speciesRatioRaw) {
   return { strainType, speciesRatio: match[2].trim() };
 }
 
+// The client's product spreadsheet lists species_ratio as bare numbers
+// (e.g. "50% : 50%" or "70% : 30%"), always in Indica : Sativa order per
+// its own column header. Label it the same way on the site so it's not
+// ambiguous to a visitor without that column header for context.
+function formatSpeciesRatio(raw) {
+  const value = String(raw || "").trim();
+  const match = value.match(/^(\d+%?)\s*:\s*(\d+%?)$/);
+  if (!match) return value;
+  const withPercent = (n) => (n.endsWith("%") ? n : `${n}%`);
+  return `Indica ${withPercent(match[1])} : Sativa ${withPercent(match[2])}`;
+}
+
 const mediaUrlCache = new Map();
 
 function resolveMediaUrl(value) {
@@ -121,7 +133,7 @@ async function mapProduct(raw) {
     price: acf.price || "",
     strength: classifyStrength(acf.thc, acf.cbd),
     strainType: acf.strain_type || derivedStrain.strainType,
-    speciesRatio: acf.strain_type ? acf.species_ratio || "" : derivedStrain.speciesRatio,
+    speciesRatio: acf.strain_type ? formatSpeciesRatio(acf.species_ratio) : derivedStrain.speciesRatio,
     cultivar: acf.cultivar || acf.cultivar_name || acf.strain_name || "",
     dominantTerpenes: acf.dominant_terpenes || "",
     excipients: acf.excipients || "",
