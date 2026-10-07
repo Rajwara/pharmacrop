@@ -46,6 +46,18 @@ function isImageUrl(value) {
   return typeof value === "string" && value.indexOf("http") === 0;
 }
 
+// No dedicated "strain type" field exists in WordPress yet — the Indica/
+// Sativa/Hybrid label lives at the start of species_ratio instead, e.g.
+// "Hybrid – Indica 50% : Sativa 50%" or just "Sativa". Pull it out so the
+// strain pill and "Plant Species" row render the same way the demo data did.
+function parseStrain(speciesRatioRaw) {
+  const raw = String(speciesRatioRaw || "").trim();
+  const match = raw.match(/^(indica|sativa|hybrid)\s*[–-]?\s*(.*)$/i);
+  if (!match) return { strainType: "", speciesRatio: raw };
+  const strainType = match[1][0].toUpperCase() + match[1].slice(1).toLowerCase();
+  return { strainType, speciesRatio: match[2].trim() };
+}
+
 const mediaUrlCache = new Map();
 
 function resolveMediaUrl(value) {
@@ -81,6 +93,7 @@ async function mapProduct(raw) {
     dosageForm: formatLabel(categorySlug),
     presentation: "",
   };
+  const derivedStrain = parseStrain(acf.species_ratio);
 
   return {
     slug: raw.slug,
@@ -96,8 +109,8 @@ async function mapProduct(raw) {
     packSize: acf.pack_size || "",
     price: acf.price || "",
     strength: classifyStrength(acf.thc, acf.cbd),
-    strainType: acf.strain_type || "",
-    speciesRatio: acf.species_ratio || "",
+    strainType: acf.strain_type || derivedStrain.strainType,
+    speciesRatio: acf.strain_type ? acf.species_ratio || "" : derivedStrain.speciesRatio,
     cultivar: acf.cultivar || acf.cultivar_name || acf.strain_name || "",
     dominantTerpenes: acf.dominant_terpenes || "",
     excipients: acf.excipients || "",
