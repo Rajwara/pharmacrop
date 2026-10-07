@@ -133,14 +133,21 @@ async function mapProduct(raw) {
 }
 
 async function fetchLiveProducts() {
+  const url = `${WP_API_URL}/wp-json/wp/v2/product?per_page=100&_embed`;
   try {
-    const res = await fetch(`${WP_API_URL}/wp-json/wp/v2/product?per_page=100&_embed`, {
-      next: { revalidate: 60 },
-    });
-    if (!res.ok) return [];
+    const res = await fetch(url, { next: { revalidate: 60 } });
+    if (!res.ok) {
+      console.error(`[wp-products] WordPress returned ${res.status} ${res.statusText} for ${url}`);
+      return [];
+    }
     const raw = await res.json();
-    return Array.isArray(raw) ? await Promise.all(raw.map(mapProduct)) : [];
+    if (!Array.isArray(raw)) {
+      console.error(`[wp-products] WordPress response was not a product array for ${url}:`, JSON.stringify(raw).slice(0, 500));
+      return [];
+    }
+    return await Promise.all(raw.map(mapProduct));
   } catch (err) {
+    console.error(`[wp-products] Failed to fetch ${url}:`, err && err.message ? err.message : err);
     return [];
   }
 }
