@@ -69,7 +69,7 @@ export default function Page() {
       }
     </style>
     <section class="cs_pships_hero cs_heading_bg cs_white_color">
-      <div class="cs_pships_hero_bg"><img src="/assets/img/Partnerships/Partnerships-Hero Image.webp" alt="PharmaCrop cultivation facility"></div>
+      <div class="cs_pships_hero_bg"><img src="/assets/img/Partnerships/Partnerships Page Hero Image.webp" alt="PharmaCrop cultivation facility"></div>
       <div class="container cs_pships_hero_content">
         <span class="cs_pships_hero_pill wow fadeInUp">Partnerships &mdash; Flexible Pathways</span>
         <h1 class="cs_fs_80 cs_bold wow fadeInUp" data-wow-delay="0.1s">ONE PARTNER.<br><span>MULTIPLE COMMERCIAL PATHWAYS.</span></h1>
