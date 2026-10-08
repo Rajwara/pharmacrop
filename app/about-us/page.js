@@ -79,7 +79,7 @@ export default function Page() {
           </div>
           <div class="col-lg-8 wow fadeInRight">
             <div class="cs_cta cs_style_2 cs_radius_20" style="position: relative; overflow: hidden;">
-              <video src="/assets/img/About-Us/THE%20PHARMACROP%20STORY/856x300.mp4" autoplay muted loop playsinline style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;"></video>
+              <img src="/assets/img/About-Us/THE%20PHARMACROP%20STORY/Landscape%20Image.webp" alt="PharmaCrop Noosa Hinterland landscape" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
               <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(2,34,34,0) 40%, rgba(2,20,20,0.75) 100%); z-index: 1;"></div>
               <a href="/contact" class="cs_btn cs_style_2 cs_bold cs_white_color" style="position: relative; z-index: 2;">Contact us</a>
             </div>
