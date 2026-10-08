@@ -22,6 +22,7 @@ export const headerHtml = `
                     <li><a href="/our-team">Our Team</a></li>
                     <li><a href="/products">Products</a></li>
                     <li><a href="/partnerships">Partnerships</a></li>
+                    <li><a href="https://aleafiate.com.au/meet-our-prescribing-practitioners/" target="_blank" rel="noopener">See Our Doctors</a></li>
                   </ul>
                 </nav>
               </div>
