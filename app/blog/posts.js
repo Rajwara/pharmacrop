@@ -21,7 +21,7 @@ export const posts = [
     date: "18 Aug 2026",
     category: "Manufacturing",
     tags: ["GMP", "Manufacturing", "Integrated Operations"],
-    image: "/assets/img/General Images/Blog/video_block_bg.jpg",
+    image: "/assets/img/General%20Images/Blog/FROM%20GENETICS%20TO%20GMP-CERTIFIED%20MANUFACTURING.webp",
     excerpt:
       "By bringing cultivation, processing and GMP-certified manufacturing together, PharmaCrop maintains oversight from cultivar selection through to finished product.",
     content: [
