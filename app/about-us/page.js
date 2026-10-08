@@ -149,21 +149,10 @@ export default function Page() {
       .cs_about_gallery_eyebrow { display: block; color: #78dca6; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; font-size: 14px; margin-bottom: 14px; }
       .cs_about_gallery_head h2 { color: #024242; font-size: 38px; line-height: 1.25; margin: 0 0 20px; }
       .cs_about_gallery_head p { color: #666; font-size: 16px; line-height: 1.7; margin: 0; }
-      .cs_about_gallery_grid { display: grid; grid-template-columns: 1fr 2fr; gap: 20px; margin-bottom: 44px; }
-      .cs_about_gallery_hero { position: relative; border-radius: 14px; overflow: hidden; min-height: 100%; }
-      .cs_about_gallery_hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
-      .cs_about_gallery_hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(2, 34, 34, 0.1) 0%, rgba(2, 20, 20, 0.6) 100%); pointer-events: none; }
-      .cs_about_gallery_chip { position: absolute; left: 50%; top: 62%; transform: translate(-50%, -50%); width: 130px; height: 130px; border-radius: 50%; background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); border: 1px solid rgba(255, 255, 255, 0.35); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #fff; font-size: 13px; font-weight: 700; line-height: 1.4; z-index: 2; padding: 10px; }
-      .cs_about_gallery_sub_grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-      .cs_about_gallery_item { position: relative; border-radius: 14px; overflow: hidden; aspect-ratio: 4 / 3; }
-      .cs_about_gallery_item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
-      .cs_about_gallery_item:hover img { transform: scale(1.06); }
-      .cs_about_gallery_cta { text-align: center; }
+      .cs_about_gallery_cta { text-align: center; margin-top: 44px; }
       @media (max-width: 767px) {
         .cs_about_gallery_section { padding: 70px 0; }
         .cs_about_gallery_head h2 { font-size: 28px; }
-        .cs_about_gallery_grid { grid-template-columns: 1fr; }
-        .cs_about_gallery_hero { min-height: 260px; }
       }
     </style>
     <section class="cs_about_gallery_section">
@@ -173,16 +162,150 @@ export default function Page() {
           <h2>A LOOK INSIDE OUR FACILITY</h2>
           <p>From cultivation through to GMP-certified manufacturing, take a closer look at how PharmaCrop brings science and agriculture together.</p>
         </div>
-        <div class="cs_about_gallery_grid">
-          <div class="cs_about_gallery_hero">
-            <img src="/assets/img/About-Us/Our Facility/Our Facility image -1.webp" alt="Aerial view of PharmaCrop's Noosa Hinterland facility">
-            <span class="cs_about_gallery_chip">Facility Overview<br>Noosa Hinterland</span>
+        <div class="cs_isotop cs_style_1 cs_isotop_col_3 cs_has_gutter_24 cs_lightgallery">
+          <div class="cs_grid_sizer"></div>
+          <div class="cs_isotop_item">
+            <a href="/assets/img/Our-Facilities/1.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/1.webp" alt="Aerial view of PharmaCrop's Noosa Hinterland facility">
+              <span class="cs_gallery_info_wrap cs_center">
+                <span class="cs_gallery_info text-center cs_center">
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Facility Overview</span>
+                  <span class="cs_white_color d-block">Noosa Hinterland</span>
+                </span>
+              </span>
+            </a>
           </div>
-          <div class="cs_about_gallery_sub_grid">
-            <div class="cs_about_gallery_item"><img src="/assets/img/About-Us/Our Facility/Our Facility image-2.webp" alt="Rows of cannabis plants under greenhouse grow lights"></div>
-            <div class="cs_about_gallery_item"><img src="/assets/img/About-Us/Our Facility/Our Facility image-3.webp" alt="PharmaCrop staff member among the crop"></div>
-            <div class="cs_about_gallery_item"><img src="/assets/img/About-Us/Our Facility/our facility-4.webp" alt="Product labeling on the packaging line"></div>
-            <div class="cs_about_gallery_item"><img src="/assets/img/About-Us/Our Facility/Our Facility image-5.webp" alt="Staff processing harvested flower in the greenhouse"></div>
+          <div class="cs_isotop_item">
+            <a href="/assets/img/Our-Facilities/2.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/2.webp" alt="Staff inspecting cannabis plants in the greenhouse">
+              <span class="cs_gallery_info_wrap cs_center">
+                <span class="cs_gallery_info text-center cs_center">
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Crop Inspection</span>
+                  <span class="cs_white_color d-block">Cultivation</span>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="cs_isotop_item">
+            <a href="/assets/img/Our-Facilities/3.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/3.webp" alt="Technician carrying a tray of propagated clones">
+              <span class="cs_gallery_info_wrap cs_center">
+                <span class="cs_gallery_info text-center cs_center">
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Propagation</span>
+                  <span class="cs_white_color d-block">Cultivation</span>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="cs_isotop_item">
+            <a href="/assets/img/Our-Facilities/4.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/4.webp" alt="Flowering cannabis canopy in the greenhouse">
+              <span class="cs_gallery_info_wrap cs_center">
+                <span class="cs_gallery_info text-center cs_center">
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Flowering Canopy</span>
+                  <span class="cs_white_color d-block">Cultivation</span>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="cs_isotop_item">
+            <a href="/assets/img/Our-Facilities/5.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/5.webp" alt="Product labeling on the packaging line">
+              <span class="cs_gallery_info_wrap cs_center">
+                <span class="cs_gallery_info text-center cs_center">
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Packaging Line</span>
+                  <span class="cs_white_color d-block">Manufacturing</span>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="cs_isotop_item">
+            <a href="/assets/img/Our-Facilities/6.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/6.webp" alt="Rows of cannabis plants under greenhouse grow lights">
+              <span class="cs_gallery_info_wrap cs_center">
+                <span class="cs_gallery_info text-center cs_center">
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Growing Aisle</span>
+                  <span class="cs_white_color d-block">Cultivation</span>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="cs_isotop_item">
+            <a href="/assets/img/Our-Facilities/our facility 3.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/our facility 3.webp" alt="Staff closely inspecting a flowering cannabis plant">
+              <span class="cs_gallery_info_wrap cs_center">
+                <span class="cs_gallery_info text-center cs_center">
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Plant Inspection</span>
+                  <span class="cs_white_color d-block">Cultivation</span>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="cs_isotop_item">
+            <a href="/assets/img/Our-Facilities/our facility 6.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/our facility 6.webp" alt="Potted cannabis plants on greenhouse benches">
+              <span class="cs_gallery_info_wrap cs_center">
+                <span class="cs_gallery_info text-center cs_center">
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Mature Crop</span>
+                  <span class="cs_white_color d-block">Cultivation</span>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="cs_isotop_item">
+            <a href="/assets/img/Our-Facilities/our facility 7.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/our facility 7.webp" alt="Staff conducting quality checks in the greenhouse">
+              <span class="cs_gallery_info_wrap cs_center">
+                <span class="cs_gallery_info text-center cs_center">
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Quality Control</span>
+                  <span class="cs_white_color d-block">Manufacturing</span>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="cs_isotop_item">
+            <a href="/assets/img/Our-Facilities/our facility 10.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/our facility 10.webp" alt="Cultivation aisle under specialised grow lighting">
+              <span class="cs_gallery_info_wrap cs_center">
+                <span class="cs_gallery_info text-center cs_center">
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Vegetative Growth</span>
+                  <span class="cs_white_color d-block">Cultivation</span>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="cs_isotop_item">
+            <a href="/assets/img/Our-Facilities/Our facility-2 (1).webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/Our facility-2 (1).webp" alt="Staff trimming a flowering cannabis plant">
+              <span class="cs_gallery_info_wrap cs_center">
+                <span class="cs_gallery_info text-center cs_center">
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Hands-On Cultivation</span>
+                  <span class="cs_white_color d-block">Cultivation</span>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="cs_isotop_item">
+            <a href="/assets/img/Our-Facilities/Horizontal image.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/Horizontal image.webp" alt="Wide view of the PharmaCrop Noosa Hinterland facility">
+              <span class="cs_gallery_info_wrap cs_center">
+                <span class="cs_gallery_info text-center cs_center">
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Facility Wide View</span>
+                  <span class="cs_white_color d-block">Noosa Hinterland</span>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="cs_isotop_item">
+            <a href="/assets/img/Our-Facilities/Verticle image.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/Verticle image.webp" alt="Close-up view inside the PharmaCrop facility">
+              <span class="cs_gallery_info_wrap cs_center">
+                <span class="cs_gallery_info text-center cs_center">
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Facility Close-Up</span>
+                  <span class="cs_white_color d-block">Noosa Hinterland</span>
+                </span>
+              </span>
+            </a>
           </div>
         </div>
         <div class="cs_about_gallery_cta">
