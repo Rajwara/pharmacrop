@@ -48,7 +48,7 @@ export default function Page() {
     <style>
       .cs_careers_heading_sub { color: rgba(255, 255, 255, 0.8); font-size: 18px; line-height: 1.7; max-width: 620px; margin: 20px 0 32px; }
     </style>
-    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/General%20Images/Site%20Content/genetics-to-gmp-manufacturing.webp">
+    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/careers/Careers%20Hero%20Image.webp">
       <div class="container">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
