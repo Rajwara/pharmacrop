@@ -158,7 +158,7 @@ export default async function Page() {
     </style>
     <section class="cs_dash_hero">
       <div class="cs_dash_hero_bg">
-        <img src="/assets/img/dashboard/good%20to%20see%20you.webp" alt="PharmaCrop cultivation team">
+        <img src="/assets/img/Dashboard%20HCP/HCP%20PORTAL%20HERO%20IMAGE.webp" alt="PharmaCrop cultivation team">
       </div>
       <div class="container">
         <div class="cs_dash_hero_inner">
