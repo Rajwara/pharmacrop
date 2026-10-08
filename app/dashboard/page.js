@@ -226,7 +226,7 @@ export default async function Page() {
         </div>
         <div class="cs_dash_cat_grid">
           <a href="/all-products?category=dried-flower" class="cs_dash_cat_card wow fadeInUp">
-            <img src="/assets/img/Dashboard%20HCP/category%20images/Our%20Product%20Range-Dried%20Flower.webp" alt="Dried Flower">
+            <img src="/assets/img/Dashboard%20HCP/category%20images/Dried%20Flower.webp" alt="Dried Flower">
             <div class="cs_dash_cat_body">
               <div class="cs_dash_cat_body_top"><span class="cs_dash_cat_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
               <h3>Dried Flower</h3>
@@ -234,7 +234,7 @@ export default async function Page() {
             </div>
           </a>
           <a href="/all-products?category=oral-liquid" class="cs_dash_cat_card wow fadeInUp" data-wow-delay="0.1s">
-            <img src="/assets/img/Dashboard%20HCP/category%20images/Our%20Product%20Range-Oral%20Liquid.webp" alt="Oral Liquid">
+            <img src="/assets/img/Dashboard%20HCP/category%20images/Oral%20Liquid.webp" alt="Oral Liquid">
             <div class="cs_dash_cat_body">
               <div class="cs_dash_cat_body_top"><span class="cs_dash_cat_arrow"><i class="fa-solid fa-arrow-right"></i></span></div>
               <h3>Oral Liquid</h3>
