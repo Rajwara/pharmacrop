@@ -1,6 +1,6 @@
 const categoryImages = {
-  "dried-flower": "/assets/img/Dashboard%20HCP/category%20images/Our%20Product%20Range-Dried%20Flower.webp",
-  "oral-liquid": "/assets/img/Dashboard%20HCP/category%20images/Our%20Product%20Range-Oral%20Liquid.webp",
+  "dried-flower": "/assets/img/Dashboard%20HCP/category%20images/Dried%20Flower.webp",
+  "oral-liquid": "/assets/img/Dashboard%20HCP/category%20images/Oral%20Liquid.webp",
   pastilles: "/assets/img/Dashboard%20HCP/category%20images/Our%20Product%20Range-Pastilles.webp",
   "inhaled-liquid": "/assets/img/Dashboard%20HCP/category%20images/Our%20Product%20Range-Inhaled%20Liquid.webp",
 };
