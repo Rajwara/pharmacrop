@@ -260,7 +260,7 @@ export default async function Page({ params }) {
           <div class="wow fadeInUp" data-wow-delay="0.1s">
             <span class="cs_pd_origin_badge"><i class="fa-solid fa-leaf"></i> ${product.categorySlug === "dried-flower" ? "Australian Grown" : "Australian Manufactured"} <i class="fa-solid fa-circle-info"></i></span>
             <h1>${product.name}</h1>
-            <span class="cs_pd_category">${product.category}${product.strainType && product.category !== 'Pastilles' ? ` | <span class="strain">${product.strainType}</span>` : ''}</span>
+            <span class="cs_pd_category">${product.category}${product.strainType ? ` | <span class="strain">${product.strainType}</span>` : ''}</span>
             ${product.price ? `<span class="cs_pd_rrp">RRP <strong>$${product.price}</strong>${product.packSize ? ` (${product.packSize} pack)` : ''}</span>` : ''}
             <p class="cs_pd_desc">A premium ${product.category.toLowerCase()} product, cultivated and processed to PharmaCrop&rsquo;s high quality standards. ${product.name} is available to healthcare professionals with detailed product information and supporting documentation.</p>
             <div class="cs_pd_stats">${statsHtml}
