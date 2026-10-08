@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Login to Portal - PharmaCrop",
+  title: "Our Team - PharmaCrop",
 };
 
 export default function Page() {
@@ -43,76 +43,149 @@ export default function Page() {
       </div>
     </header>
     <!-- End Header Section -->
-    <!-- Start Portal Login Section -->
+    <!-- Start Page Heading Sectoin -->
+    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/General%20Images/Site%20Content/about_heading_bg.jpg">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item active">Our Team</li>
+        </ol>
+        <h1 class="cs_page_title mb-0 cs_fs_80 wow fadeInUp">OUR TEAM</h1>
+      </div>
+    </section>
+    <!-- End Page Heading Sectoin -->
+    <!-- Start Team Expertise Section -->
     <style>
-      .cs_portal_section { position: relative; padding: 170px 0 130px; background: #024242 url('/assets/img/Login/portalbgimg.png') center center / cover no-repeat; overflow: hidden; }
-      .cs_portal_section::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(2, 34, 34, 0.35) 0%, rgba(2, 34, 34, 0.55) 100%); }
-      .cs_portal_corner_tagline { position: absolute; right: 40px; bottom: 40px; z-index: 2; color: rgba(255, 255, 255, 0.6); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; line-height: 1.8; text-align: right; }
-      .cs_portal_head { position: relative; z-index: 2; max-width: 680px; margin: 0 auto 64px; text-align: center; }
-      .cs_portal_pill { display: inline-flex; align-items: center; padding: 8px 22px; border-radius: 30px; background: rgba(120, 220, 166, 0.15); border: 1px solid rgba(120, 220, 166, 0.35); color: #78dca6; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 22px; }
-      .cs_portal_head h1 { color: #fff; font-size: 46px; font-weight: 800; line-height: 1.2; margin: 0 0 18px; }
-      .cs_portal_head h1 span { color: #78dca6; }
-      .cs_portal_head p { color: rgba(255, 255, 255, 0.72); font-size: 17px; line-height: 1.7; margin: 0; }
-      .cs_portal_grid { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 780px; margin: 0 auto; }
-      .cs_portal_card { background: linear-gradient(135deg, #f2f9f4 0%, #ffffff 55%); border-radius: 20px; padding: 46px 34px; text-align: center; transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease; box-shadow: 0 20px 50px rgba(2, 20, 20, 0.25); }
-      .cs_portal_card:hover { transform: translateY(-10px); box-shadow: 0 30px 70px rgba(2, 20, 20, 0.35); }
-      .cs_portal_icon { width: 84px; height: 84px; margin: 0 auto 26px; border-radius: 50%; background: linear-gradient(135deg, #024242 0%, #011616 100%); display: flex; align-items: center; justify-content: center; font-size: 32px; color: #78dca6; transition: transform 0.4s ease; }
-      .cs_portal_card:hover .cs_portal_icon { transform: scale(1.08) rotate(-6deg); }
-      .cs_portal_card h3 { color: #024242; font-size: 22px; font-weight: 800; margin: 0 0 12px; }
-      .cs_portal_card p { color: #666; font-size: 14px; line-height: 1.7; margin: 0 0 30px; min-height: 68px; }
-      .cs_portal_btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%; background: #024242; color: #fff; font-weight: 700; font-size: 13px; letter-spacing: 0.5px; text-transform: uppercase; padding: 15px 20px; border-radius: 8px; text-decoration: none; transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; }
-      .cs_portal_btn:hover { background: #78dca6; color: #024242; transform: translateY(-2px); }
-      .cs_portal_note { position: relative; z-index: 2; text-align: center; margin-top: 44px; display: flex; align-items: center; justify-content: center; gap: 14px; }
-      .cs_portal_note::before, .cs_portal_note::after { content: ""; width: 34px; height: 1px; background: rgba(255, 255, 255, 0.3); }
-      .cs_portal_note p { color: rgba(255, 255, 255, 0.55); font-size: 13px; margin: 0; }
-      .cs_portal_note a { color: #78dca6; text-decoration: underline; }
-      @media (max-width: 575px) {
-        .cs_portal_corner_tagline { display: none; }
-      }
-      @media (max-width: 991px) {
-        .cs_portal_grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
-        .cs_portal_head h1 { font-size: 34px; }
-        .cs_portal_section { padding: 130px 0 90px; }
+      .cs_team_section { padding: 110px 0; background: #f7faf8; }
+      .cs_team_head { max-width: 700px; margin: 0 auto 60px; text-align: center; }
+      .cs_team_eyebrow { display: block; color: #78dca6; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; font-size: 14px; margin-bottom: 14px; }
+      .cs_team_head h2 { color: #024242; font-size: 38px; line-height: 1.25; margin: 0 0 20px; }
+      .cs_team_head p { color: #666; font-size: 16px; line-height: 1.7; margin: 0; }
+      .cs_team_grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+      .cs_team_card { flex: 0 1 340px; max-width: 340px; background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid #eee; display: flex; flex-direction: column; transition: 0.3s; }
+      .cs_team_card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(2,66,66,0.1); border-color: transparent; }
+      .cs_team_photo { width: 100%; aspect-ratio: 1 / 1; overflow: hidden; }
+      .cs_team_photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .cs_team_body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+      .cs_team_name { color: #024242; font-size: 19px; font-weight: 700; margin: 0 0 4px; }
+      .cs_team_title { color: #666; font-size: 13px; font-weight: 600; margin: 0 0 10px; }
+      .cs_team_role { color: #78dca6; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 14px; }
+      .cs_team_credential { color: #024242; font-size: 14px; line-height: 1.6; font-weight: 600; margin: 0 0 10px; }
+      .cs_team_supporting { color: #666; font-size: 14px; line-height: 1.6; margin: 0; }
+      .cs_team_statement { margin-top: 56px; text-align: center; }
+      .cs_team_statement p { color: #024242; font-size: 20px; font-style: italic; font-weight: 600; line-height: 1.6; max-width: 760px; margin: 0 auto; }
+      @media (max-width: 767px) {
+        .cs_team_section { padding: 80px 0; }
+        .cs_team_head h2 { font-size: 28px; }
+        .cs_team_card { flex-basis: 100%; }
+        .cs_team_statement p { font-size: 17px; }
       }
     </style>
-    <section class="cs_portal_section">
-      <span class="cs_portal_corner_tagline">Cultivating<br>A Healthier<br>Tomorrow</span>
+    <section class="cs_team_section">
       <div class="container">
-        <div class="cs_portal_head">
-          <span class="cs_portal_pill wow fadeInUp">PharmaCrop Portal</span>
-          <h1 class="wow fadeInUp" data-wow-delay="0.1s">Choose How You&rsquo;d Like To <span>Sign In</span></h1>
-          <p class="wow fadeInUp" data-wow-delay="0.2s">Select your role below to access the information and services relevant to you.</p>
+        <div class="cs_team_head">
+          <span class="cs_team_eyebrow">Our Team</span>
+          <h2>EXPERIENCE ACROSS THE FULL JOURNEY</h2>
+          <p>From science and cultivation through to pharmaceutical quality and commercialisation, our team brings experience across every stage of the journey.</p>
         </div>
-        <div class="cs_portal_grid">
-          <div class="cs_portal_card wow fadeInUp" data-wow-delay="0.1s">
-            <div class="cs_portal_icon"><i class="fa-solid fa-user-doctor"></i></div>
-            <h3>Doctor</h3>
-            <p>Review product information and manage patient prescribing pathways.</p>
-            <a href="/login" class="cs_portal_btn">
-              Login as Doctor
-              <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
-              </svg>
-            </a>
+        <div class="cs_team_grid">
+          <div class="cs_team_card wow fadeInUp">
+            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Dr%20Adel%20Zarei.webp" alt="Dr Adel Zarei"></div>
+            <div class="cs_team_body">
+              <h3 class="cs_team_name">Dr Adel Zarei</h3>
+              <p class="cs_team_title">Chief Operating Officer</p>
+              <span class="cs_team_role">Research to Innovation</span>
+              <p class="cs_team_credential">20+ publications. PhD in plant molecular biology.</p>
+              <p class="cs_team_supporting">Converts science into commercially viable products.</p>
+            </div>
           </div>
-          <a href="/coming-soon" class="cs_portal_card wow fadeInUp" data-wow-delay="0.2s">
-            <div class="cs_portal_icon"><i class="fa-solid fa-mortar-pestle"></i></div>
-            <h3>Pharmacist</h3>
-            <p>Order products, track supply and manage your pharmacy account.</p>
-            <span class="cs_portal_btn">
-              Login as Pharmacist
-              <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
-              </svg>
-            </span>
-          </a>
+          <div class="cs_team_card wow fadeInUp" data-wow-delay="0.1s">
+            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Paul%20Barker.webp" alt="Paul Barker"></div>
+            <div class="cs_team_body">
+              <h3 class="cs_team_name">Paul Barker</h3>
+              <p class="cs_team_title">Chief Financial Officer</p>
+              <span class="cs_team_role">Finance to Foresight</span>
+              <p class="cs_team_credential">25+ years across global finance, strategy and commercial leadership.</p>
+              <p class="cs_team_supporting">Turns financial insight into confident business decisions.</p>
+            </div>
+          </div>
+          <div class="cs_team_card wow fadeInUp" data-wow-delay="0.2s">
+            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-George%20Polimenakos.webp" alt="George Polimenakos"></div>
+            <div class="cs_team_body">
+              <h3 class="cs_team_name">George Polimenakos</h3>
+              <p class="cs_team_title">General Manager Commercial</p>
+              <span class="cs_team_role">Products to Patients</span>
+              <p class="cs_team_credential">Global pharmaceutical and healthcare industry leadership.</p>
+              <p class="cs_team_supporting">Turns pharmaceutical capability into sustainable commercial growth.</p>
+            </div>
+          </div>
+          <div class="cs_team_card wow fadeInUp">
+            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Chad%20Esch.webp" alt="Chad Esch"></div>
+            <div class="cs_team_body">
+              <h3 class="cs_team_name">Chad Esch</h3>
+              <p class="cs_team_title">Master Grower</p>
+              <span class="cs_team_role">Cultivation to Consistency</span>
+              <p class="cs_team_credential">International cultivation leadership across 3 continents.</p>
+              <p class="cs_team_supporting">Delivers repeatable quality at scale.</p>
+            </div>
+          </div>
+          <div class="cs_team_card wow fadeInUp" data-wow-delay="0.1s">
+            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Audrey%20Kuang.webp" alt="Audrey Kuang"></div>
+            <div class="cs_team_body">
+              <h3 class="cs_team_name">Audrey Kuang</h3>
+              <p class="cs_team_title">Head of Quality</p>
+              <span class="cs_team_role">Quality to Confidence</span>
+              <p class="cs_team_credential">14+ years across laboratory science, validation and pharmaceutical quality.</p>
+              <p class="cs_team_supporting">Builds confidence through rigorous pharmaceutical quality systems.</p>
+            </div>
+          </div>
+          <div class="cs_team_card wow fadeInUp" data-wow-delay="0.2s">
+            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Carolyn%20Fennell.webp" alt="Carolyn Fennell"></div>
+            <div class="cs_team_body">
+              <h3 class="cs_team_name">Carolyn Fennell</h3>
+              <p class="cs_team_title">GMP Production Manager</p>
+              <span class="cs_team_role">Flower to Medicine</span>
+              <p class="cs_team_credential">20+ years across pharmaceutical manufacturing, compliance and GMP operations.</p>
+              <p class="cs_team_supporting">Delivers pharmaceutical quality from harvest to finished medicine.</p>
+            </div>
+          </div>
+          <div class="cs_team_card wow fadeInUp">
+            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Johanna%20Faccini.webp" alt="Johanna Faccini"></div>
+            <div class="cs_team_body">
+              <h3 class="cs_team_name">Johanna Faccini</h3>
+              <p class="cs_team_title">Marketing Director</p>
+              <span class="cs_team_role">Strategy to Growth</span>
+              <p class="cs_team_credential">25+ years across pharmaceutical, healthcare and regulated markets.</p>
+              <p class="cs_team_supporting">Turns market insight into strategy, brands and growth.</p>
+            </div>
+          </div>
+          <div class="cs_team_card wow fadeInUp" data-wow-delay="0.1s">
+            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Suzanne%20Roberts.webp" alt="Suzanne Roberts"></div>
+            <div class="cs_team_body">
+              <h3 class="cs_team_name">Suzanne Roberts</h3>
+              <p class="cs_team_title">Sales Director</p>
+              <span class="cs_team_role">Relationships to Results</span>
+              <p class="cs_team_credential">15+ years across pharmaceutical and healthcare sales.</p>
+              <p class="cs_team_supporting">Builds trusted partnerships that deliver commercial results.</p>
+            </div>
+          </div>
+          <div class="cs_team_card wow fadeInUp" data-wow-delay="0.2s">
+            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Margs.webp" alt="Margaret Meldrum"></div>
+            <div class="cs_team_body">
+              <h3 class="cs_team_name">Margaret Meldrum</h3>
+              <p class="cs_team_title">Commercial Operations &amp; Supply Chain Manager</p>
+              <span class="cs_team_role">Demand to Delivery</span>
+              <p class="cs_team_credential">7+ years&rsquo; medicinal cannabis experience across commercial operations, product and supply chain.</p>
+              <p class="cs_team_supporting">Connects demand, supply and distribution to ensure reliable product delivery.</p>
+            </div>
+          </div>
         </div>
-        <div class="cs_portal_note wow fadeInUp" data-wow-delay="0.4s">
-          <p>Don&rsquo;t have portal access yet? <a href="/contact">Get in touch with our team</a>.</p>
+        <div class="cs_team_statement wow fadeInUp">
+          <p>&ldquo;Cannabinoid medicines sit at the intersection of science, cultivation and healthcare. So does our team.&rdquo;</p>
         </div>
       </div>
     </section>
-    <!-- End Portal Login Section -->
+    <!-- End Team Expertise Section -->
     <!-- Start Footer Section -->
     <style>
       .cs_footer_v2 { background: #eee9e3; padding: 90px 0 0; position: relative; overflow: hidden; }

@@ -27,6 +27,7 @@ export default function Page() {
                 <nav class="cs_nav_list_wrap text-uppercase">
                   <ul class="cs_nav_list">
                     <li><a href="/about-us">About Us</a></li>
+                    <li><a href="/our-team">Our Team</a></li>
                     <li><a href="/products">Products</a></li>
                     <li><a href="/partnerships">Partnerships</a></li>
                   </ul>
@@ -190,138 +191,6 @@ export default function Page() {
       </div>
     </section>
     <!-- End About Gallery Preview Section -->
-    <!-- Start Team Expertise Section -->
-    <style>
-      .cs_team_section { padding: 110px 0; background: #f7faf8; }
-      .cs_team_head { max-width: 700px; margin: 0 auto 60px; text-align: center; }
-      .cs_team_eyebrow { display: block; color: #78dca6; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; font-size: 14px; margin-bottom: 14px; }
-      .cs_team_head h2 { color: #024242; font-size: 38px; line-height: 1.25; margin: 0 0 20px; }
-      .cs_team_head p { color: #666; font-size: 16px; line-height: 1.7; margin: 0; }
-      .cs_team_grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
-      .cs_team_card { flex: 0 1 340px; max-width: 340px; background: #fff; border-radius: 16px; overflow: hidden; border: 1px solid #eee; display: flex; flex-direction: column; transition: 0.3s; }
-      .cs_team_card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(2,66,66,0.1); border-color: transparent; }
-      .cs_team_photo { width: 100%; aspect-ratio: 1 / 1; overflow: hidden; }
-      .cs_team_photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-      .cs_team_body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
-      .cs_team_name { color: #024242; font-size: 19px; font-weight: 700; margin: 0 0 4px; }
-      .cs_team_title { color: #666; font-size: 13px; font-weight: 600; margin: 0 0 10px; }
-      .cs_team_role { color: #78dca6; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 14px; }
-      .cs_team_credential { color: #024242; font-size: 14px; line-height: 1.6; font-weight: 600; margin: 0 0 10px; }
-      .cs_team_supporting { color: #666; font-size: 14px; line-height: 1.6; margin: 0; }
-      .cs_team_statement { margin-top: 56px; text-align: center; }
-      .cs_team_statement p { color: #024242; font-size: 20px; font-style: italic; font-weight: 600; line-height: 1.6; max-width: 760px; margin: 0 auto; }
-      @media (max-width: 767px) {
-        .cs_team_section { padding: 80px 0; }
-        .cs_team_head h2 { font-size: 28px; }
-        .cs_team_card { flex-basis: 100%; }
-        .cs_team_statement p { font-size: 17px; }
-      }
-    </style>
-    <section class="cs_team_section">
-      <div class="container">
-        <div class="cs_team_head">
-          <span class="cs_team_eyebrow">Our Team</span>
-          <h2>EXPERIENCE ACROSS THE FULL JOURNEY</h2>
-          <p>From science and cultivation through to pharmaceutical quality and commercialisation, our team brings experience across every stage of the journey.</p>
-        </div>
-        <div class="cs_team_grid">
-          <div class="cs_team_card wow fadeInUp">
-            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Dr%20Adel%20Zarei.webp" alt="Dr Adel Zarei"></div>
-            <div class="cs_team_body">
-              <h3 class="cs_team_name">Dr Adel Zarei</h3>
-              <p class="cs_team_title">Chief Operating Officer</p>
-              <span class="cs_team_role">Research to Innovation</span>
-              <p class="cs_team_credential">20+ publications. PhD in plant molecular biology.</p>
-              <p class="cs_team_supporting">Converts science into commercially viable products.</p>
-            </div>
-          </div>
-          <div class="cs_team_card wow fadeInUp" data-wow-delay="0.1s">
-            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Paul%20Barker.webp" alt="Paul Barker"></div>
-            <div class="cs_team_body">
-              <h3 class="cs_team_name">Paul Barker</h3>
-              <p class="cs_team_title">Chief Financial Officer</p>
-              <span class="cs_team_role">Finance to Foresight</span>
-              <p class="cs_team_credential">25+ years across global finance, strategy and commercial leadership.</p>
-              <p class="cs_team_supporting">Turns financial insight into confident business decisions.</p>
-            </div>
-          </div>
-          <div class="cs_team_card wow fadeInUp" data-wow-delay="0.2s">
-            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-George%20Polimenakos.webp" alt="George Polimenakos"></div>
-            <div class="cs_team_body">
-              <h3 class="cs_team_name">George Polimenakos</h3>
-              <p class="cs_team_title">General Manager Commercial</p>
-              <span class="cs_team_role">Products to Patients</span>
-              <p class="cs_team_credential">Global pharmaceutical and healthcare industry leadership.</p>
-              <p class="cs_team_supporting">Turns pharmaceutical capability into sustainable commercial growth.</p>
-            </div>
-          </div>
-          <div class="cs_team_card wow fadeInUp">
-            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Chad%20Esch.webp" alt="Chad Esch"></div>
-            <div class="cs_team_body">
-              <h3 class="cs_team_name">Chad Esch</h3>
-              <p class="cs_team_title">Master Grower</p>
-              <span class="cs_team_role">Cultivation to Consistency</span>
-              <p class="cs_team_credential">International cultivation leadership across 3 continents.</p>
-              <p class="cs_team_supporting">Delivers repeatable quality at scale.</p>
-            </div>
-          </div>
-          <div class="cs_team_card wow fadeInUp" data-wow-delay="0.1s">
-            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Audrey%20Kuang.webp" alt="Audrey Kuang"></div>
-            <div class="cs_team_body">
-              <h3 class="cs_team_name">Audrey Kuang</h3>
-              <p class="cs_team_title">Head of Quality</p>
-              <span class="cs_team_role">Quality to Confidence</span>
-              <p class="cs_team_credential">14+ years across laboratory science, validation and pharmaceutical quality.</p>
-              <p class="cs_team_supporting">Builds confidence through rigorous pharmaceutical quality systems.</p>
-            </div>
-          </div>
-          <div class="cs_team_card wow fadeInUp" data-wow-delay="0.2s">
-            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Carolyn%20Fennell.webp" alt="Carolyn Fennell"></div>
-            <div class="cs_team_body">
-              <h3 class="cs_team_name">Carolyn Fennell</h3>
-              <p class="cs_team_title">GMP Production Manager</p>
-              <span class="cs_team_role">Flower to Medicine</span>
-              <p class="cs_team_credential">20+ years across pharmaceutical manufacturing, compliance and GMP operations.</p>
-              <p class="cs_team_supporting">Delivers pharmaceutical quality from harvest to finished medicine.</p>
-            </div>
-          </div>
-          <div class="cs_team_card wow fadeInUp">
-            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Johanna%20Faccini.webp" alt="Johanna Faccini"></div>
-            <div class="cs_team_body">
-              <h3 class="cs_team_name">Johanna Faccini</h3>
-              <p class="cs_team_title">Marketing Director</p>
-              <span class="cs_team_role">Strategy to Growth</span>
-              <p class="cs_team_credential">25+ years across pharmaceutical, healthcare and regulated markets.</p>
-              <p class="cs_team_supporting">Turns market insight into strategy, brands and growth.</p>
-            </div>
-          </div>
-          <div class="cs_team_card wow fadeInUp" data-wow-delay="0.1s">
-            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Suzanne%20Roberts.webp" alt="Suzanne Roberts"></div>
-            <div class="cs_team_body">
-              <h3 class="cs_team_name">Suzanne Roberts</h3>
-              <p class="cs_team_title">Sales Director</p>
-              <span class="cs_team_role">Relationships to Results</span>
-              <p class="cs_team_credential">15+ years across pharmaceutical and healthcare sales.</p>
-              <p class="cs_team_supporting">Builds trusted partnerships that deliver commercial results.</p>
-            </div>
-          </div>
-          <div class="cs_team_card wow fadeInUp" data-wow-delay="0.2s">
-            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Margs.webp" alt="Margaret Meldrum"></div>
-            <div class="cs_team_body">
-              <h3 class="cs_team_name">Margaret Meldrum</h3>
-              <p class="cs_team_title">Commercial Operations &amp; Supply Chain Manager</p>
-              <span class="cs_team_role">Demand to Delivery</span>
-              <p class="cs_team_credential">7+ years&rsquo; medicinal cannabis experience across commercial operations, product and supply chain.</p>
-              <p class="cs_team_supporting">Connects demand, supply and distribution to ensure reliable product delivery.</p>
-            </div>
-          </div>
-        </div>
-        <div class="cs_team_statement wow fadeInUp">
-          <p>&ldquo;Cannabinoid medicines sit at the intersection of science, cultivation and healthcare. So does our team.&rdquo;</p>
-        </div>
-      </div>
-    </section>
-    <!-- End Team Expertise Section -->
     <!-- Start Facility Timeline Section -->
     <style>
       .cs_facility_desc { color: rgba(255,255,255,0.7); font-size: 16px; line-height: 1.7; max-width: 620px; margin: 20px 0 12px; }
