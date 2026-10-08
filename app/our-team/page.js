@@ -67,13 +67,13 @@ export default function Page() {
       .cs_team_photo { width: 100%; aspect-ratio: 1 / 1; overflow: hidden; }
       .cs_team_photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
       .cs_team_body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
-      .cs_team_name { color: #024242; font-size: 19px; font-weight: 700; margin: 0 0 4px; }
+      .cs_team_name_row { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 0 0 4px; }
+      .cs_team_name { color: #024242; font-size: 19px; font-weight: 700; margin: 0; }
       .cs_team_title { color: #666; font-size: 13px; font-weight: 600; margin: 0 0 10px; }
       .cs_team_role { color: #78dca6; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 14px; }
       .cs_team_credential { color: #024242; font-size: 14px; line-height: 1.6; font-weight: 600; margin: 0 0 10px; }
       .cs_team_supporting { color: #666; font-size: 14px; line-height: 1.6; margin: 0; }
-      .cs_team_social { margin-top: 16px; padding-top: 14px; border-top: 1px solid #f1f1f1; }
-      .cs_team_social a { width: 32px; height: 32px; border-radius: 50%; background: rgba(120, 220, 166, 0.18); color: #024242; display: inline-flex; align-items: center; justify-content: center; font-size: 14px; transition: 0.3s; }
+      .cs_team_social a { width: 28px; height: 28px; border-radius: 50%; background: rgba(120, 220, 166, 0.18); color: #024242; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; flex: none; transition: 0.3s; }
       .cs_team_social a:hover { background: #024242; color: #fff; }
       .cs_team_statement { margin-top: 56px; text-align: center; }
       .cs_team_statement p { color: #024242; font-size: 20px; font-style: italic; font-weight: 600; line-height: 1.6; max-width: 760px; margin: 0 auto; }
@@ -95,100 +95,118 @@ export default function Page() {
           <div class="cs_team_card wow fadeInUp">
             <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Dr%20Adel%20Zarei.webp" alt="Dr Adel Zarei"></div>
             <div class="cs_team_body">
-              <h3 class="cs_team_name">Dr Adel Zarei</h3>
+              <div class="cs_team_name_row">
+                <h3 class="cs_team_name">Dr Adel Zarei</h3>
+                <div class="cs_team_social"><a href="#" aria-label="Dr Adel Zarei on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+              </div>
               <p class="cs_team_title">Chief Operating Officer</p>
               <span class="cs_team_role">Research to Innovation</span>
               <p class="cs_team_credential">20+ publications. PhD in plant molecular biology.</p>
               <p class="cs_team_supporting">Converts science into commercially viable products.</p>
-              <div class="cs_team_social"><a href="#" aria-label="Dr Adel Zarei on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp" data-wow-delay="0.1s">
             <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Paul%20Barker.webp" alt="Paul Barker"></div>
             <div class="cs_team_body">
-              <h3 class="cs_team_name">Paul Barker</h3>
+              <div class="cs_team_name_row">
+                <h3 class="cs_team_name">Paul Barker</h3>
+                <div class="cs_team_social"><a href="#" aria-label="Paul Barker on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+              </div>
               <p class="cs_team_title">Chief Financial Officer</p>
               <span class="cs_team_role">Finance to Foresight</span>
               <p class="cs_team_credential">25+ years across global finance, strategy and commercial leadership.</p>
               <p class="cs_team_supporting">Turns financial insight into confident business decisions.</p>
-              <div class="cs_team_social"><a href="#" aria-label="Paul Barker on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp" data-wow-delay="0.2s">
             <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-George%20Polimenakos.webp" alt="George Polimenakos"></div>
             <div class="cs_team_body">
-              <h3 class="cs_team_name">George Polimenakos</h3>
+              <div class="cs_team_name_row">
+                <h3 class="cs_team_name">George Polimenakos</h3>
+                <div class="cs_team_social"><a href="#" aria-label="George Polimenakos on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+              </div>
               <p class="cs_team_title">General Manager Commercial</p>
               <span class="cs_team_role">Products to Patients</span>
               <p class="cs_team_credential">Global pharmaceutical and healthcare industry leadership.</p>
               <p class="cs_team_supporting">Turns pharmaceutical capability into sustainable commercial growth.</p>
-              <div class="cs_team_social"><a href="#" aria-label="George Polimenakos on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp">
             <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Chad%20Esch.webp" alt="Chad Esch"></div>
             <div class="cs_team_body">
-              <h3 class="cs_team_name">Chad Esch</h3>
+              <div class="cs_team_name_row">
+                <h3 class="cs_team_name">Chad Esch</h3>
+                <div class="cs_team_social"><a href="#" aria-label="Chad Esch on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+              </div>
               <p class="cs_team_title">Master Grower</p>
               <span class="cs_team_role">Cultivation to Consistency</span>
               <p class="cs_team_credential">International cultivation leadership across 3 continents.</p>
               <p class="cs_team_supporting">Delivers repeatable quality at scale.</p>
-              <div class="cs_team_social"><a href="#" aria-label="Chad Esch on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp" data-wow-delay="0.1s">
             <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Audrey%20Kuang.webp" alt="Audrey Kuang"></div>
             <div class="cs_team_body">
-              <h3 class="cs_team_name">Audrey Kuang</h3>
+              <div class="cs_team_name_row">
+                <h3 class="cs_team_name">Audrey Kuang</h3>
+                <div class="cs_team_social"><a href="#" aria-label="Audrey Kuang on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+              </div>
               <p class="cs_team_title">Head of Quality</p>
               <span class="cs_team_role">Quality to Confidence</span>
               <p class="cs_team_credential">14+ years across laboratory science, validation and pharmaceutical quality.</p>
               <p class="cs_team_supporting">Builds confidence through rigorous pharmaceutical quality systems.</p>
-              <div class="cs_team_social"><a href="#" aria-label="Audrey Kuang on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp" data-wow-delay="0.2s">
             <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Carolyn%20Fennell.webp" alt="Carolyn Fennell"></div>
             <div class="cs_team_body">
-              <h3 class="cs_team_name">Carolyn Fennell</h3>
+              <div class="cs_team_name_row">
+                <h3 class="cs_team_name">Carolyn Fennell</h3>
+                <div class="cs_team_social"><a href="#" aria-label="Carolyn Fennell on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+              </div>
               <p class="cs_team_title">GMP Production Manager</p>
               <span class="cs_team_role">Flower to Medicine</span>
               <p class="cs_team_credential">20+ years across pharmaceutical manufacturing, compliance and GMP operations.</p>
               <p class="cs_team_supporting">Delivers pharmaceutical quality from harvest to finished medicine.</p>
-              <div class="cs_team_social"><a href="#" aria-label="Carolyn Fennell on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp">
             <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Johanna%20Faccini.webp" alt="Johanna Faccini"></div>
             <div class="cs_team_body">
-              <h3 class="cs_team_name">Johanna Faccini</h3>
+              <div class="cs_team_name_row">
+                <h3 class="cs_team_name">Johanna Faccini</h3>
+                <div class="cs_team_social"><a href="#" aria-label="Johanna Faccini on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+              </div>
               <p class="cs_team_title">Marketing Director</p>
               <span class="cs_team_role">Strategy to Growth</span>
               <p class="cs_team_credential">25+ years across pharmaceutical, healthcare and regulated markets.</p>
               <p class="cs_team_supporting">Turns market insight into strategy, brands and growth.</p>
-              <div class="cs_team_social"><a href="#" aria-label="Johanna Faccini on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp" data-wow-delay="0.1s">
             <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Suzanne%20Roberts.webp" alt="Suzanne Roberts"></div>
             <div class="cs_team_body">
-              <h3 class="cs_team_name">Suzanne Roberts</h3>
+              <div class="cs_team_name_row">
+                <h3 class="cs_team_name">Suzanne Roberts</h3>
+                <div class="cs_team_social"><a href="#" aria-label="Suzanne Roberts on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+              </div>
               <p class="cs_team_title">Sales Director</p>
               <span class="cs_team_role">Relationships to Results</span>
               <p class="cs_team_credential">15+ years across pharmaceutical and healthcare sales.</p>
               <p class="cs_team_supporting">Builds trusted partnerships that deliver commercial results.</p>
-              <div class="cs_team_social"><a href="#" aria-label="Suzanne Roberts on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
             </div>
           </div>
           <div class="cs_team_card wow fadeInUp" data-wow-delay="0.2s">
             <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Margs.webp" alt="Margaret Meldrum"></div>
             <div class="cs_team_body">
-              <h3 class="cs_team_name">Margaret Meldrum</h3>
+              <div class="cs_team_name_row">
+                <h3 class="cs_team_name">Margaret Meldrum</h3>
+                <div class="cs_team_social"><a href="#" aria-label="Margaret Meldrum on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+              </div>
               <p class="cs_team_title">Commercial Operations &amp; Supply Chain Manager</p>
               <span class="cs_team_role">Demand to Delivery</span>
               <p class="cs_team_credential">7+ years&rsquo; medicinal cannabis experience across commercial operations, product and supply chain.</p>
               <p class="cs_team_supporting">Connects demand, supply and distribution to ensure reliable product delivery.</p>
-              <div class="cs_team_social"><a href="#" aria-label="Margaret Meldrum on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
             </div>
           </div>
         </div>
