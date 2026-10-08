@@ -45,7 +45,7 @@ export default function Page() {
     </header>
     <!-- End Header Section -->
     <!-- Start Page Heading Sectoin -->
-    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/General%20Images/Site%20Content/pharmacrop-bannerv2.webp">
+    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/Our-Facilities/Hero%20Image.webp">
       <div class="container">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -62,8 +62,8 @@ export default function Page() {
         <div class="cs_isotop cs_style_1 cs_isotop_col_3 cs_has_gutter_24 cs_lightgallery">
           <div class="cs_grid_sizer"></div>
           <div class="cs_isotop_item">
-            <a href="/assets/img/Our-Facilities/Our Facility-1.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-              <img src="/assets/img/Our-Facilities/Our Facility-1.webp" alt="Aerial view of PharmaCrop's Noosa Hinterland facility">
+            <a href="/assets/img/Our-Facilities/1.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/1.webp" alt="Aerial view of PharmaCrop's Noosa Hinterland facility">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
                   <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Facility Overview</span>
@@ -73,8 +73,8 @@ export default function Page() {
             </a>
           </div>
           <div class="cs_isotop_item">
-            <a href="/assets/img/Our-Facilities/Our facility-2.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-              <img src="/assets/img/Our-Facilities/Our facility-2.webp" alt="Staff inspecting cannabis plants in the greenhouse">
+            <a href="/assets/img/Our-Facilities/2.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/2.webp" alt="Staff inspecting cannabis plants in the greenhouse">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
                   <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Crop Inspection</span>
@@ -84,8 +84,8 @@ export default function Page() {
             </a>
           </div>
           <div class="cs_isotop_item">
-            <a href="/assets/img/Our-Facilities/our facility 3.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-              <img src="/assets/img/Our-Facilities/our facility 3.webp" alt="Technician carrying a tray of propagated clones">
+            <a href="/assets/img/Our-Facilities/3.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/3.webp" alt="Technician carrying a tray of propagated clones">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
                   <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Propagation</span>
@@ -95,8 +95,8 @@ export default function Page() {
             </a>
           </div>
           <div class="cs_isotop_item">
-            <a href="/assets/img/Our-Facilities/our facility 4.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-              <img src="/assets/img/Our-Facilities/our facility 4.webp" alt="Flowering cannabis canopy in the greenhouse">
+            <a href="/assets/img/Our-Facilities/4.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/4.webp" alt="Flowering cannabis canopy in the greenhouse">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
                   <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Flowering Canopy</span>
@@ -106,8 +106,8 @@ export default function Page() {
             </a>
           </div>
           <div class="cs_isotop_item">
-            <a href="/assets/img/Our-Facilities/our facility 5.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-              <img src="/assets/img/Our-Facilities/our facility 5.webp" alt="Product labeling on the packaging line">
+            <a href="/assets/img/Our-Facilities/5.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/5.webp" alt="Product labeling on the packaging line">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
                   <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Packaging Line</span>
@@ -117,8 +117,8 @@ export default function Page() {
             </a>
           </div>
           <div class="cs_isotop_item">
-            <a href="/assets/img/Our-Facilities/our facility 6.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-              <img src="/assets/img/Our-Facilities/our facility 6.webp" alt="Rows of cannabis plants under greenhouse grow lights">
+            <a href="/assets/img/Our-Facilities/6.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/6.webp" alt="Rows of cannabis plants under greenhouse grow lights">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
                   <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Growing Aisle</span>
@@ -128,8 +128,8 @@ export default function Page() {
             </a>
           </div>
           <div class="cs_isotop_item">
-            <a href="/assets/img/Our-Facilities/our facility 7.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-              <img src="/assets/img/Our-Facilities/our facility 7.webp" alt="Staff closely inspecting a flowering cannabis plant">
+            <a href="/assets/img/Our-Facilities/our facility 3.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/our facility 3.webp" alt="Staff closely inspecting a flowering cannabis plant">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
                   <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Plant Inspection</span>
@@ -139,8 +139,8 @@ export default function Page() {
             </a>
           </div>
           <div class="cs_isotop_item">
-            <a href="/assets/img/Our-Facilities/our facility 8.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-              <img src="/assets/img/Our-Facilities/our facility 8.webp" alt="Potted cannabis plants on greenhouse benches">
+            <a href="/assets/img/Our-Facilities/our facility 6.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/our facility 6.webp" alt="Potted cannabis plants on greenhouse benches">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
                   <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Mature Crop</span>
@@ -150,8 +150,8 @@ export default function Page() {
             </a>
           </div>
           <div class="cs_isotop_item">
-            <a href="/assets/img/Our-Facilities/our facility 9.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-              <img src="/assets/img/Our-Facilities/our facility 9.webp" alt="Staff conducting quality checks in the greenhouse">
+            <a href="/assets/img/Our-Facilities/our facility 7.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/our facility 7.webp" alt="Staff conducting quality checks in the greenhouse">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
                   <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Quality Control</span>
@@ -172,12 +172,34 @@ export default function Page() {
             </a>
           </div>
           <div class="cs_isotop_item">
-            <a href="/assets/img/Our-Facilities/our facility 11.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-              <img src="/assets/img/Our-Facilities/our facility 11.webp" alt="Staff trimming a flowering cannabis plant">
+            <a href="/assets/img/Our-Facilities/Our facility-2 (1).webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/Our facility-2 (1).webp" alt="Staff trimming a flowering cannabis plant">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
                   <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Hands-On Cultivation</span>
                   <span class="cs_white_color d-block">Cultivation</span>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="cs_isotop_item">
+            <a href="/assets/img/Our-Facilities/Horizontal image.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/Horizontal image.webp" alt="Wide view of the PharmaCrop Noosa Hinterland facility">
+              <span class="cs_gallery_info_wrap cs_center">
+                <span class="cs_gallery_info text-center cs_center">
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Facility Wide View</span>
+                  <span class="cs_white_color d-block">Noosa Hinterland</span>
+                </span>
+              </span>
+            </a>
+          </div>
+          <div class="cs_isotop_item">
+            <a href="/assets/img/Our-Facilities/Verticle image.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/Verticle image.webp" alt="Close-up view inside the PharmaCrop facility">
+              <span class="cs_gallery_info_wrap cs_center">
+                <span class="cs_gallery_info text-center cs_center">
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Facility Close-Up</span>
+                  <span class="cs_white_color d-block">Noosa Hinterland</span>
                 </span>
               </span>
             </a>
