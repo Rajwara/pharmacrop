@@ -20,7 +20,7 @@ export default async function Page() {
   }
 
   function strainPillHtml(p) {
-    if (!p.strainType || p.category === "Pastilles") return "";
+    if (!p.strainType) return "";
     const cls = `cs_dash_feat_strain_pill cs_dash_feat_strain_${p.strainType.toLowerCase()}`;
     const text = p.strainType === "Hybrid" && p.speciesRatio ? `${p.strainType} &ndash; ${p.speciesRatio}` : p.strainType;
     return `<span class="${cls}">${text}</span>`;
