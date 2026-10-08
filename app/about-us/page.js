@@ -149,7 +149,6 @@ export default function Page() {
       .cs_about_gallery_eyebrow { display: block; color: #78dca6; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; font-size: 14px; margin-bottom: 14px; }
       .cs_about_gallery_head h2 { color: #024242; font-size: 38px; line-height: 1.25; margin: 0 0 20px; }
       .cs_about_gallery_head p { color: #666; font-size: 16px; line-height: 1.7; margin: 0; }
-      .cs_about_gallery_cta { text-align: center; margin-top: 44px; }
       @media (max-width: 767px) {
         .cs_about_gallery_section { padding: 70px 0; }
         .cs_about_gallery_head h2 { font-size: 28px; }
@@ -253,17 +252,6 @@ export default function Page() {
             </a>
           </div>
           <div class="cs_isotop_item">
-            <a href="/assets/img/Our-Facilities/our facility 7.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-              <img src="/assets/img/Our-Facilities/our facility 7.webp" alt="Staff conducting quality checks in the greenhouse">
-              <span class="cs_gallery_info_wrap cs_center">
-                <span class="cs_gallery_info text-center cs_center">
-                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Quality Control</span>
-                  <span class="cs_white_color d-block">Manufacturing</span>
-                </span>
-              </span>
-            </a>
-          </div>
-          <div class="cs_isotop_item">
             <a href="/assets/img/Our-Facilities/our facility 10.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
               <img src="/assets/img/Our-Facilities/our facility 10.webp" alt="Cultivation aisle under specialised grow lighting">
               <span class="cs_gallery_info_wrap cs_center">
@@ -296,20 +284,6 @@ export default function Page() {
               </span>
             </a>
           </div>
-          <div class="cs_isotop_item">
-            <a href="/assets/img/Our-Facilities/Verticle image.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-              <img src="/assets/img/Our-Facilities/Verticle image.webp" alt="Close-up view inside the PharmaCrop facility">
-              <span class="cs_gallery_info_wrap cs_center">
-                <span class="cs_gallery_info text-center cs_center">
-                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Facility Close-Up</span>
-                  <span class="cs_white_color d-block">Noosa Hinterland</span>
-                </span>
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="cs_about_gallery_cta">
-          <a href="/our-facilities" class="cs_btn cs_style_1 cs_bold cs_heading_bg cs_white_color">View our facility</a>
         </div>
       </div>
     </section>
