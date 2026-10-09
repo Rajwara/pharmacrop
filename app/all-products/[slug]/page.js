@@ -221,8 +221,8 @@ export default async function Page({ params }) {
       .cs_pd_breadcrumb span.current { color: #024242; font-weight: 700; }
       .cs_pd_hero { padding: 40px 0 60px; background: #f7faf8; }
       .cs_pd_hero_grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
-      .cs_pd_gallery_main { border-radius: 16px; overflow: hidden; height: 520px; background: #f7faf8; }
-      .cs_pd_gallery_main img { width: 100%; height: 100%; object-fit: contain; display: block; }
+      .cs_pd_gallery_main { border-radius: 16px; overflow: hidden; background: #f7faf8; }
+      .cs_pd_gallery_main img { width: 100%; height: auto; max-height: 560px; object-fit: contain; display: block; margin: 0 auto; }
       .cs_pd_gallery_thumbs { display: flex; gap: 12px; margin-top: 14px; }
       .cs_pd_gallery_thumbs button { padding: 0; border: 2px solid transparent; border-radius: 10px; overflow: hidden; width: 90px; height: 70px; cursor: pointer; background: #f7faf8; }
       .cs_pd_gallery_thumbs button.active { border-color: #024242; }
@@ -248,7 +248,7 @@ export default async function Page({ params }) {
       .cs_pd_note { color: #999; font-size: 12px; margin: 0; }
       @media (max-width: 991px) {
         .cs_pd_hero_grid { grid-template-columns: 1fr; }
-        .cs_pd_gallery_main { height: 380px; }
+        .cs_pd_gallery_main img { max-height: 380px; }
       }
     </style>
     <div class="cs_pd_breadcrumb">
@@ -290,8 +290,8 @@ export default async function Page({ params }) {
       .cs_pd_overview_row { display: flex; align-items: center; gap: 40px; }
       .cs_pd_overview_text { flex: 1; }
       .cs_pd_overview_text p { color: #666; font-size: 15px; line-height: 1.7; margin: 0; }
-      .cs_pd_overview_img { flex: 0 0 42%; border-radius: 14px; overflow: hidden; height: 320px; background: #f7faf8; }
-      .cs_pd_overview_img img { width: 100%; height: 100%; object-fit: contain; display: block; }
+      .cs_pd_overview_img { flex: 0 0 42%; border-radius: 14px; overflow: hidden; background: #f7faf8; }
+      .cs_pd_overview_img img { width: 100%; height: auto; max-height: 320px; object-fit: contain; display: block; margin: 0 auto; }
       @media (max-width: 767px) {
         .cs_pd_overview_row { flex-direction: column; }
         .cs_pd_overview_img { width: 100%; }
