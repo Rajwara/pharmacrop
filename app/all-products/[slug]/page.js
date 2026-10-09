@@ -123,6 +123,7 @@ export default async function Page({ params }) {
       tableRow("fa-box", "Pack Size", product.packSize) +
       tableRow("fa-atom", "Spectrum", product.spectrum || product.strainType) +
       tableRow("fa-ice-cream", "Flavour", product.flavour) +
+      tableRow("fa-leaf", "Dietary Tags", product.dietaryTags) +
       tableRow("fa-vial", "Excipients", product.excipients) +
       tableRow("fa-heart-pulse", "Therapeutic Profile*", product.therapeuticProfile) +
       tableRow("fa-shield-halved", "TGA Category", product.tgaCategory) +
