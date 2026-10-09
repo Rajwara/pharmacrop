@@ -59,21 +59,37 @@ export default function Page() {
     <style>
       .cs_article_section { padding: 90px 0; }
       .cs_article_section.cs_article_alt { background: #f7faf8; }
-      .cs_article_intro { max-width: 820px; margin: 0 auto; }
-      .cs_article_intro p { color: #444; font-size: 17px; line-height: 1.8; margin: 0 0 22px; }
+      .cs_article_eyebrow_wrap { text-align: center; margin-bottom: 24px; }
+      .cs_article_eyebrow { display: inline-flex; align-items: center; padding: 8px 22px; border: 1px solid rgba(2, 66, 66, 0.18); border-radius: 30px; background: #fff; color: #024242; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
+      .cs_article_intro { max-width: 760px; margin: 0 auto; text-align: center; }
+      .cs_article_intro p { color: #444; font-size: 18px; line-height: 1.85; margin: 0 0 22px; }
       .cs_article_intro p:last-child { margin-bottom: 0; }
-      .cs_article_block { max-width: 820px; margin: 0 auto; }
-      .cs_article_block h2 { color: #024242; font-size: 30px; font-weight: 800; margin: 0 0 22px; }
-      .cs_article_block p { color: #555; font-size: 16px; line-height: 1.8; margin: 0 0 18px; }
-      .cs_article_block p:last-child { margin-bottom: 0; }
-      .cs_article_stack { display: flex; flex-direction: column; gap: 70px; }
+      .cs_feature_row { display: flex; align-items: center; gap: 64px; }
+      .cs_feature_row.cs_feature_row_rev { flex-direction: row-reverse; }
+      .cs_feature_img { flex: 0 0 44%; border-radius: 16px; overflow: hidden; }
+      .cs_feature_img img { width: 100%; height: 400px; object-fit: cover; display: block; }
+      .cs_feature_content { flex: 1; }
+      .cs_feature_icon { width: 54px; height: 54px; border-radius: 14px; background: rgba(120,220,166,0.18); color: #024242; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 22px; }
+      .cs_feature_content h2 { color: #024242; font-size: 28px; font-weight: 800; margin: 0 0 18px; }
+      .cs_feature_content p { color: #555; font-size: 16px; line-height: 1.8; margin: 0 0 16px; }
+      .cs_feature_content p:last-child { margin-bottom: 0; }
+      .cs_feature_stack { display: flex; flex-direction: column; gap: 90px; }
+      @media (max-width: 991px) {
+        .cs_feature_row, .cs_feature_row.cs_feature_row_rev { flex-direction: column; gap: 32px; }
+        .cs_feature_img { flex: none; width: 100%; }
+        .cs_feature_img img { height: 280px; }
+      }
       @media (max-width: 575px) {
         .cs_article_section { padding: 60px 0; }
-        .cs_article_block h2 { font-size: 24px; }
+        .cs_feature_content h2 { font-size: 24px; }
+        .cs_article_intro p { font-size: 16px; }
       }
     </style>
     <section class="cs_article_section">
       <div class="container">
+        <div class="cs_article_eyebrow_wrap wow fadeInUp">
+          <span class="cs_article_eyebrow">Precision Cultivation</span>
+        </div>
         <div class="cs_article_intro wow fadeInUp">
           <p>At PharmaCrop, consistency begins with the systems behind every crop. Our advanced soilless cultivation approach combines carefully selected growing media, precision nutrient delivery and detailed cultivation data to support plant health, quality and repeatable outcomes.</p>
           <p>By maintaining control over cultivation inputs, we establish a consistent foundation for every growing cycle.</p>
@@ -84,50 +100,48 @@ export default function Page() {
     <!-- Start Growing Systems Detail Sections -->
     <section class="cs_article_section cs_article_alt">
       <div class="container">
-        <div class="cs_article_stack">
-          <div class="cs_article_block wow fadeInUp">
-            <h2>A Consistent Foundation for Every Crop</h2>
-            <p>Our cultivation process uses coco-based growing media, selected for its clean, stable and predictable characteristics.</p>
-            <p>Unlike living soil, where biological activity can introduce variability, coco provides a consistent starting point with minimal inherent nutritional content. This allows us to manage nutrient inputs with greater precision and establish repeatable growing conditions across successive crops.</p>
-            <p>This approach helps minimise unnecessary variables and supports consistent plant development from the outset.</p>
+        <div class="cs_feature_stack">
+          <div class="cs_feature_row wow fadeInUp">
+            <div class="cs_feature_img">
+              <img src="/assets/img/Our-Facilities/4.webp" alt="Flowering cannabis canopy in the greenhouse">
+            </div>
+            <div class="cs_feature_content">
+              <span class="cs_feature_icon"><i class="fa-solid fa-seedling"></i></span>
+              <h2>A Consistent Foundation for Every Crop</h2>
+              <p>Our cultivation process uses coco-based growing media, selected for its clean, stable and predictable characteristics.</p>
+              <p>Unlike living soil, where biological activity can introduce variability, coco provides a consistent starting point with minimal inherent nutritional content. This allows us to manage nutrient inputs with greater precision and establish repeatable growing conditions across successive crops.</p>
+              <p>This approach helps minimise unnecessary variables and supports consistent plant development from the outset.</p>
+            </div>
           </div>
-          <div class="cs_article_block wow fadeInUp">
-            <h2>Precision Nutrition &amp; Irrigation</h2>
-            <p>Every crop is supported by carefully managed mineral-based nutrition and irrigation programs.</p>
-            <p>Our cultivation systems allow us to precisely manage the nutrients and water delivered to plants, adjusting inputs throughout the growing cycle according to their requirements.</p>
-            <p>By using defined nutrient formulations and monitoring irrigation volumes, we maintain greater control over the inputs that influence plant development, supporting healthy growth and consistent cultivation outcomes.</p>
+          <div class="cs_feature_row cs_feature_row_rev wow fadeInUp">
+            <div class="cs_feature_img">
+              <img src="/assets/img/Our-Facilities/our%20facility%2010.webp" alt="Cultivation aisle under specialised grow lighting">
+            </div>
+            <div class="cs_feature_content">
+              <span class="cs_feature_icon"><i class="fa-solid fa-droplet"></i></span>
+              <h2>Precision Nutrition &amp; Irrigation</h2>
+              <p>Every crop is supported by carefully managed mineral-based nutrition and irrigation programs.</p>
+              <p>Our cultivation systems allow us to precisely manage the nutrients and water delivered to plants, adjusting inputs throughout the growing cycle according to their requirements.</p>
+              <p>By using defined nutrient formulations and monitoring irrigation volumes, we maintain greater control over the inputs that influence plant development, supporting healthy growth and consistent cultivation outcomes.</p>
+            </div>
           </div>
-          <div class="cs_article_block wow fadeInUp">
-            <h2>Data-Driven Cultivation</h2>
-            <p>Precision cultivation requires more than advanced equipment. It requires the ability to measure, understand and refine the inputs that contribute to plant development.</p>
-            <p>At PharmaCrop, we record detailed cultivation data daily, including nutrient inputs, fertiliser quantities and irrigation volumes.</p>
-            <p>This information provides insight into how plants respond to different cultivation inputs, allowing us to make informed adjustments and refine our growing practices.</p>
-            <p>By applying learnings from each crop to the next, we continually strengthen the repeatability of our cultivation processes and our ability to deliver consistent outcomes.</p>
+          <div class="cs_feature_row wow fadeInUp">
+            <div class="cs_feature_img">
+              <img src="/assets/img/Our-Facilities/our%20facility%207.webp" alt="Staff conducting quality checks in the greenhouse">
+            </div>
+            <div class="cs_feature_content">
+              <span class="cs_feature_icon"><i class="fa-solid fa-chart-line"></i></span>
+              <h2>Data-Driven Cultivation</h2>
+              <p>Precision cultivation requires more than advanced equipment. It requires the ability to measure, understand and refine the inputs that contribute to plant development.</p>
+              <p>At PharmaCrop, we record detailed cultivation data daily, including nutrient inputs, fertiliser quantities and irrigation volumes.</p>
+              <p>This information provides insight into how plants respond to different cultivation inputs, allowing us to make informed adjustments and refine our growing practices.</p>
+              <p>By applying learnings from each crop to the next, we continually strengthen the repeatability of our cultivation processes and our ability to deliver consistent outcomes.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <!-- End Growing Systems Detail Sections -->
-    <!-- Start Contact CTA Section -->
-    <style>
-      .cs_article_cta_desc { color: rgba(255,255,255,0.7); font-size: 16px; line-height: 1.7; max-width: 560px; margin: 20px 0 0; }
-    </style>
-    <section class="cs_heading_bg">
-      <div class="cs_height_100 cs_height_lg_70"></div>
-      <div class="container">
-        <div class="cs_section_heading cs_style_2">
-          <div>
-            <h2 class="cs_section_title cs_white_color cs_fs_80 mb-0">WANT TO KNOW<br>MORE ABOUT OUR <span>CULTIVATION?</span></h2>
-            <p class="cs_article_cta_desc">Get in touch with our team to learn more about PharmaCrop&rsquo;s integrated cultivation platform.</p>
-          </div>
-          <div class="cs_section_right">
-            <a href="/contact" class="cs_btn cs_style_1 cs_bold cs_heading_bg cs_white_color w-100 wow fadeInRight">CONTACT US &rarr;</a>
-          </div>
-        </div>
-      </div>
-      <div class="cs_height_100 cs_height_lg_70"></div>
-    </section>
-    <!-- End Contact CTA Section -->
     <!-- Start Footer Section -->
     <style>
       .cs_footer_v2 { background: #eee9e3; padding: 90px 0 0; position: relative; overflow: hidden; }

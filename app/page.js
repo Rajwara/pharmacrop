@@ -173,7 +173,7 @@ export default function Page() {
               <span class="cs_sticky_card_icon"><i class="fa-solid fa-seedling"></i></span>
               <div class="cs_sticky_card_body">
                 <h3 class="cs_sticky_card_title">Controlled Cultivation</h3>
-                <p class="cs_sticky_card_text">Purpose-built hybrid greenhouse designed for repeatable cultivation and consistent, scalable Australian-grown supply.</p>
+                <p class="cs_sticky_card_text">Cultivated in the Noosa Hinterland using a hybrid greenhouse approach, led by internationally experienced Master Grower Chad Esch.</p>
                 <span class="cs_sticky_card_link">READ MORE <span>&rarr;</span></span>
               </div>
             </a>
@@ -182,7 +182,7 @@ export default function Page() {
               <span class="cs_sticky_card_icon"><i class="fa-solid fa-droplet"></i></span>
               <div class="cs_sticky_card_body">
                 <h3 class="cs_sticky_card_title">Advanced Growing Systems</h3>
-                <p class="cs_sticky_card_text">Soilless cultivation with cultivar-specific nutrition programs, providing bespoke nutrient delivery for strong growth and consistent cannabinoid and terpene expression.</p>
+                <p class="cs_sticky_card_text">Soilless, coco-based cultivation with precision nutrient delivery and daily cultivation data, built for consistent, repeatable outcomes.</p>
                 <span class="cs_sticky_card_link">READ MORE <span>&rarr;</span></span>
               </div>
             </a>
@@ -191,7 +191,7 @@ export default function Page() {
               <span class="cs_sticky_card_icon"><i class="fa-solid fa-temperature-half"></i></span>
               <div class="cs_sticky_card_body">
                 <h3 class="cs_sticky_card_title">Environmental Precision</h3>
-                <p class="cs_sticky_card_text">Continuous monitoring and control of light, temperature, humidity, CO&#8322; and irrigation to optimise plant health and ensure repeatable, pharmaceutical-grade biomass.</p>
+                <p class="cs_sticky_card_text">Continuous monitoring and responsive management of light, temperature, humidity and airflow, tailored to each cultivar.</p>
                 <span class="cs_sticky_card_link">READ MORE <span>&rarr;</span></span>
               </div>
             </a>
