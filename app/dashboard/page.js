@@ -1,5 +1,6 @@
 import Script from "next/script";
 import { getFeaturedProducts } from "./../all-products/wp-products";
+import { getCurrentHcpUser } from "./../lib/wp-auth";
 
 export const metadata = {
   title: "Dashboard - PharmaCrop HCP Portal",
@@ -8,7 +9,14 @@ export const metadata = {
 export const revalidate = 60;
 
 export default async function Page() {
-  const featuredProducts = await getFeaturedProducts(4);
+  const [featuredProducts, user] = await Promise.all([getFeaturedProducts(4), getCurrentHcpUser()]);
+  const displayName = (user && user.name) || "Healthcare Professional";
+  const initials = displayName
+    .split(" ")
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0].toUpperCase())
+    .join("") || "HP";
 
   function specLine(p) {
     const parts = [];
@@ -105,13 +113,13 @@ export default async function Page() {
             <button type="button" class="cs_dash_search_btn" aria-label="Search" data-dash-search-toggle><i class="fa-solid fa-magnifying-glass"></i></button>
             <div class="cs_dash_user" data-dash-user>
               <button type="button" class="cs_dash_user_btn" data-dash-user-toggle>
-                <span class="cs_dash_avatar">DR</span>
-                <span class="cs_dash_user_name">Dr. Sarah Mitchell</span>
+                <span class="cs_dash_avatar">${initials}</span>
+                <span class="cs_dash_user_name">${displayName}</span>
                 <i class="fa-solid fa-chevron-down"></i>
               </button>
               <div class="cs_dash_user_menu">
                 <a href="/profile">My Profile / Account</a>
-                <a href="/">Sign Out</a>
+                <a href="#" data-dash-signout>Sign Out</a>
               </div>
             </div>
           </div>
@@ -164,7 +172,7 @@ export default async function Page() {
         <div class="cs_dash_hero_inner">
           <div class="cs_dash_hero_content wow fadeInUp">
             <span class="cs_dash_hero_eyebrow">Welcome Back</span>
-            <h1>Good to see you,<br>Dr. Sarah Mitchell</h1>
+            <h1>Good to see you,<br>${displayName}</h1>
             <p class="cs_dash_hero_desc">Your trusted source for Australian-grown, pharmaceutical-grade medicinal cannabis information, products and clinical resources.</p>
             <form class="cs_dash_search" data-dash-search-form>
               <i class="fa-solid fa-magnifying-glass"></i>
@@ -437,6 +445,14 @@ export default async function Page() {
               if (input) input.focus();
             });
           }
+          document.querySelectorAll('[data-dash-signout]').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+              e.preventDefault();
+              fetch('/api/auth/logout', { method: 'POST' }).then(function () {
+                window.location.href = '/';
+              });
+            });
+          });
         })();
       `}
     </Script>

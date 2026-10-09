@@ -290,4 +290,4 @@ export async function getFeaturedProducts(count = 4) {
   return products.slice().sort((a, b) => new Date(b.dateGmt) - new Date(a.dateGmt)).slice(0, count);
 }
 
-export { WP_API_URL };
+export { WP_API_URL, WP_FETCH_HEADERS };
