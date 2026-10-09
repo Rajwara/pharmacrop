@@ -45,7 +45,7 @@ export default function Page() {
     </header>
     <!-- End Header Section -->
     <!-- Start Page Heading Section -->
-    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/Home/Precision%20Cultivation/Controlled%20Cultivation.webp">
+    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/Controlled%20Cultivation/hero%20banner%20Controlled%20Cultivation.webp">
       <div class="container">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -106,7 +106,7 @@ export default function Page() {
         <div class="cs_feature_stack">
           <div class="cs_feature_row wow fadeInUp">
             <div class="cs_feature_img">
-              <img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Chad%20Esch.webp" alt="Chad Esch, Master Grower">
+              <img src="/assets/img/Controlled%20Cultivation/Chad%20Esch.webp" alt="Chad Esch, Master Grower">
             </div>
             <div class="cs_feature_content">
               <span class="cs_feature_kicker">Cultivation expertise across three continents</span>
@@ -120,7 +120,7 @@ export default function Page() {
           </div>
           <div class="cs_feature_row cs_feature_row_rev wow fadeInUp">
             <div class="cs_feature_img">
-              <img src="/assets/img/Our-Facilities/Horizontal%20image.webp" alt="Wide view of the PharmaCrop Noosa Hinterland facility">
+              <img src="/assets/img/Controlled%20Cultivation/Why%20the%20Noosa%20Hinterland_.webp" alt="Wide view of the PharmaCrop Noosa Hinterland facility">
             </div>
             <div class="cs_feature_content">
               <span class="cs_feature_icon"><i class="fa-solid fa-mountain-sun"></i></span>
