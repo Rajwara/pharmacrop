@@ -64,18 +64,18 @@ export default function Page() {
       .cs_article_intro { max-width: 760px; margin: 0 auto; text-align: center; }
       .cs_article_intro p { color: #444; font-size: 18px; line-height: 1.85; margin: 0 0 22px; }
       .cs_article_intro p:last-child { margin-bottom: 0; }
-      .cs_article_stat_wrap { text-align: center; margin: 0 auto 50px; }
-      .cs_article_stat { display: inline-flex; align-items: center; gap: 10px; padding: 10px 26px; border: 1px solid rgba(2, 66, 66, 0.18); border-radius: 30px; background: #fff; color: #024242; font-weight: 700; font-size: 13px; letter-spacing: 0.5px; text-transform: uppercase; }
-      .cs_article_stat i { color: #78dca6; }
       .cs_feature_row { display: flex; align-items: center; gap: 64px; }
       .cs_feature_row.cs_feature_row_rev { flex-direction: row-reverse; }
       .cs_feature_img { flex: 0 0 44%; border-radius: 16px; overflow: hidden; }
       .cs_feature_img img { width: 100%; height: 400px; object-fit: cover; display: block; }
       .cs_feature_content { flex: 1; }
       .cs_feature_icon { width: 54px; height: 54px; border-radius: 14px; background: rgba(120,220,166,0.18); color: #024242; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 22px; }
+      .cs_feature_kicker { display: block; color: #78dca6; font-weight: 700; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+      .cs_feature_label { display: inline-flex; align-items: center; padding: 8px 22px; border: 1px solid rgba(2, 66, 66, 0.18); border-radius: 30px; background: #fff; color: #024242; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 22px; }
       .cs_feature_content h2 { color: #024242; font-size: 28px; font-weight: 800; margin: 0 0 18px; }
       .cs_feature_content p { color: #555; font-size: 16px; line-height: 1.8; margin: 0 0 16px; }
       .cs_feature_content p:last-child { margin-bottom: 0; }
+      .cs_feature_stack { display: flex; flex-direction: column; gap: 90px; }
       @media (max-width: 991px) {
         .cs_feature_row, .cs_feature_row.cs_feature_row_rev { flex-direction: column; gap: 32px; }
         .cs_feature_img { flex: none; width: 100%; }
@@ -100,64 +100,41 @@ export default function Page() {
       </div>
     </section>
     <!-- End Article Intro Section -->
-    <!-- Start Master Grower Profile Section -->
-    <style>
-      .cs_pmodel_section { padding: 0 0 90px; background: #f7faf8; }
-      .cs_pmodel_row { display: flex; align-items: center; gap: 70px; }
-      .cs_pmodel_img { flex: 0 0 46%; border-radius: 16px; overflow: hidden; }
-      .cs_pmodel_img img { width: 100%; height: 440px; object-fit: cover; display: block; }
-      .cs_pmodel_content { flex: 1; }
-      .cs_pmodel_label { display: inline-flex; align-items: center; padding: 8px 22px; border: 1px solid rgba(2, 66, 66, 0.18); border-radius: 30px; background: #fff; color: #024242; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 22px; }
-      .cs_pmodel_content h2 { color: #024242; font-size: 32px; font-weight: 800; line-height: 1.2; margin: 0 0 18px; }
-      .cs_pmodel_content p { color: #555; font-size: 16px; line-height: 1.75; margin: 0 0 18px; }
-      .cs_pmodel_content p:last-child { margin-bottom: 0; }
-      @media (max-width: 991px) {
-        .cs_pmodel_row { flex-direction: column; gap: 36px; }
-        .cs_pmodel_img { flex: none; width: 100%; }
-        .cs_pmodel_img img { height: 320px; }
-        .cs_pmodel_content h2 { font-size: 26px; }
-      }
-    </style>
-    <section class="cs_pmodel_section">
+    <!-- Start Cultivation Detail Sections -->
+    <section class="cs_article_section cs_article_alt">
       <div class="container">
-        <div class="cs_article_stat_wrap wow fadeInUp">
-          <span class="cs_article_stat"><i class="fa-solid fa-earth-oceania"></i> Cultivation expertise across three continents</span>
-        </div>
-        <div class="cs_pmodel_row wow fadeInUp">
-          <div class="cs_pmodel_img">
-            <img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Chad%20Esch.webp" alt="Chad Esch, Master Grower">
+        <div class="cs_feature_stack">
+          <div class="cs_feature_row wow fadeInUp">
+            <div class="cs_feature_img">
+              <img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Chad%20Esch.webp" alt="Chad Esch, Master Grower">
+            </div>
+            <div class="cs_feature_content">
+              <span class="cs_feature_kicker">Cultivation expertise across three continents</span>
+              <span class="cs_feature_label">Master Grower</span>
+              <h2>Chad Esch</h2>
+              <p>Chad brings extensive international cultivation experience across California, South Africa and Australia.</p>
+              <p>Having trained alongside Dave Thomas in California&rsquo;s renowned Emerald Triangle, Chad has developed specialist expertise in commercial cannabis cultivation, precision phenotyping and large-scale production. His experience includes overseeing more than 8,000 plants and approximately 3.5 tonnes of annual production.</p>
+              <p>Having cultivated across diverse climates, Chad brings a deep understanding of how growing environments influence plant development and the expertise to adapt cultivation practices accordingly.</p>
+              <p>At PharmaCrop, he leads an experienced team focused on maintaining clean growing conditions, applying proven cultivation practices and achieving consistent crop outcomes.</p>
+            </div>
           </div>
-          <div class="cs_pmodel_content">
-            <span class="cs_pmodel_label">Master Grower</span>
-            <h2>Chad Esch</h2>
-            <p>Chad brings extensive international cultivation experience across California, South Africa and Australia.</p>
-            <p>Having trained alongside Dave Thomas in California&rsquo;s renowned Emerald Triangle, Chad has developed specialist expertise in commercial cannabis cultivation, precision phenotyping and large-scale production. His experience includes overseeing more than 8,000 plants and approximately 3.5 tonnes of annual production.</p>
-            <p>Having cultivated across diverse climates, Chad brings a deep understanding of how growing environments influence plant development and the expertise to adapt cultivation practices accordingly.</p>
-            <p>At PharmaCrop, he leads an experienced team focused on maintaining clean growing conditions, applying proven cultivation practices and achieving consistent crop outcomes.</p>
+          <div class="cs_feature_row cs_feature_row_rev wow fadeInUp">
+            <div class="cs_feature_img">
+              <img src="/assets/img/Our-Facilities/Horizontal%20image.webp" alt="Wide view of the PharmaCrop Noosa Hinterland facility">
+            </div>
+            <div class="cs_feature_content">
+              <span class="cs_feature_icon"><i class="fa-solid fa-mountain-sun"></i></span>
+              <h2>Why the Noosa Hinterland?</h2>
+              <p>The Noosa Hinterland offers a distinctive combination of natural conditions that support our approach to medicinal cannabis cultivation.</p>
+              <p>Abundant sunlight, strong natural airflow and limited surrounding agricultural activity provide environmental advantages that can help reduce exposure to certain pests and disease pressures.</p>
+              <p>While Queensland&rsquo;s subtropical climate presents its own challenges, our cultivation team brings the experience required to work with these conditions and identify cultivars suited to the local environment.</p>
+              <p>Together, the region&rsquo;s natural characteristics and our hybrid greenhouse approach provide a strong foundation for Australian-grown medicinal cannabis.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- End Master Grower Profile Section -->
-    <!-- Start Why Noosa Hinterland Section -->
-    <section class="cs_article_section">
-      <div class="container">
-        <div class="cs_feature_row wow fadeInUp">
-          <div class="cs_feature_img">
-            <img src="/assets/img/Our-Facilities/Horizontal%20image.webp" alt="Wide view of the PharmaCrop Noosa Hinterland facility">
-          </div>
-          <div class="cs_feature_content">
-            <span class="cs_feature_icon"><i class="fa-solid fa-mountain-sun"></i></span>
-            <h2>Why the Noosa Hinterland?</h2>
-            <p>The Noosa Hinterland offers a distinctive combination of natural conditions that support our approach to medicinal cannabis cultivation.</p>
-            <p>Abundant sunlight, strong natural airflow and limited surrounding agricultural activity provide environmental advantages that can help reduce exposure to certain pests and disease pressures.</p>
-            <p>While Queensland&rsquo;s subtropical climate presents its own challenges, our cultivation team brings the experience required to work with these conditions and identify cultivars suited to the local environment.</p>
-            <p>Together, the region&rsquo;s natural characteristics and our hybrid greenhouse approach provide a strong foundation for Australian-grown medicinal cannabis.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Why Noosa Hinterland Section -->
+    <!-- End Cultivation Detail Sections -->
     <!-- Start Footer Section -->
     <style>
       .cs_footer_v2 { background: #eee9e3; padding: 90px 0 0; position: relative; overflow: hidden; }
