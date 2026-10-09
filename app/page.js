@@ -389,7 +389,7 @@ export default function Page() {
               <i class="fa-solid fa-arrow-right"></i>
             </button>
             <button type="button" class="cs_platform_tab" data-target="4">
-              <span>Research &amp; Innovation</span>
+              <span>Science &amp; Innovation</span>
               <i class="fa-solid fa-arrow-right"></i>
             </button>
             <button type="button" class="cs_platform_tab" data-target="5">
@@ -407,7 +407,7 @@ export default function Page() {
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-dna"></i></span>
                 <h3>Genetics</h3>
-                <p>Proprietary phenohunt programs select high-performing cultivars.</p>
+                <p>Our proprietary phenohunt program identifies and selects high-performing cultivars suited to our growing environment, with a focus on quality, consistency and desirable characteristics. Through extensive evaluation, we develop a diverse genetic portfolio that supports our evolving product range. This ongoing program forms the foundation of our cultivation strategy and future product development.</p>
               </div>
             </div>
             <div class="cs_platform_item" data-index="1">
@@ -415,7 +415,7 @@ export default function Page() {
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-seedling"></i></span>
                 <h3>Cultivation</h3>
-                <p>Australian-grown using controlled-environment cultivation in the Noosa Hinterland.</p>
+                <p>Australian-grown in the Noosa Hinterland, our medicinal cannabis is cultivated using a hybrid greenhouse approach that combines natural sunlight with advanced environmental controls. Our experienced cultivation team carefully manages growing conditions throughout each crop cycle to support plant health, quality and consistency. With direct oversight from propagation through to harvest, we combine the benefits of natural growing conditions with the precision of controlled-environment cultivation.</p>
               </div>
             </div>
             <div class="cs_platform_item" data-index="2">
@@ -423,7 +423,7 @@ export default function Page() {
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-industry"></i></span>
                 <h3>GMP Manufacturing</h3>
-                <p>Manufacturing within a GMP-certified facility to pharmaceutical standards.</p>
+                <p>Our Australian GMP-licensed manufacturing facility supports the processing and packaging of medicinal cannabis to pharmaceutical quality standards. Operating within a controlled and regulated environment, our manufacturing processes are designed to ensure product quality, consistency and traceability. Our integrated capabilities enable efficient coordination between cultivation, processing and finished product manufacturing.</p>
               </div>
             </div>
             <div class="cs_platform_item" data-index="3">
@@ -431,15 +431,15 @@ export default function Page() {
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-shield-halved"></i></span>
                 <h3>Quality &amp; Release</h3>
-                <p>Rigorous quality systems support safety, consistency and regulatory compliance.</p>
+                <p>Our Australian GMP-licensed manufacturing facility supports the processing and packaging of medicinal cannabis to pharmaceutical quality standards. Operating within a controlled and regulated environment, our manufacturing processes are designed to support product quality, consistency and traceability. By managing cultivation through to GMP manufacturing and final packaging, we maintain end-to-end control over quality, processes and product integrity.</p>
               </div>
             </div>
             <div class="cs_platform_item" data-index="4">
-              <div class="cs_platform_item_img"><img src="/assets/img/Home/Integrated%20Platform/Research%20%26%20Innovation.webp" alt="Research &amp; Innovation"></div>
+              <div class="cs_platform_item_img"><img src="/assets/img/Home/Integrated%20Platform/Research%20%26%20Innovation.webp" alt="Science &amp; Innovation"></div>
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-microscope"></i></span>
-                <h3>Research &amp; Innovation</h3>
-                <p>Scientific expertise and product innovation drive continual advancement.</p>
+                <h3>Science &amp; Innovation</h3>
+                <p>Scientific expertise and continuous improvement are central to our approach to medicinal cannabis cultivation and product development. Combining knowledge across plant science, genetics and pharmaceutical manufacturing, our team applies evidence-based practices to optimise cultivation processes, strengthen product consistency and advance quality. This scientific approach drives ongoing improvements across our operations and supports the evolution of our product portfolio.</p>
               </div>
             </div>
             <div class="cs_platform_item" data-index="5">
@@ -447,7 +447,7 @@ export default function Page() {
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-handshake"></i></span>
                 <h3>Market Access &amp; Commercialisation</h3>
-                <p>Commercial expertise supports market access and long-term healthcare adoption.</p>
+                <p>Our commercial capabilities connect Australian-grown medicinal cannabis products with healthcare and distribution partners. Working closely with clinicians, pharmacies and industry partners, we support product development, market access and ongoing supply. Our collaborative approach enables tailored commercial partnerships, including exclusive brand development and manufacturing solutions that support long-term business growth.</p>
               </div>
             </div>
             <div class="cs_platform_item" data-index="6">
@@ -455,7 +455,7 @@ export default function Page() {
               <div class="cs_platform_item_body">
                 <span class="cs_platform_item_icon"><i class="fa-solid fa-globe"></i></span>
                 <h3>Global Export</h3>
-                <p>Export-ready capability supports international partnerships and regulated global expansion.</p>
+                <p>Our Australian cultivation and GMP manufacturing capabilities provide a strong foundation for international commercial partnerships. We work with global partners to develop export opportunities and supply arrangements aligned with the regulatory requirements of destination markets. With integrated operations and a commitment to pharmaceutical quality, we are positioned to support international demand for Australian medicinal cannabis.</p>
               </div>
             </div>
           </div>
