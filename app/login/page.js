@@ -220,6 +220,17 @@ export default function Page() {
                   <input type="tel" name="mobile" placeholder="Mobile number e.g. 04XX XXX XXX" required data-validate="mobile">
                   <span class="cs_auth_error">Enter a valid Australian mobile number.</span>
                 </div>
+                <div class="cs_auth_field">
+                  <input type="password" name="password" placeholder="Create a password" data-auth-password required data-validate="password">
+                  <button type="button" class="cs_auth_field_toggle" data-auth-toggle aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
+                  <span class="cs_auth_help">At least 8 characters.</span>
+                  <span class="cs_auth_error">Password must be at least 8 characters.</span>
+                </div>
+                <div class="cs_auth_field">
+                  <input type="password" name="confirmPassword" placeholder="Confirm password" data-auth-password required>
+                  <button type="button" class="cs_auth_field_toggle" data-auth-toggle aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
+                  <span class="cs_auth_error" data-error-for="confirmPassword">Passwords do not match.</span>
+                </div>
               </div>
 
               <div class="cs_auth_form_section">
@@ -393,13 +404,32 @@ export default function Page() {
                 setFieldValid(field, false);
                 return false;
               }
+              if (rule === 'password' && field.value.length < 8) {
+                setFieldValid(field, false);
+                return false;
+              }
               setFieldValid(field, true);
               return true;
+            }
+
+            function validatePasswordsMatch() {
+              var password = form.querySelector('[name="password"]');
+              var confirm = form.querySelector('[name="confirmPassword"]');
+              var confirmError = form.querySelector('[data-error-for="confirmPassword"]');
+              if (!password || !confirm) return true;
+              var matches = password.value === confirm.value;
+              setFieldValid(confirm, matches);
+              if (confirmError) confirmError.style.display = matches ? 'none' : 'block';
+              return matches;
             }
 
             form.querySelectorAll('input, select').forEach(function (field) {
               field.addEventListener('blur', function () { validateField(field); });
             });
+            var confirmPasswordField = form.querySelector('[name="confirmPassword"]');
+            if (confirmPasswordField) {
+              confirmPasswordField.addEventListener('blur', validatePasswordsMatch);
+            }
 
             form.addEventListener('submit', function (e) {
               e.preventDefault();
@@ -412,6 +442,11 @@ export default function Page() {
                   if (!firstInvalid) firstInvalid = field;
                 }
               });
+
+              if (!validatePasswordsMatch()) {
+                valid = false;
+                if (!firstInvalid) firstInvalid = confirmPasswordField;
+              }
 
               var consent = form.querySelector('[name="consent"]');
               var consentError = form.querySelector('[data-error-for="consent"]');
@@ -438,6 +473,7 @@ export default function Page() {
               var formData = new FormData(form);
               var payload = {};
               formData.forEach(function (value, key) { payload[key] = value; });
+              delete payload.confirmPassword;
               payload.consent = !!(consent && consent.checked);
               payload.marketingOptIn = !!form.querySelector('[name="marketingOptIn"]').checked;
 

@@ -10,6 +10,7 @@ const REQUIRED_FIELDS = [
   "lastName",
   "workEmail",
   "mobile",
+  "password",
   "profession",
   "ahpra",
   "practiceName",
@@ -34,6 +35,13 @@ export async function POST(request) {
     }
   }
 
+  if (String(body.password).length < 8) {
+    return NextResponse.json({ ok: false, message: "Password must be at least 8 characters." }, { status: 400 });
+  }
+
+  // confirmPassword is a client-only check and should never reach WordPress.
+  const { confirmPassword, ...wpBody } = body;
+
   // This hits a custom WordPress REST route (not part of WP core) that
   // creates a pending HCP account — see the PharmaCrop Connector plugin.
   // New User Approve then blocks sign-in until an admin approves it.
@@ -42,7 +50,7 @@ export async function POST(request) {
     wpRes = await fetch(`${WP_API_URL}/wp-json/pharmacrop/v1/register`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(body),
+      body: JSON.stringify(wpBody),
       cache: "no-store",
     });
   } catch (err) {
