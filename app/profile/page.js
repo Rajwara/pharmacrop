@@ -178,6 +178,9 @@ export default async function Page() {
       .cs_prof_field label { display: block; color: #666; font-size: 12.5px; font-weight: 600; margin-bottom: 6px; }
       .cs_prof_field input, .cs_prof_field select { width: 100%; box-sizing: border-box; border: 1px solid #e2e5e2; border-radius: 8px; padding: 11px 14px; font-size: 13.5px; color: #024242; font-family: inherit; outline: none; }
       .cs_prof_field input:focus, .cs_prof_field select:focus { border-color: #78dca6; }
+      .cs_prof_field_password { position: relative; }
+      .cs_prof_field_password input { padding-right: 42px; }
+      .cs_prof_password_toggle { position: absolute; right: 12px; top: 34px; color: #999; background: none; border: none; cursor: pointer; padding: 4px; font-size: 14px; }
       .cs_prof_field_row { display: flex; gap: 12px; }
       .cs_prof_field_row .cs_prof_field { flex: 1; min-width: 0; }
       .cs_prof_form_actions { display: flex; gap: 10px; margin-top: 4px; }
@@ -199,7 +202,7 @@ export default async function Page() {
         <div class="cs_prof_layout">
           <div class="cs_prof_side wow fadeInUp">
             <div class="cs_prof_side_avatar" data-prof-avatar>${avatarHtml}</div>
-            <button type="button" class="cs_prof_avatar_btn" data-prof-avatar-btn>Change photo</button>
+            <button type="button" class="cs_prof_avatar_btn" data-prof-avatar-btn title="JPG, PNG or WEBP, up to 4MB">Change photo</button>
             <input type="file" accept="image/jpeg,image/png,image/webp" data-prof-avatar-input hidden>
             <h3>${displayName}</h3>
             <span class="role">${esc(profession) || "Healthcare Professional"}</span>
@@ -326,17 +329,20 @@ export default async function Page() {
               </div>
               <form class="cs_prof_edit_form" data-prof-password-form>
                 <span class="cs_prof_form_error" data-prof-form-error></span>
-                <div class="cs_prof_field">
+                <div class="cs_prof_field cs_prof_field_password">
                   <label>Current Password</label>
                   <input type="password" name="currentPassword" autocomplete="current-password">
+                  <button type="button" class="cs_prof_password_toggle" data-prof-password-toggle aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
                 </div>
-                <div class="cs_prof_field">
+                <div class="cs_prof_field cs_prof_field_password">
                   <label>New Password</label>
                   <input type="password" name="newPassword" autocomplete="new-password">
+                  <button type="button" class="cs_prof_password_toggle" data-prof-password-toggle aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
                 </div>
-                <div class="cs_prof_field">
+                <div class="cs_prof_field cs_prof_field_password">
                   <label>Confirm New Password</label>
                   <input type="password" name="confirmPassword" autocomplete="new-password">
+                  <button type="button" class="cs_prof_password_toggle" data-prof-password-toggle aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
                 </div>
                 <div class="cs_prof_form_actions">
                   <button type="submit" class="cs_prof_save_btn" data-prof-save-btn>Update Password</button>
@@ -449,6 +455,35 @@ export default async function Page() {
             });
           });
 
+          // Some failure responses (host error pages, platform upload-size
+          // limits, etc.) aren't JSON — never let that surface as a raw
+          // "Unexpected token" parse error.
+          function parseJsonSafe(res) {
+            return res.text().then(function (text) {
+              var data = null;
+              try { data = text ? JSON.parse(text) : null; } catch (e) { data = null; }
+              if (!data) {
+                var message = /too large/i.test(text) ? 'That file is too large.' : 'Something went wrong (' + res.status + ').';
+                data = { ok: false, message: message };
+              }
+              return { res: res, data: data };
+            });
+          }
+
+          document.querySelectorAll('[data-prof-password-toggle]').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+              var field = btn.previousElementSibling;
+              if (!field || field.tagName !== 'INPUT') return;
+              var isPassword = field.getAttribute('type') === 'password';
+              field.setAttribute('type', isPassword ? 'text' : 'password');
+              var icon = btn.querySelector('i');
+              if (icon) {
+                icon.classList.toggle('fa-eye', !isPassword);
+                icon.classList.toggle('fa-eye-slash', isPassword);
+              }
+            });
+          });
+
           var otherTrigger = document.querySelector('[data-prof-other-trigger]');
           var otherField = document.querySelector('[data-prof-other-field]');
           if (otherTrigger && otherField) {
@@ -473,7 +508,7 @@ export default async function Page() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload),
               })
-                .then(function (res) { return res.json().then(function (data) { return { res: res, data: data }; }); })
+                .then(parseJsonSafe)
                 .then(function (result) {
                   if (!result.res.ok || !result.data.ok) throw new Error(result.data.message || 'Could not save your details.');
                   window.location.reload();
@@ -515,7 +550,7 @@ export default async function Page() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ currentPassword: currentPassword, newPassword: newPassword }),
               })
-                .then(function (res) { return res.json().then(function (data) { return { res: res, data: data }; }); })
+                .then(parseJsonSafe)
                 .then(function (result) {
                   if (!result.res.ok || !result.data.ok) throw new Error(result.data.message || 'Could not change your password.');
                   passwordForm.reset();
@@ -542,6 +577,19 @@ export default async function Page() {
             avatarInput.addEventListener('change', function () {
               var file = avatarInput.files && avatarInput.files[0];
               if (!file) return;
+
+              var allowedTypes = ['image/jpeg', 'image/png', 'image/webp'];
+              if (allowedTypes.indexOf(file.type) === -1) {
+                alert('Please choose a JPG, PNG or WEBP image.');
+                avatarInput.value = '';
+                return;
+              }
+              if (file.size > 4 * 1024 * 1024) {
+                alert('That image is too large — please choose one under 4MB.');
+                avatarInput.value = '';
+                return;
+              }
+
               avatarBtn.disabled = true;
               avatarBtn.textContent = 'Uploading...';
 
@@ -549,7 +597,7 @@ export default async function Page() {
               formData.append('avatar', file);
 
               fetch('/api/profile/avatar', { method: 'POST', body: formData })
-                .then(function (res) { return res.json().then(function (data) { return { res: res, data: data }; }); })
+                .then(parseJsonSafe)
                 .then(function (result) {
                   if (!result.res.ok || !result.data.ok) throw new Error(result.data.message || 'Could not upload your photo.');
                   var url = result.data.avatarUrl;

@@ -6,7 +6,10 @@ function stripHtml(value) {
   return String(value || "").replace(/<[^>]+>/g, "");
 }
 
-const MAX_SIZE = 5 * 1024 * 1024;
+// Kept comfortably under common serverless-platform request body limits
+// (Vercel's default is ~4.5MB) so an oversized upload gets our own clear
+// JSON error instead of a raw platform error page the client can't parse.
+const MAX_SIZE = 4 * 1024 * 1024;
 const ALLOWED_TYPES = ["image/jpeg", "image/png", "image/webp"];
 
 export async function POST(request) {
@@ -30,7 +33,7 @@ export async function POST(request) {
     return NextResponse.json({ ok: false, message: "Please upload a JPG, PNG or WEBP image." }, { status: 400 });
   }
   if (file.size > MAX_SIZE) {
-    return NextResponse.json({ ok: false, message: "Image must be under 5MB." }, { status: 400 });
+    return NextResponse.json({ ok: false, message: "Image must be under 4MB." }, { status: 400 });
   }
 
   const forwardForm = new FormData();

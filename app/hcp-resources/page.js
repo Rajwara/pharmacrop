@@ -60,13 +60,13 @@ export default function Page() {
             <button type="button" class="cs_dash_search_btn" aria-label="Search" data-res-search-toggle><i class="fa-solid fa-magnifying-glass"></i></button>
             <div class="cs_dash_user" data-dash-user>
               <button type="button" class="cs_dash_user_btn" data-dash-user-toggle>
-                <span class="cs_dash_avatar">DR</span>
-                <span class="cs_dash_user_name">Dr. Sarah Mitchell</span>
+                <span class="cs_dash_avatar" data-dash-avatar>HP</span>
+                <span class="cs_dash_user_name" data-dash-user-name>Healthcare Professional</span>
                 <i class="fa-solid fa-chevron-down"></i>
               </button>
               <div class="cs_dash_user_menu">
                 <a href="/profile">My Profile / Account</a>
-                <a href="/">Sign Out</a>
+                <a href="#" data-dash-signout>Sign Out</a>
               </div>
             </div>
           </div>
