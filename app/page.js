@@ -168,7 +168,7 @@ export default function Page() {
             <p class="cs_sticky_text">Consistent pharmaceutical products begin with consistent agricultural systems. Our cultivation platform combines controlled environments, advanced growing systems and environmental precision.</p>
           </div>
           <div class="cs_sticky_services_right">
-            <a href="/about-us" class="cs_sticky_card">
+            <a href="/controlled-cultivation" class="cs_sticky_card">
               <img src="/assets/img/Home/Precision%20Cultivation/Controlled%20Cultivation.webp" alt="Controlled Cultivation">
               <span class="cs_sticky_card_icon"><i class="fa-solid fa-seedling"></i></span>
               <div class="cs_sticky_card_body">
@@ -177,7 +177,7 @@ export default function Page() {
                 <span class="cs_sticky_card_link">READ MORE <span>&rarr;</span></span>
               </div>
             </a>
-            <a href="/about-us" class="cs_sticky_card">
+            <a href="/advanced-growing-systems" class="cs_sticky_card">
               <img src="/assets/img/Home/Precision%20Cultivation/Advanced%20Growing%20Systems.webp" alt="Advanced Growing Systems">
               <span class="cs_sticky_card_icon"><i class="fa-solid fa-droplet"></i></span>
               <div class="cs_sticky_card_body">
@@ -186,7 +186,7 @@ export default function Page() {
                 <span class="cs_sticky_card_link">READ MORE <span>&rarr;</span></span>
               </div>
             </a>
-            <a href="/about-us" class="cs_sticky_card">
+            <a href="/environmental-precision" class="cs_sticky_card">
               <img src="/assets/img/Home/Precision%20Cultivation/Environmental%20Precision.webp" alt="Environmental Precision">
               <span class="cs_sticky_card_icon"><i class="fa-solid fa-temperature-half"></i></span>
               <div class="cs_sticky_card_body">
