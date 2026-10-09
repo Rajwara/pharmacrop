@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { WP_API_URL } from "../../../all-products/wp-products";
-import { HCP_TOKEN_COOKIE } from "../../../lib/wp-auth";
+import { HCP_TOKEN_COOKIE, HCP_NAME_COOKIE, HCP_EMAIL_COOKIE, HCP_SESSION_COOKIE_OPTS } from "../../../lib/wp-auth";
 
 function stripHtml(value) {
   return String(value || "").replace(/<[^>]+>/g, "");
@@ -42,18 +42,14 @@ export async function POST(request) {
     return NextResponse.json({ ok: false, message }, { status: 401 });
   }
 
-  const response = NextResponse.json({
-    ok: true,
-    name: data.user_display_name || data.user_nicename || email,
-  });
+  const name = data.user_display_name || data.user_nicename || email;
+  const userEmail = data.user_email || email;
 
-  response.cookies.set(HCP_TOKEN_COOKIE, data.token, {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
-    path: "/",
-    maxAge: 60 * 60 * 24 * 7,
-  });
+  const response = NextResponse.json({ ok: true, name });
+
+  response.cookies.set(HCP_TOKEN_COOKIE, data.token, HCP_SESSION_COOKIE_OPTS);
+  response.cookies.set(HCP_NAME_COOKIE, name, HCP_SESSION_COOKIE_OPTS);
+  response.cookies.set(HCP_EMAIL_COOKIE, userEmail, HCP_SESSION_COOKIE_OPTS);
 
   return response;
 }

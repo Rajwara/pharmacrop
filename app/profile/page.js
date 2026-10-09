@@ -1,12 +1,20 @@
 import Script from "next/script";
-import { getCurrentHcpUser } from "./../lib/wp-auth";
+import { getCurrentHcpUser, getHcpProfile } from "./../lib/wp-auth";
 
 export const metadata = {
   title: "My Profile - PharmaCrop HCP Portal",
 };
 
+function esc(value) {
+  return String(value || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
 export default async function Page() {
-  const user = await getCurrentHcpUser();
+  const [user, profile] = await Promise.all([getCurrentHcpUser(), getHcpProfile()]);
   const displayName = (user && user.name) || "Healthcare Professional";
   const email = (user && user.email) || "";
   const initials = displayName
@@ -15,6 +23,21 @@ export default async function Page() {
     .slice(0, 2)
     .map((part) => part[0].toUpperCase())
     .join("") || "HP";
+
+  const p = profile || {};
+  const profession = p.hcp_profession === "Other" ? p.hcp_profession_other || "Other" : p.hcp_profession || "";
+  const practiceName = p.hcp_practice_name || "";
+  const mobile = p.hcp_mobile || "";
+  const addressParts = [p.hcp_street_address, p.hcp_suburb, p.hcp_state, p.hcp_postcode].filter(Boolean);
+  const address = addressParts.join(", ");
+  const ahpra = p.ahpra || "";
+  const avatarUrl = p.avatarUrl || "";
+  const profileLoaded = !!profile;
+
+  const avatarHtml = avatarUrl
+    ? `<img src="${esc(avatarUrl)}" alt="${esc(displayName)}" data-prof-avatar-img>`
+    : `<span data-prof-avatar-initials>${initials}</span>`;
+
   return (
     <>
     <div
@@ -39,7 +62,8 @@ export default async function Page() {
       .cs_dash_search_btn { width: 38px; height: 38px; border-radius: 50%; border: none; background: rgba(2, 66, 66, 0.06); color: #024242; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 14px; }
       .cs_dash_user { position: relative; }
       .cs_dash_user_btn { display: flex; align-items: center; gap: 10px; background: none; border: none; cursor: pointer; font-family: inherit; padding: 0; }
-      .cs_dash_avatar { width: 38px; height: 38px; border-radius: 50%; background: #024242; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; flex: none; }
+      .cs_dash_avatar { width: 38px; height: 38px; border-radius: 50%; background: #024242; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; flex: none; overflow: hidden; }
+      .cs_dash_avatar img { width: 100%; height: 100%; object-fit: cover; }
       .cs_dash_user_name { color: #024242; font-weight: 700; font-size: 14px; white-space: nowrap; }
       .cs_dash_user_btn i { color: #999; font-size: 11px; transition: transform 0.2s ease; }
       .cs_dash_user.active .cs_dash_user_btn i { transform: rotate(180deg); }
@@ -68,7 +92,7 @@ export default async function Page() {
             <span class="cs_dash_portal_pill"><i class="fa-solid fa-lock"></i> HCP Portal</span>
             <div class="cs_dash_user" data-dash-user>
               <button type="button" class="cs_dash_user_btn" data-dash-user-toggle>
-                <span class="cs_dash_avatar">${initials}</span>
+                <span class="cs_dash_avatar" data-dash-avatar>${avatarHtml}</span>
                 <span class="cs_dash_user_name">${displayName}</span>
                 <i class="fa-solid fa-chevron-down"></i>
               </button>
@@ -117,7 +141,10 @@ export default async function Page() {
       .cs_prof_section { padding: 50px 0 70px; background: #f7faf8; }
       .cs_prof_layout { display: grid; grid-template-columns: 260px 1fr; gap: 24px; align-items: start; }
       .cs_prof_side { background: #fff; border: 1px solid rgba(2,66,66,0.1); border-radius: 14px; padding: 26px 22px; text-align: center; position: sticky; top: 90px; }
-      .cs_prof_side_avatar { width: 64px; height: 64px; border-radius: 50%; background: rgba(120,220,166,0.2); color: #024242; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; margin: 0 auto 14px; }
+      .cs_prof_side_avatar { width: 64px; height: 64px; border-radius: 50%; background: rgba(120,220,166,0.2); color: #024242; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; margin: 0 auto 10px; position: relative; overflow: hidden; }
+      .cs_prof_side_avatar img { width: 100%; height: 100%; object-fit: cover; }
+      .cs_prof_avatar_btn { display: inline-flex; align-items: center; gap: 6px; background: none; border: none; color: #024242; font-size: 12px; font-weight: 700; text-decoration: underline; cursor: pointer; margin-bottom: 14px; font-family: inherit; }
+      .cs_prof_avatar_btn:disabled { opacity: 0.5; cursor: wait; }
       .cs_prof_side h3 { color: #024242; font-size: 18px; font-weight: 800; margin: 0 0 4px; }
       .cs_prof_side span.role { color: #666; font-size: 13px; display: block; margin-bottom: 14px; }
       .cs_prof_side_email { display: flex; align-items: center; justify-content: center; gap: 8px; color: #666; font-size: 13px; margin-bottom: 14px; }
@@ -135,7 +162,7 @@ export default async function Page() {
       .cs_prof_card_icon { width: 38px; height: 38px; border-radius: 10px; background: rgba(120,220,166,0.15); color: #024242; display: flex; align-items: center; justify-content: center; font-size: 15px; flex: none; }
       .cs_prof_card_head h3 { color: #024242; font-size: 17px; font-weight: 800; margin: 0 0 3px; }
       .cs_prof_card_head p { color: #999; font-size: 13px; margin: 0; }
-      .cs_prof_edit_btn { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: #024242; font-weight: 700; font-size: 13px; padding: 10px 18px; border-radius: 30px; text-decoration: none; border: 1px solid rgba(2,66,66,0.2); white-space: nowrap; }
+      .cs_prof_edit_btn { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: #024242; font-weight: 700; font-size: 13px; padding: 10px 18px; border-radius: 30px; cursor: pointer; border: 1px solid rgba(2,66,66,0.2); white-space: nowrap; font-family: inherit; text-decoration: none; }
       .cs_prof_edit_btn:hover { border-color: #024242; }
       .cs_prof_row { display: flex; align-items: center; justify-content: space-between; padding: 13px 0; border-bottom: 1px solid rgba(2,66,66,0.07); gap: 14px; }
       .cs_prof_row:last-child { border-bottom: none; }
@@ -144,19 +171,38 @@ export default async function Page() {
       .cs_prof_badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(120,220,166,0.15); color: #024242; font-size: 12.5px; font-weight: 700; padding: 8px 16px; border-radius: 20px; }
       .cs_prof_dots { letter-spacing: 3px; color: #024242; font-weight: 700; }
       .cs_prof_actions_row { display: flex; gap: 12px; flex-wrap: wrap; }
+      .cs_prof_edit_form { display: none; }
+      .cs_prof_card.editing .cs_prof_view { display: none; }
+      .cs_prof_card.editing .cs_prof_edit_form { display: block; }
+      .cs_prof_field { margin-bottom: 14px; }
+      .cs_prof_field label { display: block; color: #666; font-size: 12.5px; font-weight: 600; margin-bottom: 6px; }
+      .cs_prof_field input, .cs_prof_field select { width: 100%; box-sizing: border-box; border: 1px solid #e2e5e2; border-radius: 8px; padding: 11px 14px; font-size: 13.5px; color: #024242; font-family: inherit; outline: none; }
+      .cs_prof_field input:focus, .cs_prof_field select:focus { border-color: #78dca6; }
+      .cs_prof_field_row { display: flex; gap: 12px; }
+      .cs_prof_field_row .cs_prof_field { flex: 1; min-width: 0; }
+      .cs_prof_form_actions { display: flex; gap: 10px; margin-top: 4px; }
+      .cs_prof_save_btn { background: #024242; color: #fff; border: none; border-radius: 30px; padding: 10px 22px; font-weight: 700; font-size: 13px; cursor: pointer; font-family: inherit; }
+      .cs_prof_save_btn:hover { background: #78dca6; color: #024242; }
+      .cs_prof_save_btn:disabled { opacity: 0.6; cursor: wait; }
+      .cs_prof_cancel_btn { background: #fff; color: #666; border: 1px solid #e2e5e2; border-radius: 30px; padding: 10px 22px; font-weight: 700; font-size: 13px; cursor: pointer; font-family: inherit; }
+      .cs_prof_form_error { display: none; color: #e0554f; font-size: 12.5px; margin: -4px 0 12px; }
+      .cs_prof_form_note { color: #999; font-size: 12px; margin: 0 0 16px; }
+      @media (max-width: 575px) { .cs_prof_field_row { flex-direction: column; gap: 0; } }
       @media (max-width: 900px) {
         .cs_prof_layout { grid-template-columns: 1fr; }
         .cs_prof_side { position: static; text-align: left; }
-        .cs_prof_side_avatar { margin: 0 0 14px; }
+        .cs_prof_side_avatar { margin: 0 0 10px; }
       }
     </style>
     <section class="cs_prof_section">
       <div class="container">
         <div class="cs_prof_layout">
           <div class="cs_prof_side wow fadeInUp">
-            <div class="cs_prof_side_avatar">${initials}</div>
+            <div class="cs_prof_side_avatar" data-prof-avatar>${avatarHtml}</div>
+            <button type="button" class="cs_prof_avatar_btn" data-prof-avatar-btn>Change photo</button>
+            <input type="file" accept="image/jpeg,image/png,image/webp" data-prof-avatar-input hidden>
             <h3>${displayName}</h3>
-            <span class="role">Healthcare Professional</span>
+            <span class="role">${esc(profession) || "Healthcare Professional"}</span>
             <div class="cs_prof_side_email"><i class="fa-solid fa-envelope"></i> ${email || "&mdash;"}</div>
             <span class="cs_prof_verified"><i class="fa-solid fa-circle-check"></i> Verified Healthcare Professional</span>
             <ul class="cs_prof_side_nav">
@@ -166,32 +212,91 @@ export default async function Page() {
             </ul>
           </div>
           <div>
-            <div class="cs_prof_card wow fadeInUp">
+            ${!profileLoaded ? `<p class="cs_prof_form_note" style="margin-bottom:20px;">Some details below couldn't be loaded right now — you can still view your account, but editing may be unavailable until this is resolved. Try refreshing the page.</p>` : ""}
+            <div class="cs_prof_card wow fadeInUp" data-prof-card="professional">
               <div class="cs_prof_card_head">
                 <div class="cs_prof_card_head_left">
                   <span class="cs_prof_card_icon"><i class="fa-solid fa-user"></i></span>
                   <div><h3>Professional Details</h3><p>Your professional information as registered with PharmaCrop.</p></div>
                 </div>
-                <a href="/contact" class="cs_prof_edit_btn"><i class="fa-solid fa-pen"></i> Edit Details</a>
+                <button type="button" class="cs_prof_edit_btn" data-prof-edit-toggle="professional"><i class="fa-solid fa-pen"></i> Edit Details</button>
               </div>
-              <div class="cs_prof_row"><span class="k">Full Name</span><span class="v">${displayName}</span></div>
-              <div class="cs_prof_row"><span class="k">Profession / Role</span><span class="v">Healthcare Professional</span></div>
-              <div class="cs_prof_row"><span class="k">Professional Registration Number</span><span class="v">&mdash;</span></div>
-              <div class="cs_prof_row"><span class="k">Registration Authority</span><span class="v">&mdash;</span></div>
-              <div class="cs_prof_row"><span class="k">Organisation / Practice</span><span class="v">Riverside Medical Centre</span></div>
-              <div class="cs_prof_row"><span class="k">Professional Location / State</span><span class="v">VIC, Australia</span></div>
+              <div class="cs_prof_view">
+                <div class="cs_prof_row"><span class="k">Full Name</span><span class="v">${esc(displayName)}</span></div>
+                <div class="cs_prof_row"><span class="k">Profession / Role</span><span class="v">${esc(profession) || "&mdash;"}</span></div>
+                <div class="cs_prof_row"><span class="k">AHPRA Registration Number</span><span class="v">${esc(ahpra) || "&mdash;"}</span></div>
+                <div class="cs_prof_row"><span class="k">Organisation / Practice</span><span class="v">${esc(practiceName) || "&mdash;"}</span></div>
+              </div>
+              <form class="cs_prof_edit_form" data-prof-form="professional">
+                <p class="cs_prof_form_note">Name and AHPRA number are locked to your verified registration — <a href="/contact">contact us</a> if either needs correcting.</p>
+                <span class="cs_prof_form_error" data-prof-form-error></span>
+                <div class="cs_prof_field">
+                  <label>Profession / Role</label>
+                  <select name="hcp_profession" data-prof-other-trigger>
+                    <option value="General practitioner" ${profession === "General practitioner" ? "selected" : ""}>General practitioner</option>
+                    <option value="Specialist" ${profession === "Specialist" ? "selected" : ""}>Specialist</option>
+                    <option value="Nurse practitioner" ${profession === "Nurse practitioner" ? "selected" : ""}>Nurse practitioner</option>
+                    <option value="Other" ${p.hcp_profession === "Other" ? "selected" : ""}>Other (please specify)</option>
+                  </select>
+                </div>
+                <div class="cs_prof_field" data-prof-other-field style="${p.hcp_profession === "Other" ? "" : "display:none;"}">
+                  <label>Please specify</label>
+                  <input type="text" name="hcp_profession_other" value="${esc(p.hcp_profession_other)}">
+                </div>
+                <div class="cs_prof_field">
+                  <label>Organisation / Practice</label>
+                  <input type="text" name="hcp_practice_name" value="${esc(practiceName)}">
+                </div>
+                <div class="cs_prof_form_actions">
+                  <button type="submit" class="cs_prof_save_btn" data-prof-save-btn>Save Changes</button>
+                  <button type="button" class="cs_prof_cancel_btn" data-prof-edit-toggle="professional">Cancel</button>
+                </div>
+              </form>
             </div>
 
-            <div class="cs_prof_card wow fadeInUp">
+            <div class="cs_prof_card wow fadeInUp" data-prof-card="contact">
               <div class="cs_prof_card_head">
                 <div class="cs_prof_card_head_left">
                   <span class="cs_prof_card_icon"><i class="fa-solid fa-phone"></i></span>
                   <div><h3>Contact Details</h3><p>Your contact information for your PharmaCrop account.</p></div>
                 </div>
-                <a href="/contact" class="cs_prof_edit_btn"><i class="fa-solid fa-pen"></i> Edit Contact Details</a>
+                <button type="button" class="cs_prof_edit_btn" data-prof-edit-toggle="contact"><i class="fa-solid fa-pen"></i> Edit Contact Details</button>
               </div>
-              <div class="cs_prof_row"><span class="k">Email Address</span><span class="v">${email || "&mdash;"}</span></div>
-              <div class="cs_prof_row"><span class="k">Phone Number</span><span class="v">+61 400 123 456</span></div>
+              <div class="cs_prof_view">
+                <div class="cs_prof_row"><span class="k">Email Address</span><span class="v">${email || "&mdash;"}</span></div>
+                <div class="cs_prof_row"><span class="k">Phone Number</span><span class="v">${esc(mobile) || "&mdash;"}</span></div>
+                <div class="cs_prof_row"><span class="k">Address</span><span class="v">${esc(address) || "&mdash;"}</span></div>
+              </div>
+              <form class="cs_prof_edit_form" data-prof-form="contact">
+                <p class="cs_prof_form_note">Your email is your login and is locked — <a href="/contact">contact us</a> to change it.</p>
+                <span class="cs_prof_form_error" data-prof-form-error></span>
+                <div class="cs_prof_field">
+                  <label>Mobile Number</label>
+                  <input type="tel" name="hcp_mobile" value="${esc(mobile)}">
+                </div>
+                <div class="cs_prof_field">
+                  <label>Street Address</label>
+                  <input type="text" name="hcp_street_address" value="${esc(p.hcp_street_address)}">
+                </div>
+                <div class="cs_prof_field_row">
+                  <div class="cs_prof_field">
+                    <label>Suburb</label>
+                    <input type="text" name="hcp_suburb" value="${esc(p.hcp_suburb)}">
+                  </div>
+                  <div class="cs_prof_field">
+                    <label>State</label>
+                    <input type="text" name="hcp_state" value="${esc(p.hcp_state)}">
+                  </div>
+                  <div class="cs_prof_field">
+                    <label>Postcode</label>
+                    <input type="text" name="hcp_postcode" value="${esc(p.hcp_postcode)}">
+                  </div>
+                </div>
+                <div class="cs_prof_form_actions">
+                  <button type="submit" class="cs_prof_save_btn" data-prof-save-btn>Save Changes</button>
+                  <button type="button" class="cs_prof_cancel_btn" data-prof-edit-toggle="contact">Cancel</button>
+                </div>
+              </form>
             </div>
 
             <div class="cs_prof_card wow fadeInUp">
@@ -203,21 +308,41 @@ export default async function Page() {
                 <span class="cs_prof_badge"><i class="fa-solid fa-circle-check"></i> Verified Healthcare Professional</span>
               </div>
               <div class="cs_prof_row"><span class="k">Verification Status</span><span class="v">Verified Healthcare Professional</span></div>
-              <div class="cs_prof_row"><span class="k">Profession</span><span class="v">Healthcare Professional</span></div>
-              <div class="cs_prof_row"><span class="k">Registration Number</span><span class="v">&mdash;</span></div>
-              <div class="cs_prof_row"><span class="k">Registration Authority</span><span class="v">&mdash;</span></div>
-              <div class="cs_prof_row"><span class="k">Verification Date</span><span class="v">15 Jan 2024</span></div>
+              <div class="cs_prof_row"><span class="k">Profession</span><span class="v">${esc(profession) || "&mdash;"}</span></div>
+              <div class="cs_prof_row"><span class="k">AHPRA Registration Number</span><span class="v">${esc(ahpra) || "&mdash;"}</span></div>
+              <div class="cs_prof_row"><span class="k">Registration Authority</span><span class="v">AHPRA</span></div>
             </div>
 
-            <div class="cs_prof_card wow fadeInUp">
+            <div class="cs_prof_card wow fadeInUp" data-prof-card="password">
               <div class="cs_prof_card_head">
                 <div class="cs_prof_card_head_left">
                   <span class="cs_prof_card_icon"><i class="fa-solid fa-lock"></i></span>
                   <div><h3>Password &amp; Security</h3><p>Manage your account password.</p></div>
                 </div>
-                <a href="/contact" class="cs_prof_edit_btn"><i class="fa-solid fa-pen"></i> Change Password</a>
+                <button type="button" class="cs_prof_edit_btn" data-prof-edit-toggle="password"><i class="fa-solid fa-pen"></i> Change Password</button>
               </div>
-              <div class="cs_prof_row"><span class="k">Password</span><span class="v cs_prof_dots">&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;</span></div>
+              <div class="cs_prof_view">
+                <div class="cs_prof_row"><span class="k">Password</span><span class="v cs_prof_dots">&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;</span></div>
+              </div>
+              <form class="cs_prof_edit_form" data-prof-password-form>
+                <span class="cs_prof_form_error" data-prof-form-error></span>
+                <div class="cs_prof_field">
+                  <label>Current Password</label>
+                  <input type="password" name="currentPassword" autocomplete="current-password">
+                </div>
+                <div class="cs_prof_field">
+                  <label>New Password</label>
+                  <input type="password" name="newPassword" autocomplete="new-password">
+                </div>
+                <div class="cs_prof_field">
+                  <label>Confirm New Password</label>
+                  <input type="password" name="confirmPassword" autocomplete="new-password">
+                </div>
+                <div class="cs_prof_form_actions">
+                  <button type="submit" class="cs_prof_save_btn" data-prof-save-btn>Update Password</button>
+                  <button type="button" class="cs_prof_cancel_btn" data-prof-edit-toggle="password">Cancel</button>
+                </div>
+              </form>
             </div>
 
             <div class="cs_prof_card wow fadeInUp" style="margin-bottom:0;">
@@ -315,6 +440,133 @@ export default async function Page() {
               });
             });
           });
+
+          document.querySelectorAll('[data-prof-edit-toggle]').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+              var name = btn.getAttribute('data-prof-edit-toggle');
+              var card = document.querySelector('[data-prof-card="' + name + '"]');
+              if (card) card.classList.toggle('editing');
+            });
+          });
+
+          var otherTrigger = document.querySelector('[data-prof-other-trigger]');
+          var otherField = document.querySelector('[data-prof-other-field]');
+          if (otherTrigger && otherField) {
+            otherTrigger.addEventListener('change', function () {
+              otherField.style.display = otherTrigger.value === 'Other' ? 'block' : 'none';
+            });
+          }
+
+          document.querySelectorAll('[data-prof-form]').forEach(function (form) {
+            form.addEventListener('submit', function (e) {
+              e.preventDefault();
+              var saveBtn = form.querySelector('[data-prof-save-btn]');
+              var errorEl = form.querySelector('[data-prof-form-error]');
+              if (errorEl) errorEl.style.display = 'none';
+              if (saveBtn) saveBtn.disabled = true;
+
+              var payload = {};
+              new FormData(form).forEach(function (value, key) { payload[key] = value; });
+
+              fetch('/api/profile', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
+              })
+                .then(function (res) { return res.json().then(function (data) { return { res: res, data: data }; }); })
+                .then(function (result) {
+                  if (!result.res.ok || !result.data.ok) throw new Error(result.data.message || 'Could not save your details.');
+                  window.location.reload();
+                })
+                .catch(function (err) {
+                  if (errorEl) {
+                    errorEl.textContent = err.message || 'Could not save your details.';
+                    errorEl.style.display = 'block';
+                  }
+                  if (saveBtn) saveBtn.disabled = false;
+                });
+            });
+          });
+
+          var passwordForm = document.querySelector('[data-prof-password-form]');
+          if (passwordForm) {
+            passwordForm.addEventListener('submit', function (e) {
+              e.preventDefault();
+              var saveBtn = passwordForm.querySelector('[data-prof-save-btn]');
+              var errorEl = passwordForm.querySelector('[data-prof-form-error]');
+              if (errorEl) errorEl.style.display = 'none';
+
+              var currentPassword = passwordForm.querySelector('[name="currentPassword"]').value;
+              var newPassword = passwordForm.querySelector('[name="newPassword"]').value;
+              var confirmPassword = passwordForm.querySelector('[name="confirmPassword"]').value;
+
+              if (newPassword.length < 8) {
+                if (errorEl) { errorEl.textContent = 'New password must be at least 8 characters.'; errorEl.style.display = 'block'; }
+                return;
+              }
+              if (newPassword !== confirmPassword) {
+                if (errorEl) { errorEl.textContent = 'New passwords do not match.'; errorEl.style.display = 'block'; }
+                return;
+              }
+
+              if (saveBtn) saveBtn.disabled = true;
+              fetch('/api/profile/password', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ currentPassword: currentPassword, newPassword: newPassword }),
+              })
+                .then(function (res) { return res.json().then(function (data) { return { res: res, data: data }; }); })
+                .then(function (result) {
+                  if (!result.res.ok || !result.data.ok) throw new Error(result.data.message || 'Could not change your password.');
+                  passwordForm.reset();
+                  var card = passwordForm.closest('[data-prof-card]');
+                  if (card) card.classList.remove('editing');
+                  alert('Password updated.');
+                })
+                .catch(function (err) {
+                  if (errorEl) {
+                    errorEl.textContent = err.message || 'Could not change your password.';
+                    errorEl.style.display = 'block';
+                  }
+                })
+                .finally(function () {
+                  if (saveBtn) saveBtn.disabled = false;
+                });
+            });
+          }
+
+          var avatarBtn = document.querySelector('[data-prof-avatar-btn]');
+          var avatarInput = document.querySelector('[data-prof-avatar-input]');
+          if (avatarBtn && avatarInput) {
+            avatarBtn.addEventListener('click', function () { avatarInput.click(); });
+            avatarInput.addEventListener('change', function () {
+              var file = avatarInput.files && avatarInput.files[0];
+              if (!file) return;
+              avatarBtn.disabled = true;
+              avatarBtn.textContent = 'Uploading...';
+
+              var formData = new FormData();
+              formData.append('avatar', file);
+
+              fetch('/api/profile/avatar', { method: 'POST', body: formData })
+                .then(function (res) { return res.json().then(function (data) { return { res: res, data: data }; }); })
+                .then(function (result) {
+                  if (!result.res.ok || !result.data.ok) throw new Error(result.data.message || 'Could not upload your photo.');
+                  var url = result.data.avatarUrl;
+                  document.querySelectorAll('[data-prof-avatar], [data-dash-avatar]').forEach(function (wrap) {
+                    wrap.innerHTML = '<img src="' + url + '" alt="Profile photo">';
+                  });
+                })
+                .catch(function (err) {
+                  alert(err.message || 'Could not upload your photo.');
+                })
+                .finally(function () {
+                  avatarBtn.disabled = false;
+                  avatarBtn.textContent = 'Change photo';
+                  avatarInput.value = '';
+                });
+            });
+          }
         })();
       `}
     </Script>
