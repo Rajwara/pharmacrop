@@ -202,6 +202,67 @@ async function fetchLiveProducts() {
   }
 }
 
+// Client-specified display order for the HCP portal product listing. Any
+// product not named here (i.e. a newly added product) is appended after
+// this fixed sequence, newest first, so it reads as "the latest arrivals" —
+// and this sequence itself never moves as new products are added.
+const FEATURED_PRODUCT_ORDER = [
+  "Noosa Selects T19 Hybrid",
+  "Noosa Selects T21 Indica",
+  "Noosa Selects T23 Sativa",
+  "Noosa Selects T25 Sativa",
+  "Noosa Select T26 Indica",
+  "Noosa Selects T28 Indica",
+  "Ravine T19",
+  "Valley T21",
+  "Valley T23",
+  "Summit T25",
+  "Valley T25",
+  "Pastille",
+  "Serene 200 Isolate",
+  "Serene 200 Plus",
+  "Horizon 30:30",
+  "Luminous",
+  "Daydream",
+];
+
+function normalizeName(name) {
+  return String(name || "")
+    .toLowerCase()
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+// Matches loosely (either name containing the other) since WordPress titles
+// are sometimes prefixed/suffixed differently than the client's own list
+// (e.g. "PharmaCrop Horizon 30:30" vs "Horizon 30:30").
+function matchesOrderName(productName, orderName) {
+  const a = normalizeName(productName);
+  const b = normalizeName(orderName);
+  if (!a || !b) return false;
+  return a === b || a.includes(b) || b.includes(a);
+}
+
+function orderIndex(product) {
+  const index = FEATURED_PRODUCT_ORDER.findIndex((name) => matchesOrderName(product.name, name));
+  return index === -1 ? FEATURED_PRODUCT_ORDER.length : index;
+}
+
+function sortByFeaturedOrder(products) {
+  return products
+    .map((product, i) => ({ product, i, order: orderIndex(product) }))
+    .sort((a, b) => {
+      if (a.order !== b.order) return a.order - b.order;
+      // Unmatched products (new arrivals) show newest-added first; within
+      // the fixed sequence itself, preserve the order given above.
+      if (a.order === FEATURED_PRODUCT_ORDER.length) {
+        return new Date(b.product.dateGmt) - new Date(a.product.dateGmt);
+      }
+      return a.i - b.i;
+    })
+    .map((entry) => entry.product);
+}
+
 // Each category shows live WordPress products once any exist for it; until
 // then it keeps showing the demo products so the live site is never empty
 // for a category you haven't migrated yet.
@@ -211,7 +272,7 @@ export async function fetchAllProducts() {
   const demoFallback = demoProducts
     .filter((p) => !liveCategories.has(p.categorySlug))
     .map((p) => ({ ...p, dateGmt: p.dateGmt || "1970-01-01T00:00:00" }));
-  return [...live, ...demoFallback];
+  return sortByFeaturedOrder([...live, ...demoFallback]);
 }
 
 export async function getProductBySlug(slug) {
