@@ -45,7 +45,7 @@ export default function Page() {
     </header>
     <!-- End Header Section -->
     <!-- Start Page Heading Section -->
-    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/Home/Precision%20Cultivation/Environmental%20Precision.webp">
+    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/Environmental%20Precision/Environmental%20Precision%20hero%20banner.webp">
       <div class="container">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -103,7 +103,7 @@ export default function Page() {
         <div class="cs_feature_stack">
           <div class="cs_feature_row wow fadeInUp">
             <div class="cs_feature_img">
-              <img src="/assets/img/Our-Facilities/2.webp" alt="Staff inspecting cannabis plants in the greenhouse">
+              <img src="/assets/img/Environmental%20Precision/Precision%20Beyond%20the%20Parameters%20.webp" alt="Staff inspecting cannabis plants in the greenhouse">
             </div>
             <div class="cs_feature_content">
               <span class="cs_feature_icon"><i class="fa-solid fa-wind"></i></span>
@@ -115,7 +115,7 @@ export default function Page() {
           </div>
           <div class="cs_feature_row cs_feature_row_rev wow fadeInUp">
             <div class="cs_feature_img">
-              <img src="/assets/img/Our-Facilities/our%20facility%203.webp" alt="Staff closely inspecting a flowering cannabis plant">
+              <img src="/assets/img/Environmental%20Precision/Balancing%20Temperature%2C%20Humidity%20%26%20Airflow.webp" alt="Staff closely inspecting a flowering cannabis plant">
             </div>
             <div class="cs_feature_content">
               <span class="cs_feature_icon"><i class="fa-solid fa-temperature-half"></i></span>
@@ -128,7 +128,7 @@ export default function Page() {
           </div>
           <div class="cs_feature_row wow fadeInUp">
             <div class="cs_feature_img">
-              <img src="/assets/img/Our-Facilities/3.webp" alt="Technician carrying a tray of propagated clones">
+              <img src="/assets/img/Environmental%20Precision/Conditions%20Tailored%20to%20the%20Cultivar.webp" alt="Technician carrying a tray of propagated clones">
             </div>
             <div class="cs_feature_content">
               <span class="cs_feature_icon"><i class="fa-solid fa-dna"></i></span>
@@ -140,7 +140,7 @@ export default function Page() {
           </div>
           <div class="cs_feature_row cs_feature_row_rev wow fadeInUp">
             <div class="cs_feature_img">
-              <img src="/assets/img/Our-Facilities/our%20facility%206.webp" alt="Potted cannabis plants on greenhouse benches">
+              <img src="/assets/img/Environmental%20Precision/Continuous%20Environmental%20Refinement.webp" alt="Potted cannabis plants on greenhouse benches">
             </div>
             <div class="cs_feature_content">
               <span class="cs_feature_icon"><i class="fa-solid fa-chart-line"></i></span>

@@ -45,7 +45,7 @@ export default function Page() {
     </header>
     <!-- End Header Section -->
     <!-- Start Page Heading Section -->
-    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/Home/Precision%20Cultivation/Advanced%20Growing%20Systems.webp">
+    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/Advanced%20Growing%20Systems/Advanced%20Growing%20Systems%20hero%20section.webp">
       <div class="container">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -103,7 +103,7 @@ export default function Page() {
         <div class="cs_feature_stack">
           <div class="cs_feature_row wow fadeInUp">
             <div class="cs_feature_img">
-              <img src="/assets/img/Our-Facilities/4.webp" alt="Flowering cannabis canopy in the greenhouse">
+              <img src="/assets/img/Advanced%20Growing%20Systems/A%20Consistent%20Foundation%20for%20Every%20Crop.webp" alt="Flowering cannabis canopy in the greenhouse">
             </div>
             <div class="cs_feature_content">
               <span class="cs_feature_icon"><i class="fa-solid fa-seedling"></i></span>
@@ -115,7 +115,7 @@ export default function Page() {
           </div>
           <div class="cs_feature_row cs_feature_row_rev wow fadeInUp">
             <div class="cs_feature_img">
-              <img src="/assets/img/Our-Facilities/our%20facility%2010.webp" alt="Cultivation aisle under specialised grow lighting">
+              <img src="/assets/img/Advanced%20Growing%20Systems/Precision%20Nutrition%20%26%20Irrigation.webp" alt="Cultivation aisle under specialised grow lighting">
             </div>
             <div class="cs_feature_content">
               <span class="cs_feature_icon"><i class="fa-solid fa-droplet"></i></span>
@@ -127,7 +127,7 @@ export default function Page() {
           </div>
           <div class="cs_feature_row wow fadeInUp">
             <div class="cs_feature_img">
-              <img src="/assets/img/Our-Facilities/our%20facility%207.webp" alt="Staff conducting quality checks in the greenhouse">
+              <img src="/assets/img/Advanced%20Growing%20Systems/Data-Driven%20Cultivation.webp" alt="Staff conducting quality checks in the greenhouse">
             </div>
             <div class="cs_feature_content">
               <span class="cs_feature_icon"><i class="fa-solid fa-chart-line"></i></span>
