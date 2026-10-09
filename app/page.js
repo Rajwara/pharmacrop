@@ -31,10 +31,10 @@ export default function Page() {
                 <nav class="cs_nav_list_wrap text-uppercase">
                   <ul class="cs_nav_list">
                     <li><a href="/about-us">About Us</a></li>
+                    <li><a href="/our-team">Our Team</a></li>
                     <li><a href="/products">Products</a></li>
                     <li><a href="/partnerships">Partnerships</a></li>
-                    <li><a href="/careers">Careers</a></li>
-                    <li><a href="/our-facilities">Our Facility</a></li>
+                    <li><a href="https://aleafiate.com.au/meet-our-prescribing-practitioners/" target="_blank" rel="noopener">See Our Doctors</a></li>
                   </ul>
                 </nav>
               </div>
@@ -879,6 +879,7 @@ export default function Page() {
               <li><a href="/partnerships">Partnerships</a></li>
               <li><a href="/blog">Blog</a></li>
               <li><a href="/faq">FAQ</a></li>
+              <li><a href="/careers">Careers</a></li>
               <li><a href="/our-facilities">Our Facility</a></li>
             </ul>
           </div>
