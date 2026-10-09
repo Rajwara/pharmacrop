@@ -93,6 +93,9 @@ export default function Page() {
       .cs_auth_switch { text-align: center; margin-top: 22px; font-size: 13px; color: #666; }
       .cs_auth_switch button { background: none; border: none; padding: 0; color: #024242; font-weight: 700; text-decoration: underline; cursor: pointer; font-family: inherit; font-size: 13px; }
       .cs_auth_switch a { color: #024242; font-weight: 700; text-decoration: underline; }
+      .cs_auth_banner { display: flex; align-items: flex-start; gap: 10px; background: rgba(224,85,79,0.1); border: 1px solid rgba(224,85,79,0.3); color: #b5342e; border-radius: 10px; padding: 14px 16px; font-size: 13px; line-height: 1.6; margin-bottom: 24px; }
+      .cs_auth_banner[data-tone="info"] { background: rgba(2,66,66,0.06); border-color: rgba(2,66,66,0.2); color: #024242; }
+      .cs_auth_banner i { margin-top: 2px; }
       .cs_auth_register_badge { display: inline-block; color: #78dca6; background: rgba(120,220,166,0.12); border-radius: 20px; padding: 5px 14px; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; }
       .cs_auth_register_intro h2 { color: #024242; font-size: 26px; font-weight: 800; margin: 0 0 12px; line-height: 1.3; }
       .cs_auth_register_intro p { color: #666; font-size: 14px; line-height: 1.7; margin: 0 0 28px; }
@@ -158,6 +161,7 @@ export default function Page() {
       </div>
       <div class="cs_auth_right">
         <div class="cs_auth_card" data-auth-card>
+          <div class="cs_auth_banner" data-auth-banner hidden></div>
           <div class="cs_auth_tabs">
             <button type="button" class="cs_auth_tab active" data-auth-tab="login">Login</button>
             <button type="button" class="cs_auth_tab" data-auth-tab="register">Register</button>
@@ -348,6 +352,23 @@ export default function Page() {
           var panels = document.querySelectorAll('.cs_auth_panel');
           var switches = document.querySelectorAll('[data-auth-switch]');
           var card = document.querySelector('[data-auth-card]');
+
+          var banner = document.querySelector('[data-auth-banner]');
+          if (banner) {
+            var reason = new URLSearchParams(window.location.search).get('reason');
+            var messages = {
+              suspended: { text: 'Your account access has been suspended. Please contact support if you believe this is a mistake.', tone: 'error' },
+              denied: { text: 'Your registration was not approved. Please contact support if you have questions.', tone: 'error' },
+              pending: { text: 'Your account is still awaiting admin approval. We\\'ll email you once it\\'s approved.', tone: 'info' },
+              invalid: { text: 'Your session is no longer valid. Please sign in again.', tone: 'info' },
+            };
+            var msg = reason && messages[reason];
+            if (msg) {
+              banner.textContent = msg.text;
+              banner.setAttribute('data-tone', msg.tone);
+              banner.hidden = false;
+            }
+          }
 
           function setActive(name) {
             tabs.forEach(function (t) { t.classList.toggle('active', t.getAttribute('data-auth-tab') === name); });
