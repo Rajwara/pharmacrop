@@ -117,13 +117,14 @@ export default async function Page({ params }) {
   const isOralLiquid = product.category === "Oral Liquid";
   const hidePresentation = product.category === "Dried Flower" || isOralLiquid || isPastilles || isInhaledLiquid;
   const useSpectrumFields = isBroadSpectrum || isOralLiquid || isPastilles;
-  const terpeneLabel = isInhaledLiquid ? "Terpene Profile" : "Dominant Terpenes";
+  const terpeneLabel = isInhaledLiquid ? "Terpene Profile" : isPastilles ? "Other Ingredients" : "Dominant Terpenes";
   const detailsTable2Html = useSpectrumFields
     ? (hidePresentation ? "" : tableRow("fa-box-open", "Presentation", product.presentation)) +
       tableRow("fa-box", "Pack Size", product.packSize) +
       tableRow("fa-atom", "Spectrum", product.spectrum || product.strainType) +
       tableRow("fa-ice-cream", "Flavour", product.flavour) +
       tableRow("fa-leaf", "Dietary Tags", product.dietaryTags) +
+      tableRow("fa-wind", terpeneLabel, product.dominantTerpenes) +
       tableRow("fa-vial", "Excipients", product.excipients) +
       tableRow("fa-heart-pulse", "Therapeutic Profile*", product.therapeuticProfile) +
       tableRow("fa-shield-halved", "TGA Category", product.tgaCategory) +
