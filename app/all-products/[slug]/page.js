@@ -203,13 +203,13 @@ export default async function Page({ params }) {
             <button type="button" class="cs_dash_search_btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
             <div class="cs_dash_user" data-dash-user>
               <button type="button" class="cs_dash_user_btn" data-dash-user-toggle>
-                <span class="cs_dash_avatar">DR</span>
-                <span class="cs_dash_user_name">Dr. Sarah Mitchell</span>
+                <span class="cs_dash_avatar" data-dash-avatar>HP</span>
+                <span class="cs_dash_user_name" data-dash-user-name>Healthcare Professional</span>
                 <i class="fa-solid fa-chevron-down"></i>
               </button>
               <div class="cs_dash_user_menu">
                 <a href="/profile">My Profile / Account</a>
-                <a href="/">Sign Out</a>
+                <a href="#" data-dash-signout>Sign Out</a>
               </div>
             </div>
           </div>
@@ -595,6 +595,24 @@ export default async function Page({ params }) {
                 userWrap.classList.remove('active');
               });
             }
+            document.querySelectorAll('[data-dash-signout]').forEach(function (link) {
+              link.addEventListener('click', function (e) {
+                e.preventDefault();
+                fetch('/api/auth/logout', { method: 'POST' }).then(function () {
+                  window.location.href = '/';
+                });
+              });
+            });
+            fetch('/api/auth/me').then(function (res) { return res.json(); }).then(function (data) {
+              if (!data || !data.name) return;
+              var nameEl = document.querySelector('[data-dash-user-name]');
+              var avatarEl = document.querySelector('[data-dash-avatar]');
+              if (nameEl) nameEl.textContent = data.name;
+              if (avatarEl) {
+                var initials = data.name.split(' ').filter(Boolean).slice(0, 2).map(function (p) { return p[0].toUpperCase(); }).join('') || 'HP';
+                avatarEl.textContent = initials;
+              }
+            }).catch(function () {});
             var mainImg = document.querySelector('[data-pd-main-img]');
             var thumbs = Array.prototype.slice.call(document.querySelectorAll('[data-pd-thumb]'));
             thumbs.forEach(function (btn) {
