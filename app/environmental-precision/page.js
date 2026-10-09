@@ -59,21 +59,37 @@ export default function Page() {
     <style>
       .cs_article_section { padding: 90px 0; }
       .cs_article_section.cs_article_alt { background: #f7faf8; }
-      .cs_article_intro { max-width: 820px; margin: 0 auto; }
-      .cs_article_intro p { color: #444; font-size: 17px; line-height: 1.8; margin: 0 0 22px; }
+      .cs_article_eyebrow_wrap { text-align: center; margin-bottom: 24px; }
+      .cs_article_eyebrow { display: inline-flex; align-items: center; padding: 8px 22px; border: 1px solid rgba(2, 66, 66, 0.18); border-radius: 30px; background: #fff; color: #024242; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
+      .cs_article_intro { max-width: 760px; margin: 0 auto; text-align: center; }
+      .cs_article_intro p { color: #444; font-size: 18px; line-height: 1.85; margin: 0 0 22px; }
       .cs_article_intro p:last-child { margin-bottom: 0; }
-      .cs_article_block { max-width: 820px; margin: 0 auto; }
-      .cs_article_block h2 { color: #024242; font-size: 30px; font-weight: 800; margin: 0 0 22px; }
-      .cs_article_block p { color: #555; font-size: 16px; line-height: 1.8; margin: 0 0 18px; }
-      .cs_article_block p:last-child { margin-bottom: 0; }
-      .cs_article_stack { display: flex; flex-direction: column; gap: 70px; }
+      .cs_feature_row { display: flex; align-items: center; gap: 64px; }
+      .cs_feature_row.cs_feature_row_rev { flex-direction: row-reverse; }
+      .cs_feature_img { flex: 0 0 44%; border-radius: 16px; overflow: hidden; }
+      .cs_feature_img img { width: 100%; height: 400px; object-fit: cover; display: block; }
+      .cs_feature_content { flex: 1; }
+      .cs_feature_icon { width: 54px; height: 54px; border-radius: 14px; background: rgba(120,220,166,0.18); color: #024242; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 22px; }
+      .cs_feature_content h2 { color: #024242; font-size: 28px; font-weight: 800; margin: 0 0 18px; }
+      .cs_feature_content p { color: #555; font-size: 16px; line-height: 1.8; margin: 0 0 16px; }
+      .cs_feature_content p:last-child { margin-bottom: 0; }
+      .cs_feature_stack { display: flex; flex-direction: column; gap: 90px; }
+      @media (max-width: 991px) {
+        .cs_feature_row, .cs_feature_row.cs_feature_row_rev { flex-direction: column; gap: 32px; }
+        .cs_feature_img { flex: none; width: 100%; }
+        .cs_feature_img img { height: 280px; }
+      }
       @media (max-width: 575px) {
         .cs_article_section { padding: 60px 0; }
-        .cs_article_block h2 { font-size: 24px; }
+        .cs_feature_content h2 { font-size: 24px; }
+        .cs_article_intro p { font-size: 16px; }
       }
     </style>
     <section class="cs_article_section">
       <div class="container">
+        <div class="cs_article_eyebrow_wrap wow fadeInUp">
+          <span class="cs_article_eyebrow">Precision Cultivation</span>
+        </div>
         <div class="cs_article_intro wow fadeInUp">
           <p>At PharmaCrop, environmental precision goes beyond monitoring temperature and humidity. It requires understanding how growing conditions interact, how individual cultivars respond and how subtle variations can influence plant development.</p>
           <p>Our hybrid greenhouse systems combine natural sunlight with carefully managed environmental conditions, allowing us to support plant health, flower development and consistent cultivation outcomes.</p>
@@ -84,56 +100,60 @@ export default function Page() {
     <!-- Start Environmental Precision Detail Sections -->
     <section class="cs_article_section cs_article_alt">
       <div class="container">
-        <div class="cs_article_stack">
-          <div class="cs_article_block wow fadeInUp">
-            <h2>Precision Beyond the Parameters</h2>
-            <p>Light, temperature, humidity and airflow each play an important role in plant development. But it is the relationship between these factors that makes environmental management critical.</p>
-            <p>Even within a controlled greenhouse, subtle variations can occur across different growing areas. Understanding these differences allows us to make informed adjustments and refine conditions throughout the crop cycle.</p>
-            <p>Rather than relying solely on fixed environmental settings, our approach combines continuous monitoring with responsive management to support consistent growing conditions.</p>
+        <div class="cs_feature_stack">
+          <div class="cs_feature_row wow fadeInUp">
+            <div class="cs_feature_img">
+              <img src="/assets/img/Our-Facilities/2.webp" alt="Staff inspecting cannabis plants in the greenhouse">
+            </div>
+            <div class="cs_feature_content">
+              <span class="cs_feature_icon"><i class="fa-solid fa-wind"></i></span>
+              <h2>Precision Beyond the Parameters</h2>
+              <p>Light, temperature, humidity and airflow each play an important role in plant development. But it is the relationship between these factors that makes environmental management critical.</p>
+              <p>Even within a controlled greenhouse, subtle variations can occur across different growing areas. Understanding these differences allows us to make informed adjustments and refine conditions throughout the crop cycle.</p>
+              <p>Rather than relying solely on fixed environmental settings, our approach combines continuous monitoring with responsive management to support consistent growing conditions.</p>
+            </div>
           </div>
-          <div class="cs_article_block wow fadeInUp">
-            <h2>Balancing Temperature, Humidity &amp; Airflow</h2>
-            <p>Maintaining appropriate environmental conditions throughout flowering requires a careful balance between plant development and the management of moisture-related risks.</p>
-            <p>While excessive humidity can increase the risk of microbial growth, overly dry conditions can affect the physical integrity of delicate flower structures.</p>
-            <p>By carefully managing temperature, humidity and airflow, we maintain conditions that support healthy flower development while protecting the quality of the crop.</p>
-            <p>Our approach recognises that environmental precision is not simply about maintaining a particular temperature or humidity level, but understanding how these conditions work together.</p>
+          <div class="cs_feature_row cs_feature_row_rev wow fadeInUp">
+            <div class="cs_feature_img">
+              <img src="/assets/img/Our-Facilities/our%20facility%203.webp" alt="Staff closely inspecting a flowering cannabis plant">
+            </div>
+            <div class="cs_feature_content">
+              <span class="cs_feature_icon"><i class="fa-solid fa-temperature-half"></i></span>
+              <h2>Balancing Temperature, Humidity &amp; Airflow</h2>
+              <p>Maintaining appropriate environmental conditions throughout flowering requires a careful balance between plant development and the management of moisture-related risks.</p>
+              <p>While excessive humidity can increase the risk of microbial growth, overly dry conditions can affect the physical integrity of delicate flower structures.</p>
+              <p>By carefully managing temperature, humidity and airflow, we maintain conditions that support healthy flower development while protecting the quality of the crop.</p>
+              <p>Our approach recognises that environmental precision is not simply about maintaining a particular temperature or humidity level, but understanding how these conditions work together.</p>
+            </div>
           </div>
-          <div class="cs_article_block wow fadeInUp">
-            <h2>Conditions Tailored to the Cultivar</h2>
-            <p>Different cannabis cultivars respond differently to their growing environment.</p>
-            <p>Our approach recognises that consistent quality is not achieved by applying identical conditions to every crop, but by understanding the requirements of the genetics being cultivated.</p>
-            <p>Through careful environmental monitoring and ongoing observation, we refine growing conditions to support the development of each cultivar&rsquo;s individual characteristics.</p>
+          <div class="cs_feature_row wow fadeInUp">
+            <div class="cs_feature_img">
+              <img src="/assets/img/Our-Facilities/3.webp" alt="Technician carrying a tray of propagated clones">
+            </div>
+            <div class="cs_feature_content">
+              <span class="cs_feature_icon"><i class="fa-solid fa-dna"></i></span>
+              <h2>Conditions Tailored to the Cultivar</h2>
+              <p>Different cannabis cultivars respond differently to their growing environment.</p>
+              <p>Our approach recognises that consistent quality is not achieved by applying identical conditions to every crop, but by understanding the requirements of the genetics being cultivated.</p>
+              <p>Through careful environmental monitoring and ongoing observation, we refine growing conditions to support the development of each cultivar&rsquo;s individual characteristics.</p>
+            </div>
           </div>
-          <div class="cs_article_block wow fadeInUp">
-            <h2>Continuous Environmental Refinement</h2>
-            <p>Environmental precision is an ongoing process of measurement, evaluation and improvement.</p>
-            <p>By monitoring growing conditions throughout each crop cycle, we develop a deeper understanding of how environmental factors influence plant development.</p>
-            <p>These insights inform adjustments to our environmental management practices, helping us manage variability and strengthen consistency across successive crops.</p>
+          <div class="cs_feature_row cs_feature_row_rev wow fadeInUp">
+            <div class="cs_feature_img">
+              <img src="/assets/img/Our-Facilities/our%20facility%206.webp" alt="Potted cannabis plants on greenhouse benches">
+            </div>
+            <div class="cs_feature_content">
+              <span class="cs_feature_icon"><i class="fa-solid fa-chart-line"></i></span>
+              <h2>Continuous Environmental Refinement</h2>
+              <p>Environmental precision is an ongoing process of measurement, evaluation and improvement.</p>
+              <p>By monitoring growing conditions throughout each crop cycle, we develop a deeper understanding of how environmental factors influence plant development.</p>
+              <p>These insights inform adjustments to our environmental management practices, helping us manage variability and strengthen consistency across successive crops.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <!-- End Environmental Precision Detail Sections -->
-    <!-- Start Contact CTA Section -->
-    <style>
-      .cs_article_cta_desc { color: rgba(255,255,255,0.7); font-size: 16px; line-height: 1.7; max-width: 560px; margin: 20px 0 0; }
-    </style>
-    <section class="cs_heading_bg">
-      <div class="cs_height_100 cs_height_lg_70"></div>
-      <div class="container">
-        <div class="cs_section_heading cs_style_2">
-          <div>
-            <h2 class="cs_section_title cs_white_color cs_fs_80 mb-0">WANT TO KNOW<br>MORE ABOUT OUR <span>CULTIVATION?</span></h2>
-            <p class="cs_article_cta_desc">Get in touch with our team to learn more about PharmaCrop&rsquo;s integrated cultivation platform.</p>
-          </div>
-          <div class="cs_section_right">
-            <a href="/contact" class="cs_btn cs_style_1 cs_bold cs_heading_bg cs_white_color w-100 wow fadeInRight">CONTACT US &rarr;</a>
-          </div>
-        </div>
-      </div>
-      <div class="cs_height_100 cs_height_lg_70"></div>
-    </section>
-    <!-- End Contact CTA Section -->
     <!-- Start Footer Section -->
     <style>
       .cs_footer_v2 { background: #eee9e3; padding: 90px 0 0; position: relative; overflow: hidden; }
