@@ -235,7 +235,7 @@ export default function Page() {
         </div>
         <div class="cs_height_64 cs_height_lg_50"></div>
         <div class="cs_card_1_group">
-          <a href="/partnerships" class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed active wow fadeInLeft" data-src="/assets/img/General%20Images/Commercial%20Partnerships/Retail.webp">
+          <a href="/partnerships#retail-partnership" class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed active wow fadeInLeft" data-src="/assets/img/General%20Images/Commercial%20Partnerships/Retail.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <span class="cs_card_tag">Home</span>
@@ -253,7 +253,7 @@ export default function Page() {
               </svg>
             </span>
           </a>
-          <a href="/partnerships" class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/General%20Images/Commercial%20Partnerships/Green%20Label.webp">
+          <a href="/partnerships#green-label-partnership" class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/General%20Images/Commercial%20Partnerships/Green%20Label.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <span class="cs_card_tag">Home</span>
@@ -271,7 +271,7 @@ export default function Page() {
               </svg>
             </span>
           </a>
-          <a href="/partnerships" class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/General%20Images/Commercial%20Partnerships/White%20Label.webp">
+          <a href="/partnerships#white-label-partnership" class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/General%20Images/Commercial%20Partnerships/White%20Label.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <span class="cs_card_tag">Home</span>
@@ -289,7 +289,7 @@ export default function Page() {
               </svg>
             </span>
           </a>
-          <a href="/partnerships" class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed wow fadeInRight" data-src="/assets/img/General%20Images/Commercial%20Partnerships/Bulk%20Flower.webp">
+          <a href="/partnerships#bulk-flower-partnership" class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed wow fadeInRight" data-src="/assets/img/General%20Images/Commercial%20Partnerships/Bulk%20Flower.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <span class="cs_card_tag">Home</span>
