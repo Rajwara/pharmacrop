@@ -98,7 +98,7 @@ export default function Page() {
             <div class="cs_team_body">
               <div class="cs_team_name_row">
                 <h3 class="cs_team_name">Dr Adel Zarei</h3>
-                <div class="cs_team_social"><a href="#" aria-label="Dr Adel Zarei on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+                <div class="cs_team_social"><a href="https://www.linkedin.com/in/adel-zarei-a363a456/" target="_blank" rel="noopener" aria-label="Dr Adel Zarei on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
               </div>
               <p class="cs_team_title">Chief Operating Officer</p>
               <span class="cs_team_role">Research to Innovation</span>
@@ -111,7 +111,7 @@ export default function Page() {
             <div class="cs_team_body">
               <div class="cs_team_name_row">
                 <h3 class="cs_team_name">Paul Barker</h3>
-                <div class="cs_team_social"><a href="#" aria-label="Paul Barker on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+                <div class="cs_team_social"><a href="https://www.linkedin.com/in/paul-barker123/" target="_blank" rel="noopener" aria-label="Paul Barker on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
               </div>
               <p class="cs_team_title">Chief Financial Officer</p>
               <span class="cs_team_role">Finance to Foresight</span>
@@ -124,7 +124,7 @@ export default function Page() {
             <div class="cs_team_body">
               <div class="cs_team_name_row">
                 <h3 class="cs_team_name">George Polimenakos</h3>
-                <div class="cs_team_social"><a href="#" aria-label="George Polimenakos on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+                <div class="cs_team_social"><a href="https://www.linkedin.com/in/george-polimenakos-b818bb13/" target="_blank" rel="noopener" aria-label="George Polimenakos on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
               </div>
               <p class="cs_team_title">General Manager Commercial</p>
               <span class="cs_team_role">Products to Patients</span>
@@ -137,7 +137,7 @@ export default function Page() {
             <div class="cs_team_body">
               <div class="cs_team_name_row">
                 <h3 class="cs_team_name">Chad Esch</h3>
-                <div class="cs_team_social"><a href="#" aria-label="Chad Esch on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+                <div class="cs_team_social"><a href="https://www.linkedin.com/in/chad-esch-a612201a1/" target="_blank" rel="noopener" aria-label="Chad Esch on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
               </div>
               <p class="cs_team_title">Master Grower</p>
               <span class="cs_team_role">Cultivation to Consistency</span>
@@ -150,7 +150,7 @@ export default function Page() {
             <div class="cs_team_body">
               <div class="cs_team_name_row">
                 <h3 class="cs_team_name">Audrey Kuang</h3>
-                <div class="cs_team_social"><a href="#" aria-label="Audrey Kuang on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+                <div class="cs_team_social"><a href="https://www.linkedin.com/in/audrey-kuang-843971249/" target="_blank" rel="noopener" aria-label="Audrey Kuang on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
               </div>
               <p class="cs_team_title">Head of Quality</p>
               <span class="cs_team_role">Quality to Confidence</span>
@@ -163,7 +163,7 @@ export default function Page() {
             <div class="cs_team_body">
               <div class="cs_team_name_row">
                 <h3 class="cs_team_name">Carolyn Fennell</h3>
-                <div class="cs_team_social"><a href="#" aria-label="Carolyn Fennell on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+                <div class="cs_team_social"><a href="https://www.linkedin.com/in/carolyn-fennell-83904443/" target="_blank" rel="noopener" aria-label="Carolyn Fennell on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
               </div>
               <p class="cs_team_title">GMP Production Manager</p>
               <span class="cs_team_role">Flower to Medicine</span>
@@ -176,7 +176,7 @@ export default function Page() {
             <div class="cs_team_body">
               <div class="cs_team_name_row">
                 <h3 class="cs_team_name">Johanna Faccini</h3>
-                <div class="cs_team_social"><a href="#" aria-label="Johanna Faccini on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+                <div class="cs_team_social"><a href="https://www.linkedin.com/in/johanna-faccini/" target="_blank" rel="noopener" aria-label="Johanna Faccini on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
               </div>
               <p class="cs_team_title">Marketing Director</p>
               <span class="cs_team_role">Strategy to Growth</span>
@@ -189,7 +189,7 @@ export default function Page() {
             <div class="cs_team_body">
               <div class="cs_team_name_row">
                 <h3 class="cs_team_name">Suzanne Roberts</h3>
-                <div class="cs_team_social"><a href="#" aria-label="Suzanne Roberts on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+                <div class="cs_team_social"><a href="https://www.linkedin.com/in/suzanne-roberts-08667022/" target="_blank" rel="noopener" aria-label="Suzanne Roberts on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
               </div>
               <p class="cs_team_title">Sales Director</p>
               <span class="cs_team_role">Relationships to Results</span>
@@ -202,7 +202,7 @@ export default function Page() {
             <div class="cs_team_body">
               <div class="cs_team_name_row">
                 <h3 class="cs_team_name">Margaret Meldrum</h3>
-                <div class="cs_team_social"><a href="#" aria-label="Margaret Meldrum on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+                <div class="cs_team_social"><a href="https://www.linkedin.com/in/margaret-m-41171b101/" target="_blank" rel="noopener" aria-label="Margaret Meldrum on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
               </div>
               <p class="cs_team_title">Commercial Operations &amp; Supply Chain Manager</p>
               <span class="cs_team_role">Demand to Delivery</span>
