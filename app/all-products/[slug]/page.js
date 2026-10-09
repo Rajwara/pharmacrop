@@ -75,6 +75,13 @@ export default async function Page({ params }) {
     if (!value || value === "—") return "";
     return `<div class="cs_pd_table_row"><i class="fa-solid ${icon}"></i><span class="k">${label}</span><span class="v">${value}</span></div>`;
   }
+  function packCard(icon, title, desc, value) {
+    if (!value) return "";
+    if (String(value).length > 36) {
+      return `<div class="cs_pd_pack_card cs_pd_pack_card_stack"><div class="cs_pd_pack_card_top"><span class="cs_pd_pack_card_icon"><i class="fa-solid ${icon}"></i></span><div class="cs_pd_pack_card_body"><h4>${title}</h4><p>${desc}</p></div></div><p class="cs_pd_pack_card_long_value">${value}</p></div>`;
+    }
+    return `<div class="cs_pd_pack_card"><span class="cs_pd_pack_card_icon"><i class="fa-solid ${icon}"></i></span><div class="cs_pd_pack_card_body"><h4>${title}</h4><p>${desc}</p></div><span class="cs_pd_pack_card_value">${value}</span></div>`;
+  }
 
   const statsHtml = isBroadSpectrum
     ? statTile("fa-flask", "Cannabinoids", cannabinoidLine) +
@@ -367,6 +374,12 @@ export default async function Page({ params }) {
       .cs_pd_pack_card_body h4 { margin: 0 0 3px; color: #024242; font-size: 16px; font-weight: 800; }
       .cs_pd_pack_card_body p { margin: 0; color: #8a9a95; font-size: 13px; }
       .cs_pd_pack_card_value { background: #eef1ee; color: #024242; font-weight: 700; font-size: 14px; padding: 10px 20px; border-radius: 10px; white-space: nowrap; flex: none; }
+      .cs_pd_pack_card_stack { flex-direction: column; align-items: stretch; }
+      .cs_pd_pack_card_top { display: flex; align-items: center; gap: 18px; }
+      .cs_pd_pack_card_long_value { margin: 14px 0 0 68px; color: #024242; font-weight: 500; font-size: 14px; line-height: 1.6; background: #eef1ee; padding: 12px 16px; border-radius: 10px; }
+      @media (max-width: 767px) {
+        .cs_pd_pack_card_long_value { margin-left: 0; }
+      }
       @media (max-width: 991px) {
         .cs_pd_pack_row { flex-wrap: wrap; }
         .cs_pd_pack_head { flex: 0 0 100%; }
@@ -381,10 +394,7 @@ export default async function Page({ params }) {
         <div class="cs_pd_pack_row wow fadeInUp">
           <div class="cs_pd_pack_head"><h2>Presentation &amp; Packaging</h2><p>Product presentation and packaging details for ${product.name}.</p></div>
           <div class="cs_pd_pack_img"><img src="${product.image}" alt="${product.name} packaging"></div>
-          <div class="cs_pd_pack_table">
-            <div class="cs_pd_pack_card"><span class="cs_pd_pack_card_icon"><i class="fa-solid fa-box"></i></span><div class="cs_pd_pack_card_body"><h4>Pack Size</h4><p>Product quantity per unit.</p></div><span class="cs_pd_pack_card_value">${product.packSize}</span></div>
-            <div class="cs_pd_pack_card"><span class="cs_pd_pack_card_icon"><i class="fa-solid fa-box-open"></i></span><div class="cs_pd_pack_card_body"><h4>Presentation</h4><p>How the product is supplied.</p></div><span class="cs_pd_pack_card_value">${product.presentation}</span></div>
-            <div class="cs_pd_pack_card"><span class="cs_pd_pack_card_icon"><i class="fa-solid fa-leaf"></i></span><div class="cs_pd_pack_card_body"><h4>Dosage Form</h4><p>Physical form of the product.</p></div><span class="cs_pd_pack_card_value">${product.dosageForm}</span></div>
+          <div class="cs_pd_pack_table">${packCard("fa-box", "Pack Size", "Product quantity per unit.", product.packSize)}${packCard("fa-box-open", "Presentation", "How the product is supplied.", product.presentation)}${packCard("fa-leaf", "Dosage Form", "Physical form of the product.", product.dosageForm)}
           </div>
         </div>
       </div>
