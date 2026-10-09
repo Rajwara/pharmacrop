@@ -75,7 +75,7 @@ export default function Page() {
         <div class="cs_height_56 cs_height_lg_35"></div>
         <div class="row cs_gap_y_30">
           <div class="col-lg-4 wow fadeInLeft">
-            <a href="https://www.youtube.com/embed/rRid6GCJtgc" class="cs_video_block cs_style_1 cs_bg_filed cs_video_open cs_center cs_radius_20" data-src="/assets/img/About-Us/THE%20PHARMACROP%20STORY/THE%20PHARMACROP%20STORY-1.webp"></a>
+            <div class="cs_video_block cs_style_1 cs_bg_filed cs_center cs_radius_20" data-src="/assets/img/About-Us/THE%20PHARMACROP%20STORY/THE%20PHARMACROP%20STORY-1.webp"></div>
           </div>
           <div class="col-lg-8 wow fadeInRight">
             <div class="cs_cta cs_style_2 cs_radius_20" style="position: relative; overflow: hidden;">
