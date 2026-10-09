@@ -60,6 +60,7 @@ export default async function Page({ params }) {
   const isInhaledLiquid = product.category === "Inhaled Liquid";
   const isBroadSpectrum = Boolean(product.cbg || product.cbn) && !isInhaledLiquid;
   const cannabinoidLine = [
+    product.thc ? `THC ${product.thc}` : "",
     product.cbd ? `CBD ${product.cbd}` : "",
     product.cbg ? `CBG ${product.cbg}` : "",
     product.cbn ? `CBN ${product.cbn}` : "",
@@ -83,14 +84,9 @@ export default async function Page({ params }) {
     return `<div class="cs_pd_pack_card"><span class="cs_pd_pack_card_icon"><i class="fa-solid ${icon}"></i></span><div class="cs_pd_pack_card_body"><h4>${title}</h4><p>${desc}</p></div><span class="cs_pd_pack_card_value">${value}</span></div>`;
   }
 
-  const statsHtml = isBroadSpectrum
-    ? statTile("fa-flask", "Cannabinoids", cannabinoidLine) +
-      statTile("fa-atom", "Spectrum", product.spectrum) +
-      statTile("fa-box", "Pack Size", product.packSize) +
-      statTile("fa-tag", "RRP", product.price ? `$${product.price}` : "")
-    : statTile("fa-leaf", "THC", product.thc) +
-      statTile("fa-flask", "CBD", product.cbd) +
-      statTile("fa-box", "Pack Size", product.packSize);
+  const statsHtml =
+    statTile("fa-flask", "Cannabinoids", cannabinoidLine) +
+    statTile("fa-box", "Pack Size", product.packSize);
 
   const isPastilles = product.category === "Pastilles";
   const detailsTable1Html = isPastilles
@@ -225,10 +221,10 @@ export default async function Page({ params }) {
       .cs_pd_breadcrumb span.current { color: #024242; font-weight: 700; }
       .cs_pd_hero { padding: 40px 0 60px; background: #f7faf8; }
       .cs_pd_hero_grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
-      .cs_pd_gallery_main { border-radius: 16px; overflow: hidden; height: 520px; background: #fff; }
+      .cs_pd_gallery_main { border-radius: 16px; overflow: hidden; height: 520px; background: #f7faf8; }
       .cs_pd_gallery_main img { width: 100%; height: 100%; object-fit: contain; display: block; }
       .cs_pd_gallery_thumbs { display: flex; gap: 12px; margin-top: 14px; }
-      .cs_pd_gallery_thumbs button { padding: 0; border: 2px solid transparent; border-radius: 10px; overflow: hidden; width: 90px; height: 70px; cursor: pointer; background: #fff; }
+      .cs_pd_gallery_thumbs button { padding: 0; border: 2px solid transparent; border-radius: 10px; overflow: hidden; width: 90px; height: 70px; cursor: pointer; background: #f7faf8; }
       .cs_pd_gallery_thumbs button.active { border-color: #024242; }
       .cs_pd_gallery_thumbs img { width: 100%; height: 100%; object-fit: contain; display: block; }
       .cs_pd_origin_badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(120,220,166,0.15); color: #024242; font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; padding: 6px 12px; border-radius: 20px; margin-bottom: 14px; }
