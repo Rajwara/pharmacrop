@@ -427,6 +427,24 @@ export default function Page() {
               userWrap.classList.remove('active');
             });
           }
+          document.querySelectorAll('[data-dash-signout]').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+              e.preventDefault();
+              fetch('/api/auth/logout', { method: 'POST' }).then(function () {
+                window.location.href = '/';
+              });
+            });
+          });
+          fetch('/api/auth/me').then(function (res) { return res.json(); }).then(function (data) {
+            if (!data || !data.name) return;
+            var nameEl = document.querySelector('[data-dash-user-name]');
+            var avatarEl = document.querySelector('[data-dash-avatar]');
+            if (nameEl) nameEl.textContent = data.name;
+            if (avatarEl) {
+              var initials = data.name.split(' ').filter(Boolean).slice(0, 2).map(function (p) { return p[0].toUpperCase(); }).join('') || 'HP';
+              avatarEl.textContent = initials;
+            }
+          }).catch(function () {});
 
           var grid = document.querySelector('[data-res-grid]');
           var cards = Array.prototype.slice.call(document.querySelectorAll('.cs_res_card'));
