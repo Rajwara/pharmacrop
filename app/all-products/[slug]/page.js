@@ -133,6 +133,7 @@ export default async function Page({ params }) {
     : (hidePresentation ? "" : tableRow("fa-box-open", "Presentation", product.presentation)) +
       tableRow("fa-box", "Pack Size", product.packSize) +
       tableRow("fa-wind", terpeneLabel, product.dominantTerpenes) +
+      tableRow("fa-vial", "Excipients", product.excipients) +
       tableRow("fa-heart-pulse", "Therapeutic Profile*", product.therapeuticProfile) +
       tableRow("fa-shield-halved", "TGA Category", product.tgaCategory) +
       tableRow("fa-scale-balanced", "Schedule", product.schedule);
