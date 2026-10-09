@@ -120,15 +120,18 @@ export default async function Page({ params }) {
       tableRow("fa-atom", "Spectrum", product.spectrum) +
       tableRow("fa-ice-cream", "Flavour", product.flavour) +
       tableRow("fa-vial", "Excipients", product.excipients) +
-      tableRow("fa-heart-pulse", "Therapeutic Profile", product.therapeuticProfile) +
+      tableRow("fa-heart-pulse", "Therapeutic Profile*", product.therapeuticProfile) +
       tableRow("fa-shield-halved", "TGA Category", product.tgaCategory) +
       tableRow("fa-scale-balanced", "Schedule", product.schedule)
     : (hidePresentation ? "" : tableRow("fa-box-open", "Presentation", product.presentation)) +
       tableRow("fa-box", "Pack Size", product.packSize) +
       tableRow("fa-wind", terpeneLabel, product.dominantTerpenes) +
-      tableRow("fa-heart-pulse", "Therapeutic Profile", product.therapeuticProfile) +
+      tableRow("fa-heart-pulse", "Therapeutic Profile*", product.therapeuticProfile) +
       tableRow("fa-shield-halved", "TGA Category", product.tgaCategory) +
       tableRow("fa-scale-balanced", "Schedule", product.schedule);
+  const detailsTable2FootnoteHtml = product.therapeuticProfile
+    ? `<div class="cs_pd_table_footnote">*Based on SAS-B application data as at October 2026.</div>`
+    : "";
 
   function nutritionItem(icon, label, unit, value) {
     if (!value) return "";
@@ -329,6 +332,7 @@ export default async function Page({ params }) {
       .cs_pd_table_row i { color: #024242; width: 18px; text-align: center; flex: none; }
       .cs_pd_table_row span.k { flex: 1; color: #024242; font-weight: 700; font-size: 13.5px; }
       .cs_pd_table_row span.v { color: #666; font-size: 13.5px; }
+      .cs_pd_table_footnote { padding: 14px 20px; border-top: 1px solid rgba(2,66,66,0.08); color: #888; font-size: 12px; line-height: 1.5; }
       @media (max-width: 767px) {
         .cs_pd_details_grid { grid-template-columns: 1fr; }
       }
@@ -342,7 +346,7 @@ export default async function Page({ params }) {
         <div class="cs_pd_details_grid">
           <div class="cs_pd_table wow fadeInUp">${detailsTable1Html}
           </div>
-          <div class="cs_pd_table wow fadeInUp" data-wow-delay="0.1s">${detailsTable2Html}
+          <div class="cs_pd_table wow fadeInUp" data-wow-delay="0.1s">${detailsTable2Html}${detailsTable2FootnoteHtml}
           </div>
         </div>
       </div>
