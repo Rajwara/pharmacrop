@@ -1,10 +1,20 @@
 import Script from "next/script";
+import { getCurrentHcpUser } from "./../lib/wp-auth";
 
 export const metadata = {
   title: "My Profile - PharmaCrop HCP Portal",
 };
 
-export default function Page() {
+export default async function Page() {
+  const user = await getCurrentHcpUser();
+  const displayName = (user && user.name) || "Healthcare Professional";
+  const email = (user && user.email) || "";
+  const initials = displayName
+    .split(" ")
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0].toUpperCase())
+    .join("") || "HP";
   return (
     <>
     <div
@@ -58,13 +68,13 @@ export default function Page() {
             <span class="cs_dash_portal_pill"><i class="fa-solid fa-lock"></i> HCP Portal</span>
             <div class="cs_dash_user" data-dash-user>
               <button type="button" class="cs_dash_user_btn" data-dash-user-toggle>
-                <span class="cs_dash_avatar">DR</span>
-                <span class="cs_dash_user_name">Dr. Sarah Mitchell</span>
+                <span class="cs_dash_avatar">${initials}</span>
+                <span class="cs_dash_user_name">${displayName}</span>
                 <i class="fa-solid fa-chevron-down"></i>
               </button>
               <div class="cs_dash_user_menu">
                 <a href="/profile">My Profile / Account</a>
-                <a href="/">Sign Out</a>
+                <a href="#" data-dash-signout>Sign Out</a>
               </div>
             </div>
           </div>
@@ -144,15 +154,15 @@ export default function Page() {
       <div class="container">
         <div class="cs_prof_layout">
           <div class="cs_prof_side wow fadeInUp">
-            <div class="cs_prof_side_avatar">SM</div>
-            <h3>Dr Sarah Mitchell</h3>
+            <div class="cs_prof_side_avatar">${initials}</div>
+            <h3>${displayName}</h3>
             <span class="role">Healthcare Professional</span>
-            <div class="cs_prof_side_email"><i class="fa-solid fa-envelope"></i> dr.s.mitchell@example.com</div>
+            <div class="cs_prof_side_email"><i class="fa-solid fa-envelope"></i> ${email || "&mdash;"}</div>
             <span class="cs_prof_verified"><i class="fa-solid fa-circle-check"></i> Verified Healthcare Professional</span>
             <ul class="cs_prof_side_nav">
               <li><a href="/profile" class="active"><span><i class="fa-solid fa-user left"></i> My Profile</span> <i class="fa-solid fa-chevron-right"></i></a></li>
               <li><a href="/contact"><span><i class="fa-solid fa-lock left"></i> Privacy &amp; Support</span> <i class="fa-solid fa-chevron-right"></i></a></li>
-              <li><a href="/" class="logout"><i class="fa-solid fa-arrow-right-from-bracket left"></i> Log Out</a></li>
+              <li><a href="#" class="logout" data-dash-signout><i class="fa-solid fa-arrow-right-from-bracket left"></i> Log Out</a></li>
             </ul>
           </div>
           <div>
@@ -164,7 +174,7 @@ export default function Page() {
                 </div>
                 <a href="/contact" class="cs_prof_edit_btn"><i class="fa-solid fa-pen"></i> Edit Details</a>
               </div>
-              <div class="cs_prof_row"><span class="k">Full Name</span><span class="v">Dr Sarah Mitchell</span></div>
+              <div class="cs_prof_row"><span class="k">Full Name</span><span class="v">${displayName}</span></div>
               <div class="cs_prof_row"><span class="k">Profession / Role</span><span class="v">Healthcare Professional</span></div>
               <div class="cs_prof_row"><span class="k">Professional Registration Number</span><span class="v">&mdash;</span></div>
               <div class="cs_prof_row"><span class="k">Registration Authority</span><span class="v">&mdash;</span></div>
@@ -180,7 +190,7 @@ export default function Page() {
                 </div>
                 <a href="/contact" class="cs_prof_edit_btn"><i class="fa-solid fa-pen"></i> Edit Contact Details</a>
               </div>
-              <div class="cs_prof_row"><span class="k">Email Address</span><span class="v">dr.s.mitchell@example.com</span></div>
+              <div class="cs_prof_row"><span class="k">Email Address</span><span class="v">${email || "&mdash;"}</span></div>
               <div class="cs_prof_row"><span class="k">Phone Number</span><span class="v">+61 400 123 456</span></div>
             </div>
 
@@ -297,6 +307,14 @@ export default function Page() {
               userWrap.classList.remove('active');
             });
           }
+          document.querySelectorAll('[data-dash-signout]').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+              e.preventDefault();
+              fetch('/api/auth/logout', { method: 'POST' }).then(function () {
+                window.location.href = '/';
+              });
+            });
+          });
         })();
       `}
     </Script>
