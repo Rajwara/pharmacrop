@@ -5,7 +5,7 @@ export const posts = [
     date: "11 Aug 2026",
     category: "Cultivation",
     tags: ["Noosa Hinterland", "Cultivation", "Australian-Grown"],
-    image: "/assets/img/General%20Images/Blog/THE%20NOOSA%20HINTERLAND%20HOME%20OF%20PHARMACROP.webp",
+    image: "/assets/img/Home/Blog/Blog%201.webp",
     excerpt:
       "The Noosa Hinterland provides the home for our cultivation and manufacturing operations, bringing local production together within a single region.",
     content: [
@@ -21,7 +21,7 @@ export const posts = [
     date: "18 Aug 2026",
     category: "Manufacturing",
     tags: ["GMP", "Manufacturing", "Integrated Operations"],
-    image: "/assets/img/General%20Images/Blog/FROM%20GENETICS%20TO%20GMP-CERTIFIED%20MANUFACTURING.webp",
+    image: "/assets/img/Home/Blog/Blog%202.webp",
     excerpt:
       "By bringing cultivation, processing and GMP-certified manufacturing together, PharmaCrop maintains oversight from cultivar selection through to finished product.",
     content: [
@@ -37,7 +37,7 @@ export const posts = [
     date: "25 Aug 2026",
     category: "Cultivation",
     tags: ["Global Expertise", "Cultivation Philosophy", "Phenohunting"],
-    image: "/assets/img/General%20Images/Blog/GLOBAL%20CULTIVATION%20EXPERTISE%2C%20HINTERLAND-HONED.webp",
+    image: "/assets/img/Home/Blog/Blog%203.webp",
     excerpt:
       "Drawing on cultivation expertise from California, Canada and South Africa, our team applies international insights within the unique conditions of the Noosa Hinterland.",
     content: [
