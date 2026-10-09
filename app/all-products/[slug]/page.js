@@ -90,8 +90,7 @@ export default async function Page({ params }) {
       statTile("fa-tag", "RRP", product.price ? `$${product.price}` : "")
     : statTile("fa-leaf", "THC", product.thc) +
       statTile("fa-flask", "CBD", product.cbd) +
-      statTile("fa-box", "Pack Size", product.packSize) +
-      statTile("fa-gear", "Dosage Form", product.dosageForm);
+      statTile("fa-box", "Pack Size", product.packSize);
 
   const isPastilles = product.category === "Pastilles";
   const detailsTable1Html = isPastilles
