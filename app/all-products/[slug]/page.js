@@ -110,7 +110,9 @@ export default async function Page({ params }) {
       tableRow("fa-flask", "CBD Strength", product.cbd) +
       tableRow("fa-flask", "CBG Strength", product.cbg) +
       tableRow("fa-flask", "CBN Strength", product.cbn) +
-      tableRow("fa-seedling", "Plant Species", product.strainType ? `${product.strainType}${product.speciesRatio ? ` (${product.speciesRatio})` : ""}` : "");
+      (product.category === "Oral Liquid"
+        ? ""
+        : tableRow("fa-seedling", "Plant Species", product.strainType ? `${product.strainType}${product.speciesRatio ? ` (${product.speciesRatio})` : ""}` : ""));
 
   const isOralLiquid = product.category === "Oral Liquid";
   const hidePresentation = product.category === "Dried Flower" || isOralLiquid || isPastilles || isInhaledLiquid;
@@ -119,7 +121,7 @@ export default async function Page({ params }) {
   const detailsTable2Html = useSpectrumFields
     ? (hidePresentation ? "" : tableRow("fa-box-open", "Presentation", product.presentation)) +
       tableRow("fa-box", "Pack Size", product.packSize) +
-      tableRow("fa-atom", "Spectrum", product.spectrum) +
+      tableRow("fa-atom", "Spectrum", product.spectrum || product.strainType) +
       tableRow("fa-ice-cream", "Flavour", product.flavour) +
       tableRow("fa-vial", "Excipients", product.excipients) +
       tableRow("fa-heart-pulse", "Therapeutic Profile*", product.therapeuticProfile) +
@@ -267,7 +269,7 @@ export default async function Page({ params }) {
           <div class="wow fadeInUp" data-wow-delay="0.1s">
             <span class="cs_pd_origin_badge"><i class="fa-solid fa-leaf"></i> ${product.categorySlug === "dried-flower" ? "Australian Grown" : "Australian Manufactured"} <i class="fa-solid fa-circle-info"></i></span>
             <h1>${product.name}</h1>
-            <span class="cs_pd_category">${product.category}${product.strainType ? ` | <span class="strain">${product.strainType}</span>` : ''}</span>
+            <span class="cs_pd_category">${product.category}</span>
             ${product.price ? `<span class="cs_pd_rrp">RRP <strong>$${product.price}</strong>${product.packSize ? ` (${product.packSize} pack)` : ''}</span>` : ''}
             <p class="cs_pd_desc">A premium ${product.category.toLowerCase()} product, cultivated and processed to PharmaCrop&rsquo;s high quality standards. ${product.name} is available to healthcare professionals with detailed product information and supporting documentation.</p>
             <div class="cs_pd_stats">${statsHtml}
