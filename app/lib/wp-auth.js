@@ -21,10 +21,20 @@ export async function getCurrentHcpUser() {
   const jar = await cookies();
   const token = jar.get(HCP_TOKEN_COOKIE)?.value;
   if (!token) return null;
-  return {
-    name: jar.get(HCP_NAME_COOKIE)?.value || "",
-    email: jar.get(HCP_EMAIL_COOKIE)?.value || "",
-  };
+
+  const name = jar.get(HCP_NAME_COOKIE)?.value || "";
+  const email = jar.get(HCP_EMAIL_COOKIE)?.value || "";
+  if (name) return { name, email };
+
+  // A session started before these cookies existed (or that otherwise
+  // never got them set) won't have a name to show — fall back to the
+  // profile endpoint we already know this account can reach, rather than
+  // leaving it stuck on the generic placeholder until the person logs
+  // out and back in.
+  const profile = await getHcpProfile();
+  if (!profile) return { name: "", email };
+  const fallbackName = [profile.firstName, profile.lastName].filter(Boolean).join(" ");
+  return { name: fallbackName, email: profile.email || email };
 }
 
 export async function getHcpToken() {
