@@ -1,0 +1,247 @@
+export const metadata = {
+  title: "Advanced Growing Systems - PharmaCrop",
+};
+
+export default function Page() {
+  return (
+    <div
+      dangerouslySetInnerHTML={{
+        __html: `
+    <!-- Start Preloader -->
+    <div class="cs_preloader" style="background-color:#000;">
+      <img src="/assets/img/General Images/Branding/pharma_Crop_logo_loader.gif" alt="Loading" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(70vw,480px);height:auto;">
+    </div>
+    <!-- End Preloader -->
+    <!-- Start Header Section -->
+    <header class="cs_site_header cs_style_1 cs_sticky_header">
+      <div class="cs_main_header">
+        <div class="container">
+          <div class="cs_main_header_in">
+            <div class="cs_main_header_left">
+              <a class="cs_site_branding" href="/">
+                <img src="/assets/img/General Images/Branding/pharmacrop-logo-header-animation.gif" alt="Logo" class="cs_logo_img cs_logo_gif">
+              </a>
+            </div>
+            <div class="cs_main_header_center">
+              <div class="cs_nav cs_heading_color">
+                <nav class="cs_nav_list_wrap text-uppercase">
+                  <ul class="cs_nav_list">
+                    <li><a href="/about-us">About Us</a></li>
+                    <li><a href="/our-team">Our Team</a></li>
+                    <li><a href="/products">Products</a></li>
+                    <li><a href="/partnerships">Partnerships</a></li>
+                    <li><a href="https://aleafiate.com.au/meet-our-prescribing-practitioners/" target="_blank" rel="noopener">See Our Doctors</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="cs_main_header_right">
+              <a href="/portals" class="cs_header_login_btn">HCP Portals</a>
+              <a href="/contact" class="cs_header_cta_btn" aria-label="Contact Us"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End Header Section -->
+    <!-- Start Page Heading Section -->
+    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/Home/Precision%20Cultivation/Advanced%20Growing%20Systems.webp">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item active">Advanced Growing Systems</li>
+        </ol>
+        <h1 class="cs_page_title mb-0 cs_fs_80 wow fadeInUp">PRECISION CULTIVATION.<br>CONSISTENT BY DESIGN.</h1>
+      </div>
+    </section>
+    <!-- End Page Heading Section -->
+    <!-- Start Article Intro Section -->
+    <style>
+      .cs_article_section { padding: 90px 0; }
+      .cs_article_section.cs_article_alt { background: #f7faf8; }
+      .cs_article_intro { max-width: 820px; margin: 0 auto; }
+      .cs_article_intro p { color: #444; font-size: 17px; line-height: 1.8; margin: 0 0 22px; }
+      .cs_article_intro p:last-child { margin-bottom: 0; }
+      .cs_article_block { max-width: 820px; margin: 0 auto; }
+      .cs_article_block h2 { color: #024242; font-size: 30px; font-weight: 800; margin: 0 0 22px; }
+      .cs_article_block p { color: #555; font-size: 16px; line-height: 1.8; margin: 0 0 18px; }
+      .cs_article_block p:last-child { margin-bottom: 0; }
+      .cs_article_stack { display: flex; flex-direction: column; gap: 70px; }
+      @media (max-width: 575px) {
+        .cs_article_section { padding: 60px 0; }
+        .cs_article_block h2 { font-size: 24px; }
+      }
+    </style>
+    <section class="cs_article_section">
+      <div class="container">
+        <div class="cs_article_intro wow fadeInUp">
+          <p>At PharmaCrop, consistency begins with the systems behind every crop. Our advanced soilless cultivation approach combines carefully selected growing media, precision nutrient delivery and detailed cultivation data to support plant health, quality and repeatable outcomes.</p>
+          <p>By maintaining control over cultivation inputs, we establish a consistent foundation for every growing cycle.</p>
+        </div>
+      </div>
+    </section>
+    <!-- End Article Intro Section -->
+    <!-- Start Growing Systems Detail Sections -->
+    <section class="cs_article_section cs_article_alt">
+      <div class="container">
+        <div class="cs_article_stack">
+          <div class="cs_article_block wow fadeInUp">
+            <h2>A Consistent Foundation for Every Crop</h2>
+            <p>Our cultivation process uses coco-based growing media, selected for its clean, stable and predictable characteristics.</p>
+            <p>Unlike living soil, where biological activity can introduce variability, coco provides a consistent starting point with minimal inherent nutritional content. This allows us to manage nutrient inputs with greater precision and establish repeatable growing conditions across successive crops.</p>
+            <p>This approach helps minimise unnecessary variables and supports consistent plant development from the outset.</p>
+          </div>
+          <div class="cs_article_block wow fadeInUp">
+            <h2>Precision Nutrition &amp; Irrigation</h2>
+            <p>Every crop is supported by carefully managed mineral-based nutrition and irrigation programs.</p>
+            <p>Our cultivation systems allow us to precisely manage the nutrients and water delivered to plants, adjusting inputs throughout the growing cycle according to their requirements.</p>
+            <p>By using defined nutrient formulations and monitoring irrigation volumes, we maintain greater control over the inputs that influence plant development, supporting healthy growth and consistent cultivation outcomes.</p>
+          </div>
+          <div class="cs_article_block wow fadeInUp">
+            <h2>Data-Driven Cultivation</h2>
+            <p>Precision cultivation requires more than advanced equipment. It requires the ability to measure, understand and refine the inputs that contribute to plant development.</p>
+            <p>At PharmaCrop, we record detailed cultivation data daily, including nutrient inputs, fertiliser quantities and irrigation volumes.</p>
+            <p>This information provides insight into how plants respond to different cultivation inputs, allowing us to make informed adjustments and refine our growing practices.</p>
+            <p>By applying learnings from each crop to the next, we continually strengthen the repeatability of our cultivation processes and our ability to deliver consistent outcomes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Growing Systems Detail Sections -->
+    <!-- Start Contact CTA Section -->
+    <style>
+      .cs_article_cta_desc { color: rgba(255,255,255,0.7); font-size: 16px; line-height: 1.7; max-width: 560px; margin: 20px 0 0; }
+    </style>
+    <section class="cs_heading_bg">
+      <div class="cs_height_100 cs_height_lg_70"></div>
+      <div class="container">
+        <div class="cs_section_heading cs_style_2">
+          <div>
+            <h2 class="cs_section_title cs_white_color cs_fs_80 mb-0">WANT TO KNOW<br>MORE ABOUT OUR <span>CULTIVATION?</span></h2>
+            <p class="cs_article_cta_desc">Get in touch with our team to learn more about PharmaCrop&rsquo;s integrated cultivation platform.</p>
+          </div>
+          <div class="cs_section_right">
+            <a href="/contact" class="cs_btn cs_style_1 cs_bold cs_heading_bg cs_white_color w-100 wow fadeInRight">CONTACT US &rarr;</a>
+          </div>
+        </div>
+      </div>
+      <div class="cs_height_100 cs_height_lg_70"></div>
+    </section>
+    <!-- End Contact CTA Section -->
+    <!-- Start Footer Section -->
+    <style>
+      .cs_footer_v2 { background: #eee9e3; padding: 90px 0 0; position: relative; overflow: hidden; }
+      .cs_footer_v2_row { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 40px; padding-bottom: 56px; border-bottom: 1px solid rgba(2, 66, 66, 0.12); position: relative; z-index: 1; }
+      .cs_footer_v2_brand_tagline { color: #024242; font-size: 20px; font-weight: 700; margin: 20px 0 12px; line-height: 1.4; }
+      .cs_footer_v2_desc { color: rgba(2, 66, 66, 0.6); font-size: 14px; line-height: 1.6; margin: 0 0 20px; max-width: 320px; }
+      .cs_footer_v2_newsletter { display: flex; border: 1px solid rgba(2, 66, 66, 0.2); border-radius: 30px; padding: 6px 6px 6px 20px; background: #fff; max-width: 340px; }
+      .cs_footer_v2_newsletter input { flex: 1; border: none; outline: none; font-size: 14px; background: transparent; min-width: 0; }
+      .cs_footer_v2_newsletter button { width: 36px; height: 36px; border-radius: 50%; border: none; background: #024242; color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; flex: none; }
+      .cs_footer_v2_privacy { color: rgba(2, 66, 66, 0.45); font-size: 12px; margin: 12px 0 0; }
+      .cs_footer_v2_col_title { color: #024242; font-weight: 700; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; margin: 0 0 8px; }
+      .cs_footer_v2_col_underline { display: block; width: 26px; height: 2px; background: #d99f59; margin-bottom: 20px; }
+      .cs_footer_v2_list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+      .cs_footer_v2_list a { color: #024242; opacity: 0.75; font-size: 14px; text-decoration: none; }
+      .cs_footer_v2_list a:hover { opacity: 1; text-decoration: underline; }
+      .cs_footer_v2_touch_item { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+      .cs_footer_v2_touch_icon { width: 34px; height: 34px; border-radius: 50%; background: rgba(120, 220, 166, 0.25); color: #024242; display: flex; align-items: center; justify-content: center; font-size: 13px; flex: none; }
+      .cs_footer_v2_touch_item a { color: #024242; font-size: 14px; text-decoration: none; }
+      .cs_footer_v2_touch_item a:hover { text-decoration: underline; }
+      .cs_footer_v2_bottom { display: flex; align-items: center; justify-content: space-between; padding: 28px 0; flex-wrap: wrap; gap: 20px; position: relative; z-index: 1; }
+      .cs_footer_v2_copyright { color: rgba(2, 66, 66, 0.55); font-size: 13px; margin: 0; }
+      .cs_footer_v2_badges { display: inline-flex; align-items: center; padding: 8px 6px; border: 1px solid rgba(2, 66, 66, 0.15); border-radius: 40px; background: #fff; }
+      .cs_footer_v2_badge { display: flex; align-items: center; gap: 10px; padding: 0 18px; position: relative; }
+      .cs_footer_v2_badge + .cs_footer_v2_badge::before { content: ""; position: absolute; left: 0; top: 4px; bottom: 4px; width: 1px; background: rgba(2, 66, 66, 0.15); }
+      .cs_footer_v2_badge_img { width: 42px; height: 42px; object-fit: contain; flex: none; }
+      .cs_footer_v2_badge_label { font-size: 11px; letter-spacing: 0.3px; text-transform: uppercase; color: rgba(2, 66, 66, 0.65); font-weight: 700; white-space: nowrap; }
+      @media (max-width: 991px) {
+        .cs_footer_v2_row { grid-template-columns: repeat(2, 1fr); }
+      }
+      @media (max-width: 575px) {
+        .cs_footer_v2_row { grid-template-columns: 1fr; }
+        .cs_footer_v2_bottom { flex-direction: column; align-items: flex-start; }
+        .cs_footer_v2_badge { padding: 0 12px; gap: 7px; }
+        .cs_footer_v2_badge_img { width: 32px; height: 32px; }
+        .cs_footer_v2_badge_label { font-size: 10px; }
+      }
+    </style>
+    <footer class="cs_footer_v2">
+      <div class="container">
+        <div class="cs_footer_v2_row">
+          <div>
+            <img src="/assets/img/General Images/Branding/pharmacrop-logo-footer-animation.gif" alt="Logo" class="wow zoomIn cs_logo_img cs_logo_gif">
+            <p class="cs_footer_v2_brand_tagline">Australian-grown.<br>Pharmaceutical by design.</p>
+            <p class="cs_footer_v2_desc">Stay updated with our latest news, insights and product developments.</p>
+            <form action="#" class="cs_footer_v2_newsletter">
+              <input type="email" placeholder="Enter your email address">
+              <button type="submit" aria-label="Subscribe">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
+                </svg>
+              </button>
+            </form>
+            <p class="cs_footer_v2_privacy">We respect your privacy. No spam, ever.</p>
+          </div>
+          <div>
+            <h4 class="cs_footer_v2_col_title">Explore</h4>
+            <span class="cs_footer_v2_col_underline"></span>
+            <ul class="cs_footer_v2_list">
+              <li><a href="/about-us">About Us</a></li>
+              <li><a href="/products">Products</a></li>
+              <li><a href="/partnerships">Partnerships</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="/faq">FAQ</a></li>
+              <li><a href="/careers">Careers</a></li>
+              <li><a href="/our-facilities">Our Facility</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="cs_footer_v2_col_title">Support</h4>
+            <span class="cs_footer_v2_col_underline"></span>
+            <ul class="cs_footer_v2_list">
+              <li><a href="/privacy-policy">Privacy Policy</a></li>
+              <li><a href="/terms-and-conditions">Terms &amp; Conditions</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="cs_footer_v2_col_title">Get In Touch</h4>
+            <span class="cs_footer_v2_col_underline"></span>
+            <div class="cs_footer_v2_touch_item">
+              <span class="cs_footer_v2_touch_icon"><i class="fa-solid fa-phone"></i></span>
+              <a href="tel:1300053533">1300 053 533</a>
+            </div>
+            <div class="cs_footer_v2_touch_item">
+              <span class="cs_footer_v2_touch_icon"><i class="fa-solid fa-envelope"></i></span>
+              <a href="mailto:enquiries@pharmacrop.com.au">enquiries@pharmacrop.com.au</a>
+            </div>
+            <div class="cs_footer_v2_touch_item">
+              <span class="cs_footer_v2_touch_icon"><i class="fa-brands fa-linkedin-in"></i></span>
+              <a href="https://www.linkedin.com/company/pharmacrop" target="_blank" rel="noopener">Follow us on LinkedIn</a>
+            </div>
+          </div>
+        </div>
+        <div class="cs_footer_v2_bottom">
+          <p class="cs_footer_v2_copyright">&copy; 2026 PharmaCrop. All rights reserved.</p>
+          <div class="cs_footer_v2_badges">
+            <div class="cs_footer_v2_badge">
+              <img src="/assets/img/General Images/Certifications/AUSTRALIAN-MADE.png" alt="Australian Made" class="cs_footer_v2_badge_img">
+              <span class="cs_footer_v2_badge_label">Australian Made</span>
+            </div>
+            <div class="cs_footer_v2_badge">
+              <img src="/assets/img/General Images/Certifications/GMP-CERTIFIED.png" alt="GMP Certified" class="cs_footer_v2_badge_img">
+              <span class="cs_footer_v2_badge_label">GMP Certified</span>
+            </div>
+            <div class="cs_footer_v2_badge">
+              <img src="/assets/img/General Images/Certifications/TGA-LICENSED.png" alt="TGA Licensed" class="cs_footer_v2_badge_img">
+              <span class="cs_footer_v2_badge_label">TGA Licensed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer Section -->
+`,
+      }}
+    />
+  );
+}
