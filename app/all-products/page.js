@@ -165,10 +165,11 @@ export default async function Page() {
             <span class="cs_prod_hero_eyebrow">HCP Portal</span>
             <h1>Product Portfolio</h1>
             <p>Explore PharmaCrop&rsquo;s product portfolio and access detailed professional product information, including product specifications and supporting resources for healthcare professionals.</p>
-            <a href="/contact" class="cs_prod_brochure_card">
+            <a href="https://cms.pharmacrop.com.au/wp-content/uploads/2026/10/SEPT-26-Pricelist-HCP.pdf" download class="cs_prod_brochure_card">
               <span class="cs_prod_brochure_thumb"><img src="/assets/img/dashboard/all%20products/product%20portfolio%20brochure.webp" alt="PharmaCrop Product Portfolio brochure"></span>
               <span class="cs_prod_brochure_body">
                 <h4>Download Full Product Portfolio</h4>
+                <span>PDF</span>
               </span>
               <span class="cs_prod_brochure_go"><i class="fa-solid fa-arrow-right"></i></span>
             </a>
