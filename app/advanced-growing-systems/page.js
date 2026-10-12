@@ -127,7 +127,7 @@ export default function Page() {
           </div>
           <div class="cs_feature_row wow fadeInUp">
             <div class="cs_feature_img">
-              <img src="/assets/img/Advanced%20Growing%20Systems/Data-Driven%20Cultivation.webp" alt="Staff conducting quality checks in the greenhouse">
+              <img src="/assets/img/Advanced%20Growing%20Systems/Data-Driven%20Cultivation-.webp" alt="Staff conducting quality checks in the greenhouse">
             </div>
             <div class="cs_feature_content">
               <span class="cs_feature_icon"><i class="fa-solid fa-chart-line"></i></span>
