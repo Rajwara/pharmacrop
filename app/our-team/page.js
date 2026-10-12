@@ -118,7 +118,7 @@ export default function Page() {
             <h3 class="cs_team_featured_name">Masuda Nabi</h3>
             <p class="cs_team_featured_title">Managing Director</p>
             <p class="cs_team_featured_credential">BSc, MPhil</p>
-            <div class="cs_team_featured_social"><a href="#" aria-label="Masuda Nabi on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+            <div class="cs_team_featured_social"><a href="https://www.linkedin.com/in/masuda-nabi-b1967498/" target="_blank" rel="noopener" aria-label="Masuda Nabi on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
             <div class="cs_team_featured_divider"></div>
             <span class="cs_team_featured_eyebrow">A Visionary Leader in Pharmaceutical Innovation, Biotechnology and Australian Medicinal Cannabis</span>
             <div class="cs_team_featured_desc">
@@ -127,7 +127,7 @@ export default function Page() {
               <p>Her professional journey began in scientific research, including work with the Institute for Molecular Bioscience and the Australian Institute for Bioengineering and Nanotechnology at the University of Queensland.</p>
             </div>
           </div>
-          <div class="cs_team_featured_photo"><img src="/assets/img/Our%20Team/Professional%20Woman%20Portrait%20Cutout.png" alt="Masuda Nabi, Managing Director"></div>
+          <div class="cs_team_featured_photo"><img src="/assets/img/Our%20Team/Monochrome%20Corporate%20Headshot%20Cutout.png" alt="Masuda Nabi, Managing Director"></div>
         </div>
         <div class="cs_team_grid">
           <div class="cs_team_card wow fadeInUp">
