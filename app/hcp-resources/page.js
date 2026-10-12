@@ -232,7 +232,7 @@ export default function Page() {
       .cs_res_img { height: 150px; overflow: hidden; position: relative; }
       .cs_res_grid_list .cs_res_img { width: 220px; height: auto; flex: none; }
       .cs_res_img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-      .cs_res_img_icon { position: absolute; left: 14px; bottom: -18px; width: 36px; height: 36px; border-radius: 50%; background: #024242; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 14px; border: 3px solid #fff; }
+      .cs_res_img_icon { position: absolute; left: 14px; bottom: 14px; width: 36px; height: 36px; border-radius: 50%; background: #024242; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 14px; border: 3px solid #fff; }
       .cs_res_body { padding: 26px 18px 18px; flex: 1; }
       .cs_res_body h3 { color: #024242; font-size: 15px; font-weight: 800; margin: 0 0 4px; line-height: 1.4; }
       .cs_res_category { color: #78dca6; font-weight: 700; font-size: 12px; margin: 0 0 8px; display: block; }
