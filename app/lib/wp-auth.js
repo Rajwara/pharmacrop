@@ -5,13 +5,17 @@ export const HCP_TOKEN_COOKIE = "cs_hcp_token";
 export const HCP_NAME_COOKIE = "cs_hcp_name";
 export const HCP_EMAIL_COOKIE = "cs_hcp_email";
 
+// No maxAge here on purpose — "Remember me" decides per-login whether the
+// cookie persists (HCP_REMEMBER_ME_MAX_AGE) or is a browser-session cookie
+// that disappears when the browser closes.
 export const HCP_SESSION_COOKIE_OPTS = {
   httpOnly: true,
   secure: process.env.NODE_ENV === "production",
   sameSite: "lax",
   path: "/",
-  maxAge: 60 * 60 * 24 * 7,
 };
+
+export const HCP_REMEMBER_ME_MAX_AGE = 60 * 60 * 24 * 30;
 
 // Name/email come back in the WordPress JWT token response itself at login
 // time (see /api/auth/login), so this just reads the cookies set then — no
