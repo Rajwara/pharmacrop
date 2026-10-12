@@ -267,7 +267,7 @@ export default function Page() {
       <div class="container">
         <div class="cs_pmodel_row">
           <div class="cs_pmodel_img wow fadeInLeft">
-            <img src="/assets/img/Partnerships/WHITE LABEL-YOUR BRAND. OUR CULTIVATION & PACKAGING..webp" alt="White Label branded partnership">
+            <img src="/assets/img/Partnerships/White label.webp" alt="White Label branded partnership">
           </div>
           <div class="cs_pmodel_content wow fadeInRight">
             <span class="cs_pmodel_label">03 / WHITE LABEL</span>
