@@ -245,7 +245,7 @@ export default function Page() {
       <div class="container">
         <div class="cs_pmodel_row cs_pmodel_row_rev">
           <div class="cs_pmodel_img wow fadeInRight">
-            <img src="/assets/img/Partnerships/GREEN LABEL-ESTABLISHED MEDICINES. YOUR EXCLUSIVE BRAND.webp" alt="Green Label branded partnership">
+            <img src="/assets/img/Partnerships/GREEN LABEL-ESTABLISHED MEDICINES. YOUR EXCLUSIVE BRAND-.webp" alt="Green Label branded partnership">
           </div>
           <div class="cs_pmodel_content wow fadeInLeft">
             <span class="cs_pmodel_label">02 / GREEN LABEL</span>
