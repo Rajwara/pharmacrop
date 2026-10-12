@@ -187,7 +187,7 @@ export default function Page() {
               </div>
             </a>
             <a href="/environmental-precision" class="cs_sticky_card">
-              <img src="/assets/img/Home/Precision%20Cultivation/Environmental%20Precision.webp" alt="Environmental Precision">
+              <img src="/assets/img/Home/Precision%20Cultivation/Environmental%20Precision-.webp" alt="Environmental Precision">
               <span class="cs_sticky_card_icon"><i class="fa-solid fa-temperature-half"></i></span>
               <div class="cs_sticky_card_body">
                 <h3 class="cs_sticky_card_title">Environmental Precision</h3>
