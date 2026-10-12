@@ -1,5 +1,4 @@
 import Script from "next/script";
-import { WP_API_URL } from "../all-products/wp-products";
 
 export const metadata = {
   title: "HCP Login & Register - PharmaCrop",
@@ -85,8 +84,10 @@ export default function Page() {
       .cs_auth_forgot { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: -4px 0 24px; flex-wrap: wrap; }
       .cs_auth_remember { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #024242; cursor: pointer; margin: 0; }
       .cs_auth_remember input { accent-color: #024242; width: 15px; height: 15px; margin: 0; }
-      .cs_auth_forgot a { color: #024242; font-size: 13px; font-weight: 600; text-decoration: underline; }
-      .cs_auth_forgot a:hover { color: #78dca6; }
+      .cs_auth_forgot a, .cs_auth_forgot_link { color: #024242; font-size: 13px; font-weight: 600; text-decoration: underline; }
+      .cs_auth_forgot a:hover, .cs_auth_forgot_link:hover { color: #78dca6; }
+      .cs_auth_forgot_link { background: none; border: none; padding: 0; cursor: pointer; font-family: inherit; }
+      .cs_auth_tabs.cs_auth_tabs_hidden { display: none; }
       .cs_auth_btn_primary { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; background: #024242; color: #fff; font-weight: 700; font-size: 14px; padding: 16px 20px; border-radius: 10px; text-decoration: none; box-sizing: border-box; transition: background-color 0.3s ease, transform 0.2s ease; }
       .cs_auth_btn_primary:hover { background: #78dca6; color: #024242; transform: translateY(-2px); }
       .cs_auth_divider { display: flex; align-items: center; gap: 14px; margin: 22px 0; }
@@ -166,7 +167,7 @@ export default function Page() {
       <div class="cs_auth_right">
         <div class="cs_auth_card" data-auth-card>
           <div class="cs_auth_banner" data-auth-banner hidden></div>
-          <div class="cs_auth_tabs">
+          <div class="cs_auth_tabs" data-auth-tabs>
             <button type="button" class="cs_auth_tab active" data-auth-tab="login">Login</button>
             <button type="button" class="cs_auth_tab" data-auth-tab="register">Register</button>
           </div>
@@ -192,7 +193,7 @@ export default function Page() {
                   <input type="checkbox" name="rememberMe">
                   <span>Remember me</span>
                 </label>
-                <a href="${WP_API_URL}/wp-login.php?action=lostpassword" target="_blank" rel="noopener">Forgot password?</a>
+                <button type="button" class="cs_auth_forgot_link" data-auth-switch="forgot">Forgot password?</button>
               </div>
               <button type="submit" class="cs_auth_btn_primary" data-login-submit-btn>
                 <span data-login-submit-label>Log In</span>
@@ -348,6 +349,30 @@ export default function Page() {
               <a href="/" class="cs_auth_btn_primary">Return To Homepage</a>
             </div>
           </div>
+          <div class="cs_auth_panel" data-auth-panel="forgot">
+            <div class="cs_auth_register_intro">
+              <span class="cs_auth_register_badge">PharmaCrop Portal</span>
+              <h2>Reset Your Password</h2>
+              <p>Enter the email address on your account and we&rsquo;ll send you a link to choose a new password.</p>
+            </div>
+            <form id="cs_forgot_form" novalidate>
+              <span class="cs_auth_error" data-forgot-submit-error style="display:none; margin-bottom: 16px;">Something went wrong. Please try again.</span>
+              <div class="cs_auth_field">
+                <span class="cs_auth_field_icon"><i class="fa-solid fa-envelope"></i></span>
+                <input type="email" name="email" placeholder="Email address" required>
+              </div>
+              <button type="submit" class="cs_auth_btn_primary" data-forgot-submit-btn>
+                <span data-forgot-submit-label>Send Reset Link</span>
+                <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path></svg>
+              </button>
+              <div class="cs_auth_switch">Remembered it? <button type="button" data-auth-switch="login">Back to sign in</button></div>
+            </form>
+            <div class="cs_auth_confirm" data-forgot-confirm hidden>
+              <h2>Check Your Email</h2>
+              <p>If an account exists for <strong data-forgot-confirm-email>that email</strong>, we&rsquo;ve sent a link to reset your password. It may take a few minutes to arrive.</p>
+              <button type="button" class="cs_auth_btn_primary" data-auth-switch="login">Back To Sign In</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -362,6 +387,7 @@ export default function Page() {
           var panels = document.querySelectorAll('.cs_auth_panel');
           var switches = document.querySelectorAll('[data-auth-switch]');
           var card = document.querySelector('[data-auth-card]');
+          var tabsWrap = document.querySelector('[data-auth-tabs]');
 
           var banner = document.querySelector('[data-auth-banner]');
           if (banner) {
@@ -384,6 +410,7 @@ export default function Page() {
             tabs.forEach(function (t) { t.classList.toggle('active', t.getAttribute('data-auth-tab') === name); });
             panels.forEach(function (p) { p.classList.toggle('active', p.getAttribute('data-auth-panel') === name); });
             if (card) card.classList.toggle('cs_auth_card_wide', name === 'register');
+            if (tabsWrap) tabsWrap.classList.toggle('cs_auth_tabs_hidden', name === 'forgot');
           }
 
           tabs.forEach(function (tab) {
@@ -572,6 +599,48 @@ export default function Page() {
                   }
                   if (submitBtn) submitBtn.disabled = false;
                   if (submitLabel) submitLabel.textContent = 'Log In';
+                });
+            });
+          }
+
+          var forgotForm = document.getElementById('cs_forgot_form');
+          if (forgotForm) {
+            forgotForm.addEventListener('submit', function (e) {
+              e.preventDefault();
+              var submitBtn = forgotForm.querySelector('[data-forgot-submit-btn]');
+              var submitLabel = forgotForm.querySelector('[data-forgot-submit-label]');
+              var submitError = forgotForm.querySelector('[data-forgot-submit-error]');
+              if (submitError) submitError.style.display = 'none';
+              if (submitBtn) submitBtn.disabled = true;
+              if (submitLabel) submitLabel.textContent = 'Sending...';
+
+              var email = forgotForm.querySelector('[name="email"]').value.trim();
+
+              fetch('/api/auth/forgot-password', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email: email }),
+              })
+                .then(function (res) { return res.json().then(function (data) { return { res: res, data: data }; }); })
+                .then(function (result) {
+                  if (!result.res.ok || !result.data.ok) throw new Error(result.data.message || 'Something went wrong. Please try again.');
+
+                  var confirmEmailEl = document.querySelector('[data-forgot-confirm-email]');
+                  if (confirmEmailEl) confirmEmailEl.textContent = email;
+
+                  forgotForm.style.display = 'none';
+                  var intro = forgotForm.closest('[data-auth-panel="forgot"]').querySelector('.cs_auth_register_intro');
+                  if (intro) intro.style.display = 'none';
+                  var confirm = document.querySelector('[data-forgot-confirm]');
+                  if (confirm) confirm.hidden = false;
+                })
+                .catch(function (err) {
+                  if (submitError) {
+                    submitError.textContent = (err && err.message) || 'Something went wrong. Please try again.';
+                    submitError.style.display = 'block';
+                  }
+                  if (submitBtn) submitBtn.disabled = false;
+                  if (submitLabel) submitLabel.textContent = 'Send Reset Link';
                 });
             });
           }
