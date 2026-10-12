@@ -212,7 +212,7 @@ const FEATURED_PRODUCT_ORDER = [
   "Noosa Selects T21 Indica",
   "Noosa Selects T23 Sativa",
   "Noosa Selects T25 Sativa",
-  "Noosa Select T26 Indica",
+  "Noosa Selects T26",
   "Noosa Selects T28 Indica",
   "Ravine T19",
   "Valley T21",
