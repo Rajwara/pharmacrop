@@ -106,7 +106,7 @@ export default function Page() {
         <div class="cs_feature_stack">
           <div class="cs_feature_row wow fadeInUp">
             <div class="cs_feature_img">
-              <img src="/assets/img/Controlled%20Cultivation/Chad%20Esch.webp" alt="Chad Esch, Master Grower">
+              <img src="/assets/img/Controlled%20Cultivation/Chad-Esch.webp" alt="Chad Esch, Master Grower">
             </div>
             <div class="cs_feature_content">
               <span class="cs_feature_kicker">Cultivation expertise across three continents</span>
