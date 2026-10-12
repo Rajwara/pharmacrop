@@ -264,8 +264,8 @@ export default function Page() {
               <span class="cs_res_meta">PDF</span>
               <p class="cs_res_desc">Current pricing information for PharmaCrop&rsquo;s medicinal cannabis product range, available exclusively to healthcare professionals.</p>
               <div class="cs_res_actions">
-                <a href="https://pharmacropglobal.sharepoint.com/:b:/r/sites/PharmaCropWebsiteRevampPortal2.0/Content/Portal/Doctor/SEPT%2026%20Pricelist%20HCP.pdf?d=wfe75e90c95a94c378f34f6e3dff48609&csf=1&web=1&e=Nndb7O" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View Resource</a>
-                <a href="https://pharmacropglobal.sharepoint.com/:b:/r/sites/PharmaCropWebsiteRevampPortal2.0/Content/Portal/Doctor/SEPT%2026%20Pricelist%20HCP.pdf?d=wfe75e90c95a94c378f34f6e3dff48609&csf=1&web=1&e=Nndb7O" target="_blank" rel="noopener"><i class="fa-solid fa-download"></i> Download</a>
+                <a href="https://cms.pharmacrop.com.au/wp-content/uploads/2026/10/SEPT-26-Pricelist-HCP.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View Resource</a>
+                <a href="https://cms.pharmacrop.com.au/wp-content/uploads/2026/10/SEPT-26-Pricelist-HCP.pdf" download rel="noopener"><i class="fa-solid fa-download"></i> Download</a>
               </div>
             </div>
           </div>
@@ -277,8 +277,8 @@ export default function Page() {
               <span class="cs_res_meta">PDF</span>
               <p class="cs_res_desc">A patient-friendly booklet with dosing guidance and support information, designed to assist conversations with patients.</p>
               <div class="cs_res_actions">
-                <a href="https://pharmacropglobal.sharepoint.com/:b:/r/sites/PharmaCropWebsiteRevampPortal2.0/Content/Portal/Doctor/Files%20to%20link/PC%20Patient%20A5%20booklet.pdf?d=wa4a1e692b93c419db6c7185b5bbef23c&csf=1&web=1&e=uZbhLY" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View Resource</a>
-                <a href="https://pharmacropglobal.sharepoint.com/:b:/r/sites/PharmaCropWebsiteRevampPortal2.0/Content/Portal/Doctor/Files%20to%20link/PC%20Patient%20A5%20booklet.pdf?d=wa4a1e692b93c419db6c7185b5bbef23c&csf=1&web=1&e=uZbhLY" target="_blank" rel="noopener"><i class="fa-solid fa-download"></i> Download</a>
+                <a href="https://cms.pharmacrop.com.au/wp-content/uploads/2026/10/PC-Patient-A5-booklet.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View Resource</a>
+                <a href="https://cms.pharmacrop.com.au/wp-content/uploads/2026/10/PC-Patient-A5-booklet.pdf" download rel="noopener"><i class="fa-solid fa-download"></i> Download</a>
               </div>
             </div>
           </div>
@@ -290,8 +290,8 @@ export default function Page() {
               <span class="cs_res_meta">PDF</span>
               <p class="cs_res_desc">Learn what sets PharmaCrop apart &mdash; our approach to quality, cultivation and patient care.</p>
               <div class="cs_res_actions">
-                <a href="https://pharmacropglobal.sharepoint.com/:b:/r/sites/PharmaCropWebsiteRevampPortal2.0/Content/Portal/Doctor/Pharmacrop%20Difference%20Leave-Behind%20MAY%202026%20(4).pdf?d=w1e01e3bddfc04904a2cd92872fa6675c&csf=1&web=1&e=YrLAgK" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View Resource</a>
-                <a href="https://pharmacropglobal.sharepoint.com/:b:/r/sites/PharmaCropWebsiteRevampPortal2.0/Content/Portal/Doctor/Pharmacrop%20Difference%20Leave-Behind%20MAY%202026%20(4).pdf?d=w1e01e3bddfc04904a2cd92872fa6675c&csf=1&web=1&e=YrLAgK" target="_blank" rel="noopener"><i class="fa-solid fa-download"></i> Download</a>
+                <a href="https://cms.pharmacrop.com.au/wp-content/uploads/2026/10/Pharmacrop-Difference-Leave-Behind-MAY-2026.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View Resource</a>
+                <a href="https://cms.pharmacrop.com.au/wp-content/uploads/2026/10/Pharmacrop-Difference-Leave-Behind-MAY-2026.pdf" download rel="noopener"><i class="fa-solid fa-download"></i> Download</a>
               </div>
             </div>
           </div>
