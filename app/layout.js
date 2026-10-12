@@ -207,7 +207,7 @@ export default function RootLayout({ children }) {
               });
 
               var path = window.location.pathname;
-              var portalPaths = ['/dashboard', '/all-products', '/hcp-resources', '/profile'];
+              var portalPaths = ['/dashboard', '/all-products', '/hcp-resources', '/profile', '/login', '/reset-password'];
               var isPortalPage = portalPaths.some(function (p) { return path === p || path.indexOf(p + '/') === 0; });
 
               var quoteTab = document.getElementById('cs_quote_tab');
