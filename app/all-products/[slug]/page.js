@@ -479,7 +479,7 @@ export default async function Page({ params }) {
             <div class="cs_pd_doc_icon"><i class="fa-solid fa-file-circle-check"></i></div>
             <h4>Request the Latest Certificate of Analysis</h4>
             <p class="cs_pd_doc_desc">Get the most recent Certificate of Analysis (CoA) for this product from our team.</p>
-            <div class="cs_pd_doc_cta_wrap"><a href="https://pharmacropglobal.sharepoint.com/:b:/r/sites/PharmaCropWebsiteRevampPortal2.0/Content/Portal/Doctor/Files%20to%20link/PC%20Patient%20A5%20booklet.pdf?d=wa4a1e692b93c419db6c7185b5bbef23c&csf=1&web=1&e=uZbhLY" target="_blank" rel="noopener" class="cs_pd_doc_cta_btn"><i class="fa-solid fa-envelope"></i> Request Certificate of Analysis</a></div>
+            <div class="cs_pd_doc_cta_wrap"><a href="/contact" data-open-modal="cs_msl_modal" class="cs_pd_doc_cta_btn"><i class="fa-solid fa-envelope"></i> Request Certificate of Analysis</a></div>
           </div>
         </div>
       </div>
@@ -601,6 +601,15 @@ export default async function Page({ params }) {
                 fetch('/api/auth/logout', { method: 'POST' }).then(function () {
                   window.location.href = '/';
                 });
+              });
+            });
+
+            document.querySelectorAll('[data-open-modal]').forEach(function (trigger) {
+              trigger.addEventListener('click', function (e) {
+                var modal = document.getElementById(trigger.getAttribute('data-open-modal'));
+                if (!modal) return;
+                e.preventDefault();
+                modal.classList.add('active');
               });
             });
             fetch('/api/auth/me').then(function (res) { return res.json(); }).then(function (data) {
