@@ -90,11 +90,12 @@ export default function Page() {
       .cs_team_featured_eyebrow { display: block; color: #0f8a57; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; font-size: 13px; line-height: 1.6; margin: 0 0 16px; }
       .cs_team_featured_desc p { color: rgba(2,66,66,0.75); font-size: 15px; line-height: 1.75; margin: 0 0 14px; }
       .cs_team_featured_desc p:last-child { margin-bottom: 0; }
-      .cs_team_featured_photo { flex: 0 0 380px; border-radius: 18px; overflow: hidden; position: relative; z-index: 1; min-height: 420px; }
-      .cs_team_featured_photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .cs_team_featured_photo { flex: 0 0 380px; display: flex; align-items: flex-end; justify-content: center; position: relative; z-index: 1; }
+      .cs_team_featured_photo img { width: 100%; height: auto; max-height: 440px; object-fit: contain; display: block; }
       @media (max-width: 991px) {
         .cs_team_featured { flex-direction: column; padding: 36px; }
-        .cs_team_featured_photo { flex-basis: auto; min-height: 320px; order: -1; }
+        .cs_team_featured_photo { flex-basis: auto; order: -1; }
+        .cs_team_featured_photo img { max-height: 320px; }
       }
       @media (max-width: 767px) {
         .cs_team_section { padding: 80px 0; }
@@ -126,7 +127,7 @@ export default function Page() {
               <p>Her professional journey began in scientific research, including work with the Institute for Molecular Bioscience and the Australian Institute for Bioengineering and Nanotechnology at the University of Queensland.</p>
             </div>
           </div>
-          <div class="cs_team_featured_photo"><img src="/assets/img/Our%20Team/Masuda%20Nabi.webp" alt="Masuda Nabi, Managing Director"></div>
+          <div class="cs_team_featured_photo"><img src="/assets/img/Our%20Team/Professional%20Woman%20Portrait%20Cutout.png" alt="Masuda Nabi, Managing Director"></div>
         </div>
         <div class="cs_team_grid">
           <div class="cs_team_card wow fadeInUp">
