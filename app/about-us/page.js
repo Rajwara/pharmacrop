@@ -233,8 +233,8 @@ export default function Page() {
         <div class="cs_isotop cs_style_1 cs_isotop_col_3 cs_has_gutter_24 cs_lightgallery">
           <div class="cs_grid_sizer"></div>
           <div class="cs_isotop_item">
-            <a href="/assets/img/Our-Facilities/1.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-              <img src="/assets/img/Our-Facilities/1.webp" alt="Aerial view of PharmaCrop's Noosa Hinterland facility">
+            <a href="/assets/img/Our-Facilities/Facility%20Overview.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/Facility%20Overview.webp" alt="Aerial view of PharmaCrop's Noosa Hinterland facility">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
                   <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Facility Overview</span>
