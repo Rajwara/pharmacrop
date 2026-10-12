@@ -302,7 +302,7 @@ export default function Page() {
               <span class="cs_res_category">MSL Support</span>
               <p class="cs_res_desc">Request a call or visit from one of our Medical Science Liaisons to discuss our products in more detail.</p>
               <div class="cs_res_actions">
-                <a href="/contact"><i class="fa-solid fa-phone-volume"></i> Request a Call</a>
+                <a href="/contact" data-open-modal="cs_msl_modal"><i class="fa-solid fa-phone-volume"></i> Request a Call</a>
               </div>
             </div>
           </div>
@@ -433,6 +433,15 @@ export default function Page() {
               fetch('/api/auth/logout', { method: 'POST' }).then(function () {
                 window.location.href = '/';
               });
+            });
+          });
+
+          document.querySelectorAll('[data-open-modal]').forEach(function (trigger) {
+            trigger.addEventListener('click', function (e) {
+              var modal = document.getElementById(trigger.getAttribute('data-open-modal'));
+              if (!modal) return;
+              e.preventDefault();
+              modal.classList.add('active');
             });
           });
           fetch('/api/auth/me').then(function (res) { return res.json(); }).then(function (data) {
