@@ -120,11 +120,15 @@ async function mapProduct(raw) {
   const acf = raw.acf || {};
   const media = raw._embedded && raw._embedded["wp:featuredmedia"] && raw._embedded["wp:featuredmedia"][0];
   const featured = (media && media.source_url) || null;
-  const gallery = await Promise.all([
-    resolveMediaUrl(acf.gallery_image_1),
-    resolveMediaUrl(acf.gallery_image_2),
-    resolveMediaUrl(acf.gallery_image_3),
-    resolveMediaUrl(acf.gallery_image_4),
+  const [gallery, productInfoPdf, cmiPdf] = await Promise.all([
+    Promise.all([
+      resolveMediaUrl(acf.gallery_image_1),
+      resolveMediaUrl(acf.gallery_image_2),
+      resolveMediaUrl(acf.gallery_image_3),
+      resolveMediaUrl(acf.gallery_image_4),
+    ]),
+    resolveMediaUrl(acf.product_information_pdf),
+    resolveMediaUrl(acf.cmi_pdf),
   ]);
   // The card/grid photo is the WordPress Featured Image; the detail page's
   // gallery is the 4 ACF images only, kept separate so the Featured Image
@@ -166,6 +170,8 @@ async function mapProduct(raw) {
     excipients: acf.excipients || "",
     therapeuticProfile: acf.therapeutic_profile || "",
     description: acf.description || "",
+    productInfoPdf: productInfoPdf || "",
+    cmiPdf: cmiPdf || "",
     tgaCategory: acf.tga_category || "",
     schedule: acf.schedule || "",
     spectrum: acf.spectrum || "",
