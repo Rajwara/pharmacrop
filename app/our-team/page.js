@@ -78,11 +78,31 @@ export default function Page() {
       .cs_team_social a:hover { background: #024242; color: #fff; }
       .cs_team_statement { margin-top: 56px; text-align: center; }
       .cs_team_statement p { color: #024242; font-size: 20px; font-style: italic; font-weight: 600; line-height: 1.6; max-width: 760px; margin: 0 auto; }
+      .cs_team_featured { display: flex; align-items: stretch; gap: 48px; background: linear-gradient(135deg, #e3f3ea 0%, #cfeadb 100%); border-radius: 24px; padding: 48px; margin-bottom: 60px; position: relative; overflow: hidden; }
+      .cs_team_featured::before { content: ""; position: absolute; top: -60px; right: 220px; width: 260px; height: 260px; background: radial-gradient(circle, rgba(2,66,66,0.07) 0%, rgba(2,66,66,0) 70%); border-radius: 50%; pointer-events: none; }
+      .cs_team_featured_content { flex: 1 1 420px; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 1; }
+      .cs_team_featured_name { color: #024242; font-size: 34px; font-weight: 800; margin: 0 0 8px; }
+      .cs_team_featured_title { color: #024242; font-size: 17px; font-weight: 600; margin: 0 0 4px; }
+      .cs_team_featured_credential { color: rgba(2,66,66,0.65); font-size: 14px; font-weight: 500; margin: 0 0 18px; }
+      .cs_team_featured_social a { width: 32px; height: 32px; border-radius: 50%; background: rgba(2,66,66,0.12); color: #024242; display: inline-flex; align-items: center; justify-content: center; font-size: 14px; transition: 0.3s; }
+      .cs_team_featured_social a:hover { background: #024242; color: #fff; }
+      .cs_team_featured_divider { width: 42px; height: 2px; background: rgba(2,66,66,0.3); margin: 26px 0 20px; }
+      .cs_team_featured_eyebrow { display: block; color: #0f8a57; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; font-size: 13px; line-height: 1.6; margin: 0 0 16px; }
+      .cs_team_featured_desc p { color: rgba(2,66,66,0.75); font-size: 15px; line-height: 1.75; margin: 0 0 14px; }
+      .cs_team_featured_desc p:last-child { margin-bottom: 0; }
+      .cs_team_featured_photo { flex: 0 0 380px; border-radius: 18px; overflow: hidden; position: relative; z-index: 1; min-height: 420px; }
+      .cs_team_featured_photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      @media (max-width: 991px) {
+        .cs_team_featured { flex-direction: column; padding: 36px; }
+        .cs_team_featured_photo { flex-basis: auto; min-height: 320px; order: -1; }
+      }
       @media (max-width: 767px) {
         .cs_team_section { padding: 80px 0; }
         .cs_team_head h2 { font-size: 28px; }
         .cs_team_card { flex-basis: 100%; }
         .cs_team_statement p { font-size: 17px; }
+        .cs_team_featured { padding: 28px; gap: 28px; }
+        .cs_team_featured_name { font-size: 26px; }
       }
     </style>
     <section class="cs_team_section">
@@ -91,6 +111,22 @@ export default function Page() {
           <span class="cs_team_eyebrow">Our Team</span>
           <h2>EXPERIENCE ACROSS THE FULL JOURNEY</h2>
           <p>From science and cultivation through to pharmaceutical quality and commercialisation, our team brings experience across every stage of the journey.</p>
+        </div>
+        <div class="cs_team_featured wow fadeInUp">
+          <div class="cs_team_featured_content">
+            <h3 class="cs_team_featured_name">Masuda Nabi</h3>
+            <p class="cs_team_featured_title">Managing Director</p>
+            <p class="cs_team_featured_credential">BSc, MPhil</p>
+            <div class="cs_team_featured_social"><a href="#" aria-label="Masuda Nabi on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+            <div class="cs_team_featured_divider"></div>
+            <span class="cs_team_featured_eyebrow">A Visionary Leader in Pharmaceutical Innovation, Biotechnology and Australian Medicinal Cannabis</span>
+            <div class="cs_team_featured_desc">
+              <p>Masuda Nabi is an accomplished business leader with over 15 years of experience in pharmaceutical research and development, biotechnology, life sciences and healthcare innovation.</p>
+              <p>Holding a Bachelor of Science from the University of Queensland, Masuda has built an extensive career combining scientific expertise, commercial strategy and leadership within highly regulated pharmaceutical and healthcare industries.</p>
+              <p>Her professional journey began in scientific research, including work with the Institute for Molecular Bioscience and the Australian Institute for Bioengineering and Nanotechnology at the University of Queensland.</p>
+            </div>
+          </div>
+          <div class="cs_team_featured_photo"><img src="/assets/img/Our%20Team/Masuda%20Nabi.webp" alt="Masuda Nabi, Managing Director"></div>
         </div>
         <div class="cs_team_grid">
           <div class="cs_team_card wow fadeInUp">
