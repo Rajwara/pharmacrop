@@ -157,7 +157,7 @@ export default async function Page() {
     </style>
     <section class="cs_prod_hero">
       <div class="cs_prod_hero_bg">
-        <img src="/assets/img/dashboard/all%20products/product%20portfolio%20banner.webp" alt="PharmaCrop lab team reviewing product samples">
+        <img src="/assets/img/dashboard/all%20products/All%20Products%20Hero%20Image.webp" alt="PharmaCrop lab team reviewing product samples">
       </div>
       <div class="container">
         <div class="cs_prod_hero_inner">
