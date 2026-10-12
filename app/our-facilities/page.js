@@ -161,8 +161,8 @@ export default function Page() {
             </a>
           </div>
           <div class="cs_isotop_item">
-            <a href="/assets/img/Our-Facilities/our facility 10.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-              <img src="/assets/img/Our-Facilities/our facility 10.webp" alt="Cultivation aisle under specialised grow lighting">
+            <a href="/assets/img/Our-Facilities/our facility.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/our facility.webp" alt="Cultivation aisle under specialised grow lighting">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
                   <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Vegetative Growth</span>
@@ -172,8 +172,8 @@ export default function Page() {
             </a>
           </div>
           <div class="cs_isotop_item">
-            <a href="/assets/img/Our-Facilities/Our facility-2 (1).webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
-              <img src="/assets/img/Our-Facilities/Our facility-2 (1).webp" alt="Staff trimming a flowering cannabis plant">
+            <a href="/assets/img/Our-Facilities/Our facility-2.webp" class="cs_gallery cs_style_1 cs_center cs_gallery_item">
+              <img src="/assets/img/Our-Facilities/Our facility-2.webp" alt="Staff trimming a flowering cannabis plant">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
                   <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Hands-On Cultivation</span>
