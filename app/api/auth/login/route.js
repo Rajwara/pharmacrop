@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { WP_API_URL } from "../../../all-products/wp-products";
-import { HCP_TOKEN_COOKIE, HCP_NAME_COOKIE, HCP_EMAIL_COOKIE, HCP_SESSION_COOKIE_OPTS } from "../../../lib/wp-auth";
+import { HCP_TOKEN_COOKIE, HCP_NAME_COOKIE, HCP_EMAIL_COOKIE, HCP_SESSION_COOKIE_OPTS, HCP_REMEMBER_ME_MAX_AGE } from "../../../lib/wp-auth";
 
 function stripHtml(value) {
   return String(value || "").replace(/<[^>]+>/g, "");
@@ -16,6 +16,7 @@ export async function POST(request) {
 
   const email = (body && body.email ? String(body.email) : "").trim();
   const password = body && body.password ? String(body.password) : "";
+  const rememberMe = !!(body && body.rememberMe);
   if (!email || !password) {
     return NextResponse.json({ ok: false, message: "Enter your email and password." }, { status: 400 });
   }
@@ -47,9 +48,10 @@ export async function POST(request) {
 
   const response = NextResponse.json({ ok: true, name });
 
-  response.cookies.set(HCP_TOKEN_COOKIE, data.token, HCP_SESSION_COOKIE_OPTS);
-  response.cookies.set(HCP_NAME_COOKIE, name, HCP_SESSION_COOKIE_OPTS);
-  response.cookies.set(HCP_EMAIL_COOKIE, userEmail, HCP_SESSION_COOKIE_OPTS);
+  const cookieOpts = rememberMe ? { ...HCP_SESSION_COOKIE_OPTS, maxAge: HCP_REMEMBER_ME_MAX_AGE } : HCP_SESSION_COOKIE_OPTS;
+  response.cookies.set(HCP_TOKEN_COOKIE, data.token, cookieOpts);
+  response.cookies.set(HCP_NAME_COOKIE, name, cookieOpts);
+  response.cookies.set(HCP_EMAIL_COOKIE, userEmail, cookieOpts);
 
   return response;
 }
