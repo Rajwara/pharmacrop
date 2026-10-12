@@ -273,7 +273,7 @@ export default async function Page({ params }) {
             <h1>${product.name}</h1>
             <span class="cs_pd_category">${product.category}</span>
             ${product.price ? `<span class="cs_pd_rrp">RRP <strong>$${product.price}</strong>${product.packSize ? ` (${product.packSize} pack)` : ''}</span>` : ''}
-            <p class="cs_pd_desc">A premium ${product.category.toLowerCase()} product, cultivated and processed to PharmaCrop&rsquo;s high quality standards. ${product.name} is available to healthcare professionals with detailed product information and supporting documentation.</p>
+            <p class="cs_pd_desc">${product.description || `A premium ${product.category.toLowerCase()} product, cultivated and processed to PharmaCrop&rsquo;s high quality standards. ${product.name} is available to healthcare professionals with detailed product information and supporting documentation.`}</p>
             <div class="cs_pd_stats">${statsHtml}
             </div>
             <div class="cs_pd_ctas">
@@ -321,7 +321,7 @@ export default async function Page({ params }) {
         </div>
         <div class="cs_pd_overview_row wow fadeInUp">
           <div class="cs_pd_overview_text">
-            <p>${product.name} is a ${product.category.toLowerCase()} product, cultivated and processed to meet PharmaCrop&rsquo;s quality standards. This product is provided for healthcare professionals with detailed product information, including product specifications and supporting documentation.</p>
+            <p>${product.description || `${product.name} is a ${product.category.toLowerCase()} product, cultivated and processed to meet PharmaCrop&rsquo;s quality standards. This product is provided for healthcare professionals with detailed product information, including product specifications and supporting documentation.`}</p>
           </div>
           <div class="cs_pd_overview_img">
             <img src="${product.altImage}" alt="${product.name} overview">
