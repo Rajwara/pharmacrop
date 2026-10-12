@@ -167,7 +167,6 @@ export const footerHtml = `
               <li><a href="/blog">Blog</a></li>
               <li><a href="/faq">FAQ</a></li>
               <li><a href="/careers">Careers</a></li>
-              <li><a href="/our-facilities">Our Facility</a></li>
             </ul>
           </div>
           <div>
