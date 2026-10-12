@@ -257,6 +257,13 @@ export default function RootLayout({ children }) {
                 });
               }
 
+              document.addEventListener('contextmenu', function (e) {
+                if (e.target && e.target.tagName === 'IMG') e.preventDefault();
+              });
+              document.addEventListener('dragstart', function (e) {
+                if (e.target && e.target.tagName === 'IMG') e.preventDefault();
+              });
+
               try {
                 if (!isPortalPage && !sessionStorage.getItem('cs_newsletter_shown')) {
                   var onScroll = function () {
