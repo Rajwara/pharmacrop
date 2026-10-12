@@ -137,7 +137,7 @@ export default function Page() {
           <div class="cs_res_feat_body">
             <span class="cs_res_feat_badge"><i class="fa-solid fa-star"></i> Featured Resource</span>
             <h2>Professional Product Guide</h2>
-            <div class="cs_res_feat_meta"><i class="fa-solid fa-file-lines"></i> PDF &nbsp;|&nbsp; 1.8 MB &nbsp;|&nbsp; Updated Jan 15, 2024</div>
+            <div class="cs_res_feat_meta"><i class="fa-solid fa-file-lines"></i> PDF</div>
             <p class="cs_res_feat_desc">Comprehensive product information and professional guidance for PharmaCrop&rsquo;s medical cannabis products, including product overview, quality information and supporting resources.</p>
             <div class="cs_res_feat_ctas">
               <a href="https://cms.pharmacrop.com.au/wp-content/uploads/2026/10/September-26-PC-Product-Guide.pdf" target="_blank" rel="noopener" class="cs_res_btn_primary"><i class="fa-solid fa-download"></i> Download Product Guide <i class="fa-solid fa-arrow-right"></i></a>
