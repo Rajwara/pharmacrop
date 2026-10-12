@@ -165,6 +165,7 @@ async function mapProduct(raw) {
     dominantTerpenes: acf.dominant_terpenes || "",
     excipients: acf.excipients || "",
     therapeuticProfile: acf.therapeutic_profile || "",
+    description: acf.description || "",
     tgaCategory: acf.tga_category || "",
     schedule: acf.schedule || "",
     spectrum: acf.spectrum || "",
