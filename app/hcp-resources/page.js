@@ -339,7 +339,7 @@ export default function Page() {
             <h3>Looking for specific product information?</h3>
             <p>Explore our product portfolio or browse all documents and downloads.</p>
           </div>
-          <a href="/all-products" class="cs_res_link_card">
+          <a href="https://cms.pharmacrop.com.au/wp-content/uploads/2026/10/SEPT-26-Pricelist-HCP.pdf" target="_blank" rel="noopener" class="cs_res_link_card">
             <span class="cs_res_link_icon"><i class="fa-solid fa-cubes"></i></span>
             <span style="flex:1;">
               <h4>Product Portfolio</h4>
@@ -347,7 +347,7 @@ export default function Page() {
             </span>
             <span class="cs_res_link_go"><i class="fa-solid fa-arrow-right"></i></span>
           </a>
-          <a href="/faq" class="cs_res_link_card cs_res_link_alt">
+          <a href="https://cms.pharmacrop.com.au/wp-content/uploads/2026/10/PC-Patient-A5-booklet.pdf" target="_blank" rel="noopener" class="cs_res_link_card cs_res_link_alt">
             <span class="cs_res_link_icon"><i class="fa-solid fa-download"></i></span>
             <span style="flex:1;">
               <h4>Documents &amp; Downloads</h4>

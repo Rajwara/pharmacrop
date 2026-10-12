@@ -343,7 +343,7 @@ export default async function Page() {
             </div>
             <span class="cs_prod_quick_go"><i class="fa-solid fa-arrow-right"></i></span>
           </a>
-          <a href="/faq" class="cs_prod_quick_card wow fadeInUp" data-wow-delay="0.1s">
+          <a href="https://cms.pharmacrop.com.au/wp-content/uploads/2026/10/PC-Patient-A5-booklet.pdf" target="_blank" rel="noopener" class="cs_prod_quick_card wow fadeInUp" data-wow-delay="0.1s">
             <img src="/assets/img/dashboard/documents%20%26%20downloads%20bg.webp" alt="Documents and Downloads">
             <div class="cs_prod_quick_body">
               <div class="cs_prod_quick_icon"><i class="fa-solid fa-download"></i></div>
