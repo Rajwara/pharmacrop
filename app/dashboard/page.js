@@ -143,10 +143,6 @@ export default async function Page() {
       .cs_dash_search input { flex: 1; border: none; outline: none; font-size: 14px; font-family: inherit; background: transparent; min-width: 0; }
       .cs_dash_search button { width: 42px; height: 42px; border-radius: 50%; border: none; background: #024242; color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; flex: none; }
       .cs_dash_search button:hover { background: #78dca6; color: #024242; }
-      .cs_dash_popular { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
-      .cs_dash_popular span.cs_dash_popular_label { color: #666; font-size: 13px; font-weight: 600; }
-      .cs_dash_chip { display: inline-flex; align-items: center; background: #fff; border: 1px solid rgba(2,66,66,0.15); border-radius: 20px; padding: 7px 16px; color: #024242; font-size: 13px; font-weight: 600; text-decoration: none; }
-      .cs_dash_chip:hover { background: #024242; color: #fff; border-color: #024242; }
       .cs_dash_hero_card { position: absolute; right: 0; bottom: 28px; width: 340px; background: rgba(2,42,42,0.82); backdrop-filter: blur(6px); border-radius: 16px; padding: 24px; display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; }
       .cs_dash_hero_card_icon { width: 40px; height: 40px; border-radius: 50%; background: rgba(120,220,166,0.2); color: #78dca6; display: flex; align-items: center; justify-content: center; font-size: 16px; flex: none; margin-bottom: 10px; }
       .cs_dash_hero_card h4 { color: #fff; font-size: 17px; font-weight: 800; margin: 0 0 6px; }
@@ -179,13 +175,6 @@ export default async function Page() {
               <input type="text" placeholder="Search products, cultivars, resources and documents...">
               <button type="submit" aria-label="Search"><i class="fa-solid fa-arrow-right"></i></button>
             </form>
-            <div class="cs_dash_popular">
-              <span class="cs_dash_popular_label">Popular searches:</span>
-              <a href="/all-products?category=dried-flower" class="cs_dash_chip">Dried flower</a>
-              <a href="/faq" class="cs_dash_chip">Dosing guide</a>
-              <a href="/faq" class="cs_dash_chip">TGA information</a>
-              <a href="/all-products" class="cs_dash_chip">Product catalogue</a>
-            </div>
           </div>
           <div class="cs_dash_hero_card wow fadeInRight">
             <div>
