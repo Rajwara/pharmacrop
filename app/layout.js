@@ -61,6 +61,7 @@ export default function RootLayout({ children }) {
         </div>
 
         <style>{`
+          #cs_newsletter_modal .cs_form_field { border: 2px solid #78dca6; border-radius: 8px; }
           .cs_msl_form { display: flex; flex-direction: column; }
           .cs_msl_form > div { border-bottom: 1px solid rgba(2, 66, 66, 0.14); padding: 16px 0; }
           .cs_msl_form > div:first-of-type { padding-top: 0; }
