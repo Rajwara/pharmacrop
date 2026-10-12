@@ -213,7 +213,7 @@ export default function Page() {
     <!-- End Licensing Compliance Section -->
     <!-- Start About Gallery Preview Section -->
     <style>
-      .cs_about_gallery_section { padding: 110px 0 100px; background: #fff; }
+      .cs_about_gallery_section { padding: 110px 0 100px; background: #eee9e3; }
       .cs_about_gallery_head { max-width: 700px; margin: 0 auto 50px; text-align: center; }
       .cs_about_gallery_eyebrow { display: block; color: #78dca6; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; font-size: 14px; margin-bottom: 14px; }
       .cs_about_gallery_head h2 { color: #024242; font-size: 38px; line-height: 1.25; margin: 0 0 20px; }
