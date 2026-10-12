@@ -90,12 +90,12 @@ export default function Page() {
       .cs_team_featured_eyebrow { display: block; color: #0f8a57; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; font-size: 13px; line-height: 1.6; margin: 0 0 16px; }
       .cs_team_featured_desc p { color: rgba(2,66,66,0.75); font-size: 15px; line-height: 1.75; margin: 0 0 14px; }
       .cs_team_featured_desc p:last-child { margin-bottom: 0; }
-      .cs_team_featured_photo { flex: 0 0 380px; display: flex; align-items: flex-end; justify-content: center; position: relative; z-index: 1; }
-      .cs_team_featured_photo img { width: 100%; height: auto; max-height: 440px; object-fit: contain; display: block; }
+      .cs_team_featured_photo { flex: 0 0 440px; display: flex; align-items: flex-end; justify-content: center; position: relative; z-index: 1; margin: -48px -48px -48px 0; }
+      .cs_team_featured_photo img { width: 100%; height: auto; max-height: 620px; object-fit: contain; display: block; }
       @media (max-width: 991px) {
         .cs_team_featured { flex-direction: column; padding: 36px; }
-        .cs_team_featured_photo { flex-basis: auto; order: -1; }
-        .cs_team_featured_photo img { max-height: 320px; }
+        .cs_team_featured_photo { flex-basis: auto; order: -1; margin: -36px -36px 0; }
+        .cs_team_featured_photo img { max-height: 420px; }
       }
       @media (max-width: 767px) {
         .cs_team_section { padding: 80px 0; }
