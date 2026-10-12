@@ -45,7 +45,7 @@ export default function Page() {
     </header>
     <!-- End Header Section -->
     <!-- Start Page Heading Section -->
-    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/Environmental%20Precision/Environmental%20Precision%20hero%20banner.webp">
+    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="/assets/img/Environmental%20Precision/Environmental%20Precision-.webp">
       <div class="container">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/">Home</a></li>
