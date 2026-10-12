@@ -243,6 +243,8 @@ export default function Page() {
       .cs_res_actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
       .cs_res_actions a { color: #024242; font-weight: 700; font-size: 12.5px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
       .cs_res_actions a:hover { color: #78dca6; }
+      .cs_res_actions .cs_res_btn_solid { width: 100%; justify-content: center; text-align: center; background: #024242; color: #fff !important; font-size: 13px; padding: 13px 14px; border-radius: 10px; }
+      .cs_res_actions .cs_res_btn_solid:hover { background: #78dca6; color: #024242 !important; }
       .cs_res_empty { display: none; text-align: center; padding: 60px 20px; color: #999; }
       @media (max-width: 991px) {
         .cs_res_grid { grid-template-columns: repeat(2, 1fr); }
@@ -302,7 +304,7 @@ export default function Page() {
               <span class="cs_res_category">MSL Support</span>
               <p class="cs_res_desc">Request a call or visit from one of our Medical Science Liaisons to discuss our products in more detail.</p>
               <div class="cs_res_actions">
-                <a href="/contact" data-open-modal="cs_msl_modal"><i class="fa-solid fa-phone-volume"></i> Request a Call</a>
+                <a href="/contact" data-open-modal="cs_msl_modal" class="cs_res_btn_solid"><i class="fa-solid fa-phone-volume"></i> Request a Call</a>
               </div>
             </div>
           </div>
