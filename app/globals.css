@@ -2,3 +2,24 @@
    own stylesheets loaded in app/layout.js (bootstrap, fontawesome, slick,
    animate, lightgallery, style.css). Next.js's default reset was removed
    here so it doesn't fight with the template's own CSS resets. */
+
+/* Casual copy/download deterrents (paired with the right-click/drag
+   blocking on images in app/layout.js's script). These only stop casual
+   right-click/drag/select — they can't stop screenshots or determined
+   copying, and are not a real content-protection measure. */
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-touch-callout: none;
+}
+body {
+  -webkit-user-select: none;
+  user-select: none;
+}
+input,
+textarea,
+select,
+[contenteditable="true"] {
+  -webkit-user-select: text;
+  user-select: text;
+}
