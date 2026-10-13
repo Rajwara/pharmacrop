@@ -48,8 +48,7 @@ export default async function Page() {
   function strainPillHtml(p) {
     if (!p.strainType) return "";
     const cls = `cs_prod_strain_pill cs_prod_strain_${p.strainType.toLowerCase()}`;
-    const text = p.strainType === "Hybrid" && p.speciesRatio ? `${p.strainType} &ndash; ${p.speciesRatio}` : p.strainType;
-    return `<span class="${cls}">${text}</span>`;
+    return `<span class="${cls}">${p.strainType}</span>`;
   }
 
   const cardsHtml = products
