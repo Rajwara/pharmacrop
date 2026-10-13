@@ -206,9 +206,14 @@ export default async function Page() {
       .cs_prod_filters_row { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
       .cs_prod_select_wrap { position: relative; display: flex; align-items: center; gap: 9px; padding: 10px 24px 10px 16px; border: 1px solid #78dca6; border-radius: 30px; }
       .cs_prod_select_wrap i { color: #024242; font-size: 14px; flex: none; }
-      .cs_prod_select_wrap select { appearance: none; -webkit-appearance: none; border: none; background: none; outline: none; font-size: 14px; font-weight: 600; color: #024242; font-family: inherit; cursor: pointer; padding-right: 16px; }
-      .cs_prod_select_wrap select option { padding: 10px 14px; }
+      .cs_dropdown_native_select { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+      .cs_dropdown_trigger { appearance: none; -webkit-appearance: none; border: none; background: none; outline: none; font-size: 14px; font-weight: 600; color: #024242; font-family: inherit; cursor: pointer; padding: 0; padding-right: 16px; text-align: left; }
       .cs_prod_select_chevron { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #99a39f; font-size: 10px; pointer-events: none; }
+      .cs_dropdown_panel { position: absolute; top: calc(100% + 10px); left: 0; min-width: 190px; background: #fff; border: 1px solid #78dca6; border-radius: 14px; padding: 5px; box-shadow: 0 15px 40px rgba(2,66,66,0.15); z-index: 60; display: none; max-height: 280px; overflow-y: auto; }
+      .cs_dropdown_panel.active { display: block; }
+      .cs_dropdown_option { padding: 10px 14px; border-radius: 8px; font-size: 14px; color: #024242; cursor: pointer; white-space: nowrap; }
+      .cs_dropdown_option:hover { background: rgba(120,220,166,0.18); }
+      .cs_dropdown_option.active { background: #024242; color: #fff; }
       .cs_prod_clear { display: flex; align-items: center; gap: 7px; color: #024242; font-weight: 700; font-size: 13px; background: none; border: none; cursor: pointer; font-family: inherit; white-space: nowrap; padding: 11px 16px; }
       @media (max-width: 991px) {
         .cs_prod_bar { border-radius: 20px; }
@@ -218,7 +223,8 @@ export default async function Page() {
       @media (max-width: 575px) {
         .cs_prod_filters_row { flex-direction: column; align-items: stretch; width: 100%; }
         .cs_prod_select_wrap { width: 100%; padding: 12px 16px; }
-        .cs_prod_select_wrap select { flex: 1; width: 100%; }
+        .cs_dropdown_trigger { flex: 1; width: 100%; }
+        .cs_dropdown_panel { left: 0; right: 0; width: auto; }
         .cs_prod_clear { width: 100%; justify-content: center; padding: 4px 16px; }
       }
       .cs_prod_meta_row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap; gap: 12px; }
@@ -242,42 +248,50 @@ export default async function Page() {
             <input type="text" placeholder="Search products, cultivars, or portfolio items..." data-prod-search>
           </div>
           <div class="cs_prod_filters_row">
-            <div class="cs_prod_select_wrap">
+            <div class="cs_prod_select_wrap" data-dropdown>
               <i class="fa-solid fa-table-cells" aria-hidden="true"></i>
-              <select data-prod-category-select aria-label="Category">
+              <button type="button" class="cs_dropdown_trigger" data-dropdown-trigger aria-haspopup="listbox" aria-expanded="false"><span data-dropdown-label>All categories</span></button>
+              <i class="fa-solid fa-chevron-down cs_prod_select_chevron" aria-hidden="true"></i>
+              <select data-prod-category-select class="cs_dropdown_native_select" tabindex="-1" aria-hidden="true">
                 <option value="all">All categories</option>
                 <option value="dried-flower">Dried Flower</option>
                 <option value="oral-liquid">Oral Liquid</option>
                 <option value="pastilles">Pastilles</option>
                 <option value="inhaled-liquid">Inhaled Liquid</option>
               </select>
-              <i class="fa-solid fa-chevron-down cs_prod_select_chevron" aria-hidden="true"></i>
+              <div class="cs_dropdown_panel" data-dropdown-panel role="listbox"></div>
             </div>
-            <div class="cs_prod_select_wrap">
+            <div class="cs_prod_select_wrap" data-dropdown>
               <i class="fa-solid fa-leaf" aria-hidden="true"></i>
-              <select data-prod-strength aria-label="THC / CBD">
+              <button type="button" class="cs_dropdown_trigger" data-dropdown-trigger aria-haspopup="listbox" aria-expanded="false"><span data-dropdown-label>All strengths</span></button>
+              <i class="fa-solid fa-chevron-down cs_prod_select_chevron" aria-hidden="true"></i>
+              <select data-prod-strength class="cs_dropdown_native_select" tabindex="-1" aria-hidden="true">
                 <option value="all">All strengths</option>
                 <option value="thc">THC dominant</option>
                 <option value="cbd">CBD dominant</option>
                 <option value="balanced">Balanced</option>
               </select>
-              <i class="fa-solid fa-chevron-down cs_prod_select_chevron" aria-hidden="true"></i>
+              <div class="cs_dropdown_panel" data-dropdown-panel role="listbox"></div>
             </div>
-            <div class="cs_prod_select_wrap">
+            <div class="cs_prod_select_wrap" data-dropdown>
               <i class="fa-solid fa-prescription-bottle" aria-hidden="true"></i>
-              <select data-prod-packsize aria-label="Pack size">
+              <button type="button" class="cs_dropdown_trigger" data-dropdown-trigger aria-haspopup="listbox" aria-expanded="false"><span data-dropdown-label>All pack sizes</span></button>
+              <i class="fa-solid fa-chevron-down cs_prod_select_chevron" aria-hidden="true"></i>
+              <select data-prod-packsize class="cs_dropdown_native_select" tabindex="-1" aria-hidden="true">
                 <option value="all">All pack sizes</option>
                 ${packSizeOptionsHtml}
               </select>
-              <i class="fa-solid fa-chevron-down cs_prod_select_chevron" aria-hidden="true"></i>
+              <div class="cs_dropdown_panel" data-dropdown-panel role="listbox"></div>
             </div>
-            <div class="cs_prod_select_wrap">
+            <div class="cs_prod_select_wrap" data-dropdown>
               <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
-              <select data-prod-therapeutic aria-label="Therapeutic Profile">
+              <button type="button" class="cs_dropdown_trigger" data-dropdown-trigger aria-haspopup="listbox" aria-expanded="false"><span data-dropdown-label>All profiles</span></button>
+              <i class="fa-solid fa-chevron-down cs_prod_select_chevron" aria-hidden="true"></i>
+              <select data-prod-therapeutic class="cs_dropdown_native_select" tabindex="-1" aria-hidden="true">
                 <option value="all">All profiles</option>
                 ${therapeuticOptionsHtml}
               </select>
-              <i class="fa-solid fa-chevron-down cs_prod_select_chevron" aria-hidden="true"></i>
+              <div class="cs_dropdown_panel" data-dropdown-panel role="listbox"></div>
             </div>
             <button type="button" class="cs_prod_clear" data-prod-clear><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i> Clear filters</button>
           </div>
@@ -507,6 +521,71 @@ export default async function Page() {
             });
           }
 
+          var dropdownClosers = [];
+          function closeAllDropdowns() {
+            dropdownClosers.forEach(function (close) { close(); });
+          }
+
+          function syncDropdownLabels() {
+            document.querySelectorAll('[data-dropdown]').forEach(function (wrap) {
+              var select = wrap.querySelector('select');
+              var label = wrap.querySelector('[data-dropdown-label]');
+              if (!select || !label) return;
+              var opt = select.options[select.selectedIndex];
+              if (opt) label.textContent = opt.textContent;
+            });
+          }
+
+          document.querySelectorAll('[data-dropdown]').forEach(function (wrap) {
+            var select = wrap.querySelector('select');
+            var trigger = wrap.querySelector('[data-dropdown-trigger]');
+            var label = wrap.querySelector('[data-dropdown-label]');
+            var panel = wrap.querySelector('[data-dropdown-panel]');
+            if (!select || !trigger || !label || !panel) return;
+
+            function renderPanel() {
+              panel.innerHTML = '';
+              Array.prototype.forEach.call(select.options, function (opt) {
+                var row = document.createElement('div');
+                row.className = 'cs_dropdown_option' + (opt.value === select.value ? ' active' : '');
+                row.setAttribute('role', 'option');
+                row.textContent = opt.textContent;
+                row.addEventListener('click', function (e) {
+                  e.stopPropagation();
+                  select.value = opt.value;
+                  label.textContent = opt.textContent;
+                  closeDropdown();
+                  select.dispatchEvent(new Event('change', { bubbles: true }));
+                });
+                panel.appendChild(row);
+              });
+            }
+
+            function openDropdown() {
+              closeAllDropdowns();
+              renderPanel();
+              panel.classList.add('active');
+              trigger.setAttribute('aria-expanded', 'true');
+            }
+            function closeDropdown() {
+              panel.classList.remove('active');
+              trigger.setAttribute('aria-expanded', 'false');
+            }
+
+            trigger.addEventListener('click', function (e) {
+              e.stopPropagation();
+              if (panel.classList.contains('active')) closeDropdown();
+              else openDropdown();
+            });
+
+            dropdownClosers.push(closeDropdown);
+          });
+
+          document.addEventListener('click', closeAllDropdowns);
+          document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeAllDropdowns();
+          });
+
           function applyFilters() {
             var category = categorySelect.value;
             var strength = strengthSelect.value;
@@ -547,6 +626,7 @@ export default async function Page() {
               var category = pill.getAttribute('data-prod-pill');
               categorySelect.value = category;
               setPillActive(category);
+              syncDropdownLabels();
               applyFilters();
             });
           });
@@ -575,6 +655,7 @@ export default async function Page() {
             therapeuticSelect.value = 'all';
             searchInput.value = '';
             setPillActive('all');
+            syncDropdownLabels();
             applyFilters();
           });
 
@@ -598,6 +679,7 @@ export default async function Page() {
           if (initialCategory) {
             categorySelect.value = initialCategory;
             setPillActive(initialCategory);
+            syncDropdownLabels();
             applyFilters();
           }
         })();
