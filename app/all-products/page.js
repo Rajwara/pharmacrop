@@ -200,13 +200,14 @@ export default async function Page() {
       .cs_prod_pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
       .cs_prod_pill { display: inline-flex; align-items: center; background: #fff; border: 1px solid rgba(2,66,66,0.15); border-radius: 30px; padding: 9px 20px; color: #024242; font-size: 14px; font-weight: 600; cursor: pointer; font-family: inherit; }
       .cs_prod_pill.active { background: #024242; color: #fff; border-color: #024242; }
-      .cs_prod_bar { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; background: #fff; border: 1px solid rgba(2,66,66,0.1); border-radius: 14px; padding: 16px 20px; margin-bottom: 30px; }
-      .cs_prod_search { flex: 1 1 260px; display: flex; align-items: center; gap: 10px; border: 1px solid #e2e5e2; border-radius: 30px; padding: 10px 18px; }
-      .cs_prod_search i { color: #999; }
-      .cs_prod_search input { border: none; outline: none; font-size: 14px; font-family: inherit; flex: 1; min-width: 0; }
-      .cs_prod_select_wrap { display: flex; flex-direction: column; gap: 4px; }
+      .cs_prod_bar { display: flex; flex-direction: column; gap: 16px; background: #fff; border: 1px solid rgba(2,66,66,0.1); border-radius: 14px; padding: 20px; margin-bottom: 30px; }
+      .cs_prod_search { width: 100%; display: flex; align-items: center; gap: 12px; border: 1px solid #e2e5e2; border-radius: 30px; padding: 14px 22px; }
+      .cs_prod_search i { color: #999; font-size: 15px; }
+      .cs_prod_search input { border: none; outline: none; font-size: 15px; font-family: inherit; flex: 1; min-width: 0; }
+      .cs_prod_filters_row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+      .cs_prod_select_wrap { flex: 1 1 160px; min-width: 140px; display: flex; flex-direction: column; gap: 4px; }
       .cs_prod_select_wrap label { font-size: 11px; color: #999; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px; }
-      .cs_prod_select_wrap select { border: 1px solid #e2e5e2; border-radius: 8px; padding: 9px 30px 9px 12px; font-size: 14px; color: #024242; font-family: inherit; background: #fff; }
+      .cs_prod_select_wrap select { width: 100%; border: 1px solid #e2e5e2; border-radius: 8px; padding: 9px 30px 9px 12px; font-size: 14px; color: #024242; font-family: inherit; background: #fff; }
       .cs_prod_clear { color: #024242; font-weight: 700; font-size: 13px; text-decoration: underline; background: none; border: none; cursor: pointer; font-family: inherit; white-space: nowrap; }
       .cs_prod_meta_row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap; gap: 12px; }
       .cs_prod_count { color: #999; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
@@ -216,7 +217,8 @@ export default async function Page() {
       .cs_prod_view_toggle button { width: 36px; height: 36px; border: none; background: #fff; color: #999; cursor: pointer; display: flex; align-items: center; justify-content: center; }
       .cs_prod_view_toggle button.active { background: #024242; color: #fff; }
       @media (max-width: 575px) {
-        .cs_prod_bar { flex-direction: column; align-items: stretch; }
+        .cs_prod_filters_row { flex-direction: column; align-items: stretch; }
+        .cs_prod_filters_row .cs_prod_select_wrap { flex: none; min-width: 0; }
       }
     </style>
         <div class="cs_prod_pills">
@@ -231,40 +233,42 @@ export default async function Page() {
             <i class="fa-solid fa-magnifying-glass"></i>
             <input type="text" placeholder="Search products, cultivars, or portfolio items..." data-prod-search>
           </div>
-          <div class="cs_prod_select_wrap">
-            <label>Category</label>
-            <select data-prod-category-select>
-              <option value="all">All categories</option>
-              <option value="dried-flower">Dried Flower</option>
-              <option value="oral-liquid">Oral Liquid</option>
-              <option value="pastilles">Pastilles</option>
-              <option value="inhaled-liquid">Inhaled Liquid</option>
-            </select>
+          <div class="cs_prod_filters_row">
+            <div class="cs_prod_select_wrap">
+              <label>Category</label>
+              <select data-prod-category-select>
+                <option value="all">All categories</option>
+                <option value="dried-flower">Dried Flower</option>
+                <option value="oral-liquid">Oral Liquid</option>
+                <option value="pastilles">Pastilles</option>
+                <option value="inhaled-liquid">Inhaled Liquid</option>
+              </select>
+            </div>
+            <div class="cs_prod_select_wrap">
+              <label>THC / CBD</label>
+              <select data-prod-strength>
+                <option value="all">All strengths</option>
+                <option value="thc">THC dominant</option>
+                <option value="cbd">CBD dominant</option>
+                <option value="balanced">Balanced</option>
+              </select>
+            </div>
+            <div class="cs_prod_select_wrap">
+              <label>Pack size</label>
+              <select data-prod-packsize>
+                <option value="all">All pack sizes</option>
+                ${packSizeOptionsHtml}
+              </select>
+            </div>
+            <div class="cs_prod_select_wrap">
+              <label>Therapeutic Profile</label>
+              <select data-prod-therapeutic>
+                <option value="all">All profiles</option>
+                ${therapeuticOptionsHtml}
+              </select>
+            </div>
+            <button type="button" class="cs_prod_clear" data-prod-clear>Clear filters</button>
           </div>
-          <div class="cs_prod_select_wrap">
-            <label>THC / CBD</label>
-            <select data-prod-strength>
-              <option value="all">All strengths</option>
-              <option value="thc">THC dominant</option>
-              <option value="cbd">CBD dominant</option>
-              <option value="balanced">Balanced</option>
-            </select>
-          </div>
-          <div class="cs_prod_select_wrap">
-            <label>Pack size</label>
-            <select data-prod-packsize>
-              <option value="all">All pack sizes</option>
-              ${packSizeOptionsHtml}
-            </select>
-          </div>
-          <div class="cs_prod_select_wrap">
-            <label>Therapeutic Profile</label>
-            <select data-prod-therapeutic>
-              <option value="all">All profiles</option>
-              ${therapeuticOptionsHtml}
-            </select>
-          </div>
-          <button type="button" class="cs_prod_clear" data-prod-clear>Clear filters</button>
         </div>
         <div class="cs_prod_meta_row">
           <span class="cs_prod_count" data-prod-count>${products.length} PRODUCTS</span>
