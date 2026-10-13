@@ -199,15 +199,29 @@ export default async function Page() {
       .cs_prod_pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
       .cs_prod_pill { display: inline-flex; align-items: center; background: #fff; border: 1px solid rgba(2,66,66,0.15); border-radius: 30px; padding: 9px 20px; color: #024242; font-size: 14px; font-weight: 600; cursor: pointer; font-family: inherit; }
       .cs_prod_pill.active { background: #024242; color: #fff; border-color: #024242; }
-      .cs_prod_bar { display: flex; flex-direction: column; gap: 16px; background: #fff; border: 1px solid rgba(2,66,66,0.1); border-radius: 14px; padding: 20px; margin-bottom: 30px; }
-      .cs_prod_search { width: 100%; display: flex; align-items: center; gap: 12px; border: 1px solid #e2e5e2; border-radius: 30px; padding: 14px 22px; }
-      .cs_prod_search i { color: #999; font-size: 15px; }
-      .cs_prod_search input { border: none; outline: none; font-size: 15px; font-family: inherit; flex: 1; min-width: 0; }
-      .cs_prod_filters_row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
-      .cs_prod_select_wrap { flex: 1 1 160px; min-width: 140px; display: flex; flex-direction: column; gap: 4px; }
-      .cs_prod_select_wrap label { font-size: 11px; color: #999; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px; }
-      .cs_prod_select_wrap select { width: 100%; border: 1px solid #e2e5e2; border-radius: 8px; padding: 9px 30px 9px 12px; font-size: 14px; color: #024242; font-family: inherit; background: #fff; }
-      .cs_prod_clear { color: #024242; font-weight: 700; font-size: 13px; text-decoration: underline; background: none; border: none; cursor: pointer; font-family: inherit; white-space: nowrap; }
+      .cs_prod_bar { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; background: #fff; border-radius: 50px; padding: 10px; box-shadow: 0 15px 40px rgba(2,66,66,0.1); margin-bottom: 30px; }
+      .cs_prod_search { flex: 1 1 220px; display: flex; align-items: center; gap: 10px; background: #f2f5f3; border-radius: 40px; padding: 13px 22px; min-width: 0; }
+      .cs_prod_search i { color: #024242; font-size: 14px; }
+      .cs_prod_search input { border: none; outline: none; background: none; font-size: 14px; font-family: inherit; flex: 1; min-width: 0; }
+      .cs_prod_filters_row { display: flex; align-items: center; flex-wrap: wrap; }
+      .cs_prod_select_wrap { position: relative; display: flex; align-items: center; gap: 9px; padding: 11px 26px 11px 16px; }
+      .cs_prod_select_wrap:not(:last-of-type)::after { content: ""; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 1px; height: 22px; background: #e5e8e6; }
+      .cs_prod_select_wrap i { color: #024242; font-size: 14px; flex: none; }
+      .cs_prod_select_wrap select { appearance: none; -webkit-appearance: none; border: none; background: none; outline: none; font-size: 14px; font-weight: 600; color: #024242; font-family: inherit; cursor: pointer; padding-right: 16px; }
+      .cs_prod_select_chevron { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: #99a39f; font-size: 10px; pointer-events: none; }
+      .cs_prod_clear { display: flex; align-items: center; gap: 7px; color: #024242; font-weight: 700; font-size: 13px; background: none; border: none; cursor: pointer; font-family: inherit; white-space: nowrap; padding: 11px 16px; }
+      @media (max-width: 991px) {
+        .cs_prod_bar { border-radius: 20px; }
+        .cs_prod_search { flex-basis: 100%; }
+        .cs_prod_filters_row { flex-basis: 100%; }
+        .cs_prod_select_wrap:not(:last-of-type)::after { display: none; }
+      }
+      @media (max-width: 575px) {
+        .cs_prod_filters_row { flex-direction: column; align-items: stretch; width: 100%; }
+        .cs_prod_select_wrap { width: 100%; padding: 12px 4px; border-bottom: 1px solid #eef1ef; }
+        .cs_prod_select_wrap select { flex: 1; width: 100%; }
+        .cs_prod_clear { width: 100%; justify-content: center; padding: 14px 4px 4px; }
+      }
       .cs_prod_meta_row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap; gap: 12px; }
       .cs_prod_count { color: #999; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
       .cs_prod_sort_view { display: flex; align-items: center; gap: 16px; }
@@ -215,10 +229,6 @@ export default async function Page() {
       .cs_prod_view_toggle { display: flex; border: 1px solid rgba(2,66,66,0.15); border-radius: 8px; overflow: hidden; }
       .cs_prod_view_toggle button { width: 36px; height: 36px; border: none; background: #fff; color: #999; cursor: pointer; display: flex; align-items: center; justify-content: center; }
       .cs_prod_view_toggle button.active { background: #024242; color: #fff; }
-      @media (max-width: 575px) {
-        .cs_prod_filters_row { flex-direction: column; align-items: stretch; }
-        .cs_prod_filters_row .cs_prod_select_wrap { flex: none; min-width: 0; }
-      }
     </style>
         <div class="cs_prod_pills">
           <button type="button" class="cs_prod_pill active" data-prod-pill="all">All Products (${counts.all})</button>
@@ -234,39 +244,43 @@ export default async function Page() {
           </div>
           <div class="cs_prod_filters_row">
             <div class="cs_prod_select_wrap">
-              <label>Category</label>
-              <select data-prod-category-select>
+              <i class="fa-solid fa-table-cells" aria-hidden="true"></i>
+              <select data-prod-category-select aria-label="Category">
                 <option value="all">All categories</option>
                 <option value="dried-flower">Dried Flower</option>
                 <option value="oral-liquid">Oral Liquid</option>
                 <option value="pastilles">Pastilles</option>
                 <option value="inhaled-liquid">Inhaled Liquid</option>
               </select>
+              <i class="fa-solid fa-chevron-down cs_prod_select_chevron" aria-hidden="true"></i>
             </div>
             <div class="cs_prod_select_wrap">
-              <label>THC / CBD</label>
-              <select data-prod-strength>
+              <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+              <select data-prod-strength aria-label="THC / CBD">
                 <option value="all">All strengths</option>
                 <option value="thc">THC dominant</option>
                 <option value="cbd">CBD dominant</option>
                 <option value="balanced">Balanced</option>
               </select>
+              <i class="fa-solid fa-chevron-down cs_prod_select_chevron" aria-hidden="true"></i>
             </div>
             <div class="cs_prod_select_wrap">
-              <label>Pack size</label>
-              <select data-prod-packsize>
+              <i class="fa-solid fa-prescription-bottle" aria-hidden="true"></i>
+              <select data-prod-packsize aria-label="Pack size">
                 <option value="all">All pack sizes</option>
                 ${packSizeOptionsHtml}
               </select>
+              <i class="fa-solid fa-chevron-down cs_prod_select_chevron" aria-hidden="true"></i>
             </div>
             <div class="cs_prod_select_wrap">
-              <label>Therapeutic Profile</label>
-              <select data-prod-therapeutic>
+              <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
+              <select data-prod-therapeutic aria-label="Therapeutic Profile">
                 <option value="all">All profiles</option>
                 ${therapeuticOptionsHtml}
               </select>
+              <i class="fa-solid fa-chevron-down cs_prod_select_chevron" aria-hidden="true"></i>
             </div>
-            <button type="button" class="cs_prod_clear" data-prod-clear>Clear filters</button>
+            <button type="button" class="cs_prod_clear" data-prod-clear><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i> Clear filters</button>
           </div>
         </div>
         <div class="cs_prod_meta_row">
