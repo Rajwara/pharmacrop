@@ -18,6 +18,24 @@ export default async function Page() {
   };
   const packSizes = Array.from(new Set(products.map((p) => p.packSize)));
 
+  const therapeuticTagsSet = new Set();
+  products.forEach((p) => {
+    String(p.therapeuticProfile || "")
+      .split(",")
+      .map((t) => t.trim())
+      .filter(Boolean)
+      .forEach((t) => therapeuticTagsSet.add(t));
+  });
+  const therapeuticTags = Array.from(therapeuticTagsSet).sort((a, b) => a.localeCompare(b));
+
+  function therapeuticListAttr(p) {
+    return String(p.therapeuticProfile || "")
+      .split(",")
+      .map((t) => t.trim().toLowerCase())
+      .filter(Boolean)
+      .join("|");
+  }
+
   function specLine(p) {
     const parts = [];
     if (p.thc) parts.push(`THC ${p.thc}`);
@@ -37,7 +55,7 @@ export default async function Page() {
   const cardsHtml = products
     .map(
       (p) => `
-          <a class="cs_prod_card" href="/all-products/${p.slug}" data-name="${p.name.toLowerCase()}" data-category="${p.categorySlug}" data-strength="${p.strength}" data-packsize="${p.packSize}">
+          <a class="cs_prod_card" href="/all-products/${p.slug}" data-name="${p.name.toLowerCase()}" data-category="${p.categorySlug}" data-strength="${p.strength}" data-packsize="${p.packSize}" data-therapeutic="|${therapeuticListAttr(p)}|">
             <div class="cs_prod_img"><span class="cs_prod_origin_badge">&#127807; ${p.categorySlug === "dried-flower" ? "Australian Grown" : "Australian Manufactured"}</span><img src="${p.image}" alt="${p.name}"></div>
             <div class="cs_prod_body">
               <h3>${p.name}</h3>
@@ -56,6 +74,7 @@ export default async function Page() {
     .join("");
 
   const packSizeOptionsHtml = packSizes.map((size) => `<option value="${size}">${size}</option>`).join("");
+  const therapeuticOptionsHtml = therapeuticTags.map((tag) => `<option value="${tag.toLowerCase()}">${tag}</option>`).join("");
 
   return (
     <>
@@ -236,6 +255,13 @@ export default async function Page() {
             <select data-prod-packsize>
               <option value="all">All pack sizes</option>
               ${packSizeOptionsHtml}
+            </select>
+          </div>
+          <div class="cs_prod_select_wrap">
+            <label>Therapeutic Profile</label>
+            <select data-prod-therapeutic>
+              <option value="all">All profiles</option>
+              ${therapeuticOptionsHtml}
             </select>
           </div>
           <button type="button" class="cs_prod_clear" data-prod-clear>Clear filters</button>
@@ -451,6 +477,7 @@ export default async function Page() {
           var categorySelect = document.querySelector('[data-prod-category-select]');
           var strengthSelect = document.querySelector('[data-prod-strength]');
           var packSelect = document.querySelector('[data-prod-packsize]');
+          var therapeuticSelect = document.querySelector('[data-prod-therapeutic]');
           var sortSelect = document.querySelector('[data-prod-sort]');
           var searchInput = document.querySelector('[data-prod-search]');
           var countEl = document.querySelector('[data-prod-count]');
@@ -468,6 +495,7 @@ export default async function Page() {
             var category = categorySelect.value;
             var strength = strengthSelect.value;
             var pack = packSelect.value;
+            var therapeutic = therapeuticSelect.value;
             var query = searchInput.value.trim().toLowerCase();
             var visibleCount = 0;
 
@@ -475,8 +503,9 @@ export default async function Page() {
               var matchesCategory = category === 'all' || card.getAttribute('data-category') === category;
               var matchesStrength = strength === 'all' || card.getAttribute('data-strength') === strength;
               var matchesPack = pack === 'all' || card.getAttribute('data-packsize') === pack;
+              var matchesTherapeutic = therapeutic === 'all' || (card.getAttribute('data-therapeutic') || '').indexOf('|' + therapeutic + '|') !== -1;
               var matchesSearch = !query || card.getAttribute('data-name').indexOf(query) !== -1 || card.getAttribute('data-category').indexOf(query) !== -1;
-              var visible = matchesCategory && matchesStrength && matchesPack && matchesSearch;
+              var visible = matchesCategory && matchesStrength && matchesPack && matchesTherapeutic && matchesSearch;
               card.style.display = visible ? '' : 'none';
               if (visible) visibleCount++;
             });
@@ -512,6 +541,7 @@ export default async function Page() {
           });
           strengthSelect.addEventListener('change', applyFilters);
           packSelect.addEventListener('change', applyFilters);
+          therapeuticSelect.addEventListener('change', applyFilters);
           searchInput.addEventListener('input', applyFilters);
 
           sortSelect.addEventListener('change', function () {
@@ -526,6 +556,7 @@ export default async function Page() {
             categorySelect.value = 'all';
             strengthSelect.value = 'all';
             packSelect.value = 'all';
+            therapeuticSelect.value = 'all';
             searchInput.value = '';
             setPillActive('all');
             applyFilters();
