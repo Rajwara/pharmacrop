@@ -146,7 +146,7 @@ export default async function Page() {
     <!-- End Dashboard Header -->
     <!-- Start Product Portfolio Hero -->
     <style>
-      .cs_prod_hero { position: relative; overflow: hidden; background: #f7faf8; }
+      .cs_prod_hero { position: relative; background: #f7faf8; }
       .cs_prod_hero_bg { position: absolute; inset: 0; z-index: 0; }
       .cs_prod_hero_bg img { width: 100%; height: 100%; object-fit: cover; display: block; }
       .cs_prod_hero_bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(247,250,248,0) 55%, #f7faf8 100%), linear-gradient(90deg, #f7faf8 0%, #f7faf8 34%, rgba(247,250,248,0.92) 44%, rgba(247,250,248,0.55) 56%, rgba(247,250,248,0.05) 68%); }
