@@ -230,7 +230,7 @@ export default function Page() {
               </div>
               <p class="cs_team_title">Sales Director</p>
               <span class="cs_team_role">Relationships to Results</span>
-              <p class="cs_team_credential">15+ years across pharmaceutical and healthcare sales.</p>
+              <p class="cs_team_credential">20+ years across pharmaceutical and healthcare sales.</p>
               <p class="cs_team_supporting">Builds trusted partnerships that deliver commercial results.</p>
             </div>
           </div>
