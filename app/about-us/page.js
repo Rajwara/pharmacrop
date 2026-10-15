@@ -176,8 +176,8 @@ export default function Page() {
         <div class="cs_licensing_grid">
           <div class="cs_licensing_card wow fadeInUp">
             <div class="cs_licensing_icon"><i class="fa-solid fa-dna"></i></div>
-            <h3>Seed Import</h3>
-            <p>ODC Import Permit supporting the regulated import of seed and genetic material.</p>
+            <h3>Genetics</h3>
+            <p>ODC permit supporting genetic selection and our proprietary phenohunting program.</p>
           </div>
           <div class="cs_licensing_card wow fadeInUp" data-wow-delay="0.1s">
             <div class="cs_licensing_icon"><i class="fa-solid fa-seedling"></i></div>
@@ -187,7 +187,7 @@ export default function Page() {
           <div class="cs_licensing_card wow fadeInUp" data-wow-delay="0.2s">
             <div class="cs_licensing_icon"><i class="fa-solid fa-industry"></i></div>
             <h3>Manufacturing</h3>
-            <p>TGA Licence to Manufacture Therapeutic Goods within PharmaCrop&rsquo;s Australian manufacturing platform.</p>
+            <p>TGA Licence to manufacture therapeutic goods within PharmaCrop&rsquo;s Australian manufacturing platform.</p>
           </div>
           <div class="cs_licensing_card wow fadeInUp">
             <div class="cs_licensing_icon"><i class="fa-solid fa-box"></i></div>
@@ -197,12 +197,12 @@ export default function Page() {
           <div class="cs_licensing_card wow fadeInUp" data-wow-delay="0.1s">
             <div class="cs_licensing_icon"><i class="fa-solid fa-warehouse"></i></div>
             <h3>Wholesale</h3>
-            <p>ODC Wholesale Licence supporting regulated commercial supply across the cannabinoid medicines value chain.</p>
+            <p>Wholesale Licence supporting Commercial Supply and Distribution.</p>
           </div>
           <div class="cs_licensing_card wow fadeInUp" data-wow-delay="0.2s">
             <div class="cs_licensing_icon"><i class="fa-solid fa-globe"></i></div>
             <h3>Export</h3>
-            <p>ODC Export Permit supporting international supply and regulated global market access.</p>
+            <p>ODC Export Licence delivering international supply and regulated global market access.</p>
           </div>
         </div>
         <div class="cs_licensing_statement wow fadeInUp">
