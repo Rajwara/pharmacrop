@@ -254,7 +254,7 @@ export default function Page() {
                 <h3 class="cs_team_name">Manaf Moidu</h3>
                 <div class="cs_team_social"><a href="https://www.linkedin.com/in/manaf-moidu-85a48934/" target="_blank" rel="noopener" aria-label="Manaf Moidu on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
               </div>
-              <p class="cs_team_title">Finance Administrator</p>
+              <p class="cs_team_title">Accounts Manager</p>
               <span class="cs_team_role">Accounts to Assurance</span>
               <p class="cs_team_credential">13+ years across finance and accounting, including financial oversight and bookkeeping.</p>
               <p class="cs_team_supporting">Brings stewardship and precision to every financial decision.</p>
