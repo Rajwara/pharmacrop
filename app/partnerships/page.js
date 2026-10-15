@@ -228,7 +228,7 @@ export default function Page() {
           <div class="cs_pmodel_content wow fadeInRight">
             <span class="cs_pmodel_label">01 / RETAIL</span>
             <h2>ESTABLISHED PHARMACROP MEDICINES</h2>
-            <p class="cs_pmodel_desc">Access ready-to-market finished medicines from PharmaCrop&rsquo;s established Australian portfolio, supported by Australian-grown production and GMP-certified manufacturing.</p>
+            <p class="cs_pmodel_desc">Access ready-to-market finished medicines from PharmaCrop&rsquo;s established Australian portfolio.</p>
             <ul class="cs_pmodel_points">
               <li class="cs_pmodel_point"><i class="fa-solid fa-circle-check"></i><span><strong>Established Portfolio</strong><span>Finished PharmaCrop medicines across multiple dosage forms.</span></span></li>
               <li class="cs_pmodel_point"><i class="fa-solid fa-circle-check"></i><span><strong>Australian Grown</strong><span>Supported by PharmaCrop&rsquo;s Australian cultivation capability.</span></span></li>
