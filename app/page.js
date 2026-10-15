@@ -173,7 +173,7 @@ export default function Page() {
               <span class="cs_sticky_card_icon"><i class="fa-solid fa-seedling"></i></span>
               <div class="cs_sticky_card_body">
                 <h3 class="cs_sticky_card_title">Controlled Cultivation</h3>
-                <p class="cs_sticky_card_text">Cultivated in the Noosa Hinterland using a hybrid greenhouse approach, led by internationally experienced Master Grower Chad Esch.</p>
+                <p class="cs_sticky_card_text">Cultivated in the Noosa Hinterland using a hybrid greenhouse approach, led by our internationally experienced Master Grower.</p>
                 <span class="cs_sticky_card_link">READ MORE <span>&rarr;</span></span>
               </div>
             </a>
