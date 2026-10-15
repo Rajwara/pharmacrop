@@ -247,6 +247,19 @@ export default function Page() {
               <p class="cs_team_supporting">Connects demand, supply and distribution to ensure reliable product delivery.</p>
             </div>
           </div>
+          <div class="cs_team_card wow fadeInUp">
+            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Manaf%20moidu.webp" alt="Manaf Moidu"></div>
+            <div class="cs_team_body">
+              <div class="cs_team_name_row">
+                <h3 class="cs_team_name">Manaf Moidu</h3>
+                <div class="cs_team_social"><a href="https://www.linkedin.com/in/manaf-moidu-85a48934/" target="_blank" rel="noopener" aria-label="Manaf Moidu on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div>
+              </div>
+              <p class="cs_team_title">Finance Administrator</p>
+              <span class="cs_team_role">Accounts to Assurance</span>
+              <p class="cs_team_credential">13+ years across finance and accounting, including financial oversight and bookkeeping.</p>
+              <p class="cs_team_supporting">Brings stewardship and precision to every financial decision.</p>
+            </div>
+          </div>
         </div>
         <div class="cs_team_statement wow fadeInUp">
           <p>&ldquo;Cannabinoid medicines sit at the intersection of science, cultivation and healthcare. So does our team.&rdquo;</p>
