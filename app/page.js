@@ -182,7 +182,7 @@ export default function Page() {
               <span class="cs_sticky_card_icon"><i class="fa-solid fa-droplet"></i></span>
               <div class="cs_sticky_card_body">
                 <h3 class="cs_sticky_card_title">Advanced Growing Systems</h3>
-                <p class="cs_sticky_card_text">Soilless, coco-based cultivation with precision nutrient delivery and daily cultivation data, built for consistent, repeatable outcomes.</p>
+                <p class="cs_sticky_card_text">Soilless, coco-based cultivation with precision nutrient delivery and daily monitoring, built for consistent and reliable outcomes.</p>
                 <span class="cs_sticky_card_link">READ MORE <span>&rarr;</span></span>
               </div>
             </a>
