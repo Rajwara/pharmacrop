@@ -271,7 +271,7 @@ export default function Page() {
               </svg>
             </span>
           </a>
-          <a href="/partnerships#white-label-partnership" class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/General%20Images/Commercial%20Partnerships/White%20Label.webp">
+          <a href="/partnerships#white-label-partnership" class="cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed" data-src="/assets/img/General%20Images/Commercial%20Partnerships/WHITE%20LABLE.webp">
             <div class="cs_card_top">
               <div class="cs_card_tags">
                 <span class="cs_card_tag">Home</span>
