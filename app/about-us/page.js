@@ -248,8 +248,7 @@ export default function Page() {
               <img src="/assets/img/Our-Facilities/2.webp" alt="Staff inspecting cannabis plants in the greenhouse">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
-                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Crop Inspection</span>
-                  <span class="cs_white_color d-block">Cultivation</span>
+                  <span class="cs_white_color cs_fs_16 cs_bold d-block">Crop Inspection</span>
                 </span>
               </span>
             </a>
@@ -259,8 +258,7 @@ export default function Page() {
               <img src="/assets/img/Our-Facilities/3.webp" alt="Technician carrying a tray of propagated clones">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
-                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Propagation</span>
-                  <span class="cs_white_color d-block">Cultivation</span>
+                  <span class="cs_white_color cs_fs_16 cs_bold d-block">Propagation</span>
                 </span>
               </span>
             </a>
@@ -270,8 +268,7 @@ export default function Page() {
               <img src="/assets/img/Our-Facilities/4.webp" alt="Flowering cannabis canopy in the greenhouse">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
-                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Flowering Canopy</span>
-                  <span class="cs_white_color d-block">Cultivation</span>
+                  <span class="cs_white_color cs_fs_16 cs_bold d-block">Environmental Monitoring</span>
                 </span>
               </span>
             </a>
@@ -281,8 +278,8 @@ export default function Page() {
               <img src="/assets/img/Our-Facilities/5.webp" alt="Product labeling on the packaging line">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
-                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Packaging Line</span>
-                  <span class="cs_white_color d-block">Manufacturing</span>
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Vegetative Growth</span>
+                  <span class="cs_white_color d-block">Cultivation</span>
                 </span>
               </span>
             </a>
@@ -292,7 +289,7 @@ export default function Page() {
               <img src="/assets/img/Our-Facilities/6.webp" alt="Rows of cannabis plants under greenhouse grow lights">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
-                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Growing Aisle</span>
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Harvest</span>
                   <span class="cs_white_color d-block">Cultivation</span>
                 </span>
               </span>
@@ -303,7 +300,7 @@ export default function Page() {
               <img src="/assets/img/Our-Facilities/our facility 3.webp" alt="Staff closely inspecting a flowering cannabis plant">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
-                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Plant Inspection</span>
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Propagation Inspection</span>
                   <span class="cs_white_color d-block">Cultivation</span>
                 </span>
               </span>
@@ -314,7 +311,7 @@ export default function Page() {
               <img src="/assets/img/Our-Facilities/our facility 6.webp" alt="Potted cannabis plants on greenhouse benches">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
-                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Mature Crop</span>
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Mother Plants</span>
                   <span class="cs_white_color d-block">Cultivation</span>
                 </span>
               </span>
@@ -325,7 +322,7 @@ export default function Page() {
               <img src="/assets/img/Our-Facilities/our facility.webp" alt="Cultivation aisle under specialised grow lighting">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
-                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Vegetative Growth</span>
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Trimming</span>
                   <span class="cs_white_color d-block">Cultivation</span>
                 </span>
               </span>
@@ -347,8 +344,8 @@ export default function Page() {
               <img src="/assets/img/Our-Facilities/Horizontal image.webp" alt="Wide view of the PharmaCrop Noosa Hinterland facility">
               <span class="cs_gallery_info_wrap cs_center">
                 <span class="cs_gallery_info text-center cs_center">
-                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Facility Wide View</span>
-                  <span class="cs_white_color d-block">Noosa Hinterland</span>
+                  <span class="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">Packing Line</span>
+                  <span class="cs_white_color d-block">Manufacturing</span>
                 </span>
               </span>
             </a>
