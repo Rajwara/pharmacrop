@@ -289,7 +289,7 @@ export default function Page() {
       <div class="container">
         <div class="cs_pmodel_row cs_pmodel_row_rev">
           <div class="cs_pmodel_img wow fadeInRight">
-            <img src="/assets/img/Partnerships/BULK FLOWER-AUSTRALIAN-GROWN. SUPPLIED IN BULK.webp" alt="Australian-grown bulk flower cultivation">
+            <img src="/assets/img/Partnerships/AUSTRALIAN-GROWN. SUPPLIED IN BULK..webp" alt="Australian-grown bulk flower cultivation">
           </div>
           <div class="cs_pmodel_content wow fadeInLeft">
             <span class="cs_pmodel_label">04 / BULK FLOWER</span>
