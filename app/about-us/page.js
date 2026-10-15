@@ -395,8 +395,8 @@ export default function Page() {
           <div class="cs_card cs_style_3">
             <div class="cs_card_in">
               <h3 class="cs_fs_24 cs_bold cs_white_color cs_mb_12">03  |  Cultivation Capacity</h3>
-              <p class="cs_facility_highlight">Over 2.6 Tonnes / Year</p>
-              <p class="mb-0 cs_white_color cs_opacity_5 cs_fs_20">Current annual cultivation capacity supporting consistent and scalable Australian-grown supply.</p>
+              <p class="cs_facility_highlight">13 Tonnes / Year</p>
+              <p class="mb-0 cs_white_color cs_opacity_5 cs_fs_20">Over 3 greenhouses at full capacity, supporting consistent and scalable Australian-grown supply.</p>
             </div>
           </div>
           <div class="cs_card cs_style_3">
