@@ -170,7 +170,7 @@ export default function Page() {
       <div class="container">
         <div class="cs_licensing_head wow fadeInUp">
           <span>Licensing &amp; Compliance</span>
-          <h2>FULLY LICENSED ACROSS THE VALUE CHAIN</h2>
+          <h2>FULLY LICENSED FROM SEED-TO-SALE</h2>
           <p>End-to-end regulatory capability supporting PharmaCrop from seed import and cultivation through to manufacturing, wholesale and global export.</p>
         </div>
         <div class="cs_licensing_grid">
