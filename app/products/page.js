@@ -341,7 +341,7 @@ export default function Page() {
             <div class="cs_cultivar_icon"><i class="fa-solid fa-seedling"></i></div>
             <h3>1,000+</h3>
             <span class="cs_cultivar_card_sub">Genetics Evaluated</span>
-            <p class="cs_cultivar_desc">A broad starting pool gives our cultivation team the depth to search for differentiated genetics.</p>
+            <p class="cs_cultivar_desc">A broad starting pool of genetics gives our cultivation team the depth to search for differentiated genetics.</p>
           </div>
           <div class="cs_cultivar_card wow fadeInUp" data-wow-delay="0.1s">
             <div class="cs_cultivar_icon"><i class="fa-solid fa-magnifying-glass"></i></div>
