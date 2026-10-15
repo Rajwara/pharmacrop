@@ -134,7 +134,7 @@ export default function Page() {
             <div class="cs_foundation_card wow fadeInUp" data-wow-delay="0.3s">
               <div class="cs_foundation_icon"><i class="fa-solid fa-microscope"></i></div>
               <h3>Research &amp; Innovation</h3>
-              <p>Scientific expertise and ongoing product innovation support continual advancement across PharmaCrop&rsquo;s genetics, cultivation and pharmaceutical manufacturing capabilities.</p>
+              <p>Scientific expertise and ongoing product innovation support continual advancement across PharmaCrop&rsquo;s genetics, cultivation practices and pharmaceutical manufacturing capabilities.</p>
             </div>
           </div>
         </div>
