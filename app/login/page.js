@@ -544,6 +544,18 @@ export default function Page() {
                 .then(function (result) {
                   if (!result.res.ok || !result.data.ok) throw new Error(result.data.message || 'Submission failed');
 
+                  var notifyPayload = {};
+                  Object.keys(payload).forEach(function (key) {
+                    if (key !== 'password') notifyPayload[key] = payload[key];
+                  });
+                  notifyPayload.access_key = 'd109255d-9679-40d9-bab0-fa88574acbb1';
+                  notifyPayload.subject = 'New HCP Registration - ' + (payload.firstName || '') + ' ' + (payload.lastName || '');
+                  fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+                    body: JSON.stringify(notifyPayload),
+                  }).catch(function () {});
+
                   var emailField = form.querySelector('[name="workEmail"]');
                   var confirmEmailEl = document.querySelector('[data-confirm-email]');
                   if (confirmEmailEl) confirmEmailEl.textContent = emailField ? emailField.value.trim() : 'you';
