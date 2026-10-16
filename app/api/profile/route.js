@@ -15,6 +15,9 @@ const EDITABLE_FIELDS = [
   "hcp_suburb",
   "hcp_state",
   "hcp_postcode",
+  "hcp_prescribing",
+  "hcp_referral",
+  "hcp_marketing_opt_in",
 ];
 
 export async function GET() {

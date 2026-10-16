@@ -32,6 +32,9 @@ export default async function Page() {
   const address = addressParts.join(", ");
   const ahpra = p.ahpra || "";
   const avatarUrl = p.avatarUrl || "";
+  const prescribing = p.hcp_prescribing || "";
+  const referral = p.hcp_referral || "";
+  const marketingOptIn = p.hcp_marketing_opt_in === "1" || p.hcp_marketing_opt_in === true;
   const profileLoaded = !!profile;
 
   const avatarHtml = avatarUrl
@@ -302,6 +305,53 @@ export default async function Page() {
               </form>
             </div>
 
+            <div class="cs_prof_card wow fadeInUp" data-prof-card="preferences">
+              <div class="cs_prof_card_head">
+                <div class="cs_prof_card_head_left">
+                  <span class="cs_prof_card_icon"><i class="fa-solid fa-sliders"></i></span>
+                  <div><h3>Preferences</h3><p>Additional details from your registration.</p></div>
+                </div>
+                <button type="button" class="cs_prof_edit_btn" data-prof-edit-toggle="preferences"><i class="fa-solid fa-pen"></i> Edit Preferences</button>
+              </div>
+              <div class="cs_prof_view">
+                <div class="cs_prof_row"><span class="k">Currently Prescribing</span><span class="v">${esc(prescribing) || "&mdash;"}</span></div>
+                <div class="cs_prof_row"><span class="k">How You Heard About Us</span><span class="v">${esc(referral) || "&mdash;"}</span></div>
+                <div class="cs_prof_row"><span class="k">Marketing Updates</span><span class="v">${marketingOptIn ? "Subscribed" : "Not subscribed"}</span></div>
+              </div>
+              <form class="cs_prof_edit_form" data-prof-form="preferences">
+                <span class="cs_prof_form_error" data-prof-form-error></span>
+                <div class="cs_prof_field">
+                  <label>Are you currently prescribing in this therapeutic area?</label>
+                  <div style="display:flex;gap:16px;margin-top:8px;flex-wrap:wrap;">
+                    <label style="display:flex;align-items:center;gap:6px;font-weight:400;"><input type="radio" name="hcp_prescribing" value="Yes" ${prescribing === "Yes" ? "checked" : ""}> Yes</label>
+                    <label style="display:flex;align-items:center;gap:6px;font-weight:400;"><input type="radio" name="hcp_prescribing" value="No" ${prescribing === "No" ? "checked" : ""}> No</label>
+                    <label style="display:flex;align-items:center;gap:6px;font-weight:400;"><input type="radio" name="hcp_prescribing" value="Considering" ${prescribing === "Considering" ? "checked" : ""}> Considering</label>
+                  </div>
+                </div>
+                <div class="cs_prof_field">
+                  <label>How did you hear about PharmaCrop?</label>
+                  <select name="hcp_referral">
+                    <option value="" ${!referral ? "selected" : ""} disabled>Select an option</option>
+                    <option ${referral === "Colleague or peer" ? "selected" : ""}>Colleague or peer</option>
+                    <option ${referral === "Conference or event" ? "selected" : ""}>Conference or event</option>
+                    <option ${referral === "Email or newsletter" ? "selected" : ""}>Email or newsletter</option>
+                    <option ${referral === "Online search" ? "selected" : ""}>Online search</option>
+                    <option ${referral === "Social media" ? "selected" : ""}>Social media</option>
+                    <option ${referral === "Sales representative" ? "selected" : ""}>Sales representative</option>
+                    <option ${referral === "Other" ? "selected" : ""}>Other</option>
+                  </select>
+                </div>
+                <label style="display:flex;align-items:center;gap:8px;">
+                  <input type="checkbox" name="hcp_marketing_opt_in" ${marketingOptIn ? "checked" : ""}>
+                  <span>Keep me updated on new products, resources and events</span>
+                </label>
+                <div class="cs_prof_form_actions">
+                  <button type="submit" class="cs_prof_save_btn" data-prof-save-btn>Save Changes</button>
+                  <button type="button" class="cs_prof_cancel_btn" data-prof-edit-toggle="preferences">Cancel</button>
+                </div>
+              </form>
+            </div>
+
             <div class="cs_prof_card wow fadeInUp">
               <div class="cs_prof_card_head">
                 <div class="cs_prof_card_head_left">
@@ -502,6 +552,9 @@ export default async function Page() {
 
               var payload = {};
               new FormData(form).forEach(function (value, key) { payload[key] = value; });
+              form.querySelectorAll('input[type="checkbox"]').forEach(function (cb) {
+                payload[cb.name] = cb.checked ? '1' : '0';
+              });
 
               fetch('/api/profile', {
                 method: 'POST',
