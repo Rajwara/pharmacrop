@@ -5,17 +5,34 @@ export const metadata = {
   title: "Blog - PharmaCrop",
 };
 
+const POSTS_PER_PAGE = 6;
+
 export default async function Page({ searchParams }) {
   const params = await searchParams;
   const activeCategory = params?.category || "";
   const activeTag = params?.tag || "";
 
   const posts = await fetchBlogPosts();
-  const filteredPosts = posts.filter((p) => {
+  const allFilteredPosts = posts.filter((p) => {
     if (activeCategory && p.category !== activeCategory) return false;
     if (activeTag && !p.tags.includes(activeTag)) return false;
     return true;
   });
+
+  const totalPages = Math.max(1, Math.ceil(allFilteredPosts.length / POSTS_PER_PAGE));
+  const requestedPage = parseInt(params?.page, 10) || 1;
+  const currentPage = Math.min(Math.max(requestedPage, 1), totalPages);
+  const pageStart = (currentPage - 1) * POSTS_PER_PAGE;
+  const filteredPosts = allFilteredPosts.slice(pageStart, pageStart + POSTS_PER_PAGE);
+
+  function pageHref(page) {
+    const query = new URLSearchParams();
+    if (activeCategory) query.set("category", activeCategory);
+    if (activeTag) query.set("tag", activeTag);
+    if (page > 1) query.set("page", String(page));
+    const qs = query.toString();
+    return qs ? `/blog?${qs}` : "/blog";
+  }
 
   const categories = await getCategories();
   const tags = await getTags();
@@ -80,6 +97,32 @@ export default async function Page({ searchParams }) {
                   </div>
                 ))}
               </div>
+              {totalPages > 1 && (
+                <>
+                <div className="cs_height_40 cs_height_lg_30" />
+                <div className="cs_pagination_box">
+                  {currentPage > 1 && (
+                    <a href={pageHref(currentPage - 1)} className="cs_pagination_item cs_center">
+                      <i className="fa-solid fa-angle-left"></i>
+                    </a>
+                  )}
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                    <a
+                      href={pageHref(page)}
+                      key={page}
+                      className={`cs_pagination_item cs_center${page === currentPage ? " active" : ""}`}
+                    >
+                      {page}
+                    </a>
+                  ))}
+                  {currentPage < totalPages && (
+                    <a href={pageHref(currentPage + 1)} className="cs_pagination_item cs_center">
+                      <i className="fa-solid fa-angle-right"></i>
+                    </a>
+                  )}
+                </div>
+                </>
+              )}
             </div>
             <div className="col-lg-4">
               <div className="cs_sidebar cs_right_sidebar">
