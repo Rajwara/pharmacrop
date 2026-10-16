@@ -131,7 +131,7 @@ export default function Page() {
         </div>
         <div class="cs_team_grid">
           <div class="cs_team_card wow fadeInUp">
-            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Dr%20Adel%20Zarei.webp" alt="Dr Adel Zarei"></div>
+            <div class="cs_team_photo"><img src="/assets/img/About-Us/TEAM%20IMAGES/Team%20Image-Dr%20Adel%20Zarei.webp" alt="Dr Adel Zarei"></div>
             <div class="cs_team_body">
               <div class="cs_team_name_row">
                 <h3 class="cs_team_name">Dr Adel Zarei</h3>
