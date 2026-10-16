@@ -63,7 +63,11 @@ export async function POST(request) {
 
   let wpRes;
   try {
-    wpRes = await fetch(`${WP_API_URL}/wp-json/pharmacrop/v1/profile`, {
+    // A distinct path from the GET route above, on purpose: the existing
+    // POST handler for /profile (from the PharmaCrop Connector plugin)
+    // reports success without actually persisting changes. Using our own
+    // route here avoids fighting over that one instead of debugging it.
+    wpRes = await fetch(`${WP_API_URL}/wp-json/pharmacrop/v1/profile-update`, {
       method: "POST",
       headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
       body: JSON.stringify(update),
