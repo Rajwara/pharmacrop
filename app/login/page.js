@@ -397,6 +397,8 @@ export default function Page() {
               denied: { text: 'Your registration was not approved. Please contact support if you have questions.', tone: 'error' },
               pending: { text: 'Your account is still awaiting admin approval. We\\'ll email you once it\\'s approved.', tone: 'info' },
               invalid: { text: 'Your session is no longer valid. Please sign in again.', tone: 'info' },
+              idle_timeout: { text: 'You were signed out after 6 hours of inactivity. Please sign in again.', tone: 'info' },
+              password_changed: { text: 'Your password was recently changed. Please sign in again with your new password.', tone: 'info' },
             };
             var msg = reason && messages[reason];
             if (msg) {
