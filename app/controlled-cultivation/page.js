@@ -30,7 +30,7 @@ export default function Page() {
                     <li><a href="/our-team">Our Team</a></li>
                     <li><a href="/products">Products</a></li>
                     <li><a href="/partnerships">Partnerships</a></li>
-                    <li><a href="https://aleafiate.com.au/meet-our-prescribing-practitioners/" target="_blank" rel="noopener">Find a Doctor</a></li>
+                    <li><a href="https://aleafiate.com.au/" target="_blank" rel="noopener">Find a Doctor</a></li>
                   </ul>
                 </nav>
               </div>
