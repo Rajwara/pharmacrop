@@ -351,7 +351,7 @@ export default function Page() {
             <h2 class="cs_contact_card_title">Ready To Explore A Commercial Partnership?</h2>
             <p class="cs_contact_card_sub">Connect with our team to discuss Australian-grown products, GMP manufacturing, commercial pathways and supply opportunities.</p>
             <form action="https://api.web3forms.com/submit" method="POST" class="cs_contact_form_bar">
-              <input type="hidden" name="access_key" value="d109255d-9679-40d9-bab0-fa88574acbb1">
+              <input type="hidden" name="access_key" value="3375386a-cc5d-468b-a320-1cc9ca429b48">
               <input type="hidden" name="subject" value="New Enquiry - PharmaCrop Website">
               <input type="text" name="name" placeholder="Your Name" required>
               <input type="email" name="email" placeholder="Your Email" required>
@@ -416,7 +416,7 @@ export default function Page() {
             <p class="cs_footer_v2_brand_tagline">Australian-grown.<br>Pharmaceutical by design.</p>
             <p class="cs_footer_v2_desc">Stay updated with our latest news, insights and product developments.</p>
             <form action="https://api.web3forms.com/submit" method="POST" class="cs_footer_v2_newsletter">
-              <input type="hidden" name="access_key" value="d109255d-9679-40d9-bab0-fa88574acbb1">
+              <input type="hidden" name="access_key" value="3375386a-cc5d-468b-a320-1cc9ca429b48">
               <input type="hidden" name="subject" value="New Newsletter Signup - PharmaCrop Website">
               <input type="email" name="email" placeholder="Enter your email address" required>
               <button type="submit" aria-label="Subscribe">

@@ -130,7 +130,7 @@ export default function Page() {
             <p class="text-center cs_fs_20">Interested in building your career with PharmaCrop? Submit your details and CV and our team will be in touch if a suitable opportunity becomes available.</p>
             <div class="cs_height_40 cs_height_lg_30"></div>
             <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" class="row cs_gap_y_24" id="cs_career_form">
-              <input type="hidden" name="access_key" value="d109255d-9679-40d9-bab0-fa88574acbb1">
+              <input type="hidden" name="access_key" value="3375386a-cc5d-468b-a320-1cc9ca429b48">
               <input type="hidden" name="subject" value="New Expression of Interest - PharmaCrop Careers">
               <div class="col-sm-6">
                 <input type="text" name="first_name" class="cs_form_field" placeholder="First name" required="">
@@ -206,7 +206,7 @@ export default function Page() {
             <p class="cs_footer_v2_brand_tagline">Australian-grown.<br>Pharmaceutical by design.</p>
             <p class="cs_footer_v2_desc">Stay updated with our latest news, insights and product developments.</p>
             <form action="https://api.web3forms.com/submit" method="POST" class="cs_footer_v2_newsletter">
-              <input type="hidden" name="access_key" value="d109255d-9679-40d9-bab0-fa88574acbb1">
+              <input type="hidden" name="access_key" value="3375386a-cc5d-468b-a320-1cc9ca429b48">
               <input type="hidden" name="subject" value="New Newsletter Signup - PharmaCrop Website">
               <input type="email" name="email" placeholder="Enter your email address" required>
               <button type="submit" aria-label="Subscribe">
