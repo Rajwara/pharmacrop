@@ -453,8 +453,8 @@ export default async function Page({ params }) {
             <h4>Product Information</h4>
             <p class="cs_pd_doc_desc">Key product details, formulation information and intended use.</p>
             <div class="cs_pd_doc_actions">
-              <a href="https://cms.pharmacrop.com.au/wp-content/uploads/2026/10/SEPT-26-Pricelist-HCP.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View</a>
-              <a href="https://cms.pharmacrop.com.au/wp-content/uploads/2026/10/SEPT-26-Pricelist-HCP.pdf" download rel="noopener"><i class="fa-solid fa-download"></i> Download</a>
+              <a href="${product.productInfoPdf || "/contact"}" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View</a>
+              <a href="${product.productInfoPdf || "/contact"}"${product.productInfoPdf ? " download" : ""} rel="noopener"><i class="fa-solid fa-download"></i> Download</a>
             </div>
           </div>
           <div class="cs_pd_doc_card wow fadeInUp" data-wow-delay="0.1s">
@@ -462,8 +462,8 @@ export default async function Page({ params }) {
             <h4>Consumer Medicine Information</h4>
             <p class="cs_pd_doc_desc">Consumer medicine information for patients.</p>
             <div class="cs_pd_doc_actions">
-              <a href="https://cms.pharmacrop.com.au/wp-content/uploads/2026/10/Pharmacrop-Difference-Leave-Behind-MAY-2026.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View</a>
-              <a href="https://cms.pharmacrop.com.au/wp-content/uploads/2026/10/Pharmacrop-Difference-Leave-Behind-MAY-2026.pdf" download rel="noopener"><i class="fa-solid fa-download"></i> Download</a>
+              <a href="${product.cmiPdf || "/contact"}" target="_blank" rel="noopener"><i class="fa-solid fa-eye"></i> View</a>
+              <a href="${product.cmiPdf || "/contact"}"${product.cmiPdf ? " download" : ""} rel="noopener"><i class="fa-solid fa-download"></i> Download</a>
             </div>
           </div>
           <div class="cs_pd_doc_card wow fadeInUp" data-wow-delay="0.2s">
