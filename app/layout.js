@@ -258,7 +258,7 @@ export default function RootLayout({ children }) {
                 });
               }
 
-              var redirectForms = document.querySelectorAll('.cs_contact_form_bar, .cs_contact_hello_form, #cs_career_form, #cs_newsletter_modal form');
+              var redirectForms = document.querySelectorAll('.cs_contact_form_bar, .cs_contact_hello_form, #cs_career_form, #cs_newsletter_modal form, .cs_footer_v2_newsletter');
               redirectForms.forEach(function (form) {
                 if (form.getAttribute('action') !== 'https://api.web3forms.com/submit') return;
                 var submitBtn = form.querySelector('button[type="submit"]');
