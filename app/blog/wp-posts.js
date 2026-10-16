@@ -37,6 +37,18 @@ function stripHtml(html) {
   return decodeEntities(String(html || "").replace(/<[^>]*>/g, "")).replace(/\s+/g, " ").trim();
 }
 
+const EXCERPT_WORD_LIMIT = 22;
+
+// WordPress's own excerpt is ~55 words by default, often ending in its own
+// "[…]" marker -- trim that off before re-truncating so there's never a
+// doubled-up "[…] …" at the end.
+function truncateWords(text, maxWords) {
+  const trimmed = String(text || "").replace(/\s*\[?…\]?\s*$/, "").trim();
+  const words = trimmed.split(/\s+/).filter(Boolean);
+  if (words.length <= maxWords) return trimmed;
+  return `${words.slice(0, maxWords).join(" ")}…`;
+}
+
 function formatDate(dateString) {
   const d = new Date(dateString);
   if (isNaN(d.getTime())) return "";
@@ -62,7 +74,7 @@ function mapPost(raw) {
     category,
     tags,
     image,
-    excerpt: stripHtml((raw.excerpt && raw.excerpt.rendered) || ""),
+    excerpt: truncateWords(stripHtml((raw.excerpt && raw.excerpt.rendered) || ""), EXCERPT_WORD_LIMIT),
     content: (raw.content && raw.content.rendered) || "",
   };
 }
