@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
             <h3 className="cs_fs_28 cs_bold cs_mb_12">Stay in the loop</h3>
             <p className="cs_fs_20 cs_mb_24">Get the latest PharmaCrop news and product updates straight to your inbox.</p>
             <form action="https://api.web3forms.com/submit" method="POST" className="row cs_gap_y_20">
-              <input type="hidden" name="access_key" value="cd98b256-0db3-478c-ab28-1ec94f80447c" />
+              <input type="hidden" name="access_key" value="d109255d-9679-40d9-bab0-fa88574acbb1" />
               <input type="hidden" name="subject" value="New Newsletter Signup - PharmaCrop Website" />
               <div className="col-lg-12">
                 <input type="email" name="email" className="cs_form_field" placeholder="Enter your email address" required />
@@ -89,7 +89,7 @@ export default function RootLayout({ children }) {
             <h3 className="cs_fs_28 cs_bold cs_mb_12">Request a Call with our MSL</h3>
             <p className="cs_fs_20 cs_mb_24">Fill in your details and one of our Medical Science Liaisons will call you back.</p>
             <form action="https://api.web3forms.com/submit" method="POST" className="cs_msl_form" data-msl-form>
-              <input type="hidden" name="access_key" value="cd98b256-0db3-478c-ab28-1ec94f80447c" />
+              <input type="hidden" name="access_key" value="d109255d-9679-40d9-bab0-fa88574acbb1" />
               <input type="hidden" name="subject" value="New MSL Call Request - PharmaCrop Dashboard" />
               <div>
                 <label>Name (required)</label>
