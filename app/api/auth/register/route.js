@@ -65,5 +65,23 @@ export async function POST(request) {
     return NextResponse.json({ ok: false, message }, { status: wpRes.status || 400 });
   }
 
+  // Email the team the full submission so a new HCP registration doesn't
+  // rely on someone noticing it in wp-admin. Never blocks or fails the
+  // registration itself -- WordPress is the source of truth.
+  const { password, ...notifyFields } = wpBody;
+  try {
+    await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({
+        access_key: "d109255d-9679-40d9-bab0-fa88574acbb1",
+        subject: `New HCP Registration - ${notifyFields.firstName || ""} ${notifyFields.lastName || ""}`.trim(),
+        ...notifyFields,
+      }),
+    });
+  } catch (err) {
+    console.error("[auth/register] Failed to send registration notification:", err && err.message ? err.message : err);
+  }
+
   return NextResponse.json({ ok: true });
 }
