@@ -33,7 +33,8 @@ export default async function Page() {
                           <h3 class="mb-0 cs_fs_20 cs_bold"><a href="/blog/${esc(post.slug)}">${esc(post.title).toUpperCase()}</a></h3>
                         </li>
                       </ul>
-                      <div class="cs_card_text">${esc(post.excerpt)}</div>
+                      <div class="cs_card_text cs_mb_20">${esc(post.excerpt)}</div>
+                      <a href="/blog/${esc(post.slug)}" class="cs_btn cs_style_2 cs_bold cs_heading_color">See More</a>
                     </div>
                   </div>
                 </div>`
