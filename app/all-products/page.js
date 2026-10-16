@@ -285,10 +285,10 @@ export default async function Page() {
             </div>
             <div class="cs_prod_select_wrap" data-dropdown>
               <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
-              <button type="button" class="cs_dropdown_trigger" data-dropdown-trigger aria-haspopup="listbox" aria-expanded="false"><span data-dropdown-label>All profiles</span></button>
+              <button type="button" class="cs_dropdown_trigger" data-dropdown-trigger aria-haspopup="listbox" aria-expanded="false"><span data-dropdown-label>All conditions</span></button>
               <i class="fa-solid fa-chevron-down cs_prod_select_chevron" aria-hidden="true"></i>
               <select data-prod-therapeutic class="cs_dropdown_native_select" tabindex="-1" aria-hidden="true">
-                <option value="all">All profiles</option>
+                <option value="all">All conditions</option>
                 ${therapeuticOptionsHtml}
               </select>
               <div class="cs_dropdown_panel" data-dropdown-panel role="listbox"></div>
