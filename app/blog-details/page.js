@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
-import { posts } from "../blog/posts";
+import { fetchBlogPosts } from "../blog/wp-posts";
 
-export default function Page() {
-  redirect(`/blog/${posts[0].slug}`);
+export default async function Page() {
+  const posts = await fetchBlogPosts();
+  redirect(posts.length ? `/blog/${posts[0].slug}` : "/blog");
 }

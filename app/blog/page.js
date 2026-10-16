@@ -1,5 +1,5 @@
 import { headerHtml, footerHtml } from "./chrome";
-import { posts, getCategories, getTags, getRecentPosts } from "./posts";
+import { fetchBlogPosts, getCategories, getTags, getRecentPosts } from "./wp-posts";
 
 export const metadata = {
   title: "Blog - PharmaCrop",
@@ -10,15 +10,16 @@ export default async function Page({ searchParams }) {
   const activeCategory = params?.category || "";
   const activeTag = params?.tag || "";
 
+  const posts = await fetchBlogPosts();
   const filteredPosts = posts.filter((p) => {
     if (activeCategory && p.category !== activeCategory) return false;
     if (activeTag && !p.tags.includes(activeTag)) return false;
     return true;
   });
 
-  const categories = getCategories();
-  const tags = getTags();
-  const recentPosts = getRecentPosts(null, 3);
+  const categories = await getCategories();
+  const tags = await getTags();
+  const recentPosts = await getRecentPosts(null, 3);
 
   const heading = activeCategory
     ? `Category: ${activeCategory}`

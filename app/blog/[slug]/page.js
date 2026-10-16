@@ -1,14 +1,15 @@
 import { notFound } from "next/navigation";
 import { headerHtml, footerHtml } from "../chrome";
-import { posts, getPostBySlug, getCategories, getTags, getRecentPosts, getRelatedPosts } from "../posts";
+import { fetchBlogPosts, getPostBySlug, getCategories, getTags, getRecentPosts, getRelatedPosts } from "../wp-posts";
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
+  const posts = await fetchBlogPosts();
   return posts.map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = await getPostBySlug(slug);
   if (!post) {
     return { title: "PharmaCrop - Australian-Grown. Complete Control." };
   }
@@ -20,15 +21,15 @@ export async function generateMetadata({ params }) {
 
 export default async function Page({ params }) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = await getPostBySlug(slug);
   if (!post) {
     notFound();
   }
 
-  const categories = getCategories();
-  const tags = getTags();
-  const recentPosts = getRecentPosts(post.slug, 3);
-  const relatedPosts = getRelatedPosts(post, 2);
+  const categories = await getCategories();
+  const tags = await getTags();
+  const recentPosts = await getRecentPosts(post.slug, 3);
+  const relatedPosts = await getRelatedPosts(post, 2);
 
   return (
     <>
@@ -62,9 +63,7 @@ export default async function Page({ params }) {
                     </a>
                   </div>
                   <h2 className="cs_post_title">{post.title}</h2>
-                  {post.content.map((paragraph, i) => (
-                    <p key={i}>{paragraph}</p>
-                  ))}
+                  <div dangerouslySetInnerHTML={{ __html: post.content }} />
                   <div className="cs_height_20 cs_height_lg_20" />
                   <div className="tagcloud">
                     {post.tags.map((tag) => (
