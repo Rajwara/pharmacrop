@@ -479,7 +479,7 @@ export default async function Page({ params }) {
             <div class="cs_pd_doc_icon"><i class="fa-solid fa-file-circle-check"></i></div>
             <h4>Request the Latest Certificate of Analysis</h4>
             <p class="cs_pd_doc_desc">Get the most recent Certificate of Analysis (CoA) for this product from our team.</p>
-            <div class="cs_pd_doc_cta_wrap"><a href="/contact" data-open-modal="cs_msl_modal" class="cs_pd_doc_cta_btn"><i class="fa-solid fa-envelope"></i> Request Certificate of Analysis</a></div>
+            <div class="cs_pd_doc_cta_wrap"><a href="#" data-open-modal="cs_coa_modal" class="cs_pd_doc_cta_btn"><i class="fa-solid fa-envelope"></i> Request Certificate of Analysis</a></div>
           </div>
         </div>
       </div>
@@ -576,6 +576,48 @@ export default async function Page({ params }) {
       </div>
     </footer>
     <!-- End Dashboard Footer -->
+    <!-- Start Certificate of Analysis Modal -->
+    <style>
+      .cs_msl_form input[readonly] { color: rgba(2, 66, 66, 0.55); }
+    </style>
+    <div id="cs_coa_modal" class="cs_modal_overlay" role="dialog" aria-modal="true" aria-label="Request a Certificate of Analysis">
+      <div class="cs_modal_box cs_msl_modal_box">
+        <button class="cs_modal_close" type="button" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <h3 class="cs_fs_28 cs_bold cs_mb_12">Request a Certificate of Analysis</h3>
+        <p class="cs_fs_20 cs_mb_24">Fill in your details and our team will send you the latest Certificate of Analysis for this product.</p>
+        <form action="https://api.web3forms.com/submit" method="POST" class="cs_msl_form" data-coa-form>
+          <input type="hidden" name="access_key" value="cd98b256-0db3-478c-ab28-1ec94f80447c" />
+          <input type="hidden" name="subject" value="New Certificate of Analysis Request - ${product.name}" />
+          <div>
+            <label>Name (required)</label>
+            <input type="text" name="name" placeholder="Your name" required />
+          </div>
+          <div>
+            <label>Email (required)</label>
+            <input type="email" name="email" placeholder="Your email" required />
+          </div>
+          <div>
+            <label>Phone (required)</label>
+            <input type="tel" name="phone" placeholder="Your phone number" required />
+          </div>
+          <div>
+            <label>Product</label>
+            <input type="text" name="product" value="${product.name}" readonly />
+          </div>
+          <button type="submit" class="cs_msl_submit">
+            <i class="fa-solid fa-envelope"></i> Request Certificate of Analysis
+          </button>
+        </form>
+        <div class="cs_msl_success" data-coa-success>
+          <i class="fa-solid fa-circle-check"></i>
+          <h4>Request received</h4>
+          <p>Thanks &ndash; our team will email you the Certificate of Analysis shortly.</p>
+        </div>
+      </div>
+    </div>
+    <!-- End Certificate of Analysis Modal -->
   `;
 
   return (
@@ -612,6 +654,63 @@ export default async function Page({ params }) {
                 modal.classList.add('active');
               });
             });
+
+            var coaModal = document.getElementById('cs_coa_modal');
+            var coaForm = document.querySelector('[data-coa-form]');
+            var coaSuccess = document.querySelector('[data-coa-success]');
+            function resetCoaModal() {
+              if (coaForm) {
+                coaForm.reset();
+                coaForm.style.display = '';
+                var btn = coaForm.querySelector('.cs_msl_submit');
+                if (btn) {
+                  btn.disabled = false;
+                  btn.innerHTML = '<i class="fa-solid fa-envelope"></i> Request Certificate of Analysis';
+                }
+              }
+              if (coaSuccess) coaSuccess.classList.remove('active');
+            }
+            if (coaModal) {
+              var coaCloseBtn = coaModal.querySelector('.cs_modal_close');
+              if (coaCloseBtn) coaCloseBtn.addEventListener('click', resetCoaModal);
+              coaModal.addEventListener('click', function (e) {
+                if (e.target === coaModal) resetCoaModal();
+              });
+              document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && coaModal.classList.contains('active')) resetCoaModal();
+              });
+            }
+            if (coaForm && coaSuccess) {
+              coaForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var submitBtn = coaForm.querySelector('.cs_msl_submit');
+                if (submitBtn) {
+                  submitBtn.disabled = true;
+                  submitBtn.textContent = 'Sending...';
+                }
+                fetch(coaForm.action, {
+                  method: 'POST',
+                  body: new FormData(coaForm),
+                  headers: { Accept: 'application/json' },
+                })
+                  .then(function (res) { return res.json(); })
+                  .then(function (data) {
+                    if (data && data.success) {
+                      coaForm.style.display = 'none';
+                      coaSuccess.classList.add('active');
+                    } else {
+                      throw new Error('Submission failed');
+                    }
+                  })
+                  .catch(function () {
+                    if (submitBtn) {
+                      submitBtn.disabled = false;
+                      submitBtn.innerHTML = '<i class="fa-solid fa-envelope"></i> Request Certificate of Analysis';
+                    }
+                    alert('Something went wrong sending your request. Please try again or call us directly.');
+                  });
+              });
+            }
             fetch('/api/auth/me').then(function (res) { return res.json(); }).then(function (data) {
               if (!data || !data.name) return;
               var nameEl = document.querySelector('[data-dash-user-name]');
