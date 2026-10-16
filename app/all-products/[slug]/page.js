@@ -588,7 +588,7 @@ export default async function Page({ params }) {
         <h3 class="cs_fs_28 cs_bold cs_mb_12">Request a Certificate of Analysis</h3>
         <p class="cs_fs_20 cs_mb_24">Fill in your details and our team will send you the latest Certificate of Analysis for this product.</p>
         <form action="https://api.web3forms.com/submit" method="POST" class="cs_msl_form" data-coa-form>
-          <input type="hidden" name="access_key" value="d109255d-9679-40d9-bab0-fa88574acbb1" />
+          <input type="hidden" name="access_key" value="3375386a-cc5d-468b-a320-1cc9ca429b48" />
           <input type="hidden" name="subject" value="New Certificate of Analysis Request - ${product.name}" />
           <div>
             <label>Name (required)</label>

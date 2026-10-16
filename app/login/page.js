@@ -550,7 +550,7 @@ export default function Page() {
                   Object.keys(payload).forEach(function (key) {
                     if (key !== 'password') notifyPayload[key] = payload[key];
                   });
-                  notifyPayload.access_key = 'd109255d-9679-40d9-bab0-fa88574acbb1';
+                  notifyPayload.access_key = '3375386a-cc5d-468b-a320-1cc9ca429b48';
                   notifyPayload.subject = 'New HCP Registration - ' + (payload.firstName || '') + ' ' + (payload.lastName || '');
                   fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
