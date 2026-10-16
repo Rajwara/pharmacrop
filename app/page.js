@@ -1,11 +1,45 @@
 import Script from "next/script";
+import { fetchBlogPosts } from "./blog/wp-posts";
 
 export const metadata = {
   title: "PharmaCrop - Australian-Grown. Complete Control.",
   description: "Natural cultivation with pharmaceutical precision. Australian-grown, GMP-certified, TGA-licensed medicinal cannabis products.",
 };
 
-export default function Page() {
+function esc(value) {
+  return String(value || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+export default async function Page() {
+  const latestPosts = (await fetchBlogPosts()).slice(0, 3);
+  const blogSlidesHtml = latestPosts
+    .map(
+      (post) => `
+                <div class="cs_slide">
+                  <div class="cs_card cs_style_4">
+                    <div class="cs_card_thumb cs_bg_filed cs_mb_40" data-src="${esc(post.image)}"></div>
+                    <div class="cs_card_info">
+                      <ul class="cs_card_info_list cs_mp_0">
+                        <li>
+                          <p class="mb-0">CATEGORY</p>
+                          <h3 class="mb-0 cs_fs_20 cs_bold">${esc(post.category).toUpperCase()}</h3>
+                        </li>
+                        <li>
+                          <p class="mb-0">READ MORE</p>
+                          <h3 class="mb-0 cs_fs_20 cs_bold"><a href="/blog/${esc(post.slug)}">${esc(post.title).toUpperCase()}</a></h3>
+                        </li>
+                      </ul>
+                      <div class="cs_card_text">${esc(post.excerpt)}</div>
+                    </div>
+                  </div>
+                </div>`
+    )
+    .join("");
+
   return (
     <>
     <div
@@ -564,62 +598,7 @@ export default function Page() {
         <div class="cs_full_width_slider_section">
           <div class="cs_slider cs_style_1 cs_slider_gap_24">
             <div class="cs_slider_container" data-autoplay="0" data-loop="1" data-speed="800" data-center="0" data-variable-width="1" data-slides-per-view="1">
-              <div class="cs_slider_wrapper">
-                <div class="cs_slide">
-                  <div class="cs_card cs_style_4">
-                    <div class="cs_card_thumb cs_bg_filed cs_mb_40" data-src="/assets/img/Home/Blog/Blog%201.webp"></div>
-                    <div class="cs_card_info">
-                      <ul class="cs_card_info_list cs_mp_0">
-                        <li>
-                          <p class="mb-0">CATEGORY</p>
-                          <h3 class="mb-0 cs_fs_20 cs_bold">CULTIVATION</h3>
-                        </li>
-                        <li>
-                          <p class="mb-0">READ MORE</p>
-                          <h3 class="mb-0 cs_fs_20 cs_bold"><a href="/blog/noosa-hinterland-home-of-pharmacrop">THE NOOSA HINTERLAND: HOME OF PHARMACROP</a></h3>
-                        </li>
-                      </ul>
-                      <div class="cs_card_text">The Noosa Hinterland provides the home for our cultivation and manufacturing operations, bringing local production together within a single region.</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="cs_slide">
-                  <div class="cs_card cs_style_4">
-                    <div class="cs_card_thumb cs_bg_filed cs_mb_40" data-src="/assets/img/Home/Blog/Blog%202.webp"></div>
-                    <div class="cs_card_info">
-                      <ul class="cs_card_info_list cs_mp_0">
-                        <li>
-                          <p class="mb-0">CATEGORY</p>
-                          <h3 class="mb-0 cs_fs_20 cs_bold">MANUFACTURING</h3>
-                        </li>
-                        <li>
-                          <p class="mb-0">READ MORE</p>
-                          <h3 class="mb-0 cs_fs_20 cs_bold"><a href="/blog/from-genetics-to-gmp-certified-manufacturing">FROM GENETICS TO GMP-CERTIFIED MANUFACTURING</a></h3>
-                        </li>
-                      </ul>
-                      <div class="cs_card_text">By bringing cultivation, processing and GMP-certified manufacturing together, PharmaCrop maintains oversight from cultivar selection through to finished product.</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="cs_slide">
-                  <div class="cs_card cs_style_4">
-                    <div class="cs_card_thumb cs_bg_filed cs_mb_40" data-src="/assets/img/Home/Blog/Blog%203.webp"></div>
-                    <div class="cs_card_info">
-                      <ul class="cs_card_info_list cs_mp_0">
-                        <li>
-                          <p class="mb-0">CATEGORY</p>
-                          <h3 class="mb-0 cs_fs_20 cs_bold">CULTIVATION</h3>
-                        </li>
-                        <li>
-                          <p class="mb-0">READ MORE</p>
-                          <h3 class="mb-0 cs_fs_20 cs_bold"><a href="/blog/global-cultivation-expertise-hinterland-honed">GLOBAL CULTIVATION EXPERTISE, HINTERLAND-HONED</a></h3>
-                        </li>
-                      </ul>
-                      <div class="cs_card_text">Drawing on cultivation expertise from California, Canada and South Africa, our team applies international insights within the unique conditions of the Noosa Hinterland.</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div class="cs_slider_wrapper">${blogSlidesHtml}</div>
             </div>
             <div class="cs_slider_arrows cs_style_3 cs_hide_lg">
               <div class="cs_right_arrow cs_heading_color cs_fs_20 cs_center">
