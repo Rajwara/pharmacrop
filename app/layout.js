@@ -258,6 +258,40 @@ export default function RootLayout({ children }) {
                 });
               }
 
+              var redirectForms = document.querySelectorAll('.cs_contact_form_bar, .cs_contact_hello_form, #cs_career_form, #cs_newsletter_modal form');
+              redirectForms.forEach(function (form) {
+                if (form.getAttribute('action') !== 'https://api.web3forms.com/submit') return;
+                var submitBtn = form.querySelector('button[type="submit"]');
+                var originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+                form.addEventListener('submit', function (e) {
+                  e.preventDefault();
+                  if (submitBtn) {
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Sending...';
+                  }
+                  fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { Accept: 'application/json' },
+                  })
+                    .then(function (res) { return res.json(); })
+                    .then(function (data) {
+                      if (data && data.success) {
+                        window.location.href = '/thank-you';
+                      } else {
+                        throw new Error('Submission failed');
+                      }
+                    })
+                    .catch(function () {
+                      if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalBtnHtml;
+                      }
+                      alert('Something went wrong sending your request. Please try again or contact us directly.');
+                    });
+                });
+              });
+
               document.addEventListener('contextmenu', function (e) {
                 if (e.target && e.target.tagName === 'IMG') e.preventDefault();
               });
