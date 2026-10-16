@@ -165,7 +165,7 @@ export default function Page() {
           <div class="cs_sticky_services_left">
             <span class="cs_sticky_eyebrow">Precision Cultivation</span>
             <h2 class="cs_sticky_title cs_two_tone cs_home_heading_sz wow fadeInDown">BUILDING<br>PHARMACEUTICAL<br>QUALITY FROM<br><span>THE GROUND UP</span></h2>
-            <p class="cs_sticky_text">Consistent pharmaceutical products begin with <strong>advanced</strong> agricultural systems. Our cultivation platform combines controlled environments, <strong>innovative</strong> growing systems and <strong>elite genetics</strong>.</p>
+            <p class="cs_sticky_text">Consistent pharmaceutical products begin with advanced agricultural systems. Our cultivation platform combines controlled environments, innovative growing systems and elite genetics.</p>
           </div>
           <div class="cs_sticky_services_right">
             <a href="/controlled-cultivation" class="cs_sticky_card">
