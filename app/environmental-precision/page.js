@@ -3,6 +3,7 @@ import { OG_DEFAULTS } from "../lib/seo";
 export const metadata = {
   title: "Environmental Precision - PharmaCrop",
   description: "Explore PharmaCrop's environmental precision systems that monitor and control growing conditions for consistent, high-quality medicinal cannabis cultivation.",
+  keywords: ["environmental precision", "climate-controlled cultivation", "cannabis growing conditions", "precision agriculture cannabis"],
   alternates: { canonical: "/environmental-precision" },
   openGraph: {
     ...OG_DEFAULTS,

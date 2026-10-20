@@ -3,6 +3,7 @@ import { OG_DEFAULTS } from "../lib/seo";
 export const metadata = {
   title: "Contact Us - PharmaCrop",
   description: "Get in touch with the PharmaCrop team to discuss products, commercial partnerships, manufacturing or general enquiries.",
+  keywords: ["contact PharmaCrop", "PharmaCrop enquiries", "medicinal cannabis contact Australia"],
   alternates: { canonical: "/contact" },
   openGraph: {
     ...OG_DEFAULTS,

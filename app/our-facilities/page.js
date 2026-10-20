@@ -3,6 +3,7 @@ import { OG_DEFAULTS } from "../lib/seo";
 export const metadata = {
   title: "Our Facility - PharmaCrop",
   description: "Take a look inside PharmaCrop's GMP-certified, TGA-licensed cultivation and manufacturing facility in the Noosa Hinterland, Queensland.",
+  keywords: ["PharmaCrop facility", "GMP-certified cannabis facility", "Noosa Hinterland facility", "TGA-licensed manufacturing"],
   alternates: { canonical: "/our-facilities" },
   openGraph: {
     ...OG_DEFAULTS,

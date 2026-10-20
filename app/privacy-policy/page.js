@@ -3,6 +3,7 @@ import { OG_DEFAULTS } from "../lib/seo";
 export const metadata = {
   title: "Privacy Policy - PharmaCrop",
   description: "Read PharmaCrop's privacy policy to understand how we collect, use and protect your personal information.",
+  keywords: ["PharmaCrop privacy policy", "data protection PharmaCrop"],
   alternates: { canonical: "/privacy-policy" },
   openGraph: {
     ...OG_DEFAULTS,

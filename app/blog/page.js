@@ -5,6 +5,7 @@ import { OG_DEFAULTS } from "../lib/seo";
 export const metadata = {
   title: "Blog - PharmaCrop",
   description: "Read the latest news, insights and product developments from PharmaCrop, Australia's GMP-certified medicinal cannabis cultivator.",
+  keywords: ["PharmaCrop blog", "medicinal cannabis news Australia", "cannabis industry insights"],
   alternates: { canonical: "/blog" },
   openGraph: {
     ...OG_DEFAULTS,

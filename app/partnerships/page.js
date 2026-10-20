@@ -3,6 +3,7 @@ import { OG_DEFAULTS } from "../lib/seo";
 export const metadata = {
   title: "Partnerships - PharmaCrop",
   description: "Partner with PharmaCrop for Australian-grown, GMP-certified medicinal cannabis across retail, green label, white label, bulk flower and export pathways.",
+  keywords: ["cannabis commercial partnerships", "green label cannabis", "white label cannabis", "bulk flower supply Australia", "cannabis export Australia"],
   alternates: { canonical: "/partnerships" },
   openGraph: {
     ...OG_DEFAULTS,

@@ -3,6 +3,7 @@ import { OG_DEFAULTS } from "../lib/seo";
 export const metadata = {
   title: "Controlled Cultivation - PharmaCrop",
   description: "See how PharmaCrop combines global cultivation expertise with Australian-grown excellence to produce consistent, pharmaceutical-grade medicinal cannabis.",
+  keywords: ["controlled cultivation", "Australian cannabis cultivation", "global cultivation expertise", "pharmaceutical-grade cannabis growing"],
   alternates: { canonical: "/controlled-cultivation" },
   openGraph: {
     ...OG_DEFAULTS,

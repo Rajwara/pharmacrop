@@ -3,6 +3,7 @@ import { OG_DEFAULTS } from "../lib/seo";
 export const metadata = {
   title: "FAQ - PharmaCrop",
   description: "Find answers to frequently asked questions about PharmaCrop's medicinal cannabis products, cultivation, partnerships and healthcare provider portal.",
+  keywords: ["PharmaCrop FAQ", "medicinal cannabis questions", "healthcare provider portal FAQ", "cannabis partnership questions"],
   alternates: { canonical: "/faq" },
   openGraph: {
     ...OG_DEFAULTS,

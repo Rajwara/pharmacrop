@@ -3,6 +3,7 @@ import { OG_DEFAULTS } from "../lib/seo";
 export const metadata = {
   title: "Advanced Growing Systems - PharmaCrop",
   description: "Discover PharmaCrop's advanced growing systems delivering consistent, pharmaceutical-grade medicinal cannabis through precision-controlled cultivation technology.",
+  keywords: ["precision cultivation", "advanced growing systems", "controlled-environment agriculture", "medicinal cannabis technology", "consistent cannabis cultivation"],
   alternates: { canonical: "/advanced-growing-systems" },
   openGraph: {
     ...OG_DEFAULTS,

@@ -3,6 +3,7 @@ import { OG_DEFAULTS } from "../lib/seo";
 export const metadata = {
   title: "Careers - PharmaCrop",
   description: "Build your career with PharmaCrop. Explore opportunities in Australian-grown, GMP-certified medicinal cannabis cultivation and manufacturing.",
+  keywords: ["PharmaCrop careers", "medicinal cannabis jobs Australia", "cannabis cultivation careers", "GMP manufacturing jobs", "join PharmaCrop"],
   alternates: { canonical: "/careers" },
   openGraph: {
     ...OG_DEFAULTS,

@@ -5,6 +5,7 @@ import { OG_DEFAULTS } from "./lib/seo";
 export const metadata = {
   title: "PharmaCrop - Australian-Grown. Complete Control.",
   description: "Natural cultivation with pharmaceutical precision. Australian-grown, GMP-certified, TGA-licensed medicinal cannabis products.",
+  keywords: ["medicinal cannabis Australia", "Australian-grown cannabis", "GMP-certified cannabis", "TGA-licensed cannabis", "pharmaceutical-grade cannabis", "PharmaCrop"],
   alternates: { canonical: "/" },
   openGraph: {
     ...OG_DEFAULTS,
