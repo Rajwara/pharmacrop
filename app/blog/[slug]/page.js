@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { headerHtml, footerHtml } from "../chrome";
 import { fetchBlogPosts, getPostBySlug, getCategories, getTags, getRecentPosts, getRelatedPosts } from "../wp-posts";
+import { OG_DEFAULTS } from "../../lib/seo";
 
 export async function generateStaticParams() {
   const posts = await fetchBlogPosts();
@@ -16,6 +17,15 @@ export async function generateMetadata({ params }) {
   return {
     title: `${post.title} - PharmaCrop`,
     description: post.excerpt,
+    alternates: { canonical: `/blog/${slug}` },
+    openGraph: {
+      ...OG_DEFAULTS,
+      title: post.title,
+      description: post.excerpt,
+      url: `/blog/${slug}`,
+      type: "article",
+      images: [{ url: post.image }],
+    },
   };
 }
 

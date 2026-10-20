@@ -1,5 +1,15 @@
+import { OG_DEFAULTS } from "../lib/seo";
+
 export const metadata = {
   title: "Privacy Policy - PharmaCrop",
+  description: "Read PharmaCrop's privacy policy to understand how we collect, use and protect your personal information.",
+  alternates: { canonical: "/privacy-policy" },
+  openGraph: {
+    ...OG_DEFAULTS,
+    title: "Privacy Policy - PharmaCrop",
+    description: "Read PharmaCrop's privacy policy to understand how we collect, use and protect your personal information.",
+    url: "/privacy-policy",
+  },
 };
 
 export default function Page() {

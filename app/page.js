@@ -1,9 +1,17 @@
 import Script from "next/script";
 import { fetchBlogPosts } from "./blog/wp-posts";
+import { OG_DEFAULTS } from "./lib/seo";
 
 export const metadata = {
   title: "PharmaCrop - Australian-Grown. Complete Control.",
   description: "Natural cultivation with pharmaceutical precision. Australian-grown, GMP-certified, TGA-licensed medicinal cannabis products.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    ...OG_DEFAULTS,
+    title: "PharmaCrop - Australian-Grown. Complete Control.",
+    description: "Natural cultivation with pharmaceutical precision. Australian-grown, GMP-certified, TGA-licensed medicinal cannabis products.",
+    url: "/",
+  },
 };
 
 function esc(value) {

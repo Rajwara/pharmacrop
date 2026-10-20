@@ -1,5 +1,15 @@
+import { OG_DEFAULTS } from "../lib/seo";
+
 export const metadata = {
   title: "Careers - PharmaCrop",
+  description: "Build your career with PharmaCrop. Explore opportunities in Australian-grown, GMP-certified medicinal cannabis cultivation and manufacturing.",
+  alternates: { canonical: "/careers" },
+  openGraph: {
+    ...OG_DEFAULTS,
+    title: "Careers - PharmaCrop",
+    description: "Build your career with PharmaCrop. Explore opportunities in Australian-grown, GMP-certified medicinal cannabis cultivation and manufacturing.",
+    url: "/careers",
+  },
 };
 
 export default function Page() {

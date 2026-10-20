@@ -1,8 +1,17 @@
 import { headerHtml, footerHtml } from "./chrome";
 import { fetchBlogPosts, getCategories, getTags, getRecentPosts } from "./wp-posts";
+import { OG_DEFAULTS } from "../lib/seo";
 
 export const metadata = {
   title: "Blog - PharmaCrop",
+  description: "Read the latest news, insights and product developments from PharmaCrop, Australia's GMP-certified medicinal cannabis cultivator.",
+  alternates: { canonical: "/blog" },
+  openGraph: {
+    ...OG_DEFAULTS,
+    title: "Blog - PharmaCrop",
+    description: "Read the latest news, insights and product developments from PharmaCrop, Australia's GMP-certified medicinal cannabis cultivator.",
+    url: "/blog",
+  },
 };
 
 const POSTS_PER_PAGE = 6;

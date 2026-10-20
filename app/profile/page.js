@@ -3,6 +3,7 @@ import { getCurrentHcpUser, getHcpProfile } from "./../lib/wp-auth";
 
 export const metadata = {
   title: "My Profile - PharmaCrop HCP Portal",
+  robots: { index: false, follow: false },
 };
 
 function esc(value) {

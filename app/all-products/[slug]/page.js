@@ -13,9 +13,12 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const product = await getProductBySlug(slug);
   if (!product) {
-    return { title: "Product - PharmaCrop HCP Portal" };
+    return { title: "Product - PharmaCrop HCP Portal", robots: { index: false, follow: false } };
   }
-  return { title: `${product.name} - PharmaCrop HCP Portal` };
+  return {
+    title: `${product.name} - PharmaCrop HCP Portal`,
+    robots: { index: false, follow: false },
+  };
 }
 
 export default async function Page({ params }) {

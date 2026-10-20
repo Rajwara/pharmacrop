@@ -4,6 +4,7 @@ import { getCurrentHcpUser } from "./../lib/wp-auth";
 
 export const metadata = {
   title: "Dashboard - PharmaCrop HCP Portal",
+  robots: { index: false, follow: false },
 };
 
 export const revalidate = 60;

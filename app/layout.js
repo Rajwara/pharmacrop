@@ -2,10 +2,27 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata = {
+  metadataBase: new URL("https://pharmacrop.com.au"),
   title: "PharmaCrop - Australian-Grown. Complete Control.",
   description: "Natural cultivation with pharmaceutical precision. Australian-grown, GMP-certified, TGA-licensed medicinal cannabis products.",
   icons: {
     icon: "/assets/img/General Images/Branding/favicon.png",
+  },
+  openGraph: {
+    siteName: "PharmaCrop",
+    type: "website",
+    locale: "en_AU",
+    images: [
+      {
+        url: "/assets/img/pharmacrop-banner3.webp",
+        width: 1701,
+        height: 925,
+        alt: "PharmaCrop - Australian-Grown. Complete Control.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 

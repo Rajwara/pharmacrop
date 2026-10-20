@@ -1,5 +1,15 @@
+import { OG_DEFAULTS } from "../lib/seo";
+
 export const metadata = {
   title: "Our Team - PharmaCrop",
+  description: "Meet the PharmaCrop team of scientists, cultivators and industry experts behind Australia's GMP-certified medicinal cannabis products.",
+  alternates: { canonical: "/our-team" },
+  openGraph: {
+    ...OG_DEFAULTS,
+    title: "Our Team - PharmaCrop",
+    description: "Meet the PharmaCrop team of scientists, cultivators and industry experts behind Australia's GMP-certified medicinal cannabis products.",
+    url: "/our-team",
+  },
 };
 
 export default function Page() {

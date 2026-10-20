@@ -1,5 +1,15 @@
+import { OG_DEFAULTS } from "../lib/seo";
+
 export const metadata = {
   title: "About Us - PharmaCrop",
+  description: "Learn about PharmaCrop's Australian-grown, GMP-certified medicinal cannabis cultivation in the Noosa Hinterland, backed by pharmaceutical-grade precision and TGA licensing.",
+  alternates: { canonical: "/about-us" },
+  openGraph: {
+    ...OG_DEFAULTS,
+    title: "About Us - PharmaCrop",
+    description: "Learn about PharmaCrop's Australian-grown, GMP-certified medicinal cannabis cultivation in the Noosa Hinterland, backed by pharmaceutical-grade precision and TGA licensing.",
+    url: "/about-us",
+  },
 };
 
 export default function Page() {

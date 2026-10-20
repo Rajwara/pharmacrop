@@ -1,5 +1,6 @@
 export const metadata = {
   title: "Thank You - PharmaCrop",
+  robots: { index: false, follow: false },
 };
 
 export default function Page() {

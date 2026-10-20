@@ -3,6 +3,7 @@ import { fetchAllProducts } from "./wp-products";
 
 export const metadata = {
   title: "All Products - PharmaCrop HCP Portal",
+  robots: { index: false, follow: false },
 };
 
 export const revalidate = 60;

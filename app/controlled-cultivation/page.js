@@ -1,5 +1,15 @@
+import { OG_DEFAULTS } from "../lib/seo";
+
 export const metadata = {
   title: "Controlled Cultivation - PharmaCrop",
+  description: "See how PharmaCrop combines global cultivation expertise with Australian-grown excellence to produce consistent, pharmaceutical-grade medicinal cannabis.",
+  alternates: { canonical: "/controlled-cultivation" },
+  openGraph: {
+    ...OG_DEFAULTS,
+    title: "Controlled Cultivation - PharmaCrop",
+    description: "See how PharmaCrop combines global cultivation expertise with Australian-grown excellence to produce consistent, pharmaceutical-grade medicinal cannabis.",
+    url: "/controlled-cultivation",
+  },
 };
 
 export default function Page() {

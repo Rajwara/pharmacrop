@@ -1,5 +1,15 @@
+import { OG_DEFAULTS } from "../lib/seo";
+
 export const metadata = {
   title: "Environmental Precision - PharmaCrop",
+  description: "Explore PharmaCrop's environmental precision systems that monitor and control growing conditions for consistent, high-quality medicinal cannabis cultivation.",
+  alternates: { canonical: "/environmental-precision" },
+  openGraph: {
+    ...OG_DEFAULTS,
+    title: "Environmental Precision - PharmaCrop",
+    description: "Explore PharmaCrop's environmental precision systems that monitor and control growing conditions for consistent, high-quality medicinal cannabis cultivation.",
+    url: "/environmental-precision",
+  },
 };
 
 export default function Page() {

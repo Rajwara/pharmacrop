@@ -1,5 +1,15 @@
+import { OG_DEFAULTS } from "../lib/seo";
+
 export const metadata = {
   title: "Partnerships - PharmaCrop",
+  description: "Partner with PharmaCrop for Australian-grown, GMP-certified medicinal cannabis across retail, green label, white label, bulk flower and export pathways.",
+  alternates: { canonical: "/partnerships" },
+  openGraph: {
+    ...OG_DEFAULTS,
+    title: "Partnerships - PharmaCrop",
+    description: "Partner with PharmaCrop for Australian-grown, GMP-certified medicinal cannabis across retail, green label, white label, bulk flower and export pathways.",
+    url: "/partnerships",
+  },
 };
 
 export default function Page() {

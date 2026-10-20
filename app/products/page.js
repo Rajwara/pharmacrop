@@ -1,5 +1,15 @@
+import { OG_DEFAULTS } from "../lib/seo";
+
 export const metadata = {
   title: "Products - PharmaCrop",
+  description: "Browse PharmaCrop's range of Australian-grown, GMP-certified medicinal cannabis products, backed by pharmaceutical-grade quality and TGA licensing.",
+  alternates: { canonical: "/products" },
+  openGraph: {
+    ...OG_DEFAULTS,
+    title: "Products - PharmaCrop",
+    description: "Browse PharmaCrop's range of Australian-grown, GMP-certified medicinal cannabis products, backed by pharmaceutical-grade quality and TGA licensing.",
+    url: "/products",
+  },
 };
 
 export default function Page() {

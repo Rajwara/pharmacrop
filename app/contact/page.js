@@ -1,5 +1,15 @@
+import { OG_DEFAULTS } from "../lib/seo";
+
 export const metadata = {
   title: "Contact Us - PharmaCrop",
+  description: "Get in touch with the PharmaCrop team to discuss products, commercial partnerships, manufacturing or general enquiries.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    ...OG_DEFAULTS,
+    title: "Contact Us - PharmaCrop",
+    description: "Get in touch with the PharmaCrop team to discuss products, commercial partnerships, manufacturing or general enquiries.",
+    url: "/contact",
+  },
 };
 
 export default function Page() {

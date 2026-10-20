@@ -1,5 +1,15 @@
+import { OG_DEFAULTS } from "../lib/seo";
+
 export const metadata = {
   title: "Advanced Growing Systems - PharmaCrop",
+  description: "Discover PharmaCrop's advanced growing systems delivering consistent, pharmaceutical-grade medicinal cannabis through precision-controlled cultivation technology.",
+  alternates: { canonical: "/advanced-growing-systems" },
+  openGraph: {
+    ...OG_DEFAULTS,
+    title: "Advanced Growing Systems - PharmaCrop",
+    description: "Discover PharmaCrop's advanced growing systems delivering consistent, pharmaceutical-grade medicinal cannabis through precision-controlled cultivation technology.",
+    url: "/advanced-growing-systems",
+  },
 };
 
 export default function Page() {

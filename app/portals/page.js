@@ -2,6 +2,7 @@ import Script from "next/script";
 
 export const metadata = {
   title: "Login to Portal - PharmaCrop",
+  robots: { index: false, follow: false },
 };
 
 export default function Page() {

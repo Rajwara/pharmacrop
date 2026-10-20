@@ -1,5 +1,6 @@
 export const metadata = {
   title: "Coming Soon - PharmaCrop",
+  robots: { index: false, follow: false },
 };
 
 export default function Page() {

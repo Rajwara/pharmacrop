@@ -1,5 +1,15 @@
+import { OG_DEFAULTS } from "../lib/seo";
+
 export const metadata = {
   title: "Terms & Conditions - PharmaCrop",
+  description: "Review the terms and conditions governing use of the PharmaCrop website and services.",
+  alternates: { canonical: "/terms-and-conditions" },
+  openGraph: {
+    ...OG_DEFAULTS,
+    title: "Terms & Conditions - PharmaCrop",
+    description: "Review the terms and conditions governing use of the PharmaCrop website and services.",
+    url: "/terms-and-conditions",
+  },
 };
 
 export default function Page() {
