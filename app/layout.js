@@ -311,8 +311,9 @@ export default function RootLayout({ children }) {
                 if (e.target && e.target.tagName === 'IMG') e.preventDefault();
               });
 
+              var NEWSLETTER_POPUP_ENABLED = false; // Disabled per client feedback - popup felt repetitive. Flip to true to re-enable.
               try {
-                if (!isPortalPage && !sessionStorage.getItem('cs_newsletter_shown')) {
+                if (NEWSLETTER_POPUP_ENABLED && !isPortalPage && !sessionStorage.getItem('cs_newsletter_shown')) {
                   var onScroll = function () {
                     var docHeight = document.documentElement.scrollHeight - window.innerHeight;
                     if (docHeight <= 0) return;
