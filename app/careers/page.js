@@ -149,7 +149,7 @@ export default function Page() {
                 <p class="cs_fs_16 mt-2 mb-0">Allowed resume file types: .doc, .docx, .pdf</p>
               </div>
               <div class="col-lg-12">
-                <div class="g-recaptcha" data-sitekey="6LfXQfYtAAAAACBgnhHv6FaAKRtupem-Vytchyfc"></div>
+                <div class="g-recaptcha" data-sitekey="6Ldj-fctAAAAAGu23NMMEiFidWURuqD5SA35gXt2"></div>
               </div>
               <div class="col-lg-12">
                 <button class="cs_btn cs_style_1 cs_type_1 cs_bold cs_heading_bg cs_white_color w-100" type="submit">SUBMIT EXPRESSION OF INTEREST</button>

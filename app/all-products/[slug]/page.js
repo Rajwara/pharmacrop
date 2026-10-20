@@ -606,7 +606,7 @@ export default async function Page({ params }) {
             <label>Product</label>
             <input type="text" name="product" value="${product.name}" readonly />
           </div>
-          <div class="g-recaptcha" data-sitekey="6LfXQfYtAAAAACBgnhHv6FaAKRtupem-Vytchyfc"></div>
+          <div class="g-recaptcha" data-sitekey="6Ldj-fctAAAAAGu23NMMEiFidWURuqD5SA35gXt2"></div>
           <button type="submit" class="cs_msl_submit">
             <i class="fa-solid fa-envelope"></i> Request Certificate of Analysis
           </button>

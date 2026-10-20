@@ -127,7 +127,7 @@ export default function RootLayout({ children }) {
                 <label>Message</label>
                 <textarea name="message" placeholder="Tell us what you'd like to discuss"></textarea>
               </div>
-              <div className="g-recaptcha" data-sitekey="6LfXQfYtAAAAACBgnhHv6FaAKRtupem-Vytchyfc"></div>
+              <div className="g-recaptcha" data-sitekey="6Ldj-fctAAAAAGu23NMMEiFidWURuqD5SA35gXt2"></div>
               <button type="submit" className="cs_msl_submit">
                 <i className="fa-solid fa-phone"></i> Request Call
               </button>

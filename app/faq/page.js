@@ -213,7 +213,7 @@ export default function Page() {
                 <option value="Distribution / Export">Distribution / Export</option>
                 <option value="General Enquiry">General Enquiry</option>
               </select>
-              <div class="g-recaptcha" data-sitekey="6LfXQfYtAAAAACBgnhHv6FaAKRtupem-Vytchyfc"></div>
+              <div class="g-recaptcha" data-sitekey="6Ldj-fctAAAAAGu23NMMEiFidWURuqD5SA35gXt2"></div>
               <button type="submit" class="cs_contact_form_btn">Let's Connect</button>
             </form>
           </div>
