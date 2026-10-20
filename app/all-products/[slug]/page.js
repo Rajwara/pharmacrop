@@ -587,7 +587,7 @@ export default async function Page({ params }) {
         </button>
         <h3 class="cs_fs_28 cs_bold cs_mb_12">Request a Certificate of Analysis</h3>
         <p class="cs_fs_20 cs_mb_24">Fill in your details and our team will send you the latest Certificate of Analysis for this product.</p>
-        <form action="https://api.web3forms.com/submit" method="POST" class="cs_msl_form" data-coa-form>
+        <form action="/api/forms/submit" method="POST" class="cs_msl_form" data-coa-form>
           <input type="hidden" name="access_key" value="3375386a-cc5d-468b-a320-1cc9ca429b48" />
           <input type="hidden" name="subject" value="New Certificate of Analysis Request - ${product.name}" />
           <div>
@@ -606,6 +606,7 @@ export default async function Page({ params }) {
             <label>Product</label>
             <input type="text" name="product" value="${product.name}" readonly />
           </div>
+          <div class="g-recaptcha" data-sitekey="6LfXQfYtAAAAACBgnhHv6FaAKRtupem-Vytchyfc"></div>
           <button type="submit" class="cs_msl_submit">
             <i class="fa-solid fa-envelope"></i> Request Certificate of Analysis
           </button>
@@ -669,6 +670,9 @@ export default async function Page({ params }) {
                 }
               }
               if (coaSuccess) coaSuccess.classList.remove('active');
+              try {
+                if (window.grecaptcha) window.grecaptcha.reset();
+              } catch (err) {}
             }
             if (coaModal) {
               var coaCloseBtn = coaModal.querySelector('.cs_modal_close');
@@ -707,6 +711,9 @@ export default async function Page({ params }) {
                       submitBtn.disabled = false;
                       submitBtn.innerHTML = '<i class="fa-solid fa-envelope"></i> Request Certificate of Analysis';
                     }
+                    try {
+                      if (window.grecaptcha) window.grecaptcha.reset();
+                    } catch (err) {}
                     alert('Something went wrong sending your request. Please try again or call us directly.');
                   });
               });

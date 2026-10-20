@@ -88,7 +88,7 @@ export default function RootLayout({ children }) {
             </button>
             <h3 className="cs_fs_28 cs_bold cs_mb_12">Request a Call with our MSL</h3>
             <p className="cs_fs_20 cs_mb_24">Fill in your details and one of our Medical Science Liaisons will call you back.</p>
-            <form action="https://api.web3forms.com/submit" method="POST" className="cs_msl_form" data-msl-form>
+            <form action="/api/forms/submit" method="POST" className="cs_msl_form" data-msl-form>
               <input type="hidden" name="access_key" value="3375386a-cc5d-468b-a320-1cc9ca429b48" />
               <input type="hidden" name="subject" value="New MSL Call Request - PharmaCrop Dashboard" />
               <div>
@@ -127,6 +127,7 @@ export default function RootLayout({ children }) {
                 <label>Message</label>
                 <textarea name="message" placeholder="Tell us what you'd like to discuss"></textarea>
               </div>
+              <div className="g-recaptcha" data-sitekey="6LfXQfYtAAAAACBgnhHv6FaAKRtupem-Vytchyfc"></div>
               <button type="submit" className="cs_msl_submit">
                 <i className="fa-solid fa-phone"></i> Request Call
               </button>
@@ -145,6 +146,7 @@ export default function RootLayout({ children }) {
         <Script src="/assets/js/isotope.pkg.min.js" strategy="beforeInteractive" />
         <Script src="/assets/js/lightgallery.min.js" strategy="beforeInteractive" />
         <Script src="/assets/js/main.js" strategy="beforeInteractive" />
+        <Script src="https://www.google.com/recaptcha/api.js" strategy="afterInteractive" />
         <Script id="cs_scroll_top_script" strategy="afterInteractive">
           {`
             (function () {
@@ -188,6 +190,9 @@ export default function RootLayout({ children }) {
                   }
                   if (success) success.classList.remove('active');
                 }
+                try {
+                  if (window.grecaptcha) window.grecaptcha.reset();
+                } catch (err) {}
               }
               document.querySelectorAll('.cs_modal_overlay').forEach(function (overlay) {
                 overlay.addEventListener('click', function (e) {
@@ -253,14 +258,18 @@ export default function RootLayout({ children }) {
                         submitBtn.disabled = false;
                         submitBtn.innerHTML = '<i class="fa-solid fa-phone"></i> Request Call';
                       }
+                      try {
+                        if (window.grecaptcha) window.grecaptcha.reset();
+                      } catch (err) {}
                       alert('Something went wrong sending your request. Please try again or call us directly.');
                     });
                 });
               }
 
               var redirectForms = document.querySelectorAll('.cs_contact_form_bar, .cs_contact_hello_form, #cs_career_form, #cs_newsletter_modal form, .cs_footer_v2_newsletter');
+              var redirectFormActions = ['https://api.web3forms.com/submit', '/api/forms/submit'];
               redirectForms.forEach(function (form) {
-                if (form.getAttribute('action') !== 'https://api.web3forms.com/submit') return;
+                if (redirectFormActions.indexOf(form.getAttribute('action')) === -1) return;
                 var submitBtn = form.querySelector('button[type="submit"]');
                 var originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
                 form.addEventListener('submit', function (e) {
@@ -287,6 +296,9 @@ export default function RootLayout({ children }) {
                         submitBtn.disabled = false;
                         submitBtn.innerHTML = originalBtnHtml;
                       }
+                      try {
+                        if (window.grecaptcha) window.grecaptcha.reset();
+                      } catch (err) {}
                       alert('Something went wrong sending your request. Please try again or contact us directly.');
                     });
                 });

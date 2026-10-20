@@ -169,7 +169,7 @@ export default function Page() {
             </div>
             <h2 class="cs_contact_card_title">Ready To Explore A Commercial Partnership?</h2>
             <p class="cs_contact_card_sub">Connect with our team to discuss Australian-grown products, GMP manufacturing, commercial pathways and supply opportunities.</p>
-            <form action="https://api.web3forms.com/submit" method="POST" class="cs_contact_form_bar">
+            <form action="/api/forms/submit" method="POST" class="cs_contact_form_bar">
               <input type="hidden" name="access_key" value="3375386a-cc5d-468b-a320-1cc9ca429b48">
               <input type="hidden" name="subject" value="New Enquiry - PharmaCrop Website">
               <input type="text" name="name" placeholder="Your Name" required>
@@ -183,6 +183,7 @@ export default function Page() {
                 <option value="Distribution / Export">Distribution / Export</option>
                 <option value="General Enquiry">General Enquiry</option>
               </select>
+              <div class="g-recaptcha" data-sitekey="6LfXQfYtAAAAACBgnhHv6FaAKRtupem-Vytchyfc"></div>
               <button type="submit" class="cs_contact_form_btn">Let's Connect</button>
             </form>
           </div>

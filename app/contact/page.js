@@ -140,7 +140,7 @@ export default function Page() {
             <div class="cs_contact_form_card">
               <h3 class="cs_contact_form_card_title">Get in Touch</h3>
               <p class="cs_contact_form_card_desc">Fill in your details and our team will get back to you shortly.</p>
-              <form action="https://api.web3forms.com/submit" method="POST" class="cs_contact_hello_form">
+              <form action="/api/forms/submit" method="POST" class="cs_contact_hello_form">
                 <input type="hidden" name="access_key" value="3375386a-cc5d-468b-a320-1cc9ca429b48">
                 <input type="hidden" name="subject" value="New Enquiry - PharmaCrop Contact Page">
                 <div>
@@ -172,6 +172,7 @@ export default function Page() {
                   <label>Message</label>
                   <textarea name="message" placeholder="Tell us how we can help"></textarea>
                 </div>
+                <div class="g-recaptcha" data-sitekey="6LfXQfYtAAAAACBgnhHv6FaAKRtupem-Vytchyfc"></div>
                 <button type="submit" class="cs_contact_hello_submit">
                   <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
