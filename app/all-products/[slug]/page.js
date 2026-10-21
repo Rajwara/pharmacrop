@@ -695,12 +695,7 @@ export default async function Page({ params }) {
                   submitBtn.disabled = true;
                   submitBtn.textContent = 'Sending...';
                 }
-                fetch(coaForm.action, {
-                  method: 'POST',
-                  body: new FormData(coaForm),
-                  headers: { Accept: 'application/json' },
-                })
-                  .then(function (res) { return res.json(); })
+                window.submitProtectedForm(coaForm)
                   .then(function (data) {
                     if (data && data.success) {
                       coaForm.style.display = 'none';

@@ -204,6 +204,23 @@ export default function RootLayout({ children }) {
         <Script id="cs_modals_script" strategy="afterInteractive">
           {`
             (function () {
+              function submitProtectedForm(form) {
+                var fd = new FormData(form);
+                var action = form.getAttribute('action');
+                if (action !== '/api/forms/submit') {
+                  return fetch(action, { method: 'POST', body: fd, headers: { Accept: 'application/json' } })
+                    .then(function (res) { return res.json(); });
+                }
+                return fetch('/api/forms/submit', { method: 'POST', body: fd, headers: { Accept: 'application/json' } })
+                  .then(function (res) { return res.json(); })
+                  .then(function (verifyResult) {
+                    if (!verifyResult || !verifyResult.success) throw new Error('reCAPTCHA verification failed');
+                    fd.delete('g-recaptcha-response');
+                    return fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd, headers: { Accept: 'application/json' } });
+                  })
+                  .then(function (res) { return res.json(); });
+              }
+              window.submitProtectedForm = submitProtectedForm;
               function openModal(id) {
                 var el = document.getElementById(id);
                 if (el) el.classList.add('active');
@@ -273,12 +290,7 @@ export default function RootLayout({ children }) {
                     submitBtn.disabled = true;
                     submitBtn.textContent = 'Sending...';
                   }
-                  fetch(mslForm.action, {
-                    method: 'POST',
-                    body: new FormData(mslForm),
-                    headers: { Accept: 'application/json' },
-                  })
-                    .then(function (res) { return res.json(); })
+                  submitProtectedForm(mslForm)
                     .then(function (data) {
                       if (data && data.success) {
                         mslForm.style.display = 'none';
@@ -312,12 +324,7 @@ export default function RootLayout({ children }) {
                     submitBtn.disabled = true;
                     submitBtn.textContent = 'Sending...';
                   }
-                  fetch(form.action, {
-                    method: 'POST',
-                    body: new FormData(form),
-                    headers: { Accept: 'application/json' },
-                  })
-                    .then(function (res) { return res.json(); })
+                  submitProtectedForm(form)
                     .then(function (data) {
                       if (data && data.success) {
                         window.location.href = '/thank-you';

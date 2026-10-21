@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 
-const WEB3FORMS_SUBMIT_URL = "https://api.web3forms.com/submit";
 const RECAPTCHA_VERIFY_URL = "https://www.google.com/recaptcha/api/siteverify";
 
 export async function POST(request) {
@@ -40,31 +39,8 @@ export async function POST(request) {
     return NextResponse.json({ success: false, message: "reCAPTCHA verification failed. Please try again." }, { status: 400 });
   }
 
-  formData.delete("g-recaptcha-response");
-
-  let web3formsData;
-  try {
-    const web3formsRes = await fetch(WEB3FORMS_SUBMIT_URL, {
-      method: "POST",
-      body: formData,
-      headers: {
-        Accept: "application/json",
-        Referer: "https://pharmacrop.com.au/",
-        Origin: "https://pharmacrop.com.au",
-      },
-    });
-    const web3formsText = await web3formsRes.text();
-    try {
-      web3formsData = JSON.parse(web3formsText);
-    } catch {
-      console.error("[forms/submit] Web3Forms returned non-JSON response:", web3formsRes.status, web3formsText.slice(0, 500));
-      return NextResponse.json({ success: false, message: "Could not send your submission. Please try again.", debug: { status: web3formsRes.status, body: web3formsText.slice(0, 500) } }, { status: 502 });
-    }
-  } catch (err) {
-    const detail = err && err.message ? err.message : String(err);
-    console.error("[forms/submit] Web3Forms request failed:", detail);
-    return NextResponse.json({ success: false, message: "Could not send your submission. Please try again.", debug: detail }, { status: 502 });
-  }
-
-  return NextResponse.json(web3formsData);
+  // Web3Forms sits behind Cloudflare bot protection that blocks server-to-server
+  // requests, so we only verify reCAPTCHA here. The browser sends the actual
+  // submission to Web3Forms directly afterward (see the client-side handlers).
+  return NextResponse.json({ success: true });
 }
