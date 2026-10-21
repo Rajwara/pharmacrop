@@ -122,7 +122,7 @@ export default function RootLayout({ children }) {
             </button>
             <h3 className="cs_fs_28 cs_bold cs_mb_12">Request a Call with our MSL</h3>
             <p className="cs_fs_20 cs_mb_24">Fill in your details and one of our Medical Science Liaisons will call you back.</p>
-            <form action="/api/forms/submit" method="POST" className="cs_msl_form" data-msl-form>
+            <form action="https://api.web3forms.com/submit" method="POST" className="cs_msl_form" data-msl-form>
               <input type="hidden" name="access_key" value="3375386a-cc5d-468b-a320-1cc9ca429b48" />
               <input type="hidden" name="subject" value="New MSL Call Request - PharmaCrop Dashboard" />
               <div>
