@@ -264,10 +264,10 @@ export default async function Page() {
             </div>
             <div class="cs_prod_select_wrap" data-dropdown>
               <i class="fa-solid fa-leaf" aria-hidden="true"></i>
-              <button type="button" class="cs_dropdown_trigger" data-dropdown-trigger aria-haspopup="listbox" aria-expanded="false"><span data-dropdown-label>All strengths</span></button>
+              <button type="button" class="cs_dropdown_trigger" data-dropdown-trigger aria-haspopup="listbox" aria-expanded="false"><span data-dropdown-label>All cannabinoid profiles</span></button>
               <i class="fa-solid fa-chevron-down cs_prod_select_chevron" aria-hidden="true"></i>
               <select data-prod-strength class="cs_dropdown_native_select" tabindex="-1" aria-hidden="true">
-                <option value="all">All strengths</option>
+                <option value="all">All cannabinoid profiles</option>
                 <option value="thc">THC dominant</option>
                 <option value="cbd">CBD dominant</option>
                 <option value="balanced">Balanced</option>
