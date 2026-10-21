@@ -31,8 +31,9 @@ export async function POST(request) {
     });
     verifyData = await verifyRes.json();
   } catch (err) {
-    console.error("[forms/submit] reCAPTCHA verify request failed:", err && err.message ? err.message : err);
-    return NextResponse.json({ success: false, message: "Could not verify reCAPTCHA. Please try again." }, { status: 502 });
+    const detail = err && err.message ? err.message : String(err);
+    console.error("[forms/submit] reCAPTCHA verify request failed:", detail);
+    return NextResponse.json({ success: false, message: "Could not verify reCAPTCHA. Please try again.", debug: detail }, { status: 502 });
   }
 
   if (!verifyData || !verifyData.success) {
@@ -57,11 +58,12 @@ export async function POST(request) {
       web3formsData = JSON.parse(web3formsText);
     } catch {
       console.error("[forms/submit] Web3Forms returned non-JSON response:", web3formsRes.status, web3formsText.slice(0, 500));
-      return NextResponse.json({ success: false, message: "Could not send your submission. Please try again." }, { status: 502 });
+      return NextResponse.json({ success: false, message: "Could not send your submission. Please try again.", debug: { status: web3formsRes.status, body: web3formsText.slice(0, 500) } }, { status: 502 });
     }
   } catch (err) {
-    console.error("[forms/submit] Web3Forms request failed:", err && err.message ? err.message : err);
-    return NextResponse.json({ success: false, message: "Could not send your submission. Please try again." }, { status: 502 });
+    const detail = err && err.message ? err.message : String(err);
+    console.error("[forms/submit] Web3Forms request failed:", detail);
+    return NextResponse.json({ success: false, message: "Could not send your submission. Please try again.", debug: detail }, { status: 502 });
   }
 
   return NextResponse.json(web3formsData);
