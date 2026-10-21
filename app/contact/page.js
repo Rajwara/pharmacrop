@@ -151,7 +151,7 @@ export default function Page() {
             <div class="cs_contact_form_card">
               <h3 class="cs_contact_form_card_title">Get in Touch</h3>
               <p class="cs_contact_form_card_desc">Fill in your details and our team will get back to you shortly.</p>
-              <form action="https://api.web3forms.com/submit" method="POST" class="cs_contact_hello_form">
+              <form action="/api/forms/submit" method="POST" class="cs_contact_hello_form">
                 <input type="hidden" name="access_key" value="3375386a-cc5d-468b-a320-1cc9ca429b48">
                 <input type="hidden" name="subject" value="New Enquiry - PharmaCrop Contact Page">
                 <div>

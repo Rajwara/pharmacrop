@@ -46,9 +46,19 @@ export async function POST(request) {
     const web3formsRes = await fetch(WEB3FORMS_SUBMIT_URL, {
       method: "POST",
       body: formData,
-      headers: { Accept: "application/json" },
+      headers: {
+        Accept: "application/json",
+        Referer: "https://pharmacrop.com.au/",
+        Origin: "https://pharmacrop.com.au",
+      },
     });
-    web3formsData = await web3formsRes.json();
+    const web3formsText = await web3formsRes.text();
+    try {
+      web3formsData = JSON.parse(web3formsText);
+    } catch {
+      console.error("[forms/submit] Web3Forms returned non-JSON response:", web3formsRes.status, web3formsText.slice(0, 500));
+      return NextResponse.json({ success: false, message: "Could not send your submission. Please try again." }, { status: 502 });
+    }
   } catch (err) {
     console.error("[forms/submit] Web3Forms request failed:", err && err.message ? err.message : err);
     return NextResponse.json({ success: false, message: "Could not send your submission. Please try again." }, { status: 502 });

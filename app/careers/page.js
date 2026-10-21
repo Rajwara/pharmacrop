@@ -140,7 +140,7 @@ export default function Page() {
             </div>
             <p class="text-center cs_fs_20">Interested in building your career with PharmaCrop? Submit your details and CV and our team will be in touch if a suitable opportunity becomes available.</p>
             <div class="cs_height_40 cs_height_lg_30"></div>
-            <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" class="row cs_gap_y_24" id="cs_career_form">
+            <form action="/api/forms/submit" method="POST" enctype="multipart/form-data" class="row cs_gap_y_24" id="cs_career_form">
               <input type="hidden" name="access_key" value="3375386a-cc5d-468b-a320-1cc9ca429b48">
               <input type="hidden" name="subject" value="New Expression of Interest - PharmaCrop Careers">
               <div class="col-sm-6">
