@@ -83,7 +83,20 @@ export default function RootLayout({ children }) {
               <input type="hidden" name="access_key" value="3375386a-cc5d-468b-a320-1cc9ca429b48" />
               <input type="hidden" name="subject" value="New Newsletter Signup - PharmaCrop Website" />
               <div className="col-lg-12">
+                <input type="text" name="name" className="cs_form_field" placeholder="Full name" required />
+              </div>
+              <div className="col-lg-12">
                 <input type="email" name="email" className="cs_form_field" placeholder="Enter your email address" required />
+              </div>
+              <div className="col-lg-12">
+                <select name="profession" className="cs_form_field" required defaultValue="">
+                  <option value="" disabled>Profession</option>
+                  <option value="General practitioner">General practitioner</option>
+                  <option value="Specialist">Specialist</option>
+                  <option value="Nurse practitioner">Nurse practitioner</option>
+                  <option value="Pharmacist">Pharmacist</option>
+                  <option value="Other">Other</option>
+                </select>
               </div>
               <div className="col-lg-12">
                 <button className="cs_btn cs_style_1 cs_bold cs_heading_bg cs_white_color w-100" type="submit">
@@ -352,7 +365,7 @@ export default function RootLayout({ children }) {
                 if (e.target && e.target.tagName === 'IMG') e.preventDefault();
               });
 
-              var NEWSLETTER_POPUP_ENABLED = false; // Disabled per client feedback - popup felt repetitive. Flip to true to re-enable.
+              var NEWSLETTER_POPUP_ENABLED = true;
               try {
                 if (NEWSLETTER_POPUP_ENABLED && !isPortalPage && !sessionStorage.getItem('cs_newsletter_shown')) {
                   var onScroll = function () {
