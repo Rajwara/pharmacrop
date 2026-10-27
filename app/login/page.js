@@ -194,7 +194,7 @@ export default function Page() {
                   <input type="checkbox" name="rememberMe">
                   <span>Remember me</span>
                 </label>
-                <button type="button" class="cs_auth_forgot_link" data-auth-switch="forgot" style="display:none;">Forgot password?</button>
+                <button type="button" class="cs_auth_forgot_link" data-auth-switch="forgot">Forgot password?</button>
               </div>
               <button type="submit" class="cs_auth_btn_primary" data-login-submit-btn>
                 <span data-login-submit-label>Log In</span>
