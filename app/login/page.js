@@ -145,6 +145,12 @@ export default function Page() {
         .cs_auth_accred_item img { width: 38px; height: 38px; }
         .cs_auth_left_bottom_row p { white-space: normal; }
       }
+      .cs_auth_popup { text-align: center; padding-top: 6px; }
+      .cs_auth_popup_icon { font-size: 48px; margin-bottom: 16px; }
+      .cs_auth_popup_success .cs_auth_popup_icon { color: #78dca6; }
+      .cs_auth_popup_error .cs_auth_popup_icon { color: #e05c5c; }
+      .cs_auth_popup h3 { color: #024242; font-size: 22px; font-weight: 800; margin: 0 0 10px; }
+      .cs_auth_popup p { color: #5c6f69; font-size: 15px; line-height: 1.6; margin: 0; }
     </style>
     <div class="cs_auth_header_scrim"></div>
     <div class="cs_auth_page">
@@ -377,6 +383,23 @@ export default function Page() {
         </div>
       </div>
     </div>
+
+    <div id="cs_auth_success_modal" class="cs_modal_overlay" role="dialog" aria-modal="true" aria-label="Success">
+      <div class="cs_modal_box cs_modal_box_sm cs_auth_popup cs_auth_popup_success">
+        <button class="cs_modal_close" type="button" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        <div class="cs_auth_popup_icon"><i class="fa-solid fa-circle-check"></i></div>
+        <h3 data-auth-popup-title>Success</h3>
+        <p data-auth-popup-message></p>
+      </div>
+    </div>
+    <div id="cs_auth_error_modal" class="cs_modal_overlay" role="dialog" aria-modal="true" aria-label="Error">
+      <div class="cs_modal_box cs_modal_box_sm cs_auth_popup cs_auth_popup_error">
+        <button class="cs_modal_close" type="button" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        <div class="cs_auth_popup_icon"><i class="fa-solid fa-circle-exclamation"></i></div>
+        <h3 data-auth-popup-title>Something went wrong</h3>
+        <p data-auth-popup-message></p>
+      </div>
+    </div>
     <!-- End Register/Login Section -->
 `,
       }}
@@ -384,6 +407,17 @@ export default function Page() {
     <Script id="cs_auth_script" strategy="afterInteractive">
       {`
         (function () {
+          function showAuthPopup(kind, title, message) {
+            var modalId = kind === 'error' ? 'cs_auth_error_modal' : 'cs_auth_success_modal';
+            var modal = document.getElementById(modalId);
+            if (!modal) return;
+            var titleEl = modal.querySelector('[data-auth-popup-title]');
+            var messageEl = modal.querySelector('[data-auth-popup-message]');
+            if (titleEl) titleEl.textContent = title;
+            if (messageEl) messageEl.textContent = message;
+            if (window.openModal) window.openModal(modalId);
+          }
+
           var tabs = document.querySelectorAll('.cs_auth_tab');
           var panels = document.querySelectorAll('.cs_auth_panel');
           var switches = document.querySelectorAll('[data-auth-switch]');
@@ -568,14 +602,17 @@ export default function Page() {
                   if (intro) intro.style.display = 'none';
                   var confirm = document.querySelector('[data-auth-confirm]');
                   if (confirm) confirm.hidden = false;
+                  showAuthPopup('success', 'Registration submitted', 'Thanks — we\\'ve received your registration. Our team verifies every application within one business day.');
                 })
                 .catch(function (err) {
+                  var message = (err && err.message) || 'Something went wrong submitting your registration. Please try again.';
                   if (submitError) {
-                    if (err && err.message) submitError.textContent = err.message;
+                    submitError.textContent = message;
                     submitError.style.display = 'block';
                   }
                   if (submitBtn) submitBtn.disabled = false;
                   if (submitLabel) submitLabel.textContent = 'Submit Registration';
+                  showAuthPopup('error', 'Registration failed', message);
                 });
             });
           }
@@ -605,15 +642,21 @@ export default function Page() {
                   if (!result.res.ok || !result.data.ok) throw new Error(result.data.message || 'Incorrect email or password.');
                   var params = new URLSearchParams(window.location.search);
                   var redirect = params.get('redirect');
-                  window.location.href = redirect && redirect.indexOf('/') === 0 ? redirect : '/dashboard';
+                  var destination = redirect && redirect.indexOf('/') === 0 ? redirect : '/dashboard';
+                  showAuthPopup('success', 'Welcome back!', 'You\\'re signed in. Redirecting you now...');
+                  setTimeout(function () {
+                    window.location.href = destination;
+                  }, 1100);
                 })
                 .catch(function (err) {
+                  var message = (err && err.message) || 'Incorrect email or password.';
                   if (submitError) {
-                    submitError.textContent = (err && err.message) || 'Incorrect email or password.';
+                    submitError.textContent = message;
                     submitError.style.display = 'block';
                   }
                   if (submitBtn) submitBtn.disabled = false;
                   if (submitLabel) submitLabel.textContent = 'Log In';
+                  showAuthPopup('error', 'Login failed', message);
                 });
             });
           }

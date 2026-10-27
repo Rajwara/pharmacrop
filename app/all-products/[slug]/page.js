@@ -41,7 +41,7 @@ export default async function Page({ params }) {
     .map(
       (r) => `
           <a href="/all-products/${r.slug}" class="cs_pd_related_card">
-            <div class="cs_pd_related_img"><img src="${r.image}" alt="${r.name}"></div>
+            <div class="cs_pd_related_img"><img src="${r.image}" alt="${r.name}" onerror="pcImgFallback(this)"></div>
             <div class="cs_pd_related_body">
               <h4>${r.name}</h4>
               <span>${r.category}</span>
@@ -56,7 +56,7 @@ export default async function Page({ params }) {
   const galleryThumbsHtml = galleryImages
     .map(
       (src, i) =>
-        `\n              <button type="button" class="${i === 0 ? "active" : ""}" data-pd-thumb="${src}"><img src="${src}" alt="${product.name} thumbnail ${i + 1}"></button>`
+        `\n              <button type="button" class="${i === 0 ? "active" : ""}" data-pd-thumb="${src}"><img src="${src}" alt="${product.name} thumbnail ${i + 1}" onerror="pcImgFallback(this)"></button>`
     )
     .join("");
 
@@ -267,7 +267,7 @@ export default async function Page({ params }) {
       <div class="container">
         <div class="cs_pd_hero_grid">
           <div class="wow fadeInUp">
-            <div class="cs_pd_gallery_main"><img src="${product.image}" alt="${product.name}" data-pd-main-img></div>
+            <div class="cs_pd_gallery_main"><img src="${product.image}" alt="${product.name}" data-pd-main-img onerror="pcImgFallback(this)"></div>
             <div class="cs_pd_gallery_thumbs">${galleryThumbsHtml}
             </div>
           </div>
@@ -327,7 +327,7 @@ export default async function Page({ params }) {
             <p>${product.description || `${product.name} is a ${product.category.toLowerCase()} product, cultivated and processed to meet PharmaCrop&rsquo;s quality standards. This product is provided for healthcare professionals with detailed product information, including product specifications and supporting documentation.`}</p>
           </div>
           <div class="cs_pd_overview_img">
-            <img src="${product.altImage}" alt="${product.name} overview">
+            <img src="${product.altImage}" alt="${product.name} overview" onerror="pcImgFallback(this)">
           </div>
         </div>
         ${nutritionHtml}
@@ -397,7 +397,7 @@ export default async function Page({ params }) {
       <div class="container">
         <div class="cs_pd_pack_row wow fadeInUp">
           <div class="cs_pd_pack_head"><h2>Presentation &amp; Packaging</h2><p>Product presentation and packaging details for ${product.name}.</p></div>
-          <div class="cs_pd_pack_img"><img src="${product.image}" alt="${product.name} packaging"></div>
+          <div class="cs_pd_pack_img"><img src="${product.image}" alt="${product.name} packaging" onerror="pcImgFallback(this)"></div>
           <div class="cs_pd_pack_table">${packCard("fa-box", "Pack Size", "Product quantity per unit.", product.packSize)}${packCard("fa-box-open", "Presentation", "How the product is supplied.", product.presentation)}${packCard("fa-leaf", "Dosage Form", "Physical form of the product.", product.dosageForm)}
           </div>
         </div>

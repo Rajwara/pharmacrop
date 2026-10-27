@@ -47,6 +47,30 @@ export default function RootLayout({ children }) {
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
+
+        <Script id="pc-img-fallback" strategy="beforeInteractive">
+          {`
+            // Product images are hotlinked straight from WordPress, which
+            // occasionally blips (slow origin, transient 5xx) and leaves a
+            // broken image icon until the visitor manually refreshes. Retry
+            // once with a cache-busting param, then fall back to a local
+            // placeholder so a stale WP image never shows as fully broken.
+            window.pcImgFallback = function (img) {
+              try {
+                if (!img.dataset.pcRetried) {
+                  img.dataset.pcRetried = '1';
+                  var base = img.src.split('?')[0];
+                  setTimeout(function () {
+                    img.src = base + '?pcretry=' + Date.now();
+                  }, 800);
+                } else {
+                  img.onerror = null;
+                  img.src = '/assets/img/dashboard/Dried%20Flower%20Category.webp';
+                }
+              } catch (err) {}
+            };
+          `}
+        </Script>
         <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/assets/css/fontawesome.min.css" />
         <link rel="stylesheet" href="/assets/css/slick.min.css" />
@@ -238,6 +262,7 @@ export default function RootLayout({ children }) {
                 var el = document.getElementById(id);
                 if (el) el.classList.add('active');
               }
+              window.openModal = openModal;
               function closeModal(overlay) {
                 overlay.classList.remove('active');
                 if (overlay.id === 'cs_msl_modal') {
@@ -258,6 +283,10 @@ export default function RootLayout({ children }) {
                   if (window.grecaptcha) window.grecaptcha.reset();
                 } catch (err) {}
               }
+              window.closeModal = function (id) {
+                var el = typeof id === 'string' ? document.getElementById(id) : id;
+                if (el) closeModal(el);
+              };
               document.querySelectorAll('.cs_modal_overlay').forEach(function (overlay) {
                 overlay.addEventListener('click', function (e) {
                   if (e.target === overlay) closeModal(overlay);
