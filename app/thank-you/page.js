@@ -86,7 +86,7 @@ export default function Page() {
             <span>TGA Licensed</span>
           </div>
         </div>
-        <p class="cs_thank_you_copyright">&copy; 2026 PharmaCrop. All rights reserved.</p>
+        <p class="cs_thank_you_copyright">&copy; 2026 PharmaCrop. All rights reserved. Developed by <a href="https://penaxis.com/" target="_blank" rel="noopener">Penaxis</a>.</p>
       </div>
     </div>
     <!-- End Thank You Section -->

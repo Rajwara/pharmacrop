@@ -269,7 +269,7 @@ export default function Page() {
           </div>
         </div>
         <div class="cs_footer_v2_bottom">
-          <p class="cs_footer_v2_copyright">&copy; 2026 PharmaCrop. All rights reserved.</p>
+          <p class="cs_footer_v2_copyright">&copy; 2026 PharmaCrop. All rights reserved. Developed by <a href="https://penaxis.com/" target="_blank" rel="noopener">Penaxis</a>.</p>
           <div class="cs_footer_v2_badges">
             <div class="cs_footer_v2_badge">
               <img src="/assets/img/General Images/Certifications/AUSTRALIAN-MADE.png" alt="Australian Made" class="cs_footer_v2_badge_img">
