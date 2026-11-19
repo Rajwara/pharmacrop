@@ -100,7 +100,7 @@ export default function Page() {
               </svg>
             </a>
           </div>
-          <a href="/coming-soon" class="cs_portal_card wow fadeInUp" data-wow-delay="0.2s">
+          <a href="https://pcdirect.pharmacrop.com.au" target="_blank" rel="noopener" class="cs_portal_card wow fadeInUp" data-wow-delay="0.2s">
             <div class="cs_portal_icon"><i class="fa-solid fa-mortar-pestle"></i></div>
             <h3>Pharmacist</h3>
             <p>Order products, track supply and manage your pharmacy account.</p>
